@@ -4,7 +4,7 @@
 
 工程从 D1-T 初始机械臂平台起步，经由 ACT 数据训练与模型迭代，形成 π0.5 + LoRA 本地推理、动作专家模型对照和 FPGA 板端轨迹回放成果。
 
-## 快速执行
+## 项目SKILL地址
 
 [进入项目 Skill 仓库：fpga-contest-skills](https://github.com/Skyglow1127/fpga-contest-skills/tree/main)
 
