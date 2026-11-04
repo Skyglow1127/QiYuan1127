@@ -1,0 +1,13 @@
+status=script_preflight_passed
+actual_clock_hz=49999500
+target_period_ns=20
+xdc=/home/aup/Lerobot/projects/piper/robot_rt/build/kr260_50mhz_20261104/core_ooc_constraints/core_aclk_ooc.xdc
+generated_script=/home/aup/Lerobot/projects/piper/robot_rt/build/kr260_50mhz_20261104/robot_rt.runs/robot_rt_bd_core_0_synth_1/robot_rt_bd_core_0.tcl
+verified_script_snapshot=/home/aup/Lerobot/projects/piper/robot_rt/build/kr260_50mhz_20261104/core_ooc_constraints/robot_rt_bd_core_0.preflight.tcl
+read_xdc_out_of_context_verified=1
+excluded_from_implementation=1
+top_constraint_sets_unchanged=1
+synthesis_started_by_preflight=0
+reset_scripts_generated_without_dcp=1
+post_reset_status=Not started
+post_reset_progress=0%

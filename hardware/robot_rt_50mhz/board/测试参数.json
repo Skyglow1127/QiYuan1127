@@ -1,0 +1,8 @@
+{
+  "compiled_clock_hz": 49999500,
+  "requested_clock_hz": 50000000,
+  "f_num": 275,
+  "f_den": 2,
+  "lead_cycles": 10000000,
+  "window_cycles": 49999999
+}

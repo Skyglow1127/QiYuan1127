@@ -1,0 +1,9 @@
+本版本沿用现有robot_rt设计和已修正的计算模块。
+当前请求时钟：50 MHz；Vivado时序目标：20 ns；派生CLOCK_HZ：49,999,500 Hz。
+发指令频率f_num/f_den不变，计时参数已按新时钟换算。
+工程源码：工程源码/；实时构建进度：构建日志/status.json；逐项软件输出：构建日志/*.log。
+成功构建后，bit、bit.bin、XSA和最终时序报告自动输出到上板文件/。
+板端配置/中的设备树与静止测试输入已配套改为50 MHz。
+100 MHz失败的原始日志在同级目录“100MHz时序失败原始日志_20261104”。
+实际Vivado工程：/home/aup/Lerobot/projects/piper/robot_rt/build/kr260_50mhz_20261104/robot_rt.xpr
+完成标志：构建日志/status.json中stage为complete且pass为true。

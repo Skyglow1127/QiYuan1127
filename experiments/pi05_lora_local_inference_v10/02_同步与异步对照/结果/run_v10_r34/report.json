@@ -1,0 +1,130 @@
+{
+  "success": true,
+  "robot_io": false,
+  "rtc_guidance": false,
+  "scope": "Offline repeated recorded observation, one GPU inference worker, CPU dummy action consumer; no temporal realignment or robot execution.",
+  "timing_scope": "Preprocessed input through full 50x7 postprocessed CPU output, GPU synchronized. Excludes input acquisition/preprocessing and model loading.",
+  "freshness_scope": "Action age is measured from inference start on a reused historical observation, NOT real observation freshness.",
+  "warmup": 1,
+  "rounds": 1,
+  "chunks_each": 2,
+  "fps": 20.0,
+  "runs": [
+    {
+      "mode": "sync",
+      "consume_steps": 10,
+      "fps": 20.0,
+      "chunks": 2,
+      "simulated_actions": 20,
+      "total_seconds": 4.091041112998937,
+      "startup_seconds": 1.5497165769993444,
+      "post_startup_seconds": 2.5413245359995926,
+      "post_startup_effective_action_hz": 7.86991181830041,
+      "prediction_seconds": {
+        "median": 1.5447680645002038,
+        "mean": 1.5447680645002038,
+        "p95": 1.5487649298512225,
+        "maximum": 1.5492090260013356,
+        "samples": 2
+      },
+      "boundary_wait_seconds": [
+        1.5411151469998003
+      ],
+      "boundary_wait_total_seconds": 1.5411151469998003,
+      "boundary_wait_p95_seconds": 1.5411151469998003,
+      "inference_start_to_consumption_age_seconds": {
+        "median": 1.7700010945009126,
+        "mean": 1.7700061133004965,
+        "p95": 1.9909842108001612,
+        "maximum": 1.999454198001331,
+        "samples": 20
+      },
+      "ticks_over_5ms_late": 0,
+      "predictions": [
+        {
+          "started": 8617.669558765,
+          "finished": 8619.218767791,
+          "elapsed": 1.5492090260013356,
+          "seed": 20000,
+          "action_sha256": "9dc6084569676e2b6330f7469d9b52f9e8edf0ad65c8265378bff1ba122aa435"
+        },
+        {
+          "started": 8619.719701467,
+          "finished": 8621.26002857,
+          "elapsed": 1.540327102999072,
+          "seed": 20001,
+          "action_sha256": "6f8ec4c42a71af5b85a61bdea2e1506433315d3510d2b9bc7af0e2f5678b0b09"
+        }
+      ],
+      "round": 1
+    },
+    {
+      "mode": "async",
+      "consume_steps": 10,
+      "fps": 20.0,
+      "chunks": 2,
+      "simulated_actions": 20,
+      "total_seconds": 3.597853856999791,
+      "startup_seconds": 1.553925395999613,
+      "post_startup_seconds": 2.0439284610001778,
+      "post_startup_effective_action_hz": 9.785078285084978,
+      "prediction_seconds": {
+        "median": 1.5482341375000033,
+        "mean": 1.5482341375000033,
+        "p95": 1.5526095644502675,
+        "maximum": 1.5530957230002969,
+        "samples": 2
+      },
+      "boundary_wait_seconds": [
+        1.0437742189988057
+      ],
+      "boundary_wait_total_seconds": 1.0437742189988057,
+      "boundary_wait_p95_seconds": 1.0437742189988057,
+      "inference_start_to_consumption_age_seconds": {
+        "median": 1.7734690540000884,
+        "mean": 1.7734739606501535,
+        "p95": 1.9940967947501123,
+        "maximum": 2.003337858001032,
+        "samples": 20
+      },
+      "ticks_over_5ms_late": 0,
+      "predictions": [
+        {
+          "started": 8621.765299485,
+          "finished": 8623.318395208,
+          "elapsed": 1.5530957230002969,
+          "seed": 20000,
+          "action_sha256": "9dc6084569676e2b6330f7469d9b52f9e8edf0ad65c8265378bff1ba122aa435"
+        },
+        {
+          "started": 8623.318881838,
+          "finished": 8624.86225439,
+          "elapsed": 1.5433725519997097,
+          "seed": 20001,
+          "action_sha256": "6f8ec4c42a71af5b85a61bdea2e1506433315d3510d2b9bc7af0e2f5678b0b09"
+        }
+      ],
+      "round": 1
+    }
+  ],
+  "model": {
+    "device": "AMD Radeon 890M Graphics",
+    "torch": "2.11.0+rocm7.14.1",
+    "hip": "7.14.60850",
+    "base": "/home/aup/Lerobot/models/PI05/pi05_base",
+    "adapter": "/home/aup/Documents/Codex/v5/wo-y/outputs/piper_pi05_cloud_backup_v5/runs/pi05_train_v5_r06/checkpoints/020000/pretrained_model",
+    "tokenizer": "/home/aup/Documents/Codex/v5/wo-y/outputs/piper_pi05_cloud_backup_v5/models/paligemma_tokenizer",
+    "adapter_sha256": "8e064a68c5991f1b1321e726d901968c516ec728971aa4b9eb1fc6d4213f14a1",
+    "observation": "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_actual_inference_v5/recorded_observation.npz",
+    "observation_sha256": "b28906c8e0048550e37060361adb05880cdf3d06809e5c054b93e42eb0ce1410",
+    "verified_adapter_tensors": 80,
+    "dtype": "bfloat16",
+    "flow_steps": 10,
+    "batch_size": 1,
+    "predicted_chunk_steps": 50,
+    "saved_n_action_steps": 10,
+    "compile_model": false,
+    "allocator_fraction": 0.85,
+    "cpu_threads": 8
+  }
+}

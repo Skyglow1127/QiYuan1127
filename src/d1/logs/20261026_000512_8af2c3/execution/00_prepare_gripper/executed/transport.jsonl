@@ -1,0 +1,11 @@
+{"t": 227746.834400299, "kind": "output", "line": "[DDS] nic=enp99s0 domain=0"}
+{"t": 227746.834469452, "kind": "output", "line": "  TX rt/arm_Command"}
+{"t": 227746.834477542, "kind": "output", "line": "  RX rt/arm_Feedback"}
+{"t": 227746.914827174, "kind": "output", "line": "[rx] {\"seq\":10,\"address\":2,\"funcode\":1,\"data\":{\"angle0\":0.6000000238418579,\"angle1\":-90.0999984741211,\"angle2\":74.9000015258789,\"angle3\":6.5,\"angle4\":30.299999237060547,\"angle5\":-6.800000190734863,\"angle6\":6.5}}"}
+{"t": 227746.924914553, "kind": "output", "line": "[rx] {\"seq\":10,\"address\":2,\"funcode\":3,\"data\":{\"enable_status\":0,\"power_status\":1,\"error_status\":0}}"}
+{"t": 227747.025512408, "kind": "output", "line": "[rx] {\"seq\":10,\"address\":2,\"funcode\":3,\"data\":{\"enable_status\":0,\"power_status\":1,\"error_status\":0}}"}
+{"t": 227747.025606413, "kind": "output", "line": "[rx] {\"seq\":10,\"address\":2,\"funcode\":1,\"data\":{\"angle0\":0.5,\"angle1\":-90.0,\"angle2\":74.9000015258789,\"angle3\":6.5,\"angle4\":30.299999237060547,\"angle5\":-6.800000190734863,\"angle6\":6.5}}"}
+{"t": 227747.126102042, "kind": "output", "line": "[rx] {\"seq\":10,\"address\":2,\"funcode\":3,\"data\":{\"enable_status\":0,\"power_status\":1,\"error_status\":0}}"}
+{"t": 227747.13614446, "kind": "output", "line": "[rx] {\"seq\":10,\"address\":2,\"funcode\":1,\"data\":{\"angle0\":0.5,\"angle1\":-90.0,\"angle2\":74.9000015258789,\"angle3\":6.5,\"angle4\":30.299999237060547,\"angle5\":-6.699999809265137,\"angle6\":6.5}}"}
+{"t": 227747.226621812, "kind": "output", "line": "[rx] {\"seq\":10,\"address\":2,\"funcode\":3,\"data\":{\"enable_status\":0,\"power_status\":1,\"error_status\":0}}"}
+{"t": 227747.246716775, "kind": "output", "line": "[rx] {\"seq\":10,\"address\":2,\"funcode\":1,\"data\":{\"angle0\":0.6000000238418579,\"angle1\":-90.0999984741211,\"angle2\":74.80000305175781,\"angle3\":6.5,\"angle4\":30.299999237060547,\"angle5\":-6.699999809265137,\"angle6\":6.5}}"}

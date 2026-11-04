@@ -1,0 +1,331 @@
+{
+  "source_directory": "/media/aup/UbuntuData/技术文档/FPGA/50MHz成功上板与测试成果_20261104",
+  "date": "2026-11-04",
+  "files": [
+    {
+      "path": "02_上板加载和静止测试_通过/stationary/bank0.bin",
+      "bytes": 65536,
+      "sha256": "63168c94c3f2fd1d180d6494b52691e68414d95522982ac24fb5d8d2e55b56c3"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/stationary/begin_snapshot.json",
+      "bytes": 1050,
+      "sha256": "06352a71eb45d343eaf000a705267829b9f77497b902187facd8398979eb840e"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/stationary/capture.json",
+      "bytes": 4004,
+      "sha256": "f2f9f34d4535531cdf4dddb72feebb60054331a9313606468d08e3ec16dddae9"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/stationary/checked_build.json",
+      "bytes": 846,
+      "sha256": "69fd4e6ec3922a298d608e63c7161437400134f9d455aa5b488fe8442ca00bdd"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/stationary/configuration_readback.json",
+      "bytes": 204,
+      "sha256": "e1f799114e7faea453cfa0dc36d354e172c46913c32b97061517cf7f4045c655"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/stationary/end_snapshot.json",
+      "bytes": 1100,
+      "sha256": "7a921ec65f10e6f18d212e7bc80d07d87f738534f69915d60ea1ffcb4b3fd7a7"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/stationary/execution.json",
+      "bytes": 1643,
+      "sha256": "2acf38c60475e2fa55d56bc96f23e71624f97e32c9cdd66488a43c81685f84b1"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/stationary/generated_stage2_input.json",
+      "bytes": 1025,
+      "sha256": "db64bd04a99add5604781e9e48b0a42e6cf9fb4792b33fb206945f7d91374f56"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/stationary/helper_compile.json",
+      "bytes": 446,
+      "sha256": "7137c54a4e837129473833f35b8c52ad1d163679dd22665f93229706a0c80ede"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/stationary/input.json",
+      "bytes": 993,
+      "sha256": "04938ab338cd15aa6fc119411bc1bf3b60cafeec9dda7a3d80c3f9f8fad27f62"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/stationary/mmio32.c",
+      "bytes": 475,
+      "sha256": "20afcf1a2a5942216619aaceb44de56a54f24eaf5f2d86dd57b47a4bcc8614fe"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/stationary/plan.json",
+      "bytes": 11699,
+      "sha256": "9ca71a1bd071b2237926c2672dba6f21bf0d5e0c3a5b59953dbd0d2cb5e01116"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/stationary/result.json",
+      "bytes": 2296,
+      "sha256": "7bf8f12c090ab350e1ec20b51a2536455e600d508973630d742d6baa2cef5be6"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/stationary/static_config_writes.json",
+      "bytes": 1028,
+      "sha256": "9df9203fe31d0f15754743b8a0828206a556e12f7296e2d440c5be6452523076"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/stationary_input.json",
+      "bytes": 1902,
+      "sha256": "691183607396a793c077aa23587a697fbf89709a300fa888b54fb44069d05b95"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/status.json",
+      "bytes": 3217,
+      "sha256": "e4a51caa4e7924d8797c514b60a231fd5b546ab9d36d8130e8c2c272e285b669"
+    },
+    {
+      "path": "03_ACT轨迹上板测试_通过/act_bank_template.json",
+      "bytes": 10412,
+      "sha256": "d13be9e432b2c1de6bd220b726191a18072bdf968d19a92796b23cf6413f527b"
+    },
+    {
+      "path": "03_ACT轨迹上板测试_通过/act_predictions.json",
+      "bytes": 25486,
+      "sha256": "002bdb50e5e3184219b84b9d7f3243ddd292fbfc730b177613d0126536ea6db5"
+    },
+    {
+      "path": "03_ACT轨迹上板测试_通过/bank.bin",
+      "bytes": 65536,
+      "sha256": "e1df554f937a9d2977242908596392be8c5b702f9e0f3d0396009ffdfe38f815"
+    },
+    {
+      "path": "03_ACT轨迹上板测试_通过/captures.json",
+      "bytes": 105770,
+      "sha256": "3cadc5e1b7aa2a9fc97223cee1137c991f3a1504493de74b2eb381a6df784db4"
+    },
+    {
+      "path": "03_ACT轨迹上板测试_通过/expected.json",
+      "bytes": 11789,
+      "sha256": "bb030de34fda6164794dba7101f139eaa95c7495ee42cd8c50bc2c4025fdd88b"
+    },
+    {
+      "path": "03_ACT轨迹上板测试_通过/expected_template.json",
+      "bytes": 11777,
+      "sha256": "adee9f682fa43f5453d7ccf76fd0d68cc89377b6102f0f4048aa16780d7574d2"
+    },
+    {
+      "path": "03_ACT轨迹上板测试_通过/helper_compile.json",
+      "bytes": 420,
+      "sha256": "ccd0c86d4fd4b59ee4262c67b0cadaca91164a08c9b3b448320102e57ef77d26"
+    },
+    {
+      "path": "03_ACT轨迹上板测试_通过/input.json",
+      "bytes": 10412,
+      "sha256": "a6372a392b63b6216e1be95455a321e22487141a9caab45960df7f34896b1034"
+    },
+    {
+      "path": "03_ACT轨迹上板测试_通过/mmio32.c",
+      "bytes": 475,
+      "sha256": "20afcf1a2a5942216619aaceb44de56a54f24eaf5f2d86dd57b47a4bcc8614fe"
+    },
+    {
+      "path": "03_ACT轨迹上板测试_通过/prepare_act.py",
+      "bytes": 2909,
+      "sha256": "f1c0a7b5e033e75aef8756fbc62cf06784db1eabf39617e2eef6a0e62b3a78dc"
+    },
+    {
+      "path": "03_ACT轨迹上板测试_通过/receipts.json",
+      "bytes": 2094,
+      "sha256": "a7912d14b376daf4962106a75036063341f5b1ef14c071abe5200500229e5bbe"
+    },
+    {
+      "path": "03_ACT轨迹上板测试_通过/replay_input.json",
+      "bytes": 10466,
+      "sha256": "0c3de3700e300a323db25771c3aac803cb02503d817f32b0f15b6f1860de12e7"
+    },
+    {
+      "path": "03_ACT轨迹上板测试_通过/result.json",
+      "bytes": 922,
+      "sha256": "0948ae65b49e4f5f5c9b24e38697fc27bb6c7cc792f34ec8c6af5fd4b594070a"
+    },
+    {
+      "path": "03_ACT轨迹上板测试_通过/run_act_board.py",
+      "bytes": 5702,
+      "sha256": "08b869b0d0aab1168b52129e84c1337f47f0689e272c687ea16e42c14abf168d"
+    },
+    {
+      "path": "05_成功测试所用脚本/run_board_tests.py",
+      "bytes": 4795,
+      "sha256": "35c08d28fdd7652f65ce24cf5429a7e57402711c826a5d92cead712d6b78bc4e"
+    },
+    {
+      "path": "05_成功测试所用脚本/stationary.json",
+      "bytes": 1895,
+      "sha256": "dd541ff6fd34cbe86da689053071230f84977f64a094de29fda0a9a402625e13"
+    },
+    {
+      "path": "05_成功测试所用脚本/trace_stationary.py",
+      "bytes": 2160,
+      "sha256": "656de85bdee74ffb99b4de0851bc4339dcf82c60f08b7b48f8b576c75e44663d"
+    },
+    {
+      "path": "50MHz已成功上板_成果说明.txt",
+      "bytes": 2439,
+      "sha256": "694ea4ac4768d54c9da3f46cb94501ae9781214b154f6760ea31be6ed4630693",
+      "original_sha256": "9ac5182a2e91958dd24fc9d2a0e72eddc9b5db6eb81254f0693bde4cb03c02a1",
+      "publication_edit": "仅保留已通过项目的发布摘要；原始文件保留在源目录。"
+    },
+    {
+      "path": "成果状态.json",
+      "bytes": 486,
+      "sha256": "6f9922fcc5a9e98aea8c8886be4a27f2e275b6d49164d27da1fb1343cfa977ea",
+      "original_sha256": "9d1c1fa0a3ed86295bc22591921656d0f8c82ad5771da2cbecdcaf98ab2574f5",
+      "publication_edit": "仅保留已通过项目的发布摘要；原始文件保留在源目录。"
+    }
+  ],
+  "excluded_or_already_present": [
+    {
+      "path": "01_成功上板固件与时序报告/addresses.json",
+      "reason": "identical_existing_board_artifact",
+      "repository_path": "hardware/fpga_project_20261104/上板文件/addresses.json"
+    },
+    {
+      "path": "01_成功上板固件与时序报告/artifacts.sha256.json",
+      "reason": "identical_existing_board_artifact",
+      "repository_path": "hardware/fpga_project_20261104/上板文件/artifacts.sha256.json"
+    },
+    {
+      "path": "01_成功上板固件与时序报告/reports/check_timing.rpt",
+      "reason": "identical_existing_board_artifact",
+      "repository_path": "hardware/fpga_project_20261104/上板文件/reports/check_timing.rpt"
+    },
+    {
+      "path": "01_成功上板固件与时序报告/reports/drc_route.rpt",
+      "reason": "identical_existing_board_artifact",
+      "repository_path": "hardware/fpga_project_20261104/上板文件/reports/drc_route.rpt"
+    },
+    {
+      "path": "01_成功上板固件与时序报告/reports/timing_route.rpt",
+      "reason": "identical_existing_board_artifact",
+      "repository_path": "hardware/fpga_project_20261104/上板文件/reports/timing_route.rpt"
+    },
+    {
+      "path": "01_成功上板固件与时序报告/reports/timing_synth.rpt",
+      "reason": "identical_existing_board_artifact",
+      "repository_path": "hardware/fpga_project_20261104/上板文件/reports/timing_synth.rpt"
+    },
+    {
+      "path": "01_成功上板固件与时序报告/reports/utilization_route.rpt",
+      "reason": "identical_existing_board_artifact",
+      "repository_path": "hardware/fpga_project_20261104/上板文件/reports/utilization_route.rpt"
+    },
+    {
+      "path": "01_成功上板固件与时序报告/reports/utilization_synth.rpt",
+      "reason": "identical_existing_board_artifact",
+      "repository_path": "hardware/fpga_project_20261104/上板文件/reports/utilization_synth.rpt"
+    },
+    {
+      "path": "01_成功上板固件与时序报告/robot_rt.bif",
+      "reason": "identical_existing_board_artifact",
+      "repository_path": "hardware/fpga_project_20261104/上板文件/robot_rt.bif"
+    },
+    {
+      "path": "01_成功上板固件与时序报告/robot_rt.bit",
+      "reason": "identical_existing_board_artifact",
+      "repository_path": "hardware/fpga_project_20261104/上板文件/robot_rt.bit"
+    },
+    {
+      "path": "01_成功上板固件与时序报告/robot_rt.bit.bin",
+      "reason": "identical_existing_board_artifact",
+      "repository_path": "hardware/fpga_project_20261104/上板文件/robot_rt.bit.bin"
+    },
+    {
+      "path": "01_成功上板固件与时序报告/robot_rt.xsa",
+      "reason": "identical_existing_board_artifact",
+      "repository_path": "hardware/fpga_project_20261104/上板文件/robot_rt.xsa"
+    },
+    {
+      "path": "01_成功上板固件与时序报告/route_status.rpt",
+      "reason": "identical_existing_board_artifact",
+      "repository_path": "hardware/fpga_project_20261104/上板文件/route_status.rpt"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/01_apps_before.log",
+      "reason": "log_or_compiled_helper"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/02_unload_old.log",
+      "reason": "log_or_compiled_helper"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/03_load_new.log",
+      "reason": "log_or_compiled_helper"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/04_apps_after.log",
+      "reason": "log_or_compiled_helper"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/05_loaded_identity.log",
+      "reason": "log_or_compiled_helper"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/06_stationary.log",
+      "reason": "log_or_compiled_helper"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/clocks_after.txt",
+      "reason": "log_or_compiled_helper"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/kernel_tail.txt",
+      "reason": "log_or_compiled_helper"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/stationary/helper_compile.stderr.log",
+      "reason": "log_or_compiled_helper"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/stationary/helper_compile.stdout.log",
+      "reason": "log_or_compiled_helper"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/stationary/mmio32.so",
+      "reason": "log_or_compiled_helper"
+    },
+    {
+      "path": "02_上板加载和静止测试_通过/stationary/mmio_progress.log",
+      "reason": "log_or_compiled_helper"
+    },
+    {
+      "path": "03_ACT轨迹上板测试_通过/helper_compile.stderr.log",
+      "reason": "log_or_compiled_helper"
+    },
+    {
+      "path": "03_ACT轨迹上板测试_通过/helper_compile.stdout.log",
+      "reason": "log_or_compiled_helper"
+    },
+    {
+      "path": "03_ACT轨迹上板测试_通过/mmio32.so",
+      "reason": "log_or_compiled_helper"
+    },
+    {
+      "path": "03_ACT轨迹上板测试_通过/progress.log",
+      "reason": "log_or_compiled_helper"
+    },
+    {
+      "path": "05_成功测试所用脚本/robot_rt.dtbo",
+      "reason": "identical_existing_device_tree",
+      "repository_path": "hardware/fpga_project_20261104/板端配置/robot_rt.dtbo"
+    }
+  ],
+  "verification": {
+    "firmware_matches_existing_repository": true,
+    "act_capture_sequences_0_through_56": true,
+    "act_capture_fault_reject_codes_zero": true,
+    "act_bank_sha256_matches_expected": true,
+    "build_manifest_sha256": "d9fbcfcd53bf80ed9026b3f5a2b361d5c0d47c4603dbaf9a82170a92cd6e9f91",
+    "new_hardware_operations": false,
+    "simulation_rerun": false,
+    "raw_test_records_bytes_unchanged": true
+  }
+}

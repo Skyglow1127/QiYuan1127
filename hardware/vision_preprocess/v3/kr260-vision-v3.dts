@@ -1,0 +1,54 @@
+/dts-v1/;
+/plugin/;
+/* K26 composite VPR3 + pressure GPIO. C3 external 25 MHz -> fixed MMCM 100 MHz, no PS clock changes.
+ * HP0 is non-coherent; vpr_dma uses Linux dma_alloc_coherent/dma_mmap_coherent.
+ * No dma-coherent property and no userspace guessed physical buffer addresses.
+ */
+&fpga_full {
+    #address-cells=<2>;
+    #size-cells=<2>;
+    firmware-name="kr260-vision-v3.bit.bin";
+};
+&{/} {
+    vpr_clock100: vpr-clock100 {
+        compatible="fixed-clock";
+        #clock-cells=<0>;
+        clock-frequency=<100000000>;
+        clock-output-names="kr260-mmcm-100mhz";
+    };
+};
+&amba {
+    #address-cells=<2>;
+    #size-cells=<2>;
+    vpr_afi: vpr-afi {
+        compatible="xlnx,afi-fpga";
+        /* AFIFM2=HP0 read/write 128-bit; AFIFS HPM0=128, preserve HPM1=128. */
+        config-afi=<4 0>,<5 0>,<14 0xa00>;
+        resets=<&zynqmp_reset 116>,<&zynqmp_reset 117>,<&zynqmp_reset 118>,<&zynqmp_reset 119>;
+    };
+    vpr_pressure: gpio@a0000000 {
+        compatible="xlnx,xps-gpio-1.00.a";
+        reg=<0 0xa0000000 0 0x10000>;
+        clocks=<&vpr_clock100>;
+        clock-names="s_axi_aclk";
+        gpio-controller;
+        #gpio-cells=<2>;
+        gpio-line-names="FSR_DO1","FSR_DO2";
+        label="kr260-fsr-do";
+        xlnx,gpio-width=<2>;
+        xlnx,all-inputs=<1>;
+        xlnx,all-outputs=<0>;
+        xlnx,is-dual=<0>;
+        xlnx,interrupt-present=<0>;
+        xlnx,tri-default=<0xffffffff>;
+        status="okay";
+    };
+    vpr_dma: vision@a0050000 {
+        compatible="prototype,vpr3-dma";
+        reg=<0 0xa0050000 0 0x10000>,<0 0xa0040000 0 0x10000>;
+        reg-names="core","dma";
+        clocks=<&vpr_clock100>;
+        clock-names="aclk";
+        status="okay";
+    };
+};

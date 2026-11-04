@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "tests_run": 3,
+  "failures": 0,
+  "errors": 0,
+  "network_calls": 0,
+  "robot_commands_sent": 0,
+  "client_sha256": "6aaf4ff804052cea2737162473762b3a9e4c286ac93bded180f6d70e6ce0a48d",
+  "wire_codec_sha256": "55a4eb7630b8943460653c3e9e125f38e95536d533f74566680ff036bc54db33",
+  "scope": "Exact existing quantized224RGB/state bytes and strict synthetic HTTP response boundaries"
+}

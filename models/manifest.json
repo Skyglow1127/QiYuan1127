@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "id": "act_020000",
+      "file": "model.safetensors",
+      "bytes": 206707932,
+      "sha256": "58ff63d7cc57052f56d2e13e5121fbe1ea9b2bb0d1ed6fda65005264d4c2c09e",
+      "download_url": "https://huggingface.co/echoma1127/QiYuan1127-PiPER-ACT-020000/resolve/771ce3595487d7d5694a72d13c19029be0afe8a2/model.safetensors",
+      "publication_status": "published",
+      "config_directory": "models/act_020000",
+      "repo_id": "echoma1127/QiYuan1127-PiPER-ACT-020000",
+      "revision": "771ce3595487d7d5694a72d13c19029be0afe8a2",
+      "repo_url": "https://huggingface.co/echoma1127/QiYuan1127-PiPER-ACT-020000",
+      "files": {
+        "README.md": {
+          "bytes": 2319,
+          "sha256": "7bc1144f829f3245a4ec81a07d94ae1d375b40e637dc9d846d428d50ecf6429f"
+        },
+        "config.json": {
+          "bytes": 1703,
+          "sha256": "1047d842711a875818fdbbb270d48cc820b1434516c7e77ce05bc175c42ab8e5"
+        },
+        "model.safetensors": {
+          "bytes": 206707932,
+          "sha256": "58ff63d7cc57052f56d2e13e5121fbe1ea9b2bb0d1ed6fda65005264d4c2c09e"
+        },
+        "policy_postprocessor.json": {
+          "bytes": 660,
+          "sha256": "c27cf6f42b42352f9b8f9c40da155fd4459e0ee9b85b9f23072941eb52b3ffb5"
+        },
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": {
+          "bytes": 7632,
+          "sha256": "9ddc01fd36829854a820b50e63bc4b9abddce2e5f59b51baac98739526a843dd"
+        },
+        "policy_preprocessor.json": {
+          "bytes": 1329,
+          "sha256": "a265568640237bfa353b725e1275bfe708c73e57fd7f9fd8f624e165e608369a"
+        },
+        "policy_preprocessor_step_3_normalizer_processor.safetensors": {
+          "bytes": 7640,
+          "sha256": "63284104b3136d2b2673bdb7bf5f85e7f82207f56c2d98057f951ec8d47fd3ab"
+        },
+        "train_config.json": {
+          "bytes": 6220,
+          "sha256": "353dc84af7f2eff64955b90b32d6a6beb9278464302353a3c00c43b54512e4e7"
+        }
+      }
+    },
+    {
+      "id": "pi05_best004000",
+      "file": "model.safetensors",
+      "bytes": 9354050752,
+      "sha256": "583ff741239b111053dc969fe5ba69eb70475e888c7ece92b04a78d3319386cf",
+      "download_url": "https://huggingface.co/echoma1127/QiYuan1127-PiPER-PI05-best004000/resolve/a84029e84d0e13226055d88b8c491a14fd57b491/model.safetensors",
+      "publication_status": "published",
+      "config_directory": "models/pi05_best004000",
+      "repo_id": "echoma1127/QiYuan1127-PiPER-PI05-best004000",
+      "revision": "a84029e84d0e13226055d88b8c491a14fd57b491",
+      "repo_url": "https://huggingface.co/echoma1127/QiYuan1127-PiPER-PI05-best004000",
+      "files": {
+        "GEMMA_PROHIBITED_USE_POLICY.txt": {
+          "bytes": 3691,
+          "sha256": "4f2a508b24b0fcf3e104e1b77cc87d42ae6ffd3be9cbbbf0591110c9a6d32b3a"
+        },
+        "GEMMA_TERMS.txt": {
+          "bytes": 8840,
+          "sha256": "c1ccabc782bc1f5612f457569b23006cf8026d649071fa4699a5df80710874bb"
+        },
+        "NOTICE.txt": {
+          "bytes": 821,
+          "sha256": "a4cd1b15bf3dc7d5145ed3a1ee8bce2a88998f31e0c29be9a5ad6130be93acc4"
+        },
+        "README.md": {
+          "bytes": 2901,
+          "sha256": "62aaa3dd7ce6b981b4092e178740c8bb508fe21be9fb787e0261a3cb91c9476a"
+        },
+        "config.json": {
+          "bytes": 2419,
+          "sha256": "3b2429be2db40fe15d3c05e0e88ee8306ff6d1287d78d2d4edef724165717210"
+        },
+        "model.safetensors": {
+          "bytes": 9354050752,
+          "sha256": "583ff741239b111053dc969fe5ba69eb70475e888c7ece92b04a78d3319386cf"
+        },
+        "policy_postprocessor.json": {
+          "bytes": 779,
+          "sha256": "e6e0c0371c2ea20b0a2f99feab26cea73a7d8994eccc4446c038958f285d68ff"
+        },
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": {
+          "bytes": 7632,
+          "sha256": "9ddc01fd36829854a820b50e63bc4b9abddce2e5f59b51baac98739526a843dd"
+        },
+        "policy_preprocessor.json": {
+          "bytes": 1956,
+          "sha256": "d1868a2a48a17e236355fa421ee462d2996cb331dbb7ea1311d0dd58ce1b66e6"
+        },
+        "policy_preprocessor_step_3_normalizer_processor.safetensors": {
+          "bytes": 7640,
+          "sha256": "63284104b3136d2b2673bdb7bf5f85e7f82207f56c2d98057f951ec8d47fd3ab"
+        },
+        "tokenizer/added_tokens.json": {
+          "bytes": 24,
+          "sha256": "7d0bad90030d638a4bf89a82e91206e25f1fbe0012f14bca21666a64b643bc49"
+        },
+        "tokenizer/provenance.json": {
+          "bytes": 6525,
+          "sha256": "e1dec132414765a65fde7b5185c443b77987a6efe670546716a1f925d4bc6588"
+        },
+        "tokenizer/tokenizer.json": {
+          "bytes": 34605010,
+          "sha256": "103fb8b7439b29a62fb734a23fe4678ced003f1ed66bd4b74aff4e0751e862b1"
+        },
+        "tokenizer/tokenizer.model": {
+          "bytes": 4264023,
+          "sha256": "8986bb4f423f07f8c7f70d0dbe3526fb2316056c17bae71b1ea975e77a168fc6"
+        },
+        "tokenizer/tokenizer_config.json": {
+          "bytes": 26580,
+          "sha256": "1c6b5acfdc46492f5368b8bfe3e1e622e03b71a637715e1867cfb08c41495139"
+        },
+        "train_config.json": {
+          "bytes": 7207,
+          "sha256": "14860ec4139510adbe97d4153168a234ed311127b9901d11d296e335a49034fd"
+        }
+      }
+    },
+    {
+      "id": "pi05_final020000",
+      "file": "model.safetensors",
+      "bytes": 9354050752,
+      "sha256": "1cecb3ca2ac02a8e70b6210be630aa98634e411653a84094c276d70fe8d1d38d",
+      "download_url": null,
+      "publication_status": "not_published",
+      "config_directory": "models/pi05_final020000"
+    }
+  ],
+  "dataset": {
+    "id": "rad_place_merged_v5",
+    "episodes": 52,
+    "frames": 20488,
+    "fps": 20,
+    "download_url": null,
+    "publication_status": "not_published"
+  },
+  "tokenizer": {
+    "id": "paligemma_tokenizer",
+    "download_url": "https://huggingface.co/echoma1127/QiYuan1127-PiPER-PI05-best004000/tree/a84029e84d0e13226055d88b8c491a14fd57b491/tokenizer",
+    "publication_status": "published",
+    "checksum_reference": "src/pi05/pi05_expert_inference_v6/local_config.json",
+    "repo_id": "echoma1127/QiYuan1127-PiPER-PI05-best004000",
+    "revision": "a84029e84d0e13226055d88b8c491a14fd57b491",
+    "subdirectory": "tokenizer"
+  }
+}

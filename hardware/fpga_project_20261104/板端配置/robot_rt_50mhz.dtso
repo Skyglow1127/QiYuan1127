@@ -1,0 +1,80 @@
+/dts-v1/;
+/plugin/;
+&fpga_full {
+	firmware-name = "robot_rt.bit.bin";
+	clocking1: clocking1 {
+		compatible = "xlnx,fclk";
+		assigned-clocks = <&zynqmp_clk 72>;
+		assigned-clock-rates = <100000000>;
+		#clock-cells = <0>;
+		clock-output-names = "fabric_clk";
+		clocks = <&zynqmp_clk 72>;
+	};
+	clocking0: clocking0 {
+		compatible = "xlnx,fclk";
+		assigned-clocks = <&zynqmp_clk 71>;
+		assigned-clock-rates = <50000000>;
+		#clock-cells = <0>;
+		clock-output-names = "fabric_clk";
+		clocks = <&zynqmp_clk 71>;
+	};
+	afi0: afi0 {
+		compatible = "xlnx,afi-fpga";
+		resets = <&zynqmp_reset 116>, <&zynqmp_reset 117>, <&zynqmp_reset 118>, <&zynqmp_reset 119>;
+		config-afi = < 0 0>, <1 0>, <2 0>, <3 0>, <4 0>, <5 0>, <6 0>, <7 0>, <8 0>, <9 0>, <10 0>, <11 0>, <12 0>, <13 0>, <14 0x800>, <15 0x000>;
+	};
+};
+
+&amba {
+	bram_ctrl: bram_ctrl@a0020000 {
+		xlnx,protocol = "AXI4";
+		xlnx,edk-special = "BRAM_CTRL";
+		compatible = "xlnx,axi-bram-ctrl-4.1" , "xlnx,axi-bram-ctrl";
+		xlnx,ecc-onoff-reset-value = <0>;
+		xlnx,ecc-type = <0>;
+		xlnx,rd-cmd-optimization = <0>;
+		xlnx,memory-depth = <32768>;
+		xlnx,use-ecc = <0>;
+		xlnx,fault-inject = <0>;
+		xlnx,ip-name = "axi_bram_ctrl";
+		reg = <0x0 0xa0020000 0x0 0x20000>;
+		xlnx,bmg-instance = "EXTERNAL";
+		clocks = <&zynqmp_clk 71>;
+		xlnx,s-axi-ctrl-addr-width = <32>;
+		xlnx,read-latency = <1>;
+		xlnx,id-width = <1>;
+		xlnx,s-axi-supports-narrow-burst = <1>;
+		xlnx,supports-narrow-burst = <1>;
+		xlnx,single-port-bram = <1>;
+		xlnx,ecc = <0>;
+		xlnx,edk-iptype = "PERIPHERAL";
+		clock-names = "s_axi_aclk";
+		xlnx,data-width = <32>;
+		xlnx,bram-addr-width = <15>;
+		xlnx,bram-inst-mode = "EXTERNAL";
+		xlnx,s-axi-ctrl-data-width = <32>;
+		xlnx,mem-depth = <32768>;
+		xlnx,s-axi-id-width = <1>;
+		xlnx,name = "bram_ctrl";
+	};
+	core: robot_rt_top_bd@a0000000 {
+		compatible = "xlnx,robot-rt-top-bd-1.0";
+		clock-names = "aclk";
+		xlnx,clock-hz = <49999500>;
+		xlnx,ip-name = "robot_rt_top_bd";
+		xlnx,edk-iptype = "PERIPHERAL";
+		reg = <0x0 0xa0000000 0x0 0x1000>;
+		clocks = <&zynqmp_clk 71>;
+		xlnx,name = "core";
+	};
+	guard: robot_rt_axi_guard_bd@a0020000 {
+		compatible = "xlnx,robot-rt-axi-guard-bd-1.0";
+		clock-names = "aclk";
+		xlnx,base-addr = <0xa0020000>;
+		xlnx,ip-name = "robot_rt_axi_guard_bd";
+		xlnx,edk-iptype = "PERIPHERAL";
+		reg = <0x0 0xa0020000 0x0 0x20000>;
+		clocks = <&zynqmp_clk 71>;
+		xlnx,name = "guard";
+	};
+};

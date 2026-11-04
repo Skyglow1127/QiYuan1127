@@ -1,0 +1,47 @@
+# SI units; default protected IDs 0..3 map provisionally to URDF Joint1..4.
+base_frame: base_link
+camera_frame: camera_color_optical_frame
+color_topic: /camera/color/image_raw
+depth_topic: /camera/aligned_depth_to_color/image_raw
+info_topic: /camera/color/camera_info
+observations_topic: /d1/perception/targets
+# Depth must share color optical frame and resolution. This is a contract with
+# the camera adapter, not an automatic spatial alignment operation.
+depth_aligned: true
+max_frame_age_s: 0.5
+max_sync_skew_s: 0.025
+marker_id: 23
+marker_size_m: 0.06
+cube_size_m: 0.035
+# Place 10 cm along marker +X; do not cover marker. Region 8 x 8 cm.
+place_offset_m: [0.10, 0.0]
+place_region_m: [0.08, 0.08]
+clearance_m: 0.08
+place_release_gap_m: 0.003
+# Table obstacle in marker frame, top at z=0; extends under pick and place.
+table_size_m: [1.0, 1.0, 0.02]
+table_center_xy_m: [0.0, 0.0]
+arm_group: arm
+tcp_link: grasp_tcp
+arm_joints: [Joint1, Joint2, Joint3, Joint4, Joint5, Joint6]
+protected_joints: [Joint1, Joint2, Joint3, Joint4]
+protected_tolerance_rad: 0.0001
+finger_links: [Link7_1, Link7_2]
+gripper_joint: Joint7_1
+# CAD-only nominal values. SDK J6 units/conversion are not established.
+gripper_open: 0.020
+gripper_closed: 0.009
+gripper_max_effort: 0.0
+grasp_min_effort: 0.0
+planning_time_s: 8.0
+velocity_scaling: 0.15
+acceleration_scaling: 0.15
+move_action: /move_action
+trajectory_action: /execute_trajectory
+gripper_action: /gripper_controller/gripper_cmd
+# Real execution is disabled until all required facts have measured evidence.
+hardware_validated: false
+handeye_validated: false
+joint_mapping_validated: false
+tcp_validated: false
+gripper_validated: false

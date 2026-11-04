@@ -1,0 +1,17 @@
+{
+  "old_compiled_clock_hz": 99999001,
+  "new_compiled_clock_hz": 49999500,
+  "cases": [
+    {
+      "f_num_unchanged": 20,
+      "f_den_unchanged": 1,
+      "max_tick_time_difference_ns": 9.50009490594811
+    },
+    {
+      "f_num_unchanged": 275,
+      "f_den_unchanged": 2,
+      "max_tick_time_difference_ns": 12.727400019454922
+    }
+  ],
+  "pass": true
+}

@@ -1,0 +1,56 @@
+{
+  "created_utc": "v6",
+  "mode": "prepare",
+  "success": true,
+  "robot_io": false,
+  "protocol_version": "pi05-expert-inference/v1",
+  "recorded_source": "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_actual_inference_v5/recorded_observation.npz",
+  "recorded_source_sha256": "b28906c8e0048550e37060361adb05880cdf3d06809e5c054b93e42eb0ce1410",
+  "numpy_version": "2.2.6",
+  "torch_version": "2.11.0+rocm7.14.1",
+  "noise_rng": "numpy.random.default_rng.standard_normal",
+  "noise_seed": 0,
+  "image_conversion": {
+    "observation.images.global": {
+      "original_shape": [
+        3,
+        480,
+        640
+      ],
+      "original_dtype": "float32",
+      "wire_shape": [
+        3,
+        224,
+        224
+      ],
+      "wire_dtype": "uint8",
+      "quantization_max_abs_error_0_1": 0.0019608139991760254,
+      "quantization_mean_abs_error_0_1": 0.0006982882041484118
+    },
+    "observation.images.wrist": {
+      "original_shape": [
+        3,
+        480,
+        640
+      ],
+      "original_dtype": "float32",
+      "wire_shape": [
+        3,
+        224,
+        224
+      ],
+      "wire_dtype": "uint8",
+      "quantization_max_abs_error_0_1": 0.0019608139991760254,
+      "quantization_mean_abs_error_0_1": 0.0006708079599775374
+    }
+  },
+  "input": "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_expert_inference_v6/canonical_input.npz",
+  "input_sha256": "aa2f59edc472f8799b124891c576b1e1569bc975205c16c1fa961fec5ad54620",
+  "input_bytes": 213163,
+  "noise_sha256": "948dbddb2a33925be58369a3073137d08930272d68468596bf7a808dfb6fba7a",
+  "disk_read_decode_validate_seconds": 0.0029075179918436334,
+  "source_capture_wallclock": null,
+  "source_note": "Recorded input; input-ready/request timestamps are not camera capture timestamps.",
+  "image_encoding": "Official CPU resize/pad to 224 followed by rounded uint8; saved once before timed runs.",
+  "note": "Canonical resizing/quantization changes full-resolution float input; this does not establish policy quality."
+}

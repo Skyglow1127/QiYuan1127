@@ -1,0 +1,39 @@
+PiPER 本机双相机预览，v3恢复。
+
+当前两台DaBai DC1相机直接通过USB连接AIPC，未使用KR260转发。
+腕部：CC1365301EY，http://127.0.0.1:18760/
+全局：CC1365302B2，http://127.0.0.1:18761/（包含两路RGB和深度画面）
+网页提供各相机“关闭相机 / 重新连接相机”，主页面还可操作全部两台相机。
+关闭会停止RGB和深度采集并释放SDK设备；网页和状态接口仍保留，刷新不会重新打开相机。
+这不是切断USB供电；需要恢复预览时点击重新连接即可。
+控制接口仅接受带 X-Camera-Control: 1 的本机 POST，请勿用 GET 改变采集状态。
+RGB：640×480，目标30fps；深度：640×400，目标30fps。
+两路相机按序列号绑定，不按/dev/video编号猜测角色。
+彩色和深度未进行曝光同步或空间对齐。
+
+重新启动：bash /home/aup/Lerobot/start_cameras.sh
+进程与健康记录：/home/aup/Lerobot/logs/cameras/
+程序只采集与展示相机图像，不导入机器人SDK，不发送CAN或机械臂命令。
+
+SDK沿用本机已有官方OrbbecSDK1.10.37 x86_64库，复制至本目录lib。
+相机采集服务沿用已验证的KR260预览服务逻辑，按本机SDK版本和对应C头文件校核结构体与函数绑定。
+网页沿用现有双相机RGB/深度预览布局，改为AIPC本机入口。
+
+v7 掉流恢复修正：
+RGB和深度分别监测；任一路连续2秒未更新，会结束该次采集。
+后台等旧SDK资源释放后，按原序列号自动重连；反复失败时按1/2/4/8/15秒退避。
+手动“关闭相机”仍保持关闭，不会被后台自动打开。网页会显示正在自动重新连接。
+单帧接口只返回真实采集的新帧，不刷新旧帧时间戳；缺少新帧时返回503。
+ACT仍执行原150ms图像时效、双图60ms偏差等检查；相机恢复不会自动重启机械臂任务。
+相机错误会带上global/wrist角色、序列号和最后帧号，便于区分故障相机。
+
+本次故障有内核证据：22:20:54腕部相机USB节点1-1.1.4断开，随后重新枚举。
+用户确认主要发生在机械臂运动时。请在机械臂停止后检查/固定腕部USB接头，
+让线缆在整个运动范围内保留余量，避免接头承受拉力。自动重连不能修复物理接触不良。
+该深度USB节点故障时power/control已经是on；本次没有修改USB电源或系统配置。
+
+只读双相机连续检查（不连接CAN、不发送机械臂指令）：
+/home/aup/Lerobot/envs/piper-cpu/bin/python -B /home/aup/Lerobot/projects/piper/camera_preview/verify_streams.py --seconds 60 --output /tmp/piper_camera_soak.json
+故障注入/生命周期测试、连续读取记录与变更前备份见：
+/home/aup/Lerobot/projects/piper/logs/camera_recovery_v7/
+/home/aup/Lerobot/projects/piper/camera_preview/backups/before_recovery_v7_r16/

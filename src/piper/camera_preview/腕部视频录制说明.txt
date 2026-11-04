@@ -1,0 +1,60 @@
+腕部彩色视频录制（独立视频，不是 LeRobot 示范数据集）
+
+启动并自动打开实时预览：
+  bash /home/aup/Lerobot/projects/piper/record_wrist_video.sh
+
+若原腕部预览正在占用相机，可临时接管：
+  bash /home/aup/Lerobot/projects/piper/record_wrist_video.sh --takeover-preview
+  只暂停序列号核对通过的腕部服务，正常退出后恢复原先开启状态。
+  若原先已关闭则继续保持关闭；全局服务不变。
+  检测到 ACT/官方示范录制进程时拒绝独占录制，请先正常结束那些任务。
+  此模式不能同时向 ACT 提供原腕部预览流。
+
+录制指定时长，例如 60 秒：
+  bash /home/aup/Lerobot/projects/piper/record_wrist_video.sh --duration 60
+
+指定保存文件（不覆盖已有文件）：
+  bash /home/aup/Lerobot/projects/piper/record_wrist_video.sh --output /home/aup/Videos/wrist.mkv
+
+只查看相机支持档位（不启动采集、不更改参数）：
+  bash /home/aup/Lerobot/projects/piper/record_wrist_video.sh --list-formats
+
+默认行为与画质
+- 按 camera_roles.json 中已验证的腕部序列号 CC1365301EY 查找 udev 设备；不猜 /dev/video 编号。
+- 每次启动重新枚举当前设备 MJPEG 档位，选最大像素数、该分辨率下最高帧率。
+- 当前实测枚举上限：1632×1224 @ 30 fps，MJPG；两项上限可以同时请求。
+- 这描述当前设备/驱动暴露的输出模式，不是已证明的传感器原生像素或光学清晰度。
+  历史 Orbbec SDK 暴露的彩色上限为1280×720@30，本脚本直接用RGB的UVC/V4L2接口。
+- 驱动若降低分辨率/帧率，或首帧解码尺寸不匹配，明确报错，不悄悄降档。
+- 直接把相机原 MJPEG 帧封装为 MKV，无缩放、无二次有损编码；MJPEG在相机端已压缩。
+  浏览器预览与录像用同一份原JPEG字节，预览只保留最新帧，不阻塞录制。
+- 如需显式指定档位，必须同时给出 --width、--height、--fps，且在枚举表中存在。
+  示例：--width 1280 --height 720 --fps 30。
+
+预览与保存
+- 默认 http://127.0.0.1:18763/，可用 --port 修改，--no-browser 关闭自动弹浏览器。
+- 实时显示画面、尺寸、目标/最近/平均帧率、时长、帧数、文件大小和估计缺帧。
+- Ctrl+C、SIGTERM或网页“停止并保存”均请求正常写尾、释放相机；默认持续录制。
+  仅关闭浏览器页签不会停止。掉流3秒或设备断开会结束并保留此前有效录像，不自动重启。
+- 默认保存 /home/aup/Lerobot/projects/piper/recordings/wrist_video/wrist_时间.mkv，
+  时间按 Asia/Singapore。可用 VLC 等支持 MKV/MJPEG 的播放器播放。
+- 同名 .json 记录最终档位、实际帧率、状态、错误、原MJPEG载荷SHA256；
+  .timestamps.csv 保存逐帧驱动序号、原时间戳、主机收到时刻和字节数。
+- 文件时间轴使用驱动采集时间戳相对首帧的差值，MKV时间轴会量化为容器时间基；
+  原微秒时间戳保存在CSV。不会用复制帧补足30fps或把丢帧段强行加速。
+- 估计缺帧基于驱动sequence间隔，不覆盖传感器内部未上报等情况。
+  实际帧率以视频时间戳统计为准，受启动、曝光、USB及磁盘影响。
+- 脚本依赖现有 piper-cpu 环境中的 PyAV，不需要系统ffmpeg或桌面OpenCV。
+  只录RGB，无声音、无深度；不连接CAN、不启动/使能机械臂，不修改ACT配置。
+
+本次验证
+- logs/wrist_video_recorder_v9/ 中有真实最高档短录、网页停止录制与统计。
+  最高档实录画面均解码为1632×1224；43秒多样本平均29.74fps、末段约29.9fps，
+  启动阶段有1个驱动序号间隔。不能把请求30fps写成恒定实测30fps。
+- MKV逐包与采集载荷聚合SHA256比对，核验未二次压缩。
+- 两个相机预览服务原先处于closed；验证后仍保持closed，全局相机未采集。
+
+接口与枚举依据（官方资料）
+  https://docs.kernel.org/userspace-api/media/v4l/vidioc-enum-framesizes.html
+  https://docs.kernel.org/userspace-api/media/v4l/vidioc-enum-frameintervals.html
+  https://github.com/orbbec/ros2_astra_camera/blob/master/astra_camera/scripts/56-orbbec-usb.rules

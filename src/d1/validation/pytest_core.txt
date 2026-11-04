@@ -1,0 +1,19 @@
+266 passed, 1 deselected in 4.98s
+Selection: not latest_saved_endpoint_residual
+tests/test_shared_progress.py
+tests/test_closed_loop_wiring.py
+tests/test_execution_metrics.py
+tests/test_ack_overlap_method01.py
+tests/test_method_policy_wiring.py
+tests/test_method_runner.py
+tests/test_candidate_commit_tracking.py
+tests/test_feedback_recovery.py
+tests/test_joint_feedback_recovery.py
+tests/test_adaptive_reference.py
+tests/test_adaptive_pacing.py
+tests/test_command_ack_schedule.py
+tests/test_joint_model_limits.py
+tests/test_fixed_endpoint_retry.py
+tests/test_arm_diagnostics.py
+runtime/Control/ros2_ws/src/d1_pick_place/test/test_sdk_executor.py
+runtime/Control/ros2_ws/src/d1_pick_place/test/test_path_timing.py

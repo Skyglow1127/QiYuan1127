@@ -1,0 +1,64 @@
+{
+  "timestamp_utc": "2026-11-03T21:10:55.288879+00:00",
+  "python": "3.12.3",
+  "scope": "Selected offline tests; no hardware, cloud service or physical grasp validation.",
+  "passed": true,
+  "results": [
+    {
+      "suite": "d1",
+      "tests": [
+        "tests/test_shared_progress.py",
+        "tests/test_feedback_tolerance.py"
+      ],
+      "returncode": 0,
+      "stdout": "......................................                                   [100%]\n38 passed in 0.63s\n",
+      "stderr": ""
+    },
+    {
+      "suite": "pi05",
+      "tests": [
+        "test_closure_sync.py"
+      ],
+      "returncode": 0,
+      "stdout": "........................                                                 [100%]\n24 passed in 0.02s\n",
+      "stderr": ""
+    },
+    {
+      "suite": "fpga",
+      "tests": [
+        "tests/test_player_reference.py"
+      ],
+      "returncode": 0,
+      "stdout": "......................                                                   [100%]\n22 passed in 0.25s\n",
+      "stderr": ""
+    },
+    {
+      "suite": "piper",
+      "tests": [
+        "test_policy_bounds.py",
+        "test_target_rate.py",
+        "test_executor.py",
+        "test_act_chunk_timing.py"
+      ],
+      "returncode": 0,
+      "stdout": "........................................................................ [ 97%]\n..                                                                       [100%]\n74 passed in 1.06s\n",
+      "stderr": ""
+    },
+    {
+      "suite": "wire",
+      "tests": [
+        "test_wire_codec.py"
+      ],
+      "returncode": 0,
+      "stdout": ".............                                                            [100%]\n13 passed in 0.37s\n",
+      "stderr": ""
+    }
+  ],
+  "packaging_checks": {
+    "asset_weight_sha256_recomputed": true,
+    "prepared_workspace_with_external_assets": true,
+    "act_repair_help_with_preserved_model_identity": "passed",
+    "original_source_files_unchanged_at_copy_check": true,
+    "no_robot_or_cloud_operations": true
+  }
+}

@@ -1,0 +1,2 @@
+# Separate from offline test dependencies; validated with huggingface_hub 1.33.0.
+huggingface_hub>=1.33,<3

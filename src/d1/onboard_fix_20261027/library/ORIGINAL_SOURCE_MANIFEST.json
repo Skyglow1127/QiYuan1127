@@ -1,0 +1,48 @@
+{
+  "captured_at_utc": "2026-10-27T07:30:50.309411+00:00",
+  "files": [
+    {
+      "source_evidence": "/media/aup/UbuntuData/ACT训练/11_D1轨迹执行改进/validation/native_probe_20261027/deployment/FashionStar_UartServo.cpp",
+      "working_path": "src/FashionStar_UartServo.cpp",
+      "original_path": "original/src/FashionStar_UartServo.cpp",
+      "sha256": "19dd2827e21d81bb50b3742c7d4e9255b2a636033d366c70ad05f1dedd179efc",
+      "bytes": 13718
+    },
+    {
+      "source_evidence": "/media/aup/UbuntuData/ACT训练/11_D1轨迹执行改进/validation/native_probe_20261027/deployment/FashionStar_UartServoProtocol.cpp",
+      "working_path": "src/FashionStar_UartServoProtocol.cpp",
+      "original_path": "original/src/FashionStar_UartServoProtocol.cpp",
+      "sha256": "17a2b79a556f33e0bbdc7a730f0ffd2939cd9073d40ea0ab0a489655a1dca920",
+      "bytes": 19437
+    },
+    {
+      "source_evidence": "/media/aup/UbuntuData/ACT训练/11_D1轨迹执行改进/validation/native_probe_20261027/deployment/FashionStar_UartServo.h",
+      "working_path": "include/FashionStar_UartServo.h",
+      "original_path": "original/include/FashionStar_UartServo.h",
+      "sha256": "516624db79e8a6054232cc8ab63d638538c61f0b5987a68d88b793149223e4aa",
+      "bytes": 5213
+    },
+    {
+      "source_evidence": "/media/aup/UbuntuData/ACT训练/11_D1轨迹执行改进/validation/native_probe_20261027/deployment/FashionStar_UartServoProtocol.h",
+      "working_path": "include/FashionStar_UartServoProtocol.h",
+      "original_path": "original/include/FashionStar_UartServoProtocol.h",
+      "sha256": "9a5ea5788bd84844315ab6ae14443d6ac7c0a7a7b5becd65d12cf96e068da3fa",
+      "bytes": 15162
+    },
+    {
+      "source_evidence": "/media/aup/UbuntuData/ACT训练/11_D1轨迹执行改进/validation/native_probe_20261027/deployment/fashionstar_CMakeLists.txt",
+      "working_path": "CMakeLists.txt",
+      "original_path": "original/CMakeLists.txt",
+      "sha256": "349f29acbc027d50a5f615c3ad8d5b97581cb2aa292232e2856e7afce187a99b",
+      "bytes": 826
+    },
+    {
+      "source_evidence": "/media/aup/UbuntuData/ACT训练/11_D1轨迹执行改进/validation/native_probe_20261027/deployment/fashionstar_src_CMakeLists.txt",
+      "working_path": "src/CMakeLists.txt",
+      "original_path": "original/src/CMakeLists.txt",
+      "sha256": "821ca5c3fe82b5d601bc70f7885274577e27fbd0e16ec0882d074ef1139e77f4",
+      "bytes": 721
+    }
+  ],
+  "note": "Saved current source tree; installed running lib SHA differs from source-tree build lib. Production must compile and deploy a matched library+headers+controller."
+}

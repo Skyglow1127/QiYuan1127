@@ -1,0 +1,462 @@
+{
+  "schema": "d1-host-execution-metrics-v1",
+  "stage_dir": "/media/aup/UbuntuData/ACT训练/09_一键抓取程序_方法一/logs/20261026_215128_2e42b2/execution/01_fixed_pregrasp/executed",
+  "inputs": {
+    "plan.json": {
+      "path": "/media/aup/UbuntuData/ACT训练/09_一键抓取程序_方法一/logs/20261026_215128_2e42b2/execution/01_fixed_pregrasp/executed/plan.json",
+      "sha256": "a4061a6f5f3b25efe208e90c777b1f805a6b8cafba3789e99864e4d9abba2832",
+      "bytes": 5871
+    },
+    "result.json": {
+      "path": "/media/aup/UbuntuData/ACT训练/09_一键抓取程序_方法一/logs/20261026_215128_2e42b2/execution/01_fixed_pregrasp/executed/result.json",
+      "sha256": "8dffe775a9136cefb313528aad98302208a5ad3d777b1684a4f6e0b2ffc75db1",
+      "bytes": 155509
+    },
+    "transport.jsonl": {
+      "path": "/media/aup/UbuntuData/ACT训练/09_一键抓取程序_方法一/logs/20261026_215128_2e42b2/execution/01_fixed_pregrasp/executed/transport.jsonl",
+      "sha256": "5ac5c59e6641d04e88c793c7f003ae4a896fd52a2facac8676b9de5457784b0a",
+      "bytes": 932975
+    }
+  },
+  "analyzer_sha256": "052d79b1823fd9b042986b395894de818079b57ceb1e0c69a0d83c8ab066697c",
+  "completed": false,
+  "trajectory_completed": null,
+  "source_error": "固定姿态终点重发后偏差仍未有效改善：J4 批准终点 -14.318°，实际反馈 -13.100°，偏差 1.218°（允许 ≤1°）；已重发 5 轮、5 条关节指令；终点收敛耗时 5.21 秒；连续 5.02 秒未达到要求的偏差改善；已停止后续指令，未确认到位",
+  "reference_epoch_monotonic_s": 307183.164596849,
+  "reference_epoch_basis": "legacy_inferred_from_first_group_call_and_phase",
+  "original_reference_duration_s": 12.1,
+  "reference_representation": "runs",
+  "reference_unavailable_reason": null,
+  "max_feedback_gap_s": 0.3,
+  "observation_window_s": [
+    307183.017050502,
+    307209.952937632
+  ],
+  "original_reference_window_s": [
+    307183.164596849,
+    307195.264596849
+  ],
+  "group_timing": {
+    "group_count": 155,
+    "reference_phase_span_s": 12.0,
+    "actual_call_start_span_s": 21.450513109040912,
+    "relative_cumulative_drift_s": 9.450513109040912,
+    "period_error_s": {
+      "count": 154,
+      "minimum": 0.0007385689881633795,
+      "median": 0.0014473650138815408,
+      "p95": 0.30806473957810965,
+      "maximum": 0.622796938713944
+    },
+    "local_stretch": {
+      "count": 154,
+      "minimum": 1.0073856898816338,
+      "median": 1.0150313633938062,
+      "p95": 9.250671233670062,
+      "maximum": 48.14797088384353
+    },
+    "submitted_joint_span_s": {
+      "count": 155,
+      "minimum": 0.01824075705371797,
+      "median": 0.04979505197843537,
+      "p95": 0.050721153611084445,
+      "maximum": 0.05988148000324145
+    },
+    "six_axis_submission_span_s": {
+      "count": 152,
+      "minimum": 0.045545864035375416,
+      "median": 0.049801935005234554,
+      "p95": 0.05072125291044358,
+      "maximum": 0.05988148000324145
+    },
+    "call_duration_s": {
+      "count": 155,
+      "minimum": 0.028381317970342934,
+      "median": 0.05980575503781438,
+      "p95": 0.06054736516671255,
+      "maximum": 0.07009027298772708
+    }
+  },
+  "command_count": 929,
+  "ack_pair_count": 929,
+  "ack_elapsed_s": {
+    "count": 929,
+    "minimum": 0.004491250030696392,
+    "median": 0.00951093400362879,
+    "p95": 0.009751186391804367,
+    "maximum": 0.010811962012667209
+  },
+  "joints": [
+    {
+      "joint": "J0",
+      "units": "degree",
+      "accepted_unique_samples": 149,
+      "rejected_events": 0,
+      "interval_s": {
+        "count": 148,
+        "minimum": 0.11067225399892777,
+        "median": 0.11087626501102932,
+        "p95": 0.41300812163681255,
+        "maximum": 0.6046300430316478
+      },
+      "event_receipt_age_s": {
+        "count": 149,
+        "minimum": 4.75000124424696e-05,
+        "median": 0.0001571520115248859,
+        "p95": 0.0003304169978946447,
+        "maximum": 0.0005636879941448569
+      },
+      "receipt_age_at_same_joint_submission_s": {
+        "count": 154,
+        "minimum": 0.00042699603363871574,
+        "median": 0.09809226298239082,
+        "p95": 0.287939822152839,
+        "maximum": 0.40616253099869937
+      },
+      "observed_span_s": 26.809276783955283,
+      "effective_logged_hz": 5.520477153959427,
+      "typical_logged_hz": 9.01906282557882,
+      "bounded_interval_covered_s": 14.028310451190919,
+      "bounded_coverage_of_observed_span": 0.5232632929354711,
+      "original_timeline_tracking": {
+        "samples": 52,
+        "covered_s": 4.071886668098159,
+        "coverage_of_original_duration": 0.3365195593469553,
+        "rmse_deg": 0.9570616859895941,
+        "absolute_error_p95_deg": 1.5889795342392627,
+        "maximum_observed_absolute_error_deg": 1.6031702200194569,
+        "integration": "piecewise-linear error between valid host-received samples; long gaps excluded"
+      }
+    },
+    {
+      "joint": "J1",
+      "units": "degree",
+      "accepted_unique_samples": 149,
+      "rejected_events": 0,
+      "interval_s": {
+        "count": 148,
+        "minimum": 0.11067225399892777,
+        "median": 0.11087626501102932,
+        "p95": 0.41300812163681255,
+        "maximum": 0.6046300430316478
+      },
+      "event_receipt_age_s": {
+        "count": 149,
+        "minimum": 4.75000124424696e-05,
+        "median": 0.0001571520115248859,
+        "p95": 0.0003304169978946447,
+        "maximum": 0.0005636879941448569
+      },
+      "receipt_age_at_same_joint_submission_s": {
+        "count": 155,
+        "minimum": 0.0004038659972138703,
+        "median": 0.08091506396885961,
+        "p95": 0.2786466212070078,
+        "maximum": 0.3132057279581204
+      },
+      "observed_span_s": 26.809276783955283,
+      "effective_logged_hz": 5.520477153959427,
+      "typical_logged_hz": 9.01906282557882,
+      "bounded_interval_covered_s": 14.028310451190919,
+      "bounded_coverage_of_observed_span": 0.5232632929354711,
+      "original_timeline_tracking": {
+        "samples": 52,
+        "covered_s": 4.071886668098159,
+        "coverage_of_original_duration": 0.3365195593469553,
+        "rmse_deg": 5.4446080458486525,
+        "absolute_error_p95_deg": 8.896599846859488,
+        "maximum_observed_absolute_error_deg": 9.04169864723784,
+        "integration": "piecewise-linear error between valid host-received samples; long gaps excluded"
+      }
+    },
+    {
+      "joint": "J2",
+      "units": "degree",
+      "accepted_unique_samples": 149,
+      "rejected_events": 0,
+      "interval_s": {
+        "count": 148,
+        "minimum": 0.11067225399892777,
+        "median": 0.11087626501102932,
+        "p95": 0.41300812163681255,
+        "maximum": 0.6046300430316478
+      },
+      "event_receipt_age_s": {
+        "count": 149,
+        "minimum": 4.75000124424696e-05,
+        "median": 0.0001571520115248859,
+        "p95": 0.0003304169978946447,
+        "maximum": 0.0005636879941448569
+      },
+      "receipt_age_at_same_joint_submission_s": {
+        "count": 153,
+        "minimum": 0.0004326950293034315,
+        "median": 0.08119045803323388,
+        "p95": 0.27685847998363905,
+        "maximum": 0.3228014470078051
+      },
+      "observed_span_s": 26.809276783955283,
+      "effective_logged_hz": 5.520477153959427,
+      "typical_logged_hz": 9.01906282557882,
+      "bounded_interval_covered_s": 14.028310451190919,
+      "bounded_coverage_of_observed_span": 0.5232632929354711,
+      "original_timeline_tracking": {
+        "samples": 52,
+        "covered_s": 4.071886668098159,
+        "coverage_of_original_duration": 0.3365195593469553,
+        "rmse_deg": 2.125227826644642,
+        "absolute_error_p95_deg": 3.033335592562007,
+        "maximum_observed_absolute_error_deg": 3.1598264889246437,
+        "integration": "piecewise-linear error between valid host-received samples; long gaps excluded"
+      }
+    },
+    {
+      "joint": "J3",
+      "units": "degree",
+      "accepted_unique_samples": 149,
+      "rejected_events": 0,
+      "interval_s": {
+        "count": 148,
+        "minimum": 0.11067225399892777,
+        "median": 0.11087626501102932,
+        "p95": 0.41300812163681255,
+        "maximum": 0.6046300430316478
+      },
+      "event_receipt_age_s": {
+        "count": 149,
+        "minimum": 4.75000124424696e-05,
+        "median": 0.0001571520115248859,
+        "p95": 0.0003304169978946447,
+        "maximum": 0.0005636879941448569
+      },
+      "receipt_age_at_same_joint_submission_s": {
+        "count": 152,
+        "minimum": 0.0006975099677219987,
+        "median": 0.08098431248799898,
+        "p95": 0.2877748463797615,
+        "maximum": 0.33313451596768573
+      },
+      "observed_span_s": 26.809276783955283,
+      "effective_logged_hz": 5.520477153959427,
+      "typical_logged_hz": 9.01906282557882,
+      "bounded_interval_covered_s": 14.028310451190919,
+      "bounded_coverage_of_observed_span": 0.5232632929354711,
+      "original_timeline_tracking": {
+        "samples": 52,
+        "covered_s": 4.071886668098159,
+        "coverage_of_original_duration": 0.3365195593469553,
+        "rmse_deg": 0.6055466495660393,
+        "absolute_error_p95_deg": 0.9923172709990633,
+        "maximum_observed_absolute_error_deg": 1.003785657120452,
+        "integration": "piecewise-linear error between valid host-received samples; long gaps excluded"
+      }
+    },
+    {
+      "joint": "J4",
+      "units": "degree",
+      "accepted_unique_samples": 149,
+      "rejected_events": 0,
+      "interval_s": {
+        "count": 148,
+        "minimum": 0.11067225399892777,
+        "median": 0.11087626501102932,
+        "p95": 0.41300812163681255,
+        "maximum": 0.6046300430316478
+      },
+      "event_receipt_age_s": {
+        "count": 149,
+        "minimum": 4.75000124424696e-05,
+        "median": 0.0001571520115248859,
+        "p95": 0.0003304169978946447,
+        "maximum": 0.0005636879941448569
+      },
+      "receipt_age_at_same_joint_submission_s": {
+        "count": 160,
+        "minimum": 0.0005004269769415259,
+        "median": 0.07619443899602629,
+        "p95": 0.30350923913647404,
+        "maximum": 0.34318456100299954
+      },
+      "observed_span_s": 26.809276783955283,
+      "effective_logged_hz": 5.520477153959427,
+      "typical_logged_hz": 9.01906282557882,
+      "bounded_interval_covered_s": 14.028310451190919,
+      "bounded_coverage_of_observed_span": 0.5232632929354711,
+      "original_timeline_tracking": {
+        "samples": 52,
+        "covered_s": 4.071886668098159,
+        "coverage_of_original_duration": 0.3365195593469553,
+        "rmse_deg": 17.909190119832914,
+        "absolute_error_p95_deg": 28.540003859925726,
+        "maximum_observed_absolute_error_deg": 28.862058390722183,
+        "integration": "piecewise-linear error between valid host-received samples; long gaps excluded"
+      }
+    },
+    {
+      "joint": "J5",
+      "units": "degree",
+      "accepted_unique_samples": 149,
+      "rejected_events": 0,
+      "interval_s": {
+        "count": 148,
+        "minimum": 0.11067225399892777,
+        "median": 0.11087626501102932,
+        "p95": 0.41300812163681255,
+        "maximum": 0.6046300430316478
+      },
+      "event_receipt_age_s": {
+        "count": 149,
+        "minimum": 4.75000124424696e-05,
+        "median": 0.0001571520115248859,
+        "p95": 0.0003304169978946447,
+        "maximum": 0.0005636879941448569
+      },
+      "receipt_age_at_same_joint_submission_s": {
+        "count": 155,
+        "minimum": 0.0004629960167221725,
+        "median": 0.0814793620374985,
+        "p95": 0.3159501883084884,
+        "maximum": 0.3530072330031544
+      },
+      "observed_span_s": 26.809276783955283,
+      "effective_logged_hz": 5.520477153959427,
+      "typical_logged_hz": 9.01906282557882,
+      "bounded_interval_covered_s": 14.028310451190919,
+      "bounded_coverage_of_observed_span": 0.5232632929354711,
+      "original_timeline_tracking": {
+        "samples": 52,
+        "covered_s": 4.071886668098159,
+        "coverage_of_original_duration": 0.3365195593469553,
+        "rmse_deg": 8.980873602307897,
+        "absolute_error_p95_deg": 13.819929355576676,
+        "maximum_observed_absolute_error_deg": 13.918345782064758,
+        "integration": "piecewise-linear error between valid host-received samples; long gaps excluded"
+      }
+    },
+    {
+      "joint": "J6",
+      "units": "uncalibrated_SDK_units",
+      "accepted_unique_samples": 149,
+      "rejected_events": 0,
+      "interval_s": {
+        "count": 148,
+        "minimum": 0.11067225399892777,
+        "median": 0.11087626501102932,
+        "p95": 0.41300812163681255,
+        "maximum": 0.6046300430316478
+      },
+      "event_receipt_age_s": {
+        "count": 149,
+        "minimum": 4.75000124424696e-05,
+        "median": 0.0001571520115248859,
+        "p95": 0.0003304169978946447,
+        "maximum": 0.0005636879941448569
+      },
+      "receipt_age_at_same_joint_submission_s": {
+        "count": 0,
+        "minimum": null,
+        "median": null,
+        "p95": null,
+        "maximum": null
+      },
+      "observed_span_s": 26.809276783955283,
+      "effective_logged_hz": 5.520477153959427,
+      "typical_logged_hz": 9.01906282557882,
+      "bounded_interval_covered_s": 14.028310451190919,
+      "bounded_coverage_of_observed_span": 0.5232632929354711,
+      "original_timeline_tracking": null
+    }
+  ],
+  "lower_layer_execution_unresolved": true,
+  "hardware_defect_proven": false,
+  "static_residual_evidence": {
+    "basis": "host final-target submission and positive receipt ACK; stable accepted feedback, not motor application or physical stillness",
+    "final_target_submission_complete_monotonic_s": 307204.743491276,
+    "window_s": [
+      307207.95279886,
+      307209.95279886
+    ],
+    "settle_exclusion_s": 0.4,
+    "required_observed_span_s": 1.0,
+    "peak_to_peak_threshold_deg": 0.2,
+    "axes": [
+      {
+        "joint": "J0",
+        "target_deg": 0.004998268764445424,
+        "median_received_deg": -0.20000000298023224,
+        "median_residual_deg": -0.20499827174467766,
+        "peak_to_peak_deg": 0.10000000149011612,
+        "samples": 18,
+        "sample_span_s": 1.9045403669588268
+      },
+      {
+        "joint": "J1",
+        "target_deg": -31.509977214558837,
+        "median_received_deg": -31.299999237060547,
+        "median_residual_deg": 0.2099779774982906,
+        "peak_to_peak_deg": 0.09999847412109375,
+        "samples": 18,
+        "sample_span_s": 1.9045403669588268
+      },
+      {
+        "joint": "J2",
+        "target_deg": 45.83676070413924,
+        "median_received_deg": 46.70000076293945,
+        "median_residual_deg": 0.8632400588002156,
+        "peak_to_peak_deg": 0.0,
+        "samples": 18,
+        "sample_span_s": 1.9045403669588268
+      },
+      {
+        "joint": "J3",
+        "target_deg": 0.0052630376085143205,
+        "median_received_deg": -0.10000000149011612,
+        "median_residual_deg": -0.10526303909863044,
+        "peak_to_peak_deg": 0.0,
+        "samples": 18,
+        "sample_span_s": 1.9045403669588268
+      },
+      {
+        "joint": "J4",
+        "target_deg": -14.318275384380826,
+        "median_received_deg": -13.100000381469728,
+        "median_residual_deg": 1.2182750029110974,
+        "peak_to_peak_deg": 0.0,
+        "samples": 18,
+        "sample_span_s": 1.9045403669588268
+      },
+      {
+        "joint": "J5",
+        "target_deg": -0.0005160115443558766,
+        "median_received_deg": -0.10000000149011612,
+        "median_residual_deg": -0.09948398994576024,
+        "peak_to_peak_deg": 0.0,
+        "samples": 18,
+        "sample_span_s": 1.9045403669588268
+      }
+    ],
+    "hardware_defect_proven": false,
+    "implication": "Continued upper-layer timing changes alone are not evidence that this persistent residual will be corrected."
+  },
+  "static_residual_unavailable_reason": null,
+  "lower_layer_assessment": "Existing receipt ACK plus nonprogress/static residual requires downstream execution verification. Continued upper-layer timing changes alone cannot be assumed to repair it.",
+  "recorded_wait_costs": {
+    "feedback_pacing_wait_s": 7.3593738379422575,
+    "feedback_gap_wait_s": 0.0,
+    "scheduling_overrun_s": 0.5495720425969921,
+    "command_wait_pause_s": 0.0,
+    "note": "Recorded categories can overlap; do not sum them as total duration."
+  },
+  "warnings": [
+    "Legacy reference epoch is inferred from the first send-call start minus source phase; initial dispatch latency is unknown."
+  ],
+  "semantics": [
+    "All times use host monotonic receipt/submission. Motor application and encoder sampling times, and their delays, are unknown.",
+    "Group start is entry to transport.send, possibly before internal waits; group skew measures only commands actually submitted.",
+    "ACK is paired by DDS sequence to the transmitted single-joint command. It acknowledges receipt, not movement completion.",
+    "Filtered merged joint values retain per-joint receipt provenance. Rejected/retained joints are not new simultaneous samples.",
+    "Time-weighted tracking errors compare host-received joint position to the original reference time, with no fitted time shift or post-abort endpoint extension.",
+    "No motor synchronization, calibrated physical vibration, jerk, causal hardware diagnosis, or completed motion is inferred.",
+    "Coverage excludes adjacent accepted-sample intervals longer than max_feedback_gap_s; this is an analysis parameter, not a vendor limit."
+  ]
+}

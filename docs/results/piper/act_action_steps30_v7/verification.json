@@ -1,0 +1,43 @@
+{
+  "recorded_at": "v7",
+  "request": "User reported 10-step repair worse and requested 30 steps.",
+  "entrypoint": "/home/aup/Lerobot/projects/piper/run_act_piper_repair.sh",
+  "profile": "/home/aup/Lerobot/projects/piper/deployment/act_launch_contact_repair.json",
+  "profile_delta": {
+    "n_action_steps": [
+      10,
+      30
+    ]
+  },
+  "all_other_repair_parameters_unchanged": true,
+  "checkpoint": "/home/aup/Lerobot/models/ACT/rad_place_v5_r05/020000/pretrained_model",
+  "model_sha256": "58ff63d7cc57052f56d2e13e5121fbe1ea9b2bb0d1ed6fda65005264d4c2c09e",
+  "n_action_steps": 30,
+  "model_chunk_size_unchanged": 100,
+  "policy_joint_smoothing_alpha": 0.7,
+  "original_and_round2_profiles_unchanged": {
+    "deployment/act_launch_defaults.json": true,
+    "deployment/act_launch_round2.json": true
+  },
+  "offline_tests": {
+    "modules": [
+      "test_contact_repair",
+      "test_act_chunk_timing"
+    ],
+    "tests_passed": 15,
+    "synthetic_real_codec_two_guard_commands": 60,
+    "sdk_source": "/home/aup/piper SDK/pyAgxArm",
+    "initial_attempt_missing_sdk_path": true,
+    "corrected_environment_passed": true
+  },
+  "entrypoint_help_passed": true,
+  "physical_motion_commands_sent": 0,
+  "physical_effect_verified": false,
+  "operator_feedback": {
+    "n_action_steps": 30,
+    "report": "连续执行30步后动作明显更好",
+    "evidence_type": "User qualitative physical-trial feedback",
+    "complete_task_repeat_success_rate_verified": false,
+    "paired_10_vs_30_logs_analyzed": false
+  }
+}

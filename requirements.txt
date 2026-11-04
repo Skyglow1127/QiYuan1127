@@ -1,0 +1,5 @@
+# Dependencies for core offline checks, not a complete robot environment.
+numpy>=1.26,<3
+scipy>=1.12,<2
+pytest>=8,<9
+opencv-python-headless>=4.8,<5

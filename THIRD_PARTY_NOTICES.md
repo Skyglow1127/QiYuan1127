@@ -1,0 +1,19 @@
+# 第三方来源与依赖
+
+本仓库包含项目编排、设备适配、控制候选和硬件实验。依赖开源框架不表示这些算法或基座权重由本项目原创。源码、模型和硬件文件的许可应分别保留，本文不为全部材料重新授权。
+
+| 来源 | 使用位置 | 版本或原记录 |
+| --- | --- | --- |
+| [Hugging Face LeRobot](https://github.com/huggingface/lerobot) | PiPER ACT、π0.5、官方录制与 Robot 接口 | 原工程固定 0.6.1；框架整库未复制 |
+| [AgileX pyAgxArm](https://github.com/agilexrobotics/pyAgxArm) | PiPER 关节及夹爪 CAN 编码 | 1.0.0，本机提交 d90e234ba8e408cfa964b38aa9120b3131fc9f85；源码快照见 [third_party/pyAgxArm](third_party/pyAgxArm)，保留 LGPL-3.0-only 许可 |
+| [π0.5 基座](https://huggingface.co/lerobot/pi05_base) | 专家 B 初始化与完整模型推理 | 按原模型卡及 tokenizer 来源记录使用；权重许可不等同框架许可 |
+| [Vitis Libraries](https://github.com/Xilinx/Vitis_Libraries) | V2 HLS / VPR3 图像预处理 | 原 2025.2 依赖；整库与生成 IP 未复制 |
+| [Unitree SDK2](https://github.com/unitreerobotics/unitree_sdk2) | D1 主机 DDS 控制 | 外部 SDK；实际安装版本需与设备部署匹配 |
+| Orbbec SDK | PiPER 双相机 ctypes 接口 | 源码标注 1.10.37；共享库未复制 |
+| AMD Vivado / Vitis / Ross | KR260 构建、板卡及 IP 配置 | 2025.2 工具链；软件工具本身未复制 |
+
+D1 `runtime/Control/host_src`、机载接口与机械网格包含原设备工程材料。当前清单能追溯文件来源，但未发现覆盖所有这些文件的统一许可；不把它们标为本项目原创或统一 MIT。`models/` 中配套统计与模型配置属于各自训练成果，使用仍须结合基座及数据来源。
+
+已附本机 SDK / Vitis 依赖中的原许可证文本于 `docs/licenses/`，作为来源记录，不表示整仓库受同一许可证覆盖。
+
+PiPER SDK 的分类、完整源码包下载、原路径及 SHA-256 清单见 [SDK 说明](docs/sdk/README.md)。Release 另保存旧版 SDK、官方 UI、ROS2 节选和历史调用代码；各自原有许可证随包保留。它们的收录不改变当前执行链使用新版 pyAgxArm 的事实。

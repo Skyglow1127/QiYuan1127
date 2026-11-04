@@ -1,0 +1,115 @@
+{
+  "recorded_at": "v7",
+  "user_requested_backup": "Previous version before smoothing alpha0.7->0.5, not the current alpha0.5 failure config",
+  "requested_previous_backup": "/home/aup/Lerobot/projects/piper/deployment/baselines/previous_30steps_alpha07_v7_r15",
+  "backup_n_action_steps": 30,
+  "backup_smoothing_alpha": 0.7,
+  "backup_files_verified": 11,
+  "failure_sources": [
+    "v7_r14",
+    "v7_r13"
+  ],
+  "root_cause": "Our added joint-freeze/opening-confirmation gate required60mm despite variable opening response and stopped the otherwise guarded ACT flow after2s. One recorded segment stalled at46.7mm despite ACT opening proposals above70mm; another reached58.3mm then a new chunk reclosed.",
+  "change": "Remove full-joint freeze and the fixed60mm/150ms/2s release gate. Continue guarded ACT joint/gripper trajectory; retain selective20step original-prediction continuation.",
+  "profile_delta": {
+    "policy_release_chunk_extension": [
+      {
+        "extra_steps": 20,
+        "trigger_open_m": 0.055,
+        "released_open_m": 0.06,
+        "min_held_width_m": 0.035,
+        "settle_s": 0.15,
+        "max_hold_s": 2.0,
+        "placement_joint_bounds_deg": [
+          [
+            25.0,
+            38.0
+          ],
+          [
+            118.0,
+            133.0
+          ],
+          [
+            -105.0,
+            -75.0
+          ],
+          [
+            -15.0,
+            15.0
+          ],
+          [
+            55.0,
+            70.0
+          ],
+          [
+            -75.0,
+            -40.0
+          ]
+        ]
+      },
+      {
+        "extra_steps": 20,
+        "trigger_open_m": 0.055,
+        "released_open_m": 0.06,
+        "min_held_width_m": 0.035,
+        "placement_joint_bounds_deg": [
+          [
+            25.0,
+            38.0
+          ],
+          [
+            118.0,
+            133.0
+          ],
+          [
+            -105.0,
+            -75.0
+          ],
+          [
+            -15.0,
+            15.0
+          ],
+          [
+            55.0,
+            70.0
+          ],
+          [
+            -75.0,
+            -40.0
+          ]
+        ]
+      }
+    ]
+  },
+  "current_n_action_steps": 30,
+  "current_smoothing_alpha": 0.5,
+  "60mm_remaining_meaning": "Classifier upper threshold for whether to use cached continuation only; no completion/abort gate",
+  "original_profiles_and_smoothing_implementation_unchanged": {
+    "deployment/act_launch_defaults.json": true,
+    "deployment/act_launch_round2.json": true,
+    "deployment/lerobot_robot_piper_executor/joint_smoothing.py": true
+  },
+  "original_and_round2_weights_not_modified": true,
+  "regression_tests_passed": 225,
+  "targeted_tests_passed": 22,
+  "recorded_timeout_regression_frames": 80,
+  "original_sdk_bytes_and_both_guards_checked": true,
+  "original_deadlines_unchanged": true,
+  "entrypoint_help_passed": true,
+  "physical_motion_commands_sent": 0,
+  "physical_placement_success_verified": false,
+  "source_sha256": {
+    "deployment/act_release_continuation.py": "d4475f1192540f091e12c5d75d6161d25e39d9fd680644909fa810b7deeed4d2",
+    "deployment/lerobot_robot_piper_executor/robot.py": "1366b89b130d6d615c5bba4adc50826950b3a38f6ddaf9ec9dca089b6edba4b7",
+    "deployment/launch_act.py": "8bf0076362ec6f288d1cce08d8f0aed893ae91fd4fcfa7e4f16bc08f4282d13a",
+    "deployment/launch_act_contact_repair.py": "ef2fcb6f0285a2278011e90072a77513d6c8bac19d5e32ff15abf3cdc5328564",
+    "deployment/act_launch_contact_repair.json": "48fcebaa027c273b747c9bf23587a207f5f5b3cff7d202de7226d91c8ce82cc0",
+    "deployment/test_act_release_continuation.py": "18193143ec921268f47ebfd7108c50b32bacf2d2c291d95ff9099ebf7ef3d0a0",
+    "deployment/fixtures/release_timeout_v7.json": "776345b13600a04c6224fafc5eb094aeddc64ec73489aa317433a6d89e7e5d38"
+  },
+  "limitations": [
+    "Fixed recorded feedback verifies software target acceptance, not the changed physical response.",
+    "Actual gripper obstruction, task placement accuracy or withdrawal collision cannot be ruled out from the logs; no forced opening, blind descent or new force request was added.",
+    "Actual limits, motor/feedback failures, command expiry and receiver lease/TTL protections still reject."
+  ]
+}

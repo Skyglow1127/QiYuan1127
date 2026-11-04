@@ -1,0 +1,104 @@
+[
+  {
+    "kind": "mmio_readback",
+    "command": "CONFIG_COMMIT",
+    "address": 16,
+    "value": 1,
+    "wstrb": 15,
+    "write_completed": true,
+    "access_width_bits": 32,
+    "readback": {
+      "STATE": 0,
+      "STATUS": 256,
+      "FAULT_CODE": 0,
+      "REJECT_CODE": 0
+    },
+    "cycle_before": 38913417391,
+    "cycle_after": 38913427686
+  },
+  {
+    "kind": "mmio_readback",
+    "command": "COMMIT_BANK0",
+    "address": 16,
+    "value": 32,
+    "wstrb": 15,
+    "write_completed": true,
+    "access_width_bits": 32,
+    "readback": {
+      "STATE": 0,
+      "STATUS": 258,
+      "FAULT_CODE": 0,
+      "REJECT_CODE": 0
+    },
+    "cycle_before": 38939048606,
+    "cycle_after": 38939117563
+  },
+  {
+    "kind": "mmio_readback",
+    "command": "KICK",
+    "address": 16,
+    "value": 256,
+    "wstrb": 15,
+    "write_completed": true,
+    "access_width_bits": 32,
+    "readback": {
+      "STATE": 0,
+      "STATUS": 258,
+      "FAULT_CODE": 0,
+      "REJECT_CODE": 0
+    },
+    "cycle_before": 38939125723,
+    "cycle_after": 38939133706
+  },
+  {
+    "kind": "mmio_readback",
+    "command": "ARM",
+    "address": 16,
+    "value": 2,
+    "wstrb": 15,
+    "write_completed": true,
+    "access_width_bits": 32,
+    "readback": {
+      "STATE": 1,
+      "STATUS": 259,
+      "FAULT_CODE": 0,
+      "REJECT_CODE": 0
+    },
+    "cycle_before": 38939377723,
+    "cycle_after": 38939386437
+  },
+  {
+    "kind": "mmio_readback",
+    "command": "STOP",
+    "address": 16,
+    "value": 4,
+    "wstrb": 15,
+    "write_completed": true,
+    "access_width_bits": 32,
+    "readback": {
+      "STATE": 1,
+      "STATUS": 259,
+      "FAULT_CODE": 0,
+      "REJECT_CODE": 0
+    },
+    "cycle_before": 38939389622,
+    "cycle_after": 38939397642
+  },
+  {
+    "kind": "mmio_readback",
+    "command": "DISARM",
+    "address": 16,
+    "value": 128,
+    "wstrb": 15,
+    "write_completed": true,
+    "access_width_bits": 32,
+    "readback": {
+      "STATE": 0,
+      "STATUS": 0,
+      "FAULT_CODE": 0,
+      "REJECT_CODE": 0
+    },
+    "cycle_before": 39035736345,
+    "cycle_after": 39035745981
+  }
+]

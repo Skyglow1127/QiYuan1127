@@ -1,0 +1,8 @@
+{
+  "act_020000": "/absolute/path/to/ACT/pretrained_model",
+  "pi05_best004000": "/absolute/path/to/pi05/best_model",
+  "pi05_final020000": "/absolute/path/to/pi05/final_checkpoint/pretrained_model",
+  "pi05_base": "/absolute/path/to/pi05_base",
+  "dataset": "/absolute/path/to/rad_place_merged_v5",
+  "tokenizer": "/absolute/path/to/paligemma_tokenizer"
+}

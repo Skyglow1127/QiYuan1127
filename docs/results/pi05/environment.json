@@ -1,0 +1,29 @@
+{
+  "python": "/root/autodl-tmp/piper_pi05/.venv/bin/python",
+  "gpu_uuid": "GPU-3850da4c-2c9b-ad14-f678-de227040c0d2",
+  "versions": {
+    "torch": "2.8.0+cu128",
+    "lerobot": "0.6.1",
+    "transformers": "5.5.4",
+    "peft": "0.21.2",
+    "accelerate": "1.15.0",
+    "safetensors": "0.8.0"
+  },
+  "new_entry_files": {
+    "remote_job.py": "d1112df444e6193af560ad36d0148667e56237702cb034aac5fd6b1ff84b4c99",
+    "train_expert.sh": "2e06d20179784327da1c5543a892f4179a1358dcae15664c87581e79a4bcd326",
+    "train_expert_checked.py": "84d13f03c13a69e74df1f7b8756abe5fbcf4528119afef6272af9b54c8080a8f",
+    "pi05_low_memory.py": "cc6ee794f42dd5a7b522e304658518d7cae38f1f4a03eb0c090ccd71ba952056"
+  },
+  "smoke_environment": {
+    "PI05_EXPERIMENT_ROOT": "/root/pi05_expert_runs/pi05_expert_only_v6_r09",
+    "PI05_BASE_MODEL_PATH": "/root/autodl-tmp/piper_pi05/models/pi05_base",
+    "PI05_TOKENIZER_PATH": "/root/autodl-tmp/piper_pi05/models/paligemma_tokenizer",
+    "PI05_PYTHON": "/root/autodl-tmp/piper_pi05/.venv/bin/python",
+    "CUDA_VISIBLE_DEVICES": "GPU-3850da4c-2c9b-ad14-f678-de227040c0d2",
+    "PI05_EVAL_STEPS": "0",
+    "PI05_SAVE_FREQ": "100",
+    "PI05_LOG_FREQ": "10",
+    "PI05_KEEP_CHECKPOINTS": "1"
+  }
+}

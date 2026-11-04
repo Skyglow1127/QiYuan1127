@@ -1,0 +1,106 @@
+{
+  "problem": "Repeated grasp attempts and policy stagnation at placement under final fine-tuned weights",
+  "source_run": "/home/aup/Lerobot/outputs/act_runs/v7_r12",
+  "operator_confirmation": "Program continued emitting accepted targets; operator manually terminated it.",
+  "last5sec": {
+    "raw_gripper_mm_min": 18.252847716212273,
+    "raw_gripper_mm_max": 19.464662298560143,
+    "actual_gripper_mm": 44.199999999999996,
+    "final_target_gripper_mm": 41.2
+  },
+  "model_reconstruction_comparison": {
+    "parent": {
+      "close": {
+        "joint_mae_deg": 1.8015196562972335,
+        "gripper_mae_mm": 4.21788666707774,
+        "gripper_open_count_mismatch": 15
+      },
+      "release": {
+        "joint_mae_deg": 2.3085456619970497,
+        "gripper_mae_mm": 8.07195901275918,
+        "gripper_open_count_mismatch": 65
+      }
+    },
+    "round2_final": {
+      "close": {
+        "joint_mae_deg": 1.8285385109153058,
+        "gripper_mae_mm": 5.037239762023091,
+        "gripper_open_count_mismatch": 15
+      },
+      "release": {
+        "joint_mae_deg": 1.9269779379231236,
+        "gripper_mae_mm": 4.7301594060445495,
+        "gripper_open_count_mismatch": 27
+      }
+    }
+  },
+  "model_selection_reason": "Prefer parent with operator-confirmed complete physical task, given observed final-checkpoint rollout regression. Training reconstruction is not independent validation.",
+  "overfitting_proven": false,
+  "all_comparison_demonstrations_previously_seen_during_training": true,
+  "repair_entrypoint": "/home/aup/Lerobot/projects/piper/run_act_piper_repair.sh",
+  "repair_profile": "/home/aup/Lerobot/projects/piper/deployment/act_launch_contact_repair.json",
+  "repair_model_checkpoint": "/home/aup/Lerobot/models/ACT/rad_place_v5_r05/020000/pretrained_model",
+  "repair_model_sha256": "58ff63d7cc57052f56d2e13e5121fbe1ea9b2bb0d1ed6fda65005264d4c2c09e",
+  "control_changes_from_successful_baseline": {
+    "n_action_steps": [
+      20,
+      10
+    ],
+    "policy_joint_smoothing_alpha": [
+      "absent",
+      0.7
+    ]
+  },
+  "smoothing_location": "Feedback cap -> joint-only blend with last commit -> original rate/bounds/CAN-grid intersection -> host and receiver guards",
+  "gripper_filtered": false,
+  "enabled_speed_percent": 10,
+  "cold_start_speed_percent": 5,
+  "hard_bounds_rates_force_and_deadlines_relaxed": false,
+  "regression_tests_passed": 218,
+  "new_tests": 7,
+  "synthetic_full_codec_two_guard_commands": 60,
+  "synthetic_feedback_not_physical_proof": true,
+  "offline_cpu_check": {
+    "passes": 3,
+    "duration_ms": [
+      179.38945000059903,
+      173.53842698503286,
+      168.9767950156238
+    ],
+    "mean_duration_ms": 173.96822400041856,
+    "max_duration_ms": 179.38945000059903,
+    "input_shapes": {
+      "observation.state": [
+        1,
+        7
+      ],
+      "observation.images.global": [
+        1,
+        3,
+        480,
+        640
+      ],
+      "observation.images.wrist": [
+        1,
+        3,
+        480,
+        640
+      ]
+    },
+    "finite_actions": true,
+    "synthetic_inputs_only": true,
+    "warmup_actions_discarded": true
+  },
+  "original_model_backup_and_round2_all_seven_files_verified_unchanged": true,
+  "original_and_round2_profiles_unchanged": true,
+  "original_source_archive_preserved": true,
+  "current_local_adapter_sources_extended_opt_in": true,
+  "physical_motion_commands_sent_this_change": 0,
+  "physical_first_try_grasp_and_return_verified": false,
+  "intermediate_cloud_checkpoint_access": "Existing SSH endpoint closed connection; no intermediate checkpoints retrieved, no new paid training started.",
+  "limitations": [
+    "Offline comparison uses training data; it does not measure generalization or prove overfitting.",
+    "Shorter visual-update window and joint smoothing require a new physical trial; cannot guarantee a one-attempt grasp.",
+    "Do not force opening/return from an unverified pose or relax J5 controller limits to hide a policy stagnation."
+  ]
+}

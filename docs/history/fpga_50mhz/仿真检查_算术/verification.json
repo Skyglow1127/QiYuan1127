@@ -1,0 +1,80 @@
+{
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "hardware_access": false,
+  "vivado_build_run": false,
+  "synthesis_run": false,
+  "implementation_run": false,
+  "physical_frequency_verified": false,
+  "clock_hz": 49999500,
+  "suites": {
+    "math": {
+      "top": "tb_player_math",
+      "commands": [
+        {
+          "argv": [
+            "/usr/bin/python3",
+            "/home/aup/Lerobot/projects/piper/robot_rt/sim/make_player_vectors.py",
+            "--output",
+            "/media/aup/UbuntuData/GITHUB/fpga-part/50MHz版本_20261104/仿真检查_算术/math/player_vectors.mem",
+            "--random-cases",
+            "512",
+            "--clock-hz",
+            "49999500"
+          ],
+          "returncode": 0,
+          "error_in_output": false,
+          "log": "/media/aup/UbuntuData/GITHUB/fpga-part/50MHz版本_20261104/仿真检查_算术/math/00_python3.txt",
+          "log_sha256": "efb65690770f7c7ba3d5ff9390d99d4551efba3506d5394d8cf99ef31d8ba4d3"
+        },
+        {
+          "argv": [
+            "/home/aup/Xilinx/2025.2/Vivado/bin/xvlog",
+            "--sv",
+            "/home/aup/Lerobot/projects/piper/robot_rt/rtl/player_math.sv",
+            "/home/aup/Lerobot/projects/piper/robot_rt/sim/tb_player_math.sv"
+          ],
+          "returncode": 0,
+          "error_in_output": false,
+          "log": "/media/aup/UbuntuData/GITHUB/fpga-part/50MHz版本_20261104/仿真检查_算术/math/01_xvlog.txt",
+          "log_sha256": "59a0dd3016abaf0cfdf6342f63e8895796ced49983504c7ee600d291446d22dd"
+        },
+        {
+          "argv": [
+            "/home/aup/Xilinx/2025.2/Vivado/bin/xelab",
+            "tb_player_math",
+            "-s",
+            "math_sim",
+            "-mt",
+            "off",
+            "-generic_top",
+            "CLOCK_HZ=49999500"
+          ],
+          "returncode": 0,
+          "error_in_output": false,
+          "log": "/media/aup/UbuntuData/GITHUB/fpga-part/50MHz版本_20261104/仿真检查_算术/math/02_xelab.txt",
+          "log_sha256": "d8fe5266cddb034de56159104a53b22ee8116e8c4c4a191de919e409bbc85044"
+        },
+        {
+          "argv": [
+            "/home/aup/Xilinx/2025.2/Vivado/bin/xsim",
+            "math_sim",
+            "-runall"
+          ],
+          "returncode": 0,
+          "error_in_output": false,
+          "log": "/media/aup/UbuntuData/GITHUB/fpga-part/50MHz版本_20261104/仿真检查_算术/math/03_xsim.txt",
+          "log_sha256": "fa15364f3a957e655a5861528f4d99dfc4ff804a6369e64147c5381004453f74"
+        }
+      ],
+      "pass": true
+    }
+  },
+  "sources_sha256": {
+    "sim/player_reference.py": "ee3a71d2ec2e2a5cdb5af99d633c22ac938b1fec677f27c15ccbee47ff232a7f",
+    "sim/tick_reference.py": "d4a993945036dfe63d9e141d8cfa34a3ad2b168c30f889e1201c06246e12bf80",
+    "rtl/player_math.sv": "593ca82b102ddd887d770e4056de867e2df080a55424785133ca9cd8f832e6fe",
+    "sim/tb_player_math.sv": "53cb6bbd5f8dbd566e8563df45d4016e172c0e72433c95a94a11035d6d089d69",
+    "sim/make_player_vectors.py": "a65be115201527c567f45039af342c45c0122a28d65f9f24445d3529d3c9e1db"
+  },
+  "pass": true
+}

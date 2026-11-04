@@ -1,0 +1,60 @@
+腕部相机 RGB + 深度同次录制：两个文件夹、两个MP4、双画面预览
+
+终端启动（默认腕部相机CC1365301EY，持续录制）：
+  bash /home/aup/Lerobot/projects/piper/record_rgbd.sh --takeover-preview
+
+录制指定时长，例如60秒：
+  bash /home/aup/Lerobot/projects/piper/record_rgbd.sh --takeover-preview --duration 60
+
+Ctrl+C或预览窗口“停止并保存”让两路一起结束；只关闭页签不会结束。
+启动后自动打开 http://127.0.0.1:18765/，可看RGB和深度两个画面及各路帧率、帧数。
+通过终端脚本提供的HTTP地址使用窗口；直接打开html文件会显示启动说明。
+
+输出目录：
+  /home/aup/Lerobot/projects/piper/recordings/rgbd/rgbd_年月日_时分秒_微秒/
+    RGB/rgb.mp4
+    Depth/depth.mp4
+
+每次录制新建一个会话目录，包含RGB、Depth两个文件夹。两个视频都是H.264 MP4。
+各MP4旁有逐帧.timestamps.csv，目录中recording.json保存相机身份、档位和最终统计。
+时间采用Asia/Singapore。--output-dir可指定新会话目录；已有目录拒绝覆盖。
+
+画质和深度含义
+- RGB自动枚举按序列号绑定的UVC设备，选择最高MJPEG分辨率及该档最高帧率；
+  当前腕部RGB为1632×1224@30fps。转为H.264/CRF18，尺寸不缩放；这是高质量有损视频。
+- 深度选最高帧率内最高分辨率，当前640×400@30fps；使用SDK解包后的深度生成伪彩色。
+- Depth/depth.mp4是方便回看的伪彩色视频，不是16位测距原始数据，不能由颜色精确还原距离。
+  这次入口只保存MP4视频，不额外生成MKV或原始深度序列。
+- 近处暖色、远处冷色、无效0为黑色；--near-mm 200 --far-mm 2000调节深度色标范围。
+  有效距离超范围按端点着色。
+- 两路都收到有效图像后才共同开始；启动队列中的预热帧不写入视频，减少冷启动片段。
+- 两个MP4使用同一主机monotonic接收时间起点；逐帧CSV另存各自来源时刻及深度比例。
+  同次起止不等于两路曝光同步，也未做RGB与深度的空间对齐。
+- 实际帧率以界面/recording.json为准，不用复制帧补到30fps。
+  浏览器预览最多15fps，录制保存全部正常收到并成功编码的图像。
+
+其他参数
+  --camera global                   改用全局相机同时录RGB和深度
+  --rgb-camera wrist --depth-camera global  腕部RGB + 全局深度
+  --no-browser                      不自动打开浏览器，仍输出窗口地址
+  --port 18765                      修改本机预览端口
+  --duration 0                      持续录制（默认）
+
+占用与异常
+- 两路启动前检查ACT/示范录制进程；存在时拒绝独占录制。
+- --takeover-preview只临时暂停所选相机的原预览。退出先停止两工作线程、写完两MP4、
+  释放UVC和SDK，再恢复原先开启的预览；原先关闭的保持关闭。
+- 设备查找在原预览关闭并释放之后进行。udev别名不存在时，按sysfs中的USB父设备
+  VID/PID、序列号和index0确认捕获节点，不猜/dev/video编号。
+- 如果RGB USB设备仍在而视频节点缺失，先复核原预览已关闭、没有已知录制/ACT客户端、
+  没有可见USB占用者，仅重探测该序列号RGB控制接口；不改另一相机、深度接口或USB集线器。
+  新建视频节点还会等待udev设置可读写权限，避免刚建节点时Permission denied的竞态。
+  恢复失败会明确报错，不改变USB访问权限；USB设备本身不存在时需检查相机连接。
+- SDK释放未确认成功时不自动重开预览。两路中任一路故障会结束整个会话并保留已写文件，
+  在recording.json标记error及对应通道错误。
+- 不连接CAN，不启动或控制机械臂。独立视频不替代LeRobot正式示范录制流程。
+
+验证记录：logs/rgbd_recorder_v9/；真实腕部样例见recordings/rgbd/。
+v9视频节点缺失修正与实录证据：logs/rgbd_uvc_recovery_v9/。
+定向离线测试：
+  /home/aup/Lerobot/envs/piper-cpu/bin/python -B -m unittest discover -s /home/aup/Lerobot/projects/piper/camera_preview -p test_rgbd_recorder.py -v

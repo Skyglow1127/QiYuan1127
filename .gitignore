@@ -1,0 +1,61 @@
+# Local paths, credentials, generated runtime and validation intermediates
+.local/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Generated robot / FPGA / training output
+build/
+host_build/
+install/
+.Xil/
+*.jou
+*.dcp
+*.bit
+*.bit.bin
+*.xsa
+*.dtbo
+*.o
+*.so
+*.a
+*.log
+!docs/results/**/*.log
+output/
+outputs/
+recordings/
+checkpoints/
+
+# Large model and dataset assets (processor statistics are intentional)
+*.pt
+*.pth
+*.onnx
+*.gguf
+*.ckpt
+model*.safetensors
+adapter_model.safetensors
+*.parquet
+*.mp4
+*.bag
+*.mcap
+*.zip
+*.tar
+*.tar.gz
+
+.DS_Store
+Thumbs.db
+
+# Selected local inference benchmark evidence logs
+!experiments/pi05_lora_local_inference_v10/01_同步推理/历史未完成记录/run_v10_r32/benchmark.log
+!experiments/pi05_lora_local_inference_v10/01_同步推理/结果/run_v10_r33/benchmark.log
+
+# Published FPGA board artifacts (verified against the saved build)
+!hardware/fpga_project_20261104/上板文件/robot_rt.bit
+!hardware/fpga_project_20261104/上板文件/robot_rt.bit.bin
+!hardware/fpga_project_20261104/上板文件/robot_rt.xsa
+!hardware/fpga_project_20261104/板端配置/robot_rt.dtbo

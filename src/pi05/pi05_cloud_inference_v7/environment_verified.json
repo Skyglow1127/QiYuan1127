@@ -1,0 +1,22 @@
+{
+  "verified_utc": "v7",
+  "python": "3.12.3",
+  "device": "NVIDIA GeForce RTX 5090",
+  "gpu_uuid": "GPU-a91a06a7-c125-a914-3958-2cc4003695cf",
+  "bf16_supported": true,
+  "pi05_import_passed": true,
+  "gpu_bfloat16_matmul_passed": true,
+  "packages": {
+    "torch": "2.8.0+cu128",
+    "torchvision": "0.23.0+cu128",
+    "lerobot": "0.6.1",
+    "transformers": "5.5.4",
+    "tokenizers": "0.22.2",
+    "accelerate": "1.15.0",
+    "safetensors": "0.8.0",
+    "numpy": "2.2.6",
+    "huggingface-hub": "1.33.0"
+  },
+  "system_torch_preserved": true,
+  "pip_check": "No broken requirements found."
+}

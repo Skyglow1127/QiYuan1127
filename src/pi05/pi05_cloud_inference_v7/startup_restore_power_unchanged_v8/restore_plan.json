@@ -1,0 +1,111 @@
+{
+  "schema": "pi05-empty-gripper-start-restore/v1",
+  "approval_pending": true,
+  "approval_inherited": false,
+  "purpose": "仅空载夹爪恢复到示范起始约10mm，六关节保持当前实时反馈；不运行策略，不抓取，不证明关节预测问题已经解决。",
+  "expected_start_pose_deg_m": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0329
+  ],
+  "expected_identity": {
+    "interface": "can0",
+    "ifindex": 14,
+    "device_path": "/sys/devices/platform/axi/ff9d0000.usb/fe200000.usb/xhci-hcd.1.auto/usb1/1-1/1-1.3/1-1.3:1.0",
+    "host": {
+      "hostname": "kria",
+      "machine_id": "20c5aef53ab9448a94fd5ebcb89f663a"
+    },
+    "driver": "gs_usb",
+    "usb": {
+      "idVendor": "1d50",
+      "idProduct": "606f",
+      "serial": "002100425631511920313857",
+      "manufacturer": "bytewerk",
+      "product": "candleLight USB to CAN adapter"
+    }
+  },
+  "joint_bounds_deg": [
+    [
+      -150,
+      150
+    ],
+    [
+      0,
+      180
+    ],
+    [
+      -170,
+      0
+    ],
+    [
+      -100,
+      100
+    ],
+    [
+      -70,
+      70
+    ],
+    [
+      -180,
+      180
+    ]
+  ],
+  "targets_m": [
+    0.025,
+    0.0175,
+    0.01
+  ],
+  "speed_percent": 5,
+  "force_n": 1,
+  "maximum_actual_gripper_step_m": 0.008,
+  "joint_hold_max_deviation_deg": 0.5,
+  "phase_start_joint_tolerance_deg": 0.5,
+  "phase_start_gripper_tolerance_m": 0.001,
+  "existing_preflight_max_seconds": 3,
+  "existing_quiet_control_min_seconds": 1,
+  "existing_reach_timeout_seconds_per_phase": 2,
+  "existing_reach_tolerance_m": 0.001,
+  "existing_reach_stable_seconds": 0.3,
+  "maximum_phases": 3,
+  "reviewed_files_sha256": {
+    "restore.py": "ea20fefa5e545f7356364ad76b5c3e743d228803cd46366ed341dc1d8ab83cf0",
+    "restore.sh": "29188b19b2d5f6c3801448e25bfabd5262416e4e32741d7cf85a2ca04063dd8f",
+    "preflight_j_hold.py": "5191e671bfbccde30501464a68870bd6973fb83147b432a6332faa308a6cdd23",
+    "reset_piper_once.py": "4eaf58ae6aaccd2aed5db9c5d7d436b90f9e0c7e4d76580993134059bca0ca25",
+    "remote_can_source.py": "b16c54317445f3455f887b0fe2817a66f01800b9d815f051d0fc5958e32f2c62",
+    "restore_config.json": "d3f159aa81ff47e115b6d6576182d159c8b43a230d5b0c9576c0cfa990db8688"
+  },
+  "source_read_only_preview": {
+    "path": "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_cloud_inference_v7/cloud_grasp_lerobot/previews/v8_r22526/report.json",
+    "sha256": "8971752f7e2478506ed48e32497fd18a87fee8c1f2f4f5fa06f57cbb0ac4dd7d",
+    "robot_commands_sent": 0
+  },
+  "onsite_conditions_required": [
+    "维持现有供电；执行前至少1秒无其他控制流量，过程中检测到其他控制源立即结束",
+    "从臂空载且稳固承托",
+    "夹爪为空且无夹持物，开合区域没有手或障碍物",
+    "手退出工作区",
+    "可立即断电",
+    "机械臂姿态、板卡和USB/CAN身份与本方案一致"
+  ],
+  "execution_semantics": [
+    "默认仅检查本地文件；不联网、不打开CAN、不发送命令",
+    "用户对已展示路径明确指示按当前供电状态执行；如实记录此修订，不声明主臂断电；不继承旧抓取批准",
+    "已有六轴均使能且健康；只复用既有使能状态，不发使能、失能、复位、标零或校准",
+    "每阶段先运行原辅助器最多3秒只读预检，保留原1秒控制静默；模式J5%、夹爪1N",
+    "每次发送前检查新鲜反馈、六轴使能、实际夹爪目标差<=8mm和六关节偏差<=0.5度",
+    "三阶段25mm、17.5mm、10mm；每阶段达到目标±1mm并稳定0.3秒，最多等待2秒",
+    "任一阶段失败立即结束，无自动重试，不继续后续阶段",
+    "结束或故障不改变原电机使能状态；停止发送不证明物理停止，必要时现场断电",
+    "空夹爪恢复完成后须重新只读预览原样PI05输出，关节越界仍须解决；不自动开始抓取"
+  ],
+  "supersedes_plan_id": "2522d5bc7fe444e13c1c51c21f00a8b1a1eae83ce0da4b00d205281f7b834130",
+  "power_state_policy": "unchanged; no claim that leader is powered off; existing preflight control silence and continuous other-source checks remain active",
+  "operator_amendment": "你不需要断电，就按照现在的方式来",
+  "plan_id": "3f466cb5d351e285dc083836b74766675ff27646c4d0c4e995f7586df55e5583"
+}

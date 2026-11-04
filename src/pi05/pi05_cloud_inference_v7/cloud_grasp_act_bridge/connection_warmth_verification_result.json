@@ -1,0 +1,15 @@
+{
+  "tests_run": 8,
+  "passed": true,
+  "errors": 0,
+  "failures": 0,
+  "network_io": false,
+  "robot_io": false,
+  "model_io": false,
+  "module_files_sha256": {
+    "connection_warmth.py": "a0c9f4f93bf455d39f997a0ee956ad67238f8630aa93db37372672f379424e5a",
+    "test_connection_warmth.py": "0c7dd56bb694ae89e37d618364d904c4f3bfd3a773c078dff3ec2e39e3d7152a"
+  },
+  "scope": "Only new VLA helper/test files; root owns client/config/plan integration.",
+  "limitations": "Socket timeout is per blocking IO; bounded close reports worker_alive for a noncooperative blocked worker. Caller inference never waits for worker, and an already in-flight ping may finish."
+}

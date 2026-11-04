@@ -1,0 +1,50 @@
+{
+  "protocol_version": "pi05-expert-inference/v1",
+  "model_id": "pi05-piper-expert-b8-best004000",
+  "task": "Pick up the red cube and place it inside the black square on the left side of the table.",
+  "expected_model_sha256": "583ff741239b111053dc969fe5ba69eb70475e888c7ece92b04a78d3319386cf",
+  "expected_model_bytes": 9354050752,
+  "expected_pipeline_sha256": {
+    "config.json": "3b2429be2db40fe15d3c05e0e88ee8306ff6d1287d78d2d4edef724165717210",
+    "policy_preprocessor.json": "d1868a2a48a17e236355fa421ee462d2996cb331dbb7ea1311d0dd58ce1b66e6",
+    "policy_postprocessor.json": "e6e0c0371c2ea20b0a2f99feab26cea73a7d8994eccc4446c038958f285d68ff",
+    "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "9ddc01fd36829854a820b50e63bc4b9abddce2e5f59b51baac98739526a843dd",
+    "policy_preprocessor_step_3_normalizer_processor.safetensors": "63284104b3136d2b2673bdb7bf5f85e7f82207f56c2d98057f951ec8d47fd3ab"
+  },
+  "expected_tokenizer_sha256": {
+    "provenance.json": "e1dec132414765a65fde7b5185c443b77987a6efe670546716a1f925d4bc6588",
+    "tokenizer.model": "8986bb4f423f07f8c7f70d0dbe3526fb2316056c17bae71b1ea975e77a168fc6",
+    "added_tokens.json": "7d0bad90030d638a4bf89a82e91206e25f1fbe0012f14bca21666a64b643bc49",
+    "tokenizer_config.json": "1c6b5acfdc46492f5368b8bfe3e1e622e03b71a637715e1867cfb08c41495139",
+    "tokenizer.json": "103fb8b7439b29a62fb734a23fe4678ced003f1ed66bd4b74aff4e0751e862b1"
+  },
+  "device": "cuda",
+  "compile_inference": true,
+  "compile_target": "denoise_step",
+  "float32_matmul_precision": "highest",
+  "warmup_predictions": 3,
+  "model": "/root/autodl-tmp/pi05_models/expert_b8_best004000",
+  "tokenizer": "/root/autodl-tmp/pi05_models/paligemma_tokenizer",
+  "deployment_dir": "/root/autodl-tmp/piper_pi05_lerobot_lossless_v8",
+  "port": 18814,
+  "hash_cache_dir": "/root/autodl-tmp/piper_pi05_lerobot_lossless_v8/runtime/hash_cache",
+  "local_port": 18814,
+  "remote_python": "/root/autodl-tmp/pi05_expert_env_v7/bin/python",
+  "control_socket": "/tmp/pi05-newcloud-v7.sock",
+  "startup_timeout_seconds": 900,
+  "cuda_visible_devices": "GPU-a91a06a7-c125-a914-3958-2cc4003695cf",
+  "ssh": {
+    "host": "192.0.2.10",
+    "hostname": "gpu.example.invalid",
+    "user": "root",
+    "port": 18561,
+    "bind_address": "172.30.1.73",
+    "host_key_alias": "[gpu.example.invalid]:18561",
+    "known_hosts_file": "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_cloud_inference_v7/runtime/known_hosts"
+  },
+  "supported_image_codecs": [
+    "raw-npz-v1",
+    "png-rgb-u8-v1"
+  ],
+  "production_image_codec": "png-rgb-u8-v1"
+}

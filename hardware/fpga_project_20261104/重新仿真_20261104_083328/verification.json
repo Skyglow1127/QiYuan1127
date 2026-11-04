@@ -1,0 +1,80 @@
+{
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "hardware_access": false,
+  "vivado_build_run": false,
+  "synthesis_run": false,
+  "implementation_run": false,
+  "physical_frequency_verified": false,
+  "clock_hz": 49999500,
+  "suites": {
+    "math": {
+      "top": "tb_player_math",
+      "commands": [
+        {
+          "argv": [
+            "/usr/bin/python3",
+            "/media/aup/UbuntuData/技术文档/FPGA/FPGA工程文件/工程源码/sim/make_player_vectors.py",
+            "--output",
+            "/media/aup/UbuntuData/技术文档/FPGA/FPGA工程文件/重新仿真_20261104_083328/math/player_vectors.mem",
+            "--random-cases",
+            "512",
+            "--clock-hz",
+            "49999500"
+          ],
+          "returncode": 0,
+          "error_in_output": false,
+          "log": "/media/aup/UbuntuData/技术文档/FPGA/FPGA工程文件/重新仿真_20261104_083328/math/00_python3.txt",
+          "log_sha256": "b4d4ab13bacceebd0ee1ab84b580658cf2d40e66ab92068ad6c62b1c68a6c993"
+        },
+        {
+          "argv": [
+            "/home/aup/Xilinx/2025.2/Vivado/bin/xvlog",
+            "--sv",
+            "/media/aup/UbuntuData/技术文档/FPGA/FPGA工程文件/工程源码/rtl/player_math.sv",
+            "/media/aup/UbuntuData/技术文档/FPGA/FPGA工程文件/工程源码/sim/tb_player_math.sv"
+          ],
+          "returncode": 0,
+          "error_in_output": false,
+          "log": "/media/aup/UbuntuData/技术文档/FPGA/FPGA工程文件/重新仿真_20261104_083328/math/01_xvlog.txt",
+          "log_sha256": "a96559eef5b5ef930e2af50b7ebfc81c90c4dc2ed10c51b2623f077ab50228cb"
+        },
+        {
+          "argv": [
+            "/home/aup/Xilinx/2025.2/Vivado/bin/xelab",
+            "tb_player_math",
+            "-s",
+            "math_sim",
+            "-mt",
+            "off",
+            "-generic_top",
+            "CLOCK_HZ=49999500"
+          ],
+          "returncode": 0,
+          "error_in_output": false,
+          "log": "/media/aup/UbuntuData/技术文档/FPGA/FPGA工程文件/重新仿真_20261104_083328/math/02_xelab.txt",
+          "log_sha256": "d8fe5266cddb034de56159104a53b22ee8116e8c4c4a191de919e409bbc85044"
+        },
+        {
+          "argv": [
+            "/home/aup/Xilinx/2025.2/Vivado/bin/xsim",
+            "math_sim",
+            "-runall"
+          ],
+          "returncode": 0,
+          "error_in_output": false,
+          "log": "/media/aup/UbuntuData/技术文档/FPGA/FPGA工程文件/重新仿真_20261104_083328/math/03_xsim.txt",
+          "log_sha256": "e95e58f19d25e097c091e67121af854410c118e5769dc54a42128fe26d5afe47"
+        }
+      ],
+      "pass": true
+    }
+  },
+  "sources_sha256": {
+    "sim/player_reference.py": "ee3a71d2ec2e2a5cdb5af99d633c22ac938b1fec677f27c15ccbee47ff232a7f",
+    "sim/tick_reference.py": "d4a993945036dfe63d9e141d8cfa34a3ad2b168c30f889e1201c06246e12bf80",
+    "rtl/player_math.sv": "593ca82b102ddd887d770e4056de867e2df080a55424785133ca9cd8f832e6fe",
+    "sim/tb_player_math.sv": "b457dbffe1c80e3ac42f6057e679a40ad1a89d408316fc9526ed8b117d03910d",
+    "sim/make_player_vectors.py": "a65be115201527c567f45039af342c45c0122a28d65f9f24445d3529d3c9e1db"
+  },
+  "pass": true
+}

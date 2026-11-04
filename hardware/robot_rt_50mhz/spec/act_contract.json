@@ -1,0 +1,545 @@
+{
+  "schema_version": 1,
+  "checkpoint": "/home/aup/Lerobot/models/ACT/rad_place_v5_r05/020000/pretrained_model",
+  "runtime_profile": "/home/aup/Lerobot/projects/piper/deployment/act_launch_contact_repair.json",
+  "dataset_root": "/home/aup/Lerobot/datasets/rad_place_merged_v5",
+  "fps_dataset": 20,
+  "chunk_size": 100,
+  "saved_n_action_steps": 100,
+  "runtime_n_action_steps": 30,
+  "temporal_ensemble_coeff": null,
+  "n_obs_steps": 1,
+  "input_features": {
+    "observation.state": {
+      "type": "STATE",
+      "shape": [
+        7
+      ]
+    },
+    "observation.images.global": {
+      "type": "VISUAL",
+      "shape": [
+        3,
+        480,
+        640
+      ]
+    },
+    "observation.images.wrist": {
+      "type": "VISUAL",
+      "shape": [
+        3,
+        480,
+        640
+      ]
+    }
+  },
+  "output_features": {
+    "action": {
+      "type": "ACTION",
+      "shape": [
+        7
+      ]
+    }
+  },
+  "camera_order": [
+    "observation.images.global",
+    "observation.images.wrist"
+  ],
+  "action_names": [
+    "joint_1.deg",
+    "joint_2.deg",
+    "joint_3.deg",
+    "joint_4.deg",
+    "joint_5.deg",
+    "joint_6.deg",
+    "gripper.m"
+  ],
+  "state_names": [
+    "joint_1.deg",
+    "joint_2.deg",
+    "joint_3.deg",
+    "joint_4.deg",
+    "joint_5.deg",
+    "joint_6.deg",
+    "gripper.m"
+  ],
+  "action_units": [
+    "deg",
+    "deg",
+    "deg",
+    "deg",
+    "deg",
+    "deg",
+    "m"
+  ],
+  "action_space": "absolute joint angles and absolute gripper width; mixed physical units, no IK",
+  "normalization": {
+    "mapping": {
+      "VISUAL": "MEAN_STD",
+      "STATE": "MEAN_STD",
+      "ACTION": "MEAN_STD"
+    },
+    "eps": 1e-08,
+    "checkpoint_stats_float32": {
+      "observation.state": {
+        "mean": [
+          4.597353458404541,
+          78.98343658447266,
+          -57.63479232788086,
+          4.088116645812988,
+          47.39833450317383,
+          -35.45034408569336,
+          0.030325930565595627
+        ],
+        "std": [
+          20.598800659179688,
+          42.871524810791016,
+          31.066293716430664,
+          6.501641273498535,
+          24.115419387817383,
+          23.223472595214844,
+          0.023234087973833084
+        ]
+      },
+      "observation.images.global": {
+        "mean": [
+          [
+            [
+              0.48500001430511475
+            ]
+          ],
+          [
+            [
+              0.4560000002384186
+            ]
+          ],
+          [
+            [
+              0.4059999883174896
+            ]
+          ]
+        ],
+        "std": [
+          [
+            [
+              0.2290000021457672
+            ]
+          ],
+          [
+            [
+              0.2240000069141388
+            ]
+          ],
+          [
+            [
+              0.22499999403953552
+            ]
+          ]
+        ]
+      },
+      "observation.images.wrist": {
+        "mean": [
+          [
+            [
+              0.48500001430511475
+            ]
+          ],
+          [
+            [
+              0.4560000002384186
+            ]
+          ],
+          [
+            [
+              0.4059999883174896
+            ]
+          ]
+        ],
+        "std": [
+          [
+            [
+              0.2290000021457672
+            ]
+          ],
+          [
+            [
+              0.2240000069141388
+            ]
+          ],
+          [
+            [
+              0.22499999403953552
+            ]
+          ]
+        ]
+      },
+      "action": {
+        "mean": [
+          4.4629645347595215,
+          78.89566040039062,
+          -57.80490493774414,
+          3.8710968494415283,
+          47.26247024536133,
+          -35.48020935058594,
+          0.02268960326910019
+        ],
+        "std": [
+          20.69872283935547,
+          42.96419906616211,
+          31.176870346069336,
+          6.695367813110352,
+          24.313968658447266,
+          23.26216697692871,
+          0.021596593782305717
+        ]
+      }
+    },
+    "dataset_stats_original": {
+      "observation.state": {
+        "mean": [
+          4.597353239984123,
+          78.98343814215312,
+          -57.63479173746671,
+          4.088116443932365,
+          47.398333050877916,
+          -35.45034333282688,
+          0.0303259313360005
+        ],
+        "std": [
+          20.598799779982738,
+          42.87152355685521,
+          31.06629372787362,
+          6.501641091960443,
+          24.115419419434303,
+          23.223472224295428,
+          0.023234088409884363
+        ],
+        "min": [
+          -55.95199966430664,
+          0.210999995470047,
+          -97.5999984741211,
+          -24.836999893188477,
+          -8.45300006866455,
+          -92.66899871826172,
+          -0.003000000026077032
+        ],
+        "max": [
+          34.928001403808594,
+          128.19200134277344,
+          -0.11299999803304672,
+          78.63800048828125,
+          71.28900146484375,
+          15.347000122070312,
+          0.07919999957084656
+        ],
+        "count": [
+          20488
+        ]
+      },
+      "observation.images.global": {
+        "mean": [
+          [
+            [
+              0.475800965211148
+            ]
+          ],
+          [
+            [
+              0.47621189956784205
+            ]
+          ],
+          [
+            [
+              0.4435483745093087
+            ]
+          ]
+        ],
+        "std": [
+          [
+            [
+              0.2660677388308933
+            ]
+          ],
+          [
+            [
+              0.2532047817128141
+            ]
+          ],
+          [
+            [
+              0.28212903904975856
+            ]
+          ]
+        ],
+        "min": [
+          [
+            [
+              0.0
+            ]
+          ],
+          [
+            [
+              0.0
+            ]
+          ],
+          [
+            [
+              0.0
+            ]
+          ]
+        ],
+        "max": [
+          [
+            [
+              1.0
+            ]
+          ],
+          [
+            [
+              1.0
+            ]
+          ],
+          [
+            [
+              1.0
+            ]
+          ]
+        ],
+        "count": [
+          393369600
+        ]
+      },
+      "observation.images.wrist": {
+        "mean": [
+          [
+            [
+              0.4463781367773565
+            ]
+          ],
+          [
+            [
+              0.4300978668615926
+            ]
+          ],
+          [
+            [
+              0.4129329193812569
+            ]
+          ]
+        ],
+        "std": [
+          [
+            [
+              0.20663362074182653
+            ]
+          ],
+          [
+            [
+              0.22480643934744257
+            ]
+          ],
+          [
+            [
+              0.2514440960234601
+            ]
+          ]
+        ],
+        "min": [
+          [
+            [
+              0.0
+            ]
+          ],
+          [
+            [
+              0.0
+            ]
+          ],
+          [
+            [
+              0.0
+            ]
+          ]
+        ],
+        "max": [
+          [
+            [
+              1.0
+            ]
+          ],
+          [
+            [
+              1.0
+            ]
+          ],
+          [
+            [
+              1.0
+            ]
+          ]
+        ],
+        "count": [
+          393369600
+        ]
+      },
+      "action": {
+        "mean": [
+          4.462964741926974,
+          78.89566350458004,
+          -57.80490660453299,
+          3.871096921323194,
+          47.26247101898819,
+          -35.48020830148833,
+          0.022689603219097514
+        ],
+        "std": [
+          20.6987224069594,
+          42.964199998035866,
+          31.17686965445938,
+          6.695367878076496,
+          24.313968057081695,
+          23.262167240499153,
+          0.021596593048528585
+        ],
+        "min": [
+          -56.43899917602539,
+          0.0,
+          -98.05500030517578,
+          -26.17300033569336,
+          -9.272000312805176,
+          -93.32599639892578,
+          -0.005200000014156103
+        ],
+        "max": [
+          34.823001861572266,
+          128.2530059814453,
+          0.0,
+          79.54499816894531,
+          70.0,
+          15.925999641418457,
+          0.07999999821186066
+        ],
+        "count": [
+          20488
+        ]
+      }
+    },
+    "image_stats_source": "ImageNet override saved in processor, not the dataset image means"
+  },
+  "preprocessing": {
+    "raw": "RGB uint8 HWC 480x640x3",
+    "tensor": "float32 CHW /255 then saved preprocessor adds batch and normalizes",
+    "resize": null,
+    "augmentation_enabled": false,
+    "use_imagenet_stats": true,
+    "video_backend": "torchcodec",
+    "dataset_video": {
+      "is_depth_map": false,
+      "video.height": 480,
+      "video.width": 640,
+      "video.codec": "h264",
+      "video.pix_fmt": "yuv420p",
+      "video.fps": 20,
+      "video.channels": 3,
+      "has_audio": false,
+      "video.g": 2,
+      "video.crf": 18,
+      "video.preset": "fast",
+      "video.fast_decode": 0,
+      "video.video_backend": "pyav",
+      "video.extra_options": {}
+    }
+  },
+  "robot": {
+    "dataset_type": "piper_shared_observer",
+    "joint_count": 6,
+    "gripper_travel_m": [
+      0.0,
+      0.1
+    ],
+    "gripper_travel_source": "current deployment bounds, not an inferred training robot specification",
+    "link_geometry": "not encoded in this ACT checkpoint; no link geometry inferred"
+  },
+  "deployment_bounds": [
+    [
+      -60.0,
+      40.0
+    ],
+    [
+      0.0,
+      135.0
+    ],
+    [
+      -120.0,
+      0.0
+    ],
+    [
+      -45.0,
+      45.0
+    ],
+    [
+      -60.0,
+      70.0
+    ],
+    [
+      -80.0,
+      60.0
+    ],
+    [
+      0.0,
+      0.1
+    ]
+  ],
+  "dataset": {
+    "repo_id": "local/rad_place_merged_v5",
+    "total_episodes": 52,
+    "total_frames": 20488,
+    "data_path": "data/chunk-{chunk_index:03d}/file-{file_index:03d}.parquet",
+    "video_path": "videos/{video_key}/chunk-{chunk_index:03d}/file-{file_index:03d}.mp4",
+    "all_used_for_training": true
+  },
+  "training": {
+    "saved_root_cloud": "/root/autodl-tmp/lerobot_act/datasets/rad_place_merged_v5",
+    "steps": 20000,
+    "batch_size": 8,
+    "device": "cuda",
+    "seed": 1000,
+    "local_train_script_is_not_actual_cloud_training_config": true
+  },
+  "runtime": {
+    "device_for_offline_adapter": "cpu",
+    "joint_smoothing_alpha_existing": 0.5,
+    "release_extra_steps_existing": 20,
+    "no_existing_runtime_changes": true
+  },
+  "versions": {
+    "lerobot": "0.6.1",
+    "torch": "2.10.0+cpu",
+    "torchvision": "0.25.0+cpu",
+    "numpy": "2.2.6",
+    "safetensors": "0.8.0"
+  },
+  "f_exec_hz": null,
+  "hardware_validation": false,
+  "evidence_sha256": {
+    "/home/aup/Lerobot/projects/piper/deployment/act_launch_contact_repair.json": "48fcebaa027c273b747c9bf23587a207f5f5b3cff7d202de7226d91c8ce82cc0",
+    "/home/aup/Lerobot/models/ACT/rad_place_v5_r05/020000/pretrained_model/config.json": "1047d842711a875818fdbbb270d48cc820b1434516c7e77ce05bc175c42ab8e5",
+    "/home/aup/Lerobot/models/ACT/rad_place_v5_r05/020000/pretrained_model/train_config.json": "353dc84af7f2eff64955b90b32d6a6beb9278464302353a3c00c43b54512e4e7",
+    "/home/aup/Lerobot/models/ACT/rad_place_v5_r05/020000/pretrained_model/model.safetensors": "58ff63d7cc57052f56d2e13e5121fbe1ea9b2bb0d1ed6fda65005264d4c2c09e",
+    "/home/aup/Lerobot/models/ACT/rad_place_v5_r05/020000/pretrained_model/policy_preprocessor.json": "a265568640237bfa353b725e1275bfe708c73e57fd7f9fd8f624e165e608369a",
+    "/home/aup/Lerobot/models/ACT/rad_place_v5_r05/020000/pretrained_model/policy_postprocessor.json": "c27cf6f42b42352f9b8f9c40da155fd4459e0ee9b85b9f23072941eb52b3ffb5",
+    "/home/aup/Lerobot/models/ACT/rad_place_v5_r05/020000/pretrained_model/policy_preprocessor_step_3_normalizer_processor.safetensors": "63284104b3136d2b2673bdb7bf5f85e7f82207f56c2d98057f951ec8d47fd3ab",
+    "/home/aup/Lerobot/models/ACT/rad_place_v5_r05/020000/pretrained_model/policy_postprocessor_step_0_unnormalizer_processor.safetensors": "9ddc01fd36829854a820b50e63bc4b9abddce2e5f59b51baac98739526a843dd",
+    "/home/aup/Lerobot/datasets/rad_place_merged_v5/meta/info.json": "a7ac4fa04598e9e4cfd46a2edeaec7da8af0828858e4cd54384396916c578fcc",
+    "/home/aup/Lerobot/datasets/rad_place_merged_v5/meta/stats.json": "8a3495ddc243a599448775d2fa1b9731e7e4eeb48de466014098faa4ff7e0901",
+    "/home/aup/Lerobot/train_act_rad_place_v5.sh": "a8dd1e29597ae1ff20e146d8e0dd010a5b8d80391577158f6661346e5f002499",
+    "/home/aup/Lerobot/projects/piper/official_adapter/rollout_act_piper.py": "ba9f8a1a376ac77a9178057214507cffa698a5486ccfcbc9c11c1c1ddaa50fda",
+    "/home/aup/Lerobot/projects/piper/official_adapter/lerobot_robot_piper_shared/protocol.py": "42a72627b8e1274c7812d7a057c9d541e2d7aed710005ad80b27c6bec0412c29",
+    "/home/aup/Lerobot/projects/piper/official_adapter/lerobot_robot_piper_shared/devices.py": "56f81c951c0bd8c7d84ff82a212d0692a8e831bc022dd1607f7f736022612269",
+    "/home/aup/Lerobot/envs/piper-cpu/lib/python3.12/site-packages/lerobot/policies/act/configuration_act.py": "35a60c0dd3c811b137b5eb035bdbd40d40e2c24ba0cda61756052e6e1c829282",
+    "/home/aup/Lerobot/envs/piper-cpu/lib/python3.12/site-packages/lerobot/policies/act/modeling_act.py": "a6c1a49c5daafa513b9abee9b986205d327e25c70ed13623ab2e6c0ab6b1f577",
+    "/home/aup/Lerobot/envs/piper-cpu/lib/python3.12/site-packages/lerobot/policies/act/processor_act.py": "247d3b13c93568c1fb35349716f8c3b6a53c2e7a5c8b098928471172b0bf0ef2",
+    "/home/aup/Lerobot/envs/piper-cpu/lib/python3.12/site-packages/lerobot/datasets/video_utils.py": "82d0ced8f3f9adc754d4388122b044d36f2feeadda28d4ddad933cead7cc54d1",
+    "/home/aup/Lerobot/envs/piper-cpu/lib/python3.12/site-packages/lerobot/processor/normalize_processor.py": "f0cd88bec4c954a93ba1cc90300473b96eb177762789c1780cf07801fc1af9d6"
+  }
+}

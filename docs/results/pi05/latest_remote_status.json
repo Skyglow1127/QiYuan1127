@@ -1,0 +1,28 @@
+{
+  "experiment_id": "pi05_expert_only_v6_r09",
+  "started_utc": "v5",
+  "supervisor_pid": 833375,
+  "data_root": "/root/autodl-tmp/piper_pi05/experiments/pi05_expert_only_v6_r09",
+  "scratch_root": "/root/pi05_expert_runs/pi05_expert_only_v6_r09",
+  "original_model_A": "/root/autodl-tmp/piper_pi05/runs/pi05_train_v5_r06",
+  "robot_operations": false,
+  "batch_size": 8,
+  "automatic_A_service_restore": false,
+  "stage": "complete",
+  "updated_utc": "v5",
+  "child_pid": null,
+  "child_log": "/root/autodl-tmp/piper_pi05/experiments/pi05_expert_only_v6_r09/logs/formal_training.log",
+  "command": [
+    "bash",
+    "/root/autodl-tmp/piper_pi05/experiments/pi05_expert_only_v6_r09/bin/train_expert.sh",
+    "/root/autodl-tmp/lerobot_act/datasets/rad_place_merged_v5",
+    "/root/pi05_expert_runs/pi05_expert_only_v6_r09/train",
+    "20000"
+  ],
+  "smoke_checkpoint_bytes": 11549234497,
+  "resume_step_verified": 101,
+  "model_A_unchanged": true,
+  "final_checkpoint": "/root/pi05_expert_runs/pi05_expert_only_v6_r09/train/checkpoints/020000",
+  "model_A_service_auto_restore_disabled": true,
+  "training_complete": true
+}

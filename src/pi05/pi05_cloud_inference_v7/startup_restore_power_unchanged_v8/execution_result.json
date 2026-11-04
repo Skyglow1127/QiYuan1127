@@ -1,0 +1,886 @@
+{
+  "plan_id": "3f466cb5d351e285dc083836b74766675ff27646c4d0c4e995f7586df55e5583",
+  "success": true,
+  "phases": [
+    {
+      "operation": "reuse_enabled_j5_current_pose",
+      "reused_enabled": true,
+      "success": true,
+      "no_model_actions": true,
+      "no_reset_or_zero": true,
+      "enable_attempted": false,
+      "requested_mode": "0101050000000000",
+      "posvel_direct_feedback_available": false,
+      "takeover_speed_percent": 5,
+      "identity": {
+        "interface": "can0",
+        "ifindex": 14,
+        "device_path": "/sys/devices/platform/axi/ff9d0000.usb/fe200000.usb/xhci-hcd.1.auto/usb1/1-1/1-1.3/1-1.3:1.0",
+        "host": {
+          "hostname": "kria",
+          "machine_id": "20c5aef53ab9448a94fd5ebcb89f663a"
+        },
+        "driver": "gs_usb",
+        "usb": {
+          "idVendor": "1d50",
+          "idProduct": "606f",
+          "serial": "002100425631511920313857",
+          "manufacturer": "bytewerk",
+          "product": "candleLight USB to CAN adapter"
+        }
+      },
+      "link": {
+        "up": true,
+        "listen_only": false,
+        "bitrate_ok": true,
+        "detail": "14: can0: <NOARP,UP,LOWER_UP,ECHO> mtu 16 qdisc pfifo_fast state UP mode DEFAULT group default qlen 10\n    link/can  promiscuity 0  allmulti 0 minmtu 0 maxmtu 0 \n    can state ERROR-ACTIVE restart-ms 0 \n\t  bitrate 1000000 sample-point 0.750\n\t  tq 62 prop-seg 5 phase-seg1 6 phase-seg2 4 sjw 2 brp 3\n\t  gs_usb: tseg1 1..16 tseg2 1..8 sjw 1..4 brp 1..1024 brp_inc 1\n\t  clock 48000000 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535 tso_max_size 65536 tso_max_segs 65535 gro_max_size 65536 parentbus usb parentdev 1-1.3:1.0",
+        "ready": false
+      },
+      "before": {
+        "pose_order": [
+          "joint_1.deg",
+          "joint_2.deg",
+          "joint_3.deg",
+          "joint_4.deg",
+          "joint_5.deg",
+          "joint_6.deg",
+          "gripper.m"
+        ],
+        "pose": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0329
+        ],
+        "enabled": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "motor_status_bytes": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "motor_source_monotonic": [
+          29391.803366362,
+          29391.798482121,
+          29391.79360654,
+          29391.813722728,
+          29391.808846897,
+          29391.804098018
+        ],
+        "motor_ages_s": [
+          0.0143851499997254,
+          0.01926939099939773,
+          0.024144972001522547,
+          0.004028784002002794,
+          0.008904614998755278,
+          0.013653493999299826
+        ],
+        "state_ages_s": {
+          "0x2a5": 0.005012272002204554,
+          "0x2a6": 0.00487443200108828,
+          "0x2a7": 0.0047340300006908365,
+          "0x2a8": 0.004636589001165703,
+          "0x2a1": 0.0004405840008985251
+        },
+        "arm_status_raw": "0100010000000000"
+      },
+      "warm_gripper_target_m": 0.025,
+      "enabled": {
+        "pose_order": [
+          "joint_1.deg",
+          "joint_2.deg",
+          "joint_3.deg",
+          "joint_4.deg",
+          "joint_5.deg",
+          "joint_6.deg",
+          "gripper.m"
+        ],
+        "pose": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.025099999999999997
+        ],
+        "enabled": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "motor_status_bytes": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "motor_source_monotonic": [
+          29392.253361093,
+          29392.248494902,
+          29392.243600131,
+          29392.23872541,
+          29392.2338569,
+          29392.254101609
+        ],
+        "motor_ages_s": [
+          0.00503934199878131,
+          0.009905532999255229,
+          0.014800303997617448,
+          0.019675024999742163,
+          0.024543535000702832,
+          0.004298825999285327
+        ],
+        "state_ages_s": {
+          "0x2a5": 0.0006533749983645976,
+          "0x2a6": 0.0005232139992585871,
+          "0x2a7": 0.0004017530009150505,
+          "0x2a8": 0.0002139610005542636,
+          "0x2a1": 0.0011320089979562908
+        },
+        "arm_status_raw": "0100010000000000"
+      },
+      "after": {
+        "pose_order": [
+          "joint_1.deg",
+          "joint_2.deg",
+          "joint_3.deg",
+          "joint_4.deg",
+          "joint_5.deg",
+          "joint_6.deg",
+          "gripper.m"
+        ],
+        "pose": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.025099999999999997
+        ],
+        "enabled": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "motor_status_bytes": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "motor_source_monotonic": [
+          29392.253361093,
+          29392.248494902,
+          29392.243600131,
+          29392.23872541,
+          29392.2338569,
+          29392.254101609
+        ],
+        "motor_ages_s": [
+          0.00503934199878131,
+          0.009905532999255229,
+          0.014800303997617448,
+          0.019675024999742163,
+          0.024543535000702832,
+          0.004298825999285327
+        ],
+        "state_ages_s": {
+          "0x2a5": 0.0006533749983645976,
+          "0x2a6": 0.0005232139992585871,
+          "0x2a7": 0.0004017530009150505,
+          "0x2a8": 0.0002139610005542636,
+          "0x2a1": 0.0011320089979562908
+        },
+        "arm_status_raw": "0100010000000000"
+      },
+      "holds_current_pose_enabled": true,
+      "tx_log": [
+        {
+          "phase": "preload",
+          "id": "0x155",
+          "data": "0000000000000000",
+          "attempt_at": 29391.836503079,
+          "socket_accepted": true,
+          "completed_at": 29391.83659559
+        },
+        {
+          "phase": "preload",
+          "id": "0x156",
+          "data": "0000000000000000",
+          "attempt_at": 29391.836851752,
+          "socket_accepted": true,
+          "completed_at": 29391.836884892
+        },
+        {
+          "phase": "preload",
+          "id": "0x157",
+          "data": "0000000000000000",
+          "attempt_at": 29391.837145755,
+          "socket_accepted": true,
+          "completed_at": 29391.837175565
+        },
+        {
+          "phase": "mode",
+          "id": "0x151",
+          "data": "0101050000000000",
+          "attempt_at": 29391.837411237,
+          "socket_accepted": true,
+          "completed_at": 29391.837440547
+        },
+        {
+          "phase": "before_enable",
+          "id": "0x155",
+          "data": "0000000000000000",
+          "attempt_at": 29391.837867021,
+          "socket_accepted": true,
+          "completed_at": 29391.837895711
+        },
+        {
+          "phase": "before_enable",
+          "id": "0x156",
+          "data": "0000000000000000",
+          "attempt_at": 29391.838151943,
+          "socket_accepted": true,
+          "completed_at": 29391.838179553
+        },
+        {
+          "phase": "before_enable",
+          "id": "0x157",
+          "data": "0000000000000000",
+          "attempt_at": 29391.838411435,
+          "socket_accepted": true,
+          "completed_at": 29391.838438195
+        },
+        {
+          "phase": "gripper_hold",
+          "id": "0x159",
+          "data": "000061a803e80100",
+          "attempt_at": 29391.838713448,
+          "socket_accepted": true,
+          "completed_at": 29391.838741078
+        }
+      ],
+      "phase_number": 1,
+      "reviewed_target_m": 0.025,
+      "actual_step_checks": [
+        {
+          "actual_width_um": 32900,
+          "target_width_um": 25000,
+          "signed_step_um": -7900
+        }
+      ]
+    },
+    {
+      "operation": "reuse_enabled_j5_current_pose",
+      "reused_enabled": true,
+      "success": true,
+      "no_model_actions": true,
+      "no_reset_or_zero": true,
+      "enable_attempted": false,
+      "requested_mode": "0101050000000000",
+      "posvel_direct_feedback_available": false,
+      "takeover_speed_percent": 5,
+      "identity": {
+        "interface": "can0",
+        "ifindex": 14,
+        "device_path": "/sys/devices/platform/axi/ff9d0000.usb/fe200000.usb/xhci-hcd.1.auto/usb1/1-1/1-1.3/1-1.3:1.0",
+        "host": {
+          "hostname": "kria",
+          "machine_id": "20c5aef53ab9448a94fd5ebcb89f663a"
+        },
+        "driver": "gs_usb",
+        "usb": {
+          "idVendor": "1d50",
+          "idProduct": "606f",
+          "serial": "002100425631511920313857",
+          "manufacturer": "bytewerk",
+          "product": "candleLight USB to CAN adapter"
+        }
+      },
+      "link": {
+        "up": true,
+        "listen_only": false,
+        "bitrate_ok": true,
+        "detail": "14: can0: <NOARP,UP,LOWER_UP,ECHO> mtu 16 qdisc pfifo_fast state UP mode DEFAULT group default qlen 10\n    link/can  promiscuity 0  allmulti 0 minmtu 0 maxmtu 0 \n    can state ERROR-ACTIVE restart-ms 0 \n\t  bitrate 1000000 sample-point 0.750\n\t  tq 62 prop-seg 5 phase-seg1 6 phase-seg2 4 sjw 2 brp 3\n\t  gs_usb: tseg1 1..16 tseg2 1..8 sjw 1..4 brp 1..1024 brp_inc 1\n\t  clock 48000000 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535 tso_max_size 65536 tso_max_segs 65535 gro_max_size 65536 parentbus usb parentdev 1-1.3:1.0",
+        "ready": false
+      },
+      "before": {
+        "pose_order": [
+          "joint_1.deg",
+          "joint_2.deg",
+          "joint_3.deg",
+          "joint_4.deg",
+          "joint_5.deg",
+          "joint_6.deg",
+          "gripper.m"
+        ],
+        "pose": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.024999999999999998
+        ],
+        "enabled": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "motor_status_bytes": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "motor_source_monotonic": [
+          29393.253359365,
+          29393.273504773,
+          29393.268628613,
+          29393.263734372,
+          29393.258867441,
+          29393.254090571
+        ],
+        "motor_ages_s": [
+          0.020619152001017937,
+          0.00047374400310218334,
+          0.0053499040004680865,
+          0.010244144999887794,
+          0.015111076001630863,
+          0.019887946000380907
+        ],
+        "state_ages_s": {
+          "0x2a5": 0.00122378000014578,
+          "0x2a6": 0.0010990290029440075,
+          "0x2a7": 0.0009470080003666226,
+          "0x2a8": 0.0008566470023652073,
+          "0x2a1": 0.0017099540018534753
+        },
+        "arm_status_raw": "0100010000000000"
+      },
+      "warm_gripper_target_m": 0.0175,
+      "enabled": {
+        "pose_order": [
+          "joint_1.deg",
+          "joint_2.deg",
+          "joint_3.deg",
+          "joint_4.deg",
+          "joint_5.deg",
+          "joint_6.deg",
+          "gripper.m"
+        ],
+        "pose": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0178
+        ],
+        "enabled": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "motor_status_bytes": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "motor_source_monotonic": [
+          29393.703375056,
+          29393.698498386,
+          29393.693603915,
+          29393.688739384,
+          29393.683862783,
+          29393.704114373
+        ],
+        "motor_ages_s": [
+          0.0050314030013396405,
+          0.009908073003316531,
+          0.01480254400303238,
+          0.01966707500105258,
+          0.024543676001485437,
+          0.00429208600326092
+        ],
+        "state_ages_s": {
+          "0x2a5": 0.0006488660001195967,
+          "0x2a6": 0.0005351150030037388,
+          "0x2a7": 0.00040922400148701854,
+          "0x2a8": 0.0002739330011536367,
+          "0x2a1": 0.0011211100027139764
+        },
+        "arm_status_raw": "0100010000000000"
+      },
+      "after": {
+        "pose_order": [
+          "joint_1.deg",
+          "joint_2.deg",
+          "joint_3.deg",
+          "joint_4.deg",
+          "joint_5.deg",
+          "joint_6.deg",
+          "gripper.m"
+        ],
+        "pose": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0178
+        ],
+        "enabled": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "motor_status_bytes": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "motor_source_monotonic": [
+          29393.703375056,
+          29393.698498386,
+          29393.693603915,
+          29393.688739384,
+          29393.683862783,
+          29393.704114373
+        ],
+        "motor_ages_s": [
+          0.0050314030013396405,
+          0.009908073003316531,
+          0.01480254400303238,
+          0.01966707500105258,
+          0.024543676001485437,
+          0.00429208600326092
+        ],
+        "state_ages_s": {
+          "0x2a5": 0.0006488660001195967,
+          "0x2a6": 0.0005351150030037388,
+          "0x2a7": 0.00040922400148701854,
+          "0x2a8": 0.0002739330011536367,
+          "0x2a1": 0.0011211100027139764
+        },
+        "arm_status_raw": "0100010000000000"
+      },
+      "holds_current_pose_enabled": true,
+      "tx_log": [
+        {
+          "phase": "preload",
+          "id": "0x155",
+          "data": "0000000000000000",
+          "attempt_at": 29393.291511624,
+          "socket_accepted": true,
+          "completed_at": 29393.291578105
+        },
+        {
+          "phase": "preload",
+          "id": "0x156",
+          "data": "0000000000000000",
+          "attempt_at": 29393.291813337,
+          "socket_accepted": true,
+          "completed_at": 29393.291842307
+        },
+        {
+          "phase": "preload",
+          "id": "0x157",
+          "data": "0000000000000000",
+          "attempt_at": 29393.292091079,
+          "socket_accepted": true,
+          "completed_at": 29393.292119499
+        },
+        {
+          "phase": "mode",
+          "id": "0x151",
+          "data": "0101050000000000",
+          "attempt_at": 29393.292357011,
+          "socket_accepted": true,
+          "completed_at": 29393.292385192
+        },
+        {
+          "phase": "before_enable",
+          "id": "0x155",
+          "data": "0000000000000000",
+          "attempt_at": 29393.292806625,
+          "socket_accepted": true,
+          "completed_at": 29393.292835665
+        },
+        {
+          "phase": "before_enable",
+          "id": "0x156",
+          "data": "0000000000000000",
+          "attempt_at": 29393.293090208,
+          "socket_accepted": true,
+          "completed_at": 29393.293121778
+        },
+        {
+          "phase": "before_enable",
+          "id": "0x157",
+          "data": "0000000000000000",
+          "attempt_at": 29393.29335398,
+          "socket_accepted": true,
+          "completed_at": 29393.29338149
+        },
+        {
+          "phase": "gripper_hold",
+          "id": "0x159",
+          "data": "0000445c03e80100",
+          "attempt_at": 29393.293656922,
+          "socket_accepted": true,
+          "completed_at": 29393.293684743
+        }
+      ],
+      "phase_number": 2,
+      "reviewed_target_m": 0.0175,
+      "actual_step_checks": [
+        {
+          "actual_width_um": 25000,
+          "target_width_um": 17500,
+          "signed_step_um": -7500
+        }
+      ]
+    },
+    {
+      "operation": "reuse_enabled_j5_current_pose",
+      "reused_enabled": true,
+      "success": true,
+      "no_model_actions": true,
+      "no_reset_or_zero": true,
+      "enable_attempted": false,
+      "requested_mode": "0101050000000000",
+      "posvel_direct_feedback_available": false,
+      "takeover_speed_percent": 5,
+      "identity": {
+        "interface": "can0",
+        "ifindex": 14,
+        "device_path": "/sys/devices/platform/axi/ff9d0000.usb/fe200000.usb/xhci-hcd.1.auto/usb1/1-1/1-1.3/1-1.3:1.0",
+        "host": {
+          "hostname": "kria",
+          "machine_id": "20c5aef53ab9448a94fd5ebcb89f663a"
+        },
+        "driver": "gs_usb",
+        "usb": {
+          "idVendor": "1d50",
+          "idProduct": "606f",
+          "serial": "002100425631511920313857",
+          "manufacturer": "bytewerk",
+          "product": "candleLight USB to CAN adapter"
+        }
+      },
+      "link": {
+        "up": true,
+        "listen_only": false,
+        "bitrate_ok": true,
+        "detail": "14: can0: <NOARP,UP,LOWER_UP,ECHO> mtu 16 qdisc pfifo_fast state UP mode DEFAULT group default qlen 10\n    link/can  promiscuity 0  allmulti 0 minmtu 0 maxmtu 0 \n    can state ERROR-ACTIVE restart-ms 0 \n\t  bitrate 1000000 sample-point 0.750\n\t  tq 62 prop-seg 5 phase-seg1 6 phase-seg2 4 sjw 2 brp 3\n\t  gs_usb: tseg1 1..16 tseg2 1..8 sjw 1..4 brp 1..1024 brp_inc 1\n\t  clock 48000000 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535 tso_max_size 65536 tso_max_segs 65535 gro_max_size 65536 parentbus usb parentdev 1-1.3:1.0",
+        "ready": false
+      },
+      "before": {
+        "pose_order": [
+          "joint_1.deg",
+          "joint_2.deg",
+          "joint_3.deg",
+          "joint_4.deg",
+          "joint_5.deg",
+          "joint_6.deg",
+          "gripper.m"
+        ],
+        "pose": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0178
+        ],
+        "enabled": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "motor_status_bytes": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "motor_source_monotonic": [
+          29394.703372698,
+          29394.723486847,
+          29394.718615106,
+          29394.713738195,
+          29394.708882325,
+          29394.704106465
+        ],
+        "motor_ages_s": [
+          0.020455961999687133,
+          0.00034181299997726455,
+          0.0052135539990558755,
+          0.010090464998938842,
+          0.014946334998967359,
+          0.019722195000213105
+        ],
+        "state_ages_s": {
+          "0x2a5": 0.0010697990001062863,
+          "0x2a6": 0.0009405980017618276,
+          "0x2a7": 0.0007960469993122388,
+          "0x2a8": 0.0006980260004638694,
+          "0x2a1": 0.001501362999988487
+        },
+        "arm_status_raw": "0100010000000000"
+      },
+      "warm_gripper_target_m": 0.01,
+      "enabled": {
+        "pose_order": [
+          "joint_1.deg",
+          "joint_2.deg",
+          "joint_3.deg",
+          "joint_4.deg",
+          "joint_5.deg",
+          "joint_6.deg",
+          "gripper.m"
+        ],
+        "pose": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0104
+        ],
+        "enabled": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "motor_status_bytes": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "motor_source_monotonic": [
+          29395.15338519,
+          29395.148499869,
+          29395.143624519,
+          29395.138749478,
+          29395.158865216,
+          29395.154116037
+        ],
+        "motor_ages_s": [
+          0.01015280600040569,
+          0.015038126999570522,
+          0.019913476997317048,
+          0.024788517999695614,
+          0.004672779999964405,
+          0.009421958999155322
+        ],
+        "state_ages_s": {
+          "0x2a5": 0.000771746999816969,
+          "0x2a6": 0.0006423960003303364,
+          "0x2a7": 0.0005111149985168595,
+          "0x2a8": 0.000403374000597978,
+          "0x2a1": 0.0012053309983457439
+        },
+        "arm_status_raw": "0100010000000000"
+      },
+      "after": {
+        "pose_order": [
+          "joint_1.deg",
+          "joint_2.deg",
+          "joint_3.deg",
+          "joint_4.deg",
+          "joint_5.deg",
+          "joint_6.deg",
+          "gripper.m"
+        ],
+        "pose": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0104
+        ],
+        "enabled": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "motor_status_bytes": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "motor_source_monotonic": [
+          29395.15338519,
+          29395.148499869,
+          29395.143624519,
+          29395.138749478,
+          29395.158865216,
+          29395.154116037
+        ],
+        "motor_ages_s": [
+          0.01015280600040569,
+          0.015038126999570522,
+          0.019913476997317048,
+          0.024788517999695614,
+          0.004672779999964405,
+          0.009421958999155322
+        ],
+        "state_ages_s": {
+          "0x2a5": 0.000771746999816969,
+          "0x2a6": 0.0006423960003303364,
+          "0x2a7": 0.0005111149985168595,
+          "0x2a8": 0.000403374000597978,
+          "0x2a1": 0.0012053309983457439
+        },
+        "arm_status_raw": "0100010000000000"
+      },
+      "holds_current_pose_enabled": true,
+      "tx_log": [
+        {
+          "phase": "preload",
+          "id": "0x155",
+          "data": "0000000000000000",
+          "attempt_at": 29394.741494598,
+          "socket_accepted": true,
+          "completed_at": 29394.741559868
+        },
+        {
+          "phase": "preload",
+          "id": "0x156",
+          "data": "0000000000000000",
+          "attempt_at": 29394.74179524,
+          "socket_accepted": true,
+          "completed_at": 29394.741824551
+        },
+        {
+          "phase": "preload",
+          "id": "0x157",
+          "data": "0000000000000000",
+          "attempt_at": 29394.742102293,
+          "socket_accepted": true,
+          "completed_at": 29394.742132893
+        },
+        {
+          "phase": "mode",
+          "id": "0x151",
+          "data": "0101050000000000",
+          "attempt_at": 29394.742376505,
+          "socket_accepted": true,
+          "completed_at": 29394.742405496
+        },
+        {
+          "phase": "before_enable",
+          "id": "0x155",
+          "data": "0000000000000000",
+          "attempt_at": 29394.742831299,
+          "socket_accepted": true,
+          "completed_at": 29394.742860989
+        },
+        {
+          "phase": "before_enable",
+          "id": "0x156",
+          "data": "0000000000000000",
+          "attempt_at": 29394.743153702,
+          "socket_accepted": true,
+          "completed_at": 29394.743184512
+        },
+        {
+          "phase": "before_enable",
+          "id": "0x157",
+          "data": "0000000000000000",
+          "attempt_at": 29394.743416984,
+          "socket_accepted": true,
+          "completed_at": 29394.743444874
+        },
+        {
+          "phase": "gripper_hold",
+          "id": "0x159",
+          "data": "0000271003e80100",
+          "attempt_at": 29394.743706986,
+          "socket_accepted": true,
+          "completed_at": 29394.743735087
+        }
+      ],
+      "phase_number": 3,
+      "reviewed_target_m": 0.01,
+      "actual_step_checks": [
+        {
+          "actual_width_um": 17800,
+          "target_width_um": 10000,
+          "signed_step_um": -7800
+        }
+      ]
+    }
+  ],
+  "automatic_retry": false,
+  "model_or_grasp_actions": false,
+  "motor_enable_disable_reset_zero_commands": false,
+  "failure_caveat": "Enable state is left unchanged; stopping sends is not proof of a physical stop."
+}

@@ -1,0 +1,9 @@
+{
+  "model_dir": "/root/autodl-tmp/piper_pi05/experiments/pi05_expert_only_v6_r09/best_model",
+  "step": 4000,
+  "eval_loss": 0.06722064919986963,
+  "source_checkpoint": "/root/pi05_expert_runs/pi05_expert_only_v6_r09/train/checkpoints/004000",
+  "total_bytes": 9354078385,
+  "sha256_verified": true,
+  "source_model_sha256": "583ff741239b111053dc969fe5ba69eb70475e888c7ece92b04a78d3319386cf"
+}

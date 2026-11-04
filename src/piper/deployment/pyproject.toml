@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lerobot_robot_piper_executor"
+version = "0.1.0"
+description = "Local PiPER execution adapter plugin for official LeRobot rollout"
+requires-python = ">=3.12"
+dependencies = ["lerobot==0.6.1", "lerobot_robot_piper_shared==0.1.0"]
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["lerobot_robot_piper_executor*"]

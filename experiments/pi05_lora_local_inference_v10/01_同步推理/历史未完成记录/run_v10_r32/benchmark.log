@@ -1,0 +1,11 @@
+Loading base and LoRA on the local GPU...
+WARNING:root:Vision embedding key might need handling: paligemma_with_expert.paligemma.model.vision_tower.vision_model.embeddings.patch_embedding.bias
+WARNING:root:Vision embedding key might need handling: paligemma_with_expert.paligemma.model.vision_tower.vision_model.embeddings.patch_embedding.weight
+Streaming 812 saved tensors into 813 parameters; 8.71 GiB of mixed-precision parameters.
+Base tensors loaded: 64/812
+Base tensors loaded: 128/812
+Base tensors loaded: 192/812
+Base tensors loaded: 256/812
+Base tensors loaded: 320/812
+Base tensors loaded: 384/812
+Base tensors loaded: 448/812

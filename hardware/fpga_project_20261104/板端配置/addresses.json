@@ -1,0 +1,15 @@
+{
+  "schema": "robot_rt.addresses.v1",
+  "status": "generated_design_not_board_verified",
+  "board_part": "xilinx.com:kr260_som:part0:1.1",
+  "part": "xck26-sfvc784-2LV-c",
+  "clock_hz": 49999500,
+  "requested_clock_hz": 50000000,
+  "clock_source": "ps/pl_clk0",
+  "backend": "DESC_ONLY",
+  "cfg_base": 2684354560,
+  "cfg_bytes": 4096,
+  "chunk_base": 2684485632,
+  "chunk_bytes": 131072,
+  "expected_id": 1381257292
+}

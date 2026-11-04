@@ -1,0 +1,176 @@
+{
+  "provenance": "design_only_integer_arithmetic",
+  "physical_f_exec_hz": null,
+  "clock_hz": 49999500,
+  "seed": 20261102,
+  "vector_count": 33,
+  "format": "dt_hex q0 v0 a0 j q1 v1 a1 (448bithex axis0low) overflow_decimal",
+  "vectors_sha256": "3bede4c14a1a93502b790453ce92fcd99e22f23edf9f354baa5567504522ed88",
+  "cases": [
+    {
+      "name": "zero",
+      "dt_cycles": 1,
+      "expected_overflow": 0
+    },
+    {
+      "name": "board_stationary_gripper_50mm",
+      "dt_cycles": 727266,
+      "expected_overflow": 0
+    },
+    {
+      "name": "invalid_zero_dt",
+      "dt_cycles": 0,
+      "expected_overflow": 1
+    },
+    {
+      "name": "different_axes_signed",
+      "dt_cycles": 727273,
+      "expected_overflow": 0
+    },
+    {
+      "name": "half_even_components",
+      "dt_cycles": 24999750,
+      "expected_overflow": 0
+    },
+    {
+      "name": "half_odd_components",
+      "dt_cycles": 24999750,
+      "expected_overflow": 0
+    },
+    {
+      "name": "int64_min_hold",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 0
+    },
+    {
+      "name": "int64_max_hold",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 0
+    },
+    {
+      "name": "max_dt_small_jerk",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 0
+    },
+    {
+      "name": "max_dt_positive_overflow",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "max_dt_negative_overflow",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "q_positive_overflow",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "q_negative_overflow",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "v_positive_overflow",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "a_positive_overflow",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "a_negative_overflow",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "one_cycle_extreme_derivatives",
+      "dt_cycles": 1,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_0",
+      "dt_cycles": 2,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_1",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_2",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_3",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_4",
+      "dt_cycles": 2,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_5",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_6",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_7",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_8",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_9",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_10",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_11",
+      "dt_cycles": 2,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_12",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_13",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_14",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_15",
+      "dt_cycles": 2,
+      "expected_overflow": 0
+    }
+  ]
+}

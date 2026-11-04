@@ -1,0 +1,77 @@
+全局相机深度图录制（独立相机视频）
+
+启动，默认帧率优先，自动打开伪彩色实时预览：
+  bash /home/aup/Lerobot/projects/piper/record_global_depth.sh --takeover-preview
+
+录60秒：
+  bash /home/aup/Lerobot/projects/piper/record_global_depth.sh --takeover-preview --duration 60
+
+停止：启动终端按Ctrl+C，或点击预览页“停止并保存”。关闭浏览器页签不会停止录制。
+正常结束会写完视频尾部、释放SDK设备；默认duration=0持续录制。
+预览地址由终端输出，默认 http://127.0.0.1:18764/。
+直接打开global_depth_recorder.html只显示启动说明，实时画面须由终端脚本提供。
+
+默认档位与实测
+- 用户指定帧率优先。启动时按全局角色绑定CC1365302B2枚举实际SDK深度档位，
+  在最高fps中选最多像素；本机选择640×400 @ 30fps（Y11硬件档位，SDK解包Y16）。
+- 4秒实录120帧，SDK时间戳计算约30.019fps；网页停止样本369帧，约30.01fps，
+  均无SDK序号缺帧。实际帧率随运行条件变化，不保证恒定数值。
+- 当前SDK还列出1280×800 @ 7fps。--mode resolution 会尝试最高像素数档位，
+  但本次该档位连续3秒无帧后结束；不能把枚举支持当成已验证可录制。
+  未定位该档位无帧的原因，没有自动降档。
+- --width、--height、--fps可一起明确指定枚举表内档位。
+- 列出档位而不启动采集：
+  bash /home/aup/Lerobot/projects/piper/record_global_depth.sh --list-formats
+  若原预览占用，需要显式加--takeover-preview；结束会恢复先前状态。
+
+保存内容
+默认目录：/home/aup/Lerobot/projects/piper/recordings/global_depth/global_depth_年月日_时分秒_微秒/
+目录名和元数据时间采用Asia/Singapore。--output-dir可指定新目录，已有目录拒绝覆盖。
+
+  depth.mkv           16位uint16原始深度，FFV1无损编码，适合距离计算和后续处理。
+  depth_preview.mp4   H.264伪彩色视频，适合普通播放器回看；不能从颜色精确还原深度。
+  timestamps.csv      逐帧SDK序号、两个SDK时间戳、脚本收到时刻、比例系数和字节数。
+  recording.json      档位、输出路径、帧数/帧率、错误、原深度SHA256、SDK释放状态等。
+
+距离毫米 = 原始uint16值 × 该帧mm_per_unit。原值0为无效深度。
+“16位”描述无损存储布局；硬件Y11/Y12档位的有效位数不因此增加。
+--no-color-video 可关闭额外MP4保存，仍显示实时伪彩色预览。
+--no-browser 可不自动打开浏览器，--port 可修改本地预览端口。
+
+预览
+- 近处暖色，远处冷色；无效0为黑色。
+- --near-mm 200 --far-mm 2000仅设置伪彩色近远端；超范围有效值按端点着色，
+  不裁剪、归一化或改写depth.mkv中的原始值。
+- 网页显示分辨率、目标/最近/平均fps、时长、帧数、大小、序号缺帧估计、
+  深度单位、有效比例和当前深度范围。浏览器预览上限15fps，录像保留全部收到的深度帧。
+- 本脚本只启用全局深度流，关闭D2C；彩色可视化是深度图着色，不是RGB图像。
+
+时间戳和异常
+- CSV的device_timestamp_us原样来自ob_frame_time_stamp_us；sdk_host_received_us原样来自
+  ob_frame_system_time_stamp_us；received_monotonic_ns是本脚本收到时的主机单调时钟。
+  SDK/固件可能把帧时刻映射到主机时钟；本机两SDK字段可相等，不能据此声称曝光硬件同步、
+  已标定UTC或直接跨时钟域相减。全部保留来源，不以当前时间覆盖旧帧。
+- 视频按SDK帧时间戳差值写入；MKV默认时间基为1ms，CSV保留完整微秒值。
+- 3秒无新深度、错误尺寸/格式/单位、重复或倒退帧序号/时间戳会结束并保留此前文件，
+  recording.json记录error。不自动重启采集或补帧。
+- 原始深度与CSV先提交，MP4/预览编码失败也保留已经写入的深度帧统计；
+  color_video_frames单独记录成功交给MP4编码器的帧数。
+
+设备与原服务
+- SDK1.10.37按已验证序列号选择全局相机，不使用默认设备，不按USB枚举先后猜角色。
+- 默认不接管正在运行的全局预览；--takeover-preview只临时关闭该相机原服务。
+  检测到ACT或示范录制进程时拒绝独占录制。
+- 原全局预览开启时正常退出后请求恢复；原先已关闭则保持关闭。
+  SDK帧句柄或设备资源释放失败时不自动重开，并记录/提示故障。
+- 腕部预览独立。本脚本不连接CAN，不发机械臂命令，不改ACT模型或控制配置。
+- 依赖现有piper-cpu环境的PyAV、NumPy、OpenCV和camera_preview/lib中的官方SDK，
+  无需系统ffmpeg或OpenCV桌面GUI。
+
+验证证据：/home/aup/Lerobot/projects/piper/logs/global_depth_recorder_v9/
+包括实际档位、默认实录、网页停止实录、无损读回比对，以及高分辨率未出帧记录。
+定向无硬件测试：
+  /home/aup/Lerobot/envs/piper-cpu/bin/python -B -m unittest discover -s /home/aup/Lerobot/projects/piper/camera_preview -p test_global_depth_recorder.py -v
+
+官方API依据：
+  https://raw.githubusercontent.com/orbbec/OrbbecSDK/v1.10.37/include/libobsensor/h/Frame.h
+  https://raw.githubusercontent.com/orbbec/OrbbecSDK/v1.10.37/include/libobsensor/h/ObTypes.h

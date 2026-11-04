@@ -1,0 +1,1174 @@
+{
+  "schema": "robot_rt.regmap.v1",
+  "serialization": "JSON syntax is valid YAML 1.2; parse with standard json, no PyYAML required",
+  "latency_cycles": 112,
+  "min_tick_interval_cycles": 256,
+  "max_dt_cycles": 4294967295,
+  "f_exec_measured_hz": null,
+  "physical_base": null,
+  "byte_order": "little",
+  "register_window_bytes": 4096,
+  "bank_window_bytes": 131072,
+  "bank_bytes": 65536,
+  "bank_count": 2,
+  "header_bytes": 256,
+  "record_bytes": 256,
+  "max_records_per_bank": 255,
+  "word_bytes": 4,
+  "commands": {
+    "CONFIG_COMMIT": 1,
+    "ARM": 2,
+    "STOP": 4,
+    "CLEAR_FAULT": 8,
+    "SNAPSHOT": 16,
+    "COMMIT_BANK0": 32,
+    "COMMIT_BANK1": 64,
+    "DISARM": 128,
+    "KICK": 256,
+    "RELEASE_BANK0": 512,
+    "RELEASE_BANK1": 1024
+  },
+  "bank_states": {
+    "FREE": 0,
+    "VALIDATING": 1,
+    "READY": 2,
+    "ACTIVE": 3,
+    "REJECTED": 4
+  },
+  "registers": [
+    {
+      "name": "ID",
+      "offset": 0,
+      "width": 32,
+      "access": "RO",
+      "reset": 1381257292,
+      "note": "RTPL identity"
+    },
+    {
+      "name": "VERSION",
+      "offset": 4,
+      "width": 32,
+      "access": "RO",
+      "reset": 65536,
+      "note": "v1"
+    },
+    {
+      "name": "CAPS",
+      "offset": 8,
+      "width": 32,
+      "access": "RO",
+      "reset": 1,
+      "note": "bit0 DESC_ONLY; physical permit unavailable"
+    },
+    {
+      "name": "STATE",
+      "offset": 12,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "0 DISARMED,1 ARMED,2 RUN,3 RAMP,4 HOLD,5 FAULT_DISABLED"
+    },
+    {
+      "name": "CMD",
+      "offset": 16,
+      "width": 32,
+      "access": "WO",
+      "reset": 0,
+      "note": "Exactly one bit; command runs atomically; other combinations SLVERR"
+    },
+    {
+      "name": "STATUS",
+      "offset": 20,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "bank0 state bits[2:0],bank1[6:4],configured bit8"
+    },
+    {
+      "name": "FAULT_CODE",
+      "offset": 24,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "First latched fault; cannot clear by ordinary write"
+    },
+    {
+      "name": "REJECT_CODE",
+      "offset": 28,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "Last commit rejection reason"
+    },
+    {
+      "name": "CYCLE",
+      "offset": 32,
+      "width": 64,
+      "access": "RO",
+      "reset": 0,
+      "note": "Live; use SNAPSHOT for atomic software reads"
+    },
+    {
+      "name": "TICK_COUNT",
+      "offset": 40,
+      "width": 64,
+      "access": "RO",
+      "reset": 0,
+      "note": "Live; increments all configured ticks"
+    },
+    {
+      "name": "SESSION_NONCE",
+      "offset": 48,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "Nonzero, change each rearm session"
+    },
+    {
+      "name": "CONFIG_EPOCH",
+      "offset": 56,
+      "width": 32,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "Nonzero"
+    },
+    {
+      "name": "BACKEND_MODE",
+      "offset": 60,
+      "width": 32,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "v1 only 0 DESC_ONLY"
+    },
+    {
+      "name": "RATE_NUM",
+      "offset": 64,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "Positive explicit rational rate numerator Hz"
+    },
+    {
+      "name": "RATE_DEN",
+      "offset": 72,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "Positive explicit rational rate denominator"
+    },
+    {
+      "name": "LEASE_CYCLES",
+      "offset": 80,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "Positive <=2^63-1"
+    },
+    {
+      "name": "SOURCE_MAX_AGE",
+      "offset": 88,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "Positive <=2^63-1, original observation lifetime"
+    },
+    {
+      "name": "MAX_MAP_ERROR",
+      "offset": 96,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "Explicit mapping error bound, <=UINT32_MAX to match bank header"
+    },
+    {
+      "name": "STOP_TIMEOUT",
+      "offset": 104,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "Positive independent safety stop timeout"
+    },
+    {
+      "name": "CONFIG_CRC32",
+      "offset": 112,
+      "width": 32,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "CRC32 canonical 524 bytes: [0x30,0x74), [0x100,0x2c0), [0x460,0x468), own four bytes zero"
+    },
+    {
+      "name": "BANK0_SEQUENCE",
+      "offset": 128,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "Doorbell expected immutable header sequence"
+    },
+    {
+      "name": "BANK1_SEQUENCE",
+      "offset": 136,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "Doorbell expected immutable header sequence"
+    },
+    {
+      "name": "ARM_FIRST_TICK",
+      "offset": 144,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "Future first record endpoint tick index"
+    },
+    {
+      "name": "LEASE_KICK_SEQUENCE",
+      "offset": 152,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "Strictly increasing per session; only KICK command refreshes"
+    },
+    {
+      "name": "CYCLE_ORIGIN",
+      "offset": 160,
+      "width": 64,
+      "access": "RO",
+      "reset": 0,
+      "note": "CONFIG_COMMIT latches free-running CYCLE; absolute tick n = origin+ceil(n*T/num)"
+    },
+    {
+      "name": "NOMINAL_CLOCK_HZ",
+      "offset": 168,
+      "width": 64,
+      "access": "RO",
+      "reset": 100000000,
+      "note": "Compiled nominal clock profile, not measured oscillator frequency; must match offline bank clock_hz."
+    },
+    {
+      "name": "AXIS0_LOWER",
+      "offset": 256,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS0_UPPER",
+      "offset": 264,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS0_VELOCITY",
+      "offset": 272,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS0_ACCELERATION",
+      "offset": 280,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS0_JERK",
+      "offset": 288,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS0_DQ_MAX",
+      "offset": 296,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS1_LOWER",
+      "offset": 320,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS1_UPPER",
+      "offset": 328,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS1_VELOCITY",
+      "offset": 336,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS1_ACCELERATION",
+      "offset": 344,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS1_JERK",
+      "offset": 352,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS1_DQ_MAX",
+      "offset": 360,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS2_LOWER",
+      "offset": 384,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS2_UPPER",
+      "offset": 392,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS2_VELOCITY",
+      "offset": 400,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS2_ACCELERATION",
+      "offset": 408,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS2_JERK",
+      "offset": 416,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS2_DQ_MAX",
+      "offset": 424,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS3_LOWER",
+      "offset": 448,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS3_UPPER",
+      "offset": 456,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS3_VELOCITY",
+      "offset": 464,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS3_ACCELERATION",
+      "offset": 472,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS3_JERK",
+      "offset": 480,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS3_DQ_MAX",
+      "offset": 488,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS4_LOWER",
+      "offset": 512,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS4_UPPER",
+      "offset": 520,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS4_VELOCITY",
+      "offset": 528,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS4_ACCELERATION",
+      "offset": 536,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS4_JERK",
+      "offset": 544,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS4_DQ_MAX",
+      "offset": 552,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS5_LOWER",
+      "offset": 576,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS5_UPPER",
+      "offset": 584,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS5_VELOCITY",
+      "offset": 592,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS5_ACCELERATION",
+      "offset": 600,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS5_JERK",
+      "offset": 608,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS5_DQ_MAX",
+      "offset": 616,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS6_LOWER",
+      "offset": 640,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS6_UPPER",
+      "offset": 648,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS6_VELOCITY",
+      "offset": 656,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS6_ACCELERATION",
+      "offset": 664,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS6_JERK",
+      "offset": 672,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "AXIS6_DQ_MAX",
+      "offset": 680,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; explicit units deg or m with seconds derivatives"
+    },
+    {
+      "name": "SEED_CYCLE",
+      "offset": 1024,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "Actual sample cycle in current session"
+    },
+    {
+      "name": "SEED_SEQUENCE",
+      "offset": 1032,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "Nonzero feedback/seed source identity"
+    },
+    {
+      "name": "SEED_Q0",
+      "offset": 1040,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; ARM assumes stationary v=a=0, not fabricated feedback"
+    },
+    {
+      "name": "SEED_Q1",
+      "offset": 1048,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; ARM assumes stationary v=a=0, not fabricated feedback"
+    },
+    {
+      "name": "SEED_Q2",
+      "offset": 1056,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; ARM assumes stationary v=a=0, not fabricated feedback"
+    },
+    {
+      "name": "SEED_Q3",
+      "offset": 1064,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; ARM assumes stationary v=a=0, not fabricated feedback"
+    },
+    {
+      "name": "SEED_Q4",
+      "offset": 1072,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; ARM assumes stationary v=a=0, not fabricated feedback"
+    },
+    {
+      "name": "SEED_Q5",
+      "offset": 1080,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; ARM assumes stationary v=a=0, not fabricated feedback"
+    },
+    {
+      "name": "SEED_Q6",
+      "offset": 1088,
+      "width": 64,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "signed Q32.32; ARM assumes stationary v=a=0, not fabricated feedback"
+    },
+    {
+      "name": "SEED_CRC32",
+      "offset": 1096,
+      "width": 32,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "CRC32 of SEED_CYCLE,SEED_SEQUENCE,SEED_Q0..6 in address order"
+    },
+    {
+      "name": "GRIPPER_POLICY",
+      "offset": 1120,
+      "width": 32,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "bits7:0 status;15:8 set_zero=0;bit16 explicit_reviewed; other bits0; status must equal1"
+    },
+    {
+      "name": "GRIPPER_FORCE_MN",
+      "offset": 1124,
+      "width": 32,
+      "access": "RW_SHADOW",
+      "reset": 0,
+      "note": "Explicit positive force; <=65535; not a mechanical approval"
+    },
+    {
+      "name": "SNAP_CYCLE",
+      "offset": 1280,
+      "width": 64,
+      "access": "RO",
+      "reset": 0,
+      "note": "Atomically latched by SNAPSHOT command"
+    },
+    {
+      "name": "SNAP_TICK_COUNT",
+      "offset": 1288,
+      "width": 64,
+      "access": "RO",
+      "reset": 0,
+      "note": "Atomically latched by SNAPSHOT command"
+    },
+    {
+      "name": "SNAP_EMIT_COUNT",
+      "offset": 1296,
+      "width": 64,
+      "access": "RO",
+      "reset": 0,
+      "note": "Atomically latched by SNAPSHOT command"
+    },
+    {
+      "name": "SNAP_REJECT_COUNT",
+      "offset": 1304,
+      "width": 64,
+      "access": "RO",
+      "reset": 0,
+      "note": "Atomically latched by SNAPSHOT command"
+    },
+    {
+      "name": "SNAP_CLAMP_COUNT",
+      "offset": 1312,
+      "width": 64,
+      "access": "RO",
+      "reset": 0,
+      "note": "Atomically latched by SNAPSHOT command"
+    },
+    {
+      "name": "SNAP_STARVE_COUNT",
+      "offset": 1320,
+      "width": 64,
+      "access": "RO",
+      "reset": 0,
+      "note": "Atomically latched by SNAPSHOT command"
+    },
+    {
+      "name": "SNAP_BACKPRESSURE_COUNT",
+      "offset": 1328,
+      "width": 64,
+      "access": "RO",
+      "reset": 0,
+      "note": "Atomically latched by SNAPSHOT command"
+    },
+    {
+      "name": "SNAP_LATENCY_MIN",
+      "offset": 1336,
+      "width": 64,
+      "access": "RO",
+      "reset": 0,
+      "note": "Atomically latched by SNAPSHOT command"
+    },
+    {
+      "name": "SNAP_LATENCY_MAX",
+      "offset": 1344,
+      "width": 64,
+      "access": "RO",
+      "reset": 0,
+      "note": "Atomically latched by SNAPSHOT command"
+    },
+    {
+      "name": "SNAP_LAST_SEQUENCE",
+      "offset": 1352,
+      "width": 64,
+      "access": "RO",
+      "reset": 0,
+      "note": "Last emitted descriptor emit_sequence, not bank_sequence; SNAPSHOT atomically latches"
+    },
+    {
+      "name": "SNAP_FAULT_CYCLE",
+      "offset": 1360,
+      "width": 64,
+      "access": "RO",
+      "reset": 0,
+      "note": "Atomically latched by SNAPSHOT command"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD0",
+      "offset": 1536,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD1",
+      "offset": 1540,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD2",
+      "offset": 1544,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD3",
+      "offset": 1548,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD4",
+      "offset": 1552,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD5",
+      "offset": 1556,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD6",
+      "offset": 1560,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD7",
+      "offset": 1564,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD8",
+      "offset": 1568,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD9",
+      "offset": 1572,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD10",
+      "offset": 1576,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD11",
+      "offset": 1580,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD12",
+      "offset": 1584,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD13",
+      "offset": 1588,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD14",
+      "offset": 1592,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD15",
+      "offset": 1596,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD16",
+      "offset": 1600,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD17",
+      "offset": 1604,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD18",
+      "offset": 1608,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD19",
+      "offset": 1612,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD20",
+      "offset": 1616,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD21",
+      "offset": 1620,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD22",
+      "offset": 1624,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    },
+    {
+      "name": "DESC_SNAPSHOT_WORD23",
+      "offset": 1628,
+      "width": 32,
+      "access": "RO",
+      "reset": 0,
+      "note": "D diagnostic extension: SNAPSHOT captures last emitted descriptor; never TX injection; not live CAN"
+    }
+  ],
+  "bank_header": [
+    {
+      "name": "magic",
+      "offset": 0,
+      "bytes": 4,
+      "type": "bytes='RTBK'"
+    },
+    {
+      "name": "version",
+      "offset": 4,
+      "bytes": 4,
+      "type": "u32=1"
+    },
+    {
+      "name": "header_bytes",
+      "offset": 8,
+      "bytes": 4,
+      "type": "u32=256"
+    },
+    {
+      "name": "record_bytes",
+      "offset": 12,
+      "bytes": 4,
+      "type": "u32=256"
+    },
+    {
+      "name": "bank_sequence",
+      "offset": 16,
+      "bytes": 8,
+      "type": "u64"
+    },
+    {
+      "name": "session_nonce",
+      "offset": 24,
+      "bytes": 8,
+      "type": "u64"
+    },
+    {
+      "name": "config_epoch",
+      "offset": 32,
+      "bytes": 4,
+      "type": "u32"
+    },
+    {
+      "name": "normal_count",
+      "offset": 36,
+      "bytes": 4,
+      "type": "u32"
+    },
+    {
+      "name": "brake_count",
+      "offset": 40,
+      "bytes": 4,
+      "type": "u32"
+    },
+    {
+      "name": "reserved0",
+      "offset": 44,
+      "bytes": 4,
+      "type": "zero"
+    },
+    {
+      "name": "observation_cycle",
+      "offset": 48,
+      "bytes": 8,
+      "type": "u64"
+    },
+    {
+      "name": "produced_cycle",
+      "offset": 56,
+      "bytes": 8,
+      "type": "u64"
+    },
+    {
+      "name": "normal_deadline_cycle",
+      "offset": 64,
+      "bytes": 8,
+      "type": "u64"
+    },
+    {
+      "name": "first_tick_index",
+      "offset": 72,
+      "bytes": 8,
+      "type": "u64"
+    },
+    {
+      "name": "first_cycle",
+      "offset": 80,
+      "bytes": 8,
+      "type": "u64"
+    },
+    {
+      "name": "previous_sequence",
+      "offset": 88,
+      "bytes": 8,
+      "type": "u64"
+    },
+    {
+      "name": "payload_crc32",
+      "offset": 96,
+      "bytes": 4,
+      "type": "u32"
+    },
+    {
+      "name": "header_crc32",
+      "offset": 100,
+      "bytes": 4,
+      "type": "u32"
+    },
+    {
+      "name": "config_crc32",
+      "offset": 104,
+      "bytes": 4,
+      "type": "u32"
+    },
+    {
+      "name": "map_error_cycles",
+      "offset": 108,
+      "bytes": 4,
+      "type": "u32"
+    },
+    {
+      "name": "reserved",
+      "offset": 112,
+      "bytes": 144,
+      "type": "zero"
+    }
+  ],
+  "record_layout": [
+    {
+      "name": "start_cycle",
+      "offset": 0,
+      "bytes": 8,
+      "type": "u64"
+    },
+    {
+      "name": "end_cycle",
+      "offset": 8,
+      "bytes": 8,
+      "type": "u64"
+    },
+    {
+      "name": "tick_index",
+      "offset": 16,
+      "bytes": 8,
+      "type": "u64"
+    },
+    {
+      "name": "kind",
+      "offset": 24,
+      "bytes": 4,
+      "type": "u32:1 NORMAL,2 BRAKE"
+    },
+    {
+      "name": "reserved",
+      "offset": 28,
+      "bytes": 4,
+      "type": "zero"
+    },
+    {
+      "name": "axes",
+      "offset": 32,
+      "bytes": 224,
+      "type": "7 axes * (q0,v0,a0,j) * signed64 Q32.32"
+    }
+  ],
+  "descriptor_bytes": 96,
+  "design_only": true,
+  "fault_codes": {
+    "NONE": 0,
+    "HARD_FAULT": 1,
+    "LEASE_EXPIRED": 2,
+    "CLOCK_OVERFLOW": 3,
+    "ARITH_OVERFLOW": 4,
+    "RECORD_MISS": 5,
+    "SOURCE_EXPIRED": 6,
+    "BACKPRESSURE": 7,
+    "CHAIN_MISMATCH": 8,
+    "STOP_TIMEOUT": 9,
+    "INTERNAL_ERROR": 10
+  },
+  "reject_codes": {
+    "NONE": 0,
+    "BUSY_OWNERSHIP": 1,
+    "LAYOUT_RESERVED": 2,
+    "CRC": 3,
+    "SESSION_CONFIG": 4,
+    "SEQUENCE": 5,
+    "TIMESTAMP_DDS": 6,
+    "LIMIT_QUANTIZATION": 7,
+    "CHAIN": 8,
+    "BRAKE_NOT_ZERO": 9,
+    "CAPACITY": 10
+  },
+  "config_crc_ranges": [
+    [
+      48,
+      116
+    ],
+    [
+      256,
+      704
+    ],
+    [
+      1120,
+      1128
+    ]
+  ],
+  "implementation_extensions": {
+    "descriptor_snapshot": "0x600..0x65f, readonly and latched by SNAPSHOT with counters; empty until SNAPSHOT",
+    "scope": "DESC_ONLY no physical backend"
+  },
+  "clock_hz_default": 100000000,
+  "clock_hz_note": "Compile-time positive CLOCK_HZ. BD uses actual PS pl_clk0 nominal metadata; read RO 0xa8/0xac and match addresses.json. Clock is not measured f_exec."
+}

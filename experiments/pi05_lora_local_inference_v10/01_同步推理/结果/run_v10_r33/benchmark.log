@@ -1,0 +1,89 @@
+正在将基础模型和 LoRA 加载到本机 GPU……
+WARNING:root:Vision embedding key might need handling: paligemma_with_expert.paligemma.model.vision_tower.vision_model.embeddings.patch_embedding.bias
+WARNING:root:Vision embedding key might need handling: paligemma_with_expert.paligemma.model.vision_tower.vision_model.embeddings.patch_embedding.weight
+Streaming 812 saved tensors into 813 parameters; 8.71 GiB of mixed-precision parameters.
+Base tensors loaded: 64/812
+Base tensors loaded: 128/812
+Base tensors loaded: 192/812
+Base tensors loaded: 256/812
+Base tensors loaded: 320/812
+Base tensors loaded: 384/812
+Base tensors loaded: 448/812
+Base tensors loaded: 512/812
+Base tensors loaded: 576/812
+Base tensors loaded: 640/812
+Base tensors loaded: 704/812
+Base tensors loaded: 768/812
+Base tensors loaded: 812/812
+Strict streaming base loading passed.
+模型加载并完成 LoRA 校验，用时 7.76 秒。
+/home/aup/Lerobot/envs/pi05-rocm-7.14.1/lib/python3.12/site-packages/transformers/integrations/sdpa_attention.py:92: UserWarning: Flash Efficient attention on Current AMD GPU is still experimental. Enable it with TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1. (Triggered internally at /__w/rockrel/rockrel/external-builds/pytorch/pytorch/aten/src/ATen/native/transformers/hip/sdp_utils.cpp:372.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+/home/aup/Lerobot/envs/pi05-rocm-7.14.1/lib/python3.12/site-packages/transformers/integrations/sdpa_attention.py:92: UserWarning: Mem Efficient attention on Current AMD GPU is still experimental. Enable it with TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1. (Triggered internally at /__w/rockrel/rockrel/external-builds/pytorch/pytorch/aten/src/ATen/native/transformers/hip/sdp_utils.cpp:432.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+预热第 1 次：流匹配 10 步，用时 1.957 秒。
+预热第 1 次：流匹配 5 步，用时 1.253 秒。
+预热第 1 次：流匹配 3 步，用时 1.171 秒。
+预热第 1 次：流匹配 2 步，用时 1.133 秒。
+预热第 1 次：流匹配 1 步，用时 1.064 秒。
+预热第 2 次：流匹配 1 步，用时 1.060 秒。
+预热第 2 次：流匹配 2 步，用时 1.080 秒。
+预热第 2 次：流匹配 3 步，用时 1.118 秒。
+预热第 2 次：流匹配 5 步，用时 1.193 秒。
+预热第 2 次：流匹配 10 步，用时 1.382 秒。
+预热第 3 次：流匹配 10 步，用时 1.383 秒。
+预热第 3 次：流匹配 5 步，用时 1.196 秒。
+预热第 3 次：流匹配 3 步，用时 1.123 秒。
+预热第 3 次：流匹配 2 步，用时 1.080 秒。
+预热第 3 次：流匹配 1 步，用时 1.045 秒。
+正式测速第 1 次：流匹配 1 步，用时 1.042 秒。
+正式测速第 1 次：流匹配 2 步，用时 1.085 秒。
+正式测速第 1 次：流匹配 3 步，用时 1.121 秒。
+正式测速第 1 次：流匹配 5 步，用时 1.194 秒。
+正式测速第 1 次：流匹配 10 步，用时 1.382 秒。
+正式测速第 2 次：流匹配 10 步，用时 1.388 秒。
+正式测速第 2 次：流匹配 5 步，用时 1.194 秒。
+正式测速第 2 次：流匹配 3 步，用时 1.115 秒。
+正式测速第 2 次：流匹配 2 步，用时 1.080 秒。
+正式测速第 2 次：流匹配 1 步，用时 1.046 秒。
+正式测速第 3 次：流匹配 1 步，用时 1.044 秒。
+正式测速第 3 次：流匹配 2 步，用时 1.080 秒。
+正式测速第 3 次：流匹配 3 步，用时 1.116 秒。
+正式测速第 3 次：流匹配 5 步，用时 1.195 秒。
+正式测速第 3 次：流匹配 10 步，用时 1.383 秒。
+正式测速第 4 次：流匹配 10 步，用时 1.386 秒。
+正式测速第 4 次：流匹配 5 步，用时 1.195 秒。
+正式测速第 4 次：流匹配 3 步，用时 1.122 秒。
+正式测速第 4 次：流匹配 2 步，用时 1.080 秒。
+正式测速第 4 次：流匹配 1 步，用时 1.040 秒。
+正式测速第 5 次：流匹配 1 步，用时 1.044 秒。
+正式测速第 5 次：流匹配 2 步，用时 1.079 秒。
+正式测速第 5 次：流匹配 3 步，用时 1.120 秒。
+正式测速第 5 次：流匹配 5 步，用时 1.193 秒。
+正式测速第 5 次：流匹配 10 步，用时 1.383 秒。
+正式测速第 6 次：流匹配 10 步，用时 1.383 秒。
+正式测速第 6 次：流匹配 5 步，用时 1.192 秒。
+正式测速第 6 次：流匹配 3 步，用时 1.122 秒。
+正式测速第 6 次：流匹配 2 步，用时 1.084 秒。
+正式测速第 6 次：流匹配 1 步，用时 1.046 秒。
+正式测速第 7 次：流匹配 1 步，用时 1.046 秒。
+正式测速第 7 次：流匹配 2 步，用时 1.083 秒。
+正式测速第 7 次：流匹配 3 步，用时 1.119 秒。
+正式测速第 7 次：流匹配 5 步，用时 1.194 秒。
+正式测速第 7 次：流匹配 10 步，用时 1.384 秒。
+正式测速第 8 次：流匹配 10 步，用时 1.382 秒。
+正式测速第 8 次：流匹配 5 步，用时 1.198 秒。
+正式测速第 8 次：流匹配 3 步，用时 1.117 秒。
+正式测速第 8 次：流匹配 2 步，用时 1.081 秒。
+正式测速第 8 次：流匹配 1 步，用时 1.044 秒。
+正式测速第 9 次：流匹配 1 步，用时 1.043 秒。
+正式测速第 9 次：流匹配 2 步，用时 1.082 秒。
+正式测速第 9 次：流匹配 3 步，用时 1.118 秒。
+正式测速第 9 次：流匹配 5 步，用时 1.191 秒。
+正式测速第 9 次：流匹配 10 步，用时 1.381 秒。
+正式测速第 10 次：流匹配 10 步，用时 1.385 秒。
+正式测速第 10 次：流匹配 5 步，用时 1.193 秒。
+正式测速第 10 次：流匹配 3 步，用时 1.122 秒。
+正式测速第 10 次：流匹配 2 步，用时 1.082 秒。
+正式测速第 10 次：流匹配 1 步，用时 1.042 秒。
+逐次结果： /media/aup/UbuntuData/技术文档/嵌入式比赛技术文档/π0.5本机测速结果/run_v10_r33/report.json

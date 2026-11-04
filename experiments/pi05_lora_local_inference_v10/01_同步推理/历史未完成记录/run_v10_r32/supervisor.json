@@ -1,0 +1,18 @@
+{
+  "return_code": -15,
+  "stop_reason": "available system memory below 1.5 GiB",
+  "elapsed_seconds": 18.794437132019084,
+  "minimum_available_system_memory_bytes": 1328934912,
+  "log_path": "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_lora_local_optimization_v10/run_v10_r32/benchmark.log",
+  "argv": [
+    "/home/aup/Lerobot/envs/pi05-rocm-7.14.1/bin/python",
+    "-u",
+    "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_lora_local_optimization_v10/benchmark.py",
+    "--output",
+    "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_lora_local_optimization_v10/run_v10_r32",
+    "--warmup",
+    "3",
+    "--repeats",
+    "10"
+  ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<package format="3">
+ <name>d1_camera_bridge</name><version>0.1.0</version>
+ <description>Stationary RGB-D ROS bridge using the existing Camera Orbbec SDK.</description>
+ <maintainer email="local@example.invalid">D1 workspace</maintainer><license>Proprietary</license>
+ <buildtool_depend>ament_cmake</buildtool_depend>
+ <depend>rclcpp</depend><depend>sensor_msgs</depend><depend>std_msgs</depend><depend>cv_bridge</depend>
+ <export><build_type>ament_cmake</build_type></export>
+</package>

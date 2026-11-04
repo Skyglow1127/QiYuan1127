@@ -1,0 +1,217 @@
+{
+  "robot_commands_sent": 0,
+  "model_id": "pi05-piper-expert-b8-best004000",
+  "model_sha256": "583ff741239b111053dc969fe5ba69eb70475e888c7ece92b04a78d3319386cf",
+  "batch_size": 1,
+  "action_chunk_shape": [
+    50,
+    7
+  ],
+  "num_inference_steps": 10,
+  "task": "Pick up the red cube and place it inside the black square on the left side of the table.",
+  "profiles": {
+    "local_eager_file": {
+      "success": true,
+      "input_sha256": "aa2f59edc472f8799b124891c576b1e1569bc975205c16c1fa961fec5ad54620",
+      "noise_sha256": "948dbddb2a33925be58369a3073137d08930272d68468596bf7a808dfb6fba7a",
+      "summary_seconds": {
+        "model_seconds": {
+          "count": 10,
+          "median": 1.4692239839932881,
+          "p95": 1.4886159904577654,
+          "min": 1.4520214320073137,
+          "max": 1.4914446270122426
+        },
+        "pipeline_seconds": {
+          "count": 10,
+          "median": 1.4722990575028234,
+          "p95": 1.49136986839585,
+          "min": 1.4548939560045255,
+          "max": 1.4941410169994924
+        },
+        "input_ready_to_validated_actions_seconds": {
+          "count": 10,
+          "median": 1.4727932380119455,
+          "p95": 1.4917900217951683,
+          "min": 1.455328695999924,
+          "max": 1.4945529659889871
+        }
+      },
+      "warmup_count": 3,
+      "measured_count": 10,
+      "report": "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_expert_inference_v6/results/local_eager_file/report.json",
+      "initialization_seconds": 18.48038035799982
+    },
+    "local_compiled_file": {
+      "success": true,
+      "input_sha256": "aa2f59edc472f8799b124891c576b1e1569bc975205c16c1fa961fec5ad54620",
+      "noise_sha256": "948dbddb2a33925be58369a3073137d08930272d68468596bf7a808dfb6fba7a",
+      "summary_seconds": {
+        "model_seconds": {
+          "count": 10,
+          "median": 1.4045689449994825,
+          "p95": 1.4443807204515906,
+          "min": 1.3916798349964665,
+          "max": 1.4528338439995423
+        },
+        "pipeline_seconds": {
+          "count": 10,
+          "median": 1.4071842385019409,
+          "p95": 1.4472311396930309,
+          "min": 1.3953530919970945,
+          "max": 1.4554409639968071
+        },
+        "input_ready_to_validated_actions_seconds": {
+          "count": 10,
+          "median": 1.4076584795038798,
+          "p95": 1.4477139327027544,
+          "min": 1.3959042329952354,
+          "max": 1.4558365560078528
+        }
+      },
+      "warmup_count": 3,
+      "measured_count": 10,
+      "report": "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_expert_inference_v6/results/local_compiled_file/report.json",
+      "initialization_seconds": 19.287468494992936
+    },
+    "cloud_eager": {
+      "success": true,
+      "input_sha256": "aa2f59edc472f8799b124891c576b1e1569bc975205c16c1fa961fec5ad54620",
+      "noise_sha256": "948dbddb2a33925be58369a3073137d08930272d68468596bf7a808dfb6fba7a",
+      "summary_seconds": {
+        "model_seconds": {
+          "count": 10,
+          "median": 0.19726108154281974,
+          "p95": 0.21644208026118575,
+          "min": 0.1782757928594947,
+          "max": 0.21830883109942079
+        },
+        "server_pipeline_seconds": {
+          "count": 10,
+          "median": 0.20017188927158713,
+          "p95": 0.22048389243427663,
+          "min": 0.18029854632914066,
+          "max": 0.22235087817534804
+        },
+        "roundtrip_seconds": {
+          "count": 10,
+          "median": 0.25310400500165997,
+          "p95": 0.2894083577986748,
+          "min": 0.2150502940057777,
+          "max": 0.300755942997057
+        },
+        "input_ready_to_validated_actions_seconds": {
+          "count": 10,
+          "median": 0.2534107329993276,
+          "p95": 0.2896726082981331,
+          "min": 0.21531574400432874,
+          "max": 0.30102096300106496
+        },
+        "decode_validate_seconds": {
+          "count": 10,
+          "median": 0.00026577950484352186,
+          "p95": 0.00031675389473093666,
+          "min": 0.00025692999770399183,
+          "max": 0.0003396669926587492
+        }
+      },
+      "warmup_count": 3,
+      "measured_count": 10,
+      "report": "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_expert_inference_v6/results/cloud_eager/report.json"
+    },
+    "cloud_compiled_v2": {
+      "success": true,
+      "input_sha256": "aa2f59edc472f8799b124891c576b1e1569bc975205c16c1fa961fec5ad54620",
+      "noise_sha256": "948dbddb2a33925be58369a3073137d08930272d68468596bf7a808dfb6fba7a",
+      "summary_seconds": {
+        "model_seconds": {
+          "count": 10,
+          "median": 0.0730452451389283,
+          "p95": 0.08517888046335428,
+          "min": 0.06627756310626864,
+          "max": 0.08819475397467613
+        },
+        "server_pipeline_seconds": {
+          "count": 10,
+          "median": 0.07531316136009991,
+          "p95": 0.08848007749766111,
+          "min": 0.06828058697283268,
+          "max": 0.09042863780632615
+        },
+        "roundtrip_seconds": {
+          "count": 10,
+          "median": 0.12290710550587391,
+          "p95": 0.13724674650584348,
+          "min": 0.11547998299647588,
+          "max": 0.13907598301011603
+        },
+        "input_ready_to_validated_actions_seconds": {
+          "count": 10,
+          "median": 0.12341941900376696,
+          "p95": 0.13766631024554954,
+          "min": 0.11615059699397534,
+          "max": 0.13943555500009097
+        },
+        "decode_validate_seconds": {
+          "count": 10,
+          "median": 0.0005251534967101179,
+          "p95": 0.0006446030987717677,
+          "min": 0.00031507200037594885,
+          "max": 0.0006706139974994585
+        }
+      },
+      "warmup_count": 3,
+      "measured_count": 10,
+      "report": "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_expert_inference_v6/results/cloud_compiled_v2/report.json"
+    },
+    "local_service_final": {
+      "success": true,
+      "input_sha256": "aa2f59edc472f8799b124891c576b1e1569bc975205c16c1fa961fec5ad54620",
+      "noise_sha256": "948dbddb2a33925be58369a3073137d08930272d68468596bf7a808dfb6fba7a",
+      "summary_seconds": {
+        "model_seconds": {
+          "count": 10,
+          "median": 1.3587269299969194,
+          "p95": 1.4014618803521444,
+          "min": 1.3495621370093431,
+          "max": 1.4294824069947936
+        },
+        "server_pipeline_seconds": {
+          "count": 10,
+          "median": 1.3624386115043308,
+          "p95": 1.4038934289463212,
+          "min": 1.3524187529983465,
+          "max": 1.4313512179942336
+        },
+        "roundtrip_seconds": {
+          "count": 10,
+          "median": 1.367584915999032,
+          "p95": 1.407877904405177,
+          "min": 1.3580087070004083,
+          "max": 1.434380136008258
+        },
+        "input_ready_to_validated_actions_seconds": {
+          "count": 10,
+          "median": 1.3679395080034737,
+          "p95": 1.4081881593549042,
+          "min": 1.358351668008254,
+          "max": 1.4346515780052869
+        },
+        "decode_validate_seconds": {
+          "count": 10,
+          "median": 0.00034422200405970216,
+          "p95": 0.0004178025519649963,
+          "min": 0.00027144199702888727,
+          "max": 0.0004616329970303923
+        }
+      },
+      "warmup_count": 3,
+      "measured_count": 10,
+      "report": "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_expert_inference_v6/results/local_service_final/report.json"
+    }
+  },
+  "local_current_guard_limit_seconds": 0.4,
+  "local_timing_passes_existing_execution_gate": false,
+  "timing_scope": "Canonical recorded images/state ready in memory to full action chunk; GPU synchronized. Cloud includes localhost SSH/HTTP roundtrip. Camera/CAN/actuation excluded.",
+  "model_A_unchanged": true
+}

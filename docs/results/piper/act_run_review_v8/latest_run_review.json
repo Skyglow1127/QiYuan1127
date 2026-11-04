@@ -1,0 +1,155 @@
+{
+  "run_directory": "/home/aup/Lerobot/outputs/act_runs/v8_r30",
+  "evidence_paths": {
+    "execute_config.json": "/home/aup/Lerobot/outputs/act_runs/v8_r30/execute_config.json",
+    "startup_result.json": "/home/aup/Lerobot/outputs/act_runs/v8_r30/startup_result.json",
+    "policy_targets.jsonl": "/home/aup/Lerobot/outputs/act_runs/v8_r30/policy_targets.jsonl",
+    "rollout.log": "/home/aup/Lerobot/outputs/act_runs/v8_r30/rollout.log"
+  },
+  "effective_runtime": {
+    "checkpoint": "/home/aup/Lerobot/models/ACT/rad_place_v5_r05/020000/pretrained_model",
+    "chunk_size": 100,
+    "n_action_steps": 50,
+    "temporal_ensemble_coeff": null,
+    "policy_joint_smoothing_alpha": 0.5,
+    "policy_joint_acceleration_deg_s2": 160.0,
+    "rollout_duration_s": 0.0,
+    "policy_approach_refresh_enabled": false,
+    "policy_approach_gripper_enabled": true,
+    "policy_release_opening_prefix": true,
+    "policy_release_settle": {
+      "trigger_open_m": 0.055,
+      "min_opening_delta_m": 0.006,
+      "min_actual_open_m": 0.035,
+      "stable_window_s": 0.15,
+      "stable_span_deg": 0.75,
+      "max_feedback_age_s": 0.1,
+      "max_sample_gap_s": 0.1,
+      "release_gain_m": 0.005,
+      "max_hold_s": 0.35,
+      "max_joint_departure_deg": 5.0,
+      "rearm_close_m": 0.035,
+      "placement_joint_bounds_deg": [
+        [
+          25.0,
+          38.0
+        ],
+        [
+          118.0,
+          133.0
+        ],
+        [
+          -105.0,
+          -75.0
+        ],
+        [
+          -15.0,
+          15.0
+        ],
+        [
+          55.0,
+          70.0
+        ],
+        [
+          -75.0,
+          -40.0
+        ]
+      ]
+    },
+    "gripper_force_n": 1.0,
+    "policy_target_rate_fraction": 0.9,
+    "tx_ttl_s": 0.12
+  },
+  "startup": {
+    "success": true,
+    "operation": "reuse_enabled_j10_current_pose",
+    "enable_attempted": false,
+    "takeover_speed_percent": 10
+  },
+  "target_trace": {
+    "rows": 2826,
+    "outcome_counts": {
+      "accepted": 2826
+    },
+    "first_last_accepted_sequence": [
+      1,
+      2826
+    ],
+    "accepted_span_s": 152.309689,
+    "transport_outcome_unknown_count": 0,
+    "target_errors": [],
+    "action_count_counts": {
+      "50": 2817,
+      "59": 9
+    }
+  },
+  "release_settle": {
+    "decision_counts": {
+      "feedback_not_new_or_fresh": 57,
+      "idle": 361,
+      "armed": 2362,
+      "started": 4,
+      "holding": 21,
+      "released_relative": 3,
+      "released_timeout": 1,
+      "waiting_for_stability": 17
+    },
+    "completed_events": [
+      {
+        "start_seq": 236,
+        "end_seq": 242,
+        "decision": "released_relative",
+        "elapsed_ms": 311.956,
+        "actual_opening_start_end_mm": [
+          45.6,
+          51.1
+        ]
+      },
+      {
+        "start_seq": 732,
+        "end_seq": 739,
+        "decision": "released_timeout",
+        "elapsed_ms": 355.155,
+        "actual_opening_start_end_mm": [
+          47.8,
+          51.7
+        ]
+      },
+      {
+        "start_seq": 1284,
+        "end_seq": 1290,
+        "decision": "released_relative",
+        "elapsed_ms": 305.503,
+        "actual_opening_start_end_mm": [
+          45.6,
+          50.9
+        ]
+      },
+      {
+        "start_seq": 1844,
+        "end_seq": 1850,
+        "decision": "released_relative",
+        "elapsed_ms": 309.341,
+        "actual_opening_start_end_mm": [
+          52.9,
+          58.2
+        ]
+      }
+    ]
+  },
+  "release_continuation_log": [
+    "v8,997 INFO act_chunk_timing: ACT release continuation original_steps=50 extra_steps=9 actual_gripper_mm=59.0 model_gripper_mm=71.7"
+  ],
+  "termination": {
+    "reason": "ACT rollout stopped before/within guarded execution: GuardError: global camera acquisition failed (serial=CC1365302B2, last_index=43202): HTTPError: HTTP Error 503: Service Unavailable",
+    "observation_failure_log": "v8,193 INFO lerobot_robot_piper_executor.robot: Policy prediction projection summary counts={'joint_5.deg': 514, 'gripper.m': 203, 'joint_3.deg': 6} reason=Observation acquisition failed",
+    "normal_duration_limit_log_present": false,
+    "teardown_log": "v8,309 INFO lerobot.rollout.strategies.base: Base strategy teardown complete"
+  },
+  "interpretation_limits": [
+    "Accepted targets report guarded transport acknowledgment, not physical grasp/release success.",
+    "Relative opening feedback and short-hold completion do not establish table contact, stable placement or collision-free retreat.",
+    "This run proves global-camera HTTP503 caused observation shutdown; USB/cable causality requires separate evidence."
+  ],
+  "review_operations": "Only read existing run files and wrote this review; no controller/config edits and no hardware actions."
+}

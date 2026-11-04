@@ -1,0 +1,70 @@
+{
+  "pass": true,
+  "complete": true,
+  "clock_hz": 49999500,
+  "records": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "/media/aup/UbuntuData/GITHUB/fpga-part/50MHz版本_20261104/工程源码/sim/make_player_vectors.py",
+        "--clock-hz",
+        "49999500",
+        "--random-cases",
+        "16",
+        "--output",
+        "/media/aup/UbuntuData/GITHUB/fpga-part/50MHz版本_20261104/综合后算术检查/player_vectors.mem"
+      ],
+      "returncode": 0,
+      "pass": true,
+      "log": "/media/aup/UbuntuData/GITHUB/fpga-part/50MHz版本_20261104/综合后算术检查/0_python3.log"
+    },
+    {
+      "argv": [
+        "/home/aup/Xilinx/2025.2/Vivado/bin/xvlog",
+        "--sv",
+        "-d",
+        "ROBOT_RT_POST_SYNTH",
+        "/media/aup/UbuntuData/GITHUB/fpga-part/50MHz版本_20261104/构建日志/player_math/player_math_synth.v",
+        "/home/aup/Xilinx/2025.2/Vivado/data/verilog/src/glbl.v",
+        "/media/aup/UbuntuData/GITHUB/fpga-part/50MHz版本_20261104/工程源码/sim/tb_player_math.sv"
+      ],
+      "returncode": 0,
+      "pass": true,
+      "log": "/media/aup/UbuntuData/GITHUB/fpga-part/50MHz版本_20261104/综合后算术检查/1_xvlog.log"
+    },
+    {
+      "argv": [
+        "/home/aup/Xilinx/2025.2/Vivado/bin/xelab",
+        "tb_player_math",
+        "glbl",
+        "-s",
+        "math50net",
+        "-L",
+        "unisims_ver",
+        "-L",
+        "unimacro_ver",
+        "-L",
+        "secureip",
+        "-mt",
+        "off",
+        "-generic_top",
+        "CLOCK_HZ=49999500"
+      ],
+      "returncode": 0,
+      "pass": true,
+      "log": "/media/aup/UbuntuData/GITHUB/fpga-part/50MHz版本_20261104/综合后算术检查/2_xelab.log"
+    },
+    {
+      "argv": [
+        "/home/aup/Xilinx/2025.2/Vivado/bin/xsim",
+        "math50net",
+        "-runall",
+        "-testplusarg",
+        "VECTORS=/media/aup/UbuntuData/GITHUB/fpga-part/50MHz版本_20261104/综合后算术检查/player_vectors.mem"
+      ],
+      "returncode": 0,
+      "pass": true,
+      "log": "/media/aup/UbuntuData/GITHUB/fpga-part/50MHz版本_20261104/综合后算术检查/3_xsim.log"
+    }
+  ]
+}

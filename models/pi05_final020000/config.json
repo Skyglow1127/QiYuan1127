@@ -1,0 +1,101 @@
+{
+    "type": "pi05",
+    "n_obs_steps": 1,
+    "input_features": {
+        "observation.state": {
+            "type": "STATE",
+            "shape": [
+                7
+            ]
+        },
+        "observation.images.global": {
+            "type": "VISUAL",
+            "shape": [
+                3,
+                480,
+                640
+            ]
+        },
+        "observation.images.wrist": {
+            "type": "VISUAL",
+            "shape": [
+                3,
+                480,
+                640
+            ]
+        }
+    },
+    "output_features": {
+        "action": {
+            "type": "ACTION",
+            "shape": [
+                7
+            ]
+        }
+    },
+    "device": "cuda",
+    "use_amp": false,
+    "use_peft": false,
+    "push_to_hub": false,
+    "repo_id": null,
+    "private": null,
+    "tags": null,
+    "license": null,
+    "pretrained_path": "/root/autodl-tmp/piper_pi05/models/pi05_base",
+    "pretrained_revision": null,
+    "paligemma_variant": "gemma_2b",
+    "action_expert_variant": "gemma_300m",
+    "dtype": "bfloat16",
+    "chunk_size": 50,
+    "n_action_steps": 10,
+    "max_state_dim": 32,
+    "max_action_dim": 32,
+    "num_inference_steps": 10,
+    "time_sampling_beta_alpha": 1.5,
+    "time_sampling_beta_beta": 1.0,
+    "time_sampling_scale": 0.999,
+    "time_sampling_offset": 0.001,
+    "min_period": 0.004,
+    "max_period": 4.0,
+    "use_relative_actions": false,
+    "relative_exclude_joints": [
+        "gripper"
+    ],
+    "action_feature_names": [
+        "joint_1.deg",
+        "joint_2.deg",
+        "joint_3.deg",
+        "joint_4.deg",
+        "joint_5.deg",
+        "joint_6.deg",
+        "gripper.m"
+    ],
+    "rtc_config": null,
+    "image_resolution": [
+        224,
+        224
+    ],
+    "empty_cameras": 0,
+    "tokenizer_max_length": 200,
+    "normalization_mapping": {
+        "VISUAL": "IDENTITY",
+        "STATE": "QUANTILES",
+        "ACTION": "QUANTILES"
+    },
+    "gradient_checkpointing": true,
+    "compile_model": false,
+    "compile_mode": "max-autotune",
+    "freeze_vision_encoder": true,
+    "train_expert_only": true,
+    "optimizer_lr": 2.5e-05,
+    "optimizer_betas": [
+        0.9,
+        0.95
+    ],
+    "optimizer_eps": 1e-08,
+    "optimizer_weight_decay": 0.01,
+    "optimizer_grad_clip_norm": 1.0,
+    "scheduler_warmup_steps": 1000,
+    "scheduler_decay_steps": 30000,
+    "scheduler_decay_lr": 2.5e-06
+}

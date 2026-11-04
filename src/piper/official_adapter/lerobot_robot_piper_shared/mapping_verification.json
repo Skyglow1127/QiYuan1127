@@ -1,0 +1,33 @@
+{
+  "at_unix": 1793199963.5651648,
+  "mapping": {
+    "action_joint_ids": [
+      341,
+      342,
+      343
+    ],
+    "state_joint_ids": [
+      677,
+      678,
+      679
+    ],
+    "action_gripper_id": 345,
+    "state_gripper_id": 680,
+    "state_status_id": 673
+  },
+  "gripper_mode": "width",
+  "checks": [
+    "follower_feedback",
+    "bus_targets",
+    "gripper_units"
+  ],
+  "interface_identity": {
+    "interface": "can0",
+    "ifindex": 14,
+    "device_path": "/sys/devices/pci0000:00/0000:00:08.3/0000:67:00.0/usb3/3-1/3-1.2/3-1.2:1.0"
+  },
+  "basis": "Observed 0x155/156/157/159 targets and a 200Hz 0x2A1/2A5/2A6/2A7/2A8 feedback stream; ctrl_mode=1 (CAN controlled, not leader input mode=6); grippers both width. User confirmed follower and gripper followed. See logs/piper_mapping_evidence.json. First demonstration review remains required.",
+  "evidence_file": "/home/aup/Lerobot/logs/piper_mapping_evidence.json",
+  "joint_unit": "deg",
+  "unit_conversion": "signed millidegrees / 1000 -> degrees; width micrometers / 1e6 -> meters"
+}

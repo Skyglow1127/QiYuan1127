@@ -1,0 +1,21 @@
+{
+  "requested_clock_hz": 50000000,
+  "stage": "implement",
+  "completed": [
+    "plan",
+    "prepare",
+    "child_player_math",
+    "child_limit_gate_pipe",
+    "synth_robot_rt_bd_bram_ctrl_0_synth_1",
+    "synth_robot_rt_bd_chunks_0_synth_1",
+    "synth_robot_rt_bd_fabric_0_synth_1",
+    "synth_robot_rt_bd_guard_0_synth_1",
+    "synth_robot_rt_bd_ps_0_synth_1",
+    "synth_robot_rt_bd_resets_0_synth_1",
+    "synth_robot_rt_bd_core_0_synth_1",
+    "synth_synth_1"
+  ],
+  "pass": false,
+  "compiled_clock_hz": 49999500,
+  "error": "implement failed (rc=1): /media/aup/UbuntuData/GITHUB/fpga-part/50MHz版本_20261104/构建日志/implement.log"
+}

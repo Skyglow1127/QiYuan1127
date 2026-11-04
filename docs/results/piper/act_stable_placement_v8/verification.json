@@ -1,0 +1,129 @@
+{
+  "date": "v8",
+  "status": "rollback_applied_and_placement_software_validated_physical_effect_unverified",
+  "user_clarifications": [
+    "Gripper is RIGHT of the cube, not left. No geometric signed offset applied.",
+    "Cube already down, retreat contacts it."
+  ],
+  "rollback": "Actually executed before_left_bias restore, then retained duration0 preference. policy_approach_refresh absent; grasp parent matches prior50/.5/160 profile except default_duration_s0.",
+  "new_profile_parent": "/home/aup/Lerobot/projects/piper/deployment/baselines/placement_parent_50_no_refresh_v8",
+  "prechange_diagnostic_backup": "/home/aup/Lerobot/projects/piper/deployment/baselines/before_stable_placement_v8_r29",
+  "profile_delta_from_clean_parent": {
+    "policy_release_opening_prefix": {
+      "before": null,
+      "after": true
+    },
+    "policy_release_settle": {
+      "before": null,
+      "after": {
+        "trigger_open_m": 0.055,
+        "min_opening_delta_m": 0.006,
+        "min_actual_open_m": 0.035,
+        "stable_window_s": 0.15,
+        "stable_span_deg": 0.75,
+        "max_feedback_age_s": 0.1,
+        "max_sample_gap_s": 0.1,
+        "release_gain_m": 0.005,
+        "max_hold_s": 0.35,
+        "max_joint_departure_deg": 5.0,
+        "rearm_close_m": 0.035,
+        "placement_joint_bounds_deg": [
+          [
+            25.0,
+            38.0
+          ],
+          [
+            118.0,
+            133.0
+          ],
+          [
+            -105.0,
+            -75.0
+          ],
+          [
+            -15.0,
+            15.0
+          ],
+          [
+            55.0,
+            70.0
+          ],
+          [
+            -75.0,
+            -40.0
+          ]
+        ]
+      }
+    }
+  },
+  "model7_files_verified": true,
+  "cause_evidence": "placement_trace_review.json: original ACT changes joints during opening; physical jaw opening lags. Extra20-slot release tails include returning and reclosure. No evidence attributes this specifically to the removed approach refresh or a160.",
+  "release_prefix": "Explicit policy_release_opening_prefix=True; only append original decoded opening prefix >=55mm, >=last requested minus3mm and >actual opening; original normalized actions/source slots retained. DefaultFalse preserves older profiles.",
+  "short_coordination": "Explicit policy_release_settle; after grasp-side closing ACK, genuine increasing observation samples span150ms with each joint within.75deg; placement window, original opening>=55mm and >actual+6mm, actual>=35mm. Once per opening retain lastACK six-axis reference; gripper still current ACT proposal. Relative actual +5mm or350ms releases; withdrawn opening, window/raw departure or untrustworthy feedback cancels. Pending history commits only after ACK; disarm/rearm clear.",
+  "unchanged": "Original ACT,50/.5/160,1N,2deg/3mm cap,.9 speed fraction, working bounds, all original feedback/source/slot checks, dual guards, .75s lease/.12s TX TTL, camera recovery and duration0 shutdown remain.",
+  "deployment_regression": {
+    "count": 369,
+    "result": "OK",
+    "log": "deployment_tests.log"
+  },
+  "targeted_regression": {
+    "count": 56,
+    "result": "OK",
+    "log": "targeted_tests.log"
+  },
+  "execution_tests": {
+    "count": 10,
+    "transport": "in-memory real SDK bytes + independent dual guards +9-key camera observations; no hardware"
+  },
+  "entry_help": {
+    "exit_code": 0,
+    "log": "entry_help.txt"
+  },
+  "historical_classifier": {
+    "file": "historical_settle_review.json",
+    "frames": 8210,
+    "decisions": {
+      "feedback_not_new_or_fresh": 164,
+      "idle": 1224,
+      "armed": 6732,
+      "started": 13,
+      "cancelled_opening_withdrawn": 2,
+      "waiting_for_stability": 9,
+      "holding": 55,
+      "released_relative": 11
+    },
+    "fixed_feedback": true
+  },
+  "historical_release_prefix": {
+    "file": "historical_release_prefix_review.json",
+    "old_slots": 80,
+    "candidate_slots": 43,
+    "fixed_original_proposals": true
+  },
+  "rollback_verification": "rollback_verification.json:5 scripts including clean parent and legacy compatibility; no production restore during validation",
+  "latest_prior_run_stop": "After8210 accepted targets, global CC1365302B2 camera HTTP503 caused normal guarded stop. Read-only browser check now shows both camera RGB/depth capture29.9fps; no camera restart or robot auto-resume performed.",
+  "physical_motion_commands_sent": false,
+  "limitations": [
+    "Placement joint window is a stage classifier, not proof of target position or table contact.",
+    "ACK joint-reference retention is not measured TCP immobility; acceleration/cap/rate guards may alter its final target.",
+    "Short buffer can cancel without confirmed clearance; it has no fixed60mm gate or timeout exception.",
+    "Historical feedback/release classification cannot predict new visual/model/physical responses. Real no-collision release and success rate remain unverified."
+  ],
+  "sha256": {
+    "deployment/act_launch_contact_repair.json": "eef93c0f3d2d3928832e644e49ca07c1d69af649f700ec4838e5f33d56db4021",
+    "deployment/launch_act_contact_repair.py": "dac4630d2d873e64a9a92072d353fda063a7d5910c5b781695e8449399d146ed",
+    "deployment/launch_act.py": "8b6f91f0e2bc43aa966995525282c03ffc73aa2b8a2c9902a4a2d26a2a4d7b42",
+    "deployment/act_chunk_timing.py": "4e38a25467f7b06d54d1978732778d2c141d292862dd537641eb07ff445e1670",
+    "deployment/act_release_continuation.py": "a8ef480d42ae4a1ac8a5631110808ef7b5cd900ec5762b555a13678f15e5aa81",
+    "deployment/lerobot_robot_piper_executor/robot.py": "1989fccd69b761653979de10cf7851bd7f6a52ede8a2aaac330bf34dea4d62f5",
+    "deployment/lerobot_robot_piper_executor/release_settle.py": "b0cc7af455fe5a0b8042e7607c5000154ff134b23ed3a872759f5d27ffe9b8b6",
+    "deployment/test_release_settle.py": "2066db74b4ccd53c6b017fb3d0b0efc5cda3dc3c508716ad51e461f035e6f416",
+    "deployment/test_release_settle_execution.py": "54aaa38db70def96cf6462aef31d74ce887bff593e6e81a5bb1dbb4d410312a2",
+    "deployment/test_release_settle_launch.py": "2cb18c3b24aed123400d8b37e0b74ec653dd19417940e8e60d320ce3fa27f464",
+    "deployment/test_act_release_continuation.py": "7c43ed5ff3ab9b53f466656cf5c51545ce4abcb37d739a72667327a88df03440",
+    "deployment/test_contact_repair.py": "cef42bbed9bc238c6aa0f5db44d9e5a6c382f91f709b390c958050baa214c20f",
+    "deployment/test_approach_refresh_launch.py": "541c909dd8143060937cf20b6a9b4d22028722b5840abe3a5e93345566357356",
+    "official_adapter/rollout_act_piper.py": "ae27d1bfe6b8b674955b301edb3fb300970ed58b8150b171d5235dacb5bdaf0b",
+    "restore_act_piper_before_stable_placement.sh": "4eecd0beb30aee1ea77255d62376cabaa4303a709a54784b03a51868fea9c98c"
+  }
+}

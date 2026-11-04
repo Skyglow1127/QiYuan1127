@@ -1,0 +1,22 @@
+{
+  "timestamp_utc": "2026-11-03T23:10:48.637503+00:00",
+  "python": "3.12.3",
+  "scope": "Selected offline tests; no hardware, cloud service or physical grasp validation.",
+  "passed": true,
+  "results": [
+    {
+      "suite": "piper",
+      "tests": [
+        "test_policy_bounds.py",
+        "test_target_rate.py",
+        "test_executor.py",
+        "test_act_chunk_timing.py"
+      ],
+      "returncode": 0,
+      "stdout": "........................................................................ [ 97%]\n..                                                                       [100%]\n74 passed in 1.03s\n",
+      "stderr": ""
+    }
+  ],
+  "sdk_source": "third_party/pyAgxArm",
+  "sdk_import_path_verified_before_tests": true
+}

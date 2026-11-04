@@ -1,0 +1,116 @@
+{
+  "plan_id": "3f466cb5d351e285dc083836b74766675ff27646c4d0c4e995f7586df55e5583",
+  "success": true,
+  "user_instruction": "你不需要断电，就按照现在的方式来",
+  "power_state_unchanged": true,
+  "leader_power_off_confirmed": false,
+  "six_axis_enable_changes_sent": false,
+  "reset_or_zero_commands_sent": false,
+  "phases": [
+    {
+      "target_mm": 25.0,
+      "start_pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0329
+      ],
+      "end_pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.025099999999999997
+      ],
+      "all_motors_enabled_before": true,
+      "all_motors_enabled_after": true,
+      "success": true,
+      "transmitted_frames": 8,
+      "actual_step_checks": [
+        {
+          "actual_width_um": 32900,
+          "target_width_um": 25000,
+          "signed_step_um": -7900
+        }
+      ],
+      "failure": null
+    },
+    {
+      "target_mm": 17.5,
+      "start_pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.024999999999999998
+      ],
+      "end_pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0178
+      ],
+      "all_motors_enabled_before": true,
+      "all_motors_enabled_after": true,
+      "success": true,
+      "transmitted_frames": 8,
+      "actual_step_checks": [
+        {
+          "actual_width_um": 25000,
+          "target_width_um": 17500,
+          "signed_step_um": -7500
+        }
+      ],
+      "failure": null
+    },
+    {
+      "target_mm": 10.0,
+      "start_pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0178
+      ],
+      "end_pose": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0104
+      ],
+      "all_motors_enabled_before": true,
+      "all_motors_enabled_after": true,
+      "success": true,
+      "transmitted_frames": 8,
+      "actual_step_checks": [
+        {
+          "actual_width_um": 17800,
+          "target_width_um": 10000,
+          "signed_step_um": -7800
+        }
+      ],
+      "failure": null
+    }
+  ],
+  "model_grasp_actions_sent": 0,
+  "continuous_trajectory_saved": false,
+  "can_frames_sent": 24,
+  "joint_hold_frames_sent": 18,
+  "mode_frames_sent": 3,
+  "gripper_target_frames_sent": 3
+}

@@ -1,0 +1,65 @@
+{
+  "created_at": "2026-10-27T14:43:16.718991+08:00",
+  "scope": "execution core, feedback recovery, endpoint checking, review binding, offline metrics; no physical motion validation",
+  "pytest": {
+    "passed": 266,
+    "deselected": 1,
+    "elapsed_s": 4.98,
+    "files": [
+      "tests/test_shared_progress.py",
+      "tests/test_closed_loop_wiring.py",
+      "tests/test_execution_metrics.py",
+      "tests/test_ack_overlap_method01.py",
+      "tests/test_method_policy_wiring.py",
+      "tests/test_method_runner.py",
+      "tests/test_candidate_commit_tracking.py",
+      "tests/test_feedback_recovery.py",
+      "tests/test_joint_feedback_recovery.py",
+      "tests/test_adaptive_reference.py",
+      "tests/test_adaptive_pacing.py",
+      "tests/test_command_ack_schedule.py",
+      "tests/test_joint_model_limits.py",
+      "tests/test_fixed_endpoint_retry.py",
+      "tests/test_arm_diagnostics.py",
+      "runtime/Control/ros2_ws/src/d1_pick_place/test/test_sdk_executor.py",
+      "runtime/Control/ros2_ws/src/d1_pick_place/test/test_path_timing.py"
+    ],
+    "selection": "not latest_saved_endpoint_residual",
+    "deselected_reason": "historical log fixture intentionally not copied; historical evidence separately analyzed in read-only reports"
+  },
+  "baseline_test_correction": {
+    "test": "test_cancellation_stops_schedule_and_holds_current",
+    "baseline_reproduced_failure": true,
+    "change": "new-copy test now checks existing no-hold cancellation contract; no production cancellation relaxation"
+  },
+  "local_environment": {
+    "ready": true,
+    "issues": [],
+    "robot_commands_sent": 0,
+    "loaded_via": "runtime/Control/ros2_ws/env.sh"
+  },
+  "original_code_guard": {
+    "checked": 245,
+    "matched": 245,
+    "mismatches": []
+  },
+  "changed_or_added_files": 16,
+  "physical_motion_validated": false,
+  "hardware_defect_proven": false,
+  "live_readonly_prepare": {
+    "completed": false,
+    "robot_position_commands_sent": 0,
+    "network_interface": "enp99s0",
+    "operstate": "down",
+    "ipv4_address_present": false,
+    "failure": "DDS domain creation failed; configured D1 interface unavailable",
+    "log": "/media/aup/UbuntuData/ACT训练/11_D1轨迹执行改进/logs/20261027_143949_cd7ae5/observation.log",
+    "readonly_transport": "/media/aup/UbuntuData/ACT训练/11_D1轨迹执行改进/logs/20261027_143949_cd7ae5/fixed_pose_observation/readonly.jsonl",
+    "followup": "new local interface precheck now rejects clearly before starting SDK"
+  },
+  "unresolved": [
+    "actual onboard binary and new-target interpolation semantics",
+    "persistent static residual and true physical accuracy",
+    "physical multi-axis timing and vibration under new execution policy"
+  ]
+}

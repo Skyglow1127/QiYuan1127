@@ -1,0 +1,97 @@
+{
+  "load_test_passed": true,
+  "stationary_test_passed": true,
+  "robot_or_CAN_access": false,
+  "linux_pl0_clock_hz": 50000000,
+  "compiled_nominal_clock_hz": 49999500,
+  "stationary_result": {
+    "axi_bresp_observed": false,
+    "board_acceptance": false,
+    "build_manifest_sha256": "d9fbcfcd53bf80ed9026b3f5a2b361d5c0d47c4603dbaf9a82170a92cd6e9f91",
+    "capture_source": "AArch64 volatile LE32+dsb sy MMIO completion/readback; AXI BRESP NOT observed",
+    "cleanup_ack_cycle_bracket": [
+      335755176,
+      336269952
+    ],
+    "fresh_latch_evidence_consistent": true,
+    "hardware_access": true,
+    "hardware_independently_authenticated": false,
+    "interval": {
+      "basis": "actual SNAP_CYCLE/COUNT from two acknowledged fresh latches",
+      "cycles": 50328281,
+      "emit_delta": 44,
+      "nominal_counter_tick_rate_hz": {
+        "denominator": 50328281,
+        "numerator": 6899931000
+      },
+      "tick_delta": 138
+    },
+    "latency_check": {
+      "independent_measurement": false,
+      "reported_max_cycles": 112,
+      "reported_min_cycles": 112,
+      "scope": "snapshot-reported extrema; no independent per-event edge timing"
+    },
+    "limitations": [
+      "External receipts/dumps are not independently authenticated",
+      "No oscillator frequency, physical CAN rate, robot motion, final STA or board acceptance is established"
+    ],
+    "physical_f_exec_hz": null,
+    "plan_id": "5a142047d21f7c0fec67e0c071594875d595385740c9f398855dcb0205844dc6",
+    "run_id": "stationary",
+    "schema": "robot_rt.desc_smoke_result.v1",
+    "snapshots": [
+      {
+        "command_cycle_bracket": [
+          283086839,
+          283641498
+        ],
+        "emit_count": 0,
+        "live_cycle_bracket": [
+          283086839,
+          283641498
+        ],
+        "name": "begin",
+        "snap_cycle": 283298955,
+        "tick_count": 16
+      },
+      {
+        "command_cycle_bracket": [
+          333326577,
+          333916143
+        ],
+        "emit_count": 44,
+        "live_cycle_bracket": [
+          333326577,
+          333916143
+        ],
+        "name": "end",
+        "snap_cycle": 333627236,
+        "tick_count": 154
+      }
+    ],
+    "source_kind": "external_capture",
+    "source_label": "synthetic_stationary",
+    "source_window": {
+      "arm_cycle_bracket": [
+        281936661,
+        282626783
+      ],
+      "normal_deadline_cycle": 377505986,
+      "produced_latest_cycle": 277505987,
+      "scope": "Necessary conservative ARM/source ordering only; COMMIT ack is not READY timing",
+      "seed_cycle": 277505987,
+      "seed_expiry_cycle": 377505986,
+      "source_age_expiry_cycle": 377505986,
+      "validation_completion_timestamp": null
+    },
+    "status": "offline_capture_consistent",
+    "tool_source_sha256": {
+      "spec/regmap.yaml": "fcd5caf918b7e9943f32e1e57c6eaf349472c890b71ae3ddf2e385bc24a5f1a1",
+      "sw/board_desc_smoke.py": "7413f3fc5c52d032c014b7bf3b4c07e3271558bae5872bf1351341f0f715bfc7",
+      "sw/desc_smoke.py": "db54553b92c7f841d806103f5882940193cb87f20aac386aa6dea9bf81ee08c3",
+      "sw/pl_bank.py": "e50b007d545606c2ae4f8305cdcdb315843d39cc2cc7ca7004c494fa524ac6e5"
+    }
+  },
+  "finished_at_unix": 1793759574.956959
+}

@@ -1,0 +1,80 @@
+{
+  "purpose": "read_controller_limits_and_gripper_config",
+  "motion_commands_sent": 0,
+  "requests": [
+    {
+      "id": "0x472",
+      "data": "0101000000000000"
+    },
+    {
+      "id": "0x472",
+      "data": "0201000000000000"
+    },
+    {
+      "id": "0x472",
+      "data": "0301000000000000"
+    },
+    {
+      "id": "0x472",
+      "data": "0401000000000000"
+    },
+    {
+      "id": "0x472",
+      "data": "0501000000000000"
+    },
+    {
+      "id": "0x472",
+      "data": "0601000000000000"
+    },
+    {
+      "id": "0x477",
+      "data": "0400000003000000"
+    }
+  ],
+  "joint_limits": {
+    "1": {
+      "min_deg": -150,
+      "max_deg": 150,
+      "speed_raw": 300,
+      "raw": "0105dcfa24012c00"
+    },
+    "2": {
+      "min_deg": 0,
+      "max_deg": 180,
+      "speed_raw": 300,
+      "raw": "0207080000012c00"
+    },
+    "3": {
+      "min_deg": -170,
+      "max_deg": 0,
+      "speed_raw": 300,
+      "raw": "030000f95c012c00"
+    },
+    "4": {
+      "min_deg": -100,
+      "max_deg": 100,
+      "speed_raw": 300,
+      "raw": "0403e8fc18012c00"
+    },
+    "5": {
+      "min_deg": -70,
+      "max_deg": 70,
+      "speed_raw": 300,
+      "raw": "0502bcfd44012c00"
+    },
+    "6": {
+      "min_deg": -180,
+      "max_deg": 180,
+      "speed_raw": 300,
+      "raw": "060708f8f8012c00"
+    }
+  },
+  "all_six_limits": true,
+  "gripper_config": {
+    "teaching_range_per": 100,
+    "max_range_mm": 100,
+    "teaching_friction": 0,
+    "raw": "6464000000000000"
+  },
+  "speed_unit": "unconfirmed; official source conflicts, preserve raw"
+}

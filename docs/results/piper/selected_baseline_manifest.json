@@ -1,0 +1,13 @@
+{
+  "deployment/act_launch_contact_repair.json": "1251e46dfe2511195447ae2bdfaa7554f5c027692cba31b132fa9e29bbb8a07b",
+  "deployment/launch_act_contact_repair.py": "6602fa31a2e4b8d3db1a0b74b877b480d3ac7d00d3ded35c8a43b1b54bdeafc9",
+  "deployment/act_release_continuation.py": "5c8867256b23506c6c42117b51a32c1a68c95dc2eca103e351b954a610cbb121",
+  "deployment/act_chunk_timing.py": "b0eeaa0691c5f05ed691aff758b5380c9be7c7e1126b1f5c636727ea9fd0f8d6",
+  "deployment/lerobot_robot_piper_executor/robot.py": "c3cb0de4fece4429d040c6c8602283a02bd0d12a9eb127e15ee4c374d30a6932",
+  "deployment/lerobot_robot_piper_executor/joint_smoothing.py": "b129a965ada2712951dfc5952400974ca33f753b2cb395f7af62e46137589fe2",
+  "deployment/launch_act.py": "0995a3e8a109379b9755b9100c95a336bf02a8fb6d759ba2e3c5d0a66fc5f618",
+  "official_adapter/rollout_act_piper.py": "ba9f8a1a376ac77a9178057214507cffa698a5486ccfcbc9c11c1c1ddaa50fda",
+  "run_act_piper_repair.sh": "9aebf2bbb6cc341f475a246baa1c78ce129816c0cf222b2233f994d8523bd84e",
+  "deployment/act_launch_defaults.json": "4218364d404e4f03fb53c1eb16fda4f1b3ea3f251015f8e595a76a6127ab941a",
+  "deployment/act_launch_round2.json": "565a871ac244c35cc4b915fec88f35b345a79063c2a9a9123b5311be97ef1f4e"
+}

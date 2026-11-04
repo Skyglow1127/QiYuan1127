@@ -1,0 +1,18 @@
+{
+  "success": false,
+  "scope": "One recorded observation; preprocessed input in memory through postprocessed 50x7 actions; GPU synchronized.",
+  "robot_io": false,
+  "model": "/home/aup/Lerobot/models/PI05/pi05_base",
+  "adapter": "/home/aup/Documents/Codex/v5/wo-y/outputs/piper_pi05_cloud_backup_v5/runs/pi05_train_v5_r06/checkpoints/020000/pretrained_model",
+  "tokenizer": "/home/aup/Documents/Codex/v5/wo-y/outputs/piper_pi05_cloud_backup_v5/models/paligemma_tokenizer",
+  "observation": "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_actual_inference_v5/recorded_observation.npz",
+  "device": "AMD Radeon 890M Graphics",
+  "torch": "2.11.0+rocm7.14.1",
+  "hip": "7.14.60850",
+  "batch_size": 1,
+  "warmup_each": 3,
+  "samples_each": 10,
+  "gpu_allocator_fraction": 0.85,
+  "system_available_before_load_bytes": 10647339008,
+  "variants": {}
+}

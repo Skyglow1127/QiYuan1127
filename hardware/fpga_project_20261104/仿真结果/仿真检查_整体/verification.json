@@ -1,0 +1,81 @@
+{
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "hardware_access": false,
+  "vivado_build_run": false,
+  "synthesis_run": false,
+  "implementation_run": false,
+  "physical_frequency_verified": false,
+  "clock_hz": 49999500,
+  "suites": {
+    "top": {
+      "top": "tb_top_protocol",
+      "commands": [
+        {
+          "argv": [
+            "/home/aup/Xilinx/2025.2/Vivado/bin/xvlog",
+            "--sv",
+            "/home/aup/Lerobot/projects/piper/robot_rt/rtl/tick_gen.sv",
+            "/home/aup/Lerobot/projects/piper/robot_rt/rtl/player_math.sv",
+            "/home/aup/Lerobot/projects/piper/robot_rt/rtl/limit_gate.sv",
+            "/home/aup/Lerobot/projects/piper/robot_rt/rtl/limit_gate_pipe.sv",
+            "/home/aup/Lerobot/projects/piper/robot_rt/rtl/shared_math_gate.sv",
+            "/home/aup/Lerobot/projects/piper/robot_rt/rtl/stationary_seed_gate_seq.sv",
+            "/home/aup/Lerobot/projects/piper/robot_rt/rtl/limits_product_cache.sv",
+            "/home/aup/Lerobot/projects/piper/robot_rt/rtl/ceil_div128_64.sv",
+            "/home/aup/Lerobot/projects/piper/robot_rt/rtl/bank_validator.sv",
+            "/home/aup/Lerobot/projects/piper/robot_rt/rtl/robot_rt_top.sv",
+            "/home/aup/Lerobot/projects/piper/robot_rt/sim/tb_top_protocol.sv"
+          ],
+          "returncode": 0,
+          "error_in_output": false,
+          "log": "/media/aup/UbuntuData/GITHUB/fpga-part/50MHz版本_20261104/仿真检查_整体/top/00_xvlog.txt",
+          "log_sha256": "9932109c075e0759acdcc4a17cf7ca85fe4c3a8bf0e2d8316df51b88762d384f"
+        },
+        {
+          "argv": [
+            "/home/aup/Xilinx/2025.2/Vivado/bin/xelab",
+            "tb_top_protocol",
+            "-s",
+            "top_sim",
+            "-mt",
+            "off",
+            "-generic_top",
+            "CLOCK_HZ=49999500"
+          ],
+          "returncode": 0,
+          "error_in_output": false,
+          "log": "/media/aup/UbuntuData/GITHUB/fpga-part/50MHz版本_20261104/仿真检查_整体/top/01_xelab.txt",
+          "log_sha256": "7d58d8774a7c139de8446995136b65fb30ae8108bbc78c5f879ea71f376bbe3d"
+        },
+        {
+          "argv": [
+            "/home/aup/Xilinx/2025.2/Vivado/bin/xsim",
+            "top_sim",
+            "-runall"
+          ],
+          "returncode": 0,
+          "error_in_output": false,
+          "log": "/media/aup/UbuntuData/GITHUB/fpga-part/50MHz版本_20261104/仿真检查_整体/top/02_xsim.txt",
+          "log_sha256": "5785003b3b27cf93e600b352e1a39580fa0bd9d47de5faeb8cdcae9de367ee60"
+        }
+      ],
+      "pass": true
+    }
+  },
+  "sources_sha256": {
+    "sim/player_reference.py": "ee3a71d2ec2e2a5cdb5af99d633c22ac938b1fec677f27c15ccbee47ff232a7f",
+    "sim/tick_reference.py": "d4a993945036dfe63d9e141d8cfa34a3ad2b168c30f889e1201c06246e12bf80",
+    "rtl/tick_gen.sv": "3624c5810085048a2ae01f16ad614e34047912afcc715cd837092d633712f42e",
+    "rtl/player_math.sv": "593ca82b102ddd887d770e4056de867e2df080a55424785133ca9cd8f832e6fe",
+    "rtl/limit_gate.sv": "7241a72faea82f0176466e2383c27da4226bb98201ed75d7bcd8daefac4b0757",
+    "rtl/limit_gate_pipe.sv": "43b7a8591aa2269a2c3bad3895fd4bd5e5cc9c45259b34f04489af3da8b189ac",
+    "rtl/shared_math_gate.sv": "d2c9e6d061799a478e2a9d08b2505f72a0512a651d2120f00f876d298a5157de",
+    "rtl/stationary_seed_gate_seq.sv": "96a8faec00729af4d98372505865b59bf66c7efefe235ad3dc58dcb9f07849e2",
+    "rtl/limits_product_cache.sv": "7cd18fd36511ef1eb8eac2c878282d5e55bdc22c2a9095f4c797de1df8fd6005",
+    "rtl/ceil_div128_64.sv": "cb00d2ca3b8711dccd85b5f44f7a16f5ed064299748b82818212d2e32fd92e79",
+    "rtl/bank_validator.sv": "026560cc59a9953cd6144b1184c7b9bbe2a79238f9898e85a35e6bdd7f67f4f3",
+    "rtl/robot_rt_top.sv": "05bf08b660621772e7a545e10f6400d6566a6171a6e5bb87353763eb1a0cadcd",
+    "sim/tb_top_protocol.sv": "5b0d5717276432b73f9f2b07eec8451f2bc8e9c2ec51a4a8c44a041180d201d0"
+  },
+  "pass": true
+}

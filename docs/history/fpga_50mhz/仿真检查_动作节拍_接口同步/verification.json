@@ -1,0 +1,63 @@
+{
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "hardware_access": false,
+  "vivado_build_run": false,
+  "synthesis_run": false,
+  "implementation_run": false,
+  "physical_frequency_verified": false,
+  "clock_hz": 49999500,
+  "suites": {
+    "tick": {
+      "top": "tb_tick_gen",
+      "commands": [
+        {
+          "argv": [
+            "/home/aup/Xilinx/2025.2/Vivado/bin/xvlog",
+            "--sv",
+            "/home/aup/Lerobot/projects/piper/robot_rt/rtl/tick_gen.sv",
+            "/home/aup/Lerobot/projects/piper/robot_rt/sim/tb_tick_gen.sv"
+          ],
+          "returncode": 0,
+          "error_in_output": false,
+          "log": "/media/aup/UbuntuData/GITHUB/fpga-part/50MHz版本_20261104/仿真检查_动作节拍_接口同步/tick/00_xvlog.txt",
+          "log_sha256": "7ed718e8ea0dadff973cf19caf9ff04ad7b56549490a490ba87f9d8ff4edd37d"
+        },
+        {
+          "argv": [
+            "/home/aup/Xilinx/2025.2/Vivado/bin/xelab",
+            "tb_tick_gen",
+            "-s",
+            "tick_sim",
+            "-mt",
+            "off",
+            "-generic_top",
+            "CLOCK_HZ=49999500"
+          ],
+          "returncode": 0,
+          "error_in_output": false,
+          "log": "/media/aup/UbuntuData/GITHUB/fpga-part/50MHz版本_20261104/仿真检查_动作节拍_接口同步/tick/01_xelab.txt",
+          "log_sha256": "fe1e22df5940d01711eb10186ededf7daf6803997008b50bb54a2a0f0079cf9e"
+        },
+        {
+          "argv": [
+            "/home/aup/Xilinx/2025.2/Vivado/bin/xsim",
+            "tick_sim",
+            "-runall"
+          ],
+          "returncode": 0,
+          "error_in_output": false,
+          "log": "/media/aup/UbuntuData/GITHUB/fpga-part/50MHz版本_20261104/仿真检查_动作节拍_接口同步/tick/02_xsim.txt",
+          "log_sha256": "c63025b9a5d581800a05dcf4e7177ebf6be8a76bf29539133f376db8a6ae8bb7"
+        }
+      ],
+      "pass": true
+    }
+  },
+  "sources_sha256": {
+    "sim/player_reference.py": "ee3a71d2ec2e2a5cdb5af99d633c22ac938b1fec677f27c15ccbee47ff232a7f",
+    "sim/tick_reference.py": "d4a993945036dfe63d9e141d8cfa34a3ad2b168c30f889e1201c06246e12bf80",
+    "rtl/tick_gen.sv": "3624c5810085048a2ae01f16ad614e34047912afcc715cd837092d633712f42e",
+    "sim/tb_tick_gen.sv": "2e159834b1649539c7033c564ad2797b1bd05c9b128484659238a3ad0ae144be"
+  },
+  "pass": true
+}

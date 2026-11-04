@@ -1,0 +1,97 @@
+{
+  "status": "SOFTWARE_CONTRACT_PASS",
+  "hardware_executed": false,
+  "tests": [
+    {
+      "kind": "rgb888_owned_copy",
+      "canvas": [
+        224,
+        224
+      ],
+      "bytes_mod4": 0
+    },
+    {
+      "kind": "rgb888_owned_copy",
+      "canvas": [
+        17,
+        17
+      ],
+      "bytes_mod4": 3
+    },
+    {
+      "kind": "rgb888_owned_copy",
+      "canvas": [
+        18,
+        17
+      ],
+      "bytes_mod4": 2
+    },
+    {
+      "kind": "rgb888_owned_copy",
+      "canvas": [
+        19,
+        17
+      ],
+      "bytes_mod4": 1
+    },
+    {
+      "kind": "rgb888_owned_copy",
+      "canvas": [
+        416,
+        416
+      ],
+      "bytes_mod4": 0
+    },
+    {
+      "kind": "rgbx32_bypass",
+      "input": [
+        33,
+        25
+      ]
+    },
+    {
+      "kind": "rgbx32_bypass",
+      "input": [
+        640,
+        480
+      ]
+    },
+    {
+      "kind": "reject_bad_abi_field",
+      "field": 5
+    },
+    {
+      "kind": "reject_bad_abi_field",
+      "field": 6
+    },
+    {
+      "kind": "reject_bad_abi_field",
+      "field": 7
+    },
+    {
+      "kind": "reject_bad_abi_field",
+      "field": 8
+    },
+    {
+      "kind": "reject_bad_abi_field",
+      "field": 9
+    },
+    {
+      "kind": "reject_bad_abi_field",
+      "field": 10
+    },
+    {
+      "kind": "reject_bad_abi_field",
+      "field": 11
+    }
+  ],
+  "native_pack_cases": 4,
+  "frozen_official_fixtures_validated": 14,
+  "ioctl": "0xc0405603",
+  "request_bytes": 64,
+  "fixture_count_enforced": 14,
+  "incomplete_fixture_suite_rejected": true,
+  "inconsistent_manifest_geometry_rejected": true,
+  "package_import_pass": true,
+  "host_driver_build": "PASS_x86_64_6.17_NOT_KR260"
+}

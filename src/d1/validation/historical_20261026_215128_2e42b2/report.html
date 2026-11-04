@@ -1,0 +1,119 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>D1 主机执行时序量化</title>
+<style>body{font:16px/1.65 system-ui;max-width:1100px;margin:32px auto;padding:0 24px;color:#172b4d}table{border-collapse:collapse;font-size:13px}td,th{border:1px solid #ccd;padding:8px;vertical-align:top;overflow-wrap:anywhere}pre{white-space:pre-wrap;background:#f4f6f8;padding:16px}svg{width:100%;max-height:300px}figure{margin:24px 0}a{color:#1864ab}</style>
+<h1>D1 主机执行时序量化</h1><p>运动完成：False。分析使用已有证据，未连接设备。</p>
+<p>原始证据：/media/aup/UbuntuData/ACT训练/09_一键抓取程序_方法一/logs/20261026_215128_2e42b2/execution/01_fixed_pregrasp/executed</p><p>参考时钟：legacy_inferred_from_first_group_call_and_phase；反馈最大插值间隔：0.3 s。</p>
+<p><a href="metrics.json">完整指标与输入 SHA256</a> · <a href="groups.csv">调用组 CSV</a> · <a href="commands.csv">指令与 ACK CSV</a> · <a href="feedback.csv">逐轴有效反馈 CSV</a> · <a href="tracking.csv">原时间轴误差 CSV</a></p>
+<h2>时间关系</h2><pre>{
+  &quot;group_count&quot;: 155,
+  &quot;reference_phase_span_s&quot;: 12.0,
+  &quot;actual_call_start_span_s&quot;: 21.450513109040912,
+  &quot;relative_cumulative_drift_s&quot;: 9.450513109040912,
+  &quot;period_error_s&quot;: {
+    &quot;count&quot;: 154,
+    &quot;minimum&quot;: 0.0007385689881633795,
+    &quot;median&quot;: 0.0014473650138815408,
+    &quot;p95&quot;: 0.30806473957810965,
+    &quot;maximum&quot;: 0.622796938713944
+  },
+  &quot;local_stretch&quot;: {
+    &quot;count&quot;: 154,
+    &quot;minimum&quot;: 1.0073856898816338,
+    &quot;median&quot;: 1.0150313633938062,
+    &quot;p95&quot;: 9.250671233670062,
+    &quot;maximum&quot;: 48.14797088384353
+  },
+  &quot;submitted_joint_span_s&quot;: {
+    &quot;count&quot;: 155,
+    &quot;minimum&quot;: 0.01824075705371797,
+    &quot;median&quot;: 0.04979505197843537,
+    &quot;p95&quot;: 0.050721153611084445,
+    &quot;maximum&quot;: 0.05988148000324145
+  },
+  &quot;six_axis_submission_span_s&quot;: {
+    &quot;count&quot;: 152,
+    &quot;minimum&quot;: 0.045545864035375416,
+    &quot;median&quot;: 0.049801935005234554,
+    &quot;p95&quot;: 0.05072125291044358,
+    &quot;maximum&quot;: 0.05988148000324145
+  },
+  &quot;call_duration_s&quot;: {
+    &quot;count&quot;: 155,
+    &quot;minimum&quot;: 0.028381317970342934,
+    &quot;median&quot;: 0.05980575503781438,
+    &quot;p95&quot;: 0.06054736516671255,
+    &quot;maximum&quot;: 0.07009027298772708
+  }
+}</pre><figure><figcaption>累计提交调用漂移（x 原参考秒，y 秒）</figcaption><svg viewBox="0 0 760 260" role="img"><path d="M55 40V220H720" fill="none" stroke="#888"/><polyline points="55.00,220.00 60.50,219.98 66.00,219.96 71.50,219.94 77.00,219.92 82.50,219.89 88.00,219.86 93.50,219.84 97.77,219.41 99.00,214.10 104.50,214.08 108.84,213.67 110.00,208.29 115.50,208.27 121.00,208.25 126.50,204.28 132.00,204.26 137.50,204.24 143.00,204.22 146.46,201.39 148.50,200.06 154.00,200.03 159.50,200.00 165.00,199.98 167.48,198.96 170.50,194.18 173.01,193.17 176.00,192.16 181.50,192.14 187.00,192.11 192.50,192.09 198.00,192.07 203.50,192.05 206.21,191.12 209.00,189.89 211.74,188.97 214.50,182.27 220.00,182.25 225.50,182.22 231.00,182.20 232.76,180.96 236.50,178.04 238.29,176.80 242.00,176.78 247.50,176.76 250.47,175.92 253.00,168.58 257.10,168.10 258.50,162.58 264.00,162.55 269.50,162.53 275.00,162.51 280.50,162.49 286.00,160.35 289.19,159.57 291.50,159.24 297.00,159.22 300.26,158.47 302.50,156.50 308.00,156.48 313.50,150.51 319.00,150.49 324.50,150.46 330.00,150.45 335.50,150.43 337.88,147.41 341.00,146.45 346.50,146.42 352.00,146.40 357.50,146.39 363.00,146.36 368.50,146.35 374.00,142.01 376.61,141.05 379.50,134.41 385.00,134.39 390.50,134.37 396.00,134.35 398.74,133.42 399.84,122.22 401.50,120.75 407.00,120.74 412.50,120.72 414.23,119.47 418.00,112.93 423.50,112.74 429.00,112.72 434.50,112.71 438.57,112.22 440.00,108.89 445.50,108.86 451.00,108.84 456.50,108.82 462.00,108.80 467.50,108.78 473.00,108.76 475.08,106.77 478.50,105.89 484.00,105.87 489.50,105.84 491.68,104.74 495.00,101.86 497.21,100.76 500.50,98.04 506.00,98.02 509.38,97.31 511.50,96.93 517.00,96.91 522.50,92.19 524.87,91.15 528.00,91.09 533.50,91.06 539.00,91.04 542.58,87.34 544.50,85.97 550.00,85.95 555.50,85.94 556.96,84.60 561.00,84.58 566.50,81.56 572.00,81.54 577.50,81.52 583.00,81.50 585.73,80.58 588.50,75.71 591.26,74.79 594.00,67.91 599.50,67.89 605.00,67.88 610.50,67.86 616.00,67.83 620.03,67.33 621.50,66.75 627.00,66.73 628.88,65.53 632.20,65.18 632.50,63.28 638.00,63.26 643.50,63.23 645.48,58.10 649.00,57.26 654.50,57.24 660.00,57.23 664.29,56.82 665.50,51.25 670.93,51.20 671.00,50.14 676.50,50.13 682.00,50.11 687.50,50.08 693.00,50.07 698.50,50.05 704.00,50.03 709.50,50.01 715.00,50.00" fill="none" stroke="#1864ab" stroke-width="1.8"/><text x="55" y="245">x: 0.100 — 12.100</text><text x="55" y="25">y: 0.0000 — 9.4505</text></svg></figure><figure><figcaption>相邻调用周期偏差（x 原参考秒，y 秒）</figcaption><svg viewBox="0 0 760 260" role="img"><path d="M55 40V220H720" fill="none" stroke="#888"/><polyline points="55.00,219.86 60.55,219.90 66.09,219.90 71.64,219.93 77.18,219.69 82.73,219.83 88.28,219.87 92.58,213.71 93.82,139.52 99.37,219.87 103.74,213.95 104.92,138.47 110.46,219.89 116.01,219.98 121.55,159.78 127.10,219.87 132.65,219.97 138.19,219.86 141.68,177.21 143.74,200.10 149.29,219.69 154.83,219.76 160.38,219.83 162.88,204.77 165.92,147.59 168.46,204.81 171.47,204.89 177.02,219.84 182.56,219.74 188.11,219.90 193.66,219.96 199.20,219.97 201.93,206.05 204.75,201.46 207.51,206.22 210.29,118.44 215.84,219.84 221.39,219.84 226.93,219.86 228.71,201.29 232.48,175.86 234.29,201.42 238.03,219.90 243.57,219.94 246.56,207.37 249.12,108.65 253.26,213.02 254.66,136.23 260.21,219.82 265.76,219.84 271.30,219.93 276.85,219.95 282.39,187.57 285.61,208.38 287.94,215.19 293.49,219.94 296.77,208.85 299.03,190.25 304.58,219.88 310.13,129.44 315.67,219.91 321.22,219.87 326.76,219.94 332.31,219.90 334.71,174.30 337.86,205.62 343.40,219.87 348.95,219.89 354.50,219.93 360.04,219.84 365.59,219.99 371.13,154.35 373.76,205.54 376.68,119.27 382.23,219.90 387.77,219.94 393.32,219.86 396.08,206.11 397.19,50.00 398.87,198.00 404.41,219.94 409.96,219.97 411.70,201.24 415.50,120.81 421.05,217.27 426.60,219.95 432.14,219.97 436.25,212.83 437.69,169.58 443.24,219.81 448.78,219.90 454.33,219.85 459.87,219.90 465.42,219.93 470.97,219.91 473.07,189.88 476.51,206.83 482.06,219.89 487.61,219.81 489.80,203.47 493.15,176.50 495.38,203.45 498.70,178.94 504.24,219.81 507.66,209.39 509.79,214.48 515.34,219.87 520.88,148.55 523.28,204.40 526.43,219.27 531.97,219.80 537.52,219.81 541.13,164.04 543.07,199.42 548.61,219.85 554.16,220.00 555.63,199.86 559.71,219.89 565.25,174.41 570.80,219.86 576.34,219.91 581.89,219.93 584.65,206.15 587.44,146.25 590.22,206.26 592.98,115.56 598.53,219.95 604.08,220.00 609.62,219.92 615.17,219.83 619.23,212.61 620.71,211.33 626.26,219.96 628.16,201.98 631.51,214.79 631.81,191.40 637.35,219.86 642.90,219.81 644.90,142.18 648.45,207.48 653.99,219.87 659.54,220.00 663.87,213.99 665.08,135.60 670.56,219.54 670.63,204.07 676.18,219.95 681.72,219.92 687.27,219.83 692.82,219.95 698.36,219.92 703.91,220.00 709.45,219.89 715.00,220.00" fill="none" stroke="#1864ab" stroke-width="1.8"/><text x="55" y="245">x: 0.200 — 12.100</text><text x="55" y="25">y: 0.0007 — 0.6228</text></svg></figure><figure><figcaption>同组已提交关节跨度（x 原参考秒，y 秒）</figcaption><svg viewBox="0 0 760 260" role="img"><path d="M55 40V220H720" fill="none" stroke="#888"/><polyline points="55.00,128.02 60.50,90.72 66.00,93.01 71.50,94.82 77.00,95.12 82.50,102.05 88.00,102.84 93.50,104.48 97.77,108.53 99.00,90.64 104.50,91.96 108.84,96.16 110.00,90.28 115.50,92.14 121.00,92.37 126.50,89.59 132.00,90.59 137.50,92.16 143.00,95.37 146.46,88.11 148.50,90.48 154.00,93.37 159.50,95.54 165.00,98.40 167.48,98.71 170.50,90.12 173.01,91.61 176.00,88.56 181.50,89.82 187.00,91.99 192.50,93.82 198.00,92.93 203.50,94.21 206.21,95.80 209.00,89.96 211.74,90.24 214.50,89.90 220.00,50.00 225.50,92.65 231.00,96.11 232.76,95.27 236.50,50.28 238.29,91.60 242.00,83.76 247.50,84.31 250.47,85.06 253.00,88.78 257.10,87.40 258.50,90.32 264.00,92.50 269.50,94.48 275.00,96.78 280.50,97.88 286.00,89.52 289.19,92.12 291.50,90.65 297.00,91.15 300.26,91.32 302.50,90.74 308.00,92.11 313.50,88.22 319.00,89.42 324.50,89.68 330.00,90.48 335.50,92.67 337.88,90.46 341.00,88.88 346.50,90.91 352.00,92.79 357.50,91.05 363.00,95.53 368.50,95.75 374.00,92.50 376.61,92.55 379.50,89.46 385.00,90.92 390.50,89.23 396.00,91.15 398.74,94.82 399.84,88.53 401.50,89.52 407.00,91.82 412.50,92.48 414.23,93.10 418.00,89.71 423.50,89.47 429.00,90.14 434.50,89.46 438.57,89.24 440.00,89.16 445.50,91.18 451.00,92.97 456.50,94.62 462.00,95.78 467.50,96.81 473.00,97.04 475.08,88.74 478.50,88.67 484.00,90.57 489.50,94.01 491.68,94.38 495.00,86.54 497.21,90.74 500.50,89.95 506.00,93.69 509.38,94.19 511.50,88.62 517.00,89.51 522.50,89.44 524.87,90.42 528.00,86.65 533.50,92.56 539.00,93.76 542.58,89.07 544.50,89.80 550.00,91.80 555.50,90.96 556.96,91.55 561.00,108.37 566.50,89.89 572.00,92.39 577.50,92.00 583.00,93.03 585.73,94.59 588.50,88.28 591.26,91.52 594.00,89.71 599.50,90.39 605.00,89.48 610.50,90.80 616.00,94.04 620.03,94.84 621.50,90.16 627.00,89.49 628.88,89.81 632.20,87.54 632.50,87.40 638.00,91.10 643.50,95.24 645.48,90.98 649.00,88.17 654.50,91.28 660.00,92.05 664.29,92.96 665.50,88.51 670.93,90.34 671.00,171.89 676.50,89.48 682.00,89.02 687.50,93.31 693.00,93.62 698.50,94.70 704.00,94.03 709.50,96.02 715.00,220.00" fill="none" stroke="#1864ab" stroke-width="1.8"/><text x="55" y="245">x: 0.100 — 12.100</text><text x="55" y="25">y: 0.0182 — 0.0599</text></svg></figure>
+<h2>反馈与原时间轴误差</h2><table><tr><th>轴</th><th>有效样本</th><th>拒绝次数</th><th>中位间隔 s</th><th>时间加权跟踪指标</th></tr><tr><td>J0</td><td>149</td><td>0</td><td>0.11087626501102932</td><td>{&#x27;samples&#x27;: 52, &#x27;covered_s&#x27;: 4.071886668098159, &#x27;coverage_of_original_duration&#x27;: 0.3365195593469553, &#x27;rmse_deg&#x27;: 0.9570616859895941, &#x27;absolute_error_p95_deg&#x27;: 1.5889795342392627, &#x27;maximum_observed_absolute_error_deg&#x27;: 1.6031702200194569, &#x27;integration&#x27;: &#x27;piecewise-linear error between valid host-received samples; long gaps excluded&#x27;}</td></tr><tr><td>J1</td><td>149</td><td>0</td><td>0.11087626501102932</td><td>{&#x27;samples&#x27;: 52, &#x27;covered_s&#x27;: 4.071886668098159, &#x27;coverage_of_original_duration&#x27;: 0.3365195593469553, &#x27;rmse_deg&#x27;: 5.4446080458486525, &#x27;absolute_error_p95_deg&#x27;: 8.896599846859488, &#x27;maximum_observed_absolute_error_deg&#x27;: 9.04169864723784, &#x27;integration&#x27;: &#x27;piecewise-linear error between valid host-received samples; long gaps excluded&#x27;}</td></tr><tr><td>J2</td><td>149</td><td>0</td><td>0.11087626501102932</td><td>{&#x27;samples&#x27;: 52, &#x27;covered_s&#x27;: 4.071886668098159, &#x27;coverage_of_original_duration&#x27;: 0.3365195593469553, &#x27;rmse_deg&#x27;: 2.125227826644642, &#x27;absolute_error_p95_deg&#x27;: 3.033335592562007, &#x27;maximum_observed_absolute_error_deg&#x27;: 3.1598264889246437, &#x27;integration&#x27;: &#x27;piecewise-linear error between valid host-received samples; long gaps excluded&#x27;}</td></tr><tr><td>J3</td><td>149</td><td>0</td><td>0.11087626501102932</td><td>{&#x27;samples&#x27;: 52, &#x27;covered_s&#x27;: 4.071886668098159, &#x27;coverage_of_original_duration&#x27;: 0.3365195593469553, &#x27;rmse_deg&#x27;: 0.6055466495660393, &#x27;absolute_error_p95_deg&#x27;: 0.9923172709990633, &#x27;maximum_observed_absolute_error_deg&#x27;: 1.003785657120452, &#x27;integration&#x27;: &#x27;piecewise-linear error between valid host-received samples; long gaps excluded&#x27;}</td></tr><tr><td>J4</td><td>149</td><td>0</td><td>0.11087626501102932</td><td>{&#x27;samples&#x27;: 52, &#x27;covered_s&#x27;: 4.071886668098159, &#x27;coverage_of_original_duration&#x27;: 0.3365195593469553, &#x27;rmse_deg&#x27;: 17.909190119832914, &#x27;absolute_error_p95_deg&#x27;: 28.540003859925726, &#x27;maximum_observed_absolute_error_deg&#x27;: 28.862058390722183, &#x27;integration&#x27;: &#x27;piecewise-linear error between valid host-received samples; long gaps excluded&#x27;}</td></tr><tr><td>J5</td><td>149</td><td>0</td><td>0.11087626501102932</td><td>{&#x27;samples&#x27;: 52, &#x27;covered_s&#x27;: 4.071886668098159, &#x27;coverage_of_original_duration&#x27;: 0.3365195593469553, &#x27;rmse_deg&#x27;: 8.980873602307897, &#x27;absolute_error_p95_deg&#x27;: 13.819929355576676, &#x27;maximum_observed_absolute_error_deg&#x27;: 13.918345782064758, &#x27;integration&#x27;: &#x27;piecewise-linear error between valid host-received samples; long gaps excluded&#x27;}</td></tr><tr><td>J6</td><td>149</td><td>0</td><td>0.11087626501102932</td><td>None</td></tr></table>
+<h2>下游执行与稳定残差</h2><p>下游执行仍待确认：True；已证明硬件缺陷：False。</p><p>继续改上层时序，不能证明能够修复当前静态残差或无进展。需要核实下游指令采用、位置执行与反馈。</p><pre>{
+  &quot;basis&quot;: &quot;host final-target submission and positive receipt ACK; stable accepted feedback, not motor application or physical stillness&quot;,
+  &quot;final_target_submission_complete_monotonic_s&quot;: 307204.743491276,
+  &quot;window_s&quot;: [
+    307207.95279886,
+    307209.95279886
+  ],
+  &quot;settle_exclusion_s&quot;: 0.4,
+  &quot;required_observed_span_s&quot;: 1.0,
+  &quot;peak_to_peak_threshold_deg&quot;: 0.2,
+  &quot;axes&quot;: [
+    {
+      &quot;joint&quot;: &quot;J0&quot;,
+      &quot;target_deg&quot;: 0.004998268764445424,
+      &quot;median_received_deg&quot;: -0.20000000298023224,
+      &quot;median_residual_deg&quot;: -0.20499827174467766,
+      &quot;peak_to_peak_deg&quot;: 0.10000000149011612,
+      &quot;samples&quot;: 18,
+      &quot;sample_span_s&quot;: 1.9045403669588268
+    },
+    {
+      &quot;joint&quot;: &quot;J1&quot;,
+      &quot;target_deg&quot;: -31.509977214558837,
+      &quot;median_received_deg&quot;: -31.299999237060547,
+      &quot;median_residual_deg&quot;: 0.2099779774982906,
+      &quot;peak_to_peak_deg&quot;: 0.09999847412109375,
+      &quot;samples&quot;: 18,
+      &quot;sample_span_s&quot;: 1.9045403669588268
+    },
+    {
+      &quot;joint&quot;: &quot;J2&quot;,
+      &quot;target_deg&quot;: 45.83676070413924,
+      &quot;median_received_deg&quot;: 46.70000076293945,
+      &quot;median_residual_deg&quot;: 0.8632400588002156,
+      &quot;peak_to_peak_deg&quot;: 0.0,
+      &quot;samples&quot;: 18,
+      &quot;sample_span_s&quot;: 1.9045403669588268
+    },
+    {
+      &quot;joint&quot;: &quot;J3&quot;,
+      &quot;target_deg&quot;: 0.0052630376085143205,
+      &quot;median_received_deg&quot;: -0.10000000149011612,
+      &quot;median_residual_deg&quot;: -0.10526303909863044,
+      &quot;peak_to_peak_deg&quot;: 0.0,
+      &quot;samples&quot;: 18,
+      &quot;sample_span_s&quot;: 1.9045403669588268
+    },
+    {
+      &quot;joint&quot;: &quot;J4&quot;,
+      &quot;target_deg&quot;: -14.318275384380826,
+      &quot;median_received_deg&quot;: -13.100000381469728,
+      &quot;median_residual_deg&quot;: 1.2182750029110974,
+      &quot;peak_to_peak_deg&quot;: 0.0,
+      &quot;samples&quot;: 18,
+      &quot;sample_span_s&quot;: 1.9045403669588268
+    },
+    {
+      &quot;joint&quot;: &quot;J5&quot;,
+      &quot;target_deg&quot;: -0.0005160115443558766,
+      &quot;median_received_deg&quot;: -0.10000000149011612,
+      &quot;median_residual_deg&quot;: -0.09948398994576024,
+      &quot;peak_to_peak_deg&quot;: 0.0,
+      &quot;samples&quot;: 18,
+      &quot;sample_span_s&quot;: 1.9045403669588268
+    }
+  ],
+  &quot;hardware_defect_proven&quot;: false,
+  &quot;implication&quot;: &quot;Continued upper-layer timing changes alone are not evidence that this persistent residual will be corrected.&quot;
+}</pre><p>None</p>
+<h2>指标语义与限制</h2><ul><li>All times use host monotonic receipt/submission. Motor application and encoder sampling times, and their delays, are unknown.</li><li>Group start is entry to transport.send, possibly before internal waits; group skew measures only commands actually submitted.</li><li>ACK is paired by DDS sequence to the transmitted single-joint command. It acknowledges receipt, not movement completion.</li><li>Filtered merged joint values retain per-joint receipt provenance. Rejected/retained joints are not new simultaneous samples.</li><li>Time-weighted tracking errors compare host-received joint position to the original reference time, with no fitted time shift or post-abort endpoint extension.</li><li>No motor synchronization, calibrated physical vibration, jerk, causal hardware diagnosis, or completed motion is inferred.</li><li>Coverage excludes adjacent accepted-sample intervals longer than max_feedback_gap_s; this is an analysis parameter, not a vendor limit.</li></ul>
+<h2>缺失证据</h2><ul><li>Legacy reference epoch is inferred from the first send-call start minus source phase; initial dispatch latency is unknown.</li></ul>
+<p>原始失败信息：固定姿态终点重发后偏差仍未有效改善：J4 批准终点 -14.318°，实际反馈 -13.100°，偏差 1.218°（允许 ≤1°）；已重发 5 轮、5 条关节指令；终点收敛耗时 5.21 秒；连续 5.02 秒未达到要求的偏差改善；已停止后续指令，未确认到位</p></html>

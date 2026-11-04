@@ -1,0 +1,16 @@
+{
+  "original_model": "/home/aup/Lerobot/models/ACT/rad_place_v5_r05/020000/pretrained_model",
+  "preserved_copy": "/media/aup/UbuntuData/PIPER机械臂/deployment/baselines/task_success_v6/pretrained_model",
+  "sha256": {
+    "config.json": "1047d842711a875818fdbbb270d48cc820b1434516c7e77ce05bc175c42ab8e5",
+    "model.safetensors": "58ff63d7cc57052f56d2e13e5121fbe1ea9b2bb0d1ed6fda65005264d4c2c09e",
+    "policy_postprocessor.json": "c27cf6f42b42352f9b8f9c40da155fd4459e0ee9b85b9f23072941eb52b3ffb5",
+    "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "9ddc01fd36829854a820b50e63bc4b9abddce2e5f59b51baac98739526a843dd",
+    "policy_preprocessor.json": "a265568640237bfa353b725e1275bfe708c73e57fd7f9fd8f624e165e608369a",
+    "policy_preprocessor_step_3_normalizer_processor.safetensors": "63284104b3136d2b2673bdb7bf5f85e7f82207f56c2d98057f951ec8d47fd3ab",
+    "train_config.json": "353dc84af7f2eff64955b90b32d6a6beb9278464302353a3c00c43b54512e4e7"
+  },
+  "active_model_path_changed": false,
+  "active_execution_config_changed": false,
+  "auto_deploy_new_training": false
+}

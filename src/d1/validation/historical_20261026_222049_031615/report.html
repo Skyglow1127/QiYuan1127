@@ -1,0 +1,51 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>D1 主机执行时序量化</title>
+<style>body{font:16px/1.65 system-ui;max-width:1100px;margin:32px auto;padding:0 24px;color:#172b4d}table{border-collapse:collapse;font-size:13px}td,th{border:1px solid #ccd;padding:8px;vertical-align:top;overflow-wrap:anywhere}pre{white-space:pre-wrap;background:#f4f6f8;padding:16px}svg{width:100%;max-height:300px}figure{margin:24px 0}a{color:#1864ab}</style>
+<h1>D1 主机执行时序量化</h1><p>运动完成：False。分析使用已有证据，未连接设备。</p>
+<p>原始证据：/media/aup/UbuntuData/ACT训练/09_一键抓取程序_方法一/logs/20261026_222049_031615/execution/01_fixed_pregrasp/executed</p><p>参考时钟：legacy_inferred_from_first_group_call_and_phase；反馈最大插值间隔：0.3 s。</p>
+<p><a href="metrics.json">完整指标与输入 SHA256</a> · <a href="groups.csv">调用组 CSV</a> · <a href="commands.csv">指令与 ACK CSV</a> · <a href="feedback.csv">逐轴有效反馈 CSV</a> · <a href="tracking.csv">原时间轴误差 CSV</a></p>
+<h2>时间关系</h2><pre>{
+  &quot;group_count&quot;: 25,
+  &quot;reference_phase_span_s&quot;: 2.0388629213791294,
+  &quot;actual_call_start_span_s&quot;: 2.8963889600127004,
+  &quot;relative_cumulative_drift_s&quot;: 0.857526038633571,
+  &quot;period_error_s&quot;: {
+    &quot;count&quot;: 24,
+    &quot;minimum&quot;: 0.0010719339828938468,
+    &quot;median&quot;: 0.0017898855207022502,
+    &quot;p95&quot;: 0.24287658916608554,
+    &quot;maximum&quot;: 0.28979939827209233
+  },
+  &quot;local_stretch&quot;: {
+    &quot;count&quot;: 24,
+    &quot;minimum&quot;: 1.0107193398289385,
+    &quot;median&quot;: 1.0178988552070225,
+    &quot;p95&quot;: 6.4899218039484765,
+    &quot;maximum&quot;: 7.760276396342161
+  },
+  &quot;submitted_joint_span_s&quot;: {
+    &quot;count&quot;: 25,
+    &quot;minimum&quot;: 0.017714074987452477,
+    &quot;median&quot;: 0.048888174002058804,
+    &quot;p95&quot;: 0.0511196881881915,
+    &quot;maximum&quot;: 0.06058221001876518
+  },
+  &quot;six_axis_submission_span_s&quot;: {
+    &quot;count&quot;: 21,
+    &quot;minimum&quot;: 0.04629625496454537,
+    &quot;median&quot;: 0.04973662400152534,
+    &quot;p95&quot;: 0.05113038799026981,
+    &quot;maximum&quot;: 0.06058221001876518
+  },
+  &quot;call_duration_s&quot;: {
+    &quot;count&quot;: 25,
+    &quot;minimum&quot;: 0.02817776403389871,
+    &quot;median&quot;: 0.059156815987080336,
+    &quot;p95&quot;: 0.06119157541543245,
+    &quot;maximum&quot;: 0.07127321604639292
+  }
+}</pre><figure><figcaption>累计提交调用漂移（x 原参考秒，y 秒）</figcaption><svg viewBox="0 0 760 260" role="img"><path d="M55 40V220H720" fill="none" stroke="#888"/><polyline points="55.00,220.00 87.37,219.74 119.74,219.53 152.11,219.15 184.48,218.79 216.85,218.50 249.23,218.24 281.60,217.92 313.97,217.58 346.34,217.19 364.35,207.98 378.71,153.69 411.08,153.46 429.29,144.40 443.45,131.04 475.82,130.73 508.19,130.43 526.69,121.57 540.56,64.12 572.94,63.84 605.31,63.51 637.68,63.25 670.05,62.86 702.42,62.46 715.00,50.00" fill="none" stroke="#1864ab" stroke-width="1.8"/><text x="55" y="245">x: 0.100 — 2.139</text><text x="55" y="25">y: 0.0000 — 0.8575</text></svg></figure><figure><figcaption>相邻调用周期偏差（x 原参考秒，y 秒）</figcaption><svg viewBox="0 0 760 260" role="img"><path d="M55 40V220H720" fill="none" stroke="#888"/><polyline points="55.00,219.87 89.04,220.00 123.08,219.50 157.12,219.55 191.16,219.76 225.20,219.86 259.24,219.71 293.28,219.61 327.32,219.48 346.26,193.28 361.37,59.39 395.41,219.92 414.55,193.74 429.45,180.95 463.49,219.70 497.53,219.75 516.98,194.32 531.57,50.00 565.61,219.79 599.65,219.67 633.69,219.85 667.73,219.47 701.77,219.46 715.00,183.61" fill="none" stroke="#1864ab" stroke-width="1.8"/><text x="55" y="245">x: 0.200 — 2.139</text><text x="55" y="25">y: 0.0011 — 0.2898</text></svg></figure><figure><figcaption>同组已提交关节跨度（x 原参考秒，y 秒）</figcaption><svg viewBox="0 0 760 260" role="img"><path d="M55 40V220H720" fill="none" stroke="#888"/><polyline points="55.00,220.00 87.37,179.31 119.74,100.40 152.11,142.11 184.48,102.89 216.85,99.87 249.23,99.47 281.60,102.22 313.97,102.14 346.34,106.37 364.35,106.65 378.71,129.68 411.08,89.41 429.29,90.18 443.45,50.00 475.82,90.11 508.19,92.18 526.69,94.96 540.56,91.01 572.94,87.48 605.31,92.14 637.68,87.69 670.05,91.34 702.42,93.01 715.00,96.37" fill="none" stroke="#1864ab" stroke-width="1.8"/><text x="55" y="245">x: 0.100 — 2.139</text><text x="55" y="25">y: 0.0177 — 0.0606</text></svg></figure>
+<h2>反馈与原时间轴误差</h2><table><tr><th>轴</th><th>有效样本</th><th>拒绝次数</th><th>中位间隔 s</th><th>时间加权跟踪指标</th></tr><tr><td>J0</td><td>33</td><td>0</td><td>0.11128806800115854</td><td>{&#x27;samples&#x27;: 32, &#x27;covered_s&#x27;: 2.9049864360131323, &#x27;coverage_of_original_duration&#x27;: 0.23239891488105058, &#x27;rmse_deg&#x27;: 0.058807980680759056, &#x27;absolute_error_p95_deg&#x27;: 0.08689234997850588, &#x27;maximum_observed_absolute_error_deg&#x27;: 0.09886098219830577, &#x27;integration&#x27;: &#x27;piecewise-linear error between valid host-received samples; long gaps excluded&#x27;}</td></tr><tr><td>J1</td><td>32</td><td>1</td><td>0.11130458995467052</td><td>{&#x27;samples&#x27;: 31, &#x27;covered_s&#x27;: 2.7939698100090027, &#x27;coverage_of_original_duration&#x27;: 0.2235175848007202, &#x27;rmse_deg&#x27;: 10.188329628666814, &#x27;absolute_error_p95_deg&#x27;: 16.049696807814446, &#x27;maximum_observed_absolute_error_deg&#x27;: 16.7461113083113, &#x27;integration&#x27;: &#x27;piecewise-linear error between valid host-received samples; long gaps excluded&#x27;}</td></tr><tr><td>J2</td><td>33</td><td>0</td><td>0.11128806800115854</td><td>{&#x27;samples&#x27;: 32, &#x27;covered_s&#x27;: 2.9049864360131323, &#x27;coverage_of_original_duration&#x27;: 0.23239891488105058, &#x27;rmse_deg&#x27;: 6.144998034607754, &#x27;absolute_error_p95_deg&#x27;: 9.719001482566535, &#x27;maximum_observed_absolute_error_deg&#x27;: 10.068270602781269, &#x27;integration&#x27;: &#x27;piecewise-linear error between valid host-received samples; long gaps excluded&#x27;}</td></tr><tr><td>J3</td><td>33</td><td>0</td><td>0.11128806800115854</td><td>{&#x27;samples&#x27;: 32, &#x27;covered_s&#x27;: 2.9049864360131323, &#x27;coverage_of_original_duration&#x27;: 0.23239891488105058, &#x27;rmse_deg&#x27;: 0.09331820771037518, &#x27;absolute_error_p95_deg&#x27;: 0.15083588145271368, &#x27;maximum_observed_absolute_error_deg&#x27;: 0.1729646345870156, &#x27;integration&#x27;: &#x27;piecewise-linear error between valid host-received samples; long gaps excluded&#x27;}</td></tr><tr><td>J4</td><td>33</td><td>0</td><td>0.11128806800115854</td><td>{&#x27;samples&#x27;: 32, &#x27;covered_s&#x27;: 2.9049864360131323, &#x27;coverage_of_original_duration&#x27;: 0.23239891488105058, &#x27;rmse_deg&#x27;: 5.287828402558068, &#x27;absolute_error_p95_deg&#x27;: 8.267094032524659, &#x27;maximum_observed_absolute_error_deg&#x27;: 8.614672278713336, &#x27;integration&#x27;: &#x27;piecewise-linear error between valid host-received samples; long gaps excluded&#x27;}</td></tr><tr><td>J5</td><td>33</td><td>0</td><td>0.11128806800115854</td><td>{&#x27;samples&#x27;: 32, &#x27;covered_s&#x27;: 2.9049864360131323, &#x27;coverage_of_original_duration&#x27;: 0.23239891488105058, &#x27;rmse_deg&#x27;: 0.21276599645958294, &#x27;absolute_error_p95_deg&#x27;: 0.3079952123858079, &#x27;maximum_observed_absolute_error_deg&#x27;: 0.31816659646039447, &#x27;integration&#x27;: &#x27;piecewise-linear error between valid host-received samples; long gaps excluded&#x27;}</td></tr><tr><td>J6</td><td>33</td><td>0</td><td>0.11128806800115854</td><td>None</td></tr></table>
+<h2>下游执行与稳定残差</h2><p>下游执行仍待确认：True；已证明硬件缺陷：False。</p><p>继续改上层时序，不能证明能够修复当前静态残差或无进展。需要核实下游指令采用、位置执行与反馈。</p><pre>null</pre><p>Final reference group and all final active-axis targets were not demonstrably submitted and positively acknowledged.</p>
+<h2>指标语义与限制</h2><ul><li>All times use host monotonic receipt/submission. Motor application and encoder sampling times, and their delays, are unknown.</li><li>Group start is entry to transport.send, possibly before internal waits; group skew measures only commands actually submitted.</li><li>ACK is paired by DDS sequence to the transmitted single-joint command. It acknowledges receipt, not movement completion.</li><li>Filtered merged joint values retain per-joint receipt provenance. Rejected/retained joints are not new simultaneous samples.</li><li>Time-weighted tracking errors compare host-received joint position to the original reference time, with no fitted time shift or post-abort endpoint extension.</li><li>No motor synchronization, calibrated physical vibration, jerk, causal hardware diagnosis, or completed motion is inferred.</li><li>Coverage excludes adjacent accepted-sample intervals longer than max_feedback_gap_s; this is an analysis parameter, not a vendor limit.</li></ul>
+<h2>缺失证据</h2><ul><li>Legacy reference epoch is inferred from the first send-call start minus source phase; initial dispatch latency is unknown.</li></ul>
+<p>原始失败信息：设备已接收指令，但未观察到有效关节运动：J1 下一已批准路径点目标 -80.896°，实际反馈 -83.700°，偏差 2.804°；中间路径点推进门槛 ≤2.5°；等待 2.00 秒，六轴最大反馈变化 0.500°；已停止后续指令，需核查执行器位置控制状态；接收回执不代表到位</p></html>

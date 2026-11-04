@@ -1,0 +1,13 @@
+Gemma is provided under and subject to the Gemma Terms of Use found at ai.google.dev/gemma/terms
+
+The use restrictions in Section 3.2 of the accompanying GEMMA_TERMS.txt,
+including GEMMA_PROHIBITED_USE_POLICY.txt, apply to use and distribution of
+this model and its Gemma-derived components.
+
+Modification notice: model.safetensors is a project fine-tuned derivative of
+lerobot/pi05_base. The action expert and action/time projections were trained
+on PiPER demonstrations; the PaliGemma vision-language backbone was frozen.
+The tokenizer JSON wrappers were reconstructed locally from Google's original
+SentencePiece tokenizer. See tokenizer/provenance.json for exact conversions,
+source URLs and validation. Original configuration and serialized tensor
+bytes are preserved for compatibility with deployment SHA-256 pins.

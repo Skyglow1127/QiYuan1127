@@ -1,0 +1,52 @@
+{
+  "schema": "pi05-empty-gripper-start-restore-config/v1",
+  "expected_identity": {
+    "interface": "can0",
+    "ifindex": 14,
+    "device_path": "/sys/devices/platform/axi/ff9d0000.usb/fe200000.usb/xhci-hcd.1.auto/usb1/1-1/1-1.3/1-1.3:1.0",
+    "host": {
+      "hostname": "kria",
+      "machine_id": "20c5aef53ab9448a94fd5ebcb89f663a"
+    },
+    "driver": "gs_usb",
+    "usb": {
+      "idVendor": "1d50",
+      "idProduct": "606f",
+      "serial": "002100425631511920313857",
+      "manufacturer": "bytewerk",
+      "product": "candleLight USB to CAN adapter"
+    }
+  },
+  "joint_bounds_deg": [
+    [
+      -150,
+      150
+    ],
+    [
+      0,
+      180
+    ],
+    [
+      -170,
+      0
+    ],
+    [
+      -100,
+      100
+    ],
+    [
+      -70,
+      70
+    ],
+    [
+      -180,
+      180
+    ]
+  ],
+  "owner_path": "/tmp/piper_policy_executor_can0.lock",
+  "transport": {
+    "ssh_host": "kr260",
+    "hostname": "10.42.0.55",
+    "remote_directory": "/home/ubuntu/kr260-camera/pi05_startup_restore_power_unchanged_v8"
+  }
+}

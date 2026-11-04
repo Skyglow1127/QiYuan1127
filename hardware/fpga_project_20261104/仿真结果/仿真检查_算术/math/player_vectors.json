@@ -1,0 +1,2656 @@
+{
+  "provenance": "design_only_integer_arithmetic",
+  "physical_f_exec_hz": null,
+  "clock_hz": 49999500,
+  "seed": 20261102,
+  "vector_count": 529,
+  "format": "dt_hex q0 v0 a0 j q1 v1 a1 (448bithex axis0low) overflow_decimal",
+  "vectors_sha256": "2fd521f3e8a9ed589ab823dfbbc9e7ddb9b7b1358d0dd501a4f4c2a5781304f1",
+  "cases": [
+    {
+      "name": "zero",
+      "dt_cycles": 1,
+      "expected_overflow": 0
+    },
+    {
+      "name": "board_stationary_gripper_50mm",
+      "dt_cycles": 727266,
+      "expected_overflow": 0
+    },
+    {
+      "name": "invalid_zero_dt",
+      "dt_cycles": 0,
+      "expected_overflow": 1
+    },
+    {
+      "name": "different_axes_signed",
+      "dt_cycles": 727273,
+      "expected_overflow": 0
+    },
+    {
+      "name": "half_even_components",
+      "dt_cycles": 24999750,
+      "expected_overflow": 0
+    },
+    {
+      "name": "half_odd_components",
+      "dt_cycles": 24999750,
+      "expected_overflow": 0
+    },
+    {
+      "name": "int64_min_hold",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 0
+    },
+    {
+      "name": "int64_max_hold",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 0
+    },
+    {
+      "name": "max_dt_small_jerk",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 0
+    },
+    {
+      "name": "max_dt_positive_overflow",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "max_dt_negative_overflow",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "q_positive_overflow",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "q_negative_overflow",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "v_positive_overflow",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "a_positive_overflow",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "a_negative_overflow",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "one_cycle_extreme_derivatives",
+      "dt_cycles": 1,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_0",
+      "dt_cycles": 2,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_1",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_2",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_3",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_4",
+      "dt_cycles": 2,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_5",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_6",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_7",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_8",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_9",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_10",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_11",
+      "dt_cycles": 2,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_12",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_13",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_14",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_15",
+      "dt_cycles": 2,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_16",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_17",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_18",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_19",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_20",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_21",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_22",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_23",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_24",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_25",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_26",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_27",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_28",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_29",
+      "dt_cycles": 727273,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_30",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_31",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_32",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_33",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_34",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_35",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_36",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_37",
+      "dt_cycles": 49999500,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_38",
+      "dt_cycles": 2,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_39",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_40",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_41",
+      "dt_cycles": 99,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_42",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_43",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_44",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_45",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_46",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_47",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_48",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_49",
+      "dt_cycles": 1,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_50",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_51",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_52",
+      "dt_cycles": 99,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_53",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_54",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_55",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_56",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_57",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_58",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_59",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_60",
+      "dt_cycles": 727273,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_61",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_62",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_63",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_64",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_65",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_66",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_67",
+      "dt_cycles": 2,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_68",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_69",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_70",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_71",
+      "dt_cycles": 727273,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_72",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_73",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_74",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_75",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_76",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_77",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_78",
+      "dt_cycles": 99,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_79",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_80",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_81",
+      "dt_cycles": 727273,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_82",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_83",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_84",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_85",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_86",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_87",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_88",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_89",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_90",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_91",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_92",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_93",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_94",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_95",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_96",
+      "dt_cycles": 1,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_97",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_98",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_99",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_100",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_101",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_102",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_103",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_104",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_105",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_106",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_107",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_108",
+      "dt_cycles": 49999500,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_109",
+      "dt_cycles": 99,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_110",
+      "dt_cycles": 727273,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_111",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_112",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_113",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_114",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_115",
+      "dt_cycles": 49999500,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_116",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_117",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_118",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_119",
+      "dt_cycles": 49999500,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_120",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_121",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_122",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_123",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_124",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_125",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_126",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_127",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_128",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_129",
+      "dt_cycles": 50000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_130",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_131",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_132",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_133",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_134",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_135",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_136",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_137",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_138",
+      "dt_cycles": 99,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_139",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_140",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_141",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_142",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_143",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_144",
+      "dt_cycles": 2,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_145",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_146",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_147",
+      "dt_cycles": 99,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_148",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_149",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_150",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_151",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_152",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_153",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_154",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_155",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_156",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_157",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_158",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_159",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_160",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_161",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_162",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_163",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_164",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_165",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_166",
+      "dt_cycles": 1,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_167",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_168",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_169",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_170",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_171",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_172",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_173",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_174",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_175",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_176",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_177",
+      "dt_cycles": 2,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_178",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_179",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_180",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_181",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_182",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_183",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_184",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_185",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_186",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_187",
+      "dt_cycles": 2,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_188",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_189",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_190",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_191",
+      "dt_cycles": 99,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_192",
+      "dt_cycles": 1,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_193",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_194",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_195",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_196",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_197",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_198",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_199",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_200",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_201",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_202",
+      "dt_cycles": 50000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_203",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_204",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_205",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_206",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_207",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_208",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_209",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_210",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_211",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_212",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_213",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_214",
+      "dt_cycles": 49999500,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_215",
+      "dt_cycles": 2,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_216",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_217",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_218",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_219",
+      "dt_cycles": 99,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_220",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_221",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_222",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_223",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_224",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_225",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_226",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_227",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_228",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_229",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_230",
+      "dt_cycles": 99,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_231",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_232",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_233",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_234",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_235",
+      "dt_cycles": 99,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_236",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_237",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_238",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_239",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_240",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_241",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_242",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_243",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_244",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_245",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_246",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_247",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_248",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_249",
+      "dt_cycles": 99,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_250",
+      "dt_cycles": 99,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_251",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_252",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_253",
+      "dt_cycles": 49999500,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_254",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_255",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_256",
+      "dt_cycles": 2,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_257",
+      "dt_cycles": 727273,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_258",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_259",
+      "dt_cycles": 49999500,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_260",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_261",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_262",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_263",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_264",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_265",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_266",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_267",
+      "dt_cycles": 49999500,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_268",
+      "dt_cycles": 50000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_269",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_270",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_271",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_272",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_273",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_274",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_275",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_276",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_277",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_278",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_279",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_280",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_281",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_282",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_283",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_284",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_285",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_286",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_287",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_288",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_289",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_290",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_291",
+      "dt_cycles": 727273,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_292",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_293",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_294",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_295",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_296",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_297",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_298",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_299",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_300",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_301",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_302",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_303",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_304",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_305",
+      "dt_cycles": 1,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_306",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_307",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_308",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_309",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_310",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_311",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_312",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_313",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_314",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_315",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_316",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_317",
+      "dt_cycles": 99,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_318",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_319",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_320",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_321",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_322",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_323",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_324",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_325",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_326",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_327",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_328",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_329",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_330",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_331",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_332",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_333",
+      "dt_cycles": 727273,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_334",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_335",
+      "dt_cycles": 2,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_336",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_337",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_338",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_339",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_340",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_341",
+      "dt_cycles": 99,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_342",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_343",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_344",
+      "dt_cycles": 727273,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_345",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_346",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_347",
+      "dt_cycles": 99,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_348",
+      "dt_cycles": 50000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_349",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_350",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_351",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_352",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_353",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_354",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_355",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_356",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_357",
+      "dt_cycles": 49999500,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_358",
+      "dt_cycles": 2,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_359",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_360",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_361",
+      "dt_cycles": 1,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_362",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_363",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_364",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_365",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_366",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_367",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_368",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_369",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_370",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_371",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_372",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_373",
+      "dt_cycles": 727273,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_374",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_375",
+      "dt_cycles": 727273,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_376",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_377",
+      "dt_cycles": 2,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_378",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_379",
+      "dt_cycles": 99,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_380",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_381",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_382",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_383",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_384",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_385",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_386",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_387",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_388",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_389",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_390",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_391",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_392",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_393",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_394",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_395",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_396",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_397",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_398",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_399",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_400",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_401",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_402",
+      "dt_cycles": 1,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_403",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_404",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_405",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_406",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_407",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_408",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_409",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_410",
+      "dt_cycles": 1,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_411",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_412",
+      "dt_cycles": 49999500,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_413",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_414",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_415",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_416",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_417",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_418",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_419",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_420",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_421",
+      "dt_cycles": 49999500,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_422",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_423",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_424",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_425",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_426",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_427",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_428",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_429",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_430",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_431",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_432",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_433",
+      "dt_cycles": 1,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_434",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_435",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_436",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_437",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_438",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_439",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_440",
+      "dt_cycles": 2,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_441",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_442",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_443",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_444",
+      "dt_cycles": 99,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_445",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_446",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_447",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_448",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_449",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_450",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_451",
+      "dt_cycles": 49999500,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_452",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_453",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_454",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_455",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_456",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_457",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_458",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_459",
+      "dt_cycles": 99,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_460",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_461",
+      "dt_cycles": 2,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_462",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_463",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_464",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_465",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_466",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_467",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_468",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_469",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_470",
+      "dt_cycles": 2,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_471",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_472",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_473",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_474",
+      "dt_cycles": 1000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_475",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_476",
+      "dt_cycles": 727272,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_477",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_478",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_479",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_480",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_481",
+      "dt_cycles": 1,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_482",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_483",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_484",
+      "dt_cycles": 727273,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_485",
+      "dt_cycles": 1,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_486",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_487",
+      "dt_cycles": 49999500,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_488",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_489",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_490",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_491",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_492",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_493",
+      "dt_cycles": 727272,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_494",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_495",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_496",
+      "dt_cycles": 99,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_497",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_498",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_499",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_500",
+      "dt_cycles": 2,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_501",
+      "dt_cycles": 727273,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_502",
+      "dt_cycles": 49999500,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_503",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_504",
+      "dt_cycles": 50000000,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_505",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_506",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    },
+    {
+      "name": "seeded_507",
+      "dt_cycles": 1000000,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_508",
+      "dt_cycles": 727273,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_509",
+      "dt_cycles": 727273,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_510",
+      "dt_cycles": 99,
+      "expected_overflow": 0
+    },
+    {
+      "name": "seeded_511",
+      "dt_cycles": 4294967295,
+      "expected_overflow": 1
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "return_code": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 91.061530248,
+  "minimum_available_system_memory_bytes": 14050832384,
+  "log_path": "/media/aup/UbuntuData/\u6280\u672f\u6587\u6863/\u5d4c\u5165\u5f0f\u6bd4\u8d5b\u6280\u672f\u6587\u6863/\u03c00.5\u672c\u673a\u6d4b\u901f\u7ed3\u679c/run_v10_r33/benchmark.log",
+  "argv": [
+    "/home/aup/Lerobot/envs/pi05-rocm-7.14.1/bin/python",
+    "-u",
+    "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_lora_local_optimization_v10/benchmark.py",
+    "--output",
+    "/media/aup/UbuntuData/\u6280\u672f\u6587\u6863/\u5d4c\u5165\u5f0f\u6bd4\u8d5b\u6280\u672f\u6587\u6863/\u03c00.5\u672c\u673a\u6d4b\u901f\u7ed3\u679c/run_v10_r33",
+    "--warmup",
+    "3",
+    "--repeats",
+    "10"
+  ]
+}

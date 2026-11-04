@@ -1,0 +1,190 @@
+{
+  "source_directory": "/media/aup/UbuntuData/技术文档/嵌入式比赛技术文档/派0.5本地推理",
+  "copied_date": "versioned-publication",
+  "files": [
+    {
+      "path": "01_同步推理/历史未完成记录/run_v10_r32/benchmark.log",
+      "bytes": 637,
+      "sha256": "faabe9ca48acd40c54c7dfdc64b00a7e1415b1244b2fc96ae10ee03f24f3837c",
+      "source_sha256": "faabe9ca48acd40c54c7dfdc64b00a7e1415b1244b2fc96ae10ee03f24f3837c"
+    },
+    {
+      "path": "01_同步推理/历史未完成记录/run_v10_r32/report.partial.json",
+      "bytes": 852,
+      "sha256": "1d3d6c40739a26d4b8318f0b2cda2103d37c0cf38223dad353702a2525e0ab57",
+      "source_sha256": "be319c39f3dc19265a03e570af44171d504dbeedcad23f8f66819c63a1d2eb46"
+    },
+    {
+      "path": "01_同步推理/历史未完成记录/run_v10_r32/supervisor.json",
+      "bytes": 638,
+      "sha256": "2797b3640b7373450bb1aabf37d304d46eeddbc4ad15d4e1cf37bbf4f84ea84e",
+      "source_sha256": "3083f8b9efad6fc147f80bf6157537808bcfa2f8f0d27af92c367e3c64672c11"
+    },
+    {
+      "path": "01_同步推理/程序/benchmark.py",
+      "bytes": 10176,
+      "sha256": "618fb04725d39f4ed0f0a8389437e0c6ae36091d59cc9220ba1bcd00b7bd97b1",
+      "source_sha256": "99bd73e1552b7bf3734f066ab16c4c17caab6e57ae8d91d04030bd0fec9bdbad"
+    },
+    {
+      "path": "01_同步推理/程序/run.sh",
+      "bytes": 324,
+      "sha256": "5987188fdf05ca61d038c313d1744a437e561a9deebbdc61dbfb7cc141f66f06",
+      "source_sha256": "5987188fdf05ca61d038c313d1744a437e561a9deebbdc61dbfb7cc141f66f06"
+    },
+    {
+      "path": "01_同步推理/程序/supervise.py",
+      "bytes": 3983,
+      "sha256": "9de151eb69b2123fb14aa00da0a31548053cefd97e7014f29b89f2a0f431c7b9",
+      "source_sha256": "9de151eb69b2123fb14aa00da0a31548053cefd97e7014f29b89f2a0f431c7b9"
+    },
+    {
+      "path": "01_同步推理/结果/run_v10_r33/benchmark.log",
+      "bytes": 5917,
+      "sha256": "72a4c0cf29d0f2769fc252b31ba84a2ca685e1f8e32114b1a45cbb8f58b55fe7",
+      "source_sha256": "74efcca465058affdad8e6d101fc57eaa6802636ccfd26d1b97c322be4cec83a"
+    },
+    {
+      "path": "01_同步推理/结果/run_v10_r33/predicted_actions_by_step.npz",
+      "bytes": 66274,
+      "sha256": "1fd4f3b06f73bbb43ff483aad5d03f83c53f55b7519d15c7cde2da9b519f569e",
+      "source_sha256": "1fd4f3b06f73bbb43ff483aad5d03f83c53f55b7519d15c7cde2da9b519f569e"
+    },
+    {
+      "path": "01_同步推理/结果/run_v10_r33/report.json",
+      "bytes": 5796,
+      "sha256": "faf8cec277437f5741b7902a58f2c554b81f74de29009fd15b6f66efc8e8c459",
+      "source_sha256": "7f763cdc9dbb8eea34fc2713ceb5ac3d0dc88639ed8dfc2522d60dfb7db964a8"
+    },
+    {
+      "path": "01_同步推理/结果/run_v10_r33/report.partial.json",
+      "bytes": 2690,
+      "sha256": "d1d474cc35bd149c18cf8e65cd37188330522d3257f8cf2d65f893c4b102c4f3",
+      "source_sha256": "6871da88dc6c8a8fbf7744362a11cbe4d52301e4243384063c240bd028984790"
+    },
+    {
+      "path": "01_同步推理/结果/run_v10_r33/supervisor.json",
+      "bytes": 742,
+      "sha256": "818fadf2d98e8814370988772d77c0d24a0da5855a1bfe0441537ac2ba465f28",
+      "source_sha256": "34c04358e1edd9d79b02e381d2874268988fb29a58c25d3ae02a1aae1b5ac0cb"
+    },
+    {
+      "path": "01_同步推理/结果/run_v10_r33/技术文档可用数据.md",
+      "bytes": 1397,
+      "sha256": "c98b442041ce022abe9d0f1eca916f004b294518d75dfdfa9d1a2d80b7e924e1",
+      "source_sha256": "a295a9ffd475589a78cbb02a350a88f7a0a3cc416cc89486d645b04e57d9bf1e"
+    },
+    {
+      "path": "02_同步与异步对照/程序/benchmark_async.py",
+      "bytes": 13149,
+      "sha256": "37d1ae1d23ae6adee0f35afc7dd77c88974b0c93593339e480de746e624f6296",
+      "source_sha256": "37d1ae1d23ae6adee0f35afc7dd77c88974b0c93593339e480de746e624f6296"
+    },
+    {
+      "path": "02_同步与异步对照/程序/run.sh",
+      "bytes": 335,
+      "sha256": "e4748ad03c177ab04b51dacf71451473c81ec0a5cfd2a112b874533b8485bbcf",
+      "source_sha256": "e4748ad03c177ab04b51dacf71451473c81ec0a5cfd2a112b874533b8485bbcf"
+    },
+    {
+      "path": "02_同步与异步对照/结果/run_v10_r34/report.json",
+      "bytes": 4661,
+      "sha256": "d853b07c2c6ab2a37a44916b97579e968443d3dbd26145ce70b7446f1b7a7e7e",
+      "source_sha256": "906601da58dbcbf90ac9bbad06e0ccaf8a57e9c6b27d00617e8b86b77a16959c"
+    },
+    {
+      "path": "02_同步与异步对照/结果/run_v10_r34/测速结果.txt",
+      "bytes": 1247,
+      "sha256": "0eed0b31cf07e605a301ba84994c14e5c7b2eb4d5c7b1027b96ccf63b9d01417",
+      "source_sha256": "0eed0b31cf07e605a301ba84994c14e5c7b2eb4d5c7b1027b96ccf63b9d01417"
+    },
+    {
+      "path": "02_同步与异步对照/结果/run_v10_r35/report.json",
+      "bytes": 33558,
+      "sha256": "983562b5accf0c6a1ebbb6c725f707f3f53b3657034990f7f19200b8ef3e01fe",
+      "source_sha256": "b85f77613550b4ea0881fe29265820a90aad1b9805f94b3c1f777f9515ad4c33"
+    },
+    {
+      "path": "02_同步与异步对照/结果/run_v10_r35/测速结果.txt",
+      "bytes": 1973,
+      "sha256": "9a65983daa64f990844d384815ce571432a6c701e7a695c25a0cbbdb7d2da2de",
+      "source_sha256": "9a65983daa64f990844d384815ce571432a6c701e7a695c25a0cbbdb7d2da2de"
+    },
+    {
+      "path": "03_公共依赖/activate.sh",
+      "bytes": 475,
+      "sha256": "9db011e1f5b7bcbb20eedb190cf29c23911d6bcce193743bb3275c6b5a0fa4cc",
+      "source_sha256": "9db011e1f5b7bcbb20eedb190cf29c23911d6bcce193743bb3275c6b5a0fa4cc"
+    },
+    {
+      "path": "03_公共依赖/pi05_low_memory.py",
+      "bytes": 9069,
+      "sha256": "3b540b0f35af473d69a87b401d006cd093ea3d2287707eff537f9e3da87c1ac8",
+      "source_sha256": "3b540b0f35af473d69a87b401d006cd093ea3d2287707eff537f9e3da87c1ac8"
+    },
+    {
+      "path": "03_公共依赖/recorded_observation.npz",
+      "bytes": 1905982,
+      "sha256": "b28906c8e0048550e37060361adb05880cdf3d06809e5c054b93e42eb0ce1410",
+      "source_sha256": "b28906c8e0048550e37060361adb05880cdf3d06809e5c054b93e42eb0ce1410"
+    },
+    {
+      "path": "04_原始程序快照/同步测速/README.md",
+      "bytes": 1452,
+      "sha256": "4bd29399d66c94bb52f24f80e29b205877fd1b6c5ad7595215d55026c03a61a6",
+      "source_sha256": "9059b9177bb720f8dc0a84b5511978166c31eb31b9dcc5f2bf9f1b4461af5efb"
+    },
+    {
+      "path": "04_原始程序快照/同步测速/benchmark.py",
+      "bytes": 10138,
+      "sha256": "e4308eb05567808c4116593277706d3d039061c1d5444ab24642fb3c6092bfcb",
+      "source_sha256": "50bb7b3dbe8d6ab116acdfef75a989ea9ec97a7b2234b9e11ffd2df7ca52c4dd"
+    },
+    {
+      "path": "04_原始程序快照/同步测速/run.sh",
+      "bytes": 285,
+      "sha256": "f29e5c1678ddb9d62a57688d6b94d31baf39f6ae4c390a8768ae917e89dded0c",
+      "source_sha256": "f29e5c1678ddb9d62a57688d6b94d31baf39f6ae4c390a8768ae917e89dded0c"
+    },
+    {
+      "path": "04_原始程序快照/同步测速/supervise.py",
+      "bytes": 4044,
+      "sha256": "600581a58d85bf7b2701efb4df9a46c10c3ef34f778a893c63872cbe518cd6db",
+      "source_sha256": "600581a58d85bf7b2701efb4df9a46c10c3ef34f778a893c63872cbe518cd6db"
+    },
+    {
+      "path": "04_原始程序快照/异步对照/benchmark_async.py",
+      "bytes": 13137,
+      "sha256": "21502cdb2ac448462492ccdb7059944518c36bd03fd89009929e33af358a672a",
+      "source_sha256": "5c36bfdd01c0372ecb4f1d1f72cb37ff84ad336c8191b59aded6288a869de4cf"
+    },
+    {
+      "path": "04_原始程序快照/异步对照/run.sh",
+      "bytes": 296,
+      "sha256": "9412aeccd19807b4762d26e90bbc2fd0419451c9e0ddf46f70fdb69b866e58ed",
+      "source_sha256": "9412aeccd19807b4762d26e90bbc2fd0419451c9e0ddf46f70fdb69b866e58ed"
+    },
+    {
+      "path": "04_原始程序快照/异步对照/使用说明.txt",
+      "bytes": 4013,
+      "sha256": "83ffe4bbaee7ffaea96bea08b4d920cc81b8741c40bf95e2a4cb4ffe4d95fe3b",
+      "source_sha256": "c5c057b822e48aeae5433ea9356e38215ce6c97647f34c2043600e7b52fe5e40"
+    },
+    {
+      "path": "启动同步测速.sh",
+      "bytes": 164,
+      "sha256": "0be767d5e7b1f010afed23ed391b813b2005aa864872887d37720f8e9e1437bd",
+      "source_sha256": "0be767d5e7b1f010afed23ed391b813b2005aa864872887d37720f8e9e1437bd"
+    },
+    {
+      "path": "启动异步对照测速.sh",
+      "bytes": 173,
+      "sha256": "6967d68bebf1d2ccf24f9051e9f7125c8c51584d5ef5ac338158edecadb2ae79",
+      "source_sha256": "6967d68bebf1d2ccf24f9051e9f7125c8c51584d5ef5ac338158edecadb2ae79"
+    }
+  ],
+  "file_count": 30,
+  "total_bytes": 2104088,
+  "original_file_bytes_preserved": true,
+  "publication_note": "日期及运行路径为发布版本别名；source_sha256 为原文件哈希，sha256 为发布副本哈希，测试数值不变。"
+}

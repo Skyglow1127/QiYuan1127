@@ -1,0 +1,28 @@
+{
+  "name": "gazebo_ready",
+  "label": "Gazebo 固定准备姿态",
+  "model_joint_names": [
+    "Joint1",
+    "Joint2",
+    "Joint3",
+    "Joint4",
+    "Joint5",
+    "Joint6"
+  ],
+  "model_target_rad": [
+    0.0,
+    -0.55,
+    0.8,
+    0.0,
+    -0.25,
+    0.0
+  ],
+  "source": {
+    "path": "/home/aup/Documents/Codex/2026-10-15/xian/outputs/d1t_sim/scripts/control_server.py",
+    "line": 70,
+    "sha256": "1ea4fee906f99c67eb585e0401381d52107c0f906cfaa055b3b744aae9a31ab3",
+    "action": "ready",
+    "ui_label": "准备姿态"
+  },
+  "gripper_policy": "use_reviewed_open_target_sdk_not_a_conversion_from_simulation"
+}

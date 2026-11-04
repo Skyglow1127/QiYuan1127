@@ -1,0 +1,63 @@
+{
+  "purpose": "Task-workspace candidate bounds targeted SDK and dual-Guard verification only",
+  "success": true,
+  "tests_run": 4,
+  "test_names": [
+    "test_task_workspace_only_changes_three_reviewed_upper_bounds",
+    "test_recorded_placement_goals_pass_real_sdk_dual_guards_beyond_old_envelope",
+    "test_task_workspace_actual_invalid_values_and_missing_approval_still_reject",
+    "test_host_and_sdk_receiver_keep_actual_bounds_step_rate_tracking_and_feedback_age"
+  ],
+  "network_calls": 0,
+  "robot_commands_sent": 0,
+  "future_feedback_simulated": false,
+  "fixed_feedback_source": "dataset episode35/frame298; one goal from recorded action and one statistical placement median",
+  "guard_bounds": [
+    [
+      -60.0,
+      40.0
+    ],
+    [
+      0.0,
+      135.0
+    ],
+    [
+      -120.0,
+      0.0
+    ],
+    [
+      -45.0,
+      45.0
+    ],
+    [
+      -60.0,
+      70.0
+    ],
+    [
+      -80.0,
+      60.0
+    ],
+    [
+      0.0,
+      0.1
+    ]
+  ],
+  "inward_target_upper_J1_J2_J5": [
+    38.0,
+    133.0,
+    68.0
+  ],
+  "existing_other_guard_values_and_model_identity_preserved": true,
+  "pending_new_concrete_plan_review": true,
+  "physical_approval_granted": false,
+  "test_log": "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_cloud_inference_v7/cloud_grasp_act_bridge/task_workspace_verification_result.log",
+  "tested_workspace_files_sha256": {
+    "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_cloud_inference_v7/cloud_grasp_act_bridge/pi05_execution_defaults.json": "418f065b09d61f67b13edba48eb293befab2196e760f0adb0f2c934b4b6ed852",
+    "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_cloud_inference_v7/cloud_grasp_act_bridge/launch_grasp.py": "81cc0a3e0d37a06587e9c984000eddd2422c197166aebaaf82572882a44e6995",
+    "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_cloud_inference_v7/cloud_grasp_act_bridge/prepare_trial.py": "230227cf97317b5b0dd3d72c7fa8170f491468cfc79aeb8d37c1e6b3b8c8bdfb",
+    "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_cloud_inference_v7/cloud_grasp_act_bridge/offline_verification.py": "063bafc00a2c9937cced4e9c7f7be11f9876a07ebc8435340610e06626ab5a85"
+  },
+  "prechange_archive": "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_cloud_inference_v7/cloud_grasp_act_bridge/before_task_workspace_v8",
+  "full_native_offline_suite_not_rerun_pending_transport_freeze": true,
+  "scope": "Real SDK encoding/decoding and host plus receiver Guards, synthetic no-transport receiver and fixed recorded feedback. Not physical tracking, collision clearance, model quality or grasp success evidence."
+}

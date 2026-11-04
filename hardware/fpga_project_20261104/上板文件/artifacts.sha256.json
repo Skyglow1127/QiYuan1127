@@ -1,0 +1,11 @@
+{
+  "schema": "robot_rt.build.v1",
+  "timing_passed": true,
+  "board_tested": false,
+  "files": {
+    "robot_rt.bit": "e1ac2863b331e9525759b1e385d706d77f12b993dc3374191a2b88313b9cf86f",
+    "robot_rt.bit.bin": "0952b5578f81dd632a9cce242bb010175e1689702ea9a7f0e9920c303675e879",
+    "robot_rt.xsa": "fd2e3d1922883541fbc121919fff0f72ebeb002f8c7a003c5c2e7b2cabd73a24",
+    "addresses.json": "b00316feac1fcfe028c5bb234fad43a1c9455724edf21e020f3648a253e46849"
+  }
+}

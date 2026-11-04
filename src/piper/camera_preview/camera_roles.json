@@ -1,0 +1,27 @@
+{
+  "schema": "piper-camera-preview-local-v1",
+  "host": "AIPC local USB",
+  "selection_key": "serial",
+  "cameras": {
+    "wrist": {
+      "label_zh": "腕部相机",
+      "serial": "CC1365301EY",
+      "model": "Orbbec DaBai DC1",
+      "identity_verified_from_image": true,
+      "verification_basis": "Previously verified image role; current USB serial independently checked.",
+      "handeye_calibrated": false
+    },
+    "global": {
+      "label_zh": "全局相机",
+      "serial": "CC1365302B2",
+      "model": "Orbbec DaBai DC1",
+      "identity_verified_from_image": true,
+      "verification_basis": "Previously verified external tabletop camera image; current USB serial independently checked.",
+      "handeye_calibrated": false
+    }
+  },
+  "notes": [
+    "Camera streaming only; no robot operations.",
+    "RGB and depth are not exposure synchronized or spatially aligned."
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "at_unix": 1793294273.8727832,
+  "interface_identity": {
+    "transport": "ssh",
+    "ssh_host": "kr260",
+    "ssh_hostname": "10.42.0.55",
+    "receiver": {
+      "interface": "can0",
+      "ifindex": 14,
+      "device_path": "/sys/devices/platform/axi/ff9d0000.usb/fe200000.usb/xhci-hcd.1.auto/usb1/1-1/1-1.3/1-1.3:1.0",
+      "host": {
+        "hostname": "kria",
+        "machine_id": "20c5aef53ab9448a94fd5ebcb89f663a"
+      },
+      "driver": "gs_usb",
+      "usb": {
+        "idVendor": "1d50",
+        "idProduct": "606f",
+        "serial": "002100425631511920313857",
+        "manufacturer": "bytewerk",
+        "product": "candleLight USB to CAN adapter"
+      }
+    }
+  },
+  "mapping": {
+    "action_joint_ids": [
+      341,
+      342,
+      343
+    ],
+    "state_joint_ids": [
+      677,
+      678,
+      679
+    ],
+    "action_gripper_id": 345,
+    "state_gripper_id": 680,
+    "state_status_id": 673
+  },
+  "joint_unit": "deg",
+  "gripper_mode": "width",
+  "current_source_verified": true,
+  "checks": [
+    "remote_receiver_identity",
+    "kernel_receive_timestamps",
+    "up_listen_only_1mbps",
+    "live_follower_feedback",
+    "complete_fresh_bus_targets",
+    "gripper_width_units",
+    "joint_target_feedback_consistency"
+  ],
+  "evidence_file": "/home/aup/Lerobot/logs/kr260_can_verification/v5_r01/snapshot.json",
+  "raw_can_file": "/home/aup/Lerobot/logs/kr260_can_verification/v5_r01/can.jsonl",
+  "inherited_mapping_proof": "/home/aup/Lerobot/projects/piper/official_adapter/lerobot_robot_piper_shared/mapping_verification.json",
+  "inherited_mapping_sha256": "a554688a0384b5d9af616e4914bc21d6d7c764b438ac178aefb089d9f54d6dd0",
+  "physical_leader_provenance": "Inherited user-confirmed physical leader/follower and gripper mapping; current moved receiver and complete target/feedback frames verified passively.",
+  "unit_conversion": "signed millidegrees / 1000 -> degrees; width micrometers / 1e6 -> meters",
+  "robot_commands_sent": 0
+}

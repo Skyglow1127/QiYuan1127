@@ -1,0 +1,247 @@
+{
+  "schema_version": "pi05-independent-act-bridge-execution-defaults/v1",
+  "base_io_config": "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_cloud_inference_v7/cloud_grasp_act_bridge/pi05_base_io_config.json",
+  "remote_directory": "/home/ubuntu/kr260-camera/piper_pi05_expert_act_bridge_v8_executor",
+  "policy": {
+    "execute": true,
+    "limits": {
+      "bounds": [
+        [
+          -60.0,
+          40.0
+        ],
+        [
+          0.0,
+          135.0
+        ],
+        [
+          -120.0,
+          0.0
+        ],
+        [
+          -45.0,
+          45.0
+        ],
+        [
+          -60.0,
+          70.0
+        ],
+        [
+          -80.0,
+          60.0
+        ],
+        [
+          0.0,
+          0.1
+        ]
+      ],
+      "max_step": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        0.008
+      ],
+      "max_target_speed": [
+        45.0,
+        45.0,
+        45.0,
+        45.0,
+        45.0,
+        45.0,
+        0.05
+      ],
+      "max_tracking_error": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        0.015
+      ],
+      "max_observation_age_s": 0.4,
+      "max_command_age_s": 0.4,
+      "max_command_gap_s": 0.75
+    },
+    "lease_s": 0.75,
+    "max_ttl_s": 0.25,
+    "max_feedback_age_s": 0.1,
+    "max_feedback_skew_s": 0.04,
+    "max_link_age_s": 0.5,
+    "quiet_before_arm_s": 1.0,
+    "motion_ctrl2_max_age_s": 5.0,
+    "expected_motion_ctrl2": [
+      1,
+      1,
+      5,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "stop_strategy": "fresh_feedback_target_once",
+    "stop_gripper_force_n": 1.0,
+    "max_gripper_force_n": 1.0
+  },
+  "normal_gripper_force_n": 1.0,
+  "tx_ttl_s": 0.12,
+  "default_duration_s": 0.0,
+  "host": "10.42.0.55",
+  "verified_controller_joint_bounds_deg": [
+    [
+      -150,
+      150
+    ],
+    [
+      0,
+      180
+    ],
+    [
+      -170,
+      0
+    ],
+    [
+      -100,
+      100
+    ],
+    [
+      -70,
+      70
+    ],
+    [
+      -180,
+      180
+    ]
+  ],
+  "provenance": {
+    "original_plan": "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_cloud_grasp/plan_history/v5T142520_795782Z/grasp_plan.json",
+    "original_plan_sha256": "c1f51547ae14ae010d729f0c7518143cfad6d479260b05816f1b4967ab454224",
+    "note": "Independent VLA entry reusing the four existing ACT PiPER hardware-adapter options: inward joint/gripper projection, current-feedback displacement cap, target-rate fraction. Official PI05 select_action/reset FIFO and explicit user-authorized chunk50/consume20 runtime reduction; checkpoint saved50/10 unchanged. Explicit dataset20Hz, official duration0(unlimited until Ctrl+C/protection; optional finite1..300seconds), explicit approval of each concrete physical plan required and no-return constraints. Workspace candidate changes only J1 upper30to40,J2 upper120to135,J5 upper65to70 to the user-confirmed successful ACT task range; all other physical Guard values are preserved. The2-degree target margins remain, yielding maxima38/133/68. Candidate requires a newly reviewed concrete scene/plan and inherits no physical approval. No ACT alpha smoothing, release extension, legacy J5 settings, or raw tracking pre-gate. Not a claim of official model defaults or physical success. No previous approvals inherited."
+  },
+  "command_conditioning": {
+    "policy_joint_target_margin_deg": 2.0,
+    "policy_gripper_target_margin_m": 0.001,
+    "max_relative_target": {
+      "joint_1.deg": 2.0,
+      "joint_2.deg": 2.0,
+      "joint_3.deg": 2.0,
+      "joint_4.deg": 2.0,
+      "joint_5.deg": 2.0,
+      "joint_6.deg": 2.0,
+      "gripper.m": 0.003
+    },
+    "policy_target_rate_fraction": 0.9
+  },
+  "command_conditioning_id": "pi05-native-queue-act-hardware-bridge/v1",
+  "workspace_candidate": {
+    "status": "pending_new_concrete_plan_review",
+    "physical_approval_granted": false,
+    "basis_manifest": "/home/aup/Lerobot/projects/piper/deployment/baselines/task_success_v6/manifest.json",
+    "basis_manifest_sha256": "cb4777c3705dfb4cf88cd8360cdf9baf53e55897cb1ffe13147e0330bc93acf5",
+    "controller_limits_source": "/home/aup/Lerobot/projects/piper/deployment/controller_limits_verified.json",
+    "controller_limits_sha256": "0500ffdb0e6a2e77e798d337ce71530150cfa7ac5f9dd8d1d77826b421c80a89",
+    "numeric_dataset_audit": "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_cloud_inference_v7/latency_finish_v8/limit_dataset_audit.json",
+    "note": "Only three upper guard bounds change. Existing projection margins,2degree/3mm feedback cap,step/rate/tracking/400ms/TTL,J5percent,1N and model weights remain unchanged; no ACT phase feature is added. Controller limits do not establish collision clearance."
+  },
+  "vla_visual_gripper_gate": {
+    "center_x_range": [
+      0.4,
+      0.6
+    ],
+    "center_y_min": 0.7,
+    "bottom_y_min": 0.95,
+    "area_fraction_range": [
+      0.03,
+      0.2
+    ],
+    "second_largest_ratio_max": 0.25,
+    "opening_seen_m": 0.035,
+    "closing_delta_min_m": 0.001,
+    "near_frames": 2,
+    "max_joint_error_deg": 3.0,
+    "grasp_joint_bounds_deg": [
+      [
+        -27.0,
+        -14.0
+      ],
+      [
+        96.0,
+        113.0
+      ],
+      [
+        -71.0,
+        -46.0
+      ],
+      [
+        -4.0,
+        13.0
+      ],
+      [
+        35.0,
+        67.0
+      ],
+      [
+        -34.0,
+        -12.0
+      ]
+    ],
+    "reset_opening_m": 0.055,
+    "reset_j1_max_deg": -10.0
+  },
+  "visual_gripper_gate_provenance": {
+    "kind": "VLA-only empirical far-cube closure veto candidate, not official LeRobot default",
+    "evidence": "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_cloud_inference_v7/gripper_phase_v8/visual_closure_diagnosis.json",
+    "semantics": "Allows model opening; after opening intent/feedback, defers closure unless2 distinct wrist frames meet empirical near image conditions and observed grasp joint window with raw/feedback agreement<=3deg. It does not certify3D alignment/contact/grasp. Maximum8s from first deferred close to close-start, then stop. No new joint target or automatic opening target. Commit state only after acknowledged send. Same400ms/physical guards."
+  },
+  "vla_closure_sync": {
+    "width_min_m": 0.0425,
+    "width_max_m": 0.0455,
+    "stability_s": 0.3,
+    "stability_range_m": 0.0005,
+    "minimum_pressure_m": 0.002,
+    "max_closing_s": 4.0,
+    "max_anchor_error_deg": 3.0,
+    "empty_width_m": 0.035,
+    "reopening_margin_m": 0.001,
+    "max_feedback_age_s": 0.1,
+    "max_sample_gap_s": 0.15,
+    "state_joint_tolerance_deg": 1e-05,
+    "state_gripper_tolerance_m": 1e-08,
+    "placement_joint_bounds_deg": [
+      [
+        25.0,
+        38.0
+      ],
+      [
+        118.0,
+        133.0
+      ],
+      [
+        -105.0,
+        -75.0
+      ],
+      [
+        -15.0,
+        15.0
+      ],
+      [
+        55.0,
+        70.0
+      ],
+      [
+        -75.0,
+        -40.0
+      ]
+    ]
+  },
+  "closure_sync_provenance": {
+    "kind": "Explicit local feedback phase constraint, not unmodified model output or official LeRobot default",
+    "evidence": "52 demonstrations: steady width42.5–45.4mm; ACT successful baseline actual44.5mm with target41.5mm. Latest failure:66.5→47.9mm before reopening.",
+    "semantics": "After visual closure latch hold the measured six-joint pose and retain the minimum model closure intent with its original provenance; require fresh healthy feedback width42.5–45.5mm stable0.30s (range<=0.5mm) and previous ACK inward gap>=2mm. Four-second bound, empty/anchor/fault guards. ACK then discard old FIFO and re-infer. Stop premature opening outside the existing placement joint window. Force is diagnostic, width is only a holding candidate, not proof of grasp. Current feedback is re-read after inference, original model and camera source times are retained. At readiness a fixed carry ceiling retains at least2mm inward gap; small per-step opening cannot accumulate. Empty closure during carrying stops.",
+    "physical_approval_granted": false
+  }
+}

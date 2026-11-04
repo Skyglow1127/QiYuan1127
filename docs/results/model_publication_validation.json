@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-04",
+  "models": [
+    {
+      "id": "act_020000",
+      "repo_id": "echoma1127/QiYuan1127-PiPER-ACT-020000",
+      "revision": "771ce3595487d7d5694a72d13c19029be0afe8a2",
+      "weight_bytes": 206707932,
+      "sha256": "58ff63d7cc57052f56d2e13e5121fbe1ea9b2bb0d1ed6fda65005264d4c2c09e",
+      "anonymous_remote_file_size_and_sha256_verified": true,
+      "verified_files": 8
+    },
+    {
+      "id": "pi05_best004000",
+      "repo_id": "echoma1127/QiYuan1127-PiPER-PI05-best004000",
+      "revision": "a84029e84d0e13226055d88b8c491a14fd57b491",
+      "weight_bytes": 9354050752,
+      "sha256": "583ff741239b111053dc969fe5ba69eb70475e888c7ece92b04a78d3319386cf",
+      "anonymous_remote_file_size_and_sha256_verified": true,
+      "verified_files": 16
+    }
+  ],
+  "act_download_all_files_sha256_verified": true,
+  "act_downloaded_workspace_help_smoke": "passed; no hardware actions",
+  "pi05_full_redownload_performed": false,
+  "unpublished_model": "pi05_final020000",
+  "offline_regression_reference": "packaging_validation.json",
+  "dataset_published": false
+}

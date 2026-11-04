@@ -1,0 +1,153 @@
+{
+  "design_only": true,
+  "f_num": 275,
+  "f_den": 2,
+  "clock_hz": 49999500,
+  "origin_cycle": 500,
+  "first_tick_index": 8,
+  "session_nonce": 202611032040,
+  "config_epoch": 1,
+  "bank_sequence": 1,
+  "previous_sequence": 0,
+  "observation_cycle": 500,
+  "produced_cycle": 500,
+  "validation_at_cycle": 500,
+  "normal_deadline_cycle": 100000499,
+  "map_error_cycles": 0,
+  "max_map_error_cycles": 0,
+  "lease_cycles": 99999999,
+  "source_max_age_cycles": 99999999,
+  "stop_timeout_cycles": 99999999,
+  "seed_cycle": 500,
+  "seed_sequence": 1,
+  "gripper_explicit_reviewed": true,
+  "gripper_status_code": 1,
+  "gripper_set_zero": 0,
+  "gripper_force_mn": 1000,
+  "limits": {
+    "lower": [
+      -10,
+      -10,
+      -10,
+      -10,
+      -10,
+      -10,
+      0
+    ],
+    "upper": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      0.1
+    ],
+    "velocity": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10
+    ],
+    "acceleration": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10
+    ],
+    "jerk": [
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10
+    ],
+    "dq_max": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "initial_state": {
+    "q": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0.05
+    ],
+    "v": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "a": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "normal_jerks": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "brake_jerks": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "source_kind": "synthetic_stationary"
+}
