@@ -1,0 +1,19 @@
+{
+  "protocol_version": "pi05-local-grasp/v1",
+  "model_id": "pi05-piper-red-cube-020000",
+  "task": "Pick up the red cube and place it inside the black square on the left side of the table.",
+  "local_port": 18805,
+  "base": "/home/aup/Lerobot/models/PI05/pi05_base",
+  "adapter": "/home/aup/Lerobot/models/PI05/piper_lora/checkpoints/020000/pretrained_model",
+  "tokenizer": "/home/aup/Lerobot/models/PI05/paligemma_tokenizer",
+  "expected_base_sha256": "0eb11ca9587678c1d2ef8cf32807c29f8ce53a2bfdfc1aa4a4c96f16fca59b0f",
+  "expected_adapter_sha256": "8e064a68c5991f1b1321e726d901968c516ec728971aa4b9eb1fc6d4213f14a1",
+  "expected_base_bytes": 14467165872,
+  "expected_adapter_bytes": 5424240,
+  "startup_timeout_seconds": 180,
+  "warmup_predictions": 2,
+  "compile_inference": true,
+  "compile_target": "denoise_step",
+  "runtime_dir": "runtime",
+  "python": "/home/aup/Lerobot/envs/pi05-rocm-7.14.1/bin/python"
+}

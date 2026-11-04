@@ -1,0 +1,27 @@
+{
+  "protocol_version": "pi05-cloud-grasp/v1",
+  "model_id": "pi05-piper-red-cube-020000",
+  "task": "Pick up the red cube and place it inside the black square on the left side of the table.",
+  "ssh": {
+    "host": "116.172.66.186",
+    "user": "root",
+    "port": 29596,
+    "bind_address": "172.30.1.73",
+    "host_key_alias": "[connect.westc.seetacloud.com]:29596"
+  },
+  "local_port": 18805,
+  "remote_port": 18805,
+  "remote_dir": "/root/autodl-tmp/piper_pi05/cloud_grasp_v5",
+  "remote_python": "/root/autodl-tmp/piper_pi05/.venv/bin/python",
+  "base": "/root/autodl-tmp/piper_pi05/models/pi05_base",
+  "adapter": "/root/autodl-tmp/piper_pi05/runs/pi05_train_v5_r06/checkpoints/020000/pretrained_model",
+  "tokenizer": "/root/autodl-tmp/piper_pi05/models/paligemma_tokenizer",
+  "expected_base_sha256": "0eb11ca9587678c1d2ef8cf32807c29f8ce53a2bfdfc1aa4a4c96f16fca59b0f",
+  "expected_adapter_sha256": "8e064a68c5991f1b1321e726d901968c516ec728971aa4b9eb1fc6d4213f14a1",
+  "expected_base_bytes": 14467165872,
+  "expected_adapter_bytes": 5424240,
+  "startup_timeout_seconds": 180,
+  "warmup_predictions": 2,
+  "compile_inference": true,
+  "compile_target": "denoise_step"
+}

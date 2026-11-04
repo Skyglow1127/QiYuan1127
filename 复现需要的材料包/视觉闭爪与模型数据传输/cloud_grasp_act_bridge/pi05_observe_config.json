@@ -1,0 +1,12 @@
+{
+  "execute": false,
+  "io_config": "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_cloud_inference_v7/cloud_grasp_act_bridge/pi05_base_io_config.json",
+  "expected_ifindex": 14,
+  "remote_bridge": "/home/ubuntu/kr260-camera/piper_pi05_cloud_executor/remote_bridge.py",
+  "remote_rx_helper": "/home/ubuntu/kr260-camera/remote_can_source.py",
+  "remote_execution_policy": null,
+  "guard_limits": null,
+  "normal_gripper_force_n": null,
+  "rpc_timeout_s": 1.0,
+  "provenance_note": "Reuse the existing receiver bridge in explicit execute=false RX-only mode. No execution-policy argument is passed. A newly approved B execution stages its own independent receiver directory."
+}

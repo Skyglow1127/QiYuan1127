@@ -1,0 +1,16 @@
+{
+  "provenance": "design_test_only",
+  "description": "Explicit offline numeric stress scenario. These are not measured PiPER bounds, a deployment configuration, or permission to move a robot.",
+  "motion_bounds": {
+    "lower": [-60, 0, -120, -45, -60, -80, 0],
+    "upper": [40, 135, 0, 45, 70, 60, 0.1],
+    "velocity": [200, 200, 200, 200, 200, 200, 0.2],
+    "acceleration": [1000, 1000, 1000, 1000, 1000, 1000, 1],
+    "jerk": [20000, 20000, 20000, 20000, 20000, 20000, 20],
+    "dq_max": [180, 180, 180, 180, 180, 180, 0.1]
+  },
+  "response_time_s": 1,
+  "source_max_age_s": 2,
+  "slot_lateness_s": 0.05,
+  "analysis_cutoff_hz": 5
+}

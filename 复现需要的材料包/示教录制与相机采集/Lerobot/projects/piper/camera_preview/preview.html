@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PiPER 双相机实时预览</title>
+<style>
+body{margin:0;padding:26px;background:#101722;color:#e8eef6;font:16px system-ui}h1{font-size:24px;margin:0 0 12px}
+.hint{color:#a7bacd;line-height:1.6}.views{display:flex;flex-wrap:wrap;gap:18px;margin:22px 0}section{background:#1c2838;padding:14px;border-radius:12px;max-width:640px;flex:1;min-width:300px}
+canvas{width:100%;height:auto;background:#000;display:block}h2{font-size:17px;margin:0 0 10px}.status{padding:12px;background:#1c2838;border-radius:8px}#health{color:#65dfae}a{color:#9dcfff}
+[hidden]{display:none!important}.controls{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}.controls button{padding:8px 13px;border:1px solid #607c99;border-radius:7px;background:#2a4058;color:#e8eef6;font:inherit;cursor:pointer}.controls button.close{border-color:#a36c52;background:#57392d}.controls button:disabled{opacity:.45;cursor:wait}.control-feedback{color:#c5d6e7;line-height:1.5;margin:7px 0;font-size:14px}body.compact .controls button{font-size:13px;padding:7px 10px}body.compact .control-feedback{font-size:12px}iframe{display:block;width:100%;height:580px;border:0;background:#1c2838}
+body.compact{display:flow-root;padding:0;background:#1c2838}body.compact>h1,body.compact>.hint,body.compact #wrist-card,body.compact #wrist-depth-card{display:none}
+body.compact-color #depth-card,body.compact-depth #rgb-views,body.compact-depth #health,body.compact-depth #status,body.compact-depth #depth-card h2{display:none}
+body.compact .views{margin:8px 0 0}body.compact section{padding:0;min-width:0;max-width:none}body.compact #rgb-card h2{display:none}
+body.compact-depth .views{margin:0}
+body.compact #health{margin:4px 0;font-size:13px}body.compact .status{padding:4px 0;font-size:12px}body.compact #rgbstat{margin:6px 0;font-size:13px}
+</style>
+<h1 id="camera-title">PiPER 双相机实时预览</h1>
+<div class="hint">Orbbec 大白 DC1 · AIPC USB直连 · 彩色视频与独立深度预览</div>
+<p id="health">正在连接相机…</p><div class="status" id="status">等待状态</div>
+<div id="all-controls" hidden><div class="controls"><button id="close-all" class="close" type="button">关闭全部相机</button><button id="reconnect-all" type="button">重新连接全部相机</button></div><p id="all-feedback" class="control-feedback" role="status" aria-live="polite">同时控制全局相机和腕部相机。</p></div>
+<div class="views" id="rgb-views"><section><h2>彩色画面 · 640 × 480</h2><div class="controls"><button id="close-camera" class="close" type="button">关闭相机</button><button id="reconnect-camera" type="button">重新连接相机</button></div><p id="camera-feedback" class="control-feedback" role="status" aria-live="polite">关闭后停止彩色与深度采集，USB 仍可能供电。</p><canvas id="rgb" width="640" height="480"></canvas><p id="rgbstat">等待视频</p></section>
+<section id="wrist-card" hidden><h2>腕部相机 · RGB实时画面</h2><iframe id="wrist-video" title="腕部相机实时彩色视频"></iframe></section></div>
+<div class="views"><section id="depth-card"><h2>当前相机深度 · 640 × 400</h2><canvas id="depth" width="640" height="400"></canvas><p id="depthstat">等待深度</p><p class="hint">暖色近、冷色远；显示范围 200–1500 mm，黑色为无效深度。</p></section>
+<section id="wrist-depth-card" hidden><h2>腕部相机深度 · 640 × 400</h2><iframe id="wrist-depth-video" title="腕部相机实时深度热力图"></iframe></section></div>
+<p class="hint">彩色与深度目前独立显示，尚未对齐或曝光同步。中心读数是深度图中心区域的光轴距离，不是识别物体的距离，也不是经过尺子校验的精度结论。</p>
+<p class="hint">显示帧率按本页实际解码绘制的新帧统计；往返耗时不等于相机曝光到屏幕的完整延迟。<a href="/color.mjpg" target="_blank">打开连续 MJPEG 视频</a></p>
+<script>
+const view=new URLSearchParams(location.search).get('view'),compact=view==='color'||view==='depth',isMain=!compact&&location.port==='18761';
+document.querySelector('#rgb').closest('section').id='rgb-card';
+if(compact)document.body.classList.add('compact','compact-'+view);
+if(isMain){
+document.getElementById('all-controls').hidden=false;
+for(const [cardId,frameId,mode] of [['wrist-card','wrist-video','color'],['wrist-depth-card','wrist-depth-video','depth']]){
+const wristUrl=new URL(location.href);wristUrl.port='18760';wristUrl.pathname='/';wristUrl.search='?view='+mode;wristUrl.hash='';
+const card=document.getElementById(cardId),frame=document.getElementById(frameId);card.hidden=false;frame.src=wristUrl.href;
+window.addEventListener('message',e=>{if(e.origin===wristUrl.origin&&e.source===frame.contentWindow&&e.data?.type==='camera-preview-height'&&Number.isFinite(e.data.height))frame.style.height=Math.max(200,Math.min(1600,e.data.height))+'px';});
+}
+document.querySelector('#rgb-card h2').textContent='全局相机 · 工作台RGB画面';
+document.querySelector('#depth-card h2').textContent='全局相机深度 · 640 × 400';
+}
+if(compact){const parentUrl=new URL(location.href);parentUrl.port='18761';
+new ResizeObserver(()=>parent.postMessage({type:'camera-preview-height',height:Math.ceil(document.body.getBoundingClientRect().height)},parentUrl.origin)).observe(document.body);}
+const rgb=document.getElementById('rgb'),depth=document.getElementById('depth');
+const rc=rgb.getContext('2d'),dc=depth.getContext('2d');
+const closeButton=document.getElementById('close-camera'),reconnectButton=document.getElementById('reconnect-camera');
+const allCloseButton=document.getElementById('close-all'),allReconnectButton=document.getElementById('reconnect-all');
+let lastRgb=-1,lastDepth=-1,drawn=0,start=performance.now(),lastDraw=0,lastDepthDraw=0;
+let cameraStatus=null,cameraState='starting',generation=null,renderEpoch=0,previewAllowed=false;
+let colorController=null,depthController=null,controlBusy=false,externalBusy=false,controlAction='',statusRevision=0,serviceReachable=false;
+const pause=ms=>new Promise(r=>setTimeout(r,ms));
+const active=epoch=>previewAllowed&&epoch===renderEpoch;
+function clearFrames(){
+renderEpoch++;colorController?.abort();depthController?.abort();lastRgb=lastDepth=-1;drawn=0;lastDraw=lastDepthDraw=0;
+rc.clearRect(0,0,rgb.width,rgb.height);dc.clearRect(0,0,depth.width,depth.height);
+}
+function updateButtons(){
+const busy=controlBusy||externalBusy||cameraState==='stopping';
+closeButton.disabled=busy||cameraState==='closed';reconnectButton.disabled=busy||cameraState==='starting';
+allCloseButton.disabled=controlBusy||externalBusy;allReconnectButton.disabled=controlBusy||externalBusy;
+}
+function renderStatus(){
+const s=cameraStatus;
+previewAllowed=serviceReachable&&!controlBusy&&!externalBusy&&cameraState==='streaming'&&!s?.stopped&&!s?.error;
+let message;
+if(controlBusy||externalBusy)message=controlAction==='close'?'正在关闭相机…':'正在重新连接相机…';
+else if(!serviceReachable)message='服务连接中断，等待恢复';
+else if(cameraState==='closed')message='相机已关闭（采集已停止）';
+else if(cameraState==='stopping')message='正在关闭相机…';
+else if(cameraState==='starting')message='正在连接相机…';
+else if(cameraState==='recovering')message='相机掉流，正在自动重新连接…';
+else if(cameraState==='error')message='相机异常：'+(s?.error||'请重新连接');
+else message=s?.streams?.color?.age_ms!==null&&s?.streams?.color?.age_ms<1000?'正在实时回传':'等待新帧';
+document.getElementById('health').textContent='● '+message;
+if(!previewAllowed){document.getElementById('rgbstat').textContent=message;document.getElementById('depthstat').textContent=message;}
+if(s){
+document.getElementById('camera-title').textContent=(s.label_zh||'相机')+' · 实时预览';
+const fps=name=>Number(s.streams?.[name]?.capture_fps||0).toFixed(1);
+document.getElementById('status').textContent=`${s.device?.name||'相机'} · ${s.device?.serial||''} · 相机采集：彩色 ${fps('color')} / 深度 ${fps('depth')} 帧/秒`;
+}
+updateButtons();
+}
+function applyStatus(s){
+if(!s||typeof s.state!=='string')return;
+const nextAllowed=s.state==='streaming'&&!s.stopped&&!s.error;
+if(s.generation!==generation||(s.state==='closed'&&cameraState!=='closed')||(previewAllowed&&!nextAllowed))clearFrames();
+generation=s.generation;cameraState=s.state;cameraStatus=s;serviceReachable=true;renderStatus();
+}
+function broadcastControl(busy,action,payload){
+if(!isMain)return;
+for(const id of ['wrist-video','wrist-depth-video']){
+const frame=document.getElementById(id);if(!frame.src)continue;
+frame.contentWindow?.postMessage({type:'camera-preview-control',busy,action,status:payload?.cameras?.wrist},new URL(frame.src).origin);
+}
+}
+if(compact){const parentOrigin=new URL(location.href);parentOrigin.port='18761';
+window.addEventListener('message',event=>{
+if(event.source!==parent||event.origin!==parentOrigin.origin||event.data?.type!=='camera-preview-control')return;
+externalBusy=event.data.busy===true;controlAction=event.data.action;statusRevision++;
+if(externalBusy)clearFrames();
+if(event.data.status?.state)applyStatus(event.data.status);else renderStatus();
+});}
+const describeState=s=>s?.error&&!s?.state?s.error:({closed:'已关闭',starting:'正在连接',recovering:'掉流，自动重连中',streaming:'已连接',stopping:'正在关闭',error:'异常：'+(s?.error||'请重试')}[s?.state]||'等待状态');
+async function controlCamera(action,all=false){
+if(controlBusy||externalBusy)return;
+const feedback=document.getElementById(all?'all-feedback':'camera-feedback');
+controlBusy=true;controlAction=action;statusRevision++;clearFrames();renderStatus();
+feedback.textContent=action==='close'?(all?'正在关闭全部相机…':'正在关闭相机…'):(all?'正在重新连接全部相机…':'正在重新连接相机…');
+if(all)broadcastControl(true,action);
+let payload;
+try{
+const endpoint=all?'/cameras/'+(action==='close'?'close-all':'reconnect-all'):'/camera/'+(action==='close'?'close':'reconnect');
+const response=await fetch(endpoint,{method:'POST',headers:{'X-Camera-Control':'1'},cache:'no-store',signal:AbortSignal.timeout(20000)});
+payload=await response.json();
+if(all){
+if(payload.cameras?.global?.state)applyStatus(payload.cameras.global);
+const details=[['global','全局相机'],['wrist','腕部相机']].map(([role,label])=>label+'：'+describeState(payload.cameras?.[role])).join('；');
+feedback.textContent=(response.ok&&payload.ok?(action==='reconnect'?'已发起重新连接：':''):'操作未全部完成：')+details;
+}else{
+if(payload.state)applyStatus(payload);
+feedback.textContent=response.ok?(action==='reconnect'?'已发起重新连接，请等待新画面。':'相机'+describeState(payload)):'操作失败：'+(payload.error||describeState(payload));
+}
+}catch(error){feedback.textContent='操作失败：'+(error.name==='TimeoutError'?'请求超时，请查看相机状态后重试':error.message);}
+finally{
+controlBusy=false;statusRevision++;renderStatus();if(all)broadcastControl(false,action,payload);
+}
+}
+closeButton.addEventListener('click',()=>controlCamera('close'));
+reconnectButton.addEventListener('click',()=>controlCamera('reconnect'));
+allCloseButton.addEventListener('click',()=>controlCamera('close',true));
+allReconnectButton.addEventListener('click',()=>controlCamera('reconnect',true));
+async function colorLoop(){while(true){
+if(!previewAllowed){await pause(200);continue;}
+const epoch=renderEpoch,controller=new AbortController();colorController=controller;let reader,received=performance.now();
+const watchdog=setInterval(()=>{if(performance.now()-received>2000)controller.abort();},500);
+try{const r=await fetch('/color.mjpg',{cache:'no-store',signal:controller.signal});if(!active(epoch))continue;if(!r.ok)throw Error('彩色流暂不可用');
+reader=r.body.getReader();let buffer=new Uint8Array(0);start=performance.now();drawn=0;
+while(active(epoch)){const {done,value}=await reader.read();if(!active(epoch))break;if(done)throw Error('视频连接中断');received=performance.now();
+const merged=new Uint8Array(buffer.length+value.length);merged.set(buffer);merged.set(value,buffer.length);buffer=merged;
+let newest=null;
+while(true){let end=-1;for(let i=0;i+3<buffer.length;i++){if(buffer[i]===13&&buffer[i+1]===10&&buffer[i+2]===13&&buffer[i+3]===10){end=i;break;}}
+if(end<0)break;const header=new TextDecoder().decode(buffer.subarray(0,end));
+const match=header.match(/Content-Length: (\d+)/i),index=header.match(/X-Frame-Index: (\d+)/i);if(!match||!index)throw Error('视频格式错误');
+const length=Number(match[1]);if(length<=0||length>4000000)throw Error('视频帧长度错误');if(buffer.length<end+4+length)break;
+newest={bytes:buffer.slice(end+4,end+4+length),index:Number(index[1])};buffer=buffer.slice(end+4+length);}
+if(buffer.length>4100000)throw Error('视频缓冲异常');
+if(newest&&newest.index!==lastRgb){const t=performance.now();const bmp=await createImageBitmap(new Blob([newest.bytes],{type:'image/jpeg'}));
+try{if(!active(epoch))break;rc.drawImage(bmp,0,0);}finally{bmp.close();}
+lastRgb=newest.index;lastDraw=performance.now();drawn++;
+const dt=(performance.now()-start)/1000;if(dt>=2){document.getElementById('rgbstat').textContent=`本页显示 ${(drawn/dt).toFixed(1)} 帧/秒 · 本机解码绘制 ${(performance.now()-t).toFixed(1)} ms · 帧号 ${lastRgb}`;drawn=0;start=performance.now();}}}
+}catch(error){if(active(epoch))document.getElementById('rgbstat').textContent='视频连接中断，等待恢复';}
+finally{clearInterval(watchdog);controller.abort();if(colorController===controller)colorController=null;if(reader)await reader.cancel().catch(()=>{});}await pause(400);}}
+async function depthLoop(){while(true){
+if(!previewAllowed){await pause(200);continue;}
+const epoch=renderEpoch,controller=new AbortController();depthController=controller;const timeout=setTimeout(()=>controller.abort(),1500);
+try{
+const r=await fetch('/depth.raw',{cache:'no-store',signal:controller.signal});if(!active(epoch))continue;if(!r.ok)throw Error('深度流不可用');
+const w=Number(r.headers.get('X-Width')),h=Number(r.headers.get('X-Height')),scale=Number(r.headers.get('X-Scale')),id=Number(r.headers.get('X-Frame-Index'));
+const data=new DataView(await r.arrayBuffer());if(!active(epoch))continue;if(!Number.isInteger(w)||!Number.isInteger(h)||w<=0||h<=0||w*h>2000000||data.byteLength!==w*h*2)throw Error('深度长度不符');
+if(id!==lastDepth){lastDepth=id;lastDepthDraw=performance.now();depth.width=w;depth.height=h;const im=dc.createImageData(w,h),roi=[];
+for(let i=0;i<w*h;i++){const raw=data.getUint16(i*2,true),z=raw*scale,j=i*4;im.data[j+3]=255;if(!raw||raw===65535)continue;
+const t=Math.max(0,Math.min(1,(z-200)/1300));im.data[j]=255*(1-t);im.data[j+1]=180*(1-Math.abs(2*t-1));im.data[j+2]=255*t;
+const x=i%w,y=Math.floor(i/w);if(Math.abs(x-w/2)<10&&Math.abs(y-h/2)<10)roi.push(z);}
+dc.putImageData(im,0,0);dc.strokeStyle='white';dc.strokeRect(w/2-10,h/2-10,20,20);roi.sort((a,b)=>a-b);
+document.getElementById('depthstat').textContent=`深度中心区域中位数：${roi.length?roi[Math.floor(roi.length/2)].toFixed(0)+' mm':'无有效深度'} · 深度预览约 5 帧/秒`;}
+}catch(error){if(active(epoch))document.getElementById('depthstat').textContent='深度连接中断，等待恢复';}
+finally{clearTimeout(timeout);if(depthController===controller)depthController=null;}await pause(200);}}
+async function statusLoop(){while(true){const revision=statusRevision;
+try{const r=await fetch('/status',{cache:'no-store',signal:AbortSignal.timeout(1500)});if(!r.ok)throw Error('状态暂不可用');const s=await r.json();if(revision===statusRevision)applyStatus(s);
+}catch(error){if(revision===statusRevision){serviceReachable=false;if(previewAllowed)clearFrames();renderStatus();}}await pause(1000);}}
+setInterval(()=>{if(performance.now()-lastDraw>1500)rc.clearRect(0,0,rgb.width,rgb.height);if(performance.now()-lastDepthDraw>1500)dc.clearRect(0,0,depth.width,depth.height);},250);
+updateButtons();if(view!=='depth')colorLoop();if(view!=='color')depthLoop();statusLoop();
+</script></html>

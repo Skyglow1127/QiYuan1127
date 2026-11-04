@@ -1,0 +1,164 @@
+{
+  "checkpoint": "/home/aup/Lerobot/models/ACT/rad_place_v5_r05/020000/pretrained_model",
+  "n_action_steps": 30,
+  "enabled_takeover_speed_percent": 10,
+  "policy_joint_target_margin_deg": 2.0,
+  "policy_gripper_target_margin_m": 0.001,
+  "inference_threads": 8,
+  "warmup_passes": 3,
+  "policy_target_rate_fraction": 0.9,
+  "model_sha256": "58ff63d7cc57052f56d2e13e5121fbe1ea9b2bb0d1ed6fda65005264d4c2c09e",
+  "base_io_config": "/home/aup/Lerobot/projects/piper/official_adapter/lerobot_robot_piper_shared/io_config.json",
+  "remote_directory": "/home/ubuntu/kr260-camera/piper_policy_executor",
+  "policy": {
+    "execute": true,
+    "limits": {
+      "bounds": [
+        [
+          -60.0,
+          40.0
+        ],
+        [
+          0.0,
+          135.0
+        ],
+        [
+          -120.0,
+          0.0
+        ],
+        [
+          -45.0,
+          45.0
+        ],
+        [
+          -60.0,
+          70.0
+        ],
+        [
+          -80.0,
+          60.0
+        ],
+        [
+          0.0,
+          0.1
+        ]
+      ],
+      "max_step": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        0.008
+      ],
+      "max_target_speed": [
+        45.0,
+        45.0,
+        45.0,
+        45.0,
+        45.0,
+        45.0,
+        0.05
+      ],
+      "max_tracking_error": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        0.015
+      ],
+      "max_observation_age_s": 0.4,
+      "max_command_age_s": 0.4,
+      "max_command_gap_s": 0.75
+    },
+    "lease_s": 0.75,
+    "max_ttl_s": 0.25,
+    "max_feedback_age_s": 0.1,
+    "max_feedback_skew_s": 0.04,
+    "max_link_age_s": 0.5,
+    "quiet_before_arm_s": 1.0,
+    "motion_ctrl2_max_age_s": 5.0,
+    "expected_motion_ctrl2": [
+      1,
+      1,
+      5,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "stop_strategy": "fresh_feedback_target_once",
+    "stop_gripper_force_n": 1.0,
+    "max_gripper_force_n": 1.0
+  },
+  "normal_gripper_force_n": 1.0,
+  "tx_ttl_s": 0.12,
+  "default_duration_s": 30.0,
+  "host": "10.42.0.55",
+  "verified_controller_joint_bounds_deg": [
+    [
+      -150,
+      150
+    ],
+    [
+      0,
+      180
+    ],
+    [
+      -170,
+      0
+    ],
+    [
+      -100,
+      100
+    ],
+    [
+      -70,
+      70
+    ],
+    [
+      -180,
+      180
+    ]
+  ],
+  "verified_controller_limits_source": "/home/aup/Lerobot/projects/piper/deployment/controller_limits_verified.json",
+  "policy_joint_smoothing_alpha": 0.7,
+  "policy_release_chunk_extension": {
+    "extra_steps": 20,
+    "trigger_open_m": 0.055,
+    "released_open_m": 0.06,
+    "min_held_width_m": 0.035,
+    "settle_s": 0.15,
+    "max_hold_s": 2.0,
+    "placement_joint_bounds_deg": [
+      [
+        25.0,
+        38.0
+      ],
+      [
+        118.0,
+        133.0
+      ],
+      [
+        -105.0,
+        -75.0
+      ],
+      [
+        -15.0,
+        15.0
+      ],
+      [
+        55.0,
+        70.0
+      ],
+      [
+        -75.0,
+        -40.0
+      ]
+    ]
+  }
+}

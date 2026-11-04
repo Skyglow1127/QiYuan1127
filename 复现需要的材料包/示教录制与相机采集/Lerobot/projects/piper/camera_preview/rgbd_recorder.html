@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>RGB + 深度 · 一次录制</title>
+  <style>
+    :root { color-scheme:dark; font-family:Inter,"Noto Sans CJK SC","Microsoft YaHei",sans-serif; background:#0b1018; color:#eef4ff; }
+    * { box-sizing:border-box; }
+    body { margin:0; }
+    main { max-width:1800px; margin:auto; padding:26px 32px 20px; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:24px; margin-bottom:22px; }
+    .eyebrow { color:#92a7c3; font-size:12px; letter-spacing:.14em; margin:0 0 7px; }
+    h1 { font-size:25px; font-weight:650; margin:0; }
+    .sub { color:#a9b7ca; font-size:13px; margin:9px 0 0; line-height:1.6; }
+    .actions { display:flex; align-items:center; gap:15px; flex-shrink:0; }
+    .badge { display:flex; align-items:center; gap:8px; padding:8px 11px; background:#182332; border:1px solid #2b3b51; border-radius:999px; font-size:13px; white-space:nowrap; }
+    .dot { width:8px; height:8px; background:#93a8c3; border-radius:50%; }
+    .badge[data-state="recording"] .dot { background:#fc636e; box-shadow:0 0 0 4px #fc636e18; }
+    .badge[data-state="finished"] .dot { background:#6ee4ac; }
+    .badge[data-state="error"] .dot { background:#ffc078; }
+    button { font:inherit; cursor:pointer; border-radius:8px; font-size:13px; font-weight:600; padding:11px 15px; }
+    #stop { border:1px solid #f76470; background:#c53646; color:#fff; }
+    #stop:hover:not(:disabled) { background:#e14353; }
+    button:disabled { cursor:default; opacity:.45; }
+    button:focus-visible { outline:3px solid #8ebdff; outline-offset:3px; }
+    .summary { display:flex; align-items:center; gap:30px; margin-bottom:18px; color:#91a6c1; font-size:12px; }
+    .summary strong { margin-left:10px; color:#dce9fc; font-size:19px; font-weight:500; font-variant-numeric:tabular-nums; }
+    .summary .hint { margin-left:auto; color:#7186a2; text-align:right; }
+    .viewers { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:20px; align-items:start; }
+    .viewer { border:1px solid #29374a; border-radius:12px; overflow:hidden; background:#101824; }
+    .viewer-top { height:47px; display:flex; align-items:center; justify-content:space-between; gap:10px; padding:0 16px; border-bottom:1px solid #233046; font-size:13px; }
+    .viewer-top h2 { color:#dce9fc; font-size:13px; font-weight:600; margin:0; }
+    .scale { border:1px solid #35465e; background:#172232; color:#c3d5ee; padding:5px 10px; font-size:12px; font-weight:400; }
+    .frame { height:clamp(240px,37vw,560px); overflow:auto; display:flex; align-items:center; justify-content:center; background:radial-gradient(ellipse at center,#131d2a,#070b11 75%); }
+    .frame img { display:block; max-width:100%; max-height:100%; object-fit:contain; cursor:zoom-in; }
+    .frame.original { display:block; }
+    .frame.original img { max-width:none; max-height:none; cursor:zoom-out; }
+    .stream-info { padding:17px 18px 18px; border-top:1px solid #233046; }
+    .profile { margin:0 0 16px; color:#c7d7ec; font-size:14px; font-variant-numeric:tabular-nums; }
+    .profile small { margin-left:9px; color:#91a6c1; font-size:12px; }
+    dl { margin:0; }
+    .stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px 12px; }
+    dt { color:#91a6c1; font-size:11px; margin-bottom:7px; }
+    dd { margin:0; font-size:20px; font-variant-numeric:tabular-nums; }
+    dd small { font-size:11px; color:#91a6c1; margin-left:3px; }
+    .meta { display:flex; flex-wrap:wrap; gap:8px 18px; color:#91a6c1; font-size:11px; margin-top:17px; }
+    .meta span { font-variant-numeric:tabular-nums; }
+    .stream-error { display:none; color:#ffce91; font-size:12px; line-height:1.6; margin:14px 0 0; overflow-wrap:anywhere; }
+    .legend { display:flex; align-items:center; gap:12px; padding:12px 18px; border-top:1px solid #233046; color:#9fb1ca; font-size:11px; }
+    .legend span { white-space:nowrap; font-variant-numeric:tabular-nums; }
+    .gradient { flex:1; min-width:25px; height:8px; border-radius:999px; background:linear-gradient(to right,#f4661a,#f5c93b,#73df60,#22bec5,#4167cf,#30123b); }
+    .invalid-key { display:inline-block; width:9px; height:9px; background:#000; border:1px solid #52617a; margin-right:5px; vertical-align:-1px; }
+    .bottom { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:20px; margin-top:20px; }
+    .panel { background:#121b28; border:1px solid #29374a; border-radius:12px; padding:18px; }
+    .panel h2 { margin:0 0 12px; color:#c7d7ec; font-size:13px; font-weight:600; }
+    .path { overflow-wrap:anywhere; color:#d9e7f9; font-family:ui-monospace,SFMono-Regular,Consolas,monospace; font-size:12px; line-height:1.8; margin:0; }
+    .folders { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:12px; }
+    .folder { padding:11px 12px; border-radius:7px; background:#192536; color:#c5d9f3; font-size:12px; }
+    .folder code { display:block; margin-top:5px; color:#99b1d0; font-size:12px; }
+    .note { margin:0; font-size:12px; line-height:1.85; color:#9fb1ca; }
+    .note + .note { margin-top:8px; }
+    code { overflow-wrap:anywhere; }
+    #message { display:none; margin:0 0 18px; padding:12px 16px; border:1px solid #895f31; border-radius:8px; background:#362819; color:#ffce91; font-size:13px; line-height:1.6; overflow-wrap:anywhere; }
+    footer { margin-top:16px; display:flex; justify-content:space-between; gap:12px; color:#7186a2; font-size:11px; line-height:1.7; }
+    @media(max-width:1000px) { main{padding:20px;} .stats{grid-template-columns:1fr 1fr;} .legend{flex-wrap:wrap;} .legend .invalid{width:100%;} }
+    @media(max-width:760px) { header{align-items:start;flex-direction:column;} .actions{width:100%;justify-content:space-between;} .viewers,.bottom{grid-template-columns:minmax(0,1fr);} .frame{height:52vh;min-height:220px;} .stats{grid-template-columns:repeat(4,minmax(0,1fr));} .summary{gap:15px;flex-wrap:wrap;} .summary .hint{margin-left:0;text-align:left;width:100%;} footer{flex-direction:column;} }
+    @media(max-width:450px) { main{padding:18px 12px;} h1{font-size:22px;} .stats{grid-template-columns:1fr 1fr;} .folders{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <p class="eyebrow">RGB + DEPTH / LOCAL RECORDER</p>
+      <h1>RGB + 深度 · 一次录制</h1>
+      <p id="camera" class="sub">正在读取相机状态…</p>
+    </div>
+    <div class="actions">
+      <div id="badge" class="badge" data-state="starting"><span class="dot"></span><span id="state">准备中</span></div>
+      <button id="stop" type="button" disabled>停止并保存</button>
+    </div>
+  </header>
+  <p id="message" role="status" aria-live="polite"></p>
+  <div class="summary"><span>录制时长<strong id="elapsed">00:00</strong></span><span>开始时间<strong id="started">—</strong></span><span class="hint">两路统一开始、结束 · 预览可跳帧，录制帧率以下方统计为准</span></div>
+  <div class="viewers">
+    <section class="viewer" aria-label="RGB 录制和实时预览">
+      <div class="viewer-top"><h2>RGB · 彩色视频</h2><button id="rgb-scale" class="scale" type="button" aria-pressed="false">查看原尺寸</button></div>
+      <div id="rgb-frame" class="frame"><img id="rgb-stream" alt="相机 RGB 实时画面"></div>
+      <div class="stream-info">
+        <p class="profile"><span id="rgb-resolution">— × —</span><small>RGB/rgb.mp4</small></p>
+        <dl class="stats">
+          <div><dt>目标帧率</dt><dd><span id="rgb-target-fps">—</span><small>fps</small></dd></div>
+          <div><dt>最近实际帧率</dt><dd><span id="rgb-recent-fps">—</span><small>fps</small></dd></div>
+          <div><dt>平均实际帧率</dt><dd><span id="rgb-measured-fps">—</span><small>fps</small></dd></div>
+          <div><dt>已录制帧数</dt><dd id="rgb-frames">0</dd></div>
+        </dl>
+        <div class="meta"><span id="rgb-size">文件大小 —</span><span id="rgb-elapsed">该路时长 —</span></div>
+        <p id="rgb-error" class="stream-error"></p>
+      </div>
+    </section>
+    <section class="viewer" aria-label="深度录制和实时预览">
+      <div class="viewer-top"><h2>Depth · 深度伪彩色视频</h2><button id="depth-scale" class="scale" type="button" aria-pressed="false">查看原尺寸</button></div>
+      <div id="depth-frame" class="frame"><img id="depth-stream" alt="相机深度伪彩色实时画面"></div>
+      <div class="stream-info">
+        <p class="profile"><span id="depth-resolution">— × —</span><small>Depth/depth.mp4</small></p>
+        <dl class="stats">
+          <div><dt>目标帧率</dt><dd><span id="depth-target-fps">—</span><small>fps</small></dd></div>
+          <div><dt>最近实际帧率</dt><dd><span id="depth-recent-fps">—</span><small>fps</small></dd></div>
+          <div><dt>平均实际帧率</dt><dd><span id="depth-measured-fps">—</span><small>fps</small></dd></div>
+          <div><dt>已录制帧数</dt><dd id="depth-frames">0</dd></div>
+        </dl>
+        <div class="meta"><span id="depth-size">文件大小 —</span><span id="depth-elapsed">该路时长 —</span><span id="valid">有效深度 —</span><span id="depth-range">当前距离范围 —</span><span id="depth-unit">采集单位 —</span></div>
+        <p id="depth-error" class="stream-error"></p>
+      </div>
+      <div class="legend"><span id="near">近 — mm</span><div class="gradient" aria-label="近处暖色，远处冷色"></div><span id="far">远 — mm</span><span class="invalid"><i class="invalid-key"></i>无效深度 0</span></div>
+    </section>
+  </div>
+  <div class="bottom">
+    <section class="panel">
+      <h2>本次保存位置</h2>
+      <p id="output" class="path">等待保存路径…</p>
+      <div class="folders"><div class="folder">RGB 文件夹<code>RGB/rgb.mp4</code></div><div class="folder">Depth 文件夹<code>Depth/depth.mp4</code></div></div>
+      <p class="note" style="margin-top:12px">点击“停止并保存”，或在启动终端按 Ctrl+C，两路一起结束并保存。关闭此页签不会停止录制。</p>
+    </section>
+    <section class="panel">
+      <h2>回看说明</h2>
+      <p class="note">两个文件夹各保存一份 MP4。depth.mp4 是深度伪彩色回看视频，不能精确还原原始距离；本次不额外保存 MKV 或原始深度序列。</p>
+      <p class="note">近处暖色、远处冷色；无效深度 0 显示为黑色。有效距离超出色标范围时按端点着色。</p>
+      <p class="note">同一次开始和结束不保证两路曝光同步，也不保证 RGB 与深度在空间上对齐。实际帧率受曝光、USB 链路及编码写入速度影响。</p>
+    </section>
+  </div>
+  <footer><span>仅本机预览 · 点击画面可切换适应窗口 / 原尺寸</span><span id="connection">连接中…</span></footer>
+</main>
+<script>
+(() => {
+  'use strict';
+  const el = id => document.getElementById(id);
+  const states = {starting:'准备中',recording:'录制中',stopping:'正在保存',finished:'已保存',error:'录制异常'};
+  let stopPending = false;
+  let lastState = 'starting';
+  let statusError = '';
+  let stopError = '';
+  let recorderError = '';
+  function showMessage() {
+    const message = recorderError || stopError || statusError;
+    el('message').textContent = message;
+    el('message').style.display = message ? 'block' : 'none';
+  }
+  function number(value, digits = 0) {
+    return typeof value === 'number' && Number.isFinite(value)
+      ? value.toLocaleString('zh-CN', {minimumFractionDigits:digits,maximumFractionDigits:digits}) : '—';
+  }
+  function size(bytes) {
+    if (typeof bytes !== 'number' || !Number.isFinite(bytes) || bytes < 0) return '—';
+    const units = ['B','KiB','MiB','GiB','TiB'];
+    let unit = 0;
+    while (bytes >= 1024 && unit < units.length - 1) { bytes /= 1024; unit++; }
+    return number(bytes, unit ? 1 : 0) + ' ' + units[unit];
+  }
+  function duration(seconds) {
+    if (typeof seconds !== 'number' || !Number.isFinite(seconds)) return '—';
+    seconds = Math.max(0, Math.floor(seconds));
+    const parts = [Math.floor(seconds / 60) % 60, seconds % 60];
+    if (seconds >= 3600) parts.unshift(Math.floor(seconds / 3600));
+    return parts.map(part => String(part).padStart(2,'0')).join(':');
+  }
+  function startTime(value) {
+    if (!value) return '—';
+    const parsed = new Date(value);
+    return Number.isNaN(parsed.getTime()) ? String(value) : parsed.toLocaleTimeString('zh-CN', {hour12:false});
+  }
+  function refreshStopButton() {
+    el('stop').disabled = stopPending || !['starting','recording'].includes(lastState);
+    el('stop').textContent = stopPending || lastState === 'stopping' ? '正在停止并保存…' : lastState === 'finished' ? '录制已保存' : '停止并保存';
+  }
+  function renderStream(key, stream) {
+    stream = stream || {};
+    const profile = stream.profile || {};
+    el(key + '-resolution').textContent = number(profile.width) + ' × ' + number(profile.height);
+    el(key + '-target-fps').textContent = number(profile.fps,1);
+    el(key + '-recent-fps').textContent = number(stream.recent_fps,1);
+    el(key + '-measured-fps').textContent = number(stream.measured_fps,1);
+    el(key + '-frames').textContent = number(stream.frames);
+    el(key + '-size').textContent = '文件大小 ' + size(stream.bytes_written);
+    el(key + '-elapsed').textContent = '该路时长 ' + duration(stream.elapsed_s);
+    el(key + '-error').textContent = stream.error ? '该路异常：' + String(stream.error) : '';
+    el(key + '-error').style.display = stream.error ? 'block' : 'none';
+  }
+  function render(status) {
+    const streams = status.streams || {};
+    const depth = streams.depth || {};
+    lastState = status.state;
+    el('badge').dataset.state = lastState;
+    el('state').textContent = states[lastState] || '状态未知';
+    el('camera').textContent = [status.label || status.role,status.serial ? '序列号 ' + status.serial : ''].filter(Boolean).join(' · ') || '正在识别相机…';
+    el('elapsed').textContent = duration(status.elapsed_s);
+    el('started').textContent = startTime(status.started_at);
+    el('output').textContent = status.output || '等待保存路径…';
+    renderStream('rgb', streams.rgb);
+    renderStream('depth', depth);
+    el('near').textContent = '近 ' + number(status.preview_near_mm) + ' mm';
+    el('far').textContent = '远 ' + number(status.preview_far_mm) + ' mm';
+    el('valid').textContent = '有效深度 ' + (typeof depth.valid_fraction === 'number' && Number.isFinite(depth.valid_fraction) ? number(depth.valid_fraction * 100,1) + '%' : '—');
+    el('depth-range').textContent = '当前距离范围 ' + number(depth.depth_min_mm) + '–' + number(depth.depth_max_mm) + ' mm';
+    el('depth-unit').textContent = '采集单位 ' + number(depth.mm_per_unit,4) + ' mm / raw';
+    recorderError = status.error ? '录制异常：' + String(status.error) : '';
+    refreshStopButton();
+    showMessage();
+  }
+  async function poll() {
+    try {
+      const response = await fetch('/status', {cache:'no-store',signal:AbortSignal.timeout(4000)});
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+      const status = await response.json();
+      statusError = '';
+      render(status);
+      el('connection').textContent = lastState === 'finished' ? '录制已结束 · 文件已保存' : lastState === 'error' ? '录制已结束 · 请查看错误信息' : '状态已更新 · ' + new Date().toLocaleTimeString('zh-CN',{hour12:false});
+    } catch (error) {
+      statusError = '状态连接中断，请查看启动终端。录制是否仍在运行以终端为准。';
+      el('connection').textContent = '状态连接中断';
+      showMessage();
+    } finally {
+      if (!['finished','error'].includes(lastState)) window.setTimeout(poll, 500);
+    }
+  }
+  for (const key of ['rgb','depth']) {
+    const toggleScale = () => {
+      const original = el(key + '-frame').classList.toggle('original');
+      el(key + '-scale').textContent = original ? '适应窗口' : '查看原尺寸';
+      el(key + '-scale').setAttribute('aria-pressed', String(original));
+    };
+    el(key + '-scale').addEventListener('click', toggleScale);
+    el(key + '-stream').addEventListener('click', toggleScale);
+  }
+  el('stop').addEventListener('click', async () => {
+    if (stopPending || !['starting','recording'].includes(lastState)) return;
+    stopPending = true;
+    stopError = '';
+    refreshStopButton();
+    showMessage();
+    try {
+      const response = await fetch('/stop', {method:'POST',headers:{'X-Recorder-Control':'1'},signal:AbortSignal.timeout(10000)});
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+      if (!['finished','error'].includes(lastState)) lastState = 'stopping';
+    } catch (error) {
+      stopError = '停止请求未确认：' + String(error.message || error) + '。请检查终端；也可按 Ctrl+C 停止并保存。';
+      showMessage();
+    } finally {
+      stopPending = false;
+      refreshStopButton();
+    }
+  });
+  if (location.protocol === 'file:') {
+    lastState = 'error';
+    el('state').textContent = '尚未连接录制器';
+    el('badge').dataset.state = 'starting';
+    el('camera').textContent = '这是预览页面文件；录制需要先从终端启动。';
+    statusError = '请在终端运行 bash /home/aup/Lerobot/projects/piper/record_rgbd.sh；通过程序输出的 http 地址打开实时窗口。';
+    el('connection').textContent = '本地文件模式 · 未发送网络请求';
+    showMessage();
+    refreshStopButton();
+  } else {
+    el('rgb-stream').src = '/rgb.mjpg';
+    el('depth-stream').src = '/depth.mjpg';
+    poll();
+  }
+})();
+</script>
+</body>
+</html>

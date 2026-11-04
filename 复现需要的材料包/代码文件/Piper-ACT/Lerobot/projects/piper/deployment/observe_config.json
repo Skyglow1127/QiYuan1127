@@ -1,0 +1,11 @@
+{
+  "execute": false,
+  "io_config": "/home/aup/Lerobot/projects/piper/official_adapter/lerobot_robot_piper_shared/io_config.json",
+  "expected_ifindex": 15,
+  "remote_bridge": "/home/ubuntu/kr260-camera/piper_policy_executor/remote_bridge.py",
+  "remote_rx_helper": "/home/ubuntu/kr260-camera/remote_can_source.py",
+  "remote_execution_policy": null,
+  "guard_limits": null,
+  "normal_gripper_force_n": null,
+  "rpc_timeout_s": 1.0
+}

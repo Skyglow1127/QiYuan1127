@@ -1,0 +1,120 @@
+{
+  "schema_version": "pi05-independent-execution-defaults/v1",
+  "base_io_config": "/media/aup/UbuntuData/代码总结/Piper-LoRA/本地LoRA推理服务/pi05_base_io_config.json",
+  "remote_directory": "/home/ubuntu/kr260-camera/piper_pi05_executor",
+  "policy": {
+    "execute": true,
+    "limits": {
+      "bounds": [
+        [
+          -60.0,
+          30.0
+        ],
+        [
+          0.0,
+          120.0
+        ],
+        [
+          -120.0,
+          0.0
+        ],
+        [
+          -45.0,
+          45.0
+        ],
+        [
+          -60.0,
+          65.0
+        ],
+        [
+          -80.0,
+          60.0
+        ],
+        [
+          0.0,
+          0.1
+        ]
+      ],
+      "max_step": [
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        0.008
+      ],
+      "max_target_speed": [
+        45.0,
+        45.0,
+        45.0,
+        45.0,
+        45.0,
+        45.0,
+        0.05
+      ],
+      "max_tracking_error": [
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        8.0,
+        0.015
+      ],
+      "max_observation_age_s": 0.4,
+      "max_command_age_s": 0.4,
+      "max_command_gap_s": 0.75
+    },
+    "lease_s": 0.75,
+    "max_ttl_s": 0.25,
+    "max_feedback_age_s": 0.1,
+    "max_feedback_skew_s": 0.04,
+    "max_link_age_s": 0.5,
+    "quiet_before_arm_s": 1.0,
+    "motion_ctrl2_max_age_s": 5.0,
+    "expected_motion_ctrl2": [
+      1,
+      1,
+      5,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "stop_strategy": "fresh_feedback_target_once",
+    "stop_gripper_force_n": 1.0,
+    "max_gripper_force_n": 1.0
+  },
+  "normal_gripper_force_n": 1.0,
+  "tx_ttl_s": 0.12,
+  "default_duration_s": 5.0,
+  "host": "10.42.0.55",
+  "verified_controller_joint_bounds_deg": [
+    [
+      -150,
+      150
+    ],
+    [
+      0,
+      180
+    ],
+    [
+      -170,
+      0
+    ],
+    [
+      -100,
+      100
+    ],
+    [
+      -70,
+      70
+    ],
+    [
+      -180,
+      180
+    ]
+  ]
+}

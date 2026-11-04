@@ -1,0 +1,73 @@
+{
+  "interface": "can0",
+  "canonical_units": {
+    "joints": "deg",
+    "gripper_width": "m",
+    "gripper_angle": "deg"
+  },
+  "fps": 20,
+  "max_episode_seconds": 60,
+  "max_can_age_ms": 100,
+  "max_camera_age_ms": 150,
+  "max_camera_skew_ms": 60,
+  "max_pair_skew_ms": 40,
+  "position_target_hold": {
+    "operator_confirmed": true,
+    "max_seconds": 60.0,
+    "joint_tolerance_deg": 5.729577951308233,
+    "confirmation": "User confirmed that no enable button is required and stopping the leader holds the pose."
+  },
+  "mapping": {
+    "action_joint_ids": [
+      341,
+      342,
+      343
+    ],
+    "state_joint_ids": [
+      677,
+      678,
+      679
+    ],
+    "action_gripper_id": 345,
+    "state_gripper_id": 680,
+    "state_status_id": 673
+  },
+  "mapping_note": "Default IDs observed during user teleoperation; evidence in mapping_verification.json. All IDs are decimal in this JSON.",
+  "cameras": {
+    "global": {
+      "url": "http://127.0.0.1:18761",
+      "serial": "CC1365302B2"
+    },
+    "wrist": {
+      "url": "http://127.0.0.1:18760",
+      "serial": "CC1365301EY"
+    }
+  },
+  "task": "Pick up the red cube and place it inside the black square on the left side of the table.",
+  "native_recording_note": "Official record/reset loops both read the teleoperator. Last observed absolute setpoints may be held for up to 60s with live mode/fault/position supervision. No CAN transmission.",
+  "transport": {
+    "kind": "ssh",
+    "ssh_host": "kr260",
+    "ssh_hostname": "10.42.0.55",
+    "remote_script": "/home/ubuntu/kr260-camera/remote_can_source.py",
+    "expected_identity": {
+      "interface": "can0",
+      "ifindex": 15,
+      "device_path": "/sys/devices/platform/axi/ff9d0000.usb/fe200000.usb/xhci-hcd.1.auto/usb1/1-1/1-1.3/1-1.3:1.0",
+      "host": {
+        "hostname": "kria",
+        "machine_id": "20c5aef53ab9448a94fd5ebcb89f663a"
+      },
+      "driver": "gs_usb",
+      "usb": {
+        "idVendor": "1d50",
+        "idProduct": "606f",
+        "serial": "002100425631511920313857",
+        "manufacturer": "bytewerk",
+        "product": "candleLight USB to CAN adapter"
+      }
+    },
+    "max_clock_rtt_ms": 50
+  },
+  "mapping_proof": "mapping_verification_kr260.json"
+}

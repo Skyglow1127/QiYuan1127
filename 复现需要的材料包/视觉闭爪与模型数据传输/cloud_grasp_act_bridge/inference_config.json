@@ -1,0 +1,21 @@
+{
+  "schema_version": "pi05-expert-newcloud-ipc/v1",
+  "backend": "cloud_cuda_via_ssh",
+  "host": "127.0.0.1",
+  "local_port": 18814,
+  "expected_model_sha256": "583ff741239b111053dc969fe5ba69eb70475e888c7ece92b04a78d3319386cf",
+  "expected_model_bytes": 9354050752,
+  "runtime_config": "/home/aup/Documents/Codex/v5/wo-y/outputs/pi05_cloud_inference_v7/lerobot_lossless_service/cloud_config.json",
+  "model_format": "full-native-PI05",
+  "peft_present": false,
+  "chunk_size": 50,
+  "num_inference_steps": 10,
+  "task": "Pick up the red cube and place it inside the black square on the left side of the table.",
+  "remote_config": "/root/autodl-tmp/piper_pi05_lerobot_lossless_v8/cloud_config.json",
+  "connection_warmth": {
+    "enabled": true,
+    "endpoint": "/ping",
+    "interval_s": 0.1,
+    "timeout_s": 0.2
+  }
+}
