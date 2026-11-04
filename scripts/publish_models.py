@@ -26,18 +26,6 @@ def write_json(path, value):
     tmp.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n')
     tmp.replace(path)
 
-def update_catalog(manifest):
-    lines = ['# 已发布模型下载', '',
-             '下载脚本按以下清单中的固定提交版本下载，并校验每个文件的 SHA-256。', '',
-             '| 模型 | 获取状态 | 权重大小 |', '| --- | --- | --- |']
-    for item in manifest['models']:
-        status = ('[Hugging Face](' + item['repo_url'] + ')'
-                  if item['publication_status'] == 'published' else '未发布（本机保留）')
-        lines.append(f"| {item['id']} | {status} | {item['bytes']:,} 字节 |")
-    lines += ['', '精确版本、下载 URL 和校验值见 [manifest.json](manifest.json)。',
-              'π0.5 best004000 仓库的 `tokenizer/` 提供配套 tokenizer；完整数据集暂未发布。', '']
-    (ROOT / 'models/DOWNLOADS.md').write_text('\n'.join(lines))
-
 def stage(item, locations):
     mid = item['id']
     dest = ROOT / '.local/hf-staging' / mid
@@ -56,7 +44,6 @@ def stage(item, locations):
     for f in (ROOT / item['config_directory']).iterdir():
         if f.is_file():
             shutil.copy2(f, dest / f.name)
-    shutil.copy2(ROOT / 'models/publication' / (mid + '.md'), dest / 'README.md')
     if mid.startswith('pi05'):
         for name in ['GEMMA_TERMS.txt', 'GEMMA_PROHIBITED_USE_POLICY.txt', 'NOTICE.txt']:
             shutil.copy2(ROOT / 'models/publication' / name, dest / name)
@@ -70,7 +57,9 @@ def stage(item, locations):
             shutil.copy2(original, tok / name)
     files = {}
     for f in sorted(dest.rglob('*')):
-        if not f.is_file() or '.cache' in f.relative_to(dest).parts:
+        if (not f.is_file() or '.cache' in f.relative_to(dest).parts
+                or f.name.lower().startswith('readme')
+                or f.suffix.lower() in {'.md', '.markdown', '.mdx'}):
             continue
         name = f.relative_to(dest).as_posix()
         files[name] = {'bytes': f.stat().st_size,
@@ -140,7 +129,6 @@ def main():
                 revision=item['revision'], subdirectory='tokenizer',
                 download_url=item['repo_url'] + '/tree/' + item['revision'] + '/tokenizer')
         write_json(MANIFEST, manifest)
-        update_catalog(manifest)
 
 if __name__ == '__main__':
     main()

@@ -624,15 +624,6 @@
       "source": "D1/onboard_fix_20261027/library/ORIGINAL_SOURCE_MANIFEST.json"
     },
     {
-      "path": "src/d1/onboard_fix_20261027/library/PATCH_NOTES.md",
-      "group": "d1",
-      "source_sha256": "ba4be8652b881e2d7e08a82a9f1c669ebfe75a14b3b834e6fbbe3ef39bfd1b35",
-      "sha256": "ba4be8652b881e2d7e08a82a9f1c669ebfe75a14b3b834e6fbbe3ef39bfd1b35",
-      "bytes": 3491,
-      "changes": [],
-      "source": "D1/onboard_fix_20261027/library/PATCH_NOTES.md"
-    },
-    {
       "path": "src/d1/onboard_fix_20261027/library/include/FashionStar_UartServo.h",
       "group": "d1",
       "source_sha256": "2ebe45bfbf3995a53e38c4003dce090a4c7b8d3166bb7660ffbdccb23e25a6c9",
@@ -739,15 +730,6 @@
       "bytes": 3345,
       "changes": [],
       "source": "D1/runtime/Control/host_src/CMakeLists.txt"
-    },
-    {
-      "path": "src/d1/runtime/Control/host_src/README.txt",
-      "group": "d1",
-      "source_sha256": "5e670ed37084cf2c28a0759523877a2f8186e54562b07770f46f450b918fd67c",
-      "sha256": "5e670ed37084cf2c28a0759523877a2f8186e54562b07770f46f450b918fd67c",
-      "bytes": 5304,
-      "changes": [],
-      "source": "D1/runtime/Control/host_src/README.txt"
     },
     {
       "path": "src/d1/runtime/Control/host_src/arm_control.cpp",
@@ -1830,15 +1812,6 @@
       "source": "D1/runtime/Control/tools/test_d1_joint_server.py"
     },
     {
-      "path": "src/d1/README.md",
-      "group": "d1",
-      "source_sha256": "6e931fcf658d7ecc4543b1cee03fac6524d49a86593e03d96c4ee539faddcf54",
-      "sha256": "6e931fcf658d7ecc4543b1cee03fac6524d49a86593e03d96c4ee539faddcf54",
-      "bytes": 6674,
-      "changes": [],
-      "source": "D1/README.md"
-    },
-    {
       "path": "src/d1/execution_contract.json",
       "group": "d1",
       "source_sha256": "613c0d0bab690038ba783f50d17454f2e7e773298ad009eb84646f09d696863a",
@@ -1864,24 +1837,6 @@
       "bytes": 432,
       "changes": [],
       "source": "D1/执行带时轨迹.sh"
-    },
-    {
-      "path": "src/d1/validation/D1T_frequency_and_interface_evidence.md",
-      "group": "d1_evidence",
-      "source_sha256": "e4d0c18171a7ba7a17d4124d253e175121fbaa50aade3ecdd2d0e55ad2da1106",
-      "sha256": "e4d0c18171a7ba7a17d4124d253e175121fbaa50aade3ecdd2d0e55ad2da1106",
-      "bytes": 8731,
-      "changes": [],
-      "source": "D1/validation/D1T_frequency_and_interface_evidence.md"
-    },
-    {
-      "path": "src/d1/validation/hardware_assessment.md",
-      "group": "d1_evidence",
-      "source_sha256": "a82ccfb91bc7aa15e567df46984ca28689ed359f3e5fae6beac12e255a487daf",
-      "sha256": "a82ccfb91bc7aa15e567df46984ca28689ed359f3e5fae6beac12e255a487daf",
-      "bytes": 7050,
-      "changes": [],
-      "source": "D1/validation/hardware_assessment.md"
     },
     {
       "path": "src/d1/validation/software_validation.json",
@@ -2017,18 +1972,6 @@
       "bytes": 26818,
       "changes": [],
       "source": "D1/validation/historical_20261026_222049_031615/tracking.csv"
-    },
-    {
-      "path": "src/piper/deployment/README.md",
-      "group": "piper",
-      "source_sha256": "063c8aa2b41986859c4f9393538ca3493c29bce5fd740f9f051a51c561989412",
-      "sha256": "0b13fc3b5bf08b35aaefcbc3252e1a69cf07bc2de4c4d62d0259dd69f857680d",
-      "bytes": 50790,
-      "changes": [
-        "historical_document_banner",
-        "publication_version_aliases"
-      ],
-      "source": "PIPER/deployment/README.md"
     },
     {
       "path": "src/piper/deployment/act_approach_refresh.py",
@@ -2876,18 +2819,6 @@
       "source": "LEROBOT/record_piper_official.sh"
     },
     {
-      "path": "src/lerobot_workspace/cloud_act_v5/README_中文.txt",
-      "group": "act_training",
-      "source_sha256": "d2f2a715fb0bda1d6c30b8d6945b12dcc73a7f444673d52ec69b781b63d463b7",
-      "sha256": "e5c3526980999c3f2a65fa3b2131c5f3587e4c42b246e16fb2fc4d71416a04a0",
-      "bytes": 3041,
-      "changes": [
-        "cloud_hostname_template",
-        "publication_version_aliases"
-      ],
-      "source": "LEROBOT/cloud_act_v5/README_中文.txt"
-    },
-    {
       "path": "src/lerobot_workspace/cloud_act_v5/constraints.txt",
       "group": "act_training",
       "source_sha256": "e4793322805c7eeaf9075509baa9ec07bbe109d3fd2f3841ca941046ee4b9db6",
@@ -2999,18 +2930,6 @@
       "source": "PIPER/deployment/baselines/previous_30steps_alpha07_v7_r15/manifest.json"
     },
     {
-      "path": "src/pi05/pi05_expert_training_batch8_v6/README.md",
-      "group": "pi05",
-      "source_sha256": "278a9831ac5a187e1649b84ac88c91d33a2ae2679ee36060f456baa0bd31c3e4",
-      "sha256": "3b676b61d4ba22d3719cf7aab8595ec0b13af01b6828dd336698b836f1a6d069",
-      "bytes": 7849,
-      "changes": [
-        "historical_document_banner",
-        "publication_version_aliases"
-      ],
-      "source": "PI05/pi05_expert_training_batch8_v6/README.md"
-    },
-    {
       "path": "src/pi05/pi05_expert_training_batch8_v6/check_status.py",
       "group": "pi05",
       "source_sha256": "1c113172daeb96564968e5e04d6341ef252f612125a39843c8a5d734a065ad71",
@@ -3069,18 +2988,6 @@
         "publication_version_aliases"
       ],
       "source": "PI05/pi05_expert_training_batch8_v6/watch_and_backup.py"
-    },
-    {
-      "path": "src/pi05/pi05_expert_inference_v6/README.md",
-      "group": "pi05",
-      "source_sha256": "962932b990347af61b1d20d827bb9465284288e2b5c39c3062c630f2d7651ff1",
-      "sha256": "df58e0eb00e10d94ff06043d08ad9e426c02e780af273ac69f2036507180eec1",
-      "bytes": 5872,
-      "changes": [
-        "historical_document_banner",
-        "publication_version_aliases"
-      ],
-      "source": "PI05/pi05_expert_inference_v6/README.md"
     },
     {
       "path": "src/pi05/pi05_expert_inference_v6/benchmark.py",
@@ -3319,18 +3226,6 @@
         "publication_version_aliases"
       ],
       "source": "PI05/pi05_cloud_inference_v7/upload_assets.py"
-    },
-    {
-      "path": "src/pi05/pi05_cloud_inference_v7/cloud_grasp_act_bridge/README.md",
-      "group": "pi05",
-      "source_sha256": "b5c0a765e92509d64394c3db8868da3eddf6b6b840ff39adddf6b5475f65c628",
-      "sha256": "85619e6ede9b30c3d56f093b839e2c7d490fca53e10b01f49452485eca4778e0",
-      "bytes": 11095,
-      "changes": [
-        "historical_document_banner",
-        "publication_version_aliases"
-      ],
-      "source": "PI05/pi05_cloud_inference_v7/cloud_grasp_act_bridge/README.md"
     },
     {
       "path": "src/pi05/pi05_cloud_inference_v7/cloud_grasp_act_bridge/camera_pair_probe.py",
@@ -3726,18 +3621,6 @@
       "bytes": 9629,
       "changes": [],
       "source": "PI05/pi05_cloud_inference_v7/cloud_grasp_act_bridge/visual_gripper_runtime.py"
-    },
-    {
-      "path": "src/pi05/pi05_cloud_inference_v7/lerobot_lossless_service/README.md",
-      "group": "pi05",
-      "source_sha256": "8366eaed4646b19830e4dad0a63ab3a0fb9425eeda42b1484218ad587f25f525",
-      "sha256": "c3083fbca2105846c559bc13ab2973f4cf6b324b7219d0a5fa2eae57885b6503",
-      "bytes": 4461,
-      "changes": [
-        "historical_document_banner",
-        "publication_version_aliases"
-      ],
-      "source": "PI05/pi05_cloud_inference_v7/lerobot_lossless_service/README.md"
     },
     {
       "path": "src/pi05/pi05_cloud_inference_v7/lerobot_lossless_service/benchmark.py",
@@ -4399,44 +4282,6 @@
       "source": "FPGA50/工程源码/sim/tick_reference.py"
     },
     {
-      "path": "hardware/robot_rt_50mhz/spec/ACT_CONTRACT.md",
-      "group": "fpga",
-      "source_sha256": "581648b1d9354f9d08516a886cb02d9c96946bd393b858c300710766ea2db1b7",
-      "sha256": "5dfeb94a8a4937d3db8729a9caae4c1db9430b122cc12408ad5fc2f40c8c618e",
-      "bytes": 4694,
-      "changes": [
-        "publication_version_aliases"
-      ],
-      "source": "FPGA50/工程源码/spec/ACT_CONTRACT.md"
-    },
-    {
-      "path": "hardware/robot_rt_50mhz/spec/PL_SPEC.md",
-      "group": "fpga",
-      "source_sha256": "03127b1ed58aeca1f2463c02dc1f865488f2bb8ab50e127df8194040fa9a2151",
-      "sha256": "03127b1ed58aeca1f2463c02dc1f865488f2bb8ab50e127df8194040fa9a2151",
-      "bytes": 50211,
-      "changes": [],
-      "source": "FPGA50/工程源码/spec/PL_SPEC.md"
-    },
-    {
-      "path": "hardware/robot_rt_50mhz/spec/PROTOCOL.md",
-      "group": "fpga",
-      "source_sha256": "05a267c4003429b7047a28e7642d763ec5c3b655e354612a89fc3aa67d599ec6",
-      "sha256": "05a267c4003429b7047a28e7642d763ec5c3b655e354612a89fc3aa67d599ec6",
-      "bytes": 7214,
-      "changes": [],
-      "source": "FPGA50/工程源码/spec/PROTOCOL.md"
-    },
-    {
-      "path": "hardware/robot_rt_50mhz/spec/TRANSPORT_NOTES.md",
-      "group": "fpga",
-      "source_sha256": "5fbdc405445b603d925140876610f6819173cc2c862bbcc97dee94871f9fb6d4",
-      "sha256": "5fbdc405445b603d925140876610f6819173cc2c862bbcc97dee94871f9fb6d4",
-      "bytes": 10723,
-      "changes": [],
-      "source": "FPGA50/工程源码/spec/TRANSPORT_NOTES.md"
-    },
-    {
       "path": "hardware/robot_rt_50mhz/spec/act_contract.json",
       "group": "fpga",
       "source_sha256": "2231c78ac55af694d58f0dd456ab33218cfd87656ee70c44b041f2bd11a3ad72",
@@ -4745,24 +4590,6 @@
       "source": "FPGA50/工程源码/tests/test_timing_events.py"
     },
     {
-      "path": "hardware/robot_rt_50mhz/measure/RESULT.md",
-      "group": "fpga",
-      "source_sha256": "00d88fb122424289877217f2029eb2e91d022e2d6400db7400ae1e60029ba16a",
-      "sha256": "00d88fb122424289877217f2029eb2e91d022e2d6400db7400ae1e60029ba16a",
-      "bytes": 559,
-      "changes": [],
-      "source": "PIPER/robot_rt/measure/RESULT.md"
-    },
-    {
-      "path": "hardware/robot_rt_50mhz/measure/act_bench.md",
-      "group": "fpga",
-      "source_sha256": "09349ecaefe88260b2dd7a727277b19c796bc08e03191c2f8819354fa21eddb8",
-      "sha256": "09349ecaefe88260b2dd7a727277b19c796bc08e03191c2f8819354fa21eddb8",
-      "bytes": 1852,
-      "changes": [],
-      "source": "PIPER/robot_rt/measure/act_bench.md"
-    },
-    {
       "path": "hardware/robot_rt_50mhz/measure/act_runtime.py",
       "group": "fpga",
       "source_sha256": "17a7bcbf3b8cc79f584fd68e60ef0c61a6714b9a30d63a6dff4fee354cfbab8a",
@@ -4853,44 +4680,6 @@
       "bytes": 15188,
       "changes": [],
       "source": "PIPER/robot_rt/measure/smoothness_metrics.py"
-    },
-    {
-      "path": "hardware/robot_rt_50mhz/docs/PI05_INTERFACE.md",
-      "group": "fpga",
-      "source_sha256": "a2a4fec8d3657de7f7d2628925d06d644c766c0edad0e0daa2fed920182864cc",
-      "sha256": "474f89b7aa1aba994fcf7aac959689593cbbaa46816fbb01bc549e0bb27292f7",
-      "bytes": 11596,
-      "changes": [
-        "publication_version_aliases"
-      ],
-      "source": "PIPER/robot_rt/docs/PI05_INTERFACE.md"
-    },
-    {
-      "path": "hardware/robot_rt_50mhz/docs/BOARD_SMOKE.md",
-      "group": "fpga",
-      "source_sha256": "b990c3d1ce7367b7fad0a6b998cafbb3ba33e01b50fe84ce843c5e1fb6a67432",
-      "sha256": "b990c3d1ce7367b7fad0a6b998cafbb3ba33e01b50fe84ce843c5e1fb6a67432",
-      "bytes": 17524,
-      "changes": [],
-      "source": "PIPER/robot_rt/docs/BOARD_SMOKE.md"
-    },
-    {
-      "path": "hardware/robot_rt_50mhz/docs/EXTERNAL_BUILD.md",
-      "group": "fpga",
-      "source_sha256": "f744fe2e25a44249a5a7ceaffcfc83341e3be79ef5e9862f0bc7bf33e7b7ba83",
-      "sha256": "f744fe2e25a44249a5a7ceaffcfc83341e3be79ef5e9862f0bc7bf33e7b7ba83",
-      "bytes": 38984,
-      "changes": [],
-      "source": "PIPER/robot_rt/docs/EXTERNAL_BUILD.md"
-    },
-    {
-      "path": "hardware/robot_rt_50mhz/docs/IMPLEMENTATION.md",
-      "group": "fpga",
-      "source_sha256": "3f955f32207fe01e113e8565980449192ee12bec4e7c551c63aebd9be9144ab8",
-      "sha256": "3f955f32207fe01e113e8565980449192ee12bec4e7c551c63aebd9be9144ab8",
-      "bytes": 24576,
-      "changes": [],
-      "source": "PIPER/robot_rt/docs/IMPLEMENTATION.md"
     },
     {
       "path": "hardware/robot_rt_50mhz/docs/environment_versions.json",
@@ -4992,15 +4781,6 @@
       "source": "FPGA50/板端配置/测试参数.json"
     },
     {
-      "path": "hardware/vision_preprocess/v3/README.md",
-      "group": "vision",
-      "source_sha256": "6c5c5aa4cbfa664aef5517c594a81c4cd2f6de89db0418e15c9fd5a6b339ac38",
-      "sha256": "6c5c5aa4cbfa664aef5517c594a81c4cd2f6de89db0418e15c9fd5a6b339ac38",
-      "bytes": 12255,
-      "changes": [],
-      "source": "VISION/vision_preprocess/v3/README.md"
-    },
-    {
       "path": "hardware/vision_preprocess/v3/board/create_design.tcl",
       "group": "vision",
       "source_sha256": "d6d1fe30b98bd81b051b9ddc7c5ccb738db5f48ac39f50a374601125317f6b8c",
@@ -5044,15 +4824,6 @@
       "bytes": 1711,
       "changes": [],
       "source": "VISION/vision_preprocess/v3/kr260-vision-v3.dts"
-    },
-    {
-      "path": "hardware/vision_preprocess/v3/ros2/README.md",
-      "group": "vision",
-      "source_sha256": "7ef7cfc80666b13cfab18f5d9c8965003fa635de9a777d333a948702a75f92dd",
-      "sha256": "7ef7cfc80666b13cfab18f5d9c8965003fa635de9a777d333a948702a75f92dd",
-      "bytes": 2404,
-      "changes": [],
-      "source": "VISION/vision_preprocess/v3/ros2/README.md"
     },
     {
       "path": "hardware/vision_preprocess/v3/ros2/vpr3_ros/package.xml",

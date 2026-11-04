@@ -20,12 +20,6 @@
         "bytes": 99
       },
       {
-        "path": "third_party/pyAgxArm/CHANGELOG.md",
-        "original_path": "/home/aup/piper SDK/pyAgxArm/CHANGELOG.md",
-        "sha256": "24ae8291e7c33a7c14db90d66d77b15f34d03068618774b2f201ca7733ad02b6",
-        "bytes": 5721
-      },
-      {
         "path": "third_party/pyAgxArm/LICENSE",
         "original_path": "/home/aup/piper SDK/pyAgxArm/LICENSE",
         "sha256": "ea8af5e789cb2d4e9b10bce3874982ade163b749b6bfbdb32e2df21c4d106de1",
@@ -38,12 +32,6 @@
         "bytes": 267
       },
       {
-        "path": "third_party/pyAgxArm/README.md",
-        "original_path": "/home/aup/piper SDK/pyAgxArm/README.md",
-        "sha256": "acf6bfcf438a8369c004a99cd02a0f12fddd7f57067dc21b9a6e8f8c4953fa6d",
-        "bytes": 11715
-      },
-      {
         "path": "third_party/pyAgxArm/assets/pictures/candump_can0.png",
         "original_path": "/home/aup/piper SDK/pyAgxArm/assets/pictures/candump_can0.png",
         "sha256": "8893e5536ed419cd477f1d42f520521df2813bcd228b948942071773db018b32",
@@ -54,72 +42,6 @@
         "original_path": "/home/aup/piper SDK/pyAgxArm/docs/__init__.py",
         "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "bytes": 0
-      },
-      {
-        "path": "third_party/pyAgxArm/docs/can_user.md",
-        "original_path": "/home/aup/piper SDK/pyAgxArm/docs/can_user.md",
-        "sha256": "92241bd79855e44dfc6da962298574ae46dd52d4aef7a614cb4edbde54945951",
-        "bytes": 11028
-      },
-      {
-        "path": "third_party/pyAgxArm/docs/effector/agx_gripper/agx_gripper_api.md",
-        "original_path": "/home/aup/piper SDK/pyAgxArm/docs/effector/agx_gripper/agx_gripper_api.md",
-        "sha256": "0470cc798bc8a1314418d79a9fae1e5d9398ba41a045df81cf89cb5d2de62fb2",
-        "bytes": 39615
-      },
-      {
-        "path": "third_party/pyAgxArm/docs/effector/revo2/revo2_api.md",
-        "original_path": "/home/aup/piper SDK/pyAgxArm/docs/effector/revo2/revo2_api.md",
-        "sha256": "7f912d6f4edb1543f508053e99919e26603c2c043248f5bdf8d8d8693cf037a6",
-        "bytes": 34537
-      },
-      {
-        "path": "third_party/pyAgxArm/docs/effector/revo2_pro_touch/revo2_pro_touch_api.md",
-        "original_path": "/home/aup/piper SDK/pyAgxArm/docs/effector/revo2_pro_touch/revo2_pro_touch_api.md",
-        "sha256": "bf1cdf70fd91e0fda47dd0ca20a0c8c2b94f75962bdb70538100bd47d23a3956",
-        "bytes": 21048
-      },
-      {
-        "path": "third_party/pyAgxArm/docs/nero/firmware_reference.md",
-        "original_path": "/home/aup/piper SDK/pyAgxArm/docs/nero/firmware_reference.md",
-        "sha256": "f54797b6d2e7f5f7efdf40f19eca66b2ef98843293d97d3b6140852c78c615ea",
-        "bytes": 13899
-      },
-      {
-        "path": "third_party/pyAgxArm/docs/nero/first_time_user_guide_can.md",
-        "original_path": "/home/aup/piper SDK/pyAgxArm/docs/nero/first_time_user_guide_can.md",
-        "sha256": "645252b13379a6b7aebf5d13f13974d24ba6a75f65648bc5e9be48d307df95df",
-        "bytes": 7673
-      },
-      {
-        "path": "third_party/pyAgxArm/docs/nero/nero_api.md",
-        "original_path": "/home/aup/piper SDK/pyAgxArm/docs/nero/nero_api.md",
-        "sha256": "df30ebc390aac9763bb5f6d1e09be44a7e3f90419cd7eeb91f190f6eefdb8438",
-        "bytes": 150785
-      },
-      {
-        "path": "third_party/pyAgxArm/docs/piper/firmware_reference.md",
-        "original_path": "/home/aup/piper SDK/pyAgxArm/docs/piper/firmware_reference.md",
-        "sha256": "66a410a58d3289100adfa594cce7b8e50bb004052404812c8277c642d9e94f77",
-        "bytes": 18397
-      },
-      {
-        "path": "third_party/pyAgxArm/docs/piper/piper_api.md",
-        "original_path": "/home/aup/piper SDK/pyAgxArm/docs/piper/piper_api.md",
-        "sha256": "c692f75c04da904f6a188ca9f6f585ad6ddca8790b3d5a1ed5a5811c939dae63",
-        "bytes": 176601
-      },
-      {
-        "path": "third_party/pyAgxArm/docs/ubuntu_24_04_pip_install.md",
-        "original_path": "/home/aup/piper SDK/pyAgxArm/docs/ubuntu_24_04_pip_install.md",
-        "sha256": "119ff6049b336e0bc68a10ee1117bab55be1f6f7c665908b72ad108beb29bb34",
-        "bytes": 2808
-      },
-      {
-        "path": "third_party/pyAgxArm/docs/wsl2_usb_can_guide.md",
-        "original_path": "/home/aup/piper SDK/pyAgxArm/docs/wsl2_usb_can_guide.md",
-        "sha256": "dc35a1c8fcab029b7bea330b74002d2bf85be71c27903a5bd902b2b0d9d937c3",
-        "bytes": 24732
       },
       {
         "path": "third_party/pyAgxArm/pyAgxArm/__init__.py",
@@ -180,12 +102,6 @@
         "original_path": "/home/aup/piper SDK/pyAgxArm/pyAgxArm/api/firmware.pyi",
         "sha256": "66bb20d7ddfcbb5e1b48f73ee275d65212828dd6be7ecf18161b63cca24a9dfc",
         "bytes": 76
-      },
-      {
-        "path": "third_party/pyAgxArm/pyAgxArm/demos/DEMO.md",
-        "original_path": "/home/aup/piper SDK/pyAgxArm/pyAgxArm/demos/DEMO.md",
-        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "bytes": 0
       },
       {
         "path": "third_party/pyAgxArm/pyAgxArm/demos/__init__.py",
@@ -1612,8 +1528,10 @@
       {
         "path": "third_party/pyAgxArm/pyproject.toml",
         "original_path": "/home/aup/piper SDK/pyAgxArm/pyproject.toml",
-        "sha256": "1451ac2a66a6395bf38f2ce9ebda81f55724dbae368617f46c729d3eeffcad46",
-        "bytes": 1139
+        "sha256": "d5fc82e0b9cdcf099b11240c168c12feb1874b732953e4b982ade34842fcbbf9",
+        "bytes": 1075,
+        "original_sha256": "1451ac2a66a6395bf38f2ce9ebda81f55724dbae368617f46c729d3eeffcad46",
+        "publication_edit": "Removed README dependency from package metadata."
       },
       {
         "path": "third_party/pyAgxArm/rm_tmp.sh",
@@ -1626,12 +1544,6 @@
         "original_path": "/home/aup/piper SDK/pyAgxArm/setup.py",
         "sha256": "584baa70045a1c250144be9ae32a53a01b089707b16c0d98089fb46bfc4e2ace",
         "bytes": 1294
-      },
-      {
-        "path": "third_party/pyAgxArm/tests/API_COVERAGE.md",
-        "original_path": "/home/aup/piper SDK/pyAgxArm/tests/API_COVERAGE.md",
-        "sha256": "13af08142a8e8c9721b5b532e4626608eb5db93dde43f77840e0369c590a8d1a",
-        "bytes": 5564
       },
       {
         "path": "third_party/pyAgxArm/tests/__init__.py",

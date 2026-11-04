@@ -69,12 +69,6 @@
       "source_sha256": "34c04358e1edd9d79b02e381d2874268988fb29a58c25d3ae02a1aae1b5ac0cb"
     },
     {
-      "path": "01_同步推理/结果/run_v10_r33/技术文档可用数据.md",
-      "bytes": 1397,
-      "sha256": "c98b442041ce022abe9d0f1eca916f004b294518d75dfdfa9d1a2d80b7e924e1",
-      "source_sha256": "a295a9ffd475589a78cbb02a350a88f7a0a3cc416cc89486d645b04e57d9bf1e"
-    },
-    {
       "path": "02_同步与异步对照/程序/benchmark_async.py",
       "bytes": 13149,
       "sha256": "37d1ae1d23ae6adee0f35afc7dd77c88974b0c93593339e480de746e624f6296",
@@ -127,12 +121,6 @@
       "bytes": 1905982,
       "sha256": "b28906c8e0048550e37060361adb05880cdf3d06809e5c054b93e42eb0ce1410",
       "source_sha256": "b28906c8e0048550e37060361adb05880cdf3d06809e5c054b93e42eb0ce1410"
-    },
-    {
-      "path": "04_原始程序快照/同步测速/README.md",
-      "bytes": 1452,
-      "sha256": "4bd29399d66c94bb52f24f80e29b205877fd1b6c5ad7595215d55026c03a61a6",
-      "source_sha256": "9059b9177bb720f8dc0a84b5511978166c31eb31b9dcc5f2bf9f1b4461af5efb"
     },
     {
       "path": "04_原始程序快照/同步测速/benchmark.py",
