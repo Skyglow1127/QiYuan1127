@@ -1,0 +1,114 @@
+{
+  "completed_at": "2026-10-23T00:54:30.269885+08:00",
+  "result": "PASS for the explicitly listed adaptations; not whole-product localization",
+  "vivado_version": "2025.2",
+  "session_id": "vivado-20261022-225916-d80cdb84",
+  "pid": 20289,
+  "session_state": "open; Chinese enabled; user closes manually",
+  "workflow": {
+    "vivado_commands": "Ross MCP via installed VS Code AMD extension stdio bridge",
+    "gui_translation": "session-only Java Attach; no AMD installation file edits",
+    "skill": "/home/aup/.vscode/extensions/amd.vivado-ai-extension-2026.9.1/resources/plugin-bundled/skills/vivado-ip-configurator/SKILL.md"
+  },
+  "native_gui_verified": [
+    {
+      "component": "ILA 6.2",
+      "scope": "General options, probe tabs/table headers, readonly HTML description; original 12pt style retained"
+    },
+    {
+      "component": "Clocking Wizard 6.0",
+      "scope": "General and Output Clocks native table families, labels, borders, numeric captions; captured input/checkbox/editor states unchanged"
+    },
+    {
+      "component": "Settings synthesis page",
+      "scope": "Readonly/disabled field overlay using actual painted background; automatically selected checkpoint and strategy description"
+    },
+    {
+      "component": "SmartConnect 1.0 Advanced Properties Clocking",
+      "scope": "Static tabs/buttons/headers and DOMAIN/FREQ/PHASE canvas prefixes; actual English restoration and Chinese re-enabling; scrolling/clipping observed",
+      "nodes": 7,
+      "edges": 6,
+      "native_model_unchanged": true,
+      "comparison": "value-comparisons.json",
+      "model_snapshot_records": 167,
+      "excluded_from_model_comparison": "DISPLAY line describes canvas extent and appearance; window was intentionally resized"
+    }
+  ],
+  "known_limits": [
+    "Not 100% of Vivado or every IP; no global coverage percentage measured.",
+    "SmartConnect bottom HTML help pane is editable in the native implementation and remains English; no Document replacement bypass.",
+    "Identifiers, Tcl, HDL, paths, native log messages and engineering values remain original.",
+    "Only exact reviewed text and safe bounded overlays are displayed. Insufficient space/unsupported geometry leaves original text.",
+    "This run is UI localization validation, not synthesis, timing closure, a bitstream build or hardware validation."
+  ],
+  "fixture": {
+    "project": "zh_ui_demo",
+    "bd": "zh_sc_ui_trial",
+    "part": "xck26-sfvc784-2LV-c",
+    "ips": [
+      "axi_vip:1.1",
+      "smartconnect:1.0",
+      "axi_gpio:2.0 x 2"
+    ],
+    "strategy": "PERFORMANCE",
+    "operations": [
+      "validate_bd_design",
+      "generate_target simulation"
+    ],
+    "generated_RLD": "reports/vivado_zh_ui_trial/project/zh_ui_demo.gen/sources_1/bd/zh_sc_ui_trial/ip/zh_sc_ui_trial_smartconnect_0_0/sc_post_elab.rld",
+    "build_runs_launched": false,
+    "hardware_programmed": false
+  },
+  "validation": {
+    "java_suites_passed": 9,
+    "python_tests_passed": 4,
+    "java_counted_checks": 389,
+    "additional_agent_integration_suite": true,
+    "mock_tests_are_not_native_GUI_proof": true,
+    "raw_tests": "final-tests.json",
+    "raw_native_comparisons": "value-comparisons.json",
+    "all_captured_comparisons_equal": true
+  },
+  "dictionary_entries": 1709,
+  "machine_translations": "draft/review only; not automatically displayed",
+  "fixes_verified": [
+    "HTML document copy preserves CSS sizes and does not roundtrip through HTMLWriter",
+    "Readonly overlay samples actual native painted background",
+    "SmartConnect nullable node properties accepted; invalid scene isolated per canvas and re-attempted after recovery"
+  ],
+  "historical_failures_preserved": [
+    "ila-probe.png (font expansion before fix)",
+    "smartconnect-prepare-result.json (helper namespace before recovery)",
+    "smartconnect-clocking-zh.png (canvas before null-list fix)",
+    "final-tests-before-smartconnect-fix.json",
+    "../vivado_zh_session_vivado-20261022-225916-d80cdb84/agent-errors.log"
+  ],
+  "post_fix_error_monitor": {
+    "file": "../vivado_zh_session_vivado-20261022-225916-d80cdb84/agent-errors.log",
+    "bytes": 35298,
+    "last_change": "2026-10-23T00:49:21.462059+08:00",
+    "no_additional_agent_errors_since_fix": true
+  },
+  "screenshots": {
+    "ila-general-final.png": "f1e3c9a392a0a9ec66abfff6cc2f20755807e9a578046b1da1574fb9598c35fe",
+    "ila-probe-final.png": "4059fd6fbd9761400554afc06d6fea3ae1277bd4b2917bb19cc19b42bb269d1b",
+    "clock-general-final.png": "e2b7c20436bffdf41d591619b46a595e8f52ede76c8e49cf1c76e5679d4f96e8",
+    "clock-output-final.png": "d593207c12ac063c9e99db08d3217790131145c3f0531139c62b663fdb39696d",
+    "settings-checkpoint-final.png": "391abecd7a62a9edd970de60163b58905e8710f05f2a917bb2fb1acea12d61c4",
+    "smartconnect-clocking-final.png": "380bb955b183d0b172aae4d949624a362b92fcd1be6904306a8d16ee02b81806",
+    "smartconnect-clocking-english-final.png": "99e073ab60527e09df0ddb1b7ed2465101e08f072726ed6ed8dc102f89554d41",
+    "smartconnect-scrolled-deep.png": "76a9e89f7f68c0db925f264675aa82f2c604b211553f8ba144e6f82e74042946"
+  },
+  "source_sha256": {
+    "localization/VivadoZhAgent.java": "881d3f70dde3dc44a4fae0b9652466cbde174dc460d1310e8c7381606301f873",
+    "localization/VivadoZhIpTables.java": "b6c0df9088a5b1f5d38ef02d5e63f221bc06755d7a154cc040e8542f6a0e48c6",
+    "localization/VivadoZhOverlay.java": "948ac9682a0bdcc368f8ed16dbd8615dfd2362014862f7c8b96da963ce2975c2",
+    "localization/VivadoZhHtml.java": "1f3f7069b493a0a9e45a8b7770a17bfe9036afe40d01dbb4c4c47eb8b9165202",
+    "localization/VivadoZhSmartConnectOverlay.java": "90e2c885988ceea08bdba9be4a246ada1df3a15c8a97402c1c7b38fe5c0d0309",
+    "localization/VivadoZhBorders.java": "e8d4ae229b870ef57b2106a5fcdaf328ace6ef21e2d082cba7524a84c42e9214",
+    "localization/VivadoZhRenderers.java": "de37139b854fd052127cb9997d84d378d1ffbeb2487d1d3bf45ca2f0b4e358a6",
+    "localization/VivadoZhStyledLabel.java": "7383fa4eac558473a5c878ec7558c1ddabfbf22ef1c645682594743a015ddd61",
+    "localization/vivado-2025.2-zh.tsv": "e275fa6512c37f9476fc89aa8d44e03ac96a13420757efe69637128acab704e9",
+    "scripts/vivado_zh.py": "40b1784807daa847d1e315ea21e5e85aa93fbc17427794a0e623d978da62c029"
+  }
+}

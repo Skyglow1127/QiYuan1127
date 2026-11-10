@@ -1,0 +1,9 @@
+{
+  "interface": "enp99s0",
+  "robot_ip": "192.168.123.100",
+  "domain": 0,
+  "topic": "rt/arm_Feedback",
+  "max_age_s": 0.6,
+  "mapping_candidate": "/home/aup/D1/Control/logs/handeye_resume_20261022_145044/empirical_handeye_candidate.json",
+  "description": "沿用2026-10-22局部经验映射，仅供姿态预览，不是已验证的电机命令映射。夹爪仅显示SDK原始值。"
+}

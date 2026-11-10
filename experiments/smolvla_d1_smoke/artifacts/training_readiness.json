@@ -1,0 +1,80 @@
+{
+  "schema": "d1-smolvla-training-readiness-v1",
+  "source": {
+    "path": "/home/aup/Camera/output/act_lift_pilot_20261024/data/examples.jsonl",
+    "sha256": "5b9214d20acd72b5a7bed672c54a25f25d6cda459130a99359e7085941652187"
+  },
+  "audit": {
+    "path": "/home/aup/NPU/policies/smolvla_d1/data_audit.json",
+    "sha256": "668ce5b43a695d8962fd741920da17b17becb9726b6daa205a9528b08c7ddfb3"
+  },
+  "hardware_accessed": false,
+  "robot_commands_sent": 0,
+  "source_modified": false,
+  "offline_inference_smoke_allowed": true,
+  "few_step_technical_training_allowed": true,
+  "full_grasp_training_allowed": false,
+  "complete_grasp_episodes": 0,
+  "source_fragments": 2,
+  "source_sessions": 2,
+  "counts": {
+    "all_examples": 1004,
+    "train_examples": 781,
+    "val_examples": 223,
+    "train_valid_action_occurrences_before_deduplication": 7702,
+    "train_padded_action_occurrences_excluded": 108,
+    "train_unique_action_commands": 784
+  },
+  "source_split_preserved": true,
+  "reason": "1004 overlapping action-chunk windows come from two lift fragments, not 1004 independent demonstrations. Complete continuous grasp episodes: 0.",
+  "technical_weights_scope": "A few optimization steps may validate gradient/update/save/reload mechanics only. They cannot be promoted as a complete or general D1 grasp policy.",
+  "gaps": [
+    "Continuous successful approach, close, lift, lower/place, release and retreat demonstrations under a consistent action/time contract.",
+    "Diverse initial states, locations and object instances, with separate held-out physical instances and fresh evaluation.",
+    "D1-specific state/action normalization fitted only on training data; calibrated gripper semantics and robot adapter.",
+    "Resolved physical holding/recovery and contact conditions before any newly approved hardware collection."
+  ],
+  "language_label": {
+    "text": "Lift the already grasped red cube.",
+    "origin": "manually_added_technical_label",
+    "source_has_natural_language": false,
+    "scope": "Constant lift-stage label for technical smoke only; not original human instructions or language-grounding evidence."
+  },
+  "historical_contact_record": {
+    "path": "/home/aup/Camera/output/preaction_clear_pose_20261025T211706/contact_after_manual_support_released.json",
+    "sha256": "742667a93c4ded065ac38028f9153fee0589b85e99c29fbecbd416eee4a2fffe",
+    "record": {
+      "recorded_at": "2026-10-25T21:20:22.163338+08:00",
+      "source": "direct_user_report",
+      "user_answer": "刚刚我放手了 所以又有接触",
+      "physical_contact_reported": true,
+      "prior_clearance_was_while_manually_supported": true,
+      "unsupported_clear_pose_maintained": false,
+      "hardware_mode_or_torque_verified": false,
+      "robot_commands_sent": 0,
+      "motion_sampling_started": false,
+      "next_requirement": "Establish a verified supported holding/recovery mode before releasing manual support or attempting separation; do not repeat manual lift-and-release or bypass motion/collision guards.",
+      "latest_readonly_feedback": {
+        "fresh": true,
+        "q": [
+          5.699999809265137,
+          -90.0,
+          87.80000305175781,
+          8.100000381469727,
+          14.0,
+          -8.399999618530273,
+          20.399999618530273
+        ],
+        "software_flags": {
+          "power_status": 0,
+          "enable_status": 0,
+          "error_status": 0
+        },
+        "age_ms": 31.1067339789588
+      }
+    },
+    "interpretation": "This is a saved 2026-10-25 observation and direct-user report, not a live hardware check in this audit. It records physical contact after manual support was released and no new action collection."
+  },
+  "held_out_validation_limit": "Source session is isolated, but these records have already been used for ACT development; this is not a fresh unseen-object or physical test set.",
+  "npu_support_established": false
+}

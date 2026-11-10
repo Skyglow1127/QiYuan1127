@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KR260 相机实时预览</title>
+<style>
+body{margin:0;padding:26px;background:#101722;color:#e8eef6;font:16px system-ui}h1{font-size:24px;margin:0 0 12px}
+.hint{color:#a7bacd;line-height:1.6}.views{display:flex;flex-wrap:wrap;gap:18px;margin:22px 0}section{background:#1c2838;padding:14px;border-radius:12px;max-width:640px;flex:1;min-width:300px}
+canvas{width:100%;height:auto;background:#000;display:block}h2{font-size:17px;margin:0 0 10px}.status{padding:12px;background:#1c2838;border-radius:8px}#health{color:#65dfae}a{color:#9dcfff}
+#wrist-card[hidden],#wrist-depth-card[hidden]{display:none}iframe{display:block;width:100%;height:580px;border:0;background:#1c2838}
+#joint-card{max-width:none;margin-top:22px}#joint-card[hidden],body.compact #joint-card{display:none}#joint-video{height:200px}#joint-connect{margin:8px 0 0;font-size:13px}
+body.compact{display:flow-root;padding:0;background:#1c2838}body.compact>h1,body.compact>.hint,body.compact #wrist-card,body.compact #wrist-depth-card{display:none}
+body.compact-color #depth-card,body.compact-depth #rgb-views,body.compact-depth #health,body.compact-depth #status,body.compact-depth #depth-card h2{display:none}
+body.compact .views{margin:8px 0 0}body.compact section{padding:0;min-width:0;max-width:none}body.compact #rgb-card h2{display:none}
+body.compact-depth .views{margin:0}
+body.compact #health{margin:4px 0;font-size:13px}body.compact .status{padding:4px 0;font-size:12px}body.compact #rgbstat{margin:6px 0;font-size:13px}
+</style>
+<h1 id="camera-title">KR260 → AIPC 实时视频</h1>
+<div class="hint">Orbbec 大白 DC1 · USB 千兆网卡 · 彩色视频与独立深度预览</div>
+<p id="health">正在连接相机…</p><div class="status" id="status">等待状态</div>
+<div class="views" id="rgb-views"><section><h2>彩色画面 · 640 × 480</h2><canvas id="rgb" width="640" height="480"></canvas><p id="rgbstat">等待视频</p></section>
+<section id="wrist-card" hidden><h2>腕部相机 · 棋盘实时画面</h2><iframe id="wrist-video" title="腕部相机实时彩色视频"></iframe></section></div>
+<div class="views"><section id="depth-card"><h2>当前相机深度 · 640 × 400</h2><canvas id="depth" width="640" height="400"></canvas><p id="depthstat">等待深度</p><p class="hint">暖色近、冷色远；显示范围 200–1500 mm，黑色为无效深度。</p></section>
+<section id="wrist-depth-card" hidden><h2>腕部相机深度 · 640 × 400</h2><iframe id="wrist-depth-video" title="腕部相机实时深度热力图"></iframe></section></div>
+<p class="hint">彩色与深度目前独立显示，尚未对齐或曝光同步。中心读数是深度图中心区域的光轴距离，不是识别物体的距离，也不是经过尺子校验的精度结论。</p>
+<p class="hint">显示帧率按本页实际解码绘制的新帧统计；往返耗时不等于相机曝光到屏幕的完整延迟。<a href="/color.mjpg" target="_blank">打开连续 MJPEG 视频</a></p>
+<section id="joint-card" hidden><h2>机械臂各关节 · 实时角度</h2><iframe id="joint-video" title="D1 机械臂各关节实时角度"></iframe><p id="joint-connect" class="hint">正在连接关节反馈面板…</p></section>
+<script>
+const query=new URLSearchParams(location.search),view=query.get('view'),compact=view==='color'||view==='depth';
+const localDashboard=location.port==='18763',cameraRole=localDashboard?(query.get('camera')==='wrist'?'wrist':'global'):(location.port==='18760'?'wrist':'global');
+const cameraPrefix=localDashboard?'/camera/'+cameraRole:'';
+const cameraFetch=(path,options)=>fetch(cameraPrefix+path,options);
+document.querySelector('a[href="/color.mjpg"]').href=cameraPrefix+'/color.mjpg';
+document.querySelector('#rgb').closest('section').id='rgb-card';
+if(compact)document.body.classList.add('compact','compact-'+view);
+if(!compact&&cameraRole==='global'){
+for(const [cardId,frameId,mode] of [['wrist-card','wrist-video','color'],['wrist-depth-card','wrist-depth-video','depth']]){
+const wristUrl=new URL(location.href);wristUrl.port=localDashboard?'18763':'18760';wristUrl.pathname=localDashboard?'/preview':'/';wristUrl.search='?view='+mode+(localDashboard?'&camera=wrist':'');wristUrl.hash='';
+const card=document.getElementById(cardId),frame=document.getElementById(frameId);card.hidden=false;frame.src=wristUrl.href;
+window.addEventListener('message',e=>{if(e.origin===wristUrl.origin&&e.source===frame.contentWindow&&e.data?.type==='camera-preview-height'&&Number.isFinite(e.data.height))frame.style.height=Math.max(200,Math.min(1600,e.data.height))+'px';});
+}
+document.querySelector('#rgb-card h2').textContent='全局相机 · 机械臂实时画面';
+document.querySelector('#depth-card h2').textContent='全局相机深度 · 640 × 400';
+const jointUrl=new URL(location.href);jointUrl.port='18763';jointUrl.pathname='/';jointUrl.search='';jointUrl.hash='';
+const jointFrame=document.getElementById('joint-video');document.getElementById('joint-card').hidden=false;jointFrame.src=jointUrl.href;
+window.addEventListener('message',e=>{if(e.origin===jointUrl.origin&&e.source===jointFrame.contentWindow&&e.data?.type==='joint-preview-height'&&Number.isFinite(e.data.height)){jointFrame.style.height=Math.max(160,Math.min(1200,e.data.height))+'px';document.getElementById('joint-connect').hidden=true;}});
+setTimeout(()=>{const status=document.getElementById('joint-connect');if(!status.hidden)status.textContent='关节反馈服务尚未连接，等待本机只读服务恢复。';},3000);
+}
+if(compact){const parentUrl=new URL(location.href);parentUrl.port=localDashboard?'18763':'18761';
+new ResizeObserver(()=>parent.postMessage({type:'camera-preview-height',height:Math.ceil(document.body.getBoundingClientRect().height)},parentUrl.origin)).observe(document.body);}
+const rgb=document.getElementById('rgb'),depth=document.getElementById('depth');
+const rc=rgb.getContext('2d'),dc=depth.getContext('2d');
+let lastRgb=-1,lastDepth=-1,drawn=0,start=performance.now(),lastDraw=0,lastDepthDraw=0;
+const pause=ms=>new Promise(r=>setTimeout(r,ms));
+async function colorLoop(){while(true){const controller=new AbortController();let reader,received=performance.now();
+const watchdog=setInterval(()=>{if(performance.now()-received>2000)controller.abort();},500);
+try{const r=await cameraFetch('/color.mjpg',{cache:'no-store',signal:controller.signal});if(!r.ok)throw Error('彩色流暂不可用');
+reader=r.body.getReader();let buffer=new Uint8Array(0);start=performance.now();drawn=0;
+while(true){const {done,value}=await reader.read();if(done)throw Error('视频连接中断');received=performance.now();
+const merged=new Uint8Array(buffer.length+value.length);merged.set(buffer);merged.set(value,buffer.length);buffer=merged;
+let newest=null;
+while(true){let end=-1;for(let i=0;i+3<buffer.length;i++){if(buffer[i]===13&&buffer[i+1]===10&&buffer[i+2]===13&&buffer[i+3]===10){end=i;break;}}
+if(end<0)break;const header=new TextDecoder().decode(buffer.subarray(0,end));
+const match=header.match(/Content-Length: (\d+)/i),index=header.match(/X-Frame-Index: (\d+)/i);if(!match||!index)throw Error('视频格式错误');
+const length=Number(match[1]);if(length<=0||length>4000000)throw Error('视频帧长度错误');if(buffer.length<end+4+length)break;
+newest={bytes:buffer.slice(end+4,end+4+length),index:Number(index[1])};buffer=buffer.slice(end+4+length);}
+if(buffer.length>4100000)throw Error('视频缓冲异常');
+if(newest&&newest.index!==lastRgb){const t=performance.now();const bmp=await createImageBitmap(new Blob([newest.bytes],{type:'image/jpeg'}));rc.drawImage(bmp,0,0);bmp.close();lastRgb=newest.index;lastDraw=performance.now();drawn++;
+const dt=(performance.now()-start)/1000;if(dt>=2){document.getElementById('rgbstat').textContent=`本页显示 ${(drawn/dt).toFixed(1)} 帧/秒 · 本机解码绘制 ${(performance.now()-t).toFixed(1)} ms · 帧号 ${lastRgb}`;drawn=0;start=performance.now();}}}
+}catch(e){document.getElementById('rgbstat').textContent='视频中断，正在重连';}
+finally{clearInterval(watchdog);controller.abort();if(reader)await reader.cancel().catch(()=>{});}await pause(400);}}
+async function depthLoop(){while(true){try{
+const r=await cameraFetch('/depth.raw',{cache:'no-store',signal:AbortSignal.timeout(1500)});if(!r.ok)throw Error('深度流不可用');
+const w=Number(r.headers.get('X-Width')),h=Number(r.headers.get('X-Height')),scale=Number(r.headers.get('X-Scale')),id=Number(r.headers.get('X-Frame-Index'));
+const data=new DataView(await r.arrayBuffer());if(data.byteLength!==w*h*2)throw Error('深度长度不符');
+if(id!==lastDepth){lastDepth=id;lastDepthDraw=performance.now();depth.width=w;depth.height=h;const im=dc.createImageData(w,h),roi=[];
+for(let i=0;i<w*h;i++){const raw=data.getUint16(i*2,true),z=raw*scale,j=i*4;im.data[j+3]=255;if(!raw||raw===65535)continue;
+const t=Math.max(0,Math.min(1,(z-200)/1300));im.data[j]=255*(1-t);im.data[j+1]=180*(1-Math.abs(2*t-1));im.data[j+2]=255*t;
+const x=i%w,y=Math.floor(i/w);if(Math.abs(x-w/2)<10&&Math.abs(y-h/2)<10)roi.push(z);}
+dc.putImageData(im,0,0);dc.strokeStyle='white';dc.strokeRect(w/2-10,h/2-10,20,20);roi.sort((a,b)=>a-b);
+document.getElementById('depthstat').textContent=`深度中心区域中位数：${roi.length?roi[Math.floor(roi.length/2)].toFixed(0)+' mm':'无有效深度'} · 深度预览约 5 帧/秒`;}
+}catch(e){document.getElementById('depthstat').textContent='深度中断，正在重连';}await pause(200);}}
+async function statusLoop(){while(true){try{const r=await cameraFetch('/status',{signal:AbortSignal.timeout(1500)});const s=await r.json();
+const ok=!s.error&&!s.stopped&&s.streams.color.age_ms!==null&&s.streams.color.age_ms<1000;
+document.getElementById('health').textContent=ok?'● 正在实时回传':'● 相机未就绪：'+(s.error||'等待新帧');
+document.getElementById('camera-title').textContent=(s.label_zh||'相机')+' · 实时预览';
+document.getElementById('status').textContent=`${s.device.name||'相机'} · ${s.device.serial||''} · 板卡采集：彩色 ${s.streams.color.capture_fps.toFixed(1)} / 深度 ${s.streams.depth.capture_fps.toFixed(1)} 帧/秒`;
+}catch(e){document.getElementById('health').textContent='● 连接已断开，正在重连';}await pause(1000);}}
+setInterval(()=>{if(performance.now()-lastDraw>1500){rc.clearRect(0,0,rgb.width,rgb.height);}if(performance.now()-lastDepthDraw>1500){dc.clearRect(0,0,depth.width,depth.height);}},250);
+if(view!=='depth')colorLoop();if(view!=='color')depthLoop();statusLoop();
+</script></html>

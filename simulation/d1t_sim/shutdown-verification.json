@@ -1,0 +1,9 @@
+{
+  "port": 8765,
+  "listener_closed": true,
+  "services": {
+    "d1t-sim.service": "inactive",
+    "d1t-gui.service": "inactive"
+  },
+  "checked_at": "2026-10-15T00:50:09.170507+08:00"
+}

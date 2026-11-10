@@ -1,0 +1,2066 @@
+{
+  "format_version": 1,
+  "architecture": [
+    32,
+    64,
+    64,
+    2
+  ],
+  "feature_schema": {
+    "version": "velocity-history-v1",
+    "size": 32,
+    "history_seconds": 1.0,
+    "slot_offsets_seconds": [
+      0.0,
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "slot_order": "newest-first",
+    "slot_fields": [
+      "(vx-latest_vx)/10",
+      "(vy-latest_vy)/5",
+      "valid"
+    ],
+    "tail_fields": [
+      "(query_time-latest_captured_at)/3",
+      "latest_vy/5"
+    ],
+    "sampling": "latest captured_at <= slot_time; no future interpolation"
+  },
+  "target": "actual_xy - CA_xy",
+  "device": "cpu",
+  "torch_threads": 1,
+  "torch_version": "2.14.1+cpu",
+  "seed": 0,
+  "requested_epochs": 80,
+  "completed_epochs": 80,
+  "best_epoch": 72,
+  "best_validation_loss": 0.15457700192928314,
+  "loss": "SmoothL1(beta=1)",
+  "early_stopping_patience": 10,
+  "normalization_source": "train",
+  "input_mean": [
+    0.0,
+    0.0,
+    1.0,
+    0.0006360175902955234,
+    -0.0010138534707948565,
+    1.0,
+    0.0012375864898785949,
+    -0.00028374683461152017,
+    1.0,
+    0.0018007360631600022,
+    2.86288764073106e-06,
+    0.9926793575286865,
+    0.0025415089912712574,
+    -0.0009606937528587878,
+    0.985358715057373,
+    0.0032356868032366037,
+    -0.0002161963639082387,
+    0.9780380725860596,
+    0.0038425822276622057,
+    0.000136872025905177,
+    0.9707174301147461,
+    0.004699720535427332,
+    -0.0009429501951672137,
+    0.9633967876434326,
+    0.005501134786754847,
+    -0.00023129071632865816,
+    0.9560761451721191,
+    0.006175599060952663,
+    0.00016431078256573528,
+    0.9487555027008057,
+    0.3956076204776764,
+    -0.019238457083702087
+  ],
+  "input_scale": [
+    1.0,
+    1.0,
+    1.0,
+    0.01963418908417225,
+    0.04192568361759186,
+    1.0,
+    0.03150784596800804,
+    0.06509818881750107,
+    1.0,
+    0.04442115128040314,
+    0.08735335618257523,
+    0.08524700999259949,
+    0.05684904381632805,
+    0.09919889271259308,
+    0.12011212110519409,
+    0.07019127905368805,
+    0.10964010655879974,
+    0.1465592235326767,
+    0.08298249542713165,
+    0.12018589675426483,
+    0.16859747469425201,
+    0.09523259103298187,
+    0.12773573398590088,
+    0.1877855807542801,
+    0.10798048973083496,
+    0.13213558495044708,
+    0.2049257457256317,
+    0.12034047394990921,
+    0.13766950368881226,
+    0.2204960584640503,
+    0.23216307163238525,
+    0.10845421254634857
+  ],
+  "supported_horizons_seconds": [
+    0.10000000149011612,
+    2.4000000953674316
+  ],
+  "split_summary": {
+    "train": {
+      "rows": 12294,
+      "episodes": [
+        "brake_11000",
+        "brake_11001",
+        "brake_11002",
+        "brake_11003",
+        "brake_11004",
+        "brake_11005",
+        "brake_11006",
+        "brake_11007",
+        "brake_11008",
+        "brake_11009",
+        "brake_11010",
+        "brake_11011",
+        "brake_11012",
+        "brake_11013",
+        "brake_11014",
+        "brake_11015",
+        "brake_11016",
+        "brake_11017",
+        "cutin_21000",
+        "cutin_21001",
+        "cutin_21002",
+        "cutin_21003",
+        "cutin_21004",
+        "cutin_21005",
+        "cutin_21006",
+        "cutin_21007",
+        "cutin_21008",
+        "cutin_21009",
+        "cutin_21010",
+        "cutin_21011",
+        "cutin_21012",
+        "cutin_21013",
+        "cutin_21014",
+        "cutin_21015",
+        "cutin_21016",
+        "cutin_21017",
+        "follow_1000",
+        "follow_1001",
+        "follow_1002",
+        "follow_1003",
+        "follow_1004",
+        "follow_1005",
+        "follow_1006",
+        "follow_1007",
+        "follow_1008",
+        "follow_1009",
+        "follow_1010",
+        "follow_1011",
+        "follow_1012",
+        "follow_1013",
+        "follow_1014",
+        "follow_1015",
+        "follow_1016",
+        "follow_1017"
+      ]
+    },
+    "validation": {
+      "rows": 2742,
+      "episodes": [
+        "brake_11018",
+        "brake_11019",
+        "brake_11020",
+        "brake_11021",
+        "cutin_21018",
+        "cutin_21019",
+        "cutin_21020",
+        "cutin_21021",
+        "follow_1018",
+        "follow_1019",
+        "follow_1020",
+        "follow_1021"
+      ]
+    },
+    "calibration": {
+      "rows": 2049,
+      "episodes": [
+        "brake_11022",
+        "brake_11023",
+        "brake_11024",
+        "cutin_21022",
+        "cutin_21023",
+        "cutin_21024",
+        "follow_1022",
+        "follow_1023",
+        "follow_1024"
+      ]
+    },
+    "test": {
+      "rows": 3405,
+      "episodes": [
+        "brake_11025",
+        "brake_11026",
+        "brake_11027",
+        "brake_11028",
+        "brake_11029",
+        "cutin_21025",
+        "cutin_21026",
+        "cutin_21027",
+        "cutin_21028",
+        "cutin_21029",
+        "follow_1025",
+        "follow_1026",
+        "follow_1027",
+        "follow_1028",
+        "follow_1029"
+      ]
+    }
+  },
+  "episode_split_leakage_checked": true,
+  "dataset_sha256": "f18e8f65dc6967df9dc590dd773071171d45529763906d543353842655095070",
+  "dataset_metadata": {
+    "feature_schema": {
+      "version": "velocity-history-v1",
+      "size": 32,
+      "history_seconds": 1.0,
+      "slot_offsets_seconds": [
+        0.0,
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "slot_order": "newest-first",
+      "slot_fields": [
+        "(vx-latest_vx)/10",
+        "(vy-latest_vy)/5",
+        "valid"
+      ],
+      "tail_fields": [
+        "(query_time-latest_captured_at)/3",
+        "latest_vy/5"
+      ],
+      "sampling": "latest captured_at <= slot_time; no future interpolation"
+    },
+    "episodes": [
+      {
+        "episode_id": "follow_1000",
+        "split": "train",
+        "seed": 1000,
+        "scenario": "follow",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1000",
+        "config_sha256": "f85906b55a24838c69fd507d213f0433f1d2b669de8408a8b2dfc3eb08905e42"
+      },
+      {
+        "episode_id": "follow_1001",
+        "split": "train",
+        "seed": 1001,
+        "scenario": "follow",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1001",
+        "config_sha256": "0117d417a62febbb88ce59cee5de7f6bc5a6d5cbc4b0611bdc9dfd0b52338c0b"
+      },
+      {
+        "episode_id": "follow_1002",
+        "split": "train",
+        "seed": 1002,
+        "scenario": "follow",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1002",
+        "config_sha256": "efcbc4a9b96dcc5cbe4ccfdd3969fb9050467f4d04013731f647d343c0d0cc16"
+      },
+      {
+        "episode_id": "follow_1003",
+        "split": "train",
+        "seed": 1003,
+        "scenario": "follow",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1003",
+        "config_sha256": "7166c8a4f927accdf565cd0522affe0c501ee1df65f3b338b6c02caad852cfc5"
+      },
+      {
+        "episode_id": "follow_1004",
+        "split": "train",
+        "seed": 1004,
+        "scenario": "follow",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1004",
+        "config_sha256": "eef6309a266c5a8d42f089782570060a33e573627ee585f4b397693a75a95168"
+      },
+      {
+        "episode_id": "follow_1005",
+        "split": "train",
+        "seed": 1005,
+        "scenario": "follow",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1005",
+        "config_sha256": "7c72681b7ff4ebedd667382eb952b2bdad0f163b03663bb1ae47a5c64722de39"
+      },
+      {
+        "episode_id": "follow_1006",
+        "split": "train",
+        "seed": 1006,
+        "scenario": "follow",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1006",
+        "config_sha256": "c16f4e127f9f839174ee9f29e40be7b2db5fbde32b836a2389f927e25494c9e4"
+      },
+      {
+        "episode_id": "follow_1007",
+        "split": "train",
+        "seed": 1007,
+        "scenario": "follow",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1007",
+        "config_sha256": "9960eaef20835b408803bd9428912b6ac5b8f375c1778dbcdc9b976aad64caa7"
+      },
+      {
+        "episode_id": "follow_1008",
+        "split": "train",
+        "seed": 1008,
+        "scenario": "follow",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1008",
+        "config_sha256": "170376149621e9786ab2f97de40121384bb48f3fd5fbd77363fd5918e3196425"
+      },
+      {
+        "episode_id": "follow_1009",
+        "split": "train",
+        "seed": 1009,
+        "scenario": "follow",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1009",
+        "config_sha256": "7c092538dd8cd192efc8f8a36d79b0828ce12c32424eb829a60d3955bea738e9"
+      },
+      {
+        "episode_id": "follow_1010",
+        "split": "train",
+        "seed": 1010,
+        "scenario": "follow",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1010",
+        "config_sha256": "660422eec444e9d49fa1c78b68e3ad9133d6d221567a48f7d8f59c802e701610"
+      },
+      {
+        "episode_id": "follow_1011",
+        "split": "train",
+        "seed": 1011,
+        "scenario": "follow",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1011",
+        "config_sha256": "6eaee85c2f11e0462eccb21a74bebd67d530a214cfe84e2176f8c3a03decedee"
+      },
+      {
+        "episode_id": "follow_1012",
+        "split": "train",
+        "seed": 1012,
+        "scenario": "follow",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1012",
+        "config_sha256": "4ad9f559ffbfe73a17a3794987260ce93839f1e012c98650b3ab9bb16acc3a86"
+      },
+      {
+        "episode_id": "follow_1013",
+        "split": "train",
+        "seed": 1013,
+        "scenario": "follow",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1013",
+        "config_sha256": "1ddfce98ef2460c67165fec8b3d5355b6e50b3b9ea637c7aeb291f72e775b001"
+      },
+      {
+        "episode_id": "follow_1014",
+        "split": "train",
+        "seed": 1014,
+        "scenario": "follow",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1014",
+        "config_sha256": "431ad0f114cf4f50160d8e94f6eb7405fb8d63b5ce16ba2998366fa0663695a3"
+      },
+      {
+        "episode_id": "follow_1015",
+        "split": "train",
+        "seed": 1015,
+        "scenario": "follow",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1015",
+        "config_sha256": "ad1e7c54430577d1a5212933d0d911c39df1621be3e253bc12c838cabbc207d7"
+      },
+      {
+        "episode_id": "follow_1016",
+        "split": "train",
+        "seed": 1016,
+        "scenario": "follow",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1016",
+        "config_sha256": "8ef81cadbf91bc2e2580f67856a0ee21f2daa12f2878623b389c5b7a8b85930f"
+      },
+      {
+        "episode_id": "follow_1017",
+        "split": "train",
+        "seed": 1017,
+        "scenario": "follow",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1017",
+        "config_sha256": "3cacdf0bcac7aaf6ac426ff7cb804f2e1844291f0f816a0aecaea147dca8fd92"
+      },
+      {
+        "episode_id": "follow_1018",
+        "split": "validation",
+        "seed": 1018,
+        "scenario": "follow",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1018",
+        "config_sha256": "d84c725ca3ca29bb7b6553cf3a1a75bb13c88aba5cbe2fd19eaee93885645891"
+      },
+      {
+        "episode_id": "follow_1019",
+        "split": "validation",
+        "seed": 1019,
+        "scenario": "follow",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1019",
+        "config_sha256": "fa42ba6756837b4d97e29e5f4beb6bc206f07a1e0bf9a1d352a27e82cd649f3e"
+      },
+      {
+        "episode_id": "follow_1020",
+        "split": "validation",
+        "seed": 1020,
+        "scenario": "follow",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1020",
+        "config_sha256": "cebc56cf74709bec4a0079e75df34b523c727bd48a74f601a8fe9a2d26a44f68"
+      },
+      {
+        "episode_id": "follow_1021",
+        "split": "validation",
+        "seed": 1021,
+        "scenario": "follow",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1021",
+        "config_sha256": "64e3b09553c616bfb677afde7df6b8a976bd73dcdd284c8b0f63aac55e3ff768"
+      },
+      {
+        "episode_id": "follow_1022",
+        "split": "calibration",
+        "seed": 1022,
+        "scenario": "follow",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1022",
+        "config_sha256": "49fb4fd33ab88439bfee604f446472ac88e77fb17a3736e871d60919b7531853"
+      },
+      {
+        "episode_id": "follow_1023",
+        "split": "calibration",
+        "seed": 1023,
+        "scenario": "follow",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1023",
+        "config_sha256": "ca562dec4069c02d8063e797f114a71c6a6a22621861b3dc2496e179973511f0"
+      },
+      {
+        "episode_id": "follow_1024",
+        "split": "calibration",
+        "seed": 1024,
+        "scenario": "follow",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1024",
+        "config_sha256": "2875ad9cfdb6ccf0adbefc2893c089cd96032ffcca6e4bef8f42508de014cde1"
+      },
+      {
+        "episode_id": "follow_1025",
+        "split": "test",
+        "seed": 1025,
+        "scenario": "follow",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1025",
+        "config_sha256": "9eed2729cd5db3228e766b1ccfa5bfb535a618ac140c52d45b474c3a83f26d5e"
+      },
+      {
+        "episode_id": "follow_1026",
+        "split": "test",
+        "seed": 1026,
+        "scenario": "follow",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1026",
+        "config_sha256": "02ce5eae0614ba1b0a0d405520121ac4d2532be7b5a8aaadd75cf1a5ab83c583"
+      },
+      {
+        "episode_id": "follow_1027",
+        "split": "test",
+        "seed": 1027,
+        "scenario": "follow",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1027",
+        "config_sha256": "3de40353d9ea67014c7536790a5192c09eb85c575841ffcc1ba01c4804d01c92"
+      },
+      {
+        "episode_id": "follow_1028",
+        "split": "test",
+        "seed": 1028,
+        "scenario": "follow",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1028",
+        "config_sha256": "a9b66c82cdcc8693603082f35b03f213f3bf8c8335a92d873f8eb18edb87e6f3"
+      },
+      {
+        "episode_id": "follow_1029",
+        "split": "test",
+        "seed": 1029,
+        "scenario": "follow",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/follow_1029",
+        "config_sha256": "2a988da413fb30beb479b3507f8716ffccb7f48533c8fa735d87792fc5bef05d"
+      },
+      {
+        "episode_id": "brake_11000",
+        "split": "train",
+        "seed": 11000,
+        "scenario": "brake",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11000",
+        "config_sha256": "5025af2c1a3dd85c23e5ca875f0b98715e0350022c2ce14eea2550a04406d349"
+      },
+      {
+        "episode_id": "brake_11001",
+        "split": "train",
+        "seed": 11001,
+        "scenario": "brake",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11001",
+        "config_sha256": "2425f799a58504f2a707ebe2fff05ecff64fc81d9c14bc8090a6ca7f9f088ed4"
+      },
+      {
+        "episode_id": "brake_11002",
+        "split": "train",
+        "seed": 11002,
+        "scenario": "brake",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11002",
+        "config_sha256": "d1563cef6feb307703259cd64475a35ea7f9d0da6413bbcaca54b17dda8cd7c8"
+      },
+      {
+        "episode_id": "brake_11003",
+        "split": "train",
+        "seed": 11003,
+        "scenario": "brake",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11003",
+        "config_sha256": "4db3e75038a81bad9e40dbc9858ffd4d719f8c1b72666dd37932a3b60ca1abce"
+      },
+      {
+        "episode_id": "brake_11004",
+        "split": "train",
+        "seed": 11004,
+        "scenario": "brake",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11004",
+        "config_sha256": "5f75c8871223ba0284a2cc81f0641845ea4bc7704705a6668e7b5765c1fb8db5"
+      },
+      {
+        "episode_id": "brake_11005",
+        "split": "train",
+        "seed": 11005,
+        "scenario": "brake",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11005",
+        "config_sha256": "223a1aee395963f8650a1b39ec381f2c739d08e21d1c146e6abe72fbf05960cc"
+      },
+      {
+        "episode_id": "brake_11006",
+        "split": "train",
+        "seed": 11006,
+        "scenario": "brake",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11006",
+        "config_sha256": "98c7342762ca9e575528a6dae235b65bd461a296ec80aa0f1f724eb9ad235e4d"
+      },
+      {
+        "episode_id": "brake_11007",
+        "split": "train",
+        "seed": 11007,
+        "scenario": "brake",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11007",
+        "config_sha256": "25fcb4261118fac466d4cea263072bdb3c69250d216eb6aed15c229892d8e6dd"
+      },
+      {
+        "episode_id": "brake_11008",
+        "split": "train",
+        "seed": 11008,
+        "scenario": "brake",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11008",
+        "config_sha256": "e247533c80a5506ecce7632126a6abaa094b8154b0d74549ea6423ecb9f4d47d"
+      },
+      {
+        "episode_id": "brake_11009",
+        "split": "train",
+        "seed": 11009,
+        "scenario": "brake",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11009",
+        "config_sha256": "75876bf5f8bdd43a2831f57aff1acf988493bb56b36b8880ddb0a24b62133b9b"
+      },
+      {
+        "episode_id": "brake_11010",
+        "split": "train",
+        "seed": 11010,
+        "scenario": "brake",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11010",
+        "config_sha256": "c3852cc1b5616d542f3ad42d8ae377f6bd282b165ed1f6c1bdbe788c3bc1bf16"
+      },
+      {
+        "episode_id": "brake_11011",
+        "split": "train",
+        "seed": 11011,
+        "scenario": "brake",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11011",
+        "config_sha256": "643879db6d9308e2b57e06363a8a7ee411f3cf9d8a1ebd77ca9f7732be1ddd15"
+      },
+      {
+        "episode_id": "brake_11012",
+        "split": "train",
+        "seed": 11012,
+        "scenario": "brake",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11012",
+        "config_sha256": "dbddc3070718db9adbf32954dc0c23bbfc589555bfa7a45e12ee48a05e1ef1d8"
+      },
+      {
+        "episode_id": "brake_11013",
+        "split": "train",
+        "seed": 11013,
+        "scenario": "brake",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11013",
+        "config_sha256": "17f0ba38448afe252b30db63528337dd1438b0de75d34d1f198d89fd64e0660d"
+      },
+      {
+        "episode_id": "brake_11014",
+        "split": "train",
+        "seed": 11014,
+        "scenario": "brake",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11014",
+        "config_sha256": "5b3392db8b85c84095bab1c3eccd62c693852a7f9190a71cd887b12f06364954"
+      },
+      {
+        "episode_id": "brake_11015",
+        "split": "train",
+        "seed": 11015,
+        "scenario": "brake",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11015",
+        "config_sha256": "a970c70c586424e91ae2cc90c0d225dd1a7a1ea6a992e3a31c4859805ba94b3b"
+      },
+      {
+        "episode_id": "brake_11016",
+        "split": "train",
+        "seed": 11016,
+        "scenario": "brake",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11016",
+        "config_sha256": "ffd579e117f13ebbfe1dec6f54a1364559b06596c39f95cfef76ab1831e6720e"
+      },
+      {
+        "episode_id": "brake_11017",
+        "split": "train",
+        "seed": 11017,
+        "scenario": "brake",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11017",
+        "config_sha256": "43b2c9c39b67255370d5f2d88b544db10dced55ab2f6b911b382ae87bec3d8aa"
+      },
+      {
+        "episode_id": "brake_11018",
+        "split": "validation",
+        "seed": 11018,
+        "scenario": "brake",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11018",
+        "config_sha256": "fa2fdf64be5ef462522218abaa7af6c001d7b6e2a69d3d8691bdfda5a7efe750"
+      },
+      {
+        "episode_id": "brake_11019",
+        "split": "validation",
+        "seed": 11019,
+        "scenario": "brake",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11019",
+        "config_sha256": "e671138a69718029330ac1b6d646380b6b1704d0cd9a3e58dd69f5d813cad6e6"
+      },
+      {
+        "episode_id": "brake_11020",
+        "split": "validation",
+        "seed": 11020,
+        "scenario": "brake",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11020",
+        "config_sha256": "19e6fddf1a88bc79fa572a50d1e8e6a0de3e8d456610175062732d9e55af48fb"
+      },
+      {
+        "episode_id": "brake_11021",
+        "split": "validation",
+        "seed": 11021,
+        "scenario": "brake",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11021",
+        "config_sha256": "e0bfc4781742c95a43e62f4ebeb191245245059e8c1be3f71977cbc79d241d46"
+      },
+      {
+        "episode_id": "brake_11022",
+        "split": "calibration",
+        "seed": 11022,
+        "scenario": "brake",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11022",
+        "config_sha256": "9e8f2e1652a03a279a7db0e0987bdf9f22e7849dc831f4af0fd9fb1e82f5b5be"
+      },
+      {
+        "episode_id": "brake_11023",
+        "split": "calibration",
+        "seed": 11023,
+        "scenario": "brake",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11023",
+        "config_sha256": "36263b7227c9c207b8fe4be02476bbfc0e3bf7c5400d4c34f15850f5748959c4"
+      },
+      {
+        "episode_id": "brake_11024",
+        "split": "calibration",
+        "seed": 11024,
+        "scenario": "brake",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11024",
+        "config_sha256": "3f8b6b3e19e90a70f29d2bc963374070484f93a3bd152ea29cd16645e24a0be4"
+      },
+      {
+        "episode_id": "brake_11025",
+        "split": "test",
+        "seed": 11025,
+        "scenario": "brake",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11025",
+        "config_sha256": "9141731b43b2027938d0db21bc41cd126c99474e191f4afd968c9d01414ba3e1"
+      },
+      {
+        "episode_id": "brake_11026",
+        "split": "test",
+        "seed": 11026,
+        "scenario": "brake",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11026",
+        "config_sha256": "1ec0c368a1bd3f886b1e3cc395dd80ee0d0b7c9004d6f843e69f9ad1ceeed8de"
+      },
+      {
+        "episode_id": "brake_11027",
+        "split": "test",
+        "seed": 11027,
+        "scenario": "brake",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11027",
+        "config_sha256": "da9dedd7460702e0cea929aa71a9df0a015aa9a32d1ffe1fd5a75896c64cedc7"
+      },
+      {
+        "episode_id": "brake_11028",
+        "split": "test",
+        "seed": 11028,
+        "scenario": "brake",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11028",
+        "config_sha256": "3a5d7e5412198fbcded148c3af26a866d8795045ef069d471c8f161c06f86143"
+      },
+      {
+        "episode_id": "brake_11029",
+        "split": "test",
+        "seed": 11029,
+        "scenario": "brake",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/brake_11029",
+        "config_sha256": "94e5f818d3c8572921bcb89eaa127b74934138610f872347873fe4b14fbe4ef7"
+      },
+      {
+        "episode_id": "cutin_21000",
+        "split": "train",
+        "seed": 21000,
+        "scenario": "cutin",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21000",
+        "config_sha256": "f2cbd8e6a1c0e5a7b26a41736863afc953239fb85707c6ae31fb6785af7fe041"
+      },
+      {
+        "episode_id": "cutin_21001",
+        "split": "train",
+        "seed": 21001,
+        "scenario": "cutin",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21001",
+        "config_sha256": "13c9f4628266d9b876c1770e6351a41691e44539431b871d4b8d90d0980a3021"
+      },
+      {
+        "episode_id": "cutin_21002",
+        "split": "train",
+        "seed": 21002,
+        "scenario": "cutin",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21002",
+        "config_sha256": "6e2396785963c350569adaa1b7bbaeb75a865561ed93b7dd871352e82573f668"
+      },
+      {
+        "episode_id": "cutin_21003",
+        "split": "train",
+        "seed": 21003,
+        "scenario": "cutin",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21003",
+        "config_sha256": "6587dd7b6340f1bf84e63087715850c0068804150cd7ab20a6426ab534ed9400"
+      },
+      {
+        "episode_id": "cutin_21004",
+        "split": "train",
+        "seed": 21004,
+        "scenario": "cutin",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21004",
+        "config_sha256": "7d1b2285a8cd643e0d0600e01a76823ec769382f53708245d67cf15fd53e982e"
+      },
+      {
+        "episode_id": "cutin_21005",
+        "split": "train",
+        "seed": 21005,
+        "scenario": "cutin",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21005",
+        "config_sha256": "175d188416d765165092d9dcbd4d5884121aba152bbca940274f123ea2d49d64"
+      },
+      {
+        "episode_id": "cutin_21006",
+        "split": "train",
+        "seed": 21006,
+        "scenario": "cutin",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21006",
+        "config_sha256": "81d877c369cf7e96832adba557f29d93cbf123bed7cd2f61ca3efd383d5c1b38"
+      },
+      {
+        "episode_id": "cutin_21007",
+        "split": "train",
+        "seed": 21007,
+        "scenario": "cutin",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21007",
+        "config_sha256": "5d23bf3a9a86a1e5fd7f72db31838931d868cadbb771e77709b3dc7cca398031"
+      },
+      {
+        "episode_id": "cutin_21008",
+        "split": "train",
+        "seed": 21008,
+        "scenario": "cutin",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21008",
+        "config_sha256": "b2592f6630a2c5be540aed41afcaf1967bef93a819838652c82190d19085ea45"
+      },
+      {
+        "episode_id": "cutin_21009",
+        "split": "train",
+        "seed": 21009,
+        "scenario": "cutin",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21009",
+        "config_sha256": "34dfedec376dd72ce405ba0c8d1a5a8c003d715c3b3639a239a031ef5cb6d404"
+      },
+      {
+        "episode_id": "cutin_21010",
+        "split": "train",
+        "seed": 21010,
+        "scenario": "cutin",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21010",
+        "config_sha256": "a95443d241dd2d9cfeca62c721a2562555211d54ae6c8365d3fa362091a7dab9"
+      },
+      {
+        "episode_id": "cutin_21011",
+        "split": "train",
+        "seed": 21011,
+        "scenario": "cutin",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21011",
+        "config_sha256": "9f29b9ec14d53fbce2d47727383c6defe94c4489e3ed1d334265756f77209224"
+      },
+      {
+        "episode_id": "cutin_21012",
+        "split": "train",
+        "seed": 21012,
+        "scenario": "cutin",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21012",
+        "config_sha256": "5642d76e25fbf73255180f4fa499123939490003521f06199f16f34323d0469b"
+      },
+      {
+        "episode_id": "cutin_21013",
+        "split": "train",
+        "seed": 21013,
+        "scenario": "cutin",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21013",
+        "config_sha256": "3db2cd55005be9b8d4da4bc52412feb602720a54aff4cf9e04b7cbcf0461c03c"
+      },
+      {
+        "episode_id": "cutin_21014",
+        "split": "train",
+        "seed": 21014,
+        "scenario": "cutin",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21014",
+        "config_sha256": "b52f1c50a340390e93ba8990df787930044540389f43f61637cbbd5faa4ee2c0"
+      },
+      {
+        "episode_id": "cutin_21015",
+        "split": "train",
+        "seed": 21015,
+        "scenario": "cutin",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21015",
+        "config_sha256": "afa174480cf31815076c665d20431834aa0b76b138548c4579e7c473692dd992"
+      },
+      {
+        "episode_id": "cutin_21016",
+        "split": "train",
+        "seed": 21016,
+        "scenario": "cutin",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21016",
+        "config_sha256": "fd640d1bfad89d44d3ab23a547a26e894849b1f388c03ddbcec7d1f3f44547d4"
+      },
+      {
+        "episode_id": "cutin_21017",
+        "split": "train",
+        "seed": 21017,
+        "scenario": "cutin",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21017",
+        "config_sha256": "64579bb7d9250c4b2c6b9e74af7fdd51df1d3971735ba41bf5bbe227b9ab901b"
+      },
+      {
+        "episode_id": "cutin_21018",
+        "split": "validation",
+        "seed": 21018,
+        "scenario": "cutin",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21018",
+        "config_sha256": "1ed52d70b498e448cc7a002c529693ef7ffa425cf14863ef6116de2832be891e"
+      },
+      {
+        "episode_id": "cutin_21019",
+        "split": "validation",
+        "seed": 21019,
+        "scenario": "cutin",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21019",
+        "config_sha256": "595a09d624c5be078d4dfc0179e593113f5eaff8151416cc4b8541db2aeeab8a"
+      },
+      {
+        "episode_id": "cutin_21020",
+        "split": "validation",
+        "seed": 21020,
+        "scenario": "cutin",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21020",
+        "config_sha256": "b0294f6abaff9dc76b11b7e91eb291889b7e42a0c5070840dd58636dd472eb4d"
+      },
+      {
+        "episode_id": "cutin_21021",
+        "split": "validation",
+        "seed": 21021,
+        "scenario": "cutin",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21021",
+        "config_sha256": "5bdd41b336b79a49735fa81577de7b34a9b2c7f98a194a6547e9e2c49f249d38"
+      },
+      {
+        "episode_id": "cutin_21022",
+        "split": "calibration",
+        "seed": 21022,
+        "scenario": "cutin",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21022",
+        "config_sha256": "b20711372eafe7ec2b17b679f7051100e2e28f5087ba343e9399bb3063cdb229"
+      },
+      {
+        "episode_id": "cutin_21023",
+        "split": "calibration",
+        "seed": 21023,
+        "scenario": "cutin",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21023",
+        "config_sha256": "ef24ea7b64215a5675339f883ae8093b603c191ec8964020db64c3298ff35f79"
+      },
+      {
+        "episode_id": "cutin_21024",
+        "split": "calibration",
+        "seed": 21024,
+        "scenario": "cutin",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21024",
+        "config_sha256": "765c10fcec078f1714d4242f6a007fa2e3e9fcd6b1619656f8245f7e79639349"
+      },
+      {
+        "episode_id": "cutin_21025",
+        "split": "test",
+        "seed": 21025,
+        "scenario": "cutin",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21025",
+        "config_sha256": "dcf0b8bcb2863ef08af402b7089721924963166d29b05476392b4a8b50018fcb"
+      },
+      {
+        "episode_id": "cutin_21026",
+        "split": "test",
+        "seed": 21026,
+        "scenario": "cutin",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21026",
+        "config_sha256": "9514060e673fdeef2f3c4a7360efb1b1e93fdc51cd963fcebb60edcb82127b65"
+      },
+      {
+        "episode_id": "cutin_21027",
+        "split": "test",
+        "seed": 21027,
+        "scenario": "cutin",
+        "samples": 231,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21027",
+        "config_sha256": "f5124dacef7bb7a8ee0352b488e82e36ee3e445cbbf043e78cf3472db1f54a06"
+      },
+      {
+        "episode_id": "cutin_21028",
+        "split": "test",
+        "seed": 21028,
+        "scenario": "cutin",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21028",
+        "config_sha256": "98be8b8f4c5d1266638295ee8babdcaa5a0342b55bf54dd148168f9956a02e11"
+      },
+      {
+        "episode_id": "cutin_21029",
+        "split": "test",
+        "seed": 21029,
+        "scenario": "cutin",
+        "samples": 226,
+        "source_run": "/home/aup/文档/ChatGPT/AIC/data/pilot_v1/episodes/cutin_21029",
+        "config_sha256": "942baa51e9eee2f560b2b7c4adf36348a5a2cd549c47e82c3562d2576220dbfd"
+      }
+    ],
+    "sample_counts": {
+      "train": 12294,
+      "validation": 2742,
+      "calibration": 2049,
+      "test": 3405
+    },
+    "collection_provenance": {
+      "source_sha256": "e0e5057ab7c223661b212f15a917972caf8e98156128796e0816979b0cc68f61",
+      "files": {
+        "src/aic_drive/__init__.py": "220b1782187a5e8795584851316c2f71df4a479df19086bdffbc178cbc68661e",
+        "src/aic_drive/control.py": "b66f6a5480a5a582c336bfbb9832e8ac28a6ac09d35b506727718d94c8ab16df",
+        "src/aic_drive/learning.py": "cc34ba6ce9c0e124ab8bd0b38aa42ffdcbf926fc95fb9dc22c23a437c2cb51b9",
+        "src/aic_drive/prediction.py": "87e59c7b1f6b04f51613ee558dabaa47d0952d2e871a5c9b8118c6c5e7384429",
+        "src/aic_drive/runner.py": "e3bd2f7b4325646a7058d84a32fc31b19dd3c0afd323a11c79093b8c3cdccb0f",
+        "src/aic_drive/scenarios.py": "76cbdc444581681049c70c063f7cc6e72eb2fd435048c0cef7d1313f13809b52",
+        "src/aic_drive/sensors.py": "59ccf1bcce36ebca55f26908a500c764849c615e6e9117517623a4ccbd8b1963",
+        "src/aic_drive/types.py": "9337700c87876a624bbefdb6a8dfb934ce9b585fec24ef7ffca23ba53fbee06e",
+        "src/aic_drive/visualization.py": "801c58a434b70c161949b42525952fbd715fe1d21389a34024c0e0907d605b9c",
+        "scripts/calibrate.py": "a0d4a4525522d379f919253d9b7ea690036ea9038a3af50296175a1ce7a56cc9",
+        "scripts/collect_data.py": "ab1e36486a18225d3b7298c58c58390ab07f21c4157b863b2018f535d830bc12",
+        "scripts/evaluate.py": "0850864537187b7ed765b0266b0f2b844f87c864134a762127b8daa79c89cdbb",
+        "scripts/make_report.py": "1cd8e15adb19f6017774e40ea8320c1d4af13f9db938c211cdecce7bff139267",
+        "scripts/run_demo.py": "2c333c5297ecdefea19e78fb3e09c829afef398bba327e70ff8ec98c42dede1b",
+        "scripts/train_predictor.py": "6c3fb0368b941a51cae760993be6d0d1eb159a51b3dd08813a02c313fa75d808",
+        "pyproject.toml": "40080871f348b4289fee0447a07e83c4f7c45310bf44b4584d7f158045054de3"
+      },
+      "packages": {
+        "highway-env": "1.12.1",
+        "gymnasium": "1.4.0",
+        "numpy": "2.5.4",
+        "torch": "2.14.1+cpu",
+        "matplotlib": "3.11.2"
+      },
+      "python": "3.12.3",
+      "platform": "Linux-6.14.0-27-generic-x86_64-with-glibc2.39",
+      "created_at": "2026-10-23T18:07:55.371683+08:00"
+    },
+    "arguments": {
+      "output": "data/pilot_v1",
+      "episodes_per_scenario": 30,
+      "duration": 15.0,
+      "seed_start": 1000
+    },
+    "inputs": "online delayed/noisy observation stream only; world coordinates; stable IDs",
+    "labels": "future truth position minus CA prediction; never supplied to controller",
+    "selection": "every third decision, >=3 observations, >=0.2s history, future within recorded episode",
+    "future_offsets_from_decision_s": [
+      0.1,
+      0.5,
+      1.0,
+      1.5,
+      2.0
+    ],
+    "split_rule": "whole episodes, stratified per scenario; dedicated seed ranges; no shared episode IDs"
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.7220042773828635,
+      "validation_loss": 0.6068930625915527
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.5220466691710337,
+      "validation_loss": 0.40661272406578064
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.3549095230779746,
+      "validation_loss": 0.27511802315711975
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.2637860036408279,
+      "validation_loss": 0.2304309606552124
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.23862954882905796,
+      "validation_loss": 0.2136029303073883
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.22063932334420902,
+      "validation_loss": 0.20912234485149384
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.21199327162951012,
+      "validation_loss": 0.20344145596027374
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.2062606463302427,
+      "validation_loss": 0.1998424082994461
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.20235710023224054,
+      "validation_loss": 0.2026844620704651
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.20649776792652785,
+      "validation_loss": 0.20016063749790192
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.19621364884557269,
+      "validation_loss": 0.1912359893321991
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.19023786804332604,
+      "validation_loss": 0.18709848821163177
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.18957725109458842,
+      "validation_loss": 0.1865607649087906
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.1863484412882606,
+      "validation_loss": 0.18488866090774536
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.18708499589256491,
+      "validation_loss": 0.1836700141429901
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.18167758576313772,
+      "validation_loss": 0.17706653475761414
+    },
+    {
+      "epoch": 17,
+      "train_loss": 0.17947678414858395,
+      "validation_loss": 0.17793595790863037
+    },
+    {
+      "epoch": 18,
+      "train_loss": 0.1771115445476907,
+      "validation_loss": 0.17620672285556793
+    },
+    {
+      "epoch": 19,
+      "train_loss": 0.17581106959283838,
+      "validation_loss": 0.1752762645483017
+    },
+    {
+      "epoch": 20,
+      "train_loss": 0.17269023640070075,
+      "validation_loss": 0.17205515503883362
+    },
+    {
+      "epoch": 21,
+      "train_loss": 0.17393668589115685,
+      "validation_loss": 0.1716190129518509
+    },
+    {
+      "epoch": 22,
+      "train_loss": 0.17223792749923555,
+      "validation_loss": 0.17614024877548218
+    },
+    {
+      "epoch": 23,
+      "train_loss": 0.1729353743799095,
+      "validation_loss": 0.17247793078422546
+    },
+    {
+      "epoch": 24,
+      "train_loss": 0.17051979602692244,
+      "validation_loss": 0.17000354826450348
+    },
+    {
+      "epoch": 25,
+      "train_loss": 0.16846914800426058,
+      "validation_loss": 0.16806700825691223
+    },
+    {
+      "epoch": 26,
+      "train_loss": 0.16665686246862796,
+      "validation_loss": 0.17056703567504883
+    },
+    {
+      "epoch": 27,
+      "train_loss": 0.16574609797306714,
+      "validation_loss": 0.16865471005439758
+    },
+    {
+      "epoch": 28,
+      "train_loss": 0.1644677601927991,
+      "validation_loss": 0.16529056429862976
+    },
+    {
+      "epoch": 29,
+      "train_loss": 0.1646874121914351,
+      "validation_loss": 0.1660359650850296
+    },
+    {
+      "epoch": 30,
+      "train_loss": 0.1628053160591864,
+      "validation_loss": 0.1673760712146759
+    },
+    {
+      "epoch": 31,
+      "train_loss": 0.16293962474240314,
+      "validation_loss": 0.173418790102005
+    },
+    {
+      "epoch": 32,
+      "train_loss": 0.1637890011290937,
+      "validation_loss": 0.16542701423168182
+    },
+    {
+      "epoch": 33,
+      "train_loss": 0.1603998845933714,
+      "validation_loss": 0.1638820618391037
+    },
+    {
+      "epoch": 34,
+      "train_loss": 0.16415112417046424,
+      "validation_loss": 0.16418130695819855
+    },
+    {
+      "epoch": 35,
+      "train_loss": 0.16048452284048298,
+      "validation_loss": 0.1652604192495346
+    },
+    {
+      "epoch": 36,
+      "train_loss": 0.16222861480456902,
+      "validation_loss": 0.16530629992485046
+    },
+    {
+      "epoch": 37,
+      "train_loss": 0.16020302575767012,
+      "validation_loss": 0.16384993493556976
+    },
+    {
+      "epoch": 38,
+      "train_loss": 0.15966634699119986,
+      "validation_loss": 0.16593730449676514
+    },
+    {
+      "epoch": 39,
+      "train_loss": 0.15982748765867474,
+      "validation_loss": 0.16604168713092804
+    },
+    {
+      "epoch": 40,
+      "train_loss": 0.15832667237222534,
+      "validation_loss": 0.1618375927209854
+    },
+    {
+      "epoch": 41,
+      "train_loss": 0.15763844033974106,
+      "validation_loss": 0.15935908257961273
+    },
+    {
+      "epoch": 42,
+      "train_loss": 0.15605025077537152,
+      "validation_loss": 0.15968745946884155
+    },
+    {
+      "epoch": 43,
+      "train_loss": 0.16070278255808,
+      "validation_loss": 0.15979790687561035
+    },
+    {
+      "epoch": 44,
+      "train_loss": 0.15499690581644593,
+      "validation_loss": 0.16115403175354004
+    },
+    {
+      "epoch": 45,
+      "train_loss": 0.15499139478851648,
+      "validation_loss": 0.16253462433815002
+    },
+    {
+      "epoch": 46,
+      "train_loss": 0.1577001913293544,
+      "validation_loss": 0.1634429693222046
+    },
+    {
+      "epoch": 47,
+      "train_loss": 0.15458965999058674,
+      "validation_loss": 0.16301481425762177
+    },
+    {
+      "epoch": 48,
+      "train_loss": 0.15513012178905208,
+      "validation_loss": 0.1598217636346817
+    },
+    {
+      "epoch": 49,
+      "train_loss": 0.152904495209024,
+      "validation_loss": 0.15774153172969818
+    },
+    {
+      "epoch": 50,
+      "train_loss": 0.1516054910811415,
+      "validation_loss": 0.1608988642692566
+    },
+    {
+      "epoch": 51,
+      "train_loss": 0.15304979229988616,
+      "validation_loss": 0.1606919914484024
+    },
+    {
+      "epoch": 52,
+      "train_loss": 0.15101926801300483,
+      "validation_loss": 0.16108231246471405
+    },
+    {
+      "epoch": 53,
+      "train_loss": 0.15885129325153655,
+      "validation_loss": 0.1608157604932785
+    },
+    {
+      "epoch": 54,
+      "train_loss": 0.15535836457771043,
+      "validation_loss": 0.15991969406604767
+    },
+    {
+      "epoch": 55,
+      "train_loss": 0.15072112774216723,
+      "validation_loss": 0.15757590532302856
+    },
+    {
+      "epoch": 56,
+      "train_loss": 0.1505326364684516,
+      "validation_loss": 0.1573404222726822
+    },
+    {
+      "epoch": 57,
+      "train_loss": 0.15194188169159306,
+      "validation_loss": 0.15832363069057465
+    },
+    {
+      "epoch": 58,
+      "train_loss": 0.14945526901594366,
+      "validation_loss": 0.1573989987373352
+    },
+    {
+      "epoch": 59,
+      "train_loss": 0.1494351538773599,
+      "validation_loss": 0.15646818280220032
+    },
+    {
+      "epoch": 60,
+      "train_loss": 0.14788814949404133,
+      "validation_loss": 0.15842530131340027
+    },
+    {
+      "epoch": 61,
+      "train_loss": 0.14930024623358146,
+      "validation_loss": 0.15788298845291138
+    },
+    {
+      "epoch": 62,
+      "train_loss": 0.148261271185636,
+      "validation_loss": 0.15994541347026825
+    },
+    {
+      "epoch": 63,
+      "train_loss": 0.14817570487520007,
+      "validation_loss": 0.15733152627944946
+    },
+    {
+      "epoch": 64,
+      "train_loss": 0.1478317817204926,
+      "validation_loss": 0.16143760085105896
+    },
+    {
+      "epoch": 65,
+      "train_loss": 0.14972960982275957,
+      "validation_loss": 0.1586301475763321
+    },
+    {
+      "epoch": 66,
+      "train_loss": 0.14640862976261634,
+      "validation_loss": 0.16519330441951752
+    },
+    {
+      "epoch": 67,
+      "train_loss": 0.15267110901168252,
+      "validation_loss": 0.15635938942432404
+    },
+    {
+      "epoch": 68,
+      "train_loss": 0.14693048164401187,
+      "validation_loss": 0.1569918543100357
+    },
+    {
+      "epoch": 69,
+      "train_loss": 0.14866967026549702,
+      "validation_loss": 0.15614375472068787
+    },
+    {
+      "epoch": 70,
+      "train_loss": 0.1471529508760126,
+      "validation_loss": 0.15925893187522888
+    },
+    {
+      "epoch": 71,
+      "train_loss": 0.1461758792899732,
+      "validation_loss": 0.15561804175376892
+    },
+    {
+      "epoch": 72,
+      "train_loss": 0.1455792502133618,
+      "validation_loss": 0.15457700192928314
+    },
+    {
+      "epoch": 73,
+      "train_loss": 0.144716718676072,
+      "validation_loss": 0.15998491644859314
+    },
+    {
+      "epoch": 74,
+      "train_loss": 0.15208792787003425,
+      "validation_loss": 0.15800486505031586
+    },
+    {
+      "epoch": 75,
+      "train_loss": 0.14469462890439772,
+      "validation_loss": 0.15671974420547485
+    },
+    {
+      "epoch": 76,
+      "train_loss": 0.14619765442294408,
+      "validation_loss": 0.1557147204875946
+    },
+    {
+      "epoch": 77,
+      "train_loss": 0.14449178857014627,
+      "validation_loss": 0.15560802817344666
+    },
+    {
+      "epoch": 78,
+      "train_loss": 0.1442827971772448,
+      "validation_loss": 0.15939787030220032
+    },
+    {
+      "epoch": 79,
+      "train_loss": 0.1541273612859328,
+      "validation_loss": 0.15732979774475098
+    },
+    {
+      "epoch": 80,
+      "train_loss": 0.14526673721681965,
+      "validation_loss": 0.15582425892353058
+    }
+  ],
+  "limitations": [
+    "CA velocities are retained; they are not derivatives of learned positions",
+    "Short histories and unsupported forecast horizons use CA fallback",
+    "Test metrics are reporting only; model selection uses validation loss"
+  ],
+  "heldout_errors": {
+    "split": "test",
+    "analytic": {
+      "count": 3405,
+      "mae_xy_m": [
+        1.3762297630310059,
+        1.0359746217727661
+      ],
+      "rmse_xy_m": [
+        2.360203742980957,
+        1.8044100999832153
+      ],
+      "p95_absolute_xy_m": [
+        5.222837448120117,
+        4.23003625869751
+      ],
+      "mean_displacement_error_m": 1.9231815338134766
+    },
+    "learned": {
+      "count": 3405,
+      "mae_xy_m": [
+        0.42106640338897705,
+        0.3253987729549408
+      ],
+      "rmse_xy_m": [
+        1.038345456123352,
+        0.6609030365943909
+      ],
+      "p95_absolute_xy_m": [
+        1.3970551490783691,
+        1.154447078704834
+      ],
+      "mean_displacement_error_m": 0.6244633197784424
+    },
+    "per_horizon": [
+      {
+        "horizon_seconds": 0.10000000149011612,
+        "analytic": {
+          "count": 147,
+          "mae_xy_m": [
+            0.07592537254095078,
+            0.08462817221879959
+          ],
+          "rmse_xy_m": [
+            0.09700730443000793,
+            0.10597293823957443
+          ],
+          "p95_absolute_xy_m": [
+            0.1924792379140854,
+            0.19580508768558502
+          ],
+          "mean_displacement_error_m": 0.12574075162410736
+        },
+        "learned": {
+          "count": 147,
+          "mae_xy_m": [
+            0.10257450491189957,
+            0.1093926727771759
+          ],
+          "rmse_xy_m": [
+            0.13165287673473358,
+            0.1674245148897171
+          ],
+          "p95_absolute_xy_m": [
+            0.28586438298225403,
+            0.2543675899505615
+          ],
+          "mean_displacement_error_m": 0.1664225310087204
+        }
+      },
+      {
+        "horizon_seconds": 0.30000001192092896,
+        "analytic": {
+          "count": 288,
+          "mae_xy_m": [
+            0.10236331075429916,
+            0.10522172600030899
+          ],
+          "rmse_xy_m": [
+            0.1313134729862213,
+            0.14471499621868134
+          ],
+          "p95_absolute_xy_m": [
+            0.2687421143054962,
+            0.26749566197395325
+          ],
+          "mean_displacement_error_m": 0.1646983027458191
+        },
+        "learned": {
+          "count": 288,
+          "mae_xy_m": [
+            0.09375997632741928,
+            0.09775888174772263
+          ],
+          "rmse_xy_m": [
+            0.12207017093896866,
+            0.13462668657302856
+          ],
+          "p95_absolute_xy_m": [
+            0.2471097707748413,
+            0.2626948058605194
+          ],
+          "mean_displacement_error_m": 0.152399480342865
+        }
+      },
+      {
+        "horizon_seconds": 0.5,
+        "analytic": {
+          "count": 432,
+          "mae_xy_m": [
+            0.19703319668769836,
+            0.1868380308151245
+          ],
+          "rmse_xy_m": [
+            0.2451545000076294,
+            0.24312461912631989
+          ],
+          "p95_absolute_xy_m": [
+            0.48955172300338745,
+            0.4427032172679901
+          ],
+          "mean_displacement_error_m": 0.30230939388275146
+        },
+        "learned": {
+          "count": 432,
+          "mae_xy_m": [
+            0.1156800165772438,
+            0.11885830760002136
+          ],
+          "rmse_xy_m": [
+            0.15322887897491455,
+            0.1717962920665741
+          ],
+          "p95_absolute_xy_m": [
+            0.28354090452194214,
+            0.27795350551605225
+          ],
+          "mean_displacement_error_m": 0.1834842413663864
+        }
+      },
+      {
+        "horizon_seconds": 0.699999988079071,
+        "analytic": {
+          "count": 282,
+          "mae_xy_m": [
+            0.34692785143852234,
+            0.3122282028198242
+          ],
+          "rmse_xy_m": [
+            0.44192275404930115,
+            0.4532434046268463
+          ],
+          "p95_absolute_xy_m": [
+            0.7895044088363647,
+            0.7172258496284485
+          ],
+          "mean_displacement_error_m": 0.5206137299537659
+        },
+        "learned": {
+          "count": 282,
+          "mae_xy_m": [
+            0.1452466994524002,
+            0.14315150678157806
+          ],
+          "rmse_xy_m": [
+            0.21961674094200134,
+            0.27294549345970154
+          ],
+          "p95_absolute_xy_m": [
+            0.405272901058197,
+            0.3126146197319031
+          ],
+          "mean_displacement_error_m": 0.23464521765708923
+        }
+      },
+      {
+        "horizon_seconds": 0.8999999761581421,
+        "analytic": {
+          "count": 282,
+          "mae_xy_m": [
+            0.5736926794052124,
+            0.49235329031944275
+          ],
+          "rmse_xy_m": [
+            0.7165539860725403,
+            0.654069185256958
+          ],
+          "p95_absolute_xy_m": [
+            1.3913905620574951,
+            1.0642691850662231
+          ],
+          "mean_displacement_error_m": 0.8423157930374146
+        },
+        "learned": {
+          "count": 282,
+          "mae_xy_m": [
+            0.20994094014167786,
+            0.19004003703594208
+          ],
+          "rmse_xy_m": [
+            0.32964903116226196,
+            0.35383811593055725
+          ],
+          "p95_absolute_xy_m": [
+            0.6838380098342896,
+            0.42891576886177063
+          ],
+          "mean_displacement_error_m": 0.32639622688293457
+        }
+      },
+      {
+        "horizon_seconds": 1.0,
+        "analytic": {
+          "count": 138,
+          "mae_xy_m": [
+            0.6717960834503174,
+            0.5486823320388794
+          ],
+          "rmse_xy_m": [
+            0.8488759398460388,
+            0.6972662210464478
+          ],
+          "p95_absolute_xy_m": [
+            1.6921520233154297,
+            1.2833815813064575
+          ],
+          "mean_displacement_error_m": 0.9728152751922607
+        },
+        "learned": {
+          "count": 138,
+          "mae_xy_m": [
+            0.22422058880329132,
+            0.23056843876838684
+          ],
+          "rmse_xy_m": [
+            0.3987601101398468,
+            0.36349543929100037
+          ],
+          "p95_absolute_xy_m": [
+            0.5713241100311279,
+            0.5993637442588806
+          ],
+          "mean_displacement_error_m": 0.37048882246017456
+        }
+      },
+      {
+        "horizon_seconds": 1.2000000476837158,
+        "analytic": {
+          "count": 270,
+          "mae_xy_m": [
+            0.9631381630897522,
+            0.7966082692146301
+          ],
+          "rmse_xy_m": [
+            1.2411681413650513,
+            1.1075526475906372
+          ],
+          "p95_absolute_xy_m": [
+            2.1918888092041016,
+            1.7591757774353027
+          ],
+          "mean_displacement_error_m": 1.395269751548767
+        },
+        "learned": {
+          "count": 270,
+          "mae_xy_m": [
+            0.29992640018463135,
+            0.25559064745903015
+          ],
+          "rmse_xy_m": [
+            0.5743404030799866,
+            0.503415048122406
+          ],
+          "p95_absolute_xy_m": [
+            0.951187014579773,
+            0.6324094533920288
+          ],
+          "mean_displacement_error_m": 0.46229124069213867
+        }
+      },
+      {
+        "horizon_seconds": 1.399999976158142,
+        "analytic": {
+          "count": 270,
+          "mae_xy_m": [
+            1.3551068305969238,
+            1.066013216972351
+          ],
+          "rmse_xy_m": [
+            1.7135826349258423,
+            1.411962628364563
+          ],
+          "p95_absolute_xy_m": [
+            3.2587215900421143,
+            2.316762685775757
+          ],
+          "mean_displacement_error_m": 1.919927716255188
+        },
+        "learned": {
+          "count": 270,
+          "mae_xy_m": [
+            0.41302067041397095,
+            0.3204302489757538
+          ],
+          "rmse_xy_m": [
+            0.744641900062561,
+            0.6068156957626343
+          ],
+          "p95_absolute_xy_m": [
+            1.854919195175171,
+            0.9355601072311401
+          ],
+          "mean_displacement_error_m": 0.6177400946617126
+        }
+      },
+      {
+        "horizon_seconds": 1.5,
+        "analytic": {
+          "count": 135,
+          "mae_xy_m": [
+            1.497330665588379,
+            1.14578378200531
+          ],
+          "rmse_xy_m": [
+            1.8861907720565796,
+            1.4529411792755127
+          ],
+          "p95_absolute_xy_m": [
+            3.895402431488037,
+            2.5875906944274902
+          ],
+          "mean_displacement_error_m": 2.1198065280914307
+        },
+        "learned": {
+          "count": 135,
+          "mae_xy_m": [
+            0.4085899591445923,
+            0.3742964267730713
+          ],
+          "rmse_xy_m": [
+            0.835344135761261,
+            0.6077706217765808
+          ],
+          "p95_absolute_xy_m": [
+            1.2546300888061523,
+            1.0622931718826294
+          ],
+          "mean_displacement_error_m": 0.6538350582122803
+        }
+      },
+      {
+        "horizon_seconds": 1.7000000476837158,
+        "analytic": {
+          "count": 264,
+          "mae_xy_m": [
+            1.9403319358825684,
+            1.5073531866073608
+          ],
+          "rmse_xy_m": [
+            2.4957170486450195,
+            2.0357980728149414
+          ],
+          "p95_absolute_xy_m": [
+            4.758132457733154,
+            3.2846293449401855
+          ],
+          "mean_displacement_error_m": 2.7437708377838135
+        },
+        "learned": {
+          "count": 264,
+          "mae_xy_m": [
+            0.5711743831634521,
+            0.41315290331840515
+          ],
+          "rmse_xy_m": [
+            1.158422589302063,
+            0.7576764822006226
+          ],
+          "p95_absolute_xy_m": [
+            1.95429527759552,
+            1.6382428407669067
+          ],
+          "mean_displacement_error_m": 0.8363953828811646
+        }
+      },
+      {
+        "horizon_seconds": 1.899999976158142,
+        "analytic": {
+          "count": 264,
+          "mae_xy_m": [
+            2.503236770629883,
+            1.8381019830703735
+          ],
+          "rmse_xy_m": [
+            3.178260326385498,
+            2.4461021423339844
+          ],
+          "p95_absolute_xy_m": [
+            5.976484775543213,
+            3.9780170917510986
+          ],
+          "mean_displacement_error_m": 3.4585676193237305
+        },
+        "learned": {
+          "count": 264,
+          "mae_xy_m": [
+            0.7340916991233826,
+            0.5086542963981628
+          ],
+          "rmse_xy_m": [
+            1.341416358947754,
+            0.8992106914520264
+          ],
+          "p95_absolute_xy_m": [
+            2.6322054862976074,
+            2.1445889472961426
+          ],
+          "mean_displacement_error_m": 1.050564169883728
+        }
+      },
+      {
+        "horizon_seconds": 2.0,
+        "analytic": {
+          "count": 129,
+          "mae_xy_m": [
+            2.706130027770996,
+            1.929823637008667
+          ],
+          "rmse_xy_m": [
+            3.376483678817749,
+            2.471492290496826
+          ],
+          "p95_absolute_xy_m": [
+            6.730002403259277,
+            4.3917999267578125
+          ],
+          "mean_displacement_error_m": 3.729301929473877
+        },
+        "learned": {
+          "count": 129,
+          "mae_xy_m": [
+            0.7384475469589233,
+            0.5581090450286865
+          ],
+          "rmse_xy_m": [
+            1.509967565536499,
+            0.8941687941551208
+          ],
+          "p95_absolute_xy_m": [
+            2.0339927673339844,
+            2.107419013977051
+          ],
+          "mean_displacement_error_m": 1.0902849435806274
+        }
+      },
+      {
+        "horizon_seconds": 2.200000047683716,
+        "analytic": {
+          "count": 252,
+          "mae_xy_m": [
+            3.3132286071777344,
+            2.3805925846099854
+          ],
+          "rmse_xy_m": [
+            4.234621047973633,
+            3.2177553176879883
+          ],
+          "p95_absolute_xy_m": [
+            7.8819260597229,
+            5.348433494567871
+          ],
+          "mean_displacement_error_m": 4.538202285766602
+        },
+        "learned": {
+          "count": 252,
+          "mae_xy_m": [
+            0.9390605688095093,
+            0.6479308605194092
+          ],
+          "rmse_xy_m": [
+            1.9889432191848755,
+            1.0646560192108154
+          ],
+          "p95_absolute_xy_m": [
+            4.688371658325195,
+            2.7927331924438477
+          ],
+          "mean_displacement_error_m": 1.3453150987625122
+        }
+      },
+      {
+        "horizon_seconds": 2.4000000953674316,
+        "analytic": {
+          "count": 252,
+          "mae_xy_m": [
+            4.058683395385742,
+            2.8245198726654053
+          ],
+          "rmse_xy_m": [
+            5.135646343231201,
+            3.7702112197875977
+          ],
+          "p95_absolute_xy_m": [
+            9.856764793395996,
+            6.240380764007568
+          ],
+          "mean_displacement_error_m": 5.515564918518066
+        },
+        "learned": {
+          "count": 252,
+          "mae_xy_m": [
+            1.1366016864776611,
+            0.8013321757316589
+          ],
+          "rmse_xy_m": [
+            2.1219468116760254,
+            1.289650559425354
+          ],
+          "p95_absolute_xy_m": [
+            4.652587890625,
+            3.34433650970459
+          ],
+          "mean_displacement_error_m": 1.6334776878356934
+        }
+      }
+    ]
+  },
+  "model_sha256": "252c01f2722179bbd9d1a0397caae12035a6eef3b7dbcbb1d2568e3f723bf4f9"
+}

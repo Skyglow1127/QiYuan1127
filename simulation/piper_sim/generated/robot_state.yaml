@@ -1,0 +1,319 @@
+robot_state_publisher:
+  ros__parameters:
+    robot_description: "<?xml version='1.0' encoding='utf-8'?>\n<robot name=\"piper\"\
+      >\n  <link name=\"world\" />\n  <joint name=\"world_to_base_link\" type=\"fixed\"\
+      >\n    <parent link=\"world\" />\n    <child link=\"base_link\" />\n    <origin\
+      \ rpy=\"0 0 0\" xyz=\"0 0 0.02\" />\n  </joint>\n  <link name=\"base_link\"\
+      >\n    <inertial>\n      <origin rpy=\"0 0 0\" xyz=\"-0.00473641164191482 2.56829134630247E-05\
+      \ 0.041451518036016\" />\n      <mass value=\"1.02\" />\n      <inertia ixx=\"\
+      0.00267433\" ixy=\"-0.00000073\" ixz=\"-0.00017389\" iyy=\"0.00282612\" iyz=\"\
+      0.0000004\" izz=\"0.00089624\" />\n    </inertial>\n    <visual>\n      <origin\
+      \ rpy=\"0 0 0\" xyz=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"\
+      /home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/upstream/agx_arm_urdf/piper/meshes/dae/base_link.dae\"\
+      \ />\n      </geometry>\n    </visual>\n    <collision>\n      <origin rpy=\"\
+      0 0 0\" xyz=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"/home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/upstream/agx_arm_urdf/piper/meshes/base_link.stl\"\
+      \ />\n      </geometry>\n    </collision>\n  </link>\n  <link name=\"link1\"\
+      >\n    <inertial>\n      <origin rpy=\"0 0 0\" xyz=\"0.00032 -0.00041 -0.00348\"\
+      \ />\n      <mass value=\"0.71\" />\n      <inertia ixx=\"0.00050027\" ixy=\"\
+      0.00000078\" ixz=\"0.00000626\" iyy=\"0.00040879\" iyz=\"0.00000462\" izz=\"\
+      0.00045802\" />\n    </inertial>\n    <visual>\n      <origin rpy=\"0 0 0\"\
+      \ xyz=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"/home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/upstream/agx_arm_urdf/piper/meshes/dae/link1.dae\"\
+      \ />\n      </geometry>\n    </visual>\n    <collision>\n      <origin rpy=\"\
+      0 0 0\" xyz=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"/home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/upstream/agx_arm_urdf/piper/meshes/link1.stl\"\
+      \ />\n      </geometry>\n    </collision>\n  </link>\n  <joint name=\"joint1\"\
+      \ type=\"revolute\">\n    <origin rpy=\"0 0 0\" xyz=\"0 0 0.123\" />\n    <parent\
+      \ link=\"base_link\" />\n    <child link=\"link1\" />\n    <axis xyz=\"0 0 1\"\
+      \ />\n    <limit effort=\"100\" lower=\"-2.6179938\" upper=\"2.6179938\" velocity=\"\
+      5\" />\n    <dynamics damping=\"0.04\" friction=\"0\" />\n  </joint>\n  <link\
+      \ name=\"link2\">\n    <inertial>\n      <origin rpy=\"0 0 0\" xyz=\"0.21852\
+      \ -0.00861 0.00126\" />\n      <mass value=\"1.16\" />\n      <inertia ixx=\"\
+      0.00111915\" ixy=\"0.00182916\" ixz=\"0.00019233\" iyy=\"0.06763251\" iyz=\"\
+      0.00000767\" izz=\"0.067559\" />\n    </inertial>\n    <visual>\n      <origin\
+      \ rpy=\"0 0 0\" xyz=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"\
+      /home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/upstream/agx_arm_urdf/piper/meshes/dae/link2.dae\"\
+      \ />\n      </geometry>\n    </visual>\n    <collision>\n      <origin rpy=\"\
+      0 0 0\" xyz=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"/home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/upstream/agx_arm_urdf/piper/meshes/link2.stl\"\
+      \ />\n      </geometry>\n    </collision>\n  </link>\n  <joint name=\"joint2\"\
+      \ type=\"revolute\">\n    <origin rpy=\"1.5707963 -0.1357866 -3.1415926\" xyz=\"\
+      0 0 0\" />\n    <parent link=\"link1\" />\n    <child link=\"link2\" />\n  \
+      \  <axis xyz=\"0 0 1\" />\n    <limit effort=\"100\" lower=\"0\" upper=\"3.1415926\"\
+      \ velocity=\"5\" />\n    <dynamics damping=\"0.04\" friction=\"0\" />\n  </joint>\n\
+      \  <link name=\"link3\">\n    <inertial>\n      <origin rpy=\"0 0 0\" xyz=\"\
+      -0.01999 -0.14808 -0.00053\" />\n      <mass value=\"0.5\" />\n      <inertia\
+      \ ixx=\"0.01347608\" ixy=\"0.00161034\" ixz=\"0.00000066\" iyy=\"0.00046377\"\
+      \ iyz=\"0.00000162\" izz=\"0.01363321\" />\n    </inertial>\n    <visual>\n\
+      \      <origin rpy=\"0 0 0\" xyz=\"0 0 0\" />\n      <geometry>\n        <mesh\
+      \ filename=\"/home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/upstream/agx_arm_urdf/piper/meshes/dae/link3.dae\"\
+      \ />\n      </geometry>\n    </visual>\n    <collision>\n      <origin rpy=\"\
+      0 0 0\" xyz=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"/home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/upstream/agx_arm_urdf/piper/meshes/link3.stl\"\
+      \ />\n      </geometry>\n    </collision>\n  </link>\n  <joint name=\"joint3\"\
+      \ type=\"revolute\">\n    <origin rpy=\"0 0 -1.7938494\" xyz=\"0.28503 0 0\"\
+      \ />\n    <parent link=\"link2\" />\n    <child link=\"link3\" />\n    <axis\
+      \ xyz=\"0 0 1\" />\n    <limit effort=\"100\" lower=\"-2.9670597\" upper=\"\
+      0\" velocity=\"5\" />\n    <dynamics damping=\"0.04\" friction=\"0\" />\n  </joint>\n\
+      \  <link name=\"link4\">\n    <inertial>\n      <origin rpy=\"0 0 0\" xyz=\"\
+      0.00013 -0.00076 -0.00394\" />\n      <mass value=\"0.38\" />\n      <inertia\
+      \ ixx=\"0.00017844\" ixy=\"0.00000062\" ixz=\"0.00000067\" iyy=\"0.00018914\"\
+      \ iyz=\"0.00000408\" izz=\"0.00014613\" />\n    </inertial>\n    <visual>\n\
+      \      <origin rpy=\"0 0 0\" xyz=\"0 0 0\" />\n      <geometry>\n        <mesh\
+      \ filename=\"/home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/upstream/agx_arm_urdf/piper/meshes/dae/link4.dae\"\
+      \ />\n      </geometry>\n    </visual>\n    <collision>\n      <origin rpy=\"\
+      0 0 0\" xyz=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"/home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/upstream/agx_arm_urdf/piper/meshes/link4.stl\"\
+      \ />\n      </geometry>\n    </collision>\n  </link>\n  <joint name=\"joint4\"\
+      \ type=\"revolute\">\n    <origin rpy=\"1.5707963 0 0\" xyz=\"-0.02198 -0.25075\
+      \ 0\" />\n    <parent link=\"link3\" />\n    <child link=\"link4\" />\n    <axis\
+      \ xyz=\"0 0 1\" />\n    <limit effort=\"100\" lower=\"-1.7453292\" upper=\"\
+      1.7453292\" velocity=\"5\" />\n    <dynamics damping=\"0.04\" friction=\"0\"\
+      \ />\n  </joint>\n  <link name=\"link5\">\n    <inertial>\n      <origin rpy=\"\
+      0 0 0\" xyz=\"0.00018 -0.06104 -0.00227\" />\n      <mass value=\"0.383\" />\n\
+      \      <inertia ixx=\"0.00172318\" ixy=\"0.00000259\" ixz=\"0.00000010\" iyy=\"\
+      0.00017936\" iyz=\"0.00000990\" izz=\"0.00171172\" />\n    </inertial>\n   \
+      \ <visual>\n      <origin rpy=\"0 0 0\" xyz=\"0 0 0\" />\n      <geometry>\n\
+      \        <mesh filename=\"/home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/upstream/agx_arm_urdf/piper/meshes/dae/link5.dae\"\
+      \ />\n      </geometry>\n    </visual>\n    <collision>\n      <origin rpy=\"\
+      0 0 0\" xyz=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"/home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/upstream/agx_arm_urdf/piper/meshes/link5.stl\"\
+      \ />\n      </geometry>\n    </collision>\n  </link>\n  <joint name=\"joint5\"\
+      \ type=\"revolute\">\n    <origin rpy=\"-1.5707963 0 0\" xyz=\"0 0 0\" />\n\
+      \    <parent link=\"link4\" />\n    <child link=\"link5\" />\n    <axis xyz=\"\
+      0 0 1\" />\n    <limit effort=\"100\" lower=\"-1.2217304\" upper=\"1.2217304\"\
+      \ velocity=\"5\" />\n    <dynamics damping=\"0.04\" friction=\"0\" />\n  </joint>\n\
+      \  <link name=\"link6\">\n    <inertial>\n      <origin rpy=\"0 0 0\" xyz=\"\
+      0.00134940815 0 -0.00344975303\" />\n      <mass value=\"0.01655408133\" />\n\
+      \      <inertia ixx=\"1.52476803967e-6\" ixy=\"0\" ixz=\"1.0017156778e-7\" iyy=\"\
+      1.51721319881e-6\" iyz=\"0\" izz=\"2.84541364481e-6\" />\n    </inertial>\n\
+      \    <visual>\n      <origin rpy=\"0 0 0\" xyz=\"0 0 0\" />\n      <geometry>\n\
+      \        <mesh filename=\"/home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/upstream/agx_arm_urdf/piper/meshes/dae/link6.dae\"\
+      \ />\n      </geometry>\n    </visual>\n    <collision>\n      <origin rpy=\"\
+      0 0 0\" xyz=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"/home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/upstream/agx_arm_urdf/piper/meshes/link6.stl\"\
+      \ />\n      </geometry>\n    </collision>\n  </link>\n  <joint name=\"joint6\"\
+      \ type=\"revolute\">\n    <origin rpy=\"1.5707963 0 0\" xyz=\"8.8259E-05 -0.091\
+      \ 0\" />\n    <parent link=\"link5\" />\n    <child link=\"link6\" />\n    <axis\
+      \ xyz=\"0 0 1\" />\n    <limit effort=\"100\" lower=\"-2.9670597\" upper=\"\
+      2.9670597\" velocity=\"5\" />\n    <dynamics damping=\"0.04\" friction=\"0\"\
+      \ />\n  </joint>\n  <link name=\"flange_link\">\n    <inertial>\n      <origin\
+      \ rpy=\"0 0 0\" xyz=\"1.151691e-03 0.782428e-03 4.798051e-03\" />\n      <mass\
+      \ value=\"0.04\" />\n      <inertia ixx=\"9.935389e-06\" ixy=\"0.0\" ixz=\"\
+      0.0\" iyy=\"10.508003e-06\" iyz=\"0.0\" izz=\"19.652873e-06\" />\n    </inertial>\n\
+      \    <visual>\n      <origin rpy=\"0 0 0\" xyz=\"0 0 0\" />\n      <geometry>\n\
+      \        <mesh filename=\"/home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/upstream/agx_arm_urdf/piper/meshes/dae/flange.dae\"\
+      \ />\n      </geometry>\n    </visual>\n    <collision>\n      <origin rpy=\"\
+      0 0 0\" xyz=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"/home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/upstream/agx_arm_urdf/piper/meshes/flange.stl\"\
+      \ />\n      </geometry>\n    </collision>\n  </link>\n  <joint name=\"flange_joint\"\
+      \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"0 0 0\" />\n    <parent link=\"\
+      link6\" />\n    <child link=\"flange_link\" />\n  </joint>\n  <link name=\"\
+      gripper_base\">\n    <inertial>\n      <origin rpy=\"0 0 0\" xyz=\"-0.000183807162235591\
+      \ 8.05033155577911E-05 0.0321436689908876\" />\n      <mass value=\"0.45\" />\n\
+      \      <inertia ixx=\"0.000466573035886\" ixy=\"0\" ixz=\"0\" iyy=\"0.000208671755285\"\
+      \ iyz=\"0\" izz=\"0.000443517627645\" />\n    </inertial>\n    <visual>\n  \
+      \    <origin rpy=\"0 0 0\" xyz=\"0 0 0\" />\n      <geometry>\n        <mesh\
+      \ filename=\"/home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/upstream/agx_arm_urdf/agx_gripper/meshes/dae/gripper_base.dae\"\
+      \ />\n      </geometry>\n    </visual>\n    <collision>\n      <origin rpy=\"\
+      0 0 0\" xyz=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"/home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/upstream/agx_arm_urdf/agx_gripper/meshes/gripper_base.stl\"\
+      \ />\n      </geometry>\n    </collision>\n  </link>\n  <joint name=\"gripper_base_joint\"\
+      \ type=\"fixed\">\n    <origin rpy=\"0 0 0\" xyz=\"0 0 0.0045\" />\n    <parent\
+      \ link=\"flange_link\" />\n    <child link=\"gripper_base\" />\n  </joint>\n\
+      \  <link name=\"gripper_link1\">\n    <inertial>\n      <origin rpy=\"0 0 0\"\
+      \ xyz=\"0.00065123185041968 -0.0491929869131989 0.00972258769184025\" />\n \
+      \     <mass value=\"0.025\" />\n      <inertia ixx=\"1.0831334372e-05\" ixy=\"\
+      3.32108655243e-07\" ixz=\"-5.17776964242e-08\" iyy=\"5.43941050918e-06\" iyz=\"\
+      1.75746071559e-06\" izz=\"1.41828415054e-05\" />\n    </inertial>\n    <visual>\n\
+      \      <origin rpy=\"0 0 0\" xyz=\"0 0 0\" />\n      <geometry>\n        <mesh\
+      \ filename=\"/home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/upstream/agx_arm_urdf/agx_gripper/meshes/dae/gripper_link1.dae\"\
+      \ />\n      </geometry>\n    </visual>\n    <collision>\n      <origin rpy=\"\
+      0 0 0\" xyz=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"/home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/upstream/agx_arm_urdf/agx_gripper/meshes/gripper_link1.stl\"\
+      \ />\n      </geometry>\n    </collision>\n    <collision name=\"simulation_grip_pad\"\
+      >\n      <origin xyz=\"0 -0.013 0.00045\" rpy=\"0 0 0\" />\n      <geometry>\n\
+      \        <box size=\"0.042 0.026 0.0015\" />\n      </geometry>\n    </collision>\n\
+      \  </link>\n  <joint name=\"gripper_joint1\" type=\"prismatic\">\n    <origin\
+      \ rpy=\"1.5707963 0 0\" xyz=\"0 0 0.138\" />\n    <parent link=\"gripper_base\"\
+      \ />\n    <child link=\"gripper_link1\" />\n    <axis xyz=\"0 0 1\" />\n   \
+      \ <limit effort=\"10\" lower=\"0\" upper=\"0.05\" velocity=\"3\" />\n    <dynamics\
+      \ damping=\"0.04\" friction=\"0\" />\n  </joint>\n  <link name=\"gripper_link2\"\
+      >\n    <inertial>\n      <origin rpy=\"0 0 0\" xyz=\"0.00065123185041968 -0.0491929869131989\
+      \ 0.00972258769184025\" />\n      <mass value=\"0.025\" />\n      <inertia ixx=\"\
+      1.0831334372e-05\" ixy=\"3.32108655243e-07\" ixz=\"-5.17776964242e-08\" iyy=\"\
+      5.43941050918e-06\" iyz=\"1.75746071559e-06\" izz=\"1.41828415054e-05\" />\n\
+      \    </inertial>\n    <visual>\n      <origin rpy=\"0 0 0\" xyz=\"0 0 0\" />\n\
+      \      <geometry>\n        <mesh filename=\"/home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/upstream/agx_arm_urdf/agx_gripper/meshes/dae/gripper_link2.dae\"\
+      \ />\n      </geometry>\n    </visual>\n    <collision>\n      <origin rpy=\"\
+      0 0 0\" xyz=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"/home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/upstream/agx_arm_urdf/agx_gripper/meshes/gripper_link2.stl\"\
+      \ />\n      </geometry>\n    </collision>\n    <collision name=\"simulation_grip_pad\"\
+      >\n      <origin xyz=\"0 -0.013 0.00045\" rpy=\"0 0 0\" />\n      <geometry>\n\
+      \        <box size=\"0.042 0.026 0.0015\" />\n      </geometry>\n    </collision>\n\
+      \  </link>\n  <joint name=\"gripper_joint2\" type=\"prismatic\">\n    <origin\
+      \ rpy=\"1.5707963 0 -3.1415926\" xyz=\"0 0 0.138\" />\n    <parent link=\"gripper_base\"\
+      \ />\n    <child link=\"gripper_link2\" />\n    <axis xyz=\"0 0 -1\" />\n  \
+      \  <limit effort=\"10\" lower=\"-0.05\" upper=\"0\" velocity=\"3\" />\n    <dynamics\
+      \ damping=\"0.04\" friction=\"0\" />\n  </joint>\n  <link name=\"piper_wrist_camera_link\"\
+      >\n    <visual name=\"user_stl_camera_mount\">\n      <origin rpy=\"0 0 0\"\
+      \ xyz=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"/home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/meshes/wrist_camera_mount.STL\"\
+      \ scale=\"1 1 1\" />\n      </geometry>\n      <material name=\"user_stl_camera_mount_finish\"\
+      >\n        <color rgba=\"0.8980392156862745 0.8862745098039215 0.8470588235294118\
+      \ 1\" />\n      </material>\n    </visual>\n    <visual name=\"camera_white_housing\"\
+      >\n      <origin rpy=\"0 0 0\" xyz=\"-0.01 0 0.006\" />\n      <geometry>\n\
+      \        <box size=\"0.028 0.074 0.028\" />\n      </geometry>\n      <material\
+      \ name=\"camera_white_housing_finish\">\n        <color rgba=\"0.8980392156862745\
+      \ 0.8980392156862745 0.8745098039215686 1\" />\n      </material>\n    </visual>\n\
+      \    <visual name=\"camera_rounded_end_-1\">\n      <origin rpy=\"0 0 0\" xyz=\"\
+      -0.01 -0.037 0.006\" />\n      <geometry>\n        <cylinder length=\"0.028\"\
+      \ radius=\"0.014\" />\n      </geometry>\n      <material name=\"camera_rounded_end_-1_finish\"\
+      >\n        <color rgba=\"0.8980392156862745 0.8980392156862745 0.8745098039215686\
+      \ 1\" />\n      </material>\n    </visual>\n    <visual name=\"camera_rounded_end_1\"\
+      >\n      <origin rpy=\"0 0 0\" xyz=\"-0.01 0.037 0.006\" />\n      <geometry>\n\
+      \        <cylinder length=\"0.028\" radius=\"0.014\" />\n      </geometry>\n\
+      \      <material name=\"camera_rounded_end_1_finish\">\n        <color rgba=\"\
+      0.8980392156862745 0.8980392156862745 0.8745098039215686 1\" />\n      </material>\n\
+      \    </visual>\n    <visual name=\"camera_black_front\">\n      <origin rpy=\"\
+      0 0 0\" xyz=\"-0.01 0 0.021\" />\n      <geometry>\n        <box size=\"0.024\
+      \ 0.074 0.002\" />\n      </geometry>\n      <material name=\"camera_black_front_finish\"\
+      >\n        <color rgba=\"0.09019607843137255 0.12941176470588237 0.16862745098039217\
+      \ 1\" />\n      </material>\n    </visual>\n    <visual name=\"front_round_-1\"\
+      >\n      <origin rpy=\"0 0 0\" xyz=\"-0.01 -0.037 0.021\" />\n      <geometry>\n\
+      \        <cylinder length=\"0.002\" radius=\"0.012\" />\n      </geometry>\n\
+      \      <material name=\"front_round_-1_finish\">\n        <color rgba=\"0.09019607843137255\
+      \ 0.12941176470588237 0.16862745098039217 1\" />\n      </material>\n    </visual>\n\
+      \    <visual name=\"front_round_1\">\n      <origin rpy=\"0 0 0\" xyz=\"-0.01\
+      \ 0.037 0.021\" />\n      <geometry>\n        <cylinder length=\"0.002\" radius=\"\
+      0.012\" />\n      </geometry>\n      <material name=\"front_round_1_finish\"\
+      >\n        <color rgba=\"0.09019607843137255 0.12941176470588237 0.16862745098039217\
+      \ 1\" />\n      </material>\n    </visual>\n    <visual name=\"lens_bezel_0\"\
+      >\n      <origin rpy=\"0 0 0\" xyz=\"-0.01 -0.032 0.0225\" />\n      <geometry>\n\
+      \        <cylinder length=\"0.0014\" radius=\"0.0082\" />\n      </geometry>\n\
+      \      <material name=\"lens_bezel_0_finish\">\n        <color rgba=\"0.3843137254901961\
+      \ 0.42745098039215684 0.45098039215686275 1\" />\n      </material>\n    </visual>\n\
+      \    <visual name=\"lens_glass_0\">\n      <origin rpy=\"0 0 0\" xyz=\"-0.01\
+      \ -0.032 0.0235\" />\n      <geometry>\n        <cylinder length=\"0.0015\"\
+      \ radius=\"0.007\" />\n      </geometry>\n      <material name=\"lens_glass_0_finish\"\
+      >\n        <color rgba=\"0.28627450980392155 0.16862745098039217 0.2823529411764706\
+      \ 1\" />\n      </material>\n    </visual>\n    <visual name=\"lens_highlight_0\"\
+      >\n      <origin rpy=\"0 0 0\" xyz=\"-0.012 -0.033 0.0244\" />\n      <geometry>\n\
+      \        <cylinder length=\"0.0016\" radius=\"0.0013\" />\n      </geometry>\n\
+      \      <material name=\"lens_highlight_0_finish\">\n        <color rgba=\"0.6666666666666666\
+      \ 0.7764705882352941 0.8117647058823529 1\" />\n      </material>\n    </visual>\n\
+      \    <visual name=\"lens_bezel_1\">\n      <origin rpy=\"0 0 0\" xyz=\"-0.01\
+      \ -0.017 0.0225\" />\n      <geometry>\n        <cylinder length=\"0.0014\"\
+      \ radius=\"0.005999999999999999\" />\n      </geometry>\n      <material name=\"\
+      lens_bezel_1_finish\">\n        <color rgba=\"0.3843137254901961 0.42745098039215684\
+      \ 0.45098039215686275 1\" />\n      </material>\n    </visual>\n    <visual\
+      \ name=\"lens_glass_1\">\n      <origin rpy=\"0 0 0\" xyz=\"-0.01 -0.017 0.0235\"\
+      \ />\n      <geometry>\n        <cylinder length=\"0.0015\" radius=\"0.0048\"\
+      \ />\n      </geometry>\n      <material name=\"lens_glass_1_finish\">\n   \
+      \     <color rgba=\"0.20392156862745098 0.27450980392156865 0.3137254901960784\
+      \ 1\" />\n      </material>\n    </visual>\n    <visual name=\"lens_bezel_2\"\
+      >\n      <origin rpy=\"0 0 0\" xyz=\"-0.01 0 0.0225\" />\n      <geometry>\n\
+      \        <cylinder length=\"0.0014\" radius=\"0.0087\" />\n      </geometry>\n\
+      \      <material name=\"lens_bezel_2_finish\">\n        <color rgba=\"0.3843137254901961\
+      \ 0.42745098039215684 0.45098039215686275 1\" />\n      </material>\n    </visual>\n\
+      \    <visual name=\"lens_glass_2\">\n      <origin rpy=\"0 0 0\" xyz=\"-0.01\
+      \ 0 0.0235\" />\n      <geometry>\n        <cylinder length=\"0.0015\" radius=\"\
+      0.0075\" />\n      </geometry>\n      <material name=\"lens_glass_2_finish\"\
+      >\n        <color rgba=\"0.06274509803921569 0.10196078431372549 0.1411764705882353\
+      \ 1\" />\n      </material>\n    </visual>\n    <visual name=\"lens_highlight_2\"\
+      >\n      <origin rpy=\"0 0 0\" xyz=\"-0.012 -0.001 0.0244\" />\n      <geometry>\n\
+      \        <cylinder length=\"0.0016\" radius=\"0.0013\" />\n      </geometry>\n\
+      \      <material name=\"lens_highlight_2_finish\">\n        <color rgba=\"0.6666666666666666\
+      \ 0.7764705882352941 0.8117647058823529 1\" />\n      </material>\n    </visual>\n\
+      \    <visual name=\"lens_bezel_3\">\n      <origin rpy=\"0 0 0\" xyz=\"-0.01\
+      \ 0.018 0.0225\" />\n      <geometry>\n        <cylinder length=\"0.0014\" radius=\"\
+      0.0042\" />\n      </geometry>\n      <material name=\"lens_bezel_3_finish\"\
+      >\n        <color rgba=\"0.3843137254901961 0.42745098039215684 0.45098039215686275\
+      \ 1\" />\n      </material>\n    </visual>\n    <visual name=\"lens_glass_3\"\
+      >\n      <origin rpy=\"0 0 0\" xyz=\"-0.01 0.018 0.0235\" />\n      <geometry>\n\
+      \        <cylinder length=\"0.0015\" radius=\"0.003\" />\n      </geometry>\n\
+      \      <material name=\"lens_glass_3_finish\">\n        <color rgba=\"0.5568627450980392\
+      \ 0.35294117647058826 0.403921568627451 1\" />\n      </material>\n    </visual>\n\
+      \    <visual name=\"lens_bezel_4\">\n      <origin rpy=\"0 0 0\" xyz=\"-0.01\
+      \ 0.032 0.0225\" />\n      <geometry>\n        <cylinder length=\"0.0014\" radius=\"\
+      0.0072\" />\n      </geometry>\n      <material name=\"lens_bezel_4_finish\"\
+      >\n        <color rgba=\"0.3843137254901961 0.42745098039215684 0.45098039215686275\
+      \ 1\" />\n      </material>\n    </visual>\n    <visual name=\"lens_glass_4\"\
+      >\n      <origin rpy=\"0 0 0\" xyz=\"-0.01 0.032 0.0235\" />\n      <geometry>\n\
+      \        <cylinder length=\"0.0015\" radius=\"0.006\" />\n      </geometry>\n\
+      \      <material name=\"lens_glass_4_finish\">\n        <color rgba=\"0.20784313725490197\
+      \ 0.2549019607843137 0.2980392156862745 1\" />\n      </material>\n    </visual>\n\
+      \    <visual name=\"lens_highlight_4\">\n      <origin rpy=\"0 0 0\" xyz=\"\
+      -0.012 0.031 0.0244\" />\n      <geometry>\n        <cylinder length=\"0.0016\"\
+      \ radius=\"0.0013\" />\n      </geometry>\n      <material name=\"lens_highlight_4_finish\"\
+      >\n        <color rgba=\"0.6666666666666666 0.7764705882352941 0.8117647058823529\
+      \ 1\" />\n      </material>\n    </visual>\n    <collision name=\"wrist_camera_body\"\
+      >\n      <origin rpy=\"0 0 0\" xyz=\"-0.01 0 0.007\" />\n      <geometry>\n\
+      \        <box size=\"0.029 0.102 0.032\" />\n      </geometry>\n    </collision>\n\
+      \    <collision name=\"wrist_camera_bracket\">\n      <origin rpy=\"0 0 0\"\
+      \ xyz=\"0 0 0\" />\n      <geometry>\n        <mesh filename=\"/home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/meshes/wrist_camera_mount.STL\"\
+      \ scale=\"1 1 1\" />\n      </geometry>\n    </collision>\n  </link>\n  <joint\
+      \ name=\"piper_wrist_camera_mount\" type=\"fixed\">\n    <parent link=\"link6\"\
+      \ />\n    <child link=\"piper_wrist_camera_link\" />\n    <origin rpy=\"0 0.35\
+      \ 0\" xyz=\"-0.055 0 0.02\" />\n  </joint>\n  <link name=\"piper_wrist_camera_optical_link\"\
+      \ />\n  <joint name=\"piper_wrist_camera_optical_joint\" type=\"fixed\">\n \
+      \   <parent link=\"piper_wrist_camera_link\" />\n    <child link=\"piper_wrist_camera_optical_link\"\
+      \ />\n    <origin rpy=\"0 -1.5707963267948966 0\" xyz=\"-0.01 0 0.025\" />\n\
+      \  </joint>\n  <gazebo reference=\"piper_wrist_camera_optical_link\">\n    <sensor\
+      \ name=\"wrist_rgb\" type=\"camera\">\n      <always_on>true</always_on>\n \
+      \     <update_rate>10</update_rate>\n      <visualize>false</visualize>\n  \
+      \    <topic>/piper/wrist_camera/image</topic>\n      <camera name=\"wrist_camera\"\
+      >\n        <horizontal_fov>1.5707963267948966</horizontal_fov>\n        <image>\n\
+      \          <width>640</width>\n          <height>480</height>\n          <format>R8G8B8</format>\n\
+      \        </image>\n        <clip>\n          <near>0.01</near>\n          <far>4.0</far>\n\
+      \        </clip>\n      </camera>\n    </sensor>\n  </gazebo>\n  <gazebo reference=\"\
+      base_link\">\n    <selfCollide>true</selfCollide>\n    <mu1>0.8</mu1>\n    <mu2>0.8</mu2>\n\
+      \    <collision>\n      <surface>\n        <contact>\n          <collide_bitmask>2</collide_bitmask>\n\
+      \        </contact>\n      </surface>\n    </collision>\n  </gazebo>\n  <gazebo\
+      \ reference=\"link1\">\n    <selfCollide>true</selfCollide>\n    <mu1>0.8</mu1>\n\
+      \    <mu2>0.8</mu2>\n  </gazebo>\n  <gazebo reference=\"link2\">\n    <selfCollide>true</selfCollide>\n\
+      \    <mu1>0.8</mu1>\n    <mu2>0.8</mu2>\n  </gazebo>\n  <gazebo reference=\"\
+      link3\">\n    <selfCollide>true</selfCollide>\n    <mu1>0.8</mu1>\n    <mu2>0.8</mu2>\n\
+      \  </gazebo>\n  <gazebo reference=\"link4\">\n    <selfCollide>true</selfCollide>\n\
+      \    <mu1>0.8</mu1>\n    <mu2>0.8</mu2>\n  </gazebo>\n  <gazebo reference=\"\
+      link5\">\n    <selfCollide>true</selfCollide>\n    <mu1>0.8</mu1>\n    <mu2>0.8</mu2>\n\
+      \  </gazebo>\n  <gazebo reference=\"link6\">\n    <selfCollide>true</selfCollide>\n\
+      \    <mu1>0.8</mu1>\n    <mu2>0.8</mu2>\n  </gazebo>\n  <gazebo reference=\"\
+      flange_link\">\n    <selfCollide>true</selfCollide>\n    <mu1>0.8</mu1>\n  \
+      \  <mu2>0.8</mu2>\n  </gazebo>\n  <gazebo reference=\"gripper_base\">\n    <selfCollide>true</selfCollide>\n\
+      \    <mu1>0.8</mu1>\n    <mu2>0.8</mu2>\n  </gazebo>\n  <gazebo reference=\"\
+      gripper_link1\">\n    <selfCollide>true</selfCollide>\n    <mu1>0.8</mu1>\n\
+      \    <mu2>0.8</mu2>\n  </gazebo>\n  <gazebo reference=\"gripper_link2\">\n \
+      \   <selfCollide>true</selfCollide>\n    <mu1>0.8</mu1>\n    <mu2>0.8</mu2>\n\
+      \  </gazebo>\n  <gazebo>\n    <plugin filename=\"gz-sim-joint-position-controller-system\"\
+      \ name=\"gz::sim::systems::JointPositionController\">\n      <joint_name>joint1</joint_name>\n\
+      \      <topic>/piper/joint1/cmd_pos</topic>\n      <p_gain>1600</p_gain>\n \
+      \     <i_gain>15</i_gain>\n      <d_gain>40</d_gain>\n      <i_max>2</i_max>\n\
+      \      <i_min>-2</i_min>\n      <cmd_max>100</cmd_max>\n      <cmd_min>-100</cmd_min>\n\
+      \    </plugin>\n  </gazebo>\n  <gazebo>\n    <plugin filename=\"gz-sim-joint-position-controller-system\"\
+      \ name=\"gz::sim::systems::JointPositionController\">\n      <joint_name>joint2</joint_name>\n\
+      \      <topic>/piper/joint2/cmd_pos</topic>\n      <p_gain>2000</p_gain>\n \
+      \     <i_gain>20</i_gain>\n      <d_gain>50</d_gain>\n      <i_max>2</i_max>\n\
+      \      <i_min>-2</i_min>\n      <cmd_max>100</cmd_max>\n      <cmd_min>-100</cmd_min>\n\
+      \    </plugin>\n  </gazebo>\n  <gazebo>\n    <plugin filename=\"gz-sim-joint-position-controller-system\"\
+      \ name=\"gz::sim::systems::JointPositionController\">\n      <joint_name>joint3</joint_name>\n\
+      \      <topic>/piper/joint3/cmd_pos</topic>\n      <p_gain>1600</p_gain>\n \
+      \     <i_gain>15</i_gain>\n      <d_gain>35</d_gain>\n      <i_max>2</i_max>\n\
+      \      <i_min>-2</i_min>\n      <cmd_max>100</cmd_max>\n      <cmd_min>-100</cmd_min>\n\
+      \    </plugin>\n  </gazebo>\n  <gazebo>\n    <plugin filename=\"gz-sim-joint-position-controller-system\"\
+      \ name=\"gz::sim::systems::JointPositionController\">\n      <joint_name>joint4</joint_name>\n\
+      \      <topic>/piper/joint4/cmd_pos</topic>\n      <p_gain>400</p_gain>\n  \
+      \    <i_gain>2</i_gain>\n      <d_gain>8</d_gain>\n      <i_max>2</i_max>\n\
+      \      <i_min>-2</i_min>\n      <cmd_max>30</cmd_max>\n      <cmd_min>-30</cmd_min>\n\
+      \    </plugin>\n  </gazebo>\n  <gazebo>\n    <plugin filename=\"gz-sim-joint-position-controller-system\"\
+      \ name=\"gz::sim::systems::JointPositionController\">\n      <joint_name>joint5</joint_name>\n\
+      \      <topic>/piper/joint5/cmd_pos</topic>\n      <p_gain>400</p_gain>\n  \
+      \    <i_gain>2</i_gain>\n      <d_gain>8</d_gain>\n      <i_max>2</i_max>\n\
+      \      <i_min>-2</i_min>\n      <cmd_max>30</cmd_max>\n      <cmd_min>-30</cmd_min>\n\
+      \    </plugin>\n  </gazebo>\n  <gazebo>\n    <plugin filename=\"gz-sim-joint-position-controller-system\"\
+      \ name=\"gz::sim::systems::JointPositionController\">\n      <joint_name>joint6</joint_name>\n\
+      \      <topic>/piper/joint6/cmd_pos</topic>\n      <p_gain>250</p_gain>\n  \
+      \    <i_gain>1</i_gain>\n      <d_gain>0.4</d_gain>\n      <i_max>2</i_max>\n\
+      \      <i_min>-2</i_min>\n      <cmd_max>30</cmd_max>\n      <cmd_min>-30</cmd_min>\n\
+      \    </plugin>\n  </gazebo>\n  <gazebo>\n    <plugin filename=\"gz-sim-joint-position-controller-system\"\
+      \ name=\"gz::sim::systems::JointPositionController\">\n      <joint_name>gripper_joint1</joint_name>\n\
+      \      <topic>/piper/gripper_joint1/cmd_pos</topic>\n      <p_gain>700</p_gain>\n\
+      \      <i_gain>0</i_gain>\n      <d_gain>2</d_gain>\n      <i_max>2</i_max>\n\
+      \      <i_min>-2</i_min>\n      <cmd_max>10</cmd_max>\n      <cmd_min>-10</cmd_min>\n\
+      \    </plugin>\n  </gazebo>\n  <gazebo>\n    <plugin filename=\"gz-sim-joint-position-controller-system\"\
+      \ name=\"gz::sim::systems::JointPositionController\">\n      <joint_name>gripper_joint2</joint_name>\n\
+      \      <topic>/piper/gripper_joint2/cmd_pos</topic>\n      <p_gain>700</p_gain>\n\
+      \      <i_gain>0</i_gain>\n      <d_gain>2</d_gain>\n      <i_max>2</i_max>\n\
+      \      <i_min>-2</i_min>\n      <cmd_max>10</cmd_max>\n      <cmd_min>-10</cmd_min>\n\
+      \    </plugin>\n  </gazebo>\n  <gazebo>\n    <plugin filename=\"gz-sim-joint-state-publisher-system\"\
+      \ name=\"gz::sim::systems::JointStatePublisher\">\n      <topic>/piper/joint_states</topic>\n\
+      \    </plugin>\n  </gazebo>\n</robot>"
+    use_sim_time: true

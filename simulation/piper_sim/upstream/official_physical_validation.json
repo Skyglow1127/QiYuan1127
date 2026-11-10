@@ -1,0 +1,633 @@
+{
+  "inertias": [
+    {
+      "link": "base_link",
+      "mass_kg": 1.02,
+      "eigenvalues": [
+        0.0008793938122210314,
+        0.0026911717940235505,
+        0.0028261243937554156
+      ],
+      "positive_definite": true,
+      "principal_triangle_inequality": true,
+      "inertia_trace": 0.00639669
+    },
+    {
+      "link": "link1",
+      "mass_kg": 0.71,
+      "eigenvalues": [
+        0.00040835976275602675,
+        0.0004575198380460497,
+        0.0005012003991979241
+      ],
+      "positive_definite": true,
+      "principal_triangle_inequality": true,
+      "inertia_trace": 0.0013670800000000001
+    },
+    {
+      "link": "link2",
+      "mass_kg": 1.16,
+      "eigenvalues": [
+        0.0010683302209145648,
+        0.06755820835282457,
+        0.06768412142626087
+      ],
+      "positive_definite": true,
+      "principal_triangle_inequality": true,
+      "inertia_trace": 0.13631066
+    },
+    {
+      "link": "link3",
+      "mass_kg": 0.5,
+      "eigenvalues": [
+        0.00026744410544081334,
+        0.0136331916981056,
+        0.013672424196453589
+      ],
+      "positive_definite": true,
+      "principal_triangle_inequality": true,
+      "inertia_trace": 0.02757306
+    },
+    {
+      "link": "link4",
+      "mass_kg": 0.38,
+      "eigenvalues": [
+        0.0001457350413484918,
+        0.00017840975013441645,
+        0.00018956520851709177
+      ],
+      "positive_definite": true,
+      "principal_triangle_inequality": true,
+      "inertia_trace": 0.00051371
+    },
+    {
+      "link": "link5",
+      "mass_kg": 0.383,
+      "eigenvalues": [
+        0.00017929169991325153,
+        0.001711782762414324,
+        0.0017231855376724247
+      ],
+      "positive_definite": true,
+      "principal_triangle_inequality": true,
+      "inertia_trace": 0.0036142599999999998
+    },
+    {
+      "link": "link6",
+      "mass_kg": 0.01655408133,
+      "eigenvalues": [
+        1.5172131988099997e-06,
+        1.5172131988161445e-06,
+        2.8529684856638553e-06
+      ],
+      "positive_definite": true,
+      "principal_triangle_inequality": true,
+      "inertia_trace": 5.88739488329e-06
+    },
+    {
+      "link": "flange_link",
+      "mass_kg": 0.04,
+      "eigenvalues": [
+        9.935389e-06,
+        1.0508003e-05,
+        1.9652873e-05
+      ],
+      "positive_definite": true,
+      "principal_triangle_inequality": true,
+      "inertia_trace": 4.0096265e-05
+    },
+    {
+      "link": "gripper_base",
+      "mass_kg": 0.45,
+      "eigenvalues": [
+        0.000208671755285,
+        0.000443517627645,
+        0.000466573035886
+      ],
+      "positive_definite": true,
+      "principal_triangle_inequality": true,
+      "inertia_trace": 0.001118762418816
+    },
+    {
+      "link": "gripper_link1",
+      "mass_kg": 0.025,
+      "eigenvalues": [
+        5.079761725623941e-06,
+        1.0850910357125149e-05,
+        1.452291430383091e-05
+      ],
+      "positive_definite": true,
+      "principal_triangle_inequality": true,
+      "inertia_trace": 3.045358638658e-05
+    },
+    {
+      "link": "gripper_link2",
+      "mass_kg": 0.025,
+      "eigenvalues": [
+        5.079761725623941e-06,
+        1.0850910357125149e-05,
+        1.452291430383091e-05
+      ],
+      "positive_definite": true,
+      "principal_triangle_inequality": true,
+      "inertia_trace": 3.045358638658e-05
+    }
+  ],
+  "mass_total_kg": 4.70955408133,
+  "meshes": [
+    {
+      "link": "base_link",
+      "stl": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/base_link.stl",
+      "triangles": 12146,
+      "bounds_m": [
+        [
+          -0.05849999934434891,
+          -0.03999999910593033,
+          -1.452830911130576e-17
+        ],
+        [
+          0.03999999910593033,
+          0.03999999910593033,
+          0.0860000029206276
+        ]
+      ],
+      "extents_m": [
+        0.09849999845027924,
+        0.07999999821186066,
+        0.08600000292062761
+      ]
+    },
+    {
+      "link": "link1",
+      "stl": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/link1.stl",
+      "triangles": 8954,
+      "bounds_m": [
+        [
+          -0.03587707504630089,
+          -0.03674999997019768,
+          -0.0430000014603138
+        ],
+        [
+          0.03598610684275627,
+          0.04075000062584877,
+          0.02999998815357685
+        ]
+      ],
+      "extents_m": [
+        0.07186318188905716,
+        0.07750000059604645,
+        0.07299998961389065
+      ]
+    },
+    {
+      "link": "link2",
+      "stl": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/link2.stl",
+      "triangles": 73166,
+      "bounds_m": [
+        [
+          -0.03146318718791008,
+          -0.06481322646141052,
+          -0.048500001430511475
+        ],
+        [
+          0.3165076673030853,
+          0.03171728178858757,
+          0.048500001430511475
+        ]
+      ],
+      "extents_m": [
+        0.3479708544909954,
+        0.09653050824999809,
+        0.09700000286102295
+      ]
+    },
+    {
+      "link": "link3",
+      "stl": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/link3.stl",
+      "triangles": 36914,
+      "bounds_m": [
+        [
+          -0.056133970618247986,
+          -0.2147519439458847,
+          -0.03999999910593033
+        ],
+        [
+          0.029916904866695404,
+          0.029969824478030205,
+          0.04075000062584877
+        ]
+      ],
+      "extents_m": [
+        0.08605087548494339,
+        0.2447217684239149,
+        0.0807499997317791
+      ]
+    },
+    {
+      "link": "link4",
+      "stl": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/link4.stl",
+      "triangles": 17558,
+      "bounds_m": [
+        [
+          -0.03286784887313843,
+          -0.028496520593762398,
+          -0.035999998450279236
+        ],
+        [
+          0.02984265610575676,
+          0.03258347883820534,
+          0.02844819240272045
+        ]
+      ],
+      "extents_m": [
+        0.06271050497889519,
+        0.061079999431967735,
+        0.06444819085299969
+      ]
+    },
+    {
+      "link": "link5",
+      "stl": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/link5.stl",
+      "triangles": 16672,
+      "bounds_m": [
+        [
+          -0.029980840161442757,
+          -0.09000000357627869,
+          -0.03241652250289917
+        ],
+        [
+          0.029980994760990143,
+          0.023478712886571884,
+          0.02850000001490116
+        ]
+      ],
+      "extents_m": [
+        0.0599618349224329,
+        0.11347871646285057,
+        0.06091652251780033
+      ]
+    },
+    {
+      "link": "link6",
+      "stl": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/link6.stl",
+      "triangles": 1176,
+      "bounds_m": [
+        [
+          -0.017531512305140495,
+          -0.017476746812462807,
+          -0.004000000189989805
+        ],
+        [
+          0.017411740496754646,
+          0.017494866624474525,
+          1.3877787807814457e-17
+        ]
+      ],
+      "extents_m": [
+        0.03494325280189514,
+        0.03497161343693733,
+        0.004000000189989819
+      ]
+    },
+    {
+      "link": "flange_link",
+      "stl": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/flange.stl",
+      "triangles": 4090,
+      "bounds_m": [
+        [
+          -0.02850000187754631,
+          -0.028490856289863586,
+          -1.8729594184048314e-17
+        ],
+        [
+          0.028490856289863586,
+          0.028490856289863586,
+          0.010500000789761543
+        ]
+      ],
+      "extents_m": [
+        0.0569908581674099,
+        0.05698171257972717,
+        0.010500000789761562
+      ]
+    },
+    {
+      "link": "gripper_base",
+      "stl": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/agx_gripper/meshes/gripper_base.stl",
+      "triangles": 36756,
+      "bounds_m": [
+        [
+          -0.04201316833496094,
+          -0.08201403170824051,
+          -2.2205088043847354e-06
+        ],
+        [
+          0.03298286348581314,
+          0.08206862211227417,
+          0.0649978518486023
+        ]
+      ],
+      "extents_m": [
+        0.07499603182077408,
+        0.16408265382051468,
+        0.06500007235740668
+      ]
+    },
+    {
+      "link": "gripper_link1",
+      "stl": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/agx_gripper/meshes/gripper_link1.stl",
+      "triangles": 2086,
+      "bounds_m": [
+        [
+          -0.02800000086426735,
+          -0.07649999856948853,
+          -6.383782507399936e-18
+        ],
+        [
+          0.02800000086426735,
+          2.7755575615628914e-17,
+          0.026499999687075615
+        ]
+      ],
+      "extents_m": [
+        0.0560000017285347,
+        0.07649999856948855,
+        0.026499999687075622
+      ]
+    },
+    {
+      "link": "gripper_link2",
+      "stl": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/agx_gripper/meshes/gripper_link2.stl",
+      "triangles": 2086,
+      "bounds_m": [
+        [
+          -0.02800000086426735,
+          -0.07649999856948853,
+          -5.421010862427522e-18
+        ],
+        [
+          0.02800000086426735,
+          2.7755575615628914e-17,
+          0.026499999687075615
+        ]
+      ],
+      "extents_m": [
+        0.0560000017285347,
+        0.07649999856948855,
+        0.026499999687075622
+      ]
+    }
+  ],
+  "geometric_consistency_diagnostic": [
+    {
+      "link": "base_link",
+      "coefficient_CoM_AABB_bound_assumption": "All link mass lies within official STL AABB, tensor is about the declared CoM as required by URDF.",
+      "inertia_diagonal": [
+        0.00267433,
+        0.00282612,
+        0.00089624
+      ],
+      "max_diagonal_from_CoM_and_mesh_AABB": [
+        0.003515533625404728,
+        0.004336828112753662,
+        0.004085292995828197
+      ],
+      "ratio_to_bound": [
+        0.7607180829317529,
+        0.6516559860163699,
+        0.21938206168204308
+      ],
+      "bound_exceeded_axes": []
+    },
+    {
+      "link": "link1",
+      "coefficient_CoM_AABB_bound_assumption": "All link mass lies within official STL AABB, tensor is about the declared CoM as required by URDF.",
+      "inertia_diagonal": [
+        0.00050027,
+        0.00040879,
+        0.00045802
+      ],
+      "max_diagonal_from_CoM_and_mesh_AABB": [
+        0.0020014073575885015,
+        0.0018560379279692688,
+        0.0019786018489344535
+      ],
+      "ratio_to_bound": [
+        0.24995910907551377,
+        0.22024873190348324,
+        0.23148669361987095
+      ],
+      "bound_exceeded_axes": []
+    },
+    {
+      "link": "link2",
+      "coefficient_CoM_AABB_bound_assumption": "All link mass lies within official STL AABB, tensor is about the declared CoM as required by URDF.",
+      "inertia_diagonal": [
+        0.00111915,
+        0.06763251,
+        0.067559
+      ],
+      "max_diagonal_from_CoM_and_mesh_AABB": [
+        0.005355935632048193,
+        0.031141281022900404,
+        0.03104367956502629
+      ],
+      "ratio_to_bound": [
+        0.20895508775411095,
+        2.171796014115958,
+        2.1762561959991285
+      ],
+      "bound_exceeded_axes": [
+        "y",
+        "z"
+      ]
+    },
+    {
+      "link": "link3",
+      "coefficient_CoM_AABB_bound_assumption": "All link mass lies within official STL AABB, tensor is about the declared CoM as required by URDF.",
+      "inertia_diagonal": [
+        0.01347608,
+        0.00046377,
+        0.01363321
+      ],
+      "max_diagonal_from_CoM_and_mesh_AABB": [
+        0.006750124752484448,
+        0.0017165776454722954,
+        0.006837380810161689
+      ],
+      "ratio_to_bound": [
+        1.9964193987733339,
+        0.2701712918278156,
+        1.9939228746391273
+      ],
+      "bound_exceeded_axes": [
+        "x",
+        "z"
+      ]
+    },
+    {
+      "link": "link4",
+      "coefficient_CoM_AABB_bound_assumption": "All link mass lies within official STL AABB, tensor is about the declared CoM as required by URDF.",
+      "inertia_diagonal": [
+        0.00017844,
+        0.00018914,
+        0.00014613
+      ],
+      "max_diagonal_from_CoM_and_mesh_AABB": [
+        0.0007460150445668081,
+        0.0007671512709336263,
+        0.0007240086128391261
+      ],
+      "ratio_to_bound": [
+        0.23919088669802305,
+        0.24654850635887732,
+        0.20183461551232945
+      ],
+      "bound_exceeded_axes": []
+    },
+    {
+      "link": "link5",
+      "coefficient_CoM_AABB_bound_assumption": "All link mass lies within official STL AABB, tensor is about the declared CoM as required by URDF.",
+      "inertia_diagonal": [
+        0.00172318,
+        0.00017936,
+        0.00171172
+      ],
+      "max_diagonal_from_CoM_and_mesh_AABB": [
+        0.0012927286877979503,
+        0.0006995232788631291,
+        0.0012817038572976952
+      ],
+      "ratio_to_bound": [
+        1.3329788502916924,
+        0.25640318974301657,
+        1.3355035098427006
+      ],
+      "bound_exceeded_axes": [
+        "x",
+        "z"
+      ]
+    },
+    {
+      "link": "link6",
+      "coefficient_CoM_AABB_bound_assumption": "All link mass lies within official STL AABB, tensor is about the declared CoM as required by URDF.",
+      "inertia_diagonal": [
+        1.52476803967e-06,
+        1.51721319881e-06,
+        2.84541364481e-06
+      ],
+      "max_diagonal_from_CoM_and_mesh_AABB": [
+        5.092889132952959e-06,
+        5.0518062874297025e-06,
+        1.0081848949558529e-05
+      ],
+      "ratio_to_bound": [
+        0.29939156338671546,
+        0.3003308346531908,
+        0.28223133068608386
+      ],
+      "bound_exceeded_axes": []
+    },
+    {
+      "link": "flange_link",
+      "coefficient_CoM_AABB_bound_assumption": "All link mass lies within official STL AABB, tensor is about the declared CoM as required by URDF.",
+      "inertia_diagonal": [
+        9.935389e-06,
+        1.0508003e-05,
+        1.9652873e-05
+      ],
+      "max_diagonal_from_CoM_and_mesh_AABB": [
+        3.353899777780763e-05,
+        3.3520431143768986e-05,
+        6.48707692503194e-05
+      ],
+      "ratio_to_bound": [
+        0.29623392642263546,
+        0.3134805442964388,
+        0.30295421539036604
+      ],
+      "bound_exceeded_axes": []
+    },
+    {
+      "link": "gripper_base",
+      "coefficient_CoM_AABB_bound_assumption": "All link mass lies within official STL AABB, tensor is about the declared CoM as required by URDF.",
+      "inertia_diagonal": [
+        0.000466573035886,
+        0.000208671755285,
+        0.000443517627645
+      ],
+      "max_diagonal_from_CoM_and_mesh_AABB": [
+        0.003504106539827613,
+        0.0010995604097313737,
+        0.003653152710986893
+      ],
+      "ratio_to_bound": [
+        0.13315035675512119,
+        0.18977743599915461,
+        0.12140681289099038
+      ],
+      "bound_exceeded_axes": []
+    },
+    {
+      "link": "gripper_link1",
+      "coefficient_CoM_AABB_bound_assumption": "All link mass lies within official STL AABB, tensor is about the declared CoM as required by URDF.",
+      "inertia_diagonal": [
+        1.0831334372e-05,
+        5.43941050918e-06,
+        1.41828415054e-05
+      ],
+      "max_diagonal_from_CoM_and_mesh_AABB": [
+        3.766083316030587e-05,
+        2.3667395121044494e-05,
+        5.317223531305993e-05
+      ],
+      "ratio_to_bound": [
+        0.2876020911671204,
+        0.22982717284097748,
+        0.26673397162816803
+      ],
+      "bound_exceeded_axes": []
+    },
+    {
+      "link": "gripper_link2",
+      "coefficient_CoM_AABB_bound_assumption": "All link mass lies within official STL AABB, tensor is about the declared CoM as required by URDF.",
+      "inertia_diagonal": [
+        1.0831334372e-05,
+        5.43941050918e-06,
+        1.41828415054e-05
+      ],
+      "max_diagonal_from_CoM_and_mesh_AABB": [
+        3.766083316030587e-05,
+        2.3667395121044494e-05,
+        5.317223531305993e-05
+      ],
+      "ratio_to_bound": [
+        0.2876020911671204,
+        0.22982717284097748,
+        0.26673397162816803
+      ],
+      "bound_exceeded_axes": []
+    }
+  ],
+  "note": "All inertia tensors are symmetric positive definite and satisfy principal triangle inequalities; this is mathematical validity, not calibrated physical validation. Some declared moments exceed a CoM/AABB mass-support bound under the mesh-support assumption. Official values preserved; no arbitrary correction made.",
+  "gripper_geometry": {
+    "closed_q": [
+      0.0,
+      0.0
+    ],
+    "open_q": [
+      0.05,
+      -0.05
+    ],
+    "inner_contact_plane_closed_y_m": [
+      0.0,
+      0.0
+    ],
+    "inner_contact_plane_open_y_m": [
+      -0.05,
+      0.05
+    ],
+    "model_maximum_inner_gap_m": 0.1,
+    "evidence": "Official finger STL transformed by official joint origins, axes and limits. Model geometry only; no real-device measurement."
+  }
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- One shared definition for each CAD link: visual, collision, and inertia. -->
+  <xacro:macro name="cad_link" params="name prefix data mesh_dir color">
+    <link name="${prefix}${name}">
+      <inertial>
+        <origin xyz="${data['com']}"/>
+        <mass value="${data['mass']}"/>
+        <inertia ixx="${data['inertia']['ixx']}" ixy="${data['inertia']['ixy']}" ixz="${data['inertia']['ixz']}" iyy="${data['inertia']['iyy']}" iyz="${data['inertia']['iyz']}" izz="${data['inertia']['izz']}"/>
+      </inertial>
+      <visual><geometry><mesh filename="${mesh_dir}/${name}.STL"/></geometry><material name="${prefix}finish"><color rgba="${color}"/></material></visual>
+      <collision><geometry><mesh filename="${mesh_dir}/${name}.STL"/></geometry></collision>
+    </link>
+    <gazebo reference="${prefix}${name}"><selfCollide>true</selfCollide><mu1>0.8</mu1><mu2>0.8</mu2><xacro:if value="${name == 'base_link'}"><collision><surface><contact><collide_bitmask>2</collide_bitmask></contact></surface></collision></xacro:if></gazebo>
+  </xacro:macro>
+  <xacro:macro name="cad_joint" params="name prefix data">
+    <joint name="${prefix}${name}" type="${data['type']}">
+      <parent link="${prefix}${data['parent']}"/><child link="${prefix}${data['child']}"/>
+      <origin xyz="${data['xyz']}" rpy="${data['rpy']}"/><axis xyz="${data['axis']}"/>
+      <limit lower="${data['lower']}" upper="${data['upper']}" effort="${data['effort']}" velocity="${data['velocity']}"/>
+      <dynamics damping="0.015" friction="0.0"/>
+    </joint>
+    <!-- Simulation PID position servos. Gains and effort limits require real-hardware calibration. -->
+    <!-- Fingers are coupled by the command node. Both joints stay physical in Gazebo. -->
+    <gazebo><plugin filename="gz-sim-joint-position-controller-system" name="gz::sim::systems::JointPositionController">
+      <joint_name>${prefix}${name}</joint_name><topic>/d1t/${prefix}${name}/cmd_pos</topic>
+      <p_gain>${data['p']}</p_gain><i_gain>${data['i']}</i_gain><d_gain>${data['d']}</d_gain>
+      <i_max>1</i_max><i_min>-1</i_min><cmd_max>${data['effort']}</cmd_max><cmd_min>${-data['effort']}</cmd_min>
+    </plugin></gazebo>
+  </xacro:macro>
+  <xacro:macro name="d1_arm" params="prefix xyz mesh_dir model color">
+    <joint name="${prefix}mount" type="fixed"><parent link="world"/><child link="${prefix}base_link"/><origin xyz="${xyz}"/></joint>
+    <xacro:cad_link name="base_link" prefix="${prefix}" data="${model['links']['base_link']}" mesh_dir="${mesh_dir}" color="${color}"/>
+    <xacro:cad_link name="Link1" prefix="${prefix}" data="${model['links']['Link1']}" mesh_dir="${mesh_dir}" color="${color}"/>
+    <xacro:cad_link name="Link2" prefix="${prefix}" data="${model['links']['Link2']}" mesh_dir="${mesh_dir}" color="${color}"/>
+    <xacro:cad_link name="Link3" prefix="${prefix}" data="${model['links']['Link3']}" mesh_dir="${mesh_dir}" color="${color}"/>
+    <xacro:cad_link name="Link4" prefix="${prefix}" data="${model['links']['Link4']}" mesh_dir="${mesh_dir}" color="${color}"/>
+    <xacro:cad_link name="Link5" prefix="${prefix}" data="${model['links']['Link5']}" mesh_dir="${mesh_dir}" color="${color}"/>
+    <xacro:cad_link name="Link6" prefix="${prefix}" data="${model['links']['Link6']}" mesh_dir="${mesh_dir}" color="${color}"/>
+    <xacro:cad_link name="Link7_1" prefix="${prefix}" data="${model['links']['Link7_1']}" mesh_dir="${mesh_dir}" color="${color}"/>
+    <xacro:cad_link name="Link7_2" prefix="${prefix}" data="${model['links']['Link7_2']}" mesh_dir="${mesh_dir}" color="${color}"/>
+    <xacro:cad_joint name="Joint1" prefix="${prefix}" data="${model['joints']['Joint1']}"/>
+    <xacro:cad_joint name="Joint2" prefix="${prefix}" data="${model['joints']['Joint2']}"/>
+    <xacro:cad_joint name="Joint3" prefix="${prefix}" data="${model['joints']['Joint3']}"/>
+    <xacro:cad_joint name="Joint4" prefix="${prefix}" data="${model['joints']['Joint4']}"/>
+    <xacro:cad_joint name="Joint5" prefix="${prefix}" data="${model['joints']['Joint5']}"/>
+    <xacro:cad_joint name="Joint6" prefix="${prefix}" data="${model['joints']['Joint6']}"/>
+    <xacro:cad_joint name="Joint7_1" prefix="${prefix}" data="${model['joints']['Joint7_1']}"/>
+    <xacro:cad_joint name="Joint7_2" prefix="${prefix}" data="${model['joints']['Joint7_2']}"/>
+  </xacro:macro>
+</robot>

@@ -1,0 +1,70 @@
+[
+  {
+    "requirement": "Two independent DO inputs",
+    "configuration": {
+      "C_GPIO_WIDTH": 2,
+      "C_IS_DUAL": 0
+    },
+    "evidence": "address_map.json; create_design.tcl readback; io_readback.txt",
+    "source": "AMD PG144 User Parameters",
+    "status": "APPLIED_OFFLINE"
+  },
+  {
+    "requirement": "Never drive either sensor DO pin",
+    "configuration": {
+      "C_ALL_INPUTS": 1,
+      "C_ALL_OUTPUTS": 0
+    },
+    "evidence": "GPIO input interface direction/width readback plus implemented I/O IN",
+    "source": "AMD PG144 User Parameters",
+    "status": "APPLIED_OFFLINE"
+  },
+  {
+    "requirement": "Asynchronous digital input synchronization",
+    "configuration": "fsr_sync2 meta + synced, ASYNC_REG TRUE on 4 flops",
+    "evidence": "sim_1/simulate.log; cdc_flops.txt; cdc.rpt; exceptions.rpt",
+    "status": "APPLIED_OFFLINE"
+  },
+  {
+    "requirement": "User-confirmed wiring pins",
+    "configuration": {
+      "DO1": "AB14",
+      "DO2": "Y14",
+      "IOSTANDARD": "LVCMOS33"
+    },
+    "evidence": "io_readback.txt; boards/SOURCES.json and XML",
+    "status": "APPLIED_OFFLINE"
+  },
+  {
+    "requirement": "External clock and fan control",
+    "configuration": {
+      "clock": "C3 LVCMOS18 25MHz",
+      "fan": "A12 LVCMOS33 constant low"
+    },
+    "evidence": "io_readback.txt; fsr_top.sv; timing_summary.rpt",
+    "status": "APPLIED_OFFLINE"
+  },
+  {
+    "requirement": "CPU access via PS HPM0 and Linux AXI GPIO",
+    "configuration": {
+      "PSU__USE__M_AXI_GP0": 1,
+      "PSU__MAXIGP0__DATA_WIDTH": 128,
+      "address": "0xA0000000",
+      "range": 65536
+    },
+    "evidence": "address_map.json; generated XSA; matching DTS AFIFS id14",
+    "status": "BUILT_NOT_HARDWARE_TESTED"
+  },
+  {
+    "requirement": "Analog pressure in calibrated physical units",
+    "configuration": null,
+    "status": "UNAVAILABLE_FROM_FOUR_WIRE_DO",
+    "reason": "Digital comparator outputs contain threshold state only; ADC/AO path and calibration are absent."
+  },
+  {
+    "requirement": "Hardware load and real pressure response verification",
+    "configuration": null,
+    "status": "NOT_PERFORMED",
+    "reason": "No board administrator authentication; no FPGA load performed."
+  }
+]

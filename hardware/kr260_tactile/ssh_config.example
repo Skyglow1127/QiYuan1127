@@ -1,0 +1,7 @@
+# Copy to ssh_config and set the address of your own board before acquisition.
+Host pressure-kr260
+    HostName YOUR_KR260_ADDRESS
+    User ubuntu
+    Port 22
+    BatchMode yes
+    # IdentityFile ~/.ssh/YOUR_BOARD_KEY

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<title>D1 日志回放预览</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;color:#183149;background:#eef3f7;font-synthesis:none;--muted:#576e82;--line:#d2dee8}*{box-sizing:border-box}body{margin:0}main{max-width:1230px;margin:auto;padding:24px 26px 30px}h1{font-size:25px;letter-spacing:-.5px;margin:0 0 9px}.subtitle{font-size:12px;color:var(--muted);line-height:1.8;overflow-wrap:anywhere;margin:0}.notice{border:1px solid #d7b972;background:#fff5dc;color:#694713;padding:13px 16px;border-radius:10px;font-size:13px;line-height:1.8;margin:18px 0}.notice strong{font-size:15px;display:block}.notice p{margin:2px 0 0}.error{border:1px solid #e0b0a9;background:#fff0ed;color:#9d3025;padding:14px 17px;border-radius:10px;line-height:1.8;font-size:13px;margin:16px 0}.loading{font-size:14px;color:var(--muted);padding:18px 0}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;margin:17px 0}.card{background:#fff;border:1px solid var(--line);border-radius:11px}.stat{padding:14px 16px}.stat label{display:block;font-size:11px;color:var(--muted);margin-bottom:8px}.stat b{font-size:23px;font-variant-numeric:tabular-nums}.stat small{font-size:11px;font-weight:400;color:var(--muted);margin-left:5px}.player{padding:16px 18px;margin-bottom:18px}.controls{display:flex;align-items:center;justify-content:space-between;gap:12px}.buttons{display:flex;align-items:center;gap:8px;flex-wrap:wrap}button,select,input{font:inherit}button{cursor:pointer}button:disabled{opacity:.4;cursor:not-allowed}button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #e6a535;outline-offset:3px}button{border:1px solid #adc2d6;border-radius:7px;background:#fff;color:#28547a;padding:10px 13px;font-size:13px;font-weight:600;min-height:40px}button.primary{background:#1b5488;border-color:#1b5488;color:#fff;min-width:102px}select{border:1px solid #adc2d6;border-radius:7px;background:#fff;color:#28547a;padding:9px 10px;font-size:12px;min-height:40px}.status{font-size:12px;font-weight:600;color:#50697f;white-space:nowrap}.status.playing{color:#186d4c}.timeline{margin-top:15px}.time-labels{display:flex;justify-content:space-between;align-items:baseline;gap:14px;font-size:12px;color:var(--muted);margin-bottom:5px}.current-time{font-size:19px;font-weight:700;color:#1a476f;font-variant-numeric:tabular-nums}.current-time small{font-size:11px;font-weight:400;color:var(--muted);margin-left:5px}input[type=range]{width:100%;display:block;margin:0;height:26px;accent-color:#226cb3;cursor:pointer}.help{font-size:11px;color:var(--muted);line-height:1.8;margin:7px 0 0}.section-head{display:flex;justify-content:space-between;gap:14px;align-items:baseline;margin:20px 1px 11px}.section-head h2{font-size:16px;margin:0}.section-head span{font-size:11px;color:var(--muted)}.charts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.chart{padding:13px 12px 8px}.chart-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:0 3px}.chart-head h3{font-size:13px;margin:0}.reading{font-size:17px;color:#1b66ad;font-weight:650;font-variant-numeric:tabular-nums}.reading small{font-size:10px;color:var(--muted);font-weight:400;margin-left:3px}.canvas-wrap{height:168px;margin-top:8px}canvas{display:block;width:100%;height:100%}.gripper{grid-column:1/-1;background:#fffcf6;border-color:#ddc99e}.gripper .reading{color:#955c0b}.gripper .canvas-wrap{height:155px}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;font-size:12px;font-variant-numeric:tabular-nums}th,td{padding:11px 16px;text-align:right;white-space:nowrap;border-bottom:1px solid #e4ebf1}th{font-size:11px;font-weight:500;color:var(--muted);background:#f8fafc}th:first-child,td:first-child{text-align:left}tbody tr:last-child td{border-bottom:0}td.current{font-weight:700;color:#1b66ad}.raw-row{background:#fffcf6}.footer{font-size:12px;line-height:1.8;color:var(--muted);margin:15px 1px 0}.partial{padding:11px 14px;border:1px solid #c3d5e8;background:#eaf2fa;border-radius:8px;font-size:12px;line-height:1.8;color:#315979;margin:13px 0}[hidden]{display:none!important}
+@media(max-width:950px){.charts{grid-template-columns:repeat(2,minmax(0,1fr))}.stat{padding:12px 14px}.stat b{font-size:21px}}
+@media(max-width:620px){main{padding:17px 13px 25px}h1{font-size:22px}.stats{grid-template-columns:repeat(2,1fr);gap:9px}.controls{flex-direction:column;align-items:flex-start;gap:9px}.player{padding:14px}.charts{grid-template-columns:1fr}.canvas-wrap{height:184px}.gripper .canvas-wrap{height:176px}.section-head{flex-direction:column;gap:5px}.time-labels{align-items:flex-start}.current-time{font-size:17px}.time-labels>span:last-child{font-size:10px}th,td{padding:10px 13px}.notice strong{font-size:14px}}
+</style>
+</head>
+<body>
+<main>
+<h1>D1 日志回放预览</h1><p id="sessionName" class="subtitle">正在读取会话编号…</p>
+<div class="notice"><strong>日志回放预览，非机械臂实物执行</strong><p>播放和拖动只改变页面中的游标，不控制机械臂。此页没有运动、录制或实物复现接口。</p></div>
+<div id="loading" class="loading" role="status">正在读取已保存的关节日志…</div><div id="error" class="error" role="alert" hidden></div>
+<section id="content" hidden>
+<div class="stats"><div class="card stat"><label>演示段时长</label><b><span id="duration">—</span><small>秒</small></b></div><div class="card stat"><label>本次载入采样</label><b><span id="loadedCount">—</span><small>帧</small></b></div><div class="card stat"><label>当前位置</label><b><span id="index">1</span><small id="countSuffix">帧</small></b></div><div class="card stat"><label>位置处理</label><b style="font-size:18px">无插值<small>原始采样</small></b></div></div>
+<div id="partial" class="partial" hidden></div>
+<div class="card player"><div class="controls"><div class="buttons"><button id="play" class="primary">播放日志</button><button id="first">首帧</button><button id="last">尾帧</button><select id="speed" aria-label="播放速度"><option value="1">1× 原始时序</option><option value="0.25">0.25× 慢放</option></select></div><span id="playStatus" class="status" role="status">已暂停 · 首帧</span></div><div class="timeline"><div class="time-labels"><span class="current-time"><span id="time">—</span> s<small id="frameLabel"></small></span><span id="lastTime"></span></div><input id="slider" type="range" value="0" min="0" max="0" step="1" aria-label="选择原始采样帧"><p class="help">滑块逐帧选择，拖动即暂停。播放按服务返回的原始时间间隔推进，不补造中间位置。</p></div></div>
+<div class="section-head"><h2>七轴位置随时间变化</h2><span>横轴保留日志中的时间（秒）；各图纵轴独立缩放。</span></div><div id="charts" class="charts"></div>
+<div class="section-head"><h2>首帧、当前帧与尾帧</h2><span>差值为尾帧减首帧，不代表总运动距离。</span></div><div class="card table-wrap"><table><thead><tr><th>关节 / 单位</th><th>首帧</th><th>当前帧</th><th>尾帧</th><th>起终点差值</th></tr></thead><tbody id="jointTable"></tbody></table></div>
+<p class="footer">J0–J5 是 SDK 关节角度，单位为度（°）。J6 是夹爪 SDK 原始位置值（raw），不是角度、毫米或夹持力。此预览不证明抓取成功或轨迹可安全执行；实物复现需要另行审核和明确批准。</p>
+</section>
+</main>
+<script>
+(() => {
+'use strict';
+const $=id=>document.getElementById(id),finite=x=>typeof x==='number'&&Number.isFinite(x);
+const fmt=(n,d=2)=>finite(n)?n.toLocaleString('zh-CN',{minimumFractionDigits:d,maximumFractionDigits:d}):'—';
+const sessionId=new URLSearchParams(window.location.search).get('session_id');
+const state={samples:[],index:0,playing:false,speed:1,anchorTime:0,anchorNow:0,raf:null,xmin:0,xmax:1};
+const charts=[],cells=[];let observer=null;
+function fail(message){$('loading').hidden=true;$('content').hidden=true;$('error').hidden=false;$('error').textContent=message;}
+function status(){
+ $('play').textContent=state.playing?'暂停日志':'播放日志';$('playStatus').classList.toggle('playing',state.playing);
+ $('playStatus').textContent=state.playing?`仅在页面播放 · ${state.speed===1?'1×':'0.25×'}`:state.index===0?'已暂停 · 首帧':state.index===state.samples.length-1?'已暂停 · 尾帧':'已暂停';
+}
+function pause(){state.playing=false;if(state.raf!==null)cancelAnimationFrame(state.raf);state.raf=null;status();}
+function buildCharts(){
+ for(let joint=0;joint<7;joint++){
+  const card=document.createElement('section');card.className='card chart'+(joint===6?' gripper':'');const header=document.createElement('div');header.className='chart-head';const title=document.createElement('h3');title.textContent=joint===6?'J6 · 夹爪原始位置':`J${joint} · 关节位置`;const reading=document.createElement('div');reading.className='reading';const number=document.createElement('span'),unit=document.createElement('small');unit.textContent=joint===6?'raw':'°';reading.append(number,unit);header.append(title,reading);const wrap=document.createElement('div');wrap.className='canvas-wrap';const canvas=document.createElement('canvas');canvas.setAttribute('role','img');canvas.setAttribute('aria-label',`J${joint} 位置随时间曲线，单位${joint===6?'raw':'度'}`);wrap.append(canvas);card.append(header,wrap);$('charts').append(card);charts.push({joint,number,wrap,canvas,background:document.createElement('canvas'),color:joint===6?'#9d6510':'#1d68b2',layout:null});
+  const row=document.createElement('tr');if(joint===6)row.className='raw-row';const label=document.createElement('td'),start=document.createElement('td'),current=document.createElement('td'),end=document.createElement('td'),delta=document.createElement('td');label.textContent=joint===6?'J6 / raw':`J${joint} / °`;const a=state.samples[0].q[joint],b=state.samples.at(-1).q[joint];start.textContent=fmt(a);end.textContent=fmt(b);current.className='current';delta.textContent=finite(a)&&finite(b)?`${b-a>0?'+':''}${fmt(b-a)}`:'—';row.append(label,start,current,end,delta);$('jointTable').append(row);cells.push(current);
+ }
+}
+function background(chart){
+ const rect=chart.canvas.getBoundingClientRect(),w=Math.max(1,rect.width),h=Math.max(1,rect.height),ratio=Math.min(window.devicePixelRatio||1,3),m={l:58,r:15,t:14,b:27},pw=w-m.l-m.r,ph=h-m.t-m.b;
+ for(const canvas of [chart.canvas,chart.background]){canvas.width=Math.round(w*ratio);canvas.height=Math.round(h*ratio);}
+ const c=chart.background.getContext('2d');c.setTransform(ratio,0,0,ratio,0,0);c.clearRect(0,0,w,h);c.font='10px system-ui,sans-serif';
+ const values=state.samples.map(s=>s.q[chart.joint]).filter(finite);
+ if(!values.length){c.fillStyle='#667b8e';c.textAlign='center';c.fillText('此关节暂无有效位置数据',w/2,h/2);chart.layout={ratio,empty:true};return;}
+ let lo=Math.min(...values),hi=Math.max(...values);const padding=Math.max((hi-lo)*.12,.1);lo-=padding;hi+=padding;
+ const x=t=>m.l+(t-state.xmin)/(state.xmax-state.xmin)*pw,y=q=>m.t+(hi-q)/(hi-lo)*ph;
+ for(let i=0;i<=4;i++){const yy=m.t+ph*i/4;c.strokeStyle='#e2eaf1';c.lineWidth=1;c.beginPath();c.moveTo(m.l,yy);c.lineTo(w-m.r,yy);c.stroke();c.fillStyle='#5a6f83';c.textAlign='right';c.fillText(fmt(hi-(hi-lo)*i/4,1),m.l-7,yy+3);c.textAlign='center';c.fillText(fmt(state.xmin+(state.xmax-state.xmin)*i/4,1),m.l+pw*i/4,h-8);}
+ c.save();c.beginPath();c.rect(m.l,m.t,pw,ph);c.clip();c.strokeStyle=chart.color;c.lineWidth=1.65;c.lineJoin='round';c.beginPath();let previous=null;
+ for(const s of state.samples){const q=s.q[chart.joint];if(!finite(q)){previous=null;continue;}if(!previous||s.gap)c.moveTo(x(s.t),y(q));else c.lineTo(x(s.t),y(q));previous=s;}c.stroke();c.restore();chart.layout={ratio,m,ph,x,y,empty:false};
+}
+function cursor(chart){
+ if(!chart.layout)return;const c=chart.canvas.getContext('2d');c.setTransform(1,0,0,1,0,0);c.clearRect(0,0,chart.canvas.width,chart.canvas.height);c.drawImage(chart.background,0,0);if(chart.layout.empty)return;
+ const {ratio,m,ph,x,y}=chart.layout,sample=state.samples[state.index],q=sample.q[chart.joint];c.setTransform(ratio,0,0,ratio,0,0);c.strokeStyle='#2b435b';c.lineWidth=1.1;c.setLineDash([3,3]);c.beginPath();c.moveTo(x(sample.t),m.t);c.lineTo(x(sample.t),m.t+ph);c.stroke();c.setLineDash([]);if(finite(q)){c.fillStyle=chart.color;c.strokeStyle='#fff';c.lineWidth=1.5;c.beginPath();c.arc(x(sample.t),y(q),3.8,0,Math.PI*2);c.fill();c.stroke();}
+}
+function update(index){
+ state.index=Math.max(0,Math.min(state.samples.length-1,Math.round(index)));const sample=state.samples[state.index];$('slider').value=String(state.index);$('slider').setAttribute('aria-valuetext',`第 ${state.index+1} 帧，共 ${state.samples.length} 帧，时间 ${fmt(sample.t,3)} 秒`);$('time').textContent=fmt(sample.t,3);$('index').textContent=String(state.index+1);$('frameLabel').textContent=`第 ${state.index+1} 帧`;for(let i=0;i<7;i++){charts[i].number.textContent=fmt(sample.q[i]);cells[i].textContent=fmt(sample.q[i]);cursor(charts[i]);}$('first').disabled=state.index===0;$('last').disabled=state.index===state.samples.length-1;
+}
+function seek(index){pause();update(index);status();}
+function indexAt(time){let lo=0,hi=state.samples.length-1;while(lo<hi){const mid=Math.ceil((lo+hi)/2);if(state.samples[mid].t<=time)lo=mid;else hi=mid-1;}return lo;}
+function tick(now){if(!state.playing)return;const time=state.anchorTime+(now-state.anchorNow)/1000*state.speed,next=indexAt(time);if(next!==state.index)update(next);if(time>=state.samples.at(-1).t){pause();return;}state.raf=requestAnimationFrame(tick);}
+function play(){if(state.samples.length<2)return;if(state.index===state.samples.length-1)update(0);state.anchorTime=state.samples[state.index].t;state.anchorNow=performance.now();state.playing=true;status();state.raf=requestAnimationFrame(tick);}
+function initialize(result){
+ const source=Array.isArray(result?.tail)?result.tail:[],segment=result?.segment&&typeof result.segment==='object'?result.segment:{};
+ const samples=source.filter(r=>r&&finite(r.t)).map(r=>({t:r.t,q:Array.from({length:7},(_,i)=>Array.isArray(r.q)&&finite(r.q[i])?r.q[i]:null),gap:r.gap_before===true||r.gap===true}));
+ if(!samples.length)throw new Error('这个会话还没有可预览的有效时间采样。请先完成记录并保存。');
+ if(samples.some((r,i)=>i>0&&r.t<=samples[i-1].t))throw new Error('日志时间戳不是严格递增，无法按原时序播放。请先检查记录数据。');
+ state.samples=samples;state.xmin=Math.min(0,samples[0].t);state.xmax=Math.max(samples.at(-1).t,finite(segment.duration_s)?segment.duration_s:samples.at(-1).t);if(state.xmax<=state.xmin)state.xmax=state.xmin+1;
+ $('duration').textContent=fmt(segment.duration_s);$('loadedCount').textContent=String(samples.length);$('countSuffix').textContent=`/ ${samples.length} 帧`;$('lastTime').textContent=`首帧 ${fmt(samples[0].t,3)} s · 尾帧 ${fmt(samples.at(-1).t,3)} s`;$('slider').max=String(samples.length-1);
+ const notes=[];if(finite(segment.sample_count)&&segment.sample_count!==samples.length)notes.push(`演示段登记 ${segment.sample_count} 帧，本次服务返回并载入 ${samples.length} 帧；页面仅预览当前返回的数据，不把它视为完整轨迹。`);if(source.length!==samples.length)notes.push(`${source.length-samples.length} 条记录缺少有效时间戳，未参与预览。`);if(samples.some(s=>s.q.some(q=>q===null)))notes.push('部分关节位置缺失，读数用“—”表示，曲线在缺失处断开。');if(notes.length){$('partial').hidden=false;$('partial').textContent=notes.join(' ');}
+ $('loading').hidden=true;$('content').hidden=false;buildCharts();for(const chart of charts)background(chart);update(0);status();$('play').disabled=samples.length<2;
+ observer=new ResizeObserver(()=>{for(const chart of charts){background(chart);cursor(chart);}});charts.forEach(chart=>observer.observe(chart.wrap));
+ $('play').addEventListener('click',()=>state.playing?pause():play());$('first').addEventListener('click',()=>seek(0));$('last').addEventListener('click',()=>seek(samples.length-1));$('slider').addEventListener('input',event=>seek(Number(event.target.value)));$('speed').addEventListener('change',event=>{const wasPlaying=state.playing;pause();state.speed=Number(event.target.value);if(wasPlaying)play();else status();});document.addEventListener('visibilitychange',()=>{if(document.hidden)pause();});
+}
+async function load(){
+ if(!sessionId||!sessionId.trim()){fail('缺少会话编号。请从 D1 示教工作台选择记录，再打开“纯日志预览”。');$('sessionName').textContent='未指定会话';return;}
+ $('sessionName').textContent=`会话：${sessionId}`;
+ const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);
+ try{
+  // This is the only service request: a read of the selected saved session.
+  const response=await fetch(`/api/session?id=${encodeURIComponent(sessionId)}`,{method:'GET',credentials:'same-origin',cache:'no-store',signal:controller.signal});
+  let result;try{result=await response.json();}catch(_){throw new Error(`服务未返回有效日志数据（HTTP ${response.status}）。`);}
+  if(!response.ok||result?.ok===false)throw new Error(typeof result?.error==='string'?result.error:`日志读取失败（HTTP ${response.status}）。`);
+  initialize(result);
+ }catch(error){fail(error.name==='AbortError'?'读取日志超时。请确认本地服务正在运行，再刷新页面。':`无法打开日志预览：${error.message}`);}
+ finally{clearTimeout(timer);}
+}
+load();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="d1t">
+  <xacro:arg name="root" default=".."/>
+  <xacro:arg name="mesh_dir" default="package://d1t_sim/meshes"/>
+  <xacro:include filename="d1_macros.xacro"/>
+  <xacro:include filename="../generated/wrist_camera.xacro"/>
+  <xacro:property name="model" value="${xacro.load_yaml('$(arg root)/config/model.yaml')}"/>
+  <link name="world"/>
+  <xacro:d1_arm prefix="arm_" xyz="0 0 0.02" mesh_dir="$(arg mesh_dir)" model="${model}" color="0.12 0.14 0.16 1"/>
+  <xacro:photo_wrist_camera/>
+  <gazebo><plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher"><topic>/d1t/joint_states</topic></plugin></gazebo>
+</robot>

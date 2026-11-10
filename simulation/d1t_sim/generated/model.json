@@ -1,0 +1,336 @@
+{
+  "links": [
+    {
+      "name": "world",
+      "mesh": null
+    },
+    {
+      "name": "arm_base_link",
+      "mesh": "/meshes/base_link.STL"
+    },
+    {
+      "name": "arm_Link1",
+      "mesh": "/meshes/Link1.STL"
+    },
+    {
+      "name": "arm_Link2",
+      "mesh": "/meshes/Link2.STL"
+    },
+    {
+      "name": "arm_Link3",
+      "mesh": "/meshes/Link3.STL"
+    },
+    {
+      "name": "arm_Link4",
+      "mesh": "/meshes/Link4.STL"
+    },
+    {
+      "name": "arm_Link5",
+      "mesh": "/meshes/Link5.STL"
+    },
+    {
+      "name": "arm_Link6",
+      "mesh": "/meshes/Link6.STL"
+    },
+    {
+      "name": "arm_Link7_1",
+      "mesh": "/meshes/Link7_1.STL"
+    },
+    {
+      "name": "arm_Link7_2",
+      "mesh": "/meshes/Link7_2.STL"
+    },
+    {
+      "name": "arm_wrist_camera_link",
+      "mesh": null
+    },
+    {
+      "name": "arm_wrist_camera_optical_link",
+      "mesh": null
+    }
+  ],
+  "joints": [
+    {
+      "name": "arm_mount",
+      "type": "fixed",
+      "parent": "world",
+      "child": "arm_base_link",
+      "xyz": [
+        0.0,
+        0.0,
+        0.02
+      ],
+      "rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limits": null
+    },
+    {
+      "name": "arm_Joint1",
+      "type": "revolute",
+      "parent": "arm_base_link",
+      "child": "arm_Link1",
+      "xyz": [
+        0.0,
+        0.0,
+        0.0533
+      ],
+      "rpy": [
+        0.0,
+        0.0,
+        -3.1416
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limits": {
+        "effort": 3.3,
+        "lower": -2.35,
+        "upper": 2.35,
+        "velocity": 0.6
+      }
+    },
+    {
+      "name": "arm_Joint2",
+      "type": "revolute",
+      "parent": "arm_Link1",
+      "child": "arm_Link2",
+      "xyz": [
+        0.0,
+        0.028,
+        0.0563
+      ],
+      "rpy": [
+        1.5708,
+        0.0,
+        -3.1416
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "limits": {
+        "effort": 3.3,
+        "lower": -1.57,
+        "upper": 1.57,
+        "velocity": 0.6
+      }
+    },
+    {
+      "name": "arm_Joint3",
+      "type": "revolute",
+      "parent": "arm_Link2",
+      "child": "arm_Link3",
+      "xyz": [
+        0.0,
+        0.2693,
+        0.0009
+      ],
+      "rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "limits": {
+        "effort": 1.7,
+        "lower": -1.57,
+        "upper": 1.57,
+        "velocity": 0.6
+      }
+    },
+    {
+      "name": "arm_Joint4",
+      "type": "revolute",
+      "parent": "arm_Link3",
+      "child": "arm_Link4",
+      "xyz": [
+        0.0577,
+        0.042,
+        -0.0275
+      ],
+      "rpy": [
+        -1.5708,
+        0.0,
+        -1.5708
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limits": {
+        "effort": 1.7,
+        "lower": -2.35,
+        "upper": 2.35,
+        "velocity": 0.6
+      }
+    },
+    {
+      "name": "arm_Joint5",
+      "type": "revolute",
+      "parent": "arm_Link4",
+      "child": "arm_Link5",
+      "xyz": [
+        -0.0001,
+        -0.0237,
+        0.14018
+      ],
+      "rpy": [
+        1.5708,
+        -1.5708,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "limits": {
+        "effort": 1.7,
+        "lower": -1.57,
+        "upper": 1.57,
+        "velocity": 0.6
+      }
+    },
+    {
+      "name": "arm_Joint6",
+      "type": "revolute",
+      "parent": "arm_Link5",
+      "child": "arm_Link6",
+      "xyz": [
+        0.0825,
+        -0.0010782,
+        -0.023822
+      ],
+      "rpy": [
+        -1.5708,
+        0.0,
+        -1.5708
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "limits": {
+        "effort": 1.7,
+        "lower": -2.35,
+        "upper": 2.35,
+        "velocity": 0.6
+      }
+    },
+    {
+      "name": "arm_Joint7_1",
+      "type": "prismatic",
+      "parent": "arm_Link6",
+      "child": "arm_Link7_1",
+      "xyz": [
+        -0.0056012,
+        -0.029636,
+        0.0706
+      ],
+      "rpy": [
+        -1.5714,
+        -1.5708,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "limits": {
+        "effort": 20.0,
+        "lower": 0.0,
+        "upper": 0.03,
+        "velocity": 0.03
+      }
+    },
+    {
+      "name": "arm_Joint7_2",
+      "type": "prismatic",
+      "parent": "arm_Link6",
+      "child": "arm_Link7_2",
+      "xyz": [
+        -0.0056388,
+        0.02964,
+        0.0706
+      ],
+      "rpy": [
+        1.5702,
+        -1.5708,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limits": {
+        "effort": 20.0,
+        "lower": -0.03,
+        "upper": 0.0,
+        "velocity": 0.03
+      }
+    },
+    {
+      "name": "arm_wrist_camera_mount",
+      "type": "fixed",
+      "parent": "arm_Link6",
+      "child": "arm_wrist_camera_link",
+      "xyz": [
+        -0.055,
+        0.0,
+        0.02
+      ],
+      "rpy": [
+        0.0,
+        0.35,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limits": null
+    },
+    {
+      "name": "arm_wrist_camera_optical_joint",
+      "type": "fixed",
+      "parent": "arm_wrist_camera_link",
+      "child": "arm_wrist_camera_optical_link",
+      "xyz": [
+        -0.01,
+        0.0,
+        0.025
+      ],
+      "rpy": [
+        0.0,
+        -1.5707963267948966,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limits": null
+    }
+  ]
+}

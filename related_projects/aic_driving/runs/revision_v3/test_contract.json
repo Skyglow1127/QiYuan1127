@@ -1,0 +1,74 @@
+{
+  "main": {
+    "seeds": 10,
+    "start": 810000,
+    "episodes": 360
+  },
+  "stress": {
+    "seeds": 5,
+    "start": 910000,
+    "episodes": 240
+  },
+  "methods": [
+    "ca_adaptive",
+    "ml_adaptive",
+    "ca_recovery",
+    "ml_recovery"
+  ],
+  "acceptance": {
+    "collision_no_increase": true,
+    "progress_loss_max_fraction": 0.01,
+    "jerk_reduction_min_fraction": 0.3
+  },
+  "smooth": {
+    "acceleration_spacing": 0.25,
+    "preferred_delta_acceleration": 0.4,
+    "safety_overrides_comfort": true,
+    "negative_acceleration_recovery_step": 2.0
+  },
+  "selection": "preset reviewed on new holdout-profile development seeds610000-610001; no parameter search after heldout tests",
+  "model": "release_v1/model/model.pt, unchanged",
+  "provenance": {
+    "source_sha256": "d40992d5c9110c5e1a1c40b1443a2de5aaf41bad01716ca5a93f9f44490e8941",
+    "files": {
+      "src/aic_drive/__init__.py": "220b1782187a5e8795584851316c2f71df4a479df19086bdffbc178cbc68661e",
+      "src/aic_drive/control.py": "7f50c2ffc1d1de9da47ba122789643003a4dd1d84b0ad8e5e1ac2fbb9eb36313",
+      "src/aic_drive/learning.py": "8eaa420681159db779a804b0e90a8910e6a190cb038303bf651905a4d5609750",
+      "src/aic_drive/prediction.py": "87e59c7b1f6b04f51613ee558dabaa47d0952d2e871a5c9b8118c6c5e7384429",
+      "src/aic_drive/runner.py": "0108d551d08d6f84cc77216e85103af596544030ebf135d443aa14f2a70aa76d",
+      "src/aic_drive/scenarios.py": "76cbdc444581681049c70c063f7cc6e72eb2fd435048c0cef7d1313f13809b52",
+      "src/aic_drive/sensors.py": "59ccf1bcce36ebca55f26908a500c764849c615e6e9117517623a4ccbd8b1963",
+      "src/aic_drive/types.py": "9b34ca023f5392c10e0897ed0736b1ffb940a46eca6fca1074b86eea1fd604b9",
+      "src/aic_drive/visualization.py": "f1a3d30d65f60063f70dfa6a19ac0de0a0d35b462841070cc3ba39439aa8c8a1",
+      "scripts/calibrate.py": "a0d4a4525522d379f919253d9b7ea690036ea9038a3af50296175a1ce7a56cc9",
+      "scripts/collect_data.py": "ab1e36486a18225d3b7298c58c58390ab07f21c4157b863b2018f535d830bc12",
+      "scripts/compare_methods.py": "56531b3ab16381a8ff4b1bda0497547e8e103e147f2e16e674908072481ae20d",
+      "scripts/evaluate.py": "0ac328edf6ac7c7161ac556b96ea56cca3f32788e95d9f96dc4d00e6ac2445cd",
+      "scripts/make_report.py": "1cd8e15adb19f6017774e40ea8320c1d4af13f9db938c211cdecce7bff139267",
+      "scripts/prediction_report.py": "5a6445eb18503ce1d5c69146043d3836cfe856136939cb056340b492530bd19d",
+      "scripts/reproduce.py": "8804e6676f02e52605cef069dc44205c92658abdeb6cff6e469c4e6d7c1d8c7e",
+      "scripts/revision_report.py": "097eaa3c37f6ce58a1e7a16ebb6a020b39426a8afad1c37bd4f0b721adfac53f",
+      "scripts/run_demo.py": "2c333c5297ecdefea19e78fb3e09c829afef398bba327e70ff8ec98c42dede1b",
+      "scripts/run_revision_v2.py": "81897c6eaa34444a793f95a7314d46d0f2a1ec1cce7acdc875f63c793c2a2309",
+      "scripts/run_revision_v3.py": "e0c27a7151d4cbae83bdc392aeaee4d19775fd8dfa60511a740c925be456e727",
+      "scripts/train_predictor.py": "6c3fb0368b941a51cae760993be6d0d1eb159a51b3dd08813a02c313fa75d808",
+      "configs/release_contract.json": "310ea032041d3cc497b63a7af99dad4f86af180612aae4d6d524370547163c99",
+      "pyproject.toml": "40080871f348b4289fee0447a07e83c4f7c45310bf44b4584d7f158045054de3",
+      "requirements.lock": "b1c432bf076b1714c22a322c6c2256701edf4bba53b3d5adc7c63c8336608ffe",
+      "requirements-torch.lock": "65299ae51bcfa88acc5fa33429d7b431d75dd3dd295b10da70d17ca5186cea87"
+    },
+    "packages": {
+      "highway-env": "1.12.1",
+      "gymnasium": "1.4.0",
+      "numpy": "2.5.4",
+      "torch": "2.14.1+cpu",
+      "matplotlib": "3.11.2"
+    },
+    "python": "3.12.3",
+    "cpu_model": "AMD Ryzen AI 9 HX 370 w/ Radeon 890M",
+    "logical_cpu_count": 24,
+    "device": "cpu",
+    "platform": "Linux-6.14.0-27-generic-x86_64-with-glibc2.39",
+    "created_at": "2026-10-23T20:59:20.525088+08:00"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "checked_at": "2026-10-22T17:18:44.903049+08:00",
+  "result": "passed",
+  "mode": "subscriber-only observation; no robot command interface",
+  "observed_frame_increment": 43,
+  "sample_window_s": 4.774735004990362,
+  "max_age_s": 0.10594553500413895,
+  "max_status_age_s": 0.10060398001223803,
+  "last_state": {
+    "source": "hardware_readonly",
+    "connected": true,
+    "age": 0.021291512064635754,
+    "status_age": 0.05153261299710721,
+    "reader_alive": true,
+    "angles_deg": [
+      8.899999618530273,
+      -89.5999984741211,
+      84.30000305175781,
+      18.5,
+      17.100000381469727,
+      -16.100000381469727,
+      34.099998474121094
+    ],
+    "status": {
+      "power_status": 1,
+      "enable_status": 1,
+      "error_status": 0
+    },
+    "positions": {
+      "arm_Joint1": -0.1553342967695926,
+      "arm_Joint2": -1.5638149831553083,
+      "arm_Joint3": 1.4713126126944416,
+      "arm_Joint4": -0.32288591161895097,
+      "arm_Joint5": 0.29845130874893305,
+      "arm_Joint6": -0.2809980162289898
+    },
+    "mapping": {
+      "preview_only": true,
+      "description": "沿用2026-10-22局部经验映射，仅供姿态预览，不是已验证的电机命令映射。夹爪仅显示SDK原始值。",
+      "source": "/home/aup/D1/Control/logs/handeye_resume_20261022_145044/empirical_handeye_candidate.json",
+      "sha256": "a690886910d0410b7cd9ef2563fedef7619236abbd72b88943e817664cb7e1ae"
+    },
+    "limits_warning": [],
+    "frames": 257,
+    "invalid_frames": 0,
+    "uptime_s": 28.638717394089326,
+    "command_capable": false,
+    "max_age_s": 0.6,
+    "interface": "enp99s0"
+  },
+  "stop_restart_port_release": "passed",
+  "offline_tests_passed": 10
+}

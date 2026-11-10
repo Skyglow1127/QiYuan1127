@@ -1,0 +1,27 @@
+{
+  "gpu_full_ms": 1479.092921999836,
+  "hybrid_full_ms": 1607.6809559999674,
+  "full_slowdown_percent": 8.693708967674008,
+  "full_delta_ms": 128.5880340001313,
+  "gpu_standalone_vision_ms": 531.0039349997169,
+  "npu_ort_ms": 586.2513239999316,
+  "npu_vision_roundtrip_ms": 588.8624409999466,
+  "vision_delta_ms": 57.85850600022968,
+  "visible_bridge_overhead_ms": 2.6111170000149286,
+  "estimated_unexplained_delta_ms": 70.72952799990162,
+  "estimated_gpu_vision_fraction": 0.3590064742394702,
+  "ideal_zero_cost_vision_speedup": 1.5600781596249573,
+  "estimated_2x_vision_speedup": 1.21877385169639,
+  "gpu_remainder_estimate_ms": 948.0889870001192,
+  "hybrid_remainder_per_sample_ms": [
+    1018.5375730006854,
+    1047.1090750006624,
+    986.9105209991176
+  ],
+  "limitations": [
+    "GPU vision was measured separately, not instrumented inside each full GPU prediction. Subtracted remainders are estimates, not directly observed GPU stage timings.",
+    "Only 3 measured predictions per path, 2 warmups. Existing Vivado builds were active.",
+    "ORT session.run includes internal runtime copies and synchronization; not a pure NPU compute measurement.",
+    "TP and batch effects are confounded in old-versus-new full-model timings; no valid attribution of each individual performance penalty."
+  ]
+}

@@ -1,0 +1,36 @@
+/dts-v1/;
+/plugin/;
+&fpga_full {
+    #address-cells = <2>;
+    #size-cells = <2>;
+    firmware-name = "kr260-depth-gate.bit.bin";
+    resets = <&zynqmp_reset 116>;
+};
+&amba {
+    #address-cells = <2>;
+    #size-cells = <2>;
+    depth_gate_afi: depth-gate-afi {
+        compatible = "xlnx,afi-fpga";
+        config-afi = <0 0>, <1 0>, <2 0>, <3 0>, <4 0>, <5 0>, <6 0>, <7 0>, <8 0>, <9 0>, <10 0>, <11 0>, <12 0>, <13 0>, <14 0xa00>, <15 0>;
+    };
+    depth_gate_clock: depth-gate-clock {
+        compatible = "xlnx,fclk";
+        #clock-cells = <0>;
+        clocks = <&zynqmp_clk 71>;
+        assigned-clocks = <&zynqmp_clk 71>;
+        assigned-clock-rates = <100000000>;
+        clock-output-names = "depth_gate_clk";
+    };
+    depth_gate_control: depth-gate@a0000000 {
+        compatible = "generic-uio";
+        reg = <0 0xa0000000 0 0x10000>;
+        clocks = <&zynqmp_clk 71>;
+        clock-names = "ap_clk";
+    };
+    depth_gate_buffer: depth-gate-bram@a0010000 {
+        compatible = "generic-uio";
+        reg = <0 0xa0010000 0 0x10000>;
+        clocks = <&zynqmp_clk 71>;
+        clock-names = "s_axi_aclk";
+    };
+};

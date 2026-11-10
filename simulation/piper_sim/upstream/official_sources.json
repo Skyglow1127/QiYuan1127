@@ -1,0 +1,23 @@
+{
+  "retrieved_on": "2026-10-27",
+  "repository": "https://github.com/agilexrobotics/agx_arm_urdf",
+  "commit": "680fa925cd00db7e2628563d2edc5540963045de",
+  "commit_time": "2026-10-16T02:11:34+08:00",
+  "branch": "main",
+  "license": "MIT",
+  "license_file": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/prepared/LICENSE",
+  "variant": "standard Piper, not Piper H/L/X",
+  "official_model_urls": [
+    "https://github.com/agilexrobotics/agx_arm_urdf/blob/680fa925cd00db7e2628563d2edc5540963045de/piper/urdf/piper_description.urdf",
+    "https://github.com/agilexrobotics/agx_arm_urdf/blob/680fa925cd00db7e2628563d2edc5540963045de/piper/urdf/piper_with_gripper_description.xacro"
+  ],
+  "gazebo_reference": "https://github.com/agilexrobotics/piper_ros/blob/noetic/src/piper_sim/README.md",
+  "gazebo_reference_boundary": "Legacy ROS1/Gazebo Classic example confirms vendor simulation support, but is not a Gazebo Harmonic launch file; retain geometry/physics parameters and add Harmonic control systems separately.",
+  "local_knowledge_check": "Root INDEX.md, cases/INDEX.md, catalog/methods.json and catalog/cases.json were not found at the configured local knowledge-base paths; targeted available indexes contained no Piper match. No bulk paper reading was performed.",
+  "prepared_model": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/prepared/piper.urdf",
+  "prepared_sha256": "bb5e8c0ac27b7abc5c6d790856aaed90df7c64f39368f1fca93fe784142bc3ec",
+  "physical_validation": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/prepared/physical_validation.json",
+  "mesh_inventory": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/prepared/mesh_inventory.json",
+  "preservation": "All official physical-link mass, inertia, joint frames, axes, limits and visual/collision geometry retained. Massless virtual gripper controller link/joint and physical-finger mimic tags removed for explicit paired PID control.",
+  "recommendation": "Use prepared/piper.urdf with six revolute joints and two physical finger joints, isolated Gazebo partition/ROS domain/HTTP port, modest simulation velocity limits and jointly commanded opposite finger targets. Preserve MIT notice; do not claim validated physical dynamics."
+}

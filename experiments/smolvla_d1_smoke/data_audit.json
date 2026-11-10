@@ -1,0 +1,222 @@
+{
+  "schema": "d1-smolvla-data-audit-v1",
+  "audit_date": "2026-10-25",
+  "timezone": "Asia/Singapore",
+  "status": "OFFLINE_TECHNICAL_SMOKE_DATA_AVAILABLE_FULL_GRASP_TRAINING_DATA_INCOMPLETE",
+  "hardware_accessed": false,
+  "robot_commands_sent": 0,
+  "old_project_files_modified": false,
+  "scope": "Read-only targeted audit of latest registered local D1 datasets; this new audit JSON is the only file written.",
+  "examples_file": "/home/aup/Camera/output/act_lift_pilot_20261024/data/examples.jsonl",
+  "examples_sha256": "5b9214d20acd72b5a7bed672c54a25f25d6cda459130a99359e7085941652187",
+  "manifest_file": "/home/aup/Camera/output/act_lift_pilot_20261024/data/manifest.json",
+  "manifest_sha256": "1c5d8030477b225b3fd7b4c5aad00002df9d457377ada4b7b1dad649523ed38e",
+  "counts": {
+    "action_chunk_examples": 1004,
+    "train_examples": 781,
+    "validation_examples": 223,
+    "source_fragments": 2,
+    "source_sessions": 2,
+    "source_command_samples": 1012,
+    "source_trainable_command_samples": 1009,
+    "complete_continuous_grasp_episodes": 0,
+    "note": "Overlapping chunk windows and per-command samples are not independent grasp demonstrations."
+  },
+  "source_fragments": [
+    {
+      "split": "train",
+      "episode_group": "grasp_session_20261023",
+      "stage": "lift",
+      "source_execution_path": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed",
+      "source_command_log": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/transport.jsonl",
+      "causal_records": "/home/aup/Camera/output/act_lift_pilot_20261024/data/causal/00_lift.jsonl",
+      "causal_records_sha256": "2fd850aa469e4f707f88d87d3e8f6e13c7466a3c89e04d004b49d740cfc3a395",
+      "segment_id": "cycle_execution_v4/00_lift",
+      "counts": {
+        "samples": 786,
+        "trainable": 784,
+        "not_trainable": 2,
+        "invalid:wrist_image_valid": 2
+      },
+      "action_chunk_examples": 781,
+      "complete_episode": false,
+      "unique_action_source_lines_in_examples": 784,
+      "source_log_sha256": "b14d7771b44dcc071208b73804928b377277b4389110eff873fb21879a406b5d"
+    },
+    {
+      "split": "val",
+      "episode_group": "grasp_session_20261022",
+      "stage": "lift",
+      "source_execution_path": "/home/aup/D1/Control/logs/first_grasp_execution_20261022/lift_preserve_clamp",
+      "source_command_log": "/home/aup/D1/Control/logs/first_grasp_execution_20261022/lift_preserve_clamp/transport.jsonl",
+      "causal_records": "/home/aup/Camera/output/act_lift_pilot_20261024/data/causal/01_lift.jsonl",
+      "causal_records_sha256": "3f9a7f214bc93a779dceddad5d19929eea38ee30f2c8f6f84ba9febf0a79e008",
+      "segment_id": "first_grasp_execution_20261022/01_lift",
+      "counts": {
+        "samples": 226,
+        "trainable": 225,
+        "not_trainable": 1,
+        "invalid:wrist_image_valid": 1
+      },
+      "action_chunk_examples": 223,
+      "complete_episode": false,
+      "unique_action_source_lines_in_examples": 225,
+      "source_log_sha256": "b7f47a7e02e40c8d3e0b943d5c8ede142421274a0086dabb59f0f3f1a5e8842b"
+    }
+  ],
+  "split_checks": {
+    "episode_group": [],
+    "segment_id": [],
+    "action_source_log": [],
+    "cross_split_image_sha256_overlap_count": 0,
+    "cross_split_action_source_line_overlap_count": 0,
+    "source_session_isolated": true,
+    "cross_split_adjacent_window_leakage_detected": false,
+    "scope": "Checked source session/segment/log identity, action source-line keys and exact input-image SHA256. No overlapping or adjacent windows from the same source fragment occur across splits. This does not prove unseen-object or independent physical generalization."
+  },
+  "fields": {
+    "q": "Seven actual observed SDK positions available before the target command. Order J0 through J6.",
+    "q_units": [
+      "degree",
+      "degree",
+      "degree",
+      "degree",
+      "degree",
+      "degree",
+      "uncalibrated_sdk_raw"
+    ],
+    "actions": "Ten future recorded absolute SDK position target commands, shape [10,7], never substituted with actual feedback.",
+    "actions_units": [
+      "degree",
+      "degree",
+      "degree",
+      "degree",
+      "degree",
+      "degree",
+      "uncalibrated_sdk_raw"
+    ],
+    "action_representation": "absolute_sdk_joint_target",
+    "sample_rate_hz": 5,
+    "action_chunk_size": 10,
+    "cameras": "Global and wrist RGB file paths plus SHA256, camera serials and time alignment metadata.",
+    "is_pad": "True marks padded target steps that must be excluded from training loss.",
+    "actual_target_times": "Actual command host-monotonic timestamps, not UTC times.",
+    "action_source_lines": "Original transport.jsonl line identities for supervised commands.",
+    "episode_group": "Source-session group used for train/validation isolation; not a claim of complete successful episode.",
+    "task_text": "Existing examples have no native language-instruction field. Any constant lift instruction added for technical smoke must be explicitly labeled as an adaptation, not evidence of learned language grounding."
+  },
+  "recommended_real_sample": {
+    "file": "/home/aup/Camera/output/act_lift_pilot_20261024/data/examples.jsonl",
+    "line_1_based": 1,
+    "id": "cycle_execution_v4/00_lift:0",
+    "q": [
+      -1.399999976158142,
+      27.200000762939453,
+      37.400001525878906,
+      5.599999904632568,
+      25.600000381469727,
+      -95.0,
+      30.399999618530273
+    ],
+    "cameras": {
+      "global": {
+        "path": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/frames/global_00001.jpg",
+        "sha256": "6c287ed7d600a5922d282f2a86392c7e06c03445f8b8cc93fa50b960df695d4d",
+        "available_age_s": 0.07940232600230956,
+        "capture_age_estimate_s": 0.08259130400256254,
+        "available_t": 45271.374108364,
+        "board_age_at_fetch_ms": 3.1889780002529733,
+        "frame_index": 8099,
+        "serial": "CC1365302K0",
+        "source_log": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/frames/frames.jsonl",
+        "source_line": 3
+      },
+      "wrist": {
+        "path": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/frames/wrist_00001.jpg",
+        "sha256": "4b365388f6962823fa73cada4ba730fa30a06962bd63a0425157548ac6f1ca9f",
+        "available_age_s": 0.04608187099802308,
+        "capture_age_estimate_s": 0.0637342619975243,
+        "available_t": 45271.407428819,
+        "board_age_at_fetch_ms": 17.652390999501222,
+        "frame_index": 8157,
+        "serial": "CC1365301EY",
+        "source_log": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/frames/frames.jsonl",
+        "source_line": 4
+      }
+    },
+    "actions_shape": [
+      10,
+      7
+    ],
+    "image_sha256_verified_this_audit": true,
+    "causal_file": "/home/aup/Camera/output/act_lift_pilot_20261024/data/causal/00_lift.jsonl",
+    "causal_line_1_based": 1,
+    "trainable": true,
+    "quality_masks": {
+      "feedback_present": true,
+      "feedback_values_valid": true,
+      "feedback_fresh": true,
+      "command_valid": true,
+      "camera_clock_aligned": true,
+      "power_status_valid": true,
+      "enable_status_valid": true,
+      "error_status_valid": true,
+      "global_image_valid": true,
+      "wrist_image_valid": true,
+      "demonstration_success_label": true
+    },
+    "state_age_s": 0.00048645799688529223
+  },
+  "latest_related_historical_collection_state": {
+    "path": "/home/aup/Camera/output/preaction_clear_pose_20261025T211706/contact_after_manual_support_released.json",
+    "sha256": "742667a93c4ded065ac38028f9153fee0589b85e99c29fbecbd416eee4a2fffe",
+    "record": {
+      "recorded_at": "2026-10-25T21:20:22.163338+08:00",
+      "source": "direct_user_report",
+      "user_answer": "刚刚我放手了 所以又有接触",
+      "physical_contact_reported": true,
+      "prior_clearance_was_while_manually_supported": true,
+      "unsupported_clear_pose_maintained": false,
+      "hardware_mode_or_torque_verified": false,
+      "robot_commands_sent": 0,
+      "motion_sampling_started": false,
+      "next_requirement": "Establish a verified supported holding/recovery mode before releasing manual support or attempting separation; do not repeat manual lift-and-release or bypass motion/collision guards.",
+      "latest_readonly_feedback": {
+        "fresh": true,
+        "q": [
+          5.699999809265137,
+          -90.0,
+          87.80000305175781,
+          8.100000381469727,
+          14.0,
+          -8.399999618530273,
+          20.399999618530273
+        ],
+        "software_flags": {
+          "power_status": 0,
+          "enable_status": 0,
+          "error_status": 0
+        },
+        "age_ms": 31.1067339789588
+      }
+    },
+    "interpretation": "This is a saved 2026-10-25 observation and direct-user report, not a live hardware check in this audit. It records physical contact after manual support was released and no new action collection."
+  },
+  "allowed_evidence_claims": [
+    "Data loading, tensor/feature mapping, pretrained model inference, finite output and several optimization steps can be tested offline.",
+    "Saved and reloaded technical-smoke weights can validate the training code path.",
+    "Source-session isolation is present and no checked cross-split frame/command identity overlap was found."
+  ],
+  "not_supported_claims": [
+    "No complete grasp training dataset is established by these two lift fragments.",
+    "No new-object physical grasp success or language-conditioned capability is demonstrated.",
+    "Pretrained SmolVLA action dimensions or normalization cannot be treated as D1-compatible merely because tensor shapes match.",
+    "These data do not establish NPU support or acceleration."
+  ],
+  "full_training_gaps": [
+    "Continuous successful approach, close, lift, lower/place, release and retreat demonstrations under a consistent action/time contract.",
+    "Diverse initial states, locations and object instances, with separate held-out physical instances and fresh evaluation.",
+    "D1-specific state/action normalization fitted only on training data; calibrated gripper semantics and robot adapter.",
+    "Resolved physical holding/recovery and contact conditions before any newly approved hardware collection."
+  ]
+}

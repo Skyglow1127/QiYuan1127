@@ -1,0 +1,71 @@
+{
+  "mode": "offline interpretation of frozen real CSV; not live publication",
+  "input_sha256": "b992e6e8a7e75eec5b91351be2215eee8ab0db51a3dfb90b5a1a0b08d1727ef7",
+  "samples": 36753,
+  "raw_preserved": true,
+  "config": {
+    "source": "ssh",
+    "host": "pressure-kr260",
+    "chip": "auto",
+    "offsets": [
+      0,
+      1
+    ],
+    "rate_hz": 100.0,
+    "polarity": [
+      "low",
+      "unknown"
+    ],
+    "mapping_confirmed": true,
+    "sensor_connected": true,
+    "channel_verified": [
+      true,
+      false
+    ],
+    "debounce_ms": 30,
+    "stale_ms": 250,
+    "enabled_channels": [
+      true,
+      false
+    ]
+  },
+  "decisions": {
+    "HOLD": 3,
+    "NO_CONTACT": 36195,
+    "CONTACT": 555
+  },
+  "transitions": [
+    {
+      "t_s": 5.472999873745721e-05,
+      "decision": "HOLD"
+    },
+    {
+      "t_s": 0.030286211000202456,
+      "decision": "NO_CONTACT"
+    },
+    {
+      "t_s": 49.390235840999594,
+      "decision": "CONTACT"
+    },
+    {
+      "t_s": 51.45021258199995,
+      "decision": "NO_CONTACT"
+    },
+    {
+      "t_s": 52.29025223299868,
+      "decision": "CONTACT"
+    },
+    {
+      "t_s": 54.11027742399892,
+      "decision": "NO_CONTACT"
+    },
+    {
+      "t_s": 54.840208412999345,
+      "decision": "CONTACT"
+    },
+    {
+      "t_s": 56.51028758400025,
+      "decision": "NO_CONTACT"
+    }
+  ]
+}

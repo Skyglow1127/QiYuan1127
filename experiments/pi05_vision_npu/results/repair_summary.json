@@ -1,0 +1,179 @@
+{
+  "report": "/home/aup/NPU/pi05_vision_npu/results/repair_final/report.json",
+  "numerical_regression": {
+    "checks": {
+      "finite_features": true,
+      "no_half_zero_fault": true,
+      "feature_cosine_at_least_0_9999": true,
+      "feature_relative_rmse_at_most_0_02": true,
+      "repeat_features_exact": true,
+      "repeat_actions_exact": true
+    },
+    "feature_relative_rmse": 0.013235283274130198,
+    "passed": true,
+    "scope": "Single recorded camera pair; engineering numerical regression only. Per-axis action deviations are reported, not accepted against unspecified robot tolerances."
+  },
+  "feature_error": {
+    "shape": [
+      2,
+      256,
+      2048
+    ],
+    "reference_dtype": "float32",
+    "actual_dtype": "float32",
+    "all_finite": true,
+    "max_abs": 2.328948974609375,
+    "mean_abs": 0.03522659784501919,
+    "rmse": 0.05292810391366115,
+    "cosine": 0.9999239940728503,
+    "by_camera": {
+      "global": {
+        "shape": [
+          256,
+          2048
+        ],
+        "reference_dtype": "float32",
+        "actual_dtype": "float32",
+        "all_finite": true,
+        "max_abs": 2.0470428466796875,
+        "mean_abs": 0.03865866325439138,
+        "rmse": 0.0553852749102775,
+        "cosine": 0.9999101054969532
+      },
+      "wrist": {
+        "shape": [
+          256,
+          2048
+        ],
+        "reference_dtype": "float32",
+        "actual_dtype": "float32",
+        "all_finite": true,
+        "max_abs": 2.328948974609375,
+        "mean_abs": 0.031794532435647005,
+        "rmse": 0.050351163749248244,
+        "cosine": 0.9999405319275921
+      }
+    }
+  },
+  "action_error": {
+    "shape": [
+      50,
+      7
+    ],
+    "reference_dtype": "float32",
+    "actual_dtype": "float32",
+    "all_finite": true,
+    "max_abs": 0.6559314727783203,
+    "mean_abs": 0.13626676673867874,
+    "rmse": 0.19714678857472231,
+    "cosine": 0.9999735350992074,
+    "per_axis": {
+      "joint_1.deg": {
+        "unit": "degree",
+        "shape": [
+          50
+        ],
+        "reference_dtype": "float32",
+        "actual_dtype": "float32",
+        "all_finite": true,
+        "max_abs": 0.2263336181640625,
+        "mean_abs": 0.09860359191894531,
+        "rmse": 0.118839045774257,
+        "cosine": 0.9999941973934328,
+        "signed_mean": -0.07687851041555405
+      },
+      "joint_2.deg": {
+        "unit": "degree",
+        "shape": [
+          50
+        ],
+        "reference_dtype": "float32",
+        "actual_dtype": "float32",
+        "all_finite": true,
+        "max_abs": 0.3057980537414551,
+        "mean_abs": 0.11551811218261719,
+        "rmse": 0.13508499183676656,
+        "cosine": 0.9999957733622967,
+        "signed_mean": -0.08939259499311447
+      },
+      "joint_3.deg": {
+        "unit": "degree",
+        "shape": [
+          50
+        ],
+        "reference_dtype": "float32",
+        "actual_dtype": "float32",
+        "all_finite": true,
+        "max_abs": 0.3635292053222656,
+        "mean_abs": 0.11863304138183593,
+        "rmse": 0.14825571344341748,
+        "cosine": 0.9999935915699805,
+        "signed_mean": -0.024945907294750214
+      },
+      "joint_4.deg": {
+        "unit": "degree",
+        "shape": [
+          50
+        ],
+        "reference_dtype": "float32",
+        "actual_dtype": "float32",
+        "all_finite": true,
+        "max_abs": 0.27500057220458984,
+        "mean_abs": 0.1393295955657959,
+        "rmse": 0.16159544259092043,
+        "cosine": 0.9996041711606244,
+        "signed_mean": 0.10319327563047409
+      },
+      "joint_5.deg": {
+        "unit": "degree",
+        "shape": [
+          50
+        ],
+        "reference_dtype": "float32",
+        "actual_dtype": "float32",
+        "all_finite": true,
+        "max_abs": 0.6559314727783203,
+        "mean_abs": 0.40072433710098265,
+        "rmse": 0.4270129122889419,
+        "cosine": 0.999958134908004,
+        "signed_mean": -0.400724321603775
+      },
+      "joint_6.deg": {
+        "unit": "degree",
+        "shape": [
+          50
+        ],
+        "reference_dtype": "float32",
+        "actual_dtype": "float32",
+        "all_finite": true,
+        "max_abs": 0.1958465576171875,
+        "mean_abs": 0.08098281860351562,
+        "rmse": 0.09625197166456452,
+        "cosine": 0.9999887459809588,
+        "signed_mean": 0.010230408050119877
+      },
+      "gripper.m": {
+        "unit": "metre",
+        "shape": [
+          50
+        ],
+        "reference_dtype": "float32",
+        "actual_dtype": "float32",
+        "all_finite": true,
+        "max_abs": 0.00015631131827831268,
+        "mean_abs": 7.587041705846787e-05,
+        "rmse": 8.33764755149303e-05,
+        "cosine": 0.9999951608216094,
+        "signed_mean": -7.5870419095736e-05
+      }
+    },
+    "overall_note": "Mixed units: use per-axis metrics for physical interpretation."
+  },
+  "speedup_gpu_over_hybrid": 0.9200164475916489,
+  "workaround": {
+    "tp_size": 1,
+    "device_batch": 1,
+    "camera_calls": 2
+  },
+  "npu_only_proven": true
+}

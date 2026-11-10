@@ -1,0 +1,26 @@
+[
+  {
+    "profile": "stride1",
+    "jitter_ns": 1.0,
+    "max_abs_error_Hz": 0.000103,
+    "note": "correlated windows; descriptive only, not a confidence bound"
+  },
+  {
+    "profile": "stride1",
+    "jitter_ns": 10.0,
+    "max_abs_error_Hz": 0.001077,
+    "note": "correlated windows; descriptive only, not a confidence bound"
+  },
+  {
+    "profile": "stride64",
+    "jitter_ns": 1.0,
+    "max_abs_error_Hz": 2e-06,
+    "note": "correlated windows; descriptive only, not a confidence bound"
+  },
+  {
+    "profile": "stride64",
+    "jitter_ns": 10.0,
+    "max_abs_error_Hz": 1.7e-05,
+    "note": "correlated windows; descriptive only, not a confidence bound"
+  }
+]

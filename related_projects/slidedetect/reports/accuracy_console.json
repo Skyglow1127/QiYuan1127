@@ -1,0 +1,182 @@
+[
+  {
+    "profile": "stride1",
+    "frequency_Hz": 70000.0,
+    "outputs": 51,
+    "max_abs_error_Hz": 0.0,
+    "rmse_Hz": 0.0,
+    "mean_error_Hz": 0.0,
+    "pass_1mHz": true
+  },
+  {
+    "profile": "stride1",
+    "frequency_Hz": 100000.0,
+    "outputs": 51,
+    "max_abs_error_Hz": 0.0,
+    "rmse_Hz": 0.0,
+    "mean_error_Hz": 0.0,
+    "pass_1mHz": true
+  },
+  {
+    "profile": "stride1",
+    "frequency_Hz": 100000.001,
+    "outputs": 51,
+    "max_abs_error_Hz": 0.001,
+    "rmse_Hz": 0.0008868042868284156,
+    "mean_error_Hz": -0.0008645098039215687,
+    "pass_1mHz": true
+  },
+  {
+    "profile": "stride1",
+    "frequency_Hz": 123456.789,
+    "outputs": 51,
+    "max_abs_error_Hz": 0.001123,
+    "rmse_Hz": 0.0009283082652298847,
+    "mean_error_Hz": 0.0008213333333333335,
+    "pass_1mHz": false
+  },
+  {
+    "profile": "stride1",
+    "frequency_Hz": 199999.999,
+    "outputs": 51,
+    "max_abs_error_Hz": 0.006849,
+    "rmse_Hz": 0.003793323838680009,
+    "mean_error_Hz": -0.0014701764705882352,
+    "pass_1mHz": false
+  },
+  {
+    "profile": "stride1",
+    "frequency_Hz": 200000.0,
+    "outputs": 51,
+    "max_abs_error_Hz": 0.0,
+    "rmse_Hz": 0.0,
+    "mean_error_Hz": 0.0,
+    "pass_1mHz": true
+  },
+  {
+    "profile": "stride1",
+    "frequency_Hz": 200000.001,
+    "outputs": 51,
+    "max_abs_error_Hz": 0.006851,
+    "rmse_Hz": 0.003794323642226739,
+    "mean_error_Hz": 0.0014707647058823522,
+    "pass_1mHz": false
+  },
+  {
+    "profile": "stride1",
+    "frequency_Hz": 333333.333,
+    "outputs": 51,
+    "max_abs_error_Hz": 0.000333,
+    "rmse_Hz": 0.000333,
+    "mean_error_Hz": 0.000333,
+    "pass_1mHz": true
+  },
+  {
+    "profile": "stride1",
+    "frequency_Hz": 349999.999,
+    "outputs": 51,
+    "max_abs_error_Hz": 0.006504,
+    "rmse_Hz": 0.0038036719281839887,
+    "mean_error_Hz": -0.0014782156862745098,
+    "pass_1mHz": false
+  },
+  {
+    "profile": "stride1",
+    "frequency_Hz": 350000.0,
+    "outputs": 51,
+    "max_abs_error_Hz": 3e-06,
+    "rmse_Hz": 1.9852396506689656e-06,
+    "mean_error_Hz": -5.882352941176461e-08,
+    "pass_1mHz": true
+  },
+  {
+    "profile": "stride64",
+    "frequency_Hz": 70000.0,
+    "outputs": 51,
+    "max_abs_error_Hz": 0.0,
+    "rmse_Hz": 0.0,
+    "mean_error_Hz": 0.0,
+    "pass_1mHz": true
+  },
+  {
+    "profile": "stride64",
+    "frequency_Hz": 100000.0,
+    "outputs": 51,
+    "max_abs_error_Hz": 0.0,
+    "rmse_Hz": 0.0,
+    "mean_error_Hz": 0.0,
+    "pass_1mHz": true
+  },
+  {
+    "profile": "stride64",
+    "frequency_Hz": 100000.001,
+    "outputs": 51,
+    "max_abs_error_Hz": 2e-06,
+    "rmse_Hz": 1.0664215404617372e-06,
+    "mean_error_Hz": -2.3529411764705876e-07,
+    "pass_1mHz": true
+  },
+  {
+    "profile": "stride64",
+    "frequency_Hz": 123456.789,
+    "outputs": 51,
+    "max_abs_error_Hz": 1e-06,
+    "rmse_Hz": 7.140055472954167e-07,
+    "mean_error_Hz": 7.843137254901962e-08,
+    "pass_1mHz": true
+  },
+  {
+    "profile": "stride64",
+    "frequency_Hz": 199999.999,
+    "outputs": 51,
+    "max_abs_error_Hz": 1.6e-05,
+    "rmse_Hz": 9.97546008570876e-06,
+    "mean_error_Hz": 3.313725490196079e-06,
+    "pass_1mHz": true
+  },
+  {
+    "profile": "stride64",
+    "frequency_Hz": 200000.0,
+    "outputs": 51,
+    "max_abs_error_Hz": 0.0,
+    "rmse_Hz": 0.0,
+    "mean_error_Hz": 0.0,
+    "pass_1mHz": true
+  },
+  {
+    "profile": "stride64",
+    "frequency_Hz": 200000.001,
+    "outputs": 51,
+    "max_abs_error_Hz": 1.6e-05,
+    "rmse_Hz": 9.589618569772495e-06,
+    "mean_error_Hz": -3.764705882352941e-06,
+    "pass_1mHz": true
+  },
+  {
+    "profile": "stride64",
+    "frequency_Hz": 333333.333,
+    "outputs": 51,
+    "max_abs_error_Hz": 0.000333,
+    "rmse_Hz": 0.0002798059902090424,
+    "mean_error_Hz": 0.00015707843137254904,
+    "pass_1mHz": true
+  },
+  {
+    "profile": "stride64",
+    "frequency_Hz": 349999.999,
+    "outputs": 51,
+    "max_abs_error_Hz": 7e-06,
+    "rmse_Hz": 3.867917309577015e-06,
+    "mean_error_Hz": 1.0784313725490197e-06,
+    "pass_1mHz": true
+  },
+  {
+    "profile": "stride64",
+    "frequency_Hz": 350000.0,
+    "outputs": 51,
+    "max_abs_error_Hz": 0.0,
+    "rmse_Hz": 0.0,
+    "mean_error_Hz": 0.0,
+    "pass_1mHz": true
+  }
+]

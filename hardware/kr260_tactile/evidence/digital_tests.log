@@ -1,0 +1,75 @@
+test_corrupt_values_or_provenance_stop_before_recording (test_app.RecorderTests.test_corrupt_values_or_provenance_stop_before_recording) ... ok
+test_demo_end_to_end_csv_stops_and_restarts (test_app.RecorderTests.test_demo_end_to_end_csv_stops_and_restarts) ... ok
+test_error_stops_drain_workers_even_with_full_sample_queue (test_app.RecorderTests.test_error_stops_drain_workers_even_with_full_sample_queue) ... ok
+test_initial_active_not_counted_and_gaps_excluded (test_app.RecorderTests.test_initial_active_not_counted_and_gaps_excluded) ... ok
+test_metadata_write_failure_closes_file_before_start (test_app.RecorderTests.test_metadata_write_failure_closes_file_before_start) ... ok
+test_mismatched_reported_hardware_identity_rejected (test_app.RecorderTests.test_mismatched_reported_hardware_identity_rejected) ... ok
+test_nonmonotonic_timestamps_rejected (test_app.RecorderTests.test_nonmonotonic_timestamps_rejected) ... ok
+test_raw_values_preserved_and_polarity_applied_once (test_app.RecorderTests.test_raw_values_preserved_and_polarity_applied_once) ... ok
+test_real_failure_never_switches_to_simulation (test_app.RecorderTests.test_real_failure_never_switches_to_simulation) ... ok
+test_real_mapping_required_and_no_physical_pin_guess (test_app.RecorderTests.test_real_mapping_required_and_no_physical_pin_guess) ... ok
+test_unknown_polarity_is_not_invented (test_app.RecorderTests.test_unknown_polarity_is_not_invented) ... ok
+test_absent_pid_metadata_allowed_but_mismatch_rejected (test_deploy_live.DeployParsingTests.test_absent_pid_metadata_allowed_but_mismatch_rejected) ... ok
+test_installed_2024_table_stock_slot0 (test_deploy_live.DeployParsingTests.test_installed_2024_table_stock_slot0) ... ok
+test_legacy_documented_layout (test_deploy_live.DeployParsingTests.test_legacy_documented_layout) ... ok
+test_no_target_multiple_active_or_wrong_slot_rejected (test_deploy_live.DeployParsingTests.test_no_target_multiple_active_or_wrong_slot_rejected) ... ok
+test_only_matching_unique_stock_or_target_allowed (test_deploy_live.DeployParsingTests.test_only_matching_unique_stock_or_target_allowed) ... ok
+test_real_samples_constant_and_change_reported_separately (test_deploy_live.DeployParsingTests.test_real_samples_constant_and_change_reported_separately) ... ok
+test_unknown_or_ambiguous_output_rejected (test_deploy_live.DeployParsingTests.test_unknown_or_ambiguous_output_rejected) ... ok
+test_log_and_running_checkpoint_are_fsynced_before_child_exit (test_deploy_live.DeploymentPersistenceTests.test_log_and_running_checkpoint_are_fsynced_before_child_exit) ... 执行：ongoing
+ok
+test_timeout_keeps_flushed_partial_logs_and_failure_state (test_deploy_live.DeploymentPersistenceTests.test_timeout_keeps_flushed_partial_logs_and_failure_state) ... 执行：timeout
+ok
+test_write_and_atomic_status_sync_files_and_directories (test_deploy_live.DeploymentPersistenceTests.test_write_and_atomic_status_sync_files_and_directories) ... ok
+test_buffered_network_delay_rejected (test_force.ForceTests.test_buffered_network_delay_rejected) ... ok
+test_calibration_interpolates_without_extrapolation (test_force.ForceTests.test_calibration_interpolates_without_extrapolation) ... ok
+test_calibration_rejects_nonmonotonic_or_missing_provenance (test_force.ForceTests.test_calibration_rejects_nonmonotonic_or_missing_provenance) ... ok
+test_default_blocks (test_force.ForceTests.test_default_blocks) ... ok
+test_device_identity_mismatch (test_force.ForceTests.test_device_identity_mismatch) ... ok
+test_external_identity_required (test_force.ForceTests.test_external_identity_required) ... ok
+test_nan_rejected (test_force.ForceTests.test_nan_rejected) ... ok
+test_no_demo_or_reordered_frames (test_force.ForceTests.test_no_demo_or_reordered_frames) ... ok
+test_no_duplicate_sensor_channel (test_force.ForceTests.test_no_duplicate_sensor_channel) ... ok
+test_offset_and_millivolts (test_force.ForceTests.test_offset_and_millivolts) ... ok
+test_reverse_sensor_response (test_force.ForceTests.test_reverse_sensor_response) ... ok
+test_saturation_and_range_are_invalid (test_force.ForceTests.test_saturation_and_range_are_invalid) ... ok
+test_stale_and_stopped_invalidate_robot_value (test_force.ForceTests.test_stale_and_stopped_invalidate_robot_value) ... ok
+test_stream_csv_stop_and_restart_with_test_subprocess (test_force.ForceTests.test_stream_csv_stop_and_restart_with_test_subprocess) ... ok
+test_sysfs_scale_identity_and_raw_read_path (test_force.ForceTests.test_sysfs_scale_identity_and_raw_read_path) ... ok
+test_uncalibrated_is_not_force (test_force.ForceTests.test_uncalibrated_is_not_force) ... ok
+test_voltage_limit (test_force.ForceTests.test_voltage_limit) ... ok
+test_argument_validation_reports_json (test_reader.ReaderTests.test_argument_validation_reports_json) ... ok
+test_main_release_on_read_failure_broken_pipe_and_signal (test_reader.ReaderTests.test_main_release_on_read_failure_broken_pipe_and_signal) ... ok
+test_read_error_and_bad_values_release (test_reader.ReaderTests.test_read_error_and_bad_values_release) ... ok
+test_readonly_probe_v1_v2_does_not_request (test_reader.ReaderTests.test_readonly_probe_v1_v2_does_not_request) ... ok
+test_real_error_never_falls_back (test_reader.ReaderTests.test_real_error_never_falls_back) ... ok
+test_refuses_busy_output_unknown_and_range_before_request (test_reader.ReaderTests.test_refuses_busy_output_unknown_and_range_before_request) ... ok
+test_request_failure_closes_chip_without_releasing_unowned_bulk (test_reader.ReaderTests.test_request_failure_closes_chip_without_releasing_unowned_bulk) ... ok
+test_samples_schema_and_stdin_script (test_reader.ReaderTests.test_samples_schema_and_stdin_script) ... ok
+test_slow_reads_skip_missed_deadlines (test_reader.ReaderTests.test_slow_reads_skip_missed_deadlines) ... ok
+test_v1_bulk_input_preserves_channel_order (test_reader.ReaderTests.test_v1_bulk_input_preserves_channel_order) ... ok
+test_v2_enum_is_not_converted_by_truthiness (test_reader.ReaderTests.test_v2_enum_is_not_converted_by_truthiness) ... ok
+test_bounce_does_not_create_stable_contact (test_tactile.ContactTests.test_bounce_does_not_create_stable_contact) ... ok
+test_client_never_reuses_cached_value_on_failure (test_tactile.ContactTests.test_client_never_reuses_cached_value_on_failure) ... ok
+test_consumer_rejects_malformed_channels_and_age (test_tactile.ContactTests.test_consumer_rejects_malformed_channels_and_age) ... ok
+test_debouncer_zero_and_unknown (test_tactile.ContactTests.test_debouncer_zero_and_unknown) ... ok
+test_demo_cannot_control_robot (test_tactile.ContactTests.test_demo_cannot_control_robot) ... ok
+test_do1_only_ignores_unconnected_do2 (test_tactile.ContactTests.test_do1_only_ignores_unconnected_do2) ... ok
+test_do2_only_ignores_unconnected_do1 (test_tactile.ContactTests.test_do2_only_ignores_unconnected_do1) ... ok
+test_gap_resets_stability (test_tactile.ContactTests.test_gap_resets_stability) ... ok
+test_high_polarity_and_both_contact (test_tactile.ContactTests.test_high_polarity_and_both_contact) ... ok
+test_no_pl_handshake_or_wrong_order_rejected (test_tactile.ContactTests.test_no_pl_handshake_or_wrong_order_rejected) ... ok
+test_parameter_validation (test_tactile.ContactTests.test_parameter_validation) ... ok
+test_queue_lag_invalidates_robot_values (test_tactile.ContactTests.test_queue_lag_invalidates_robot_values) ... ok
+test_raw_contact_stops_closure_before_debounce (test_tactile.ContactTests.test_raw_contact_stops_closure_before_debounce) ... ok
+test_stale_or_stopped_hold (test_tactile.ContactTests.test_stale_or_stopped_hold) ... ok
+test_unknown_or_unverified_channel_holds (test_tactile.ContactTests.test_unknown_or_unverified_channel_holds) ... ok
+test_unplugged_never_reports_contact (test_tactile.ContactTests.test_unplugged_never_reports_contact) ... ok
+test_verified_low_active_through_pl_ps (test_tactile.ContactTests.test_verified_low_active_through_pl_ps) ... ok
+test_device_tree_and_device_match_required (test_tactile.MappingTests.test_device_tree_and_device_match_required) ... ok
+test_missing_pl_is_not_replaced_by_ps_gpio (test_tactile.MappingTests.test_missing_pl_is_not_replaced_by_ps_gpio) ... ok
+
+----------------------------------------------------------------------
+Ran 68 tests in 3.661s
+
+OK

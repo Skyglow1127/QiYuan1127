@@ -1,0 +1,59 @@
+{
+  "source_tensors": 812,
+  "destination_tensors": 813,
+  "parameter_count": 4143404816,
+  "parameter_bytes": 9353911360,
+  "bytes_by_dtype": {
+    "torch.bfloat16": 7219707904,
+    "torch.float32": 2134203456
+  },
+  "nonpersistent_buffers": {
+    "model.paligemma_with_expert.paligemma.model.vision_tower.vision_model.embeddings.position_ids": {
+      "shape": [
+        1,
+        256
+      ],
+      "dtype": "torch.int64",
+      "kind": "vision_positions"
+    },
+    "model.paligemma_with_expert.paligemma.model.language_model.embed_tokens.embed_scale": {
+      "shape": [],
+      "dtype": "torch.bfloat16",
+      "kind": "embedding_scale"
+    },
+    "model.paligemma_with_expert.paligemma.model.language_model.rotary_emb.inv_freq": {
+      "shape": [
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "kind": "rotary"
+    },
+    "model.paligemma_with_expert.paligemma.model.language_model.rotary_emb.original_inv_freq": {
+      "shape": [
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "kind": "rotary"
+    },
+    "model.paligemma_with_expert.gemma_expert.model.rotary_emb.inv_freq": {
+      "shape": [
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "kind": "rotary"
+    },
+    "model.paligemma_with_expert.gemma_expert.model.rotary_emb.original_inv_freq": {
+      "shape": [
+        128
+      ],
+      "dtype": "torch.bfloat16",
+      "kind": "rotary"
+    }
+  },
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "shape_mismatches": {},
+  "load_seconds": 15.867267862000062,
+  "gpu_allocated_bytes_after_base": 9363535872,
+  "all_parameters_and_buffers_materialized": true
+}

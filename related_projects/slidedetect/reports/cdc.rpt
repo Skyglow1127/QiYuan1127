@@ -1,0 +1,27 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date              : Tue Oct 20 00:09:49 2026
+| Host              : aup-shc2-370-4 running 64-bit Ubuntu 24.04.2 LTS
+| Command           : report_cdc -details -file /home/aup/SlideDetect/reports/cdc.rpt
+| Design            : lamor_frequency_meter
+| Device            : xck26-sfvc784
+| Speed File        : -2LV  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : C
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+CDC Report
+
+ID      Severity  Count  Description
+------  --------  -----  -------------------------------------
+CDC-26  Warning       1  LUTRAM read/write potential collision
+
+Source Clock: input port clock
+Destination Clock: clk
+CDC Type: No Common Primary Clock
+
+Row  ID      Severity  Description                            Depth  Exception   Source (From)  Destination (To)
+---  ------  --------  -------------------------------------  -----  ----------  -------------  ----------------
+  1  CDC-26  Warning   LUTRAM read/write potential collision      0  False Path  larmor_in      sync1_reg/D
+

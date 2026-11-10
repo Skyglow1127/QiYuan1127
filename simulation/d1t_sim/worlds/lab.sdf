@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.9">
+  <world name="d1t_lab">
+    <physics name="physics" type="ignored">
+      <max_step_size>0.0005</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <dart>
+        <collision_detector>fcl</collision_detector>
+        <solver>
+          <solver_type>dantzig</solver_type>
+        </solver>
+      </dart>
+    </physics>
+    <gravity>0 0 -9.81</gravity>
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics" />
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands" />
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster" />
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <scene>
+      <ambient>.72 .74 .78 1</ambient>
+      <background>.80 .85 .90 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <light type="directional" name="sun">
+      <pose>0 0 5 0 0 0</pose>
+      <diffuse>0.9 0.9 0.9 1</diffuse>
+      <specular>0.3 0.3 0.3 1</specular>
+      <direction>-.5 .3 -1</direction>
+      <cast_shadows>true</cast_shadows>
+    </light>
+    <model name="floor">
+      <static>true</static>
+      <link name="ground">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1.22 1.18 0.036</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>1</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+      </link>
+      <pose>0.21 -0.29 -0.018 0 0 0</pose>
+    </model>
+    <plugin filename="gz-sim-contact-system" name="gz::sim::systems::Contact" />
+    <include>
+      <uri>model://red_cube</uri>
+    </include>
+    <model name="mount">
+      <static>true</static>
+      <pose>0 0 0.01 0 0 0</pose>
+      <link name="plate">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.15 0.23 0.02</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>1</collide_bitmask>
+            </contact>
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.15 0.23 0.02</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.18 0.27 0.34 1</ambient>
+            <diffuse>0.18 0.27 0.34 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <include>
+      <uri>model://photo_workspace</uri>
+    </include>
+  </world>
+</sdf>

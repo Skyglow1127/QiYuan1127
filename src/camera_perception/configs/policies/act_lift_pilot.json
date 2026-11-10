@@ -1,0 +1,29 @@
+{
+  "skill_id": "red_cube_lift_fragment",
+  "rate_hz": 5,
+  "chunk_size": 10,
+  "execute_prefix_steps": 1,
+  "image_size_hw": [240, 320],
+  "hidden_dim": 128,
+  "heads": 4,
+  "layers": 2,
+  "stages": [
+    {
+      "run": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4",
+      "path": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed",
+      "stage": "lift",
+      "fsm": true,
+      "episode_group": "grasp_session_20261023",
+      "split": "train"
+    },
+    {
+      "run": "/home/aup/D1/Control/logs/first_grasp_execution_20261022",
+      "path": "/home/aup/D1/Control/logs/first_grasp_execution_20261022/lift_preserve_clamp",
+      "stage": "lift",
+      "fsm": false,
+      "episode_group": "grasp_session_20261022",
+      "split": "val"
+    }
+  ],
+  "scope": "Initial ACT lift-only fragment pilot. Full approach/close/lower/open/retreat remain geometric skills. Not a full grasp policy; no independent physical test."
+}

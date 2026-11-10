@@ -1,0 +1,422 @@
+{
+  "seeds": [
+    [
+      {
+        "epoch": 1,
+        "validation_episode_error": 0.7113433480262756
+      },
+      {
+        "epoch": 2,
+        "validation_episode_error": 0.6416500806808472
+      },
+      {
+        "epoch": 3,
+        "validation_episode_error": 0.6042876839637756
+      },
+      {
+        "epoch": 4,
+        "validation_episode_error": 0.5798232555389404
+      },
+      {
+        "epoch": 5,
+        "validation_episode_error": 0.5569357872009277
+      },
+      {
+        "epoch": 6,
+        "validation_episode_error": 0.5427246689796448
+      },
+      {
+        "epoch": 7,
+        "validation_episode_error": 0.5344309210777283
+      },
+      {
+        "epoch": 8,
+        "validation_episode_error": 0.5317049026489258
+      },
+      {
+        "epoch": 9,
+        "validation_episode_error": 0.5257049798965454
+      },
+      {
+        "epoch": 10,
+        "validation_episode_error": 0.5393695831298828
+      },
+      {
+        "epoch": 11,
+        "validation_episode_error": 0.5149657130241394
+      },
+      {
+        "epoch": 12,
+        "validation_episode_error": 0.5274919867515564
+      },
+      {
+        "epoch": 13,
+        "validation_episode_error": 0.5137393474578857
+      },
+      {
+        "epoch": 14,
+        "validation_episode_error": 0.5409831404685974
+      },
+      {
+        "epoch": 15,
+        "validation_episode_error": 0.5200726985931396
+      },
+      {
+        "epoch": 16,
+        "validation_episode_error": 0.49891719222068787
+      },
+      {
+        "epoch": 17,
+        "validation_episode_error": 0.49561893939971924
+      },
+      {
+        "epoch": 18,
+        "validation_episode_error": 0.5153879523277283
+      },
+      {
+        "epoch": 19,
+        "validation_episode_error": 0.49972400069236755
+      },
+      {
+        "epoch": 20,
+        "validation_episode_error": 0.5031521916389465
+      },
+      {
+        "epoch": 21,
+        "validation_episode_error": 0.5098286271095276
+      },
+      {
+        "epoch": 22,
+        "validation_episode_error": 0.4990839660167694
+      },
+      {
+        "epoch": 23,
+        "validation_episode_error": 0.5047091841697693
+      },
+      {
+        "epoch": 24,
+        "validation_episode_error": 0.5090551972389221
+      },
+      {
+        "epoch": 25,
+        "validation_episode_error": 0.5103855133056641
+      },
+      {
+        "epoch": 26,
+        "validation_episode_error": 0.5030477643013
+      },
+      {
+        "epoch": 27,
+        "validation_episode_error": 0.5086663365364075
+      },
+      {
+        "epoch": 28,
+        "validation_episode_error": 0.5171498656272888
+      },
+      {
+        "epoch": 29,
+        "validation_episode_error": 0.5001876950263977
+      }
+    ],
+    [
+      {
+        "epoch": 1,
+        "validation_episode_error": 0.700184166431427
+      },
+      {
+        "epoch": 2,
+        "validation_episode_error": 0.6429815888404846
+      },
+      {
+        "epoch": 3,
+        "validation_episode_error": 0.603854238986969
+      },
+      {
+        "epoch": 4,
+        "validation_episode_error": 0.5987494587898254
+      },
+      {
+        "epoch": 5,
+        "validation_episode_error": 0.5679494738578796
+      },
+      {
+        "epoch": 6,
+        "validation_episode_error": 0.5558972358703613
+      },
+      {
+        "epoch": 7,
+        "validation_episode_error": 0.5453640818595886
+      },
+      {
+        "epoch": 8,
+        "validation_episode_error": 0.53568434715271
+      },
+      {
+        "epoch": 9,
+        "validation_episode_error": 0.5427224040031433
+      },
+      {
+        "epoch": 10,
+        "validation_episode_error": 0.5192797780036926
+      },
+      {
+        "epoch": 11,
+        "validation_episode_error": 0.5172581076622009
+      },
+      {
+        "epoch": 12,
+        "validation_episode_error": 0.5312357544898987
+      },
+      {
+        "epoch": 13,
+        "validation_episode_error": 0.5236330628395081
+      },
+      {
+        "epoch": 14,
+        "validation_episode_error": 0.5046302676200867
+      },
+      {
+        "epoch": 15,
+        "validation_episode_error": 0.5045300126075745
+      },
+      {
+        "epoch": 16,
+        "validation_episode_error": 0.4937267601490021
+      },
+      {
+        "epoch": 17,
+        "validation_episode_error": 0.5143322348594666
+      },
+      {
+        "epoch": 18,
+        "validation_episode_error": 0.5194496512413025
+      },
+      {
+        "epoch": 19,
+        "validation_episode_error": 0.5109822750091553
+      },
+      {
+        "epoch": 20,
+        "validation_episode_error": 0.49988678097724915
+      },
+      {
+        "epoch": 21,
+        "validation_episode_error": 0.5216438174247742
+      },
+      {
+        "epoch": 22,
+        "validation_episode_error": 0.4940834045410156
+      },
+      {
+        "epoch": 23,
+        "validation_episode_error": 0.4980039596557617
+      },
+      {
+        "epoch": 24,
+        "validation_episode_error": 0.4921153485774994
+      },
+      {
+        "epoch": 25,
+        "validation_episode_error": 0.5068985223770142
+      },
+      {
+        "epoch": 26,
+        "validation_episode_error": 0.502931535243988
+      },
+      {
+        "epoch": 27,
+        "validation_episode_error": 0.49070611596107483
+      },
+      {
+        "epoch": 28,
+        "validation_episode_error": 0.5015498399734497
+      },
+      {
+        "epoch": 29,
+        "validation_episode_error": 0.4928928315639496
+      },
+      {
+        "epoch": 30,
+        "validation_episode_error": 0.4915952682495117
+      },
+      {
+        "epoch": 31,
+        "validation_episode_error": 0.5097905993461609
+      },
+      {
+        "epoch": 32,
+        "validation_episode_error": 0.508217990398407
+      },
+      {
+        "epoch": 33,
+        "validation_episode_error": 0.5129799842834473
+      },
+      {
+        "epoch": 34,
+        "validation_episode_error": 0.4991203844547272
+      },
+      {
+        "epoch": 35,
+        "validation_episode_error": 0.5034950375556946
+      },
+      {
+        "epoch": 36,
+        "validation_episode_error": 0.5124862790107727
+      },
+      {
+        "epoch": 37,
+        "validation_episode_error": 0.49739012122154236
+      },
+      {
+        "epoch": 38,
+        "validation_episode_error": 0.493667334318161
+      },
+      {
+        "epoch": 39,
+        "validation_episode_error": 0.4945267140865326
+      }
+    ],
+    [
+      {
+        "epoch": 1,
+        "validation_episode_error": 0.713127613067627
+      },
+      {
+        "epoch": 2,
+        "validation_episode_error": 0.6485775113105774
+      },
+      {
+        "epoch": 3,
+        "validation_episode_error": 0.6121717095375061
+      },
+      {
+        "epoch": 4,
+        "validation_episode_error": 0.5909414887428284
+      },
+      {
+        "epoch": 5,
+        "validation_episode_error": 0.5620710253715515
+      },
+      {
+        "epoch": 6,
+        "validation_episode_error": 0.5439944267272949
+      },
+      {
+        "epoch": 7,
+        "validation_episode_error": 0.5451459288597107
+      },
+      {
+        "epoch": 8,
+        "validation_episode_error": 0.5490882992744446
+      },
+      {
+        "epoch": 9,
+        "validation_episode_error": 0.5333451628684998
+      },
+      {
+        "epoch": 10,
+        "validation_episode_error": 0.5147619843482971
+      },
+      {
+        "epoch": 11,
+        "validation_episode_error": 0.521475613117218
+      },
+      {
+        "epoch": 12,
+        "validation_episode_error": 0.5291659235954285
+      },
+      {
+        "epoch": 13,
+        "validation_episode_error": 0.5207125544548035
+      },
+      {
+        "epoch": 14,
+        "validation_episode_error": 0.5238255262374878
+      },
+      {
+        "epoch": 15,
+        "validation_episode_error": 0.506695032119751
+      },
+      {
+        "epoch": 16,
+        "validation_episode_error": 0.48990967869758606
+      },
+      {
+        "epoch": 17,
+        "validation_episode_error": 0.5099411606788635
+      },
+      {
+        "epoch": 18,
+        "validation_episode_error": 0.5276355147361755
+      },
+      {
+        "epoch": 19,
+        "validation_episode_error": 0.5009468197822571
+      },
+      {
+        "epoch": 20,
+        "validation_episode_error": 0.4947148859500885
+      },
+      {
+        "epoch": 21,
+        "validation_episode_error": 0.5063436031341553
+      },
+      {
+        "epoch": 22,
+        "validation_episode_error": 0.5097965598106384
+      },
+      {
+        "epoch": 23,
+        "validation_episode_error": 0.4844818115234375
+      },
+      {
+        "epoch": 24,
+        "validation_episode_error": 0.5013407468795776
+      },
+      {
+        "epoch": 25,
+        "validation_episode_error": 0.4980580806732178
+      },
+      {
+        "epoch": 26,
+        "validation_episode_error": 0.5070876479148865
+      },
+      {
+        "epoch": 27,
+        "validation_episode_error": 0.49607136845588684
+      },
+      {
+        "epoch": 28,
+        "validation_episode_error": 0.499049574136734
+      },
+      {
+        "epoch": 29,
+        "validation_episode_error": 0.49139848351478577
+      },
+      {
+        "epoch": 30,
+        "validation_episode_error": 0.497157484292984
+      },
+      {
+        "epoch": 31,
+        "validation_episode_error": 0.501862108707428
+      },
+      {
+        "epoch": 32,
+        "validation_episode_error": 0.5092970132827759
+      },
+      {
+        "epoch": 33,
+        "validation_episode_error": 0.49810823798179626
+      },
+      {
+        "epoch": 34,
+        "validation_episode_error": 0.4960843324661255
+      },
+      {
+        "epoch": 35,
+        "validation_episode_error": 0.5132635235786438
+      }
+    ]
+  ]
+}

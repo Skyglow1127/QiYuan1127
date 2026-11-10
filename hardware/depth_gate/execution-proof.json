@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-15",
+  "timezone": "Asia/Singapore",
+  "camera": {
+    "name": "DaBai DC1",
+    "firmware": "RD1001",
+    "serial": "CC1365301EY"
+  },
+  "color_fps": 30.03371182270476,
+  "depth_fps": 30.135675133481666,
+  "live_pl_frames": 32,
+  "capture_seconds": 8.019918341999983,
+  "pl_time_ms": {
+    "min": 31.363243999749102,
+    "mean": 32.29415349996145,
+    "max": 34.28883299966401
+  },
+  "raw_depth_dimensions": [
+    640,
+    400
+  ],
+  "bitstream": {
+    "sha256": "e2d839c5eba425db28e65feb9495d7d04de3545f374f3545d2c5a93995723a2f",
+    "bytes": 7797692,
+    "part": "xck26-sfvc784-2LV-c",
+    "clock_hz": 100000000,
+    "control_base": "0xa0000000",
+    "bram_base": "0xa0010000",
+    "wns_ns": 5.809,
+    "whs_ns": 0.01
+  },
+  "sample_test": {
+    "implementation": "FPGA_PL_HLS",
+    "pixels": 256000,
+    "blocks": 63,
+    "valid_count": 166928,
+    "sum_raw": 79931714,
+    "min_raw": 300,
+    "max_raw": 723,
+    "mean_raw": 478.83946372088565,
+    "lower_raw": 300,
+    "upper_raw": 1500,
+    "elapsed_ms": 32.64303600008134,
+    "cpu_reference_match": true,
+    "input_sha256": "0d16225a39a30e80ca8b71978a9a5caf049d58b4ec13a88f8020232cc571efa1",
+    "output_sha256": "04b9cac32841b11f39bfdcff110ae5b214780a769c180db1c830480e89a2de81"
+  },
+  "range_test": {
+    "implementation": "FPGA_PL_HLS",
+    "pixels": 256000,
+    "blocks": 63,
+    "valid_count": 66094,
+    "sum_raw": 36143899,
+    "min_raw": 500,
+    "max_raw": 599,
+    "mean_raw": 546.8559778497291,
+    "lower_raw": 500,
+    "upper_raw": 600,
+    "elapsed_ms": 32.232233000286215,
+    "cpu_reference_match": true,
+    "input_sha256": "0d16225a39a30e80ca8b71978a9a5caf049d58b4ec13a88f8020232cc571efa1",
+    "output_sha256": "fa2d657b242c3c023fc563d4ff91c4d08c1b255a19e8ae0d2012bd203171caf7"
+  },
+  "pl_loaded": true,
+  "boot_autostart": false,
+  "robot_motion_commands_sent": false
+}

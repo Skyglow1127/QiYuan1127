@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "quantile": 0.95,
+  "quantile_method": "higher",
+  "units": "metres",
+  "empirical_only": true,
+  "fit_split": "calibration",
+  "model_sha256": "326acb4a491568bf07a39cfa73a45920d6bae73a63f6b658b2d338f1d4a5e96c",
+  "dataset_sha256": "801a4be7b980c1ad8d1ef5195d13e20cd472e2eda41b1998dbffa50a70ee2570",
+  "bucket_edges": [
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0
+  ],
+  "bucket_interval": "first [lower,upper], subsequent (lower,upper]",
+  "buckets": [
+    {
+      "lower": 0.0,
+      "upper": 0.5,
+      "count": 1441
+    },
+    {
+      "lower": 0.5,
+      "upper": 1.0,
+      "count": 1252
+    },
+    {
+      "lower": 1.0,
+      "upper": 1.5,
+      "count": 757
+    },
+    {
+      "lower": 1.5,
+      "upper": 2.0,
+      "count": 729
+    },
+    {
+      "lower": 2.0,
+      "upper": 2.5,
+      "count": 701
+    },
+    {
+      "lower": 2.5,
+      "upper": 3.0,
+      "count": 426
+    }
+  ],
+  "empty_bucket_policy": "global calibration quantile; count remains zero",
+  "calibration_episode_ids": [
+    "brake_2010030",
+    "brake_2010031",
+    "brake_2010032",
+    "brake_2010033",
+    "cutin_2020030",
+    "cutin_2020031",
+    "cutin_2020032",
+    "cutin_2020033",
+    "follow_2000030",
+    "follow_2000031",
+    "follow_2000032",
+    "follow_2000033",
+    "traffic_2030030",
+    "traffic_2030031",
+    "traffic_2030032",
+    "traffic_2030033"
+  ],
+  "analytic": {
+    "quantiles": [
+      [
+        0.4099607467651367,
+        0.37234851717948914
+      ],
+      [
+        1.3187341690063477,
+        1.0513277053833008
+      ],
+      [
+        3.195577621459961,
+        2.45768404006958
+      ],
+      [
+        5.835605621337891,
+        4.192738056182861
+      ],
+      [
+        9.238758087158203,
+        6.425564289093018
+      ],
+      [
+        14.729766845703125,
+        9.14246940612793
+      ]
+    ],
+    "global_quantile": [
+      6.151939392089844,
+      4.798849105834961
+    ],
+    "calibration_errors": {
+      "count": 5306,
+      "mae_xy_m": [
+        1.425290822982788,
+        1.016494870185852
+      ],
+      "rmse_xy_m": [
+        2.923992156982422,
+        2.0420124530792236
+      ],
+      "p95_absolute_xy_m": [
+        6.151939392089844,
+        4.798849105834961
+      ],
+      "mean_displacement_error_m": 1.9588507413864136
+    },
+    "heldout_coverage": {
+      "split": "test",
+      "count_in_calibrated_range": 8070,
+      "count_outside_calibrated_range": 1,
+      "coordinate_coverage": [
+        0.8920693928128872,
+        0.8992565055762082
+      ],
+      "joint_coverage": 0.8245353159851301,
+      "used_for_fitting": false
+    }
+  },
+  "learned": {
+    "quantiles": [
+      [
+        0.3281002640724182,
+        0.30263659358024597
+      ],
+      [
+        0.6245611906051636,
+        0.4555031657218933
+      ],
+      [
+        1.3362059593200684,
+        0.8046004176139832
+      ],
+      [
+        2.417062759399414,
+        1.360152006149292
+      ],
+      [
+        3.6491894721984863,
+        2.2038488388061523
+      ],
+      [
+        4.13439416885376,
+        3.0410759449005127
+      ]
+    ],
+    "global_quantile": [
+      1.6990318298339844,
+      0.9792744517326355
+    ],
+    "calibration_errors": {
+      "count": 5306,
+      "mae_xy_m": [
+        0.43732285499572754,
+        0.28120940923690796
+      ],
+      "rmse_xy_m": [
+        1.1716859340667725,
+        0.6059308648109436
+      ],
+      "p95_absolute_xy_m": [
+        1.6990318298339844,
+        0.9792744517326355
+      ],
+      "mean_displacement_error_m": 0.5952335596084595
+    },
+    "heldout_coverage": {
+      "split": "test",
+      "count_in_calibrated_range": 8070,
+      "count_outside_calibrated_range": 1,
+      "coordinate_coverage": [
+        0.9296158612143742,
+        0.9325898389095415
+      ],
+      "joint_coverage": 0.8755885997521685,
+      "used_for_fitting": false
+    }
+  }
+}

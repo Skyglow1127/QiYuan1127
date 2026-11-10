@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "stage": "P2",
+  "optimization": "runtime_cache_blocker",
+  "status": "blocked",
+  "environment": {
+    "os": "Ubuntu 24.04.2 LTS",
+    "cpu": "AMD Ryzen AI 9 HX 370 w/ Radeon 890M",
+    "python_version": "3.12.3",
+    "python_executable": "/home/aup/Documents/Codex/2026-10-30/w/work/ryzenai-venv/bin/python",
+    "driver": "2.25.260102.56.release_20260630,88dda53eee336c998abca38c71d5bc79fb3633b8",
+    "rocm_version": "7.14.1",
+    "ryzen_ai_version": "1.8.0",
+    "ort_version": "1.27.0",
+    "ep_version": "1.8.0",
+    "power_mode": "performance",
+    "npu_frequency": null,
+    "ac_power": null,
+    "timestamp_utc": "2026-10-29T17:47:05.812138+00:00",
+    "power_mode_probe": {
+      "command": [
+        "powerprofilesctl",
+        "get"
+      ],
+      "returncode": 0,
+      "stdout": "performance",
+      "stderr": ""
+    },
+    "kernel": "Linux 6.14.0-27-generic x86_64 GNU/Linux",
+    "logical_cpus": "24",
+    "xrt_version": "2.25.37",
+    "npu_firmware_version": "1.1.2.64",
+    "rocm_version_scope": "local LeRobot environment package metadata only; no GPU import or benchmark",
+    "ep_version_scope": "VOE distribution version; VitisAI EP implementation packaged with onnxruntime-vitisai",
+    "ort_vitisai_package_version": "1.27.0",
+    "available_providers": [
+      "VitisAIExecutionProvider",
+      "CPUExecutionProvider"
+    ],
+    "npu_power_mode": "default",
+    "npu_frequency_unit": "MHz",
+    "memory_total_kib": 28334220,
+    "physical_memory_capacity": null,
+    "memory_speed": null,
+    "memory_bandwidth": null,
+    "timestamp": "2026-10-30T00:23:09.050+08:00",
+    "power_settings_changed": false,
+    "unknown_fields": {
+      "npu_frequency": "No clock/frequency attributes found in NPU sysfs; xrt-smi report does not expose frequency.",
+      "ac_power": "No devices reported under /sys/class/power_supply.",
+      "physical_memory_capacity": "DMI type 17 unavailable without root/password; OS-visible memory is recorded separately.",
+      "memory_speed": "DMI type 17 unavailable without root/password; no measured LPDDR speed.",
+      "memory_bandwidth": "No bandwidth benchmark run; supplied ~120 GB/s is not a local measurement."
+    },
+    "runtime_distribution_versions": {
+      "onnxruntime-vitisai": "1.27.0",
+      "voe": "1.8.0",
+      "flexml": "1.8.0",
+      "ryzenai-onnx-utils": "1.8.0",
+      "vitis-aie-essentials": "1.8.0"
+    },
+    "benchmark_python_executable": "/home/aup/Documents/Codex/2026-10-30/w/work/ryzenai-venv/bin/python",
+    "supplied_fingerprint": {
+      "path": "/home/aup/Documents/Codex/2026-10-30/w/outputs/results/P0_environment.json",
+      "sha256": "a7268994bde23a833117f3e1403be82ef450a6e3e4043c4c9d00026a7829c9d2"
+    }
+  },
+  "performance": null,
+  "npu_only_proven": false,
+  "warmup_completed": 0,
+  "samples_completed": 0,
+  "decision": "Stop performance optimization because installed SDK cannot execute the full static backbone through VitisAI EP; cold compilation did not offload actual execution and strict cached reload segfaulted. Root cause unconfirmed.",
+  "stop_rule": "unavoidable_dependency_blocker_in_current_available_SDK",
+  "p2_completed": false,
+  "p2_below_6_tflops_stop_evaluated": false,
+  "target_8_tflops_achieved": false,
+  "evidence": [
+    "P2_backbone_kv_pad_full_audit.json",
+    "P2_backbone_kv_pad_cached_strict.json",
+    "P1_vision_measured_baseline.json",
+    "P2_backbone_cached_crash_diagnosis.json"
+  ],
+  "runtime_binary_fingerprints": [
+    {
+      "path": "/home/aup/Documents/Codex/2026-10-30/w/work/ryzenai-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime_vitisai_ep.so",
+      "bytes": 71403752,
+      "sha256": "cf5206d4810e503e017dfac1fb0cfe89789ff9c3eae57d6db1682a040d28a09b"
+    },
+    {
+      "path": "/home/aup/Documents/Codex/2026-10-30/w/work/ryzenai-venv/lib/python3.12/site-packages/onnxruntime/capi/libonnxruntime_providers_vitisai.so",
+      "bytes": 273680,
+      "sha256": "e92a6ad323c8a426f45c1b3211b202e1f598ad031face7e402332768ed846539"
+    },
+    {
+      "path": "/home/aup/Documents/Codex/2026-10-30/w/work/ryzenai-venv/lib/python3.12/site-packages/flexmlrt/lib/libflexmlrt.so",
+      "bytes": 12623576,
+      "sha256": "793c5327d6f7614d0d7f6df84fba4cd11bf251fea0fa54a0c5e30e799931daff"
+    },
+    {
+      "path": "/home/aup/Documents/Codex/2026-10-30/w/work/ryzenai-venv/lib/python3.12/site-packages/voe/lib/libflexmlrt.so",
+      "bytes": 12623576,
+      "sha256": "0fca2344557642b23b7fb9369781b782d412a227864ffa760934c01747ca7dad",
+      "scope": "VOE-bundled runtime selected by launcher library search; confirmed mapped in successful vision audit. Separate flexmlrt wheel also ships a library, both are vendor-provided."
+    }
+  ],
+  "required_external_resolution": "AMD-provided fix for these EP/runtime versions and supplied reproducer, or official workaround; no invented patch filename. Existing SDK wheels are local; no account/license download blocker was found.",
+  "root_cause_hypotheses": {
+    "rai_over_2GiB": "Unproven. No primary documentation establishing a 2GiB RAI/partition limit was found."
+  },
+  "claims_not_supported": [
+    "full-block effective TFLOPS",
+    "full-block p50/p95",
+    ">=8 TFLOPS",
+    "NPU hardware ceiling",
+    "native INT8 accuracy",
+    "P3-P7 A/B gain"
+  ],
+  "native_crash_localization": {
+    "signal": 11,
+    "location": "flexmlrt::ryzen_ai_xrt::ryzen_ai_xrt",
+    "library": "voe/lib/libflexmlrt.so",
+    "phase": "VAIML hardware runner construction inside ORT FunctionKernel creation / InferenceSession::Initialize, before first inference call",
+    "call_chain": [
+      "flexmlrt::ryzen_ai_xrt constructor",
+      "FlexMLHWRunnerImpl / FlexMLHWRunner",
+      "FlexMLModelRunner::createRunnersForSubgraph",
+      "flexmlrt::client::Model",
+      "vaip_vaiml_custom_op::MyCustomOpGraphMode",
+      "VitisAIExecutionProvider::Compile callback",
+      "onnxruntime::FunctionKernel::Create",
+      "InferenceSession::Initialize"
+    ],
+    "not_an_oom_killer_termination": true,
+    "allocation_failure_cause_not_excluded": true
+  },
+  "derived_budget": {
+    "source_flops": "P1_vision_measured_baseline.json manifest.contents.flops_per_block",
+    "source_vision_p50": "P1_vision_measured_baseline.json performance.stage.p50_ms",
+    "block_useful_flops": 5023337152512,
+    "latency_ms_at_target_8_tflops": 627.917144064,
+    "latency_ms_at_p2_threshold_6_tflops": 837.222858752,
+    "is_measurement": false,
+    "formula": "latency_ms = useful_FLOPs / effective_TFLOPS / 1e12 * 1000",
+    "vision_p50_ms": 723.666984,
+    "serial_block_tflops_upper_bound_with_current_vision": 6.941503845796563,
+    "assumption": "Strictly serial block with unchanged measured vision implementation and nonnegative remaining latency; not a measured block result or pipelined throughput."
+  }
+}

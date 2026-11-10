@@ -1,0 +1,22 @@
+{
+  "demo_20261025_222611": {
+    "formal_duration_s": 99.27116104500601,
+    "formal_samples": 890,
+    "source_sha256": {
+      "joint_samples.jsonl": "557b0e73476dda6d5dadb6c3f75eb07c8c68de60663526ba71bec2012955952b",
+      "joint_timeline.csv": "4da0fd9fe9a5a67894cfb268787e530c1d43204516e08dae7f506cf011f1df1e",
+      "events.jsonl": "00d9703c93270d83630c3308a89ae4a5c1d8f5b08d219dc60fc6aa2ca5b0eaf0",
+      "summary.json": "a522418b16626470180d00ea38d9cf015798d8f786c8a0a3afa7e2be39594cfa"
+    }
+  },
+  "demo_20261025_230106": {
+    "formal_duration_s": 39.96698662600829,
+    "formal_samples": 359,
+    "source_sha256": {
+      "joint_samples.jsonl": "a92b0f0b58367ce18731577faa4bd6d76d4e810cbb62931a5a56781635dbfc7c",
+      "joint_timeline.csv": "5981a07c95270bb1e7ceb89f00e419d2bdd2ff77a10e4713535ce865269637fc",
+      "events.jsonl": "fafa0ac809f9abf0c7a7b49dd31a443a74e28008c085e830222d100e48bf728d",
+      "summary.json": "812cbc3598c9bc8fa059c67a521689f51be9a6a7c9aa6e1695f8292644559d7f"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+π0.5 NPU 数值问题修复验证（2026-11-04）
+数值回归通过：True。本次仅一个真实录制样本，未验证机械臂任务成功率。
+
+实施方式：真实 SigLIP + 投影重新导出为静态 batch=1；VAIML 配置 tp_size=1。
+NPU 依次执行 global、wrist 两次，然后拼回 [2,256,2048] FP32 特征接入原 GPU π0.5 + 020000 LoRA。
+CPU 只做运行时转换、IPC、两份特征的拼接及原有管理工作；没有 CPU 视觉回退、补通道或修改动作值。
+这是针对当前环境已验证的编译/运行配置规避；尚未定位 AMD 内部导致 TP=2 或 batch=2 异常的具体源代码。
+
+定位证据：results/repair_configuration_matrix.json 保存同一真实卷积的 TP/batch 对照。
+TP=1,batch=2 消除零通道，但第二张相机仍有明显误差；TP=1,batch=1 的单层余弦为 0.9999906444。
+绑定 NaN 初始化输出仍得到 50% 零，说明并非 Python 未读完缓冲区；运行时返回转换前的 BF16 缓冲区已存在零。
+BF16/FP32 转换函数单独测试通过；替换为已有另一份 libflexmlrt 未消除问题。
+纯 BF16 I/O 探针编译失败：gemm_bf16xbfp16 未声明。直接 FlexML 探针缺少 aiecompiler PATH，未作为运行证据。
+
+完整视觉特征（与原 GPU FP32 比）：
+修复前 cosine=0.7183173570；修复后 cosine=0.9999239941
+max_abs=2.32894897, mean_abs=0.0352265978, RMSE=0.0529281039
+精确零比例=0.0; 重复特征最大差=0.0
+数值门槛：cosine>=0.9999，relative_RMSE<=0.02，有限值，无半零异常，重复特征和动作完全一致。
+这些是工程回归门槛，不代表已满足任何未指定的机械臂动作容差。
+
+同一双相机、状态、文字、seed=0 初始噪声，动作 [50,7]，六关节 degree，夹爪 metre。
+逐轴 |NPU-GPU|（最大值 / 平均值）：
+joint_1.deg: 0.226333618 / 0.0986035919 degree
+joint_2.deg: 0.305798054 / 0.115518112 degree
+joint_3.deg: 0.363529205 / 0.118633041 degree
+joint_4.deg: 0.275000572 / 0.139329596 degree
+joint_5.deg: 0.655931473 / 0.400724337 degree
+joint_6.deg: 0.195846558 / 0.0809828186 degree
+gripper.m: 0.000156311318 / 7.58704171e-05 metre
+原 GPU 入口复现最大差=0.0; NPU 动作重复最大差=0.0
+
+预热每路径 2 次，计时每路径 3 次；以下为中位数 ms：
+GPU 双相机视觉 531.004
+NPU 两次 session.run 合计 586.251（包含内部拷贝和同步）
+GPU pack/D2H/sync 0.464; host concat 0.287
+IPC/copy/control 1.201; H2D/cast/sync 0.585
+视觉完整往返 588.862
+GPU 完整动作块 1479.093; NPU+GPU 完整动作块 1607.681
+GPU耗时/混合耗时=0.920016（大于1才表示混合路径更快）。
+首次编译/创建 199.220s；首次双图像视觉 0.607s。
+本次有既有 Vivado 构建同时运行；未终止或修改。计时为当前负载下的小样本结果。
+
+真实 NPU 执行审计通过：True。完整报告：/home/aup/NPU/pi05_vision_npu/results/repair_final/npu_session/execution_audit.json
+AMD 分配 NPU 节点=1034，CPU 节点=0；ORT 与硬件执行证据保留在同目录。
+原始动作、特征、初始噪声、profile、算子分配均在 results/repair_final/。
+旧失败结果保留于 results/final_run/，旧 REPORT.txt 是修复前的历史报告。
+真实权重与原文件一致性证据：results/repair_source_checks.json。
+
+复现命令（输出目录必须尚不存在）：
+bash /home/aup/NPU/pi05_vision_npu/run_offline.sh --vision both --warmup 2 --samples 3 --npu-model /home/aup/NPU/pi05_vision_npu/models/vision_batch1.onnx --npu-config /home/aup/NPU/pi05_vision_npu/code/vaiml_tp1.json --output-dir /home/aup/NPU/pi05_vision_npu/results/repair_reproduce_01
+仅 GPU 基线：同上改 --vision gpu，使用新的输出目录。
+无需新增依赖、系统升级或驱动重启。NPU 仍为现有 Ryzen AI 1.8 环境，GPU 仍为原 ROCm 环境。
+所有执行均离线，无机械臂、CAN、串口或 PL 调用。

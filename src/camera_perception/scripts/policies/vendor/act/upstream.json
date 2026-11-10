@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/tonyzhaozh/act",
+  "commit": "742c753c0d4a5d87076c8f69e5628c79a8cc5488",
+  "sha256": {
+    "LICENSE": "4666c312da313e6c46929f6695d06cf98a2e7359b9c7dcbb0ea232d01b32cd42",
+    "detr/LICENSE": "b208c52b00a2df2c8f4c3298c34407bf2bfe409968213372251c91fcc737a1a5",
+    "detr/models/detr_vae.py": "499d968a3704156e5e29425a29691c3fa93421481d3609ed6b600b21801270f1",
+    "detr/models/transformer.py": "c6d2a1e7138e6ca62db7cc61bfc99857fb2a3a9375ba7b304310ca264f357ee2",
+    "detr/models/backbone.py": "dec9770e496e2deb56f694e622a15d01ea3bdea977c2446fb3c41bc18cf4ed55",
+    "detr/models/position_encoding.py": "5a8f62c66fc7ec66e862bdfe96e122098b93a688fbed514460990c74fa307151",
+    "detr/util/misc.py": "b56dfabebf8eded2e7dbf359e167bd308d9c75ee0394f63a751cad9eee597f00"
+  },
+  "patches": "none; D1 adaptation lives outside vendor directory"
+}

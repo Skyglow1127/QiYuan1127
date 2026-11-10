@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>KR260 高低电平触觉监测</title>
+  <style>
+    :root{--bg:#f3f5f8;--paper:#fff;--ink:#152336;--muted:#58697c;--line:#dce3eb;--blue:#1666d8;--teal:#00877b;--amber:#916000;--red:#b72d39;--radius:14px}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;font-size:14px;line-height:1.6}button,input,select{font:inherit}button,a,input,select{touch-action:manipulation}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.48}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #6ca8fb;outline-offset:3px}a{color:var(--blue)}.shell{max-width:1480px;margin:auto;padding:30px 32px 36px}.top{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;margin-bottom:20px}.eyebrow{font-size:11px;font-weight:750;letter-spacing:.16em;color:var(--muted);margin:0 0 5px}h1{font-size:28px;line-height:1.3;letter-spacing:-.025em;margin:0 0 8px;font-weight:750}.subtitle{margin:0;color:var(--muted);font-size:13px}.state{display:flex;align-items:center;gap:9px;white-space:nowrap;border:1px solid var(--line);border-radius:30px;padding:8px 15px;background:#fff;font-weight:650;margin-top:6px}.dot{width:8px;height:8px;border-radius:50%;background:#8b9aaa}.state.running .dot{background:var(--teal);box-shadow:0 0 0 4px #e4f3ef}.state.error .dot{background:var(--red)}.state.starting .dot{background:#d7940a}.notice{border:1px solid #d7e3f4;background:#edf4fe;color:#344f71;padding:12px 16px;border-radius:10px;margin-bottom:18px;font-size:13px}.notice strong{color:#203c60}.demo-banner{border:1px solid #e7be71;background:#fff2d8;color:#784900;font-weight:700;padding:12px 16px;border-radius:10px;margin-bottom:18px}.hidden{display:none!important}.layout{display:grid;grid-template-columns:296px minmax(0,1fr);gap:20px;align-items:start}.panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 2px 4px #15233603}.settings{padding:20px}.panel-title{font-size:15px;line-height:1.4;font-weight:750;margin:0}.section-kicker{font-size:11px;font-weight:650;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}.settings .section-kicker{margin:2px 0 18px}.field{display:flex;flex-direction:column;gap:5px;margin-bottom:13px}.field label,.field-label{font-size:12px;font-weight:650;color:#435469}.field input,.field select,.compact-select{width:100%;border:1px solid #cbd6e1;background:#fff;border-radius:7px;padding:8px 10px;min-height:39px;color:var(--ink)}input::placeholder{color:#8390a1}input:disabled,select:disabled{background:#f4f6f9;color:#65758a}.field small,.hint{font-size:11px;color:var(--muted);line-height:1.55}.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.rule{border:0;border-top:1px solid var(--line);margin:18px 0}.check{display:flex;gap:9px;align-items:flex-start;font-size:12px;line-height:1.65;color:#405166}.check input{flex:none;margin:4px 0 0;width:16px;height:16px;accent-color:var(--blue)}.check strong{color:var(--ink)}.actions{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:17px}.button{border-radius:8px;padding:9px 12px;border:1px solid #cbd6e1;background:#fff;font-weight:650;color:#33475c;min-height:40px;text-align:center;text-decoration:none}.button:hover:not(:disabled){background:#f0f5fc}.primary{background:var(--blue);border-color:var(--blue);color:#fff}.primary:hover:not(:disabled){background:#0a55bc}.danger{color:#a82d39;border-color:#e4c2c7;background:#fffafb}.wide{width:100%;margin-top:9px}.mini-note{font-size:11px;color:var(--muted);margin:12px 0 0}.main{min-width:0}.metrics{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}.channel{padding:18px 20px;position:relative;overflow:hidden}.channel:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--blue)}.channel.second:before{background:var(--teal)}.channel-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.channel-name{font-size:13px;font-weight:700}.channel-name span{font-size:11px;color:var(--muted);font-weight:400;margin-left:7px}.trigger{font-size:11px;padding:3px 8px;border-radius:5px;background:#eef1f5;color:#607084;font-weight:650}.trigger.active{background:#fde9e8;color:#a82d39}.trigger.inactive{background:#e7f4ee;color:#247252}.raw{display:flex;align-items:baseline;gap:10px;margin:8px 0 6px}.raw-value{font-size:45px;line-height:1.1;font-weight:650;letter-spacing:-.04em;font-variant-numeric:tabular-nums}.raw-label{font-size:12px;color:var(--muted)}.channel-foot{display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:11px;font-variant-numeric:tabular-nums}.channel-foot b{font-weight:650;color:#344a62}.chart-panel{padding:20px 22px 14px}.chart-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:8px}.chart-sub{font-size:11px;color:var(--muted);margin:4px 0 0}.chart-tools{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:flex-end}.chart-tools label{font-size:12px;color:var(--muted);white-space:nowrap}.compact-select{padding:4px 7px;min-height:32px;width:auto;margin-left:5px;font-size:12px}.freeze{display:flex;align-items:center;gap:5px}.freeze input{accent-color:var(--blue);width:15px;height:15px}.chart-wrap{height:340px;position:relative;margin-top:13px}canvas{width:100%;height:100%;display:block}.chart-empty{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;color:var(--muted);font-size:13px;text-align:center;padding:50px}.chart-bottom{display:flex;justify-content:space-between;gap:15px;font-size:11px;color:var(--muted);border-top:1px solid #edf0f4;padding-top:10px;margin-top:5px}.legend{display:flex;gap:17px;flex-wrap:wrap}.legend span{display:flex;align-items:center;gap:6px}.swatch{height:3px;width:17px;border-radius:2px;background:var(--blue)}.swatch.teal{background:var(--teal)}.runbar{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:16px;padding:17px 6px}.runitem{padding:0 17px;border-right:1px solid var(--line);min-width:0}.runitem:last-child{border:0}.runitem dt{color:var(--muted);font-size:11px;margin:0 0 4px}.runitem dd{margin:0;font-size:19px;font-weight:650;line-height:1.3;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.runitem dd small{font-size:11px;color:var(--muted);font-weight:400}.runitem.file dd{font-size:11px;line-height:1.6;font-weight:500}.runbar dl{margin:0}.session-note{color:var(--muted);font-size:11px;margin:10px 3px 0;overflow-wrap:anywhere}.feedback{border:1px solid #e2b7be;background:#fff0f2;color:#8e2230;border-radius:9px;padding:12px 14px;margin-bottom:16px;font-size:12px;white-space:pre-wrap;overflow-wrap:anywhere}.feedback.info{border-color:#cbdcef;background:#eff5fc;color:#365672}.diagnostics{margin-top:16px;padding:15px 19px}.diagnostics summary{cursor:pointer;font-size:12px;font-weight:650;color:#435469}.diagnostics pre{font:11px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;max-height:300px;overflow:auto;background:#f5f7fa;border-radius:7px;padding:12px;color:#253b53;margin:12px 0 0}.footer{margin:22px 0 0 316px;font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:16px}.stale{color:var(--amber)}
+    @media(max-width:1050px){.shell{padding:24px 20px}.layout{grid-template-columns:260px minmax(0,1fr);gap:16px}.settings{padding:17px}.chart-top{flex-direction:column;gap:10px}.chart-tools{justify-content:flex-start}.channel{padding:16px}.channel-name span{display:block;margin:0}.channel-foot{flex-direction:column;gap:0}.chart-panel{padding:18px 16px 12px}.runbar{grid-template-columns:repeat(2,1fr);row-gap:15px}.runitem:nth-child(2){border:0}.footer{margin-left:276px}.chart-wrap{height:320px}}
+    @media(max-width:720px){.shell{padding:20px 14px}.top{gap:12px}.state{font-size:11px;padding:6px 10px}h1{font-size:23px}.subtitle{font-size:12px}.layout{grid-template-columns:1fr}.settings{display:block}.metrics{gap:10px}.channel{padding:15px}.raw-value{font-size:39px}.raw{gap:7px}.channel-top{align-items:flex-start}.trigger{font-size:10px;padding:2px 5px}.chart-wrap{height:320px}.footer{margin-left:0;flex-direction:column;gap:4px}.chart-bottom{flex-direction:column;gap:5px}.settings .section-kicker{margin-bottom:14px}.notice{font-size:12px}.runitem{padding:0 13px}}
+    @media(prefers-reduced-motion:no-preference){button,a.button{transition:background .12s}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="top">
+      <div><p class="eyebrow">KR260 · DIGITAL TACTILE</p><h1>高低电平 · 触觉监测</h1><p class="subtitle">DO1 / DO2 → PL 两级同步 → AXI GPIO → PS Linux → 触觉接口</p></div>
+      <div id="stateBadge" class="state" role="status"><span class="dot"></span><span id="stateText">连接服务中</span></div>
+    </header>
+    <div class="notice"><strong>沿用已核实四线接口：</strong>VCC → J21.1（3.3 V），GND → J21.6，DO1 → J21.11（AB14），DO2 → J21.12（Y14）。原始 0/1 电平与消抖接触状态分别记录；程序启动时核实 PL → PS 的 AXI GPIO 映射。</div>
+    <div id="sensorNotice" class="notice"><strong>未声明传感器已连接。</strong>不把悬空电平当作触觉数据。</div>
+    <div id="demoBanner" class="demo-banner hidden" role="status">演示数据 · 合成的数字电平，仅用于界面测试，不是传感器实测。</div>
+    <div class="layout">
+      <aside class="panel settings" aria-label="采集设置">
+        <h2 class="panel-title">采集设置</h2><p class="section-kicker">DATA ACQUISITION</p>
+        <form id="settingsForm">
+          <div class="field"><label for="source">数据源</label><select id="source" class="config"><option value="ssh">KR260 · SSH 远程读取</option><option value="local">本机 · Linux GPIO 读取</option><option value="demo">演示 · 合成数据</option></select></div>
+          <div class="field" id="hostField"><label for="host">SSH 别名 / 用户与地址</label><input id="host" class="config" value="pressure-kr260" list="hostHistory" autocomplete="off" spellcheck="false" placeholder="pressure-kr260 或 ubuntu@主机地址"><datalist id="hostHistory"></datalist><small>pressure-kr260 指向已登录的 10.42.0.55。连接参数在 ssh_config；页面不收集密码。</small></div>
+          <div id="gpioFields">
+            <div class="field"><label for="chip">PL AXI GPIO 设备</label><input id="chip" class="config mapping-input" value="auto" placeholder="auto 或 /dev/gpiochipN" autocomplete="off" spellcheck="false"><small>auto 根据设备树与字符设备匹配，避免重启后编号变化。</small></div>
+            <div class="row2"><div class="field"><label for="offset1">DO1 line offset</label><input type="number" id="offset1" class="config mapping-input" min="0" step="1" value="0"></div><div class="field"><label for="offset2">DO2 line offset</label><input type="number" id="offset2" class="config mapping-input" min="0" step="1" value="1"></div></div>
+          </div>
+          <div class="field"><label for="rate">目标采样率 / Hz</label><input type="number" id="rate" class="config" min="1" max="500" step="1" value="100"><small>范围 1–500 Hz；实际速率受 Linux 调度与传输影响。</small></div>
+          <div class="row2"><div class="field"><label for="polarity1">DO1 触发电平</label><select id="polarity1" class="config"><option value="unknown">未知 / 仅原始电平</option><option value="low">低电平 0 触发</option><option value="high">高电平 1 触发</option></select></div><div class="field"><label for="polarity2">DO2 触发电平</label><select id="polarity2" class="config"><option value="unknown">未知 / 仅原始电平</option><option value="low">低电平 0 触发</option><option value="high">高电平 1 触发</option></select></div></div>
+          <hr class="rule">
+          <label id="mappingLabel" class="check"><input type="checkbox" id="mappingConfirmed" class="config" checked><span><strong>沿用已核实的 J21 四线接口</strong><br>DO1 / DO2 对应 PL bit 0 / 1。程序另行核对当前设备树，不访问 PS 普通 GPIO。</span></label>
+          <hr class="rule">
+          <label class="check"><input type="checkbox" id="sensorConnected" class="config"><span><strong>传感器已接回原接口</strong><br>已连接单路，先同时观察 DO1 / DO2，按变化确定通道。</span></label>
+          <div class="field" style="margin-top:12px"><label for="enabledChannels">使用的传感器通道</label><select id="enabledChannels" class="config"><option value="both">观察 DO1 + DO2 / 双路</option><option value="do1">单路 · DO1</option><option value="do2">单路 · DO2</option></select><small>识别后选择实际通道，未接的一路不参与接触判断。</small></div>
+          <div class="row2" style="margin-top:12px"><div class="field"><label for="debounce">消抖 / ms</label><input id="debounce" class="config" type="number" min="0" max="1000" value="30"></div><div class="field"><label for="stale">失效时间 / ms</label><input id="stale" class="config" type="number" min="50" max="5000" value="250"></div></div>
+          <label class="check"><input id="verified1" class="config" type="checkbox"><span>DO1 按压、释放与触发极性已核实</span></label>
+          <label class="check"><input id="verified2" class="config" type="checkbox"><span>DO2 按压、释放与触发极性已核实</span></label>
+          <p class="mini-note">原始电平可直接观察；机械臂接触接口仅要求所选通道完成响应核实。</p>
+          <div class="actions"><button id="startBtn" class="button primary" type="submit">开始采集</button><button id="stopBtn" class="button danger" type="button" disabled>停止</button></div>
+          <button id="probeBtn" class="button wide" type="button">探测 GPIO 与运行环境</button>
+          <button id="downloadBtn" class="button wide" type="button" disabled>下载本次 CSV</button>
+          <p class="mini-note">开始后配置锁定。停止会结束采集并保留本次曲线；下一次开始会建立新的记录文件。</p>
+        </form>
+      </aside>
+      <main class="main">
+        <div id="feedback" class="feedback hidden" role="alert"></div>
+        <section class="panel" style="padding:16px 20px;margin-bottom:16px"><h2 class="panel-title">机械臂触觉输入</h2><p id="tactileDecision" style="margin:8px 0;font-size:19px;font-weight:700">HOLD · 传感器未连接</p><p id="tactileReasons" class="hint">没有有效触觉值；本程序不发送机械臂动作。</p><p class="hint">只读 JSON：<a href="/api/tactile" target="_blank" rel="noopener">/api/tactile</a> · Python 接入：tactile_client.py · 两路接触不等同于已抓稳</p></section>
+        <section class="metrics" aria-label="实时通道读数">
+          <article class="panel channel"><div class="channel-top"><div class="channel-name">DO1<span>原始数字输入</span></div><span id="trigger1" class="trigger">触发状态未知</span></div><div class="raw"><span id="raw1" class="raw-value">—</span><span class="raw-label">逻辑电平</span></div><div class="channel-foot"><span>观察到的触发次数 <b id="edges1">—</b></span><span>累计触发 <b id="active1">—</b></span></div></article>
+          <article class="panel channel second"><div class="channel-top"><div class="channel-name">DO2<span>原始数字输入</span></div><span id="trigger2" class="trigger">触发状态未知</span></div><div class="raw"><span id="raw2" class="raw-value">—</span><span class="raw-label">逻辑电平</span></div><div class="channel-foot"><span>观察到的触发次数 <b id="edges2">—</b></span><span>累计触发 <b id="active2">—</b></span></div></article>
+        </section>
+        <section class="panel chart-panel" aria-labelledby="chartTitle">
+          <div class="chart-top"><div><h2 class="panel-title" id="chartTitle">压力阈值状态 — 时间</h2><p class="chart-sub">两路原始数字电平 · 阶梯曲线 · 共用采集时间轴</p></div><div class="chart-tools"><label for="window">时间窗口<select id="window" class="compact-select"><option value="10">10 秒</option><option value="30">30 秒</option><option value="60">60 秒</option></select></label><label class="freeze"><input type="checkbox" id="freeze">冻结显示</label></div></div>
+          <div class="chart-wrap"><canvas id="chart" role="img" aria-label="DO1 与 DO2 的数字电平时间曲线，纵轴为 0 和 1，横轴为采集时间秒"></canvas><div id="chartEmpty" class="chart-empty">等待采样<br>选择数据源并开始采集</div></div>
+          <div class="chart-bottom"><div class="legend"><span><i class="swatch"></i>DO1</span><span><i class="swatch teal"></i>DO2</span><span>纵轴：数字电平 0 / 1</span></div><span id="displayNote">曲线仅连接连续收到的采样点</span></div>
+        </section>
+        <section class="panel runbar" aria-label="采集概况"><dl class="runitem"><dt>采集时长</dt><dd id="elapsed">0.00 <small>s</small></dd></dl><dl class="runitem"><dt>已记录采样</dt><dd id="count">0</dd></dl><dl class="runitem"><dt>实际采样率</dt><dd id="actualHz">— <small>Hz</small></dd></dl><dl class="runitem file"><dt>当前 CSV</dt><dd id="csvName">尚未创建</dd></dl></section>
+        <p id="sessionNote" class="session-note">时间戳来自采集端；SSH 模式下为 KR260 板端时间。界面刷新速度与采样率不同。</p>
+        <details id="diagnostics" class="panel diagnostics"><summary>环境探测与诊断输出</summary><pre id="probeOutput">尚未探测。真实采集前请确认 GPIO 已由设备树或已有设计暴露为 Linux 输入。</pre></details>
+      </main>
+    </div>
+    <footer class="footer"><span>四线 DO 采集 · 不驱动 GPIO 输出 · 不修改 FPGA 设计</span><span>短脉冲可能漏采；累计触发时长按离散样本估计。</span></footer>
+  </div>
+  <script>
+    'use strict';
+    const API_TOKEN = '__API_TOKEN__';
+    const $ = id => document.getElementById(id);
+    const stateNames = {idle:'尚未采集', starting:'正在启动', running:'正在采集', stopped:'已停止', error:'采集出错'};
+    let serverState = 'idle', sessionId = null, lastId = 0, points = [], lastStatus = null;
+    let statusBusy = false, samplesBusy = false, actionBusy = false, connected = false;
+    let frozenRight = null, hadGap = false, dirtyChart = true, pendingFeedback = '';
+    const maxPoints = 30000;
+    const finite = value => typeof value === 'number' && Number.isFinite(value);
+    const number = (value, digits=0) => finite(value) ? value.toLocaleString('zh-CN',{minimumFractionDigits:digits,maximumFractionDigits:digits}) : '—';
+    const isActive = () => serverState === 'running' || serverState === 'starting';
+    const source = () => $('source').value;
+
+    function showFeedback(message, informational=false) {
+      const box = $('feedback');
+      box.textContent = message || '';
+      box.classList.toggle('hidden', !message);
+      box.classList.toggle('info', informational);
+    }
+    async function api(path, body) {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), path === '/api/probe' ? 30000 : 12000);
+      try {
+        const options = {signal:controller.signal,cache:'no-store'};
+        if (body !== undefined) Object.assign(options,{method:'POST',headers:{'Content-Type':'application/json','X-API-Token':API_TOKEN},body:JSON.stringify(body)});
+        const response = await fetch(path, options);
+        let result;
+        try { result = await response.json(); } catch (_) { throw new Error('本地服务返回了非 JSON 响应，请检查程序终端。'); }
+        if (!response.ok) throw new Error(result.error || '请求失败（HTTP '+response.status+'）');
+        return result;
+      } catch (error) {
+        if (error.name === 'AbortError') throw new Error('请求超时，请检查本地服务或 SSH 连接。');
+        throw error;
+      } finally { clearTimeout(timer); }
+    }
+    function updateControls() {
+      const locked = isActive() || actionBusy;
+      document.querySelectorAll('.config').forEach(el => {el.disabled = locked;});
+      $('startBtn').disabled = locked || !connected || (source()!=='demo'&&!$('sensorConnected').checked);
+      $('stopBtn').disabled = !isActive() || actionBusy || !connected;
+      $('probeBtn').disabled = locked || source() === 'demo' || !connected;
+      $('downloadBtn').disabled = !lastStatus || !lastStatus.csv_name;
+      $('hostField').classList.toggle('hidden',source() !== 'ssh');
+      $('gpioFields').classList.toggle('hidden',source() === 'demo');
+      $('mappingLabel').classList.toggle('hidden',source() === 'demo');
+      const recordedDemo=lastStatus&&lastStatus.session_id&&(lastStatus.source==='simulated'||lastStatus.config&&lastStatus.config.source==='demo');
+      $('demoBanner').classList.toggle('hidden',source()!=='demo'&&!recordedDemo);
+      $('demoBanner').textContent=recordedDemo?'当前曲线为演示数据 · 合成的数字电平，仅用于界面测试，不是传感器实测。':'已选择演示模式 · 下一次采集将生成合成数字电平，不是传感器实测。';
+      $('startBtn').textContent = serverState === 'starting' ? '正在启动…' : source()!=='demo'&&!$('sensorConnected').checked?'等待接回传感器':'开始采集';
+    }
+    function setBadge(state, label) {
+      $('stateBadge').className = 'state '+state;
+      $('stateText').textContent = label || stateNames[state] || state;
+    }
+    function resetSession(id) {
+      sessionId = id; lastId = 0; points = []; hadGap = false; frozenRight = null;
+      $('freeze').checked = false; dirtyChart = true;
+    }
+    function applyConfig(config) {
+      if (!config) return;
+      if (['ssh','local','demo'].includes(config.source)) $('source').value=config.source;
+      if (typeof config.host === 'string') $('host').value=config.host;
+      if (typeof config.chip === 'string') $('chip').value=config.chip;
+      if (Array.isArray(config.offsets)) config.offsets.forEach((value,i)=>{if(i<2)$('offset'+(i+1)).value=value;});
+      if (finite(config.rate_hz)) $('rate').value=config.rate_hz;
+      if (Array.isArray(config.polarity)) config.polarity.forEach((value,i)=>{if(i<2&&['unknown','low','high'].includes(value))$('polarity'+(i+1)).value=value;});
+      $('mappingConfirmed').checked = config.mapping_confirmed === true;
+      $('sensorConnected').checked = config.sensor_connected === true;
+      if(Array.isArray(config.enabled_channels))$('enabledChannels').value=config.enabled_channels.every(Boolean)?'both':config.enabled_channels[0]?'do1':'do2';
+      if(Array.isArray(config.channel_verified)) config.channel_verified.forEach((v,i)=>{if(i<2)$('verified'+(i+1)).checked=v===true;});
+      if(finite(config.debounce_ms))$('debounce').value=config.debounce_ms;
+      if(finite(config.stale_ms))$('stale').value=config.stale_ms;
+    }
+    function renderStatus(status) {
+      const changed = status.session_id !== sessionId;
+      if (changed) resetSession(status.session_id);
+      if ((changed || !lastStatus) && (status.state === 'running' || status.state === 'starting')) applyConfig(status.config);
+      lastStatus=status; serverState=status.state || 'idle'; connected=true;
+      setBadge(serverState);
+      if (status.error) showFeedback(status.error);
+      else if (!pendingFeedback) showFeedback('');
+      const latest=status.latest;
+      const tactile=status.tactile||{}, demo=status.source==='simulated';
+      $('sensorNotice').classList.toggle('hidden',tactile.sensor_connected===true||demo);
+      $('tactileDecision').textContent=(tactile.decision||'HOLD')+' · '+({HOLD:'触觉输入未就绪',CONTACT:'检测到接触，建议停止继续闭合',NO_CONTACT:'当前未越过接触阈值'}[tactile.decision]||'等待真实采样');
+      $('tactileReasons').textContent=(tactile.reasons||[]).join('；')+(tactile.fresh?' · 最新接收 '+number(tactile.receive_age_ms,0)+' ms 前':'')+'。此接口只提供状态，不发机械臂动作。';
+      [1,2].forEach(i=>{
+        const raw=latest && latest['do'+i], trigger=latest && latest['trigger'+i];
+        const ch=(tactile.channels||[])[i-1]||{}, show=demo||(tactile.fresh&&tactile.sensor_connected);
+        $('raw'+i).textContent=show&&(raw===0||raw===1)?String(raw):'—';
+        $('trigger'+i).textContent=demo?'演示电平':ch.enabled===false?'未使用':!tactile.sensor_connected?'传感器未连接':!tactile.fresh?'数据无效':ch.valid?(ch.contact?'接触（已消抖）':'未接触（已消抖）'):'仅原始电平 / 待核实';
+        $('trigger'+i).className='trigger'+(ch.valid?(ch.contact?' active':' inactive'):'');
+        const polarity=status.config&&status.config.polarity&&status.config.polarity[i-1];
+        $('edges'+i).textContent=polarity&&polarity!=='unknown'?number(status.stats&&status.stats.edges&&status.stats.edges[i-1]):'—';
+        $('edges'+i).title=polarity&&polarity!=='unknown'?'仅统计观察到的未触发 → 触发变化，不计采样间隙内未知事件。':'待确认触发极性';
+        const active=status.stats&&status.stats.active_s&&status.stats.active_s[i-1];
+        $('active'+i).textContent=polarity&&polarity!=='unknown'&&finite(active)?number(active,3)+' s':'—';
+      });
+      $('elapsed').replaceChildren(document.createTextNode(number(status.elapsed,2)+' '),unit('s'));
+      $('count').textContent=number(status.count);
+      $('actualHz').replaceChildren(document.createTextNode((status.count>1?number(status.actual_hz,1):'—')+' '),unit('Hz'));
+      $('csvName').textContent=status.csv_name||'尚未创建';
+      const stamp=latest&&latest.wall_time;
+      $('sessionNote').textContent=(stamp?'最后采样时间：'+stamp+'。 ':'')+(status.session_id?'会话：'+status.session_id+'。 ':'')+'时间戳来自采集端；'+(status.source==='simulated'||status.config&&status.config.source==='demo'?'当前是合成演示数据。':'短脉冲可能漏采，累计触发时长为离散估计。');
+      $('sessionNote').classList.toggle('stale',serverState==='error'||serverState==='stopped');
+      updateControls(); dirtyChart=true;
+    }
+    function unit(label) {const el=document.createElement('small');el.textContent=label;return el;}
+    async function refreshStatus() {
+      if(statusBusy)return;
+      statusBusy=true;
+      try {renderStatus(await api('/api/status'));}
+      catch(error){connected=false;setBadge('error','服务连接中断');showFeedback(error.message+' 已保留历史曲线。当前触觉值无效。');$('tactileDecision').textContent='HOLD · 服务连接中断';[1,2].forEach(i=>{$('raw'+i).textContent='—';$('trigger'+i).textContent='数据无效';$('trigger'+i).className='trigger';});updateControls();}
+      finally{statusBusy=false;}
+    }
+    async function refreshSamples() {
+      if(samplesBusy||!connected||!sessionId)return;
+      samplesBusy=true;
+      const requestedSession=sessionId;
+      try {
+        const data=await api('/api/samples?after='+encodeURIComponent(lastId));
+        if(sessionId!==requestedSession)return;
+        if(data.session_id!==sessionId){await refreshStatus();return;}
+        if(!Array.isArray(data.samples))throw new Error('采样响应格式不正确。');
+        for(const sample of data.samples){
+          if(!Number.isInteger(sample.id)||sample.id<=lastId||!finite(sample.t_s)||(sample.do1!==0&&sample.do1!==1)||(sample.do2!==0&&sample.do2!==1))continue;
+          if(sample.gap || lastId && sample.id!==lastId+1)hadGap=true;
+          if(!lastId && finite(data.oldest_id)&&data.oldest_id>1)hadGap=true;
+          points.push(sample);lastId=sample.id;
+        }
+        if(points.length>maxPoints)points.splice(0,points.length-maxPoints);
+        if(data.error)showFeedback(data.error);
+        dirtyChart=true;
+      }catch(error){showFeedback('采样数据暂时无法读取：'+error.message);}
+      finally{samplesBusy=false;}
+    }
+    function rememberHost(host) {
+      try {const old=JSON.parse(localStorage.getItem('kr260-pressure-hosts')||'[]');const hosts=[host,...(Array.isArray(old)?old:[])].filter((x,i,a)=>typeof x==='string'&&x&&a.indexOf(x)===i).slice(0,8);localStorage.setItem('kr260-pressure-hosts',JSON.stringify(hosts));loadHosts();}catch(_){}
+    }
+    function loadHosts() {
+      try{const hosts=JSON.parse(localStorage.getItem('kr260-pressure-hosts')||'[]');$('hostHistory').replaceChildren();if(Array.isArray(hosts))hosts.forEach(host=>{if(typeof host==='string'){const option=document.createElement('option');option.value=host;$('hostHistory').appendChild(option);}});}catch(_){}
+    }
+    function getConfig() {
+      const cfg={source:source(),host:$('host').value.trim(),chip:$('chip').value.trim(),offsets:[Number($('offset1').value),Number($('offset2').value)],rate_hz:Number($('rate').value),polarity:[$('polarity1').value,$('polarity2').value],mapping_confirmed:$('mappingConfirmed').checked};
+      Object.assign(cfg,{sensor_connected:$('sensorConnected').checked,channel_verified:[$('verified1').checked,$('verified2').checked],debounce_ms:Number($('debounce').value),stale_ms:Number($('stale').value)});
+      cfg.enabled_channels=[$('enabledChannels').value!=='do2',$('enabledChannels').value!=='do1'];
+      if(!Number.isInteger(cfg.rate_hz)||cfg.rate_hz<1||cfg.rate_hz>500)throw new Error('目标采样率必须是 1–500 Hz 的整数。');
+      if(cfg.source!=='demo'){
+        if(!cfg.mapping_confirmed)throw new Error('真实采集前，请先核实 GPIO 输入映射并勾选确认。');
+        if(!cfg.chip)throw new Error('请填写已核实的 GPIO 设备路径。');
+        if(cfg.offsets.some((v,i)=>!Number.isInteger(v)||v<0||!$('offset'+(i+1)).value.trim())||cfg.offsets[0]===cfg.offsets[1])throw new Error('两路 line offset 必须是不同的非负整数。');
+      }
+      if(cfg.source==='ssh'&&!cfg.host)throw new Error('请填写 SSH 用户与地址。');
+      return cfg;
+    }
+    $('settingsForm').addEventListener('submit',async event=>{
+      event.preventDefault();if(actionBusy||isActive())return;
+      let config;try{config=getConfig();}catch(error){pendingFeedback=error.message;showFeedback(error.message);return;}
+      actionBusy=true;pendingFeedback='';showFeedback('正在启动采集…',true);updateControls();
+      try{await api('/api/start',config);if(config.source==='ssh')rememberHost(config.host);await refreshStatus();await refreshSamples();}
+      catch(error){pendingFeedback=error.message;showFeedback(error.message);}
+      finally{actionBusy=false;updateControls();}
+    });
+    $('stopBtn').addEventListener('click',async()=>{
+      if(actionBusy)return;actionBusy=true;updateControls();pendingFeedback='';
+      try{await api('/api/stop',{});await refreshStatus();await refreshSamples();}
+      catch(error){pendingFeedback=error.message;showFeedback(error.message);}
+      finally{actionBusy=false;updateControls();}
+    });
+    $('probeBtn').addEventListener('click',async()=>{
+      if(actionBusy)return;actionBusy=true;pendingFeedback='';updateControls();$('diagnostics').open=true;$('probeOutput').textContent='正在探测，请稍候…';
+      try{const result=await api('/api/probe',{source:source(),host:$('host').value.trim()});let output=result.output||'探测完成，无输出。';try{output=JSON.stringify(JSON.parse(output),null,2);}catch(_){}$('probeOutput').textContent=output;if(result.returncode){pendingFeedback='板端采集环境尚未就绪：请查看下方的依赖、权限或连接诊断。';showFeedback(pendingFeedback);}}
+      catch(error){$('probeOutput').textContent=error.message;pendingFeedback=error.message;showFeedback(error.message);}
+      finally{actionBusy=false;updateControls();}
+    });
+    $('downloadBtn').addEventListener('click',()=>{if(lastStatus&&lastStatus.csv_name){const anchor=document.createElement('a');anchor.href='/api/download';anchor.download='';document.body.appendChild(anchor);anchor.click();anchor.remove();}});
+    $('source').addEventListener('change',()=>{$('mappingConfirmed').checked=false;updateControls();});
+    ['chip','offset1','offset2','host'].forEach(id=>$(id).addEventListener('input',()=>{$('mappingConfirmed').checked=false;}));
+    document.querySelectorAll('.config').forEach(el=>el.addEventListener('change',()=>{pendingFeedback='';if(!lastStatus||!lastStatus.error)showFeedback('');updateControls();}));
+    $('window').addEventListener('change',()=>{dirtyChart=true;});
+    $('freeze').addEventListener('change',()=>{frozenRight=$('freeze').checked?(points.length?points[points.length-1].t_s:0):null;dirtyChart=true;});
+
+    const canvas=$('chart'),ctx=canvas.getContext('2d');
+    function drawChart() {
+      if(!dirtyChart)return;dirtyChart=false;
+      const rect=canvas.getBoundingClientRect(),w=rect.width,h=rect.height,dpr=Math.min(window.devicePixelRatio||1,3);
+      if(w<1||h<1)return;
+      if(canvas.width!==Math.round(w*dpr)||canvas.height!==Math.round(h*dpr)){canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);}
+      ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);
+      const left=48,right=w-18,top=25,bottom=h-38,mid=(top+bottom)/2;
+      const duration=Number($('window').value),last=points.length?points[points.length-1].t_s:0;
+      const endpoint=frozenRight===null?last:frozenRight,end=Math.max(duration,endpoint),start=end-duration;
+      const x=t=>left+(t-start)/duration*(right-left);
+      const lanes=[{name:'DO1',key:'do1',color:'#1666d8',y1:top+22,y0:mid-24},{name:'DO2',key:'do2',color:'#00877b',y1:mid+26,y0:bottom-9}];
+      ctx.font='11px system-ui,sans-serif';ctx.lineWidth=1;
+      for(let i=0;i<=5;i++){
+        const xx=left+(right-left)*i/5,t=start+duration*i/5;
+        ctx.strokeStyle='#e6ebf1';ctx.beginPath();ctx.moveTo(xx,top+8);ctx.lineTo(xx,bottom);ctx.stroke();
+        ctx.fillStyle='#627387';ctx.textAlign='center';ctx.fillText(t.toFixed(duration===10?1:0),xx,bottom+18);
+      }
+      lanes.forEach(lane=>{
+        ctx.textAlign='left';ctx.fillStyle=lane.color;ctx.font='600 11px system-ui,sans-serif';ctx.fillText(lane.name,0,lane.y1-12);
+        ctx.font='11px system-ui,sans-serif';
+        [0,1].forEach(value=>{const yy=value?lane.y1:lane.y0;ctx.strokeStyle='#e6ebf1';ctx.beginPath();ctx.moveTo(left,yy);ctx.lineTo(right,yy);ctx.stroke();ctx.fillStyle='#627387';ctx.textAlign='right';ctx.fillText(String(value),left-13,yy+4);});
+      });
+      ctx.fillStyle='#627387';ctx.textAlign='right';ctx.fillText('采集时间 / s',right,h-3);
+      ctx.save();ctx.beginPath();ctx.rect(left,top+5,right-left,bottom-top);ctx.clip();
+      let from=0;while(from<points.length&&points[from].t_s<start)from++;if(from>0)from--;
+      lanes.forEach(lane=>{
+        ctx.strokeStyle=lane.color;ctx.lineWidth=1.8;ctx.lineJoin='miter';ctx.beginPath();let previous=null,lastVisible=null;
+        for(let i=from;i<points.length;i++){
+          const sample=points[i];if(sample.t_s>end)break;
+          const xx=x(sample.t_s),yy=sample[lane.key]?lane.y1:lane.y0;
+          if(previous&&!sample.gap&&sample.id===previous.id+1&&sample.t_s>=previous.t_s){const prevY=previous[lane.key]?lane.y1:lane.y0;ctx.lineTo(xx,prevY);ctx.lineTo(xx,yy);}else{ctx.moveTo(xx,yy);}
+          previous=sample;lastVisible=sample;
+        }
+        ctx.stroke();
+        if(lastVisible&&lastVisible.t_s>=start){ctx.fillStyle=lane.color;ctx.beginPath();ctx.arc(x(lastVisible.t_s),lastVisible[lane.key]?lane.y1:lane.y0,3,0,Math.PI*2);ctx.fill();}
+      });
+      ctx.restore();
+      const anyVisible=points.some(point=>point.t_s>=start&&point.t_s<=end);
+      $('chartEmpty').classList.toggle('hidden',anyVisible);
+      $('chartEmpty').textContent=points.length?'此时间窗口内没有保留的采样点':serverState==='starting'?'正在等待第一条采样…':'等待采样 · 选择数据源并开始采集';
+      $('displayNote').textContent=(frozenRight!==null?'显示已冻结；采集与记录继续。 ':isActive()?'实时更新。 ':'保留最后采样。 ')+(hadGap?'检测到缺失采样，曲线已断开。':'曲线仅连接连续收到的采样点。');
+    }
+    new ResizeObserver(()=>{dirtyChart=true;drawChart();}).observe(canvas);
+    function frame(){drawChart();requestAnimationFrame(frame);}
+    async function initialize(){try{applyConfig(await api('/api/profile'));}catch(e){showFeedback(e.message);}await refreshStatus();setInterval(refreshStatus,500);setInterval(refreshSamples,100);}
+    loadHosts();updateControls();initialize();requestAnimationFrame(frame);
+  </script>
+</body>
+</html>

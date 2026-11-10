@@ -1,0 +1,66 @@
+[
+  {
+    "profile": "stride1",
+    "lower_Hz": 100000.0,
+    "upper_Hz": 100000.001,
+    "minimum_measured_separation_uHz": 0,
+    "maximum_measured_separation_uHz": 542,
+    "all_sampled_pairs_between_0p5_and_1p5_mHz": false
+  },
+  {
+    "profile": "stride1",
+    "lower_Hz": 199999.999,
+    "upper_Hz": 200000.0,
+    "minimum_measured_separation_uHz": 0,
+    "maximum_measured_separation_uHz": 7849,
+    "all_sampled_pairs_between_0p5_and_1p5_mHz": false
+  },
+  {
+    "profile": "stride1",
+    "lower_Hz": 200000.0,
+    "upper_Hz": 200000.001,
+    "minimum_measured_separation_uHz": 0,
+    "maximum_measured_separation_uHz": 7851,
+    "all_sampled_pairs_between_0p5_and_1p5_mHz": false
+  },
+  {
+    "profile": "stride1",
+    "lower_Hz": 349999.999,
+    "upper_Hz": 350000.0,
+    "minimum_measured_separation_uHz": 0,
+    "maximum_measured_separation_uHz": 7503,
+    "all_sampled_pairs_between_0p5_and_1p5_mHz": false
+  },
+  {
+    "profile": "stride64",
+    "lower_Hz": 100000.0,
+    "upper_Hz": 100000.001,
+    "minimum_measured_separation_uHz": 998,
+    "maximum_measured_separation_uHz": 1001,
+    "all_sampled_pairs_between_0p5_and_1p5_mHz": true
+  },
+  {
+    "profile": "stride64",
+    "lower_Hz": 199999.999,
+    "upper_Hz": 200000.0,
+    "minimum_measured_separation_uHz": 984,
+    "maximum_measured_separation_uHz": 1012,
+    "all_sampled_pairs_between_0p5_and_1p5_mHz": true
+  },
+  {
+    "profile": "stride64",
+    "lower_Hz": 200000.0,
+    "upper_Hz": 200000.001,
+    "minimum_measured_separation_uHz": 984,
+    "maximum_measured_separation_uHz": 1011,
+    "all_sampled_pairs_between_0p5_and_1p5_mHz": true
+  },
+  {
+    "profile": "stride64",
+    "lower_Hz": 349999.999,
+    "upper_Hz": 350000.0,
+    "minimum_measured_separation_uHz": 993,
+    "maximum_measured_separation_uHz": 1004,
+    "all_sampled_pairs_between_0p5_and_1p5_mHz": true
+  }
+]

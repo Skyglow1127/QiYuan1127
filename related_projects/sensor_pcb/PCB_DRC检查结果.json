@@ -1,0 +1,11 @@
+{
+  "project": "检测系统设计2.0",
+  "pcb": "PCB1",
+  "diameter_mm": 42,
+  "copper_layers": 4,
+  "j1": "142-0701-851",
+  "supplier_id": "C6364219",
+  "drc_errors": [],
+  "saved": true,
+  "change": "J1型号、封装、板边位置、模型与天线走线已修正；原理图同步。"
+}

@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "reproduced_original_overlap": [
+    {
+      "pair": [
+        "arm_Link2",
+        "arm_Link5"
+      ],
+      "distance_m": -1.0
+    }
+  ],
+  "rejected_message": "拒绝运动：arm_Link2 ↔ arm_Link5 路径碰撞或间距不足 2 mm",
+  "swept_endpoint_clear": {
+    "end": {
+      "arm_Joint1": 0.8895385479940261,
+      "arm_Joint2": 0.6601252846996799,
+      "arm_Joint3": 0.9202086851244984,
+      "arm_Joint4": 0.3525634823209556,
+      "arm_Joint5": -1.4596040305254183,
+      "arm_Joint6": -0.5188264198237773,
+      "arm_Joint7_1": 0.03,
+      "arm_Joint7_2": -0.03
+    },
+    "hit": {
+      "fraction": 0.4539877300613497,
+      "pair": [
+        "arm_Link7_1",
+        "floor"
+      ],
+      "distance_m": 0.0010071491457879639
+    }
+  },
+  "actual_motion_samples_without_overlap": 30,
+  "self_collision_links_enabled": 9,
+  "margin_m": 0.002,
+  "physics_step_s": 0.0005
+}

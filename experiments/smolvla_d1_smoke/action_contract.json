@@ -1,0 +1,33 @@
+{
+  "schema": "d1-smolvla-offline-action-contract-v1",
+  "scope": "recorded_lift_fragments_software_smoke_only",
+  "observation": {
+    "cameras_in_order": ["global", "wrist"],
+    "image_format": "RGB float32 CHW in [0,1], resized with padding to 512x512 inside policy",
+    "state": "Actual recorded SDK joint positions in J0..J6 order",
+    "language": "Manually added constant lift-stage label; source recordings contain no language instructions"
+  },
+  "action": {
+    "shape": [10, 7],
+    "representation": "absolute_sdk_joint_target_positions",
+    "order": ["J0", "J1", "J2", "J3", "J4", "J5", "J6"],
+    "units": ["degree", "degree", "degree", "degree", "degree", "degree", "uncalibrated_gripper_sdk_raw"],
+    "source_nominal_hz": 5,
+    "source_timing": "Actual command times preserved in samples; this metadata does not configure a live controller",
+    "labels_are": "commanded_targets_not_observed_feedback",
+    "normalization": "training split only, unique action command statistics; constant coordinates use explicit unit scale",
+    "normalization_override_record": "artifacts/normalization_overrides.json"
+  },
+  "model": {
+    "base": "lerobot/smolvla_base",
+    "base_revision": "5e8d12a6e2975b0e5e5fce7c8caf47c371d257b6",
+    "max_state_dim": 32,
+    "max_action_dim": 32,
+    "smoke_flow_sampling_steps": 2,
+    "pretrained_default_flow_sampling_steps": 10,
+    "device": "cpu"
+  },
+  "physical_execution_validated": false,
+  "full_grasp_policy": false,
+  "npu_execution_validated": false
+}

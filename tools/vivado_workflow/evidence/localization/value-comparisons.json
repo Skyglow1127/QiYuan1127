@@ -1,0 +1,73 @@
+{
+  "native_ui_value_comparisons": {
+    "ila_probe": {
+      "equal": true,
+      "records": 10,
+      "before": "ila-values-english.tsv",
+      "after": "ila-values-final.tsv"
+    },
+    "ila_restored": {
+      "equal": true,
+      "records": 10,
+      "before": "ila-values-english.tsv",
+      "after": "ila-values-restored.tsv"
+    },
+    "clock_general": {
+      "equal": true,
+      "records": 38,
+      "before": "clock-general-values-before.tsv",
+      "after": "clock-general-values-zh.tsv"
+    },
+    "clock_output": {
+      "equal": true,
+      "records": 129,
+      "before": "clock-output-values-before.tsv",
+      "after": "clock-output-values-final.tsv"
+    },
+    "smartconnect_inputs_enabled": {
+      "equal": true,
+      "records": 8,
+      "before": "smartconnect-values-before.tsv",
+      "after": "smartconnect-values-fixed.tsv"
+    },
+    "smartconnect_inputs_restored": {
+      "equal": true,
+      "records": 8,
+      "before": "smartconnect-values-before.tsv",
+      "after": "smartconnect-values-english.tsv"
+    },
+    "smartconnect_inputs_reenabled": {
+      "equal": true,
+      "records": 8,
+      "before": "smartconnect-values-english.tsv",
+      "after": "smartconnect-values-final.tsv"
+    },
+    "smartconnect_scene_enabled": {
+      "equal": true,
+      "records": 167,
+      "before": "smartconnect-native-before.tsv",
+      "after": "smartconnect-native-fixed.tsv",
+      "excluded": "DISPLAY canvas bounds/font/background (window resizing); all native node/parameter/edge identities and field values compared"
+    },
+    "smartconnect_scene_restored": {
+      "equal": true,
+      "records": 167,
+      "before": "smartconnect-native-before.tsv",
+      "after": "smartconnect-native-english.tsv",
+      "excluded": "DISPLAY canvas bounds/font/background (window resizing); all native node/parameter/edge identities and field values compared"
+    },
+    "smartconnect_scene_reenabled": {
+      "equal": true,
+      "records": 167,
+      "before": "smartconnect-native-english.tsv",
+      "after": "smartconnect-native-final.tsv",
+      "excluded": "DISPLAY canvas bounds/font/background (window resizing); all native node/parameter/edge identities and field values compared"
+    }
+  },
+  "machine_translation_policy": "review_only",
+  "dictionary_entries_at_initial_comparisons": 1683,
+  "dictionary_sha256_at_initial_comparisons": "752b61ee8660364cc96b6e02ef4edaf146e88497a14ae10f9f1be3fb723f7cad",
+  "comparison_scope": "Captured native input, selected option, checkbox and table-editor values; records are not a count of unique IP parameters.",
+  "final_dictionary_entries": 1709,
+  "final_dictionary_sha256": "e275fa6512c37f9476fc89aa8d44e03ac96a13420757efe69637128acab704e9"
+}

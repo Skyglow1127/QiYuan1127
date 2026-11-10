@@ -1,0 +1,82 @@
+{
+  "verified_at": "2026-10-25T23:12:58.171958+08:00",
+  "status": "recording_and_offline_replay_ready_physical_replay_blocked",
+  "url": "http://127.0.0.1:18771",
+  "desktop_launcher": "/home/aup/桌面/D1示教工作台.desktop",
+  "source_code": "/home/aup/NPU/manual_demo_app",
+  "checks": {
+    "application_tests": {
+      "passed": 10,
+      "includes_formal_velocity_boundary_test": true
+    },
+    "planner_tests": {
+      "passed": 5
+    },
+    "speed_configuration_tests": {
+      "passed": 65,
+      "evidence": "/home/aup/NPU/manual_demo_app/change_backup/velocity_core_20261025/verification.json"
+    },
+    "firmware_timing_candidate_tests": {
+      "normal_build": "passed",
+      "ubsan_float_cast_overflow": "passed",
+      "evidence": "/media/aup/UbuntuData/ACT训练/02_程序与源码/D1/Control/firmware/hold_current_timing_fix/validation_20261025.json",
+      "deployed": false
+    },
+    "real_read_only_start_stop_save": {
+      "session": "demo_20261025_230106",
+      "full_samples": 360,
+      "formal_samples": 359,
+      "formal_duration_s": 39.96698662600829,
+      "interface_test_only": true
+    },
+    "browser": {
+      "original_session_history": "passed",
+      "prepare_at_5_deg_s": "passed",
+      "blocking_reasons_visible": true,
+      "generic_preview_first_last": "passed",
+      "console_errors": []
+    },
+    "launcher_shell_syntax": "passed",
+    "final_app_state": "idle",
+    "source_data_unchanged": true,
+    "workstation_device_commands_sent": 0
+  },
+  "formal_export_verification": {
+    "demo_20261025_222611": {
+      "formal_duration_s": 99.27116104500601,
+      "formal_samples": 890,
+      "source_sha256": {
+        "joint_samples.jsonl": "557b0e73476dda6d5dadb6c3f75eb07c8c68de60663526ba71bec2012955952b",
+        "joint_timeline.csv": "4da0fd9fe9a5a67894cfb268787e530c1d43204516e08dae7f506cf011f1df1e",
+        "events.jsonl": "00d9703c93270d83630c3308a89ae4a5c1d8f5b08d219dc60fc6aa2ca5b0eaf0",
+        "summary.json": "a522418b16626470180d00ea38d9cf015798d8f786c8a0a3afa7e2be39594cfa"
+      }
+    },
+    "demo_20261025_230106": {
+      "formal_duration_s": 39.96698662600829,
+      "formal_samples": 359,
+      "source_sha256": {
+        "joint_samples.jsonl": "a92b0f0b58367ce18731577faa4bd6d76d4e810cbb62931a5a56781635dbfc7c",
+        "joint_timeline.csv": "5981a07c95270bb1e7ceb89f00e419d2bdd2ff77a10e4713535ce865269637fc",
+        "events.jsonl": "fafa0ac809f9abf0c7a7b49dd31a443a74e28008c085e830222d100e48bf728d",
+        "summary.json": "812cbc3598c9bc8fa059c67a521689f51be9a6a7c9aa6e1695f8292644559d7f"
+      }
+    }
+  },
+  "replay_limitations": [
+    "Holding and cancellation depend on the undeployed zero-distance controller fix.",
+    "Restarting the candidate controller invokes clearAngle on all seven axes; deployment needs an explicit recovery procedure.",
+    "The existing execution adapter does not reproduce dynamic J6 timing.",
+    "Current-to-start and grasp paths require review and explicit user approval before physical motion.",
+    "Per-sample quintic planning retains 1 degree/s^2 acceleration; a higher speed parameter does not reproduce source timing."
+  ],
+  "files_sha256": {
+    "app.py": "f19473975ee1d06790cac2562916945b1165abdc1457c5f3f23cc8fdde0509a9",
+    "planner.py": "95b049a15ed0ab242a9d5bd3e91b81b09bfabebfccb436c6bb78b672a6bb64ef",
+    "index.html": "3b8485acfc527b9dd83ecaac8cd67b2ee225140df5cedd5f7e2a6dfc3a4532b9",
+    "preview_template.html": "db19c26d514c7e07597b5a8c6ae3e8bfc48f14b39c52edb05a02c6b6fe56d00c",
+    "test_app.py": "68f638bbcb352dfffb32b92094d50f49bf9e495918e80e312b9980c587e10ca1",
+    "test_planner.py": "6550c731bbac5678dd49b5be3e6345bbc66880289b221f94d257121ec79f46f7",
+    "launch.sh": "319ab5b01dae4523fa4a3fa3f34c121dc565d94e279c595c128f532d9f7d044b"
+  }
+}

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>D1 手动示范记录</title>
+  <style>
+    :root{font-family:system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;color:#142536;background:#eef3f7;font-synthesis:none;--blue:#1466bd;--muted:#506174;--border:#d4dfe9}
+    *{box-sizing:border-box}body{margin:0}button,select{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.5}button:focus-visible,select:focus-visible{outline:3px solid #edae33;outline-offset:3px}
+    main{max-width:1440px;margin:auto;padding:28px 30px 36px}header{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-bottom:18px}h1{font-size:25px;letter-spacing:-.5px;margin:0 0 7px}header p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}.badge{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;border-radius:30px;padding:10px 16px;font-size:15px;font-weight:700;background:#e0e8f0;color:#33485d}.badge:before{content:"";width:9px;height:9px;background:currentColor;border-radius:50%}.badge.recording{background:#d9f1e5;color:#11633e}.badge.stale,.badge.error{background:#fee6e3;color:#a42b23}.badge.starting{background:#fff0cc;color:#795200}.badge.stopped{background:#e1e9f0;color:#405266}
+    .notice{padding:13px 17px;border:1px solid #bed3e8;background:#e7f1fb;border-radius:10px;font-size:14px;line-height:1.7;margin-bottom:18px}.notice strong{color:#114d86}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:18px}.metric{background:white;border:1px solid var(--border);border-radius:12px;padding:16px 18px}.metric .label{font-size:13px;color:var(--muted);margin-bottom:8px}.metric .value{font-size:27px;line-height:1.2;font-weight:700;font-variant-numeric:tabular-nums}.metric small{font-size:13px;font-weight:400;color:var(--muted);margin-left:5px}
+    .workspace{display:grid;grid-template-columns:300px minmax(0,1fr);gap:18px}.panel{background:#fff;border:1px solid var(--border);border-radius:13px;overflow:hidden}.panel-head{padding:17px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:12px}.panel-head h2{font-size:16px;margin:0}.live-note{font-size:12px;color:var(--muted)}table{width:100%;border-collapse:collapse;font-size:14px;font-variant-numeric:tabular-nums}th,td{text-align:right;padding:13px 15px;border-bottom:1px solid #e6ecf1}th:first-child,td:first-child{text-align:left}th{color:var(--muted);font-size:12px;font-weight:500;background:#f8fafc}tbody tr:last-child td{border-bottom:0}tr.selected td{background:#eaf3ff}td:first-child{font-weight:650}.joint-sub{display:block;font-size:10px;color:var(--muted);font-weight:400;margin-top:3px}.table-note{padding:13px 16px;font-size:12px;line-height:1.7;color:var(--muted);border-top:1px solid var(--border);background:#f8fafc}select{border:1px solid #b7c8d8;background:#fff;border-radius:7px;padding:7px 28px 7px 10px;color:#142536;font-size:14px;max-width:190px}
+    .plots{padding:18px;display:grid;grid-template-columns:1fr 1fr;gap:20px}.plot h3{font-size:14px;margin:0 0 6px}.plot .unit{font-size:12px;color:var(--muted);margin-bottom:8px}.canvas-wrap{height:286px;position:relative}canvas{display:block;width:100%;height:100%}.plot-footer{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:12px;line-height:1.7;padding:0 18px 17px}.details{padding:16px 18px;border-top:1px solid var(--border);font-size:13px;line-height:1.7}.detail-line{display:flex;gap:14px;margin:4px 0}.detail-line .key{color:var(--muted);min-width:70px}.detail-line .val{overflow-wrap:anywhere;min-width:0}.quality{display:flex;gap:18px;flex-wrap:wrap;margin-top:9px;color:var(--muted)}.warn{color:#a42b23;font-weight:650}
+    .actions{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px;margin-top:18px;border-radius:13px;background:#fff;border:1px solid var(--border)}.action-copy{font-size:14px;line-height:1.65}.action-copy strong{display:block;margin-bottom:3px}.action-copy span{font-size:13px;color:var(--muted)}.buttons{display:flex;gap:10px;flex-shrink:0}.btn{padding:12px 18px;border-radius:8px;border:1px solid #abc0d4;background:#fff;color:#214c76;font-weight:650;min-height:46px}.btn.primary{background:#123d65;border-color:#123d65;color:#fff}.btn:not(:disabled):hover{filter:brightness(.94)}.message{min-height:24px;font-size:13px;line-height:1.7;margin:10px 2px 0;color:#235c42;overflow-wrap:anywhere}.message.error{color:#a42b23}.footnote{margin:10px 2px 0;color:var(--muted);font-size:12px;line-height:1.7}
+    @media(max-width:1080px){.workspace{grid-template-columns:270px minmax(0,1fr)}.plots{grid-template-columns:1fr;gap:22px}.canvas-wrap{height:240px}.actions{align-items:flex-start}.buttons{flex-direction:column}.btn{width:100%}}
+    @media(max-width:700px){main{padding:18px 14px 26px}header{align-items:flex-start;gap:10px}h1{font-size:21px}header p{font-size:12px}.badge{font-size:12px;padding:8px 10px}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.metric{padding:13px 14px}.metric .value{font-size:24px}.workspace{grid-template-columns:1fr;gap:14px}.plots{padding:15px}.canvas-wrap{height:245px}.actions{flex-direction:column;gap:14px}.buttons{width:100%;flex-direction:row}.buttons .btn{padding:12px 10px;flex:1}.buttons .primary{flex:1.5}.plot-footer{flex-direction:column;gap:3px}.notice{font-size:12px}.panel-head{padding:14px 15px}.detail-line{gap:9px}}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div><h1>D1 手动示范记录</h1><p>观察关节位置与速度，保存这一段示范。</p></div>
+    <div id="statusBadge" class="badge starting" role="status">连接记录服务</div>
+  </header>
+  <div class="notice"><strong>本次按机械臂当前状态记录。请在关节能自然活动的范围内慢速演示，有明显阻力就停止。</strong><br>本面板没有运动控制。“抓取结束并保存”只结束日志记录，不会停止机械臂，也不是急停。需要停止运动时，请使用设备已有的停止或急停功能。</div>
+  <div class="cards">
+    <div class="metric"><div class="label">已记录时长</div><div class="value" id="elapsed">—</div></div>
+    <div class="metric"><div class="label">已记录样本</div><div class="value" id="sampleCount">—</div></div>
+    <div class="metric"><div class="label">实际采样频率</div><div class="value"><span id="rate">—</span><small>Hz</small></div></div>
+    <div class="metric"><div class="label">最新数据距今</div><div class="value"><span id="age">—</span><small id="ageUnit">ms</small></div></div>
+  </div>
+  <div class="workspace">
+    <section class="panel" aria-labelledby="jointsHeading">
+      <div class="panel-head"><h2 id="jointsHeading">关节实时读数</h2><span id="liveNote" class="live-note">等待数据</span></div>
+      <table><thead><tr><th scope="col">关节</th><th scope="col">位置</th><th scope="col">速度</th></tr></thead><tbody id="jointRows"></tbody></table>
+      <div class="table-note">J0–J5：位置 °，速度 °/s。<br>速度根据角度和接收时间估算，显示值经过短时平滑。<br>J6 为夹爪 SDK 原始值：位置 raw，速度 raw/s。<br>“—”表示暂无有效数据。</div>
+    </section>
+    <section class="panel" aria-labelledby="curvesHeading">
+      <div class="panel-head"><h2 id="curvesHeading">记录曲线</h2><label><span class="live-note">查看 </span><select id="jointSelect" aria-label="选择要查看的关节"></select></label></div>
+      <div class="plots">
+        <div class="plot"><h3 id="angleTitle">J0 位置</h3><div class="unit" id="angleUnit">角度 · °</div><div class="canvas-wrap"><canvas id="angleCanvas" role="img" aria-label="所选关节的位置随时间曲线"></canvas></div></div>
+        <div class="plot"><h3 id="speedTitle">J0 速度</h3><div class="unit" id="speedUnit">角速度 · °/s</div><div class="canvas-wrap"><canvas id="speedCanvas" role="img" aria-label="所选关节的速度随时间曲线"></canvas></div></div>
+      </div>
+      <div class="plot-footer"><span>横轴：记录时间（秒）</span><span id="pointsNote">等待真实记录数据</span></div>
+      <div class="details">
+        <div class="detail-line"><span class="key">数据来源</span><span class="val" id="source">—</span></div>
+        <div class="detail-line"><span class="key">保存位置</span><span class="val" id="recordPath">等待记录服务提供路径</span></div>
+        <div class="quality"><span>间断次数：<strong id="gapCount">—</strong></span><span>无效样本：<strong id="invalidCount">—</strong></span></div>
+      </div>
+    </section>
+  </div>
+  <div class="actions">
+    <div class="action-copy"><strong id="actionHeading">等待记录服务就绪</strong><span id="actionDescription">确认数据正在更新后，可添加演示标记。结束时保存当前日志。</span></div>
+    <div class="buttons"><button class="btn" id="markButton" disabled>标记：开始演示</button><button class="btn primary" id="stopButton" disabled>抓取结束并保存</button></div>
+  </div>
+  <div id="message" class="message" role="status" aria-live="polite"></div>
+  <p class="footnote">页面每 0.5 秒请求状态。曲线仅显示服务返回的真实记录；空白和间断不会补成模拟数据。关闭页面不代表结束记录。</p>
+</main>
+<script>
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const ui = Object.fromEntries(['statusBadge','elapsed','sampleCount','rate','age','ageUnit','liveNote','jointRows','jointSelect','angleTitle','angleUnit','speedTitle','speedUnit','angleCanvas','speedCanvas','pointsNote','source','recordPath','gapCount','invalidCount','actionHeading','actionDescription','markButton','stopButton','message'].map(id => [id,$(id)]));
+  let latest = null, connected = false, polling = false, commandPending = false, selected = 0;
+  let requestedStop = false;
+  const cells = [];
+  const finite = value => typeof value === 'number' && Number.isFinite(value);
+  const fmt = (value,digits=2) => finite(value) ? value.toLocaleString('zh-CN',{minimumFractionDigits:digits,maximumFractionDigits:digits}) : '—';
+  const text = (element,value) => { element.textContent = value; };
+  for (let i=0;i<7;i++) {
+    const row = document.createElement('tr');
+    const name = document.createElement('td'); text(name,`J${i}`);
+    if (i===6) { const label=document.createElement('span'); label.className='joint-sub'; text(label,'夹爪 · SDK 原始值'); name.append(label); }
+    const q=document.createElement('td'), v=document.createElement('td'); text(q,'—');text(v,'—');
+    row.append(name,q,v);ui.jointRows.append(row);cells.push({row,q,v});
+    const option=document.createElement('option');option.value=String(i);text(option,i===6?'J6 · 夹爪原始值':`J${i}`);ui.jointSelect.append(option);
+  }
+  function message(value,error=false) { text(ui.message,value);ui.message.classList.toggle('error',error); }
+  function duration(seconds) {
+    if (!finite(seconds)) return '—';
+    const t=Math.max(0,Math.floor(seconds)), m=Math.floor(t/60), s=t%60;
+    return m>=60 ? `${Math.floor(m/60)}:${String(m%60).padStart(2,'0')}:${String(s).padStart(2,'0')}` : `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+  }
+  function renderStatus() {
+    const d=latest || {}, state=d.state;
+    let label='连接记录服务', tone='starting';
+    if (!connected) { label=latest?'连接中断':'服务未连接';tone='error'; }
+    else if (state==='stopped') { label='已停止记录';tone='stopped'; }
+    else if (state==='error') { label='记录服务异常';tone='error'; }
+    else if (state==='stopping') { label='正在保存尾部记录';tone='starting'; }
+    else if (state==='recording' && d.fresh===false) { label='数据断流';tone='stale'; }
+    else if (state==='starting' || d.ready===false) { label='记录服务准备中';tone='starting'; }
+    else if (state==='recording' && d.fresh===true) { label='正在记录';tone='recording'; }
+    else if (state==='recording') { label='记录中 · 更新待确认';tone='starting'; }
+    else { label='状态待确认';tone='starting'; }
+    text(ui.statusBadge,label);ui.statusBadge.className=`badge ${tone}`;
+    if(!connected) text(ui.age,'—');
+    text(ui.liveNote,!connected?'连接中断，保留末次读数':state==='stopped'?'末次记录':d.fresh===true?'数据正在更新':'等待新数据');
+    const token=typeof d.csrf_token==='string' && d.csrf_token.length>0;
+    ui.stopButton.disabled=commandPending || !connected || !token || state==='stopped' || !state;
+    ui.markButton.disabled=commandPending || !connected || !token || state!=='recording' || d.ready===false;
+    if (commandPending && requestedStop) text(ui.stopButton,'正在结束记录…');
+    else text(ui.stopButton,state==='stopped'?'记录已结束':'抓取结束并保存');
+    if (state==='stopped') {
+      text(ui.actionHeading,'本次记录已结束');
+      text(ui.actionDescription,'保存位置见上方。该状态只表示日志停止，不表示机械臂已经停止运动。');
+    } else if (!connected) {
+      text(ui.actionHeading,'无法确认记录服务状态');
+      text(ui.actionDescription,'正在自动重连。连接中断不代表日志停止，也不代表机械臂停止。');
+    } else if (d.fresh===false && state==='recording') {
+      text(ui.actionHeading,'暂未收到新的关节数据');
+      text(ui.actionDescription,'请检查数据来源。仍可结束并保存已收到的日志。');
+    } else {
+      text(ui.actionHeading,state==='recording'?'正在保存关节数据（包括准备阶段）':'等待记录服务就绪');
+      text(ui.actionDescription,'结束示范后点击右侧按钮保存日志。按钮不会发送任何运动或急停指令。');
+    }
+  }
+  function render(d) {
+    text(ui.elapsed,duration(d.elapsed_s));text(ui.sampleCount,fmt(d.sample_count,0));text(ui.rate,fmt(d.rate_hz,1));
+    const isSeconds=finite(d.age_ms) && d.age_ms>=1000;
+    text(ui.age,fmt(isSeconds?d.age_ms/1000:d.age_ms,isSeconds?1:0));text(ui.ageUnit,isSeconds?'s':'ms');
+    const sourceLabels={manual_demonstration_method_not_yet_confirmed:'当前状态下手动操作 · 未验证专用拖动模式',software_jog:'实际关节反馈 · 软件点动演示',verified_drag_teaching:'实际关节反馈 · 已确认可手扶拖动'};
+    text(ui.source,sourceLabels[d.source_kind] || '实际关节反馈 · 操作方式待确认');
+    text(ui.recordPath,typeof d.path==='string' && d.path?d.path:'等待记录服务提供路径');
+    const quality=d.quality && typeof d.quality==='object'?d.quality:{};
+    for(const [key,el] of [['gap_count',ui.gapCount],['invalid_count',ui.invalidCount]]) { text(el,fmt(quality[key],0));el.classList.toggle('warn',finite(quality[key])&&quality[key]>0); }
+    cells.forEach((cell,i)=>{text(cell.q,fmt(Array.isArray(d.q)?d.q[i]:null));text(cell.v,fmt(Array.isArray(d.velocity)?d.velocity[i]:null));});
+    renderStatus();drawCharts();
+  }
+  function series(field) {
+    const tail=latest && Array.isArray(latest.tail)?latest.tail:[];
+    return tail.slice(-4000).filter(p=>p && finite(p.t)).map(p=>({t:p.t,gap:p.gap===true,y:Array.isArray(p[field]) && finite(p[field][selected])?p[field][selected]:null}));
+  }
+  function draw(canvas,points,color) {
+    const box=canvas.getBoundingClientRect(), ratio=Math.min(window.devicePixelRatio||1,3);
+    const w=Math.max(1,box.width),h=Math.max(1,box.height);
+    canvas.width=Math.round(w*ratio);canvas.height=Math.round(h*ratio);
+    const c=canvas.getContext('2d');if(!c)return;c.setTransform(ratio,0,0,ratio,0,0);c.clearRect(0,0,w,h);
+    const m={left:58,right:14,top:18,bottom:34},pw=w-m.left-m.right,ph=h-m.top-m.bottom;
+    c.font='11px system-ui, sans-serif';c.lineWidth=1;
+    const valid=points.filter(p=>finite(p.y));
+    if(!valid.length) {
+      c.fillStyle='#f5f8fb';c.fillRect(0,0,w,h);c.fillStyle='#607185';c.textAlign='center';
+      c.fillText('暂无有效记录数据',w/2,h/2-4);c.font='11px system-ui, sans-serif';c.fillText('等待真实样本，不显示模拟曲线',w/2,h/2+19);return;
+    }
+    let xmin=Math.min(...points.map(p=>p.t)),xmax=Math.max(...points.map(p=>p.t));
+    let ymin=Math.min(...valid.map(p=>p.y)),ymax=Math.max(...valid.map(p=>p.y));
+    const ypad=Math.max((ymax-ymin)*.12,canvas===ui.speedCanvas ? .05 : .1);ymin-=ypad;ymax+=ypad;
+    if(xmax===xmin){xmin-=.5;xmax+=.5;}
+    const x=t=>m.left+(t-xmin)/(xmax-xmin)*pw, y=v=>m.top+(ymax-v)/(ymax-ymin)*ph;
+    for(let i=0;i<=4;i++) {
+      const xx=m.left+pw*i/4,yy=m.top+ph*i/4;
+      c.strokeStyle='#e3eaf1';c.beginPath();c.moveTo(m.left,yy);c.lineTo(w-m.right,yy);c.stroke();
+      c.fillStyle='#56677b';c.textAlign='right';c.fillText(fmt(ymax-(ymax-ymin)*i/4,2),m.left-8,yy+4);
+      c.textAlign='center';c.fillText(fmt(xmin+(xmax-xmin)*i/4,1),xx,h-11);
+    }
+    if(ymin<0 && ymax>0){c.strokeStyle='#bac9d7';c.setLineDash([3,4]);c.beginPath();c.moveTo(m.left,y(0));c.lineTo(w-m.right,y(0));c.stroke();c.setLineDash([]);}
+    const intervals=[];for(let i=1;i<points.length;i++){const dt=points[i].t-points[i-1].t;if(dt>0)intervals.push(dt);}
+    intervals.sort((a,b)=>a-b);const gapLimit=Math.max(1,(intervals[Math.floor(intervals.length/2)]||0)*3);
+    c.save();c.beginPath();c.rect(m.left,m.top,pw,ph);c.clip();c.strokeStyle=color;c.lineWidth=2;c.lineJoin='round';c.beginPath();let previous=null;
+    for(const p of points){if(!finite(p.y)){previous=null;continue;}if(!previous || p.gap || p.t<=previous.t || p.t-previous.t>gapLimit)c.moveTo(x(p.t),y(p.y));else c.lineTo(x(p.t),y(p.y));previous=p;}
+    c.stroke();const last=valid[valid.length-1];c.fillStyle=color;c.beginPath();c.arc(x(last.t),y(last.y),3,0,Math.PI*2);c.fill();c.restore();
+  }
+  function drawCharts() {
+    cells.forEach((c,i)=>c.row.classList.toggle('selected',i===selected));
+    text(ui.angleTitle,`J${selected} ${selected===6?'夹爪位置':'位置'}`);text(ui.speedTitle,`J${selected} 速度`);
+    text(ui.angleUnit,selected===6?'SDK 原始值 · raw':'角度 · °');text(ui.speedUnit,selected===6?'SDK 原始值变化率 · raw/s':'角速度 · °/s');
+    const q=series('q'),v=series('v');draw(ui.angleCanvas,q,'#1466bd');draw(ui.speedCanvas,v,'#a35b08');
+    text(ui.pointsNote,q.length?`当前窗口：${q.filter(p=>finite(p.y)).length} 个有效位置样本`:'等待真实记录数据');
+  }
+  async function poll() {
+    if(polling)return;polling=true;
+    const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),4000);
+    try {
+      const response=await fetch('/api/status',{cache:'no-store',signal:controller.signal,credentials:'same-origin'});
+      if(!response.ok)throw new Error(`HTTP ${response.status}`);
+      const data=await response.json();if(!data || typeof data!=='object' || Array.isArray(data))throw new Error('状态格式无效');
+      latest=data;connected=true;render(data);
+    } catch(error) { connected=false;renderStatus(); }
+    finally {clearTimeout(timeout);polling=false;}
+  }
+  async function command(path,payload) {
+    if(commandPending || !latest || typeof latest.csrf_token!=='string' || !latest.csrf_token)return;
+    commandPending=true;requestedStop=path==='/api/stop';renderStatus();message(requestedStop?'正在请求结束并保存记录…':'正在添加演示标记…');
+    const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),12000);
+    try {
+      const response=await fetch(path,{method:'POST',credentials:'same-origin',signal:controller.signal,headers:{'Content-Type':'application/json','X-Recorder-Token':latest.csrf_token},body:JSON.stringify(payload)});
+      let result={};try{result=await response.json();}catch(_){}
+      if(!response.ok || result.ok===false)throw new Error(typeof result.error==='string'?result.error:`请求失败（HTTP ${response.status}）`);
+      message(requestedStop?'结束记录请求已接受，正在核对服务状态。':'已添加“开始演示”标记。');
+      await poll();
+      if(requestedStop && latest && latest.state==='stopped')message('日志记录已结束。保存位置见上方；机械臂的运动状态请另行确认。');
+    } catch(error) {message(error.name==='AbortError'?'请求超时，结果尚未确认。请查看服务状态后再操作。':`操作未确认：${error.message}`,true);}
+    finally {clearTimeout(timeout);commandPending=false;requestedStop=false;renderStatus();}
+  }
+  ui.jointSelect.addEventListener('change',()=>{selected=Number(ui.jointSelect.value);drawCharts();});
+  ui.stopButton.addEventListener('click',()=>command('/api/stop',{reason:'user_pressed_grasp_end'}));
+  ui.markButton.addEventListener('click',()=>command('/api/mark',{label:'开始演示'}));
+  const resizeObserver=new ResizeObserver(()=>drawCharts());resizeObserver.observe(ui.angleCanvas.parentElement);resizeObserver.observe(ui.speedCanvas.parentElement);
+  drawCharts();poll();setInterval(poll,500);
+})();
+</script>
+</body>
+</html>

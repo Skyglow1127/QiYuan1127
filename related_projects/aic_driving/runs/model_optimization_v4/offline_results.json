@@ -1,0 +1,97 @@
+{
+  "methods": {
+    "ca": {
+      "sample_error_m": 1.8771171569824219,
+      "episode_error_m": 1.8921726594368617,
+      "episodes": 24,
+      "samples": 8071,
+      "common_horizon_episode_error_m": 1.2576993703842163,
+      "per_family": {
+        "follow": 1.7733055353164673,
+        "brake": 1.9918574094772339,
+        "cutin": 1.9469512701034546,
+        "traffic": 1.8565763235092163
+      }
+    },
+    "fitted_ca": {
+      "sample_error_m": 0.6679070591926575,
+      "episode_error_m": 0.8043701611459255,
+      "episodes": 24,
+      "samples": 8071,
+      "common_horizon_episode_error_m": 0.5482422709465027,
+      "per_family": {
+        "follow": 0.6321486234664917,
+        "brake": 1.1197232007980347,
+        "cutin": 0.9809375405311584,
+        "traffic": 0.48467135429382324
+      },
+      "test_joint_point_coverage": 0.930491884524842,
+      "test_episode_equal_joint_coverage": 0.9096862406447898
+    },
+    "old_frozen": {
+      "sample_error_m": 1.2536120414733887,
+      "episode_error_m": 1.3051814312736194,
+      "episodes": 24,
+      "samples": 8071,
+      "common_horizon_episode_error_m": 0.5808987617492676,
+      "per_family": {
+        "follow": 1.1872787475585938,
+        "brake": 1.5384353399276733,
+        "cutin": 1.3104588985443115,
+        "traffic": 1.184552788734436
+      }
+    },
+    "old_architecture_retrained": {
+      "sample_error_m": 0.543998658657074,
+      "episode_error_m": 0.665371793632706,
+      "episodes": 24,
+      "samples": 8071,
+      "common_horizon_episode_error_m": 0.4790876805782318,
+      "per_family": {
+        "follow": 0.6064975261688232,
+        "brake": 1.0313717126846313,
+        "cutin": 0.6412056088447571,
+        "traffic": 0.38241222500801086
+      }
+    },
+    "optimized": {
+      "sample_error_m": 0.42592912912368774,
+      "episode_error_m": 0.5145251862704754,
+      "episodes": 24,
+      "samples": 8071,
+      "common_horizon_episode_error_m": 0.36411991715431213,
+      "per_family": {
+        "follow": 0.46963319182395935,
+        "brake": 0.7477067112922668,
+        "cutin": 0.5333093404769897,
+        "traffic": 0.3074515461921692
+      },
+      "test_joint_point_coverage": 0.9162433403543551,
+      "test_episode_equal_joint_coverage": 0.9023027629208684
+    }
+  },
+  "contrasts": {
+    "old_frozen": {
+      "optimized_minus_reference_m": -0.7906562450031439,
+      "episode_bootstrap95": [
+        -0.959906587873896,
+        -0.6352305514427525
+      ]
+    },
+    "old_architecture_retrained": {
+      "optimized_minus_reference_m": -0.15084660736223063,
+      "episode_bootstrap95": [
+        -0.19442343123567601,
+        -0.10826319719975194
+      ]
+    },
+    "fitted_ca": {
+      "optimized_minus_reference_m": -0.28984497487545013,
+      "episode_bootstrap95": [
+        -0.35467321627462906,
+        -0.22158156214281927
+      ]
+    }
+  },
+  "test_used_for_selection": false
+}

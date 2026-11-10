@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "test_count": 34,
+  "main_completed": 360,
+  "stress_completed": 240,
+  "collision_count": 0,
+  "offroad_count": 0,
+  "source_sha256": "d40992d5c9110c5e1a1c40b1443a2de5aaf41bad01716ca5a93f9f44490e8941",
+  "all_predeclared_acceptance_passed": true
+}

@@ -1,0 +1,139 @@
+{
+  "mode": "run",
+  "passed": true,
+  "model_inference_executed": true,
+  "robot_io": false,
+  "episode": 46,
+  "frame": 0,
+  "output_directory": "/home/aup/NPU/pi05_vision_npu/results/original_gpu_baseline",
+  "packages": {
+    "torch": "2.11.0+rocm7.14.1",
+    "lerobot": "0.6.1",
+    "transformers": "5.5.4",
+    "peft": "0.21.2",
+    "accelerate": "1.15.0"
+  },
+  "base": "/home/aup/Lerobot/models/PI05/pi05_base",
+  "adapter": "/home/aup/Documents/Codex/2026-10-30/wo-y/outputs/piper_pi05_cloud_backup_20261030/runs/pi05_train_20261030_091725/checkpoints/020000/pretrained_model",
+  "tokenizer": "/home/aup/Documents/Codex/2026-10-30/wo-y/outputs/piper_pi05_cloud_backup_20261030/models/paligemma_tokenizer",
+  "task": "Pick up the red cube and place it inside the black square on the left side of the table.",
+  "input_shapes": {
+    "observation.state": [
+      7
+    ],
+    "observation.images.global": [
+      3,
+      480,
+      640
+    ],
+    "observation.images.wrist": [
+      3,
+      480,
+      640
+    ]
+  },
+  "processed_shapes": {
+    "observation.state": [
+      1,
+      7
+    ],
+    "observation.images.global": [
+      1,
+      3,
+      480,
+      640
+    ],
+    "observation.images.wrist": [
+      1,
+      3,
+      480,
+      640
+    ],
+    "observation.language.tokens": [
+      1,
+      200
+    ],
+    "observation.language.attention_mask": [
+      1,
+      200
+    ]
+  },
+  "available_system_memory_bytes": 17537400832,
+  "memory_note": "Measured offline model/processor latency and GPU allocation in this run. Live camera, feedback and controller latency are not included.",
+  "load_mode": "streaming",
+  "gpu_allocator_fraction_limit": 0.85,
+  "base_loading": {
+    "source_tensors": 812,
+    "destination_tensors": 813,
+    "parameter_count": 4143404816,
+    "parameter_bytes": 9353911360,
+    "bytes_by_dtype": {
+      "torch.bfloat16": 7219707904,
+      "torch.float32": 2134203456
+    },
+    "nonpersistent_buffers": {
+      "model.paligemma_with_expert.paligemma.model.vision_tower.vision_model.embeddings.position_ids": {
+        "shape": [
+          1,
+          256
+        ],
+        "dtype": "torch.int64",
+        "kind": "vision_positions"
+      },
+      "model.paligemma_with_expert.paligemma.model.language_model.embed_tokens.embed_scale": {
+        "shape": [],
+        "dtype": "torch.bfloat16",
+        "kind": "embedding_scale"
+      },
+      "model.paligemma_with_expert.paligemma.model.language_model.rotary_emb.inv_freq": {
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "kind": "rotary"
+      },
+      "model.paligemma_with_expert.paligemma.model.language_model.rotary_emb.original_inv_freq": {
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "kind": "rotary"
+      },
+      "model.paligemma_with_expert.gemma_expert.model.rotary_emb.inv_freq": {
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "kind": "rotary"
+      },
+      "model.paligemma_with_expert.gemma_expert.model.rotary_emb.original_inv_freq": {
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "kind": "rotary"
+      }
+    },
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "shape_mismatches": {},
+    "load_seconds": 15.867267862000062,
+    "gpu_allocated_bytes_after_base": 9363535872,
+    "all_parameters_and_buffers_materialized": true
+  },
+  "adapter_tensors_verified": 80,
+  "gpu_peak_allocated_bytes_during_load": 9374357504,
+  "load_seconds": 16.195960513000045,
+  "gpu_peak_allocated_bytes": 9512800768,
+  "prediction_seconds_each": [
+    2.3590900830004102
+  ],
+  "predict_seconds": 2.3590900830004102,
+  "warm_predict_seconds": [],
+  "action_shape": [
+    1,
+    50,
+    7
+  ],
+  "note": "Recorded-frame inference only; this does not measure real task success."
+}

@@ -1,0 +1,137 @@
+{
+  "name": "松灵 PiPER",
+  "model": "piper",
+  "namespace": "/piper",
+  "world": "piper_lab",
+  "arm_joints": [
+    "joint1",
+    "joint2",
+    "joint3",
+    "joint4",
+    "joint5",
+    "joint6"
+  ],
+  "finger_joints": [
+    "gripper_joint1",
+    "gripper_joint2"
+  ],
+  "finger_open": [
+    0.05,
+    -0.05
+  ],
+  "finger_closed": [
+    0,
+    0
+  ],
+  "base_link": "base_link",
+  "wrist_link": "link6",
+  "finger_links": [
+    "gripper_link1",
+    "gripper_link2"
+  ],
+  "camera_excluded_links": [
+    "link5",
+    "link6",
+    "flange_link",
+    "gripper_base"
+  ],
+  "ready": [
+    -2.7402078703776857e-08,
+    1.7405024971168332,
+    -1.192348522612813,
+    -5.9557489551904085e-08,
+    1.1099088254959053,
+    4.904828430793585e-08
+  ],
+  "collision_exclusions": [
+    [
+      "link5",
+      "flange_link"
+    ],
+    [
+      "link6",
+      "gripper_base"
+    ],
+    [
+      "flange_link",
+      "gripper_link1"
+    ],
+    [
+      "flange_link",
+      "gripper_link2"
+    ]
+  ],
+  "servo": {
+    "arm_p": [
+      1600,
+      2000,
+      1600,
+      400,
+      400,
+      250
+    ],
+    "arm_i": [
+      15,
+      20,
+      15,
+      2,
+      2,
+      1
+    ],
+    "arm_d": [
+      40,
+      50,
+      35,
+      8,
+      8,
+      0.4
+    ],
+    "arm_effort": [
+      100,
+      100,
+      100,
+      30,
+      30,
+      30
+    ],
+    "finger_p": 700,
+    "finger_i": 0,
+    "finger_d": 2,
+    "finger_effort": 10
+  },
+  "source": {
+    "repository": "https://github.com/agilexrobotics/agx_arm_urdf",
+    "commit": "680fa925cd00db7e2628563d2edc5540963045de",
+    "model": "piper/urdf/piper_with_gripper_description.xacro",
+    "license": "MIT"
+  },
+  "contact_pads": [
+    {
+      "link": "gripper_link1",
+      "size": [
+        0.042,
+        0.026,
+        0.0015
+      ],
+      "xyz": [
+        0,
+        -0.013,
+        0.00045
+      ]
+    },
+    {
+      "link": "gripper_link2",
+      "size": [
+        0.042,
+        0.026,
+        0.0015
+      ],
+      "xyz": [
+        0,
+        -0.013,
+        0.00045
+      ]
+    }
+  ],
+  "contact_pad_note": "Simulation flat contact patches: 42 x 26 x 1.5 mm, 0.3 mm protrusion from CAD inner plane, to stabilize finite contact patches in DART. Not a measured hardware modification. Mass/inertia unchanged."
+}

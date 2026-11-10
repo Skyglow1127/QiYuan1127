@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="piper">
+ <xacro:include filename="../upstream/piper_official.urdf"/>
+ <xacro:include filename="../generated/wrist_camera.xacro"/>
+ <xacro:photo_wrist_camera/>
+</robot>

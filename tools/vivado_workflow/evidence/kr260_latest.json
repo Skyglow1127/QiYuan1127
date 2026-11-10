@@ -1,0 +1,77 @@
+{
+  "status": "HARDWARE_PASS",
+  "part": "xck26-sfvc784-2LV-c",
+  "run_directory": "/home/aup/文档/ChatGPT/VIVADO/build/kr260_ila_20261022_013703",
+  "session_id": "vivado-20261022-015305-9cfd0a95",
+  "session_close_policy": "manual",
+  "hardware_capture": "PASS",
+  "memory_scope": {
+    "unit": "ross-kr260-2526906.scope",
+    "cgroup": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/ross-kr260-2526906.scope",
+    "memory_max_gib": 5,
+    "swap_max_gib": 1,
+    "initial_pids": [
+      2526906
+    ]
+  },
+  "completed": [
+    "setup",
+    "simulation",
+    "synthesis",
+    "implementation",
+    "bitstream",
+    "hardware"
+  ],
+  "active_step": "complete",
+  "project": "/home/aup/文档/ChatGPT/VIVADO/build/kr260_ila_20261022_013703/project/kr260_ila.xpr",
+  "source_sha256": {
+    "rtl/led_blink.sv": "323ffeacf5562853a74e56543ea55e6576129569a75ddb4fd86209b110870a96",
+    "rtl/kr260_ila_top.sv": "0d769945451309129c07a0c4cae93ed25943ae05df2c90013ce21ce14b044b59",
+    "constraints/kr260_board.xdc": "c4444ff0d37813eb531b2b030a40e120280a221faf8aa5952b50a09a4de3acea",
+    "constraints/kr260_ila_debug.xdc": "85c00a658468742e8308357518f99a01375872993b56142869e22cb7ace2d3f6",
+    "tb/tb_kr260_ila.sv": "6654521801b5e498f96406d525c7eb4b99166f94af53072085adcb25f5043c0b"
+  },
+  "simulation": {
+    "status": "PASS",
+    "baseline_checks": 240,
+    "kr260_checks": 70000
+  },
+  "synthesis": "PASS",
+  "implementation": "PASS",
+  "bitstream": "/home/aup/文档/ChatGPT/VIVADO/build/kr260_ila_20261022_013703/evidence/kr260_ila.bit",
+  "probes": "/home/aup/文档/ChatGPT/VIVADO/build/kr260_ila_20261022_013703/evidence/kr260_ila.ltx",
+  "artifact_sha256": {
+    "bitstream": "92ee83ba84de26650ce7f514bb4cf177a1f35f93459ac2cde916ed8568ec7c4d",
+    "probes": "29132a6037d01347f04cf34b88d28158d06bae86438c7713b696eb950736ab55"
+  },
+  "reset_fix": "Register rst_n release; preserve cycle-255 contract; remove unnecessary clock KEEP attribute.",
+  "capture_directory": "/home/aup/文档/ChatGPT/VIVADO/build/kr260_ila_20261022_013703/vivado_agentic_ai_reports/hw-ila-debug",
+  "capture_analysis": {
+    "status": "PASS",
+    "sample_count": 1024,
+    "counter_transitions_checked": 1023,
+    "toggle_edges": [
+      64,
+      128,
+      192,
+      256,
+      320,
+      384,
+      448,
+      512,
+      576,
+      640,
+      704,
+      768,
+      832,
+      896,
+      960
+    ],
+    "half_period_cycles": 64,
+    "nominal_clock_hz": 25000000,
+    "first_counter": 50496,
+    "last_counter": 51519
+  },
+  "managed_session_id": "vivado-20261022-013703-436a1660",
+  "gui_connection": "Reconnected to the same Vivado process through its webserver after Tcl-to-GUI transport transition."
+}

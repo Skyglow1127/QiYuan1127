@@ -1,0 +1,17 @@
+{
+  "version": "release_v1",
+  "implementation": "scripts/reproduce.py --full",
+  "frozen_before_test": true,
+  "scenarios": ["follow", "brake", "cutin"],
+  "simulation_hz": 50,
+  "control_hz": 10,
+  "episode_duration_seconds": 30,
+  "position_noise_std_m": 0.1,
+  "velocity_noise_std_mps": 0.1,
+  "training": {"episodes_per_scenario": 30, "duration_seconds": 15, "model_seed": 0, "maximum_epochs": 80},
+  "tuning": {"seed_start": 30000, "seeds": 5, "fixed_margins_m": [0.5, 2.0, 4.0], "rule": "min pooled collisions then max pooled progress; common selected margin for both fixed methods"},
+  "main": {"seed_start": 100000, "seeds": 50, "delays_seconds": [0, 0.2, 0.4], "methods": ["ca_fixed", "ca_adaptive", "ml_fixed", "ml_adaptive"], "episodes": 1800, "profile": "same parameter ranges as development, held-out seeds"},
+  "stress": {"seed_start": 200000, "seeds": 10, "delays_seconds": [0.2, 0.4], "modes": ["fixed", "bursty"], "methods": ["ca_adaptive", "ml_adaptive", "age_guard"], "episodes": 360, "profile": "holdout"},
+  "primary_metrics": ["collision_count/episodes", "progress_m/full_30s_budget", "jerk_rms", "hard_brake_cycles", "decision_p95_ms"],
+  "scope": "Single scripted surrounding vehicle, structured delayed/noisy observations, longitudinal ego control. No camera perception or road-safety guarantee."
+}

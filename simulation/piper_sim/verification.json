@@ -1,0 +1,298 @@
+{
+  "passed": true,
+  "simulation_only": true,
+  "base_url": "http://127.0.0.1:8768",
+  "started_at": "2026-10-27T02:59:53.272515+08:00",
+  "results": [
+    {
+      "check": "environment_manifest_byte_identity",
+      "passed": true,
+      "piper_path": "/home/aup/Documents/Codex/2026-10-15/xian/outputs/piper_sim/config/environment.json",
+      "d1_path": "/home/aup/Documents/Codex/2026-10-15/xian/outputs/d1t_sim/config/environment.json",
+      "sha256": "92a56c450c4d2c5544d63ff8a8c12495f0beabecbaf31a4a5279621faa8879f3"
+    },
+    {
+      "check": "eight_joint_feedback_online",
+      "passed": true,
+      "joint_names": [
+        "joint1",
+        "joint2",
+        "joint3",
+        "joint4",
+        "joint5",
+        "joint6",
+        "gripper_joint1",
+        "gripper_joint2"
+      ],
+      "age_s": 0.01990655902773142
+    },
+    {
+      "check": "six_axis_combined_motion",
+      "passed": true,
+      "tolerance_rad": 0.015,
+      "axes": [
+        {
+          "joint": "joint1",
+          "delta_rad": 0.06,
+          "target_rad": 0.059999972597921294,
+          "actual_rad": 0.06001186639555622,
+          "absolute_error_rad": 1.189379763492232e-05
+        },
+        {
+          "joint": "joint2",
+          "delta_rad": -0.06,
+          "target_rad": 1.6805024971168332,
+          "actual_rad": 1.6835795551055424,
+          "absolute_error_rad": 0.0030770579887091642
+        },
+        {
+          "joint": "joint3",
+          "delta_rad": 0.06,
+          "target_rad": -1.132348522612813,
+          "actual_rad": -1.1303102885317995,
+          "absolute_error_rad": 0.002038234081013446
+        },
+        {
+          "joint": "joint4",
+          "delta_rad": 0.06,
+          "target_rad": 0.05999994044251045,
+          "actual_rad": 0.05999516464219476,
+          "absolute_error_rad": 4.775800315687251e-06
+        },
+        {
+          "joint": "joint5",
+          "delta_rad": -0.06,
+          "target_rad": 1.0499088254959053,
+          "actual_rad": 1.0498037579624753,
+          "absolute_error_rad": 0.0001050675334299811
+        },
+        {
+          "joint": "joint6",
+          "delta_rad": 0.06,
+          "target_rad": 0.06000004904828431,
+          "actual_rad": 0.0599333055125143,
+          "absolute_error_rad": 6.67435357700058e-05
+        }
+      ]
+    },
+    {
+      "check": "return_to_ready",
+      "passed": true
+    },
+    {
+      "check": "gripper_close_above",
+      "passed": true,
+      "fraction": 0.7,
+      "targets_m": {
+        "gripper_joint1": 0.015000000000000006,
+        "gripper_joint2": -0.015000000000000006
+      },
+      "actual_m": {
+        "gripper_joint1": 0.015000030664242315,
+        "gripper_joint2": -0.01499996935596671
+      }
+    },
+    {
+      "check": "gripper_open_above",
+      "passed": true,
+      "actual_m": {
+        "gripper_joint1": 0.05,
+        "gripper_joint2": -0.0499999696987128
+      }
+    },
+    {
+      "check": "out_of_range_angle_rejected",
+      "passed": true,
+      "http_status": 400,
+      "error": "超出官方 URDF 限位"
+    },
+    {
+      "check": "NaN_rejected",
+      "passed": true,
+      "http_status": 400,
+      "error": "无效数值"
+    },
+    {
+      "check": "hold_blocks_motion",
+      "passed": true,
+      "http_status": 400,
+      "error": "已保持当前位置，请先恢复控制"
+    },
+    {
+      "check": "hold_resume_and_ready",
+      "passed": true,
+      "maximum_arm_drift_rad": 0.0030921537498362905
+    },
+    {
+      "check": "live_640x480_jpeg",
+      "passed": true,
+      "topic": "/piper/wrist_camera/image",
+      "frames": [
+        {
+          "frame_id": 253,
+          "age_s": 0.019113,
+          "width": 640,
+          "height": 480,
+          "bytes": 13521,
+          "sha256": "4ec50e5c338812ea9330bf36f5c3f6cfd09ff173ac079242761fa55fec4c93fb"
+        },
+        {
+          "frame_id": 254,
+          "age_s": 0.101469,
+          "width": 640,
+          "height": 480,
+          "bytes": 13512,
+          "sha256": "d86efe8d795dffcb476b59227b923453a7b0ec53f9215c02ca5d43a96e86c9d8"
+        }
+      ]
+    }
+  ],
+  "state": {
+    "connected": true,
+    "age": 0.006395224016159773,
+    "positions": {
+      "joint1": -9.999018218895298e-08,
+      "joint2": 1.7435680441992374,
+      "joint3": -1.1904790265273486,
+      "joint4": 9.589010969770141e-05,
+      "joint5": 1.1096786166465198,
+      "joint6": -6.49800502794111e-05,
+      "gripper_joint1": 0.05,
+      "gripper_joint2": -0.049999969868769124
+    },
+    "targets": {
+      "joint1": -2.7402078703776857e-08,
+      "joint2": 1.7405024971168332,
+      "joint3": -1.192348522612813,
+      "joint4": -5.9557489551904085e-08,
+      "joint5": 1.1099088254959053,
+      "joint6": 4.904828430793585e-08,
+      "gripper_joint1": 0.05,
+      "gripper_joint2": -0.05
+    },
+    "hold": false,
+    "sim_time": 37.619,
+    "mode": "Gazebo Harmonic / PID position control",
+    "collision_protection": true,
+    "collision_margin_m": 0.002,
+    "collision_warning": "",
+    "cube": {
+      "connected": true,
+      "pose": {
+        "position": [
+          0.32000000001943346,
+          -1.7849284780935964e-11,
+          0.0199995616756944
+        ],
+        "quaternion": [
+          4.4635477771387535e-10,
+          4.859658200985588e-10,
+          -3.4133480047238207e-18,
+          1.0
+        ]
+      },
+      "finger_contacts": [],
+      "contacts": [
+        [
+          "red_cube::body::collision",
+          "floor::ground::collision"
+        ]
+      ],
+      "size": [
+        0.04,
+        0.04,
+        0.04
+      ],
+      "mass": 0.02
+    },
+    "grasp": {
+      "active": false,
+      "phase": "已中止自动动作",
+      "result": null,
+      "last_success": null,
+      "placement": null
+    },
+    "scene": {
+      "cube": {
+        "name": "red_cube",
+        "size": [
+          0.04,
+          0.04,
+          0.04
+        ],
+        "mass": 0.02,
+        "friction": 0.8,
+        "position": [
+          0.32,
+          0,
+          0.02
+        ]
+      },
+      "tcp_in_link6": [
+        0.0,
+        0.0,
+        0.132
+      ],
+      "poses": {
+        "above": [
+          -2.7402078703776857e-08,
+          1.7405024971168332,
+          -1.192348522612813,
+          -5.9557489551904085e-08,
+          1.1099088254959053,
+          4.904828430793585e-08
+        ],
+        "pick": [
+          -3.403244180682942e-08,
+          1.8824400339802119,
+          -1.0343758321684342,
+          -7.364926978974052e-08,
+          0.8099985981882164,
+          6.671126480722094e-08
+        ]
+      },
+      "grip_closed_target": 0.7,
+      "lift_min_m": 0.06,
+      "support_plane_z": 0.0,
+      "mount": {
+        "name": "mount",
+        "size": [
+          0.15,
+          0.23,
+          0.02
+        ],
+        "position": [
+          0,
+          0,
+          0.01
+        ]
+      },
+      "provenance": {
+        "poses": "PiPER-specific numerical IK with official URDF, top-down at same 40mm cube. FCL rate-limited paths checked. TCP and camera mounting are simulation choices.",
+        "clearance": "Nominal finger bottom 9.5 mm above table at pick; accommodates measured servo tracking error while retaining 2 mm FCL protection."
+      },
+      "place_xy_tolerance_m": 0.05,
+      "place_z_tolerance_m": 0.003
+    },
+    "wrist_camera": {
+      "connected": true,
+      "age": 0.1127430570195429,
+      "topic": "/piper/wrist_camera/image",
+      "source": "Gazebo RGB camera sensor",
+      "encoding": "image/jpeg",
+      "frames": 254,
+      "received_frames": 254,
+      "dropped_frames": 0,
+      "max_age": 2.0,
+      "error": null,
+      "width": 640,
+      "height": 480,
+      "step": 1920,
+      "pixel_format": "RGB_INT8",
+      "pixel_format_type": 3,
+      "sim_time": 37.5,
+      "frame_id": 254
+    }
+  },
+  "finished_at": "2026-10-27T03:00:12.084474+08:00"
+}

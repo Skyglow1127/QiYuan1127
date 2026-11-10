@@ -1,0 +1,14 @@
+{
+  "platform": "Linux-6.17.0-1033-oem-x86_64-with-glibc2.39",
+  "cpu": "x86_64",
+  "unmodified_sources": [
+    "/home/aup/Lerobot/framework",
+    "/home/aup/Lerobot/models/PI05/pi05_base"
+  ],
+  "scope": "offline, no robot/camera/CAN/serial connection",
+  "source_environments": {
+    "gpu": "/home/aup/Lerobot/envs/pi05-rocm-7.14.1",
+    "npu": "/home/aup/Documents/Codex/2026-10-30/w/work/ryzenai-venv"
+  },
+  "syntax": "passed"
+}

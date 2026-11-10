@@ -1,0 +1,69 @@
+Vivado 2025.2 中文界面实验
+
+范围：常用菜单、按钮、静态标签、页签、流程导航、树/列表/普通表格渲染，
+以及已逐项适配的 ILA、Clocking Wizard 特殊表格、边框标题、只读 HTML 和说明字段。
+这是第三方、会话级的部分汉化原型，并非 AMD 官方完整中文版本。
+不能据此承诺所有 IP 配置器、对话框正文、动态状态或第三方组件都已翻译。
+Tcl、HDL、后端日志、器件型号、文件路径和工程对象数据应保持原文。
+
+在本工程的 VS Code 中：终端 → 运行任务，选择：
+  Ross: Enable Chinese UI (Experimental)  为现有本地会话启用中文
+  Ross: Restore English UI              恢复界面原文，保留 Vivado 进程
+  Ross: Start Chinese UI Trial          经 ROSS 新建一个空白中文界面会话
+
+也可以在工程目录执行：
+  python3 scripts/vivado_zh.py
+  python3 scripts/vivado_zh.py --disable
+
+多个会话时，使用 --session-id 指定目标。默认优先此前操作的仍然有效的会话。
+新建会话需 --start，并沿用工程 8 GiB 可用内存门槛。
+所有会话均由用户手动关闭；该脚本不会综合、实现或下载硬件。
+
+实现：通过 ROSS 启动/查询 Vivado，以 Java Attach 加载本工程的显示层翻译器。
+翻译器不改 AMD 安装目录，不改 RTL、XDC 或工程数据模型；退出该进程即失效。
+需本机 JDK 11+（本机已有 JDK 21），以及相同用户可访问的 Vivado 2025.2 进程。
+只验证本机 Linux 桌面版，不适用于远程会话或 IDE 内嵌 webview。
+
+维护：vivado-2025.2-zh.tsv 每行是“精确英文标签<TAB>中文”。
+增补词典后重新运行启用任务即可；不必关闭 Vivado。
+源码与词典可审阅；日志记录在 reports/vivado_zh_latest.json 指向的目录。
+原厂中文提示语言设置与此原型独立；“恢复英文界面”仅撤回本原型的替换。
+
+2026-10-23 特殊控件适配
+  ILA 6.2：常规选项、探针端口范围页签、探针表头及说明正文；
+    保留 PROBE0、组件名、位宽及参数值。已在实际原生配置窗口检查。
+  Clocking Wizard 6.0：时钟选项、输出时钟、表头、分组标题和正文；
+    原位访问专用表格中的显示标签，不替换其渲染器或原生参数模型。
+    实测切换语言前后输入值、勾选状态、可读取的表格编辑值一致。
+  设置页：适配自绘标题边框及只读/禁用字段的展示覆盖层；
+    例如“自动选择的检查点”。字段原文、Document、选区和鼠标行为保留。
+    可编辑、获得焦点、背景不明确或空间不足时，保留原文。
+  HTML：复制文档结构再翻译文字，不再通过 HTMLWriter 重新解析，
+    避免 CSS 12pt 被错误转成 HTML 大字号；原字号、样式和链接保留。
+  动态文本：已适配 ILA 数字范围、Monitor Interface、VCO 频率及堆内存提示，
+    每次保留当时的原始数值，不使用旧数值的翻译缓存。
+  SmartConnect：实现 Clocking 自绘图中 DOMAIN/FREQ/PHASE 三个说明前缀的
+    有界覆盖层，并适配高级窗口的页签、按钮和属性表头。已在真实原生窗口
+    验证中文显示、恢复英文、重新启用及滚动裁剪；7 个节点、6 条连线及
+    属性值/对象身份的原生快照在语言切换前后保持一致。对象名、域名、
+    频率和相位值保持原文；不足以证明其他自绘区已覆盖。
+    专项处理原生允许的空属性列表；单个不支持的画布不会中断其他翻译。
+    高级窗口底部说明框在原厂实现中实际可编辑，因此仍保留英文，避免
+    覆盖用户输入。没有为提高覆盖率放宽可编辑文本保护。
+
+机器翻译仅供校对：离线引擎写入 machine-translations.tsv 作为草稿，
+未经人工加入精确词典的机器译文不会直接显示。词典数量不代表界面覆盖百分比。
+
+本轮证据位于 reports/vivado_zh_custom/：
+  ila-general-final.png / ila-probe-final.png
+  clock-general-final.png / clock-output-final.png
+  settings-checkpoint-final.png
+  smartconnect-clocking-final.png / smartconnect-clocking-english-final.png
+  smartconnect-scrolled-deep.png
+  value-comparisons.json / final-tests.json / verification.json
+SmartConnect 的模拟像素测试与真实 GUI 验证分别记录，不能互相替代。
+
+SmartConnect 验证使用独立的 zh_ui_demo / zh_sc_ui_trial 测试框图，
+含一个 AXI VIP、一个 SmartConnect 和两个 AXI GPIO；采用 PERFORMANCE
+策略并生成仿真输出文件，以获得高级属性窗口所需的展开数据。
+该步骤没有运行综合、实现或硬件下载，不属于 KR260 上板验证。

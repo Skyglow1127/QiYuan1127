@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-11",
+  "scope": "Repository archival and offline verification. No robot motion, board programming, model retraining or repeated historical hardware experiments.",
+  "source_manifest_files": 763,
+  "source_manifest_passed": true,
+  "package_check_passed": true,
+  "offline_tests": [
+    {
+      "suite": "digital_tactile",
+      "passed": 68
+    },
+    {
+      "suite": "aic_driving",
+      "passed": 40
+    },
+    {
+      "suite": "piper_camera",
+      "passed": 87,
+      "note": "Synthetic input; three HTTP loopback tests rerun outside socket-restricted sandbox."
+    },
+    {
+      "suite": "vivado_tools",
+      "passed": 6
+    }
+  ],
+  "offline_test_total": 201,
+  "additional_checks": {
+    "java_localization_compilation": "passed, javac --add-modules jdk.attach",
+    "depth_gate_cpp": "PASS boundary, invalid, randomized, full frame and overflow cases",
+    "model_archives": "3 ZIP archives and all model-file SHA256 checks passed",
+    "authored_navigation": "90 local links resolved",
+    "whitespace": "Authored edits checked; imported upstream sources, CAD and raw reports retain original bytes/line endings, including historical whitespace."
+  },
+  "historical_evidence": "Existing NPU/FPGA/simulation results preserved with source hashes; not counted as tests rerun today."
+}

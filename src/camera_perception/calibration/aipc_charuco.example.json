@@ -1,0 +1,16 @@
+{
+  "type": "charuco",
+  "validated": false,
+  "evidence": [],
+  "camera_serial": "CC1365301EY",
+  "fixed_board_and_rigid_camera_confirmed": false,
+  "dictionary": "DICT_4X4_50",
+  "squares_x": 8,
+  "squares_y": 6,
+  "square_size_m": null,
+  "marker_size_m": null,
+  "nominal_print_square_m": 0.02,
+  "nominal_marker_size_m": 0.0144,
+  "print_file": "charuco_8x6_20mm_300dpi.png",
+  "note": "按实际尺寸打印后，用卡尺分别测量方格和 ArUco 标记边长。记录证据文件及 SHA256 后才可设 validated=true。"
+}

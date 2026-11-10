@@ -1,0 +1,486 @@
+{
+  "version": 1,
+  "name": "User STL wrist camera mounting assembly with RGB sensor",
+  "parent": "arm_Link6",
+  "link": "arm_wrist_camera_link",
+  "mount": {
+    "xyz": [
+      -0.055,
+      0,
+      0.02
+    ],
+    "rpy": [
+      0,
+      0.35,
+      0
+    ]
+  },
+  "view": {
+    "position": [
+      0,
+      -0.1,
+      -0.2
+    ],
+    "target": [
+      -0.01,
+      0,
+      -0.008
+    ]
+  },
+  "shapes": [
+    {
+      "name": "user_stl_camera_mount",
+      "geometry": "mesh",
+      "mesh": "/meshes/wrist_camera_mount.STL",
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "color": "#e5e2d8",
+      "roughness": 0.78,
+      "metalness": 0.02
+    },
+    {
+      "name": "camera_white_housing",
+      "geometry": "box",
+      "size": [
+        0.028,
+        0.074,
+        0.028
+      ],
+      "position": [
+        -0.01,
+        0,
+        0.006
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "color": "#e5e5df"
+    },
+    {
+      "name": "camera_rounded_end_-1",
+      "geometry": "cylinder",
+      "radius": 0.014,
+      "length": 0.028,
+      "position": [
+        -0.01,
+        -0.037,
+        0.006
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "color": "#e5e5df"
+    },
+    {
+      "name": "camera_rounded_end_1",
+      "geometry": "cylinder",
+      "radius": 0.014,
+      "length": 0.028,
+      "position": [
+        -0.01,
+        0.037,
+        0.006
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "color": "#e5e5df"
+    },
+    {
+      "name": "camera_black_front",
+      "geometry": "box",
+      "size": [
+        0.024,
+        0.074,
+        0.002
+      ],
+      "position": [
+        -0.01,
+        0,
+        0.021
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "color": "#17212b"
+    },
+    {
+      "name": "front_round_-1",
+      "geometry": "cylinder",
+      "radius": 0.012,
+      "length": 0.002,
+      "position": [
+        -0.01,
+        -0.037,
+        0.021
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "color": "#17212b"
+    },
+    {
+      "name": "front_round_1",
+      "geometry": "cylinder",
+      "radius": 0.012,
+      "length": 0.002,
+      "position": [
+        -0.01,
+        0.037,
+        0.021
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "color": "#17212b"
+    },
+    {
+      "name": "lens_bezel_0",
+      "geometry": "cylinder",
+      "radius": 0.0082,
+      "length": 0.0014,
+      "position": [
+        -0.01,
+        -0.032,
+        0.0225
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "color": "#626d73"
+    },
+    {
+      "name": "lens_glass_0",
+      "geometry": "cylinder",
+      "radius": 0.007,
+      "length": 0.0015,
+      "position": [
+        -0.01,
+        -0.032,
+        0.0235
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "color": "#492b48"
+    },
+    {
+      "name": "lens_highlight_0",
+      "geometry": "cylinder",
+      "radius": 0.0013,
+      "length": 0.0016,
+      "position": [
+        -0.012,
+        -0.033,
+        0.0244
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "color": "#aac6cf"
+    },
+    {
+      "name": "lens_bezel_1",
+      "geometry": "cylinder",
+      "radius": 0.005999999999999999,
+      "length": 0.0014,
+      "position": [
+        -0.01,
+        -0.017,
+        0.0225
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "color": "#626d73"
+    },
+    {
+      "name": "lens_glass_1",
+      "geometry": "cylinder",
+      "radius": 0.0048,
+      "length": 0.0015,
+      "position": [
+        -0.01,
+        -0.017,
+        0.0235
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "color": "#344650"
+    },
+    {
+      "name": "lens_bezel_2",
+      "geometry": "cylinder",
+      "radius": 0.0087,
+      "length": 0.0014,
+      "position": [
+        -0.01,
+        0,
+        0.0225
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "color": "#626d73"
+    },
+    {
+      "name": "lens_glass_2",
+      "geometry": "cylinder",
+      "radius": 0.0075,
+      "length": 0.0015,
+      "position": [
+        -0.01,
+        0,
+        0.0235
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "color": "#101a24"
+    },
+    {
+      "name": "lens_highlight_2",
+      "geometry": "cylinder",
+      "radius": 0.0013,
+      "length": 0.0016,
+      "position": [
+        -0.012,
+        -0.001,
+        0.0244
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "color": "#aac6cf"
+    },
+    {
+      "name": "lens_bezel_3",
+      "geometry": "cylinder",
+      "radius": 0.0042,
+      "length": 0.0014,
+      "position": [
+        -0.01,
+        0.018,
+        0.0225
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "color": "#626d73"
+    },
+    {
+      "name": "lens_glass_3",
+      "geometry": "cylinder",
+      "radius": 0.003,
+      "length": 0.0015,
+      "position": [
+        -0.01,
+        0.018,
+        0.0235
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "color": "#8e5a67"
+    },
+    {
+      "name": "lens_bezel_4",
+      "geometry": "cylinder",
+      "radius": 0.0072,
+      "length": 0.0014,
+      "position": [
+        -0.01,
+        0.032,
+        0.0225
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "color": "#626d73"
+    },
+    {
+      "name": "lens_glass_4",
+      "geometry": "cylinder",
+      "radius": 0.006,
+      "length": 0.0015,
+      "position": [
+        -0.01,
+        0.032,
+        0.0235
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "color": "#35414c"
+    },
+    {
+      "name": "lens_highlight_4",
+      "geometry": "cylinder",
+      "radius": 0.0013,
+      "length": 0.0016,
+      "position": [
+        -0.012,
+        0.031,
+        0.0244
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ],
+      "color": "#aac6cf"
+    }
+  ],
+  "colliders": [
+    {
+      "name": "wrist_camera_body",
+      "size": [
+        0.029,
+        0.102,
+        0.032
+      ],
+      "position": [
+        -0.01,
+        0,
+        0.007
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "wrist_camera_bracket",
+      "geometry": "mesh",
+      "mesh": "/meshes/wrist_camera_mount.STL",
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rpy": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "sensor": {
+    "name": "wrist_rgb",
+    "topic": "/d1t/wrist_camera/image",
+    "width": 640,
+    "height": 480,
+    "update_rate": 10,
+    "horizontal_fov": 1.5707963267948966,
+    "near": 0.01,
+    "far": 4.0,
+    "optical_xyz": [
+      -0.01,
+      0,
+      0.025
+    ],
+    "optical_rpy": [
+      0,
+      -1.5707963267948966,
+      0
+    ]
+  },
+  "provenance": {
+    "source_photos": [
+      "d7d88908956fead30a61e7106aedbe22.jpg",
+      "5d7dd815249af74900bd6e3b9f4aad9d.jpg",
+      "c0afd8389a1d90f42eebe7a12e3b2b19.jpg"
+    ],
+    "geometry_and_mount": "The mounting bracket uses the supplied STL. Housing geometry and its placement on the wrist remain estimated from photos; this is not a measured hand-eye calibration. The existing demonstration optical pose is retained.",
+    "optics": "640x480, 90-degree horizontal FOV and clipping ranges are simulation settings, not the actual camera specifications. RGB only.",
+    "inertia": "Camera visuals and collision envelopes merge into the wrist rigid body. No unmeasured camera payload mass or inertia is added.",
+    "stl_model": "User-provided 摄像头.STL supplies the exact T-shaped mounting geometry, holes and inclined plate. The housing and lens primitives remain photo approximations because they are absent from this STL.",
+    "source_units": "STL has no unit declaration; millimetres are inferred from the part dimensions and supplied photos. Mesh is rigidly rotated and translated, with no geometry deformation."
+  },
+  "mesh_import": {
+    "source": "upstream/wrist_camera_mount_original.STL",
+    "output": "meshes/wrist_camera_mount.STL",
+    "source_sha256": "f668e03cdc26bd688b5496bebc8d9db6eb6f2b758bb92146883091709e5ebfa8",
+    "assumed_source_units": "mm",
+    "scale": 0.001,
+    "rotation": [
+      [
+        -0.948655428,
+        -0.316311365,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        -0.316311365,
+        0.948655428,
+        0
+      ]
+    ],
+    "translation": [
+      0.03995610672,
+      -0.04260227404,
+      -0.03125997775
+    ],
+    "alignment": "T-bar front hole midpoint aligned to camera housing rear center [-0.010,0,-0.008] m; plate normal maps to camera local +Z."
+  }
+}

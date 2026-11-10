@@ -1,0 +1,70 @@
+{
+  "python_syntax": "passed",
+  "gpu_actions_samples": {
+    "shape": [
+      3,
+      50,
+      7
+    ],
+    "all_finite": true,
+    "all_three_identical": true
+  },
+  "npu_actions_samples": {
+    "shape": [
+      3,
+      50,
+      7
+    ],
+    "all_finite": true,
+    "all_three_identical": true
+  },
+  "npu_features_samples": {
+    "shape": [
+      3,
+      2,
+      256,
+      2048
+    ],
+    "all_finite": true,
+    "all_three_identical": true
+  },
+  "feature_action_first_sample_alignment": true,
+  "npu_only_proven": true,
+  "npu_nodes": 1034,
+  "cpu_nodes": 0,
+  "raw_npz_pixels_noise_match_baseline": true,
+  "zero_fraction": 0.0,
+  "repair_regression_passed": true,
+  "default_model": "models/vision_batch1.onnx",
+  "default_config": "code/vaiml_tp1.json",
+  "code_sha256": {
+    "vaiml_tp1.json": "ea63b79e06858031f2b33da8a067690547bd693726efebbbc76c0e6c3daa75ec",
+    "diagnose_io.py": "3d474199ccca8ed35b8faa077806135fcde88c069da83b93823c5861eba856bc",
+    "reused_npu_audit.py": "18cf2eed38f1eac3a7de797ed9bdd88d77128c7414528d6647fd80481fc6207c",
+    "vaiml_config.json": "e951c3a3eae93ce36ab6c83aa3d63ce6ae68e68fde853df6ccad7f05bd81007d",
+    "diagnose_native_bf16.py": "f90cc5a0c34ff0ef9871b4bb7f5c7ab182c26d45f913a74ea0e6f4b977a5c4da",
+    "diagnose_precision.py": "0c3dd9155e4fdf43ec2e2b3c78c4dbaef63850227f5dd9c9ed59b7d1cf157339",
+    "vaiml_explicit_bf16.json": "518a6bfcdbee6dbefb405a714912fada8738e8de42f9f9836e55889f9238c655",
+    "patchify.py": "f02f1d27f1d6c2a4717673930132227eb4d427ea7f6ec6f660c9d95c63e41b4b",
+    "verify_patch_stem.py": "3e3e0bef75a45251496ce4433b18078e6d809209b5191581f1a00150dab25be7",
+    "protocol.py": "126113d4ad5f2413f65b406afa11a5575ad92258331c8a451ec94fd463921819",
+    "verify_export.py": "97c00be281e95b08daaf4606260c72d4d847b8fbbf4f9098da819bedd7d2ae03",
+    "run_offline.py": "151548b24129153626bbe98e3b22fc6cfb32df4df04f9ecac8e33286d8e535b0",
+    "summarize_repair.py": "c12d245e00d8a73f222fd4970080812aaa6da44d93a698cd2b34d1c29432bdd1",
+    "trace_runtime_io.cpp": "50ad6222f0648de3b5eec51a7837bd5da90aea1ebe5b222837554ed4253ae36f",
+    "diagnose_stages.py": "bb7632f5734100af26429565cabb4b2bbd3dc5ceda65e5f2acab07ecdaa6debe",
+    "npu_worker.py": "545ce355c30575ba97d300f09a4ba709ebd53169f1f5515f0144bd8c57c1d162",
+    "export_recorded_input.py": "305a03b9556d12c169925fc256b084c69bd7d61138db758fdbf9076953fae475",
+    "run_npu_env.sh": "a1a7569256e39458fbcb9ec528febdfb69b7655fdd48fac8814b4ec0c8dcad6b",
+    "pi05_low_memory.py": "3b540b0f35af473d69a87b401d006cd093ea3d2287707eff537f9e3da87c1ac8",
+    "vaiml_unvectorized.json": "9ca9db1009eb1a6e707ef56e9ec1853304ab98a690eb2122f7523c3c8b15c18e",
+    "export_vision.py": "ec3641e974a1440f6600bae030754b5cffb67f9d2e956644f90120e46eae8616",
+    "vaiml_from_fp16.json": "30581e976f3f0b161c9c2d0e070d28e6ae62addb2bbdd069ba4dba6eb916caf2",
+    "common.py": "f3f788c5160f8e312920a10ec30841e63ff1ff64f708697058e670e0aeb55195",
+    "diagnose_direct_runtime.py": "5d94404bab9051411ffbf489b901b0177cb6b5be97a695042860be2022e9771a",
+    "prepare_reference.py": "1e7aa8fbc7dab7512983abac5860195b5ddd5e9edaecf8536c6ad1f8fe51a4eb",
+    "summarize_results.py": "9f793cf86efcb3558253b63cecd48ae928e65ec6fddc8dba28c7b64ff65725de",
+    "check_runtime_conversion.py": "d41b0b5844c2016da68c6cd03eb27c878e5bd79de55fe06c782d24c6aa073c12",
+    "npu_bridge.py": "69d978b1b667909dc8ef8106798f9b1caedc02d5506dddbad76a281695dae221"
+  }
+}

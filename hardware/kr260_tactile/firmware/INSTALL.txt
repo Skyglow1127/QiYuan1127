@@ -1,0 +1,116 @@
+KR260 压力 DO 固件部署与维护说明
+================================
+
+当前状态和测量边界
+------------------
+当前可安装修订为 r2_aux_reset_and_afi_20261025，已实际加载到 ZynqMP KR260 revB。
+板卡为 Ubuntu 24.04.2 arm64。依赖 gpiod/python3-libgpiod 已安装；本次动态核实的
+压力设备为 /dev/gpiochip3，offset 0/1，权限 root:pressure-gpio 0660。
+普通用户 ubuntu 已取得 100 条真实样本，约 99.993 Hz，主机 SSH 采集也已启动。
+初始 100 条样本均为 DO1=1、DO2=1。后续固定主机快照共 97,319 条真实样本、
+973.180 秒，约 100 Hz，gap=0。DO1 共 20 个原始边沿，DO2 共 2 个边沿。
+用户确认单独按压 DO2 的复测中，新增 10 个边沿全部记录在 DO1，DO2 没有新增变化，
+全程仅有约 30 毫秒低段；DO2 持续响应尚未确认，实物传感器与通道标签需核对。
+原始边沿不是按压次数；保持硬件 bit 0/1 顺序，不凭推测交换软件标签。
+细节见 evidence/real_acceptance.json 及实测曲线快照。
+四线 DO 只能表示比较器阈值状态，不能换算连续压力或 N/kPa。
+
+r2 修复 C_EXT_RESET_HIGH=0、C_AUX_RESET_HIGH=1，辅助输入接常量 0，避免辅助
+复位常有效；设备树复位 116–119 归入 AFI 节点。r1 只作故障证据，禁止再次加载。
+离线清单保留 OFFLINE_BUILD_PASS / hardware_status=NOT_TESTED，表示创建时状态；
+不要改写原构建清单。实机状态见 evidence/real_deployment_receipt.json 及后续验收记录。
+
+固定设计与文件
+--------------
+part：xck26-sfvc784-2LV-c；C3 外部时钟：25 MHz。
+DO1：J21 11 / AB14；DO2：J21 12 / Y14，均为 LVCMOS33 输入。
+AXI GPIO 地址 0xa0000000、范围 0x10000、宽度 2、offset 0/1。
+设备树 /axi/gpio@a0000000；线路名 FSR_DO1 / FSR_DO2；两个输入。
+通过 OF 节点、宽度、输入属性和字符设备号确认，不依赖 gpiochip 动态编号。
+固定六件：kr260-fsr.bit.bin、kr260-fsr.dtbo、shell.json、fsr_top.bit、
+kr260-fsr.xsa、address_map.json，全部 SHA256 见 firmware/output/manifest.json。
+运行时目录 /lib/firmware/xilinx/kr260-fsr，保留 stock starter-kit 文件。
+
+日常恢复入口
+------------
+重启后仍以 stock starter-kit 为默认应用，压力 overlay 和 GPIO 权限需要重新建立。
+本交付不改默认开机应用，不安装 udev 规则。仅关闭电脑网页不会卸载 FPGA。
+
+先停止正在运行的采集。在电脑最终程序目录执行：
+
+  ./authenticate_and_deploy.sh
+
+它通过项目 SSH 配置连接 pressure-kr260，当前为 ubuntu@10.42.0.55，再调用：
+
+  cd /home/ubuntu/kr260-pressure-20261025
+  sudo python3 -u deploy_live.py
+
+sudo 密码只在可见终端交给板卡认证，不写入程序或聊天。入口不会自动上传；
+新设备或版本更新应先同步完整程序目录与匹配固件，不能混用旧 dtbo 或 manifest。
+
+自动部署的明确范围
+------------------
+deploy_live.py 先校验本 r2 的全部文件、KR260 型号、唯一 overlay 和实际应用表。
+仅当唯一 overlay 为 k26-starter-kits_image_1、firmware-name 为
+k26-starter-kits.bit.bin，并且 stock 是唯一 slot 0 时，才允许替换。
+目标 kr260-fsr 必须在安装后实际出现在表中。其他活动应用或未知格式均停止。
+若本压力目标已经加载，则只核验、授权、读取，不再次安装或重载。
+
+标准顺序：
+  1. install_board.sh --verify-package
+  2. install_board.sh --install（当前为 stock 时）
+  3. 复核应用列表；os.sync 确保固件与安装记录落盘
+  4. xmutil unloadapp 0；复核无活动 slot / overlay
+  5. xmutil loadapp kr260-fsr；复核目标 slot 0、overlay 与 FPGA 状态
+  6. install_board.sh --grant-access ubuntu
+  7. 动态寻找对应 GPIO，以 runuser -u ubuntu 读取真实 100 条、100 Hz 样本
+
+每个命令的 stdout/stderr 直接写文件，每 0.5 秒 fsync 并保存当前步骤。
+总回执在板端 evidence/deployment_latest.json；独立部署目录保存原始 JSONL、
+列表、命令日志和结果。重启或异常后应读这些证据，不根据缺失的旧日志推断未操作。
+若采集线已被 GUI 占用，验证读值会明确失败；先停止已有采集再重试。
+
+分步管理员维护
+--------------
+以下操作均在板端完整程序目录执行：
+
+  ./install_board.sh --verify-package
+  sudo ./install_board.sh --install
+
+verify-package 不需要 root。install 检查 KR260/Ubuntu 24.04 arm64，安装发行版
+python3-libgpiod 和 gpiod，并复制运行固件。apt 已使用 -y；安装需要网络。
+安装器本身不卸载或加载 FPGA，也不修改 GPIO 权限。不同已有版本拒绝覆盖。
+
+需要分步加载时先记录实际应用名称和 slot；仅在明确的 stock slot 0 下执行：
+
+  sudo xmutil listapps
+  sudo xmutil unloadapp 0
+  sudo xmutil loadapp kr260-fsr
+  sudo xmutil listapps
+  sudo ./install_board.sh --grant-access ubuntu
+
+加载会替换当前 PL 功能；发现其他应用时应停止核查。本程序不停止相机服务或机械臂。
+DT 使用 fpga_full=/fpga-region、amba=/axi；不是 /fpga-full 或 /amba_pl。
+
+精确授权与真实采集
+------------------
+grant-access 核对当前固件名、DT 地址/范围/2bit/全输入/单通道/线路名，以及唯一
+字符设备、设备号和 ngpio=2，才加入 pressure-gpio 组并设置该单个控制器 0660。
+不授权全部 GPIO，不使用 0666，不写 NOPASSWD sudoers。新 SSH 登录获得新组资格；
+overlay 重载或重启创建新设备后需重新授权，不能写死旧设备编号执行 chmod。
+
+启动 start.sh 后，选 SSH / pressure-kr260，填写本次核实设备和 offset 0/1，
+保持未知极性，开始记录。按压/释放逐路核实原始 0/1，对应关系确认后才选择极性。
+真实来源须为 real，CSV 和时间戳必须持续增长；阶梯图纵轴是逻辑电平，不是压力单位。
+
+回退
+----
+需要回退时先停止采集，查看实际活动 slot，卸载当前压力应用，再加载操作前记录的
+stock 应用。本次原应用为 k26-starter-kits，标准 slot 0：
+
+  sudo xmutil listapps
+  sudo xmutil unloadapp 0
+  sudo xmutil loadapp k26-starter-kits
+  sudo xmutil listapps
+
+实际应用或 slot 与本次不同时不要照抄。安装器保留 stock 文件，不自动回退或重启。

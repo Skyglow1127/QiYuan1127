@@ -1,0 +1,834 @@
+{
+  "sdk": "1.10.18",
+  "mode": "both",
+  "profiles": {
+    "depth": [
+      {
+        "index": 0,
+        "width": 640,
+        "height": 400,
+        "fps": 30,
+        "format": 11
+      },
+      {
+        "index": 1,
+        "width": 160,
+        "height": 100,
+        "fps": 5,
+        "format": 11
+      },
+      {
+        "index": 2,
+        "width": 160,
+        "height": 100,
+        "fps": 5,
+        "format": 12
+      },
+      {
+        "index": 3,
+        "width": 160,
+        "height": 100,
+        "fps": 10,
+        "format": 11
+      },
+      {
+        "index": 4,
+        "width": 160,
+        "height": 100,
+        "fps": 10,
+        "format": 12
+      },
+      {
+        "index": 5,
+        "width": 160,
+        "height": 100,
+        "fps": 15,
+        "format": 11
+      },
+      {
+        "index": 6,
+        "width": 160,
+        "height": 100,
+        "fps": 15,
+        "format": 12
+      },
+      {
+        "index": 7,
+        "width": 160,
+        "height": 100,
+        "fps": 30,
+        "format": 11
+      },
+      {
+        "index": 8,
+        "width": 160,
+        "height": 100,
+        "fps": 30,
+        "format": 12
+      },
+      {
+        "index": 9,
+        "width": 320,
+        "height": 200,
+        "fps": 5,
+        "format": 11
+      },
+      {
+        "index": 10,
+        "width": 320,
+        "height": 200,
+        "fps": 5,
+        "format": 12
+      },
+      {
+        "index": 11,
+        "width": 320,
+        "height": 200,
+        "fps": 10,
+        "format": 11
+      },
+      {
+        "index": 12,
+        "width": 320,
+        "height": 200,
+        "fps": 10,
+        "format": 12
+      },
+      {
+        "index": 13,
+        "width": 320,
+        "height": 200,
+        "fps": 15,
+        "format": 11
+      },
+      {
+        "index": 14,
+        "width": 320,
+        "height": 200,
+        "fps": 15,
+        "format": 12
+      },
+      {
+        "index": 15,
+        "width": 320,
+        "height": 200,
+        "fps": 30,
+        "format": 11
+      },
+      {
+        "index": 16,
+        "width": 320,
+        "height": 200,
+        "fps": 30,
+        "format": 12
+      },
+      {
+        "index": 17,
+        "width": 640,
+        "height": 400,
+        "fps": 5,
+        "format": 11
+      },
+      {
+        "index": 18,
+        "width": 640,
+        "height": 400,
+        "fps": 5,
+        "format": 12
+      },
+      {
+        "index": 19,
+        "width": 640,
+        "height": 400,
+        "fps": 10,
+        "format": 11
+      },
+      {
+        "index": 20,
+        "width": 640,
+        "height": 400,
+        "fps": 10,
+        "format": 12
+      },
+      {
+        "index": 21,
+        "width": 640,
+        "height": 400,
+        "fps": 15,
+        "format": 11
+      },
+      {
+        "index": 22,
+        "width": 640,
+        "height": 400,
+        "fps": 15,
+        "format": 12
+      },
+      {
+        "index": 23,
+        "width": 640,
+        "height": 400,
+        "fps": 30,
+        "format": 12
+      },
+      {
+        "index": 24,
+        "width": 1280,
+        "height": 800,
+        "fps": 7,
+        "format": 11
+      },
+      {
+        "index": 25,
+        "width": 1280,
+        "height": 800,
+        "fps": 7,
+        "format": 12
+      }
+    ],
+    "color": [
+      {
+        "index": 0,
+        "width": 640,
+        "height": 480,
+        "fps": 30,
+        "format": 5
+      },
+      {
+        "index": 1,
+        "width": 1280,
+        "height": 720,
+        "fps": 5,
+        "format": 5
+      },
+      {
+        "index": 2,
+        "width": 1280,
+        "height": 720,
+        "fps": 10,
+        "format": 5
+      },
+      {
+        "index": 3,
+        "width": 1280,
+        "height": 720,
+        "fps": 15,
+        "format": 5
+      },
+      {
+        "index": 4,
+        "width": 1280,
+        "height": 720,
+        "fps": 20,
+        "format": 5
+      },
+      {
+        "index": 5,
+        "width": 1280,
+        "height": 720,
+        "fps": 30,
+        "format": 5
+      },
+      {
+        "index": 6,
+        "width": 1280,
+        "height": 720,
+        "fps": 5,
+        "format": 0
+      },
+      {
+        "index": 7,
+        "width": 1280,
+        "height": 720,
+        "fps": 10,
+        "format": 0
+      },
+      {
+        "index": 8,
+        "width": 640,
+        "height": 480,
+        "fps": 5,
+        "format": 5
+      },
+      {
+        "index": 9,
+        "width": 640,
+        "height": 480,
+        "fps": 10,
+        "format": 5
+      },
+      {
+        "index": 10,
+        "width": 640,
+        "height": 480,
+        "fps": 15,
+        "format": 5
+      },
+      {
+        "index": 11,
+        "width": 640,
+        "height": 480,
+        "fps": 20,
+        "format": 5
+      },
+      {
+        "index": 12,
+        "width": 640,
+        "height": 480,
+        "fps": 5,
+        "format": 0
+      },
+      {
+        "index": 13,
+        "width": 640,
+        "height": 480,
+        "fps": 10,
+        "format": 0
+      },
+      {
+        "index": 14,
+        "width": 640,
+        "height": 480,
+        "fps": 15,
+        "format": 0
+      },
+      {
+        "index": 15,
+        "width": 640,
+        "height": 480,
+        "fps": 20,
+        "format": 0
+      },
+      {
+        "index": 16,
+        "width": 640,
+        "height": 480,
+        "fps": 30,
+        "format": 0
+      },
+      {
+        "index": 17,
+        "width": 1280,
+        "height": 720,
+        "fps": 5,
+        "format": 22
+      },
+      {
+        "index": 18,
+        "width": 1280,
+        "height": 720,
+        "fps": 10,
+        "format": 22
+      },
+      {
+        "index": 19,
+        "width": 1280,
+        "height": 720,
+        "fps": 15,
+        "format": 22
+      },
+      {
+        "index": 20,
+        "width": 1280,
+        "height": 720,
+        "fps": 20,
+        "format": 22
+      },
+      {
+        "index": 21,
+        "width": 1280,
+        "height": 720,
+        "fps": 30,
+        "format": 22
+      },
+      {
+        "index": 22,
+        "width": 640,
+        "height": 480,
+        "fps": 5,
+        "format": 22
+      },
+      {
+        "index": 23,
+        "width": 640,
+        "height": 480,
+        "fps": 10,
+        "format": 22
+      },
+      {
+        "index": 24,
+        "width": 640,
+        "height": 480,
+        "fps": 15,
+        "format": 22
+      },
+      {
+        "index": 25,
+        "width": 640,
+        "height": 480,
+        "fps": 20,
+        "format": 22
+      },
+      {
+        "index": 26,
+        "width": 640,
+        "height": 480,
+        "fps": 30,
+        "format": 22
+      },
+      {
+        "index": 27,
+        "width": 1280,
+        "height": 720,
+        "fps": 5,
+        "format": 25
+      },
+      {
+        "index": 28,
+        "width": 1280,
+        "height": 720,
+        "fps": 10,
+        "format": 25
+      },
+      {
+        "index": 29,
+        "width": 1280,
+        "height": 720,
+        "fps": 15,
+        "format": 25
+      },
+      {
+        "index": 30,
+        "width": 1280,
+        "height": 720,
+        "fps": 20,
+        "format": 25
+      },
+      {
+        "index": 31,
+        "width": 1280,
+        "height": 720,
+        "fps": 30,
+        "format": 25
+      },
+      {
+        "index": 32,
+        "width": 640,
+        "height": 480,
+        "fps": 5,
+        "format": 25
+      },
+      {
+        "index": 33,
+        "width": 640,
+        "height": 480,
+        "fps": 10,
+        "format": 25
+      },
+      {
+        "index": 34,
+        "width": 640,
+        "height": 480,
+        "fps": 15,
+        "format": 25
+      },
+      {
+        "index": 35,
+        "width": 640,
+        "height": 480,
+        "fps": 20,
+        "format": 25
+      },
+      {
+        "index": 36,
+        "width": 640,
+        "height": 480,
+        "fps": 30,
+        "format": 25
+      }
+    ]
+  },
+  "streams": {
+    "depth": {
+      "profile": {
+        "index": 0,
+        "width": 640,
+        "height": 400,
+        "fps": 30,
+        "format": 11
+      },
+      "frames": 113,
+      "unique_indices": 113,
+      "elapsed_seconds": 4.045065527000588,
+      "observed_fps": 29.91819416613649,
+      "last_frame": {
+        "width": 640,
+        "height": 480,
+        "format": 8,
+        "device_timestamp_us": 1740180133121110,
+        "index": 121,
+        "host_received_ms": 1740180133121,
+        "mm_per_unit": 1.0
+      },
+      "sha256": "8205192513ad1d2b0244159d15372cfab9112f1341ab1545da78c8e91c4d2564",
+      "bytes": 614400,
+      "valid_fraction": 0.5593229166666667,
+      "percentiles_mm": {
+        "1": 208.0,
+        "10": 240.0,
+        "50": 486.0,
+        "90": 586.0,
+        "99": 635.0
+      }
+    },
+    "color": {
+      "profile": {
+        "index": 0,
+        "width": 640,
+        "height": 480,
+        "fps": 30,
+        "format": 5
+      },
+      "frames": 113,
+      "unique_indices": 113,
+      "elapsed_seconds": 4.045065527000588,
+      "observed_fps": 29.967826308888522,
+      "last_frame": {
+        "width": 640,
+        "height": 480,
+        "format": 5,
+        "device_timestamp_us": 1072710236000,
+        "index": 111,
+        "host_received_ms": 1740180133128
+      },
+      "sha256": "422379370aed9cc9e2af084b1653e64afe51ca689e3ad6e8be9386159c3c92fd",
+      "bytes": 55552
+    }
+  },
+  "note": "SDK spatial D2C. Host-receipt pairing only; exposure sync and robot stationarity are NOT established.",
+  "device": {
+    "name": "DaBai DC1",
+    "firmware": "RD1001",
+    "serial": "CC1365301EY"
+  },
+  "alignment_attempts": [],
+  "alignment_mode": "SDK_D2C_HW",
+  "sdk_frame_sync_enabled": false,
+  "sync_warning": "ob_pipeline_enable_frame_sync: Current device does not support frame sync!",
+  "camera_parameters": {
+    "color_intrinsic": {
+      "fx": 488.3943176269531,
+      "fy": 488.3943176269531,
+      "cx": 317.0950012207031,
+      "cy": 217.83570861816406,
+      "width": 640,
+      "height": 480
+    },
+    "color_distortion": {
+      "k1": 0.07536177337169647,
+      "k2": -0.102895587682724,
+      "k3": 0.0,
+      "k4": 0.0,
+      "k5": 0.0,
+      "k6": 0.0,
+      "p1": 0.0005411416059359908,
+      "p2": 0.0004204759607091546
+    },
+    "depth_intrinsic": {
+      "fx": 488.3943176269531,
+      "fy": 488.3943176269531,
+      "cx": 317.0950012207031,
+      "cy": 217.83570861816406,
+      "width": 640,
+      "height": 480
+    },
+    "depth_distortion": {
+      "k1": 0.0,
+      "k2": 0.0,
+      "k3": 0.0,
+      "k4": 0.0,
+      "k5": 0.0,
+      "k6": 0.0,
+      "p1": 0.0,
+      "p2": 0.0
+    },
+    "depth_to_color_rotation": [
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "depth_to_color_translation_mm": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "is_mirrored": false
+  },
+  "pairing": "host_receipt_approximate_stationary_only",
+  "robot_stationarity_verified": false,
+  "accepted_pairs": 90,
+  "saved_pair_host_skew_ms": 7,
+  "fpga_results": [
+    {
+      "implementation": "FPGA_PL_HLS",
+      "pixels": 307200,
+      "blocks": 75,
+      "valid_count": 166161,
+      "sum_raw": 80183067,
+      "min_raw": 300,
+      "max_raw": 723,
+      "mean_raw": 482.56249661472907,
+      "lower_raw": 300,
+      "upper_raw": 1500,
+      "elapsed_ms": 41.76869799994165,
+      "frame_index": 8,
+      "mm_per_unit": 1.0,
+      "host_monotonic_s": 4759.337580535,
+      "mean_mm": 482.56249661472907
+    },
+    {
+      "implementation": "FPGA_PL_HLS",
+      "pixels": 307200,
+      "blocks": 75,
+      "valid_count": 166470,
+      "sum_raw": 80312746,
+      "min_raw": 300,
+      "max_raw": 723,
+      "mean_raw": 482.445761999159,
+      "lower_raw": 300,
+      "upper_raw": 1500,
+      "elapsed_ms": 41.578626000045915,
+      "frame_index": 16,
+      "mm_per_unit": 1.0,
+      "host_monotonic_s": 4759.599857398,
+      "mean_mm": 482.445761999159
+    },
+    {
+      "implementation": "FPGA_PL_HLS",
+      "pixels": 307200,
+      "blocks": 75,
+      "valid_count": 166042,
+      "sum_raw": 80138421,
+      "min_raw": 300,
+      "max_raw": 723,
+      "mean_raw": 482.6394586911745,
+      "lower_raw": 300,
+      "upper_raw": 1500,
+      "elapsed_ms": 39.85328900034801,
+      "frame_index": 24,
+      "mm_per_unit": 1.0,
+      "host_monotonic_s": 4759.866129501,
+      "mean_mm": 482.6394586911745
+    },
+    {
+      "implementation": "FPGA_PL_HLS",
+      "pixels": 307200,
+      "blocks": 75,
+      "valid_count": 166096,
+      "sum_raw": 80179676,
+      "min_raw": 300,
+      "max_raw": 723,
+      "mean_raw": 482.73092669299683,
+      "lower_raw": 300,
+      "upper_raw": 1500,
+      "elapsed_ms": 40.77746700022544,
+      "frame_index": 32,
+      "mm_per_unit": 1.0,
+      "host_monotonic_s": 4760.134650127,
+      "mean_mm": 482.73092669299683
+    },
+    {
+      "implementation": "FPGA_PL_HLS",
+      "pixels": 307200,
+      "blocks": 75,
+      "valid_count": 164889,
+      "sum_raw": 79852630,
+      "min_raw": 300,
+      "max_raw": 723,
+      "mean_raw": 484.2811224520738,
+      "lower_raw": 300,
+      "upper_raw": 1500,
+      "elapsed_ms": 39.28359299970907,
+      "frame_index": 40,
+      "mm_per_unit": 1.0,
+      "host_monotonic_s": 4760.401412305,
+      "mean_mm": 484.2811224520738
+    },
+    {
+      "implementation": "FPGA_PL_HLS",
+      "pixels": 307200,
+      "blocks": 75,
+      "valid_count": 164542,
+      "sum_raw": 79595682,
+      "min_raw": 300,
+      "max_raw": 723,
+      "mean_raw": 483.740819973016,
+      "lower_raw": 300,
+      "upper_raw": 1500,
+      "elapsed_ms": 39.18165200047952,
+      "frame_index": 48,
+      "mm_per_unit": 1.0,
+      "host_monotonic_s": 4760.669181963,
+      "mean_mm": 483.740819973016
+    },
+    {
+      "implementation": "FPGA_PL_HLS",
+      "pixels": 307200,
+      "blocks": 75,
+      "valid_count": 164615,
+      "sum_raw": 79621077,
+      "min_raw": 300,
+      "max_raw": 723,
+      "mean_raw": 483.68056981441543,
+      "lower_raw": 300,
+      "upper_raw": 1500,
+      "elapsed_ms": 37.436474000060116,
+      "frame_index": 56,
+      "mm_per_unit": 1.0,
+      "host_monotonic_s": 4760.935372635,
+      "mean_mm": 483.68056981441543
+    },
+    {
+      "implementation": "FPGA_PL_HLS",
+      "pixels": 307200,
+      "blocks": 75,
+      "valid_count": 163855,
+      "sum_raw": 79445338,
+      "min_raw": 300,
+      "max_raw": 726,
+      "mean_raw": 484.85147233834795,
+      "lower_raw": 300,
+      "upper_raw": 1500,
+      "elapsed_ms": 37.61074599970016,
+      "frame_index": 64,
+      "mm_per_unit": 1.0,
+      "host_monotonic_s": 4761.203535227,
+      "mean_mm": 484.85147233834795
+    },
+    {
+      "implementation": "FPGA_PL_HLS",
+      "pixels": 307200,
+      "blocks": 75,
+      "valid_count": 163721,
+      "sum_raw": 79422884,
+      "min_raw": 300,
+      "max_raw": 723,
+      "mean_raw": 485.111158617404,
+      "lower_raw": 300,
+      "upper_raw": 1500,
+      "elapsed_ms": 38.41282399935153,
+      "frame_index": 72,
+      "mm_per_unit": 1.0,
+      "host_monotonic_s": 4761.472483797,
+      "mean_mm": 485.111158617404
+    },
+    {
+      "implementation": "FPGA_PL_HLS",
+      "pixels": 307200,
+      "blocks": 75,
+      "valid_count": 166244,
+      "sum_raw": 80236057,
+      "min_raw": 300,
+      "max_raw": 723,
+      "mean_raw": 482.6403178460576,
+      "lower_raw": 300,
+      "upper_raw": 1500,
+      "elapsed_ms": 38.17518200048653,
+      "frame_index": 80,
+      "mm_per_unit": 1.0,
+      "host_monotonic_s": 4761.736253215,
+      "mean_mm": 482.6403178460576
+    },
+    {
+      "implementation": "FPGA_PL_HLS",
+      "pixels": 307200,
+      "blocks": 75,
+      "valid_count": 164698,
+      "sum_raw": 79734709,
+      "min_raw": 300,
+      "max_raw": 723,
+      "mean_raw": 484.1267592806227,
+      "lower_raw": 300,
+      "upper_raw": 1500,
+      "elapsed_ms": 37.38083400003234,
+      "frame_index": 88,
+      "mm_per_unit": 1.0,
+      "host_monotonic_s": 4762.003554209,
+      "mean_mm": 484.1267592806227
+    },
+    {
+      "implementation": "FPGA_PL_HLS",
+      "pixels": 307200,
+      "blocks": 75,
+      "valid_count": 165302,
+      "sum_raw": 79815843,
+      "min_raw": 300,
+      "max_raw": 723,
+      "mean_raw": 482.8486225212036,
+      "lower_raw": 300,
+      "upper_raw": 1500,
+      "elapsed_ms": 37.44383499997639,
+      "frame_index": 96,
+      "mm_per_unit": 1.0,
+      "host_monotonic_s": 4762.271402098,
+      "mean_mm": 482.8486225212036
+    },
+    {
+      "implementation": "FPGA_PL_HLS",
+      "pixels": 307200,
+      "blocks": 75,
+      "valid_count": 162882,
+      "sum_raw": 79010404,
+      "min_raw": 300,
+      "max_raw": 723,
+      "mean_raw": 485.07756535405997,
+      "lower_raw": 300,
+      "upper_raw": 1500,
+      "elapsed_ms": 37.41233399978228,
+      "frame_index": 105,
+      "mm_per_unit": 1.0,
+      "host_monotonic_s": 4762.539426768,
+      "mean_mm": 485.07756535405997
+    },
+    {
+      "implementation": "FPGA_PL_HLS",
+      "pixels": 307200,
+      "blocks": 75,
+      "valid_count": 156035,
+      "sum_raw": 76506498,
+      "min_raw": 300,
+      "max_raw": 723,
+      "mean_raw": 490.3162623770308,
+      "lower_raw": 300,
+      "upper_raw": 1500,
+      "elapsed_ms": 38.47606499948597,
+      "frame_index": 113,
+      "mm_per_unit": 1.0,
+      "host_monotonic_s": 4762.808373788,
+      "mean_mm": 490.3162623770308
+    },
+    {
+      "implementation": "FPGA_PL_HLS",
+      "pixels": 307200,
+      "blocks": 75,
+      "valid_count": 142838,
+      "sum_raw": 71314851,
+      "min_raw": 300,
+      "max_raw": 723,
+      "mean_raw": 499.27085929514556,
+      "lower_raw": 300,
+      "upper_raw": 1500,
+      "elapsed_ms": 37.27700199942774,
+      "frame_index": 121,
+      "mm_per_unit": 1.0,
+      "host_monotonic_s": 4763.075061556,
+      "mean_mm": 499.27085929514556
+    }
+  ]
+}

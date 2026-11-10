@@ -1,0 +1,165 @@
+{
+  "passed": true,
+  "results": [
+    "Official inertial values preserved; all inertia tensors positive definite",
+    {
+      "joint": "arm_Joint1",
+      "target": 0.25,
+      "actual": 0.2509163039016773
+    },
+    {
+      "joint": "arm_Joint2",
+      "target": -0.4,
+      "actual": -0.40271458769491864
+    },
+    {
+      "joint": "arm_Joint3",
+      "target": 0.5,
+      "actual": 0.5013394997933568
+    },
+    {
+      "joint": "arm_Joint4",
+      "target": 0.3,
+      "actual": 0.3004990629558253
+    },
+    {
+      "joint": "arm_Joint5",
+      "target": -0.3,
+      "actual": -0.2994316377109004
+    },
+    {
+      "joint": "arm_Joint6",
+      "target": 0.4,
+      "actual": 0.40057433795106534
+    },
+    {
+      "gripper": "70%",
+      "actual": [
+        0.009298175654820422,
+        -0.009426697848385885
+      ]
+    },
+    "Out-of-range command rejected",
+    "Hold, resume and ready pose passed"
+  ],
+  "state": {
+    "connected": true,
+    "age": 0.0004134979681111872,
+    "positions": {
+      "arm_Joint1": -9.72697059171422e-05,
+      "arm_Joint2": -0.5529805000833691,
+      "arm_Joint3": 0.8010699589757627,
+      "arm_Joint4": -0.0006150688189640682,
+      "arm_Joint5": -0.24948816557353867,
+      "arm_Joint6": -8.517850475192136e-05,
+      "arm_Joint7_1": 0.030000000000001494,
+      "arm_Joint7_2": -0.03000000000000144
+    },
+    "targets": {
+      "arm_Joint1": 0.0,
+      "arm_Joint2": -0.55,
+      "arm_Joint3": 0.8,
+      "arm_Joint4": 0.0,
+      "arm_Joint5": -0.25,
+      "arm_Joint6": 0.0,
+      "arm_Joint7_1": 0.03,
+      "arm_Joint7_2": -0.03
+    },
+    "hold": false,
+    "sim_time": 19.905,
+    "mode": "Gazebo Harmonic / PID position control",
+    "collision_protection": true,
+    "collision_margin_m": 0.002,
+    "collision_warning": "",
+    "cube": {
+      "connected": true,
+      "pose": {
+        "position": [
+          0.32000000002268186,
+          -2.2681975353620247e-11,
+          0.13999956116852158
+        ],
+        "quaternion": [
+          5.670930307333039e-10,
+          5.670885875470502e-10,
+          2.1240252713413085e-17,
+          1.0
+        ]
+      },
+      "finger_contacts": [],
+      "contacts": [
+        [
+          "red_cube::body::collision",
+          "pickup_pedestal::body::collision"
+        ]
+      ],
+      "size": [
+        0.04,
+        0.04,
+        0.04
+      ],
+      "mass": 0.02
+    },
+    "grasp": {
+      "active": false,
+      "phase": "\u5df2\u4e2d\u6b62\u81ea\u52a8\u52a8\u4f5c",
+      "result": null,
+      "last_success": null
+    },
+    "scene": {
+      "cube": {
+        "name": "red_cube",
+        "size": [
+          0.04,
+          0.04,
+          0.04
+        ],
+        "mass": 0.02,
+        "friction": 0.8,
+        "position": [
+          0.32,
+          0,
+          0.14
+        ]
+      },
+      "pedestal": {
+        "name": "pickup_pedestal",
+        "size": [
+          0.12,
+          0.12,
+          0.12
+        ],
+        "position": [
+          0.32,
+          0,
+          0.06
+        ]
+      },
+      "tcp_in_link6": [
+        0.0004,
+        0,
+        0.1106
+      ],
+      "poses": {
+        "above": [
+          0.004005600336097834,
+          0.4583991533692318,
+          -0.2537239572372647,
+          -1.1938739307550255e-05,
+          1.366117457468401,
+          -0.00399618405313275
+        ],
+        "pick": [
+          0.00400469520622342,
+          0.5140271685266956,
+          0.0594620937615648,
+          -1.4791377430944432e-05,
+          0.9973033913219207,
+          -0.003999120310345274
+        ]
+      },
+      "grip_closed_target": 0.8,
+      "lift_min_m": 0.06
+    }
+  }
+}

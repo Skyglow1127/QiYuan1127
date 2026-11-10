@@ -1,0 +1,142 @@
+{
+  "project": "PiPER Gazebo simulation",
+  "recorded_on": "2026-10-27",
+  "robot": {
+    "manufacturer": "AgileX Robotics / 松灵",
+    "variant": "standard PiPER, not H/L/X",
+    "repository": "https://github.com/agilexrobotics/agx_arm_urdf",
+    "commit": "680fa925cd00db7e2628563d2edc5540963045de",
+    "license": "MIT",
+    "license_file": "upstream/agx_arm_urdf/LICENSE",
+    "source_files": [
+      "piper/urdf/piper_description.urdf",
+      "piper/urdf/piper_with_gripper_description.xacro",
+      "agx_gripper/meshes/"
+    ],
+    "source_links": [
+      "https://github.com/agilexrobotics/agx_arm_urdf/blob/680fa925cd00db7e2628563d2edc5540963045de/piper/urdf/piper_description.urdf",
+      "https://github.com/agilexrobotics/agx_arm_urdf/blob/680fa925cd00db7e2628563d2edc5540963045de/piper/urdf/piper_with_gripper_description.xacro"
+    ],
+    "adapted_urdf": "upstream/piper_official.urdf",
+    "generated_runtime_urdf": "generated/piper.urdf",
+    "adaptations": [
+      "Expand the official standard-PiPER gripper include.",
+      "Remove only the massless virtual gripper_link/gripper controller and both physical-finger mimic tags; command six rotary joints and two real finger joints through simulation PID.",
+      "Preserve all physical-link mass, center-of-mass and inertia tensors from the official model.",
+      "Use project-local mesh paths; add isolated Harmonic controllers, scene and estimated wrist camera mounting."
+    ],
+    "gripper": {
+      "joints": [
+        "gripper_joint1",
+        "gripper_joint2"
+      ],
+      "open_positions_m": [
+        0.05,
+        -0.05
+      ],
+      "closed_positions_m": [
+        0,
+        0
+      ],
+      "maximum_model_inner_gap_m": 0.1,
+      "evidence": "Official finger STL transformed by the official joint frames and limits; not a physical measurement."
+    }
+  },
+  "physics_evidence": {
+    "file": "upstream/official_physical_validation.json",
+    "scope": "Official prepared PiPER model before project camera/controller adaptation.",
+    "mass_total_kg": 4.70955408133,
+    "mathematical_checks": "11 physical-link inertias positive definite and satisfy principal triangle inequalities; masses positive.",
+    "calibration": "No real PiPER mass/inertia calibration performed. All upstream values retained.",
+    "known_boundary": "Under the assumption that all link mass lies within its official STL AABB and the tensor is about the declared CoM, some link2/link3/link5 moments exceed a CoM/AABB bound. No unverified correction was applied.",
+    "format_check": "Prepared upstream URDF parsed by installed gz sdf -p; this does not prove a successful project grasp."
+  },
+  "environment": {
+    "manifest": "config/environment.json",
+    "same_bytes_as": "../d1t_sim/config/environment.json",
+    "byte_identical_at_documentation_time": true,
+    "sha256": "92a56c450c4d2c5544d63ff8a8c12495f0beabecbaf31a4a5279621faa8879f3",
+    "origin": "Existing D1-T photo workspace, including AMD KR260 and MINISFORUM/Ryzen AI 9 HX 370 exterior models.",
+    "identity_boundary": "Photo-derived positions and unmeasured dimensions remain approximations; CPU/FPGA performance is not emulated."
+  },
+  "wrist_camera": {
+    "configuration": "config/wrist_camera.json",
+    "user_original_stl": "upstream/wrist_camera_mount_original.STL",
+    "scope": "Retain the supplied T-bracket STL and existing simulated RGB camera exterior.",
+    "mount": "PiPER installation pose is a simulation estimate, not measured hand-eye calibration.",
+    "image_source": "Real Gazebo RGB sensor rendered in the simulated scene; not an image from hardware."
+  },
+  "runtime": {
+    "url": "http://127.0.0.1:8768/",
+    "ros_domain_id": 62,
+    "gazebo_partition": "piper_codex_sim",
+    "world": "piper_lab",
+    "user_systemd_units": [
+      "piper-sim.service",
+      "piper-gui.service"
+    ],
+    "bundled_runtime": "../../work/runtime",
+    "logs": "../../work/piper_run",
+    "startup": "Manual transient user units, no boot autostart.",
+    "hardware": "No hardware command or hardware connection is part of this simulator."
+  },
+  "project_validation": {
+    "status": "passed_for_current_simulation_scenario",
+    "report": "acceptance-summary.json",
+    "control_report": "verification.json",
+    "grasp_report": "grasp-verification.json",
+    "limitations": "Fixed 40mm/20g cube, explicit reset between cycles, simulation contact patches and uncalibrated PID/camera mounting; not real hardware validation."
+  },
+  "evidence_files": [
+    "upstream/official_sources.json",
+    "upstream/official_physical_validation.json",
+    "upstream/official_mesh_inventory.json",
+    "upstream/model_manifest.json"
+  ],
+  "third_party_web_assets": {
+    "threejs_license": "web/vendor/THREE-LICENSE.txt"
+  },
+  "simulation_contact_patch": {
+    "description": "Two flat box contacts on the official gripping surfaces to stabilize finite contact patches in DART. Visual CAD and mass/inertia retained.",
+    "size_m": [
+      0.042,
+      0.026,
+      0.0015
+    ],
+    "offset_m": [
+      0,
+      -0.013,
+      0.00045
+    ],
+    "inward_protrusion_m": 0.0003,
+    "measured": false
+  },
+  "grasp_scope": {
+    "fixed_target": [
+      0.32,
+      0,
+      0.02
+    ],
+    "cube_edge_m": 0.04,
+    "cube_mass_kg": 0.02,
+    "nominal_lift_m": 0.08,
+    "place_xy_tolerance_m": 0.05,
+    "place_z_tolerance_m": 0.003,
+    "reset_before_each_cycle": true,
+    "pose_writes_during_grasp": false,
+    "placement_control": "IK from observed payload-to-wrist transform and oriented cube extent; robot joints move, release 6mm above support; verify actual table contact and no finger contact."
+  },
+  "current_validation": {
+    "passed": true,
+    "date": "2026-10-27",
+    "report": "acceptance-summary.json",
+    "control_checks": 11,
+    "grasp_cycles": 2,
+    "hold_each_sim_s": 3,
+    "lifts_m": [
+      0.07938937966403972,
+      0.07926602075196824
+    ],
+    "scope": "Current 40mm / 20g cube, fixed-target simulation with explicit reset between cycles. Not hardware or precision-placement calibration."
+  }
+}

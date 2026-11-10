@@ -1,0 +1,16 @@
+{
+  "implementation": "FPGA_PL_HLS",
+  "pixels": 307200,
+  "blocks": 75,
+  "valid_count": 166524,
+  "sum_raw": 80368485,
+  "min_raw": 300,
+  "max_raw": 723,
+  "mean_raw": 482.6240361749658,
+  "lower_raw": 300,
+  "upper_raw": 1500,
+  "elapsed_ms": 38.667916000122204,
+  "cpu_reference_match": true,
+  "input_sha256": "207c8ff54c92953f547f1975a4782f92f0c8372de8ad4996397b4babdf0056a0",
+  "output_sha256": "90c05e23c162a352b8b0a69d9f41f3e00b8a147c9a95854dcab24759bd614692"
+}

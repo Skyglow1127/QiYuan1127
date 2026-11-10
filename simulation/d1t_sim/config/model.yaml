@@ -1,0 +1,205 @@
+# Official geometry/inertials; effort, velocity and PID are provisional simulation settings.
+links:
+  base_link:
+    mass: 0.077233
+    com: -0.00048697 -2.9605E-12 0.017142
+    inertia:
+      ixx: 0.00010316
+      ixy: -1.0285e-14
+      ixz: 2.0449e-07
+      iyy: 0.00011888
+      iyz: 7.3026e-15
+      izz: 0.00018362
+  Link1:
+    mass: 0.13174
+    com: 0.0024649 0.00010517 0.032696
+    inertia:
+      ixx: 6.7236e-05
+      ixy: -5.5664e-08
+      ixz: 7.0454e-08
+      iyy: 5.416e-05
+      iyz: -3.5709e-07
+      izz: 4.6637e-05
+  Link2:
+    mass: 0.20213
+    com: 0.0002018 0.19201 -0.027007
+    inertia:
+      ixx: 0.00025682
+      ixy: -1.139e-07
+      ixz: 5.5667e-08
+      iyy: 6.3307e-05
+      iyz: -3.5717e-07
+      izz: 0.00022968
+  Link3:
+    mass: 0.0629
+    com: 0.015164 0.044482 -0.027461
+    inertia:
+      ixx: 1.7232e-05
+      ixy: -2.6967e-06
+      ixz: -9.4911e-11
+      iyy: 1.2606e-05
+      iyz: -9.9169e-11
+      izz: 1.4964e-05
+  Link4:
+    mass: 0.083332
+    com: -0.00029556 -0.00016104 0.091339
+    inertia:
+      ixx: 3.9308e-05
+      ixy: 1.0126e-08
+      ixz: -9.4316e-08
+      iyy: 3.4378e-05
+      iyz: -1.6915e-09
+      izz: 1.1597e-05
+  Link5:
+    mass: 0.053817
+    com: 0.040573 0.0062891 -0.023838
+    inertia:
+      ixx: 1.3072e-05
+      ixy: -3.9511e-07
+      ixz: -3.1889e-10
+      iyy: 8.6301e-06
+      iyz: -1.8416e-09
+      izz: 1.1049e-05
+  Link6:
+    mass: 0.077892
+    com: -0.0068528 -3.9973E-06 0.039705
+    inertia:
+      ixx: 3.8236e-05
+      ixy: 1.3465e-08
+      ixz: -2.0614e-07
+      iyy: 1.7707e-05
+      iyz: -6.7117e-10
+      izz: 4.8839e-05
+  Link7_1:
+    mass: 0.015046
+    com: 0.018927 0.006 0.012082
+    inertia:
+      ixx: 1.2692e-06
+      ixy: 7.7441e-20
+      ixz: -1.133e-07
+      iyy: 2.0229e-06
+      iyz: 1.2044e-20
+      izz: 2.6177e-06
+  Link7_2:
+    mass: 0.015046
+    com: 0.018927 -0.006 0.012082
+    inertia:
+      ixx: 1.2692e-06
+      ixy: -7.8273e-20
+      ixz: -1.133e-07
+      iyy: 2.0229e-06
+      iyz: -1.2122e-20
+      izz: 2.6177e-06
+joints:
+  Joint1:
+    type: revolute
+    parent: base_link
+    child: Link1
+    xyz: 0 0 0.0533
+    rpy: 0 0 -3.1416
+    axis: 0 0 1
+    lower: -2.35
+    upper: 2.35
+    effort: 3.3
+    velocity: 0.6
+    p: 80
+    i: 10
+    d: 0.3
+  Joint2:
+    type: revolute
+    parent: Link1
+    child: Link2
+    xyz: 0 0.028 0.0563
+    rpy: 1.5708 0 -3.1416
+    axis: 0 0 -1
+    lower: -1.57
+    upper: 1.57
+    effort: 3.3
+    velocity: 0.6
+    p: 80
+    i: 10
+    d: 0.3
+  Joint3:
+    type: revolute
+    parent: Link2
+    child: Link3
+    xyz: 0 0.2693 0.0009
+    rpy: 0 0 0
+    axis: 0 0 -1
+    lower: -1.57
+    upper: 1.57
+    effort: 1.7
+    velocity: 0.6
+    p: 60
+    i: 8
+    d: 0.1
+  Joint4:
+    type: revolute
+    parent: Link3
+    child: Link4
+    xyz: 0.0577 0.042 -0.0275
+    rpy: -1.5708 0 -1.5708
+    axis: 0 0 1
+    lower: -2.35
+    upper: 2.35
+    effort: 1.7
+    velocity: 0.6
+    p: 15
+    i: 2
+    d: 0.008
+  Joint5:
+    type: revolute
+    parent: Link4
+    child: Link5
+    xyz: -0.0001 -0.0237 0.14018
+    rpy: 1.5708 -1.5708 0
+    axis: 0 0 -1
+    lower: -1.57
+    upper: 1.57
+    effort: 1.7
+    velocity: 0.6
+    p: 20
+    i: 3
+    d: 0.01
+  Joint6:
+    type: revolute
+    parent: Link5
+    child: Link6
+    xyz: 0.0825 -0.0010782 -0.023822
+    rpy: -1.5708 0 -1.5708
+    axis: 0 0 -1
+    lower: -2.35
+    upper: 2.35
+    effort: 1.7
+    velocity: 0.6
+    p: 10
+    i: 1
+    d: 0.006
+  Joint7_1:
+    type: prismatic
+    parent: Link6
+    child: Link7_1
+    xyz: -0.0056012 -0.029636 0.0706
+    rpy: -1.5714 -1.5708 0
+    axis: 0 0 -1
+    lower: 0.0
+    upper: 0.03
+    effort: 20.0
+    velocity: 0.03
+    p: 200
+    i: 5
+    d: 1
+  Joint7_2:
+    type: prismatic
+    parent: Link6
+    child: Link7_2
+    xyz: -0.0056388 0.02964 0.0706
+    rpy: 1.5702 -1.5708 0
+    axis: 0 0 1
+    lower: -0.03
+    upper: 0.0
+    effort: 20.0
+    velocity: 0.03
+    p: 200
+    i: 5
+    d: 1

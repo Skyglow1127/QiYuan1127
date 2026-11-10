@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "quantile": 0.95,
+  "quantile_method": "higher",
+  "units": "metres",
+  "empirical_only": true,
+  "fit_split": "calibration",
+  "model_sha256": "252c01f2722179bbd9d1a0397caae12035a6eef3b7dbcbb1d2568e3f723bf4f9",
+  "dataset_sha256": "f18e8f65dc6967df9dc590dd773071171d45529763906d543353842655095070",
+  "bucket_edges": [
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5
+  ],
+  "bucket_interval": "first [lower,upper], subsequent (lower,upper]",
+  "buckets": [
+    {
+      "lower": 0.0,
+      "upper": 0.5,
+      "count": 579
+    },
+    {
+      "lower": 0.5,
+      "upper": 1.0,
+      "count": 420
+    },
+    {
+      "lower": 1.0,
+      "upper": 1.5,
+      "count": 405
+    },
+    {
+      "lower": 1.5,
+      "upper": 2.0,
+      "count": 393
+    },
+    {
+      "lower": 2.0,
+      "upper": 2.5,
+      "count": 252
+    }
+  ],
+  "empty_bucket_policy": "global calibration quantile; count remains zero",
+  "calibration_episode_ids": [
+    "brake_11022",
+    "brake_11023",
+    "brake_11024",
+    "cutin_21022",
+    "cutin_21023",
+    "cutin_21024",
+    "follow_1022",
+    "follow_1023",
+    "follow_1024"
+  ],
+  "analytic": {
+    "quantiles": [
+      [
+        0.36159640550613403,
+        0.3539414703845978
+      ],
+      [
+        1.2863261699676514,
+        1.1165181398391724
+      ],
+      [
+        3.212282419204712,
+        2.4638142585754395
+      ],
+      [
+        6.12860107421875,
+        4.196561813354492
+      ],
+      [
+        10.326851844787598,
+        6.223574638366699
+      ]
+    ],
+    "global_quantile": [
+      4.84827995300293,
+      4.016566753387451
+    ],
+    "calibration_errors": {
+      "count": 2049,
+      "mae_xy_m": [
+        1.264463186264038,
+        0.9516452550888062
+      ],
+      "rmse_xy_m": [
+        2.2503092288970947,
+        1.6863090991973877
+      ],
+      "p95_absolute_xy_m": [
+        4.84827995300293,
+        4.016566753387451
+      ],
+      "mean_displacement_error_m": 1.7904832363128662
+    },
+    "heldout_coverage": {
+      "split": "test",
+      "count_in_calibrated_range": 3405,
+      "count_outside_calibrated_range": 0,
+      "coordinate_coverage": [
+        0.9509544787077827,
+        0.9559471365638766
+      ],
+      "joint_coverage": 0.9113069016152716,
+      "used_for_fitting": false
+    }
+  },
+  "learned": {
+    "quantiles": [
+      [
+        0.2491709291934967,
+        0.25410178303718567
+      ],
+      [
+        0.4293007254600525,
+        0.41933727264404297
+      ],
+      [
+        1.0052101612091064,
+        1.034339189529419
+      ],
+      [
+        2.399571180343628,
+        2.040421962738037
+      ],
+      [
+        4.132382392883301,
+        2.7975125312805176
+      ]
+    ],
+    "global_quantile": [
+      1.26213800907135,
+      1.230400562286377
+    ],
+    "calibration_errors": {
+      "count": 2049,
+      "mae_xy_m": [
+        0.39156240224838257,
+        0.33248135447502136
+      ],
+      "rmse_xy_m": [
+        0.9672912955284119,
+        0.6447110176086426
+      ],
+      "p95_absolute_xy_m": [
+        1.26213800907135,
+        1.230400562286377
+      ],
+      "mean_displacement_error_m": 0.5994595885276794
+    },
+    "heldout_coverage": {
+      "split": "test",
+      "count_in_calibrated_range": 3405,
+      "count_outside_calibrated_range": 0,
+      "coordinate_coverage": [
+        0.9359765051395007,
+        0.9483113069016152
+      ],
+      "joint_coverage": 0.8883994126284875,
+      "used_for_fitting": false
+    }
+  }
+}

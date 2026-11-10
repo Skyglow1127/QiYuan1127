@@ -1,0 +1,71 @@
+{
+  "methods": {
+    "ca_adaptive": {
+      "episodes": 32,
+      "collisions": 0,
+      "offroad": 0,
+      "actor_lane_crossings": 16,
+      "progress_m": 646.6030732224394,
+      "jerk_rms": 24.625824404231174,
+      "decision_p95_ms": 1.3568468124503852
+    },
+    "ca_recovery": {
+      "episodes": 32,
+      "collisions": 0,
+      "offroad": 0,
+      "actor_lane_crossings": 16,
+      "progress_m": 645.0670888474448,
+      "jerk_rms": 12.64147656664429,
+      "decision_p95_ms": 6.073367375847738
+    },
+    "ml_recovery": {
+      "episodes": 32,
+      "collisions": 0,
+      "offroad": 0,
+      "actor_lane_crossings": 16,
+      "progress_m": 644.8656982224447,
+      "jerk_rms": 12.548252390368917,
+      "decision_p95_ms": 7.876910821596539
+    }
+  },
+  "contrasts": [
+    {
+      "left": "ca_recovery",
+      "right": "ca_adaptive",
+      "seed_blocks": 8,
+      "mean_difference_progress_jerk": [
+        -1.535984374994566,
+        -11.984347837586888
+      ],
+      "bootstrap95_ci": [
+        [
+          -1.8247499999935783,
+          -1.2626277343700691
+        ],
+        [
+          -13.11223259976377,
+          -10.824981080834124
+        ]
+      ]
+    },
+    {
+      "left": "ml_recovery",
+      "right": "ca_recovery",
+      "seed_blocks": 8,
+      "mean_difference_progress_jerk": [
+        -0.20139062500011562,
+        -0.09322417627537066
+      ],
+      "bootstrap95_ci": [
+        [
+          -0.5818582031247125,
+          -0.000750000000204043
+        ],
+        [
+          -0.3563170315417959,
+          0.11579668780552566
+        ]
+      ]
+    }
+  ]
+}

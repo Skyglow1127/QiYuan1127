@@ -1,0 +1,46 @@
+{
+  "schema": "dc1-camera-role-registry-v1",
+  "updated_at": "2026-10-21T22:58:05.760628+08:00",
+  "host": "ubuntu@10.42.0.55",
+  "sdk_version": "1.10.18",
+  "selection_key": "serial",
+  "cameras": {
+    "global": {
+      "label_zh": "全局相机",
+      "serial": "CC1365302K0",
+      "model": "Orbbec DaBai DC1",
+      "identity_verified_from_image": true,
+      "verification_basis": "Live image shows robot base, links and wrist camera from an external viewpoint.",
+      "reference_image": "/home/aup/Camera/output/camera_role_check_20261021/CC1365302K0.jpg",
+      "reference_image_sha256": "91b61ee93992e22be32510932296bc09035838ff29292d30850a1039498551f8",
+      "observed_usb_uid": "1-1.2.4-7",
+      "handeye_calibrated": false
+    },
+    "wrist": {
+      "label_zh": "腕部相机",
+      "serial": "CC1365301EY",
+      "model": "Orbbec DaBai DC1",
+      "identity_verified_from_image": true,
+      "verification_basis": "Live image shows the fixed chessboard and nearby gripper fingers; consistent with recorded wrist-camera identity.",
+      "reference_image": "/home/aup/Camera/output/camera_role_check_20261021/CC1365301EY.jpg",
+      "reference_image_sha256": "6f73e871485ae1140ce95f51460e3b715877808cc685b8f6c99b5cc8a5f08330",
+      "observed_usb_uid": "3-1.1.4-6",
+      "handeye_calibrated": false
+    }
+  },
+  "notes": [
+    "Identity labels only; does not establish extrinsic calibration.",
+    "Consumers must select and verify serial explicitly. Do not infer role from enumeration index."
+  ],
+  "binding": {
+    "launcher": "/home/aup/Camera/run_kr260_live.sh",
+    "default_role": "wrist",
+    "ports": {
+      "wrist": 18760,
+      "global": 18761
+    },
+    "opened_device_serial_checked": true,
+    "global_wrist_sampling_rejected": true,
+    "validation_report": "/home/aup/Camera/output/serial_binding_20261021/binding_validation.json"
+  }
+}

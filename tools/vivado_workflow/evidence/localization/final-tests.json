@@ -1,0 +1,62 @@
+[
+  {
+    "test": "VivadoZhStyledLabelTest",
+    "exit_code": 0,
+    "stdout": "TEST_PASS VivadoZhStyledLabelTest checks=31\n",
+    "stderr": ""
+  },
+  {
+    "test": "VivadoZhIpTablesTest",
+    "exit_code": 0,
+    "stdout": "PASS VivadoZhIpTablesTest: 43 checks (mock class-shape contract; no native JNI)\n",
+    "stderr": ""
+  },
+  {
+    "test": "VivadoZhHtmlTest",
+    "exit_code": 0,
+    "stdout": "VivadoZhHtmlTest PASS: 54 checks\n",
+    "stderr": ""
+  },
+  {
+    "test": "VivadoZhBordersTest",
+    "exit_code": 0,
+    "stdout": "TEST_PASS VivadoZhBordersTest checks=48\n",
+    "stderr": ""
+  },
+  {
+    "test": "VivadoZhOverlayTest",
+    "exit_code": 0,
+    "stdout": "VivadoZhOverlayTest PASS: 50 checks\n",
+    "stderr": ""
+  },
+  {
+    "test": "VivadoZhSmartConnectOverlayTest",
+    "exit_code": 0,
+    "stdout": "VivadoZhSmartConnectOverlayTest PASS: 68 checks (mock class-shape/pixel contracts; native GUI not verified)\n",
+    "stderr": "[VivadoZhSmartConnectOverlay] Canvas 1b217f78 skipped: java.lang.IllegalStateException: Unsupported SmartConnect canvas mode\n"
+  },
+  {
+    "test": "VivadoZhTextTest",
+    "exit_code": 0,
+    "stdout": "TEST_PASS VivadoZhTextTest checks=25\n",
+    "stderr": ""
+  },
+  {
+    "test": "VivadoZhAgentTest",
+    "exit_code": 0,
+    "stdout": "PASS: name preserved; command preserved/restored; table values and identifiers unchanged; header renderer restored; translated component GC succeeds\n",
+    "stderr": ""
+  },
+  {
+    "test": "VivadoZhRenderersTest",
+    "exit_code": 0,
+    "stdout": "TEST_PASS VivadoZhRenderersTest checks=70\n",
+    "stderr": ""
+  },
+  {
+    "test": "test_translate_worker.py",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.021s\n\nOK\n"
+  }
+]

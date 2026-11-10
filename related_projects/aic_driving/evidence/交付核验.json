@@ -1,0 +1,15 @@
+{
+  "checked_files": 2468,
+  "failed_files": [],
+  "status": "passed",
+  "pdf_pages": 6,
+  "pdf_all_pages_visually_checked": true,
+  "pdf_bytes": 492020,
+  "video_seconds": 30.1,
+  "video_keyframes_checked": [
+    0,
+    150,
+    299
+  ],
+  "all_previous_runs_preserved": true
+}

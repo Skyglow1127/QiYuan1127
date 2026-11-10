@@ -1,0 +1,617 @@
+{
+  "command": [
+    "/home/aup/Lerobot/envs/pi05-rocm-7.14.1/bin/python",
+    "/home/aup/NPU/pi05_vision_npu/code/run_offline.py",
+    "--vision",
+    "both",
+    "--warmup",
+    "2",
+    "--samples",
+    "3",
+    "--npu-model",
+    "/home/aup/NPU/pi05_vision_npu/models/vision_batch1.onnx",
+    "--npu-config",
+    "/home/aup/NPU/pi05_vision_npu/code/vaiml_tp1.json",
+    "--output-dir",
+    "/home/aup/NPU/pi05_vision_npu/results/repair_final"
+  ],
+  "robot_io": false,
+  "seed": 0,
+  "warmup_per_path": 2,
+  "samples_per_path": 3,
+  "recorded": "/home/aup/NPU/pi05_vision_npu/results/original_gpu_baseline/recorded_observation.npz",
+  "paths": "both",
+  "npu_worker_start_seconds": 1.8033192040002177,
+  "npu_session": {
+    "model": "/home/aup/NPU/pi05_vision_npu/models/vision_batch1.onnx",
+    "cache": "/home/aup/NPU/pi05_vision_npu/cache/npu/real_pi05_vision_e92a5fba4edf6e6a",
+    "provider_options": {
+      "config_file": "/home/aup/NPU/pi05_vision_npu/code/vaiml_tp1.json",
+      "cache_dir": "/home/aup/NPU/pi05_vision_npu/cache/npu",
+      "cache_key": "real_pi05_vision_e92a5fba4edf6e6a",
+      "enable_cache_file_io_in_mem": "0"
+    },
+    "ort_version": "1.27.0",
+    "available_providers": [
+      "VitisAIExecutionProvider",
+      "CPUExecutionProvider"
+    ],
+    "allow_cpu": false,
+    "created_utc": "2026-11-03T22:51:31.103673+00:00",
+    "compiler_watcher": {
+      "captured_summaries": 0,
+      "errors": [],
+      "scope": "/home/aup/NPU/pi05_vision_npu/cache/npu/real_pi05_vision_e92a5fba4edf6e6a",
+      "archive": "/home/aup/NPU/pi05_vision_npu/cache/npu/real_pi05_vision_e92a5fba4edf6e6a/compiler_evidence",
+      "poll_interval_seconds": 0.15,
+      "process_stopped": true,
+      "process_exitcode": 0,
+      "note": "Copies only compiler-produced fail_safe_summary.json inside this exact cache key; does not alter compiler outputs."
+    },
+    "session_create_seconds": 0.9773408830005792,
+    "cold_run_seconds": 0.5933772199996383,
+    "input_shape": [
+      2,
+      3,
+      224,
+      224
+    ],
+    "output_shape": [
+      2,
+      256,
+      2048
+    ],
+    "input_dtype": "float32",
+    "output_dtype": "float32",
+    "npu_only_proven": true,
+    "device_input_name": "pixels",
+    "device_input_shape": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "calls_per_camera_pair": 2,
+    "host_patchify": false
+  },
+  "loading": {
+    "source_tensors": 812,
+    "destination_tensors": 813,
+    "parameter_count": 4143404816,
+    "parameter_bytes": 9353911360,
+    "bytes_by_dtype": {
+      "torch.bfloat16": 7219707904,
+      "torch.float32": 2134203456
+    },
+    "nonpersistent_buffers": {
+      "model.paligemma_with_expert.paligemma.model.vision_tower.vision_model.embeddings.position_ids": {
+        "shape": [
+          1,
+          256
+        ],
+        "dtype": "torch.int64",
+        "kind": "vision_positions"
+      },
+      "model.paligemma_with_expert.paligemma.model.language_model.embed_tokens.embed_scale": {
+        "shape": [],
+        "dtype": "torch.bfloat16",
+        "kind": "embedding_scale"
+      },
+      "model.paligemma_with_expert.paligemma.model.language_model.rotary_emb.inv_freq": {
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "kind": "rotary"
+      },
+      "model.paligemma_with_expert.paligemma.model.language_model.rotary_emb.original_inv_freq": {
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "kind": "rotary"
+      },
+      "model.paligemma_with_expert.gemma_expert.model.rotary_emb.inv_freq": {
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "kind": "rotary"
+      },
+      "model.paligemma_with_expert.gemma_expert.model.rotary_emb.original_inv_freq": {
+        "shape": [
+          128
+        ],
+        "dtype": "torch.bfloat16",
+        "kind": "rotary"
+      }
+    },
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "shape_mismatches": {},
+    "load_seconds": 17.367938944999878,
+    "gpu_allocated_bytes_after_base": 9363535872,
+    "all_parameters_and_buffers_materialized": true,
+    "adapter_tensors_verified": 80,
+    "base_plus_adapter_load_seconds": 17.64648107299945
+  },
+  "cold_complete_chunks": {
+    "gpu": {
+      "seconds": 2.188628458000494,
+      "vision": null
+    },
+    "npu": {
+      "seconds": 1.775128264000159,
+      "vision": {
+        "npu_ort_seconds": 0.7571393219996025,
+        "ipc_roundtrip_seconds": 0.780781236000621,
+        "worker_batch_concat_seconds": 0.004351814999608905,
+        "ipc_copy_and_control_seconds": 0.01835208500142471,
+        "worker_patchify_seconds": 0.00034154999957536347,
+        "worker_receive_seconds": 0.002752641000370204,
+        "gpu_pack_sync_d2h_seconds": 0.0005384919995776727,
+        "h2d_cast_sync_seconds": 0.0005967349998172722,
+        "vision_roundtrip_seconds": 0.7825492499996471,
+        "input_bytes": 1204224,
+        "output_bytes": 4194304
+      }
+    }
+  },
+  "complete_chunk_seconds": {
+    "gpu": {
+      "n": 3,
+      "mean": 1.4761647326664995,
+      "median": 1.479092921999836,
+      "min": 1.4673392049999165,
+      "max": 1.4820620709997456,
+      "each": [
+        1.4673392049999165,
+        1.479092921999836,
+        1.4820620709997456
+      ]
+    },
+    "npu": {
+      "n": 3,
+      "mean": 1.6062568900000163,
+      "median": 1.6076809559999674,
+      "min": 1.5751181979994726,
+      "max": 1.635971516000609,
+      "each": [
+        1.6076809559999674,
+        1.635971516000609,
+        1.5751181979994726
+      ]
+    }
+  },
+  "npu_stage_seconds": {
+    "npu_ort_seconds": {
+      "n": 3,
+      "mean": 0.5862037709997215,
+      "median": 0.5862513239999316,
+      "min": 0.5859377209999366,
+      "max": 0.5864222679992963,
+      "each": [
+        0.5864222679992963,
+        0.5862513239999316,
+        0.5859377209999366
+      ]
+    },
+    "ipc_roundtrip_seconds": {
+      "n": 3,
+      "mean": 0.5877541753334299,
+      "median": 0.5877741899994362,
+      "min": 0.5874116430004506,
+      "max": 0.5880766930004029,
+      "each": [
+        0.5880766930004029,
+        0.5877741899994362,
+        0.5874116430004506
+      ]
+    },
+    "worker_batch_concat_seconds": {
+      "n": 3,
+      "mean": 0.00031796133346991456,
+      "median": 0.00028742599988618167,
+      "min": 0.00025253400053770747,
+      "max": 0.0004139239999858546,
+      "each": [
+        0.0004139239999858546,
+        0.00028742599988618167,
+        0.00025253400053770747
+      ]
+    },
+    "ipc_copy_and_control_seconds": {
+      "n": 3,
+      "mean": 0.001203148000058718,
+      "median": 0.0012013879986625398,
+      "min": 0.0011959270004808786,
+      "max": 0.0012121290010327357,
+      "each": [
+        0.0012121290010327357,
+        0.0012013879986625398,
+        0.0011959270004808786
+      ]
+    },
+    "worker_patchify_seconds": {
+      "n": 3,
+      "mean": 1.6166665470033574e-06,
+      "median": 1.440000232832972e-06,
+      "min": 1.3899998521083035e-06,
+      "max": 2.0199995560687967e-06,
+      "each": [
+        1.3899998521083035e-06,
+        1.440000232832972e-06,
+        2.0199995560687967e-06
+      ]
+    },
+    "worker_receive_seconds": {
+      "n": 3,
+      "mean": 0.00015549199997622054,
+      "median": 0.000144388000080653,
+      "min": 0.00014366799950948916,
+      "max": 0.00017842000033851946,
+      "each": [
+        0.00014366799950948916,
+        0.00017842000033851946,
+        0.000144388000080653
+      ]
+    },
+    "gpu_pack_sync_d2h_seconds": {
+      "n": 3,
+      "mean": 0.00038221133308979915,
+      "median": 0.0004642160001822049,
+      "min": 0.00021658199966623215,
+      "max": 0.00046583599942096043,
+      "each": [
+        0.00046583599942096043,
+        0.0004642160001822049,
+        0.00021658199966623215
+      ]
+    },
+    "h2d_cast_sync_seconds": {
+      "n": 3,
+      "mean": 0.0005843559999145024,
+      "median": 0.0005854029996044119,
+      "min": 0.0005643710001095315,
+      "max": 0.0006032940000295639,
+      "each": [
+        0.0005854029996044119,
+        0.0006032940000295639,
+        0.0005643710001095315
+      ]
+    },
+    "vision_roundtrip_seconds": {
+      "n": 3,
+      "mean": 0.5887378336665279,
+      "median": 0.5888624409999466,
+      "min": 0.588207677000355,
+      "max": 0.589143382999282,
+      "each": [
+        0.589143382999282,
+        0.5888624409999466,
+        0.588207677000355
+      ]
+    }
+  },
+  "npu_calls_completed": 6,
+  "npu_measured_calls": [
+    {
+      "npu_ort_seconds": 0.5864222679992963,
+      "ipc_roundtrip_seconds": 0.5880766930004029,
+      "worker_batch_concat_seconds": 0.0004139239999858546,
+      "ipc_copy_and_control_seconds": 0.0012121290010327357,
+      "worker_patchify_seconds": 1.3899998521083035e-06,
+      "worker_receive_seconds": 0.00014366799950948916,
+      "gpu_pack_sync_d2h_seconds": 0.00046583599942096043,
+      "h2d_cast_sync_seconds": 0.0005854029996044119,
+      "vision_roundtrip_seconds": 0.589143382999282,
+      "input_bytes": 1204224,
+      "output_bytes": 4194304
+    },
+    {
+      "npu_ort_seconds": 0.5862513239999316,
+      "ipc_roundtrip_seconds": 0.5877741899994362,
+      "worker_batch_concat_seconds": 0.00028742599988618167,
+      "ipc_copy_and_control_seconds": 0.0012013879986625398,
+      "worker_patchify_seconds": 1.440000232832972e-06,
+      "worker_receive_seconds": 0.00017842000033851946,
+      "gpu_pack_sync_d2h_seconds": 0.0004642160001822049,
+      "h2d_cast_sync_seconds": 0.0006032940000295639,
+      "vision_roundtrip_seconds": 0.5888624409999466,
+      "input_bytes": 1204224,
+      "output_bytes": 4194304
+    },
+    {
+      "npu_ort_seconds": 0.5859377209999366,
+      "ipc_roundtrip_seconds": 0.5874116430004506,
+      "worker_batch_concat_seconds": 0.00025253400053770747,
+      "ipc_copy_and_control_seconds": 0.0011959270004808786,
+      "worker_patchify_seconds": 2.0199995560687967e-06,
+      "worker_receive_seconds": 0.000144388000080653,
+      "gpu_pack_sync_d2h_seconds": 0.00021658199966623215,
+      "h2d_cast_sync_seconds": 0.0005643710001095315,
+      "vision_roundtrip_seconds": 0.588207677000355,
+      "input_bytes": 1204224,
+      "output_bytes": 4194304
+    }
+  ],
+  "npu_feature_repeat_error": {
+    "shape": [
+      2,
+      256,
+      2048
+    ],
+    "reference_dtype": "float32",
+    "actual_dtype": "float32",
+    "all_finite": true,
+    "max_abs": 0.0,
+    "mean_abs": 0.0,
+    "rmse": 0.0,
+    "cosine": 1.0000000000000002
+  },
+  "gpu_vision_seconds": {
+    "n": 3,
+    "mean": 0.5286221136666427,
+    "median": 0.5310039349997169,
+    "min": 0.5221158750000541,
+    "max": 0.5327465310001571,
+    "each": [
+      0.5327465310001571,
+      0.5310039349997169,
+      0.5221158750000541
+    ]
+  },
+  "feature_error": {
+    "shape": [
+      2,
+      256,
+      2048
+    ],
+    "reference_dtype": "float32",
+    "actual_dtype": "float32",
+    "all_finite": true,
+    "max_abs": 2.328948974609375,
+    "mean_abs": 0.03522659784501919,
+    "rmse": 0.05292810391366115,
+    "cosine": 0.9999239940728503,
+    "by_camera": {
+      "global": {
+        "shape": [
+          256,
+          2048
+        ],
+        "reference_dtype": "float32",
+        "actual_dtype": "float32",
+        "all_finite": true,
+        "max_abs": 2.0470428466796875,
+        "mean_abs": 0.03865866325439138,
+        "rmse": 0.0553852749102775,
+        "cosine": 0.9999101054969532
+      },
+      "wrist": {
+        "shape": [
+          256,
+          2048
+        ],
+        "reference_dtype": "float32",
+        "actual_dtype": "float32",
+        "all_finite": true,
+        "max_abs": 2.328948974609375,
+        "mean_abs": 0.031794532435647005,
+        "rmse": 0.050351163749248244,
+        "cosine": 0.9999405319275921
+      }
+    }
+  },
+  "feature_action_alignment": "npu_features.npy and npu_actions.npy both come from the first measured prediction; all measured features/actions retained by matching sample index",
+  "output_zero_diagnostic": {
+    "gpu_zero_fraction": 0.0,
+    "npu_zero_fraction": 0.0,
+    "npu_zero_fraction_by_256_channels": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "gpu_repeat_error": {
+    "shape": [
+      50,
+      7
+    ],
+    "reference_dtype": "float32",
+    "actual_dtype": "float32",
+    "all_finite": true,
+    "max_abs": 0.0,
+    "mean_abs": 0.0,
+    "rmse": 0.0,
+    "cosine": 1.0
+  },
+  "npu_repeat_error": {
+    "shape": [
+      50,
+      7
+    ],
+    "reference_dtype": "float32",
+    "actual_dtype": "float32",
+    "all_finite": true,
+    "max_abs": 0.0,
+    "mean_abs": 0.0,
+    "rmse": 0.0,
+    "cosine": 1.0
+  },
+  "action_error": {
+    "shape": [
+      50,
+      7
+    ],
+    "reference_dtype": "float32",
+    "actual_dtype": "float32",
+    "all_finite": true,
+    "max_abs": 0.6559314727783203,
+    "mean_abs": 0.13626676673867874,
+    "rmse": 0.19714678857472231,
+    "cosine": 0.9999735350992074,
+    "per_axis": {
+      "joint_1.deg": {
+        "unit": "degree",
+        "shape": [
+          50
+        ],
+        "reference_dtype": "float32",
+        "actual_dtype": "float32",
+        "all_finite": true,
+        "max_abs": 0.2263336181640625,
+        "mean_abs": 0.09860359191894531,
+        "rmse": 0.118839045774257,
+        "cosine": 0.9999941973934328,
+        "signed_mean": -0.07687851041555405
+      },
+      "joint_2.deg": {
+        "unit": "degree",
+        "shape": [
+          50
+        ],
+        "reference_dtype": "float32",
+        "actual_dtype": "float32",
+        "all_finite": true,
+        "max_abs": 0.3057980537414551,
+        "mean_abs": 0.11551811218261719,
+        "rmse": 0.13508499183676656,
+        "cosine": 0.9999957733622967,
+        "signed_mean": -0.08939259499311447
+      },
+      "joint_3.deg": {
+        "unit": "degree",
+        "shape": [
+          50
+        ],
+        "reference_dtype": "float32",
+        "actual_dtype": "float32",
+        "all_finite": true,
+        "max_abs": 0.3635292053222656,
+        "mean_abs": 0.11863304138183593,
+        "rmse": 0.14825571344341748,
+        "cosine": 0.9999935915699805,
+        "signed_mean": -0.024945907294750214
+      },
+      "joint_4.deg": {
+        "unit": "degree",
+        "shape": [
+          50
+        ],
+        "reference_dtype": "float32",
+        "actual_dtype": "float32",
+        "all_finite": true,
+        "max_abs": 0.27500057220458984,
+        "mean_abs": 0.1393295955657959,
+        "rmse": 0.16159544259092043,
+        "cosine": 0.9996041711606244,
+        "signed_mean": 0.10319327563047409
+      },
+      "joint_5.deg": {
+        "unit": "degree",
+        "shape": [
+          50
+        ],
+        "reference_dtype": "float32",
+        "actual_dtype": "float32",
+        "all_finite": true,
+        "max_abs": 0.6559314727783203,
+        "mean_abs": 0.40072433710098265,
+        "rmse": 0.4270129122889419,
+        "cosine": 0.999958134908004,
+        "signed_mean": -0.400724321603775
+      },
+      "joint_6.deg": {
+        "unit": "degree",
+        "shape": [
+          50
+        ],
+        "reference_dtype": "float32",
+        "actual_dtype": "float32",
+        "all_finite": true,
+        "max_abs": 0.1958465576171875,
+        "mean_abs": 0.08098281860351562,
+        "rmse": 0.09625197166456452,
+        "cosine": 0.9999887459809588,
+        "signed_mean": 0.010230408050119877
+      },
+      "gripper.m": {
+        "unit": "metre",
+        "shape": [
+          50
+        ],
+        "reference_dtype": "float32",
+        "actual_dtype": "float32",
+        "all_finite": true,
+        "max_abs": 0.00015631131827831268,
+        "mean_abs": 7.587041705846787e-05,
+        "rmse": 8.33764755149303e-05,
+        "cosine": 0.9999951608216094,
+        "signed_mean": -7.5870419095736e-05
+      }
+    },
+    "overall_note": "Mixed units: use per-axis metrics for physical interpretation."
+  },
+  "speedup_gpu_over_hybrid": 0.9200164475916489,
+  "original_gpu_baseline_error": {
+    "shape": [
+      50,
+      7
+    ],
+    "reference_dtype": "float64",
+    "actual_dtype": "float32",
+    "all_finite": true,
+    "max_abs": 0.0,
+    "mean_abs": 0.0,
+    "rmse": 0.0,
+    "cosine": 1.0
+  },
+  "numerical_regression": {
+    "checks": {
+      "finite_features": true,
+      "no_half_zero_fault": true,
+      "feature_cosine_at_least_0_9999": true,
+      "feature_relative_rmse_at_most_0_02": true,
+      "repeat_features_exact": true,
+      "repeat_actions_exact": true
+    },
+    "feature_relative_rmse": 0.013235283274130198,
+    "passed": true,
+    "scope": "Single recorded camera pair; engineering numerical regression only. Per-axis action deviations are reported, not accepted against unspecified robot tolerances."
+  },
+  "passed": true,
+  "execution_passed": true,
+  "closed_loop_executed": true,
+  "numerical_status": "numerical_regression_passed; no task-success acceptance claimed",
+  "numerical_fault": false,
+  "action_shape": [
+    50,
+    7
+  ],
+  "action_names": [
+    "joint_1.deg",
+    "joint_2.deg",
+    "joint_3.deg",
+    "joint_4.deg",
+    "joint_5.deg",
+    "joint_6.deg",
+    "gripper.m"
+  ],
+  "units": [
+    "degree",
+    "degree",
+    "degree",
+    "degree",
+    "degree",
+    "degree",
+    "metre"
+  ],
+  "timing_scope": "predict_action_chunk including original image preprocessing, NPU IPC when selected, 10 denoise steps, original postprocessor and CPU action return; tokenizer preprocessor excluded equally",
+  "npu_timing_scope": "session.run includes ORT internal CPU/device copies and NPU synchronization; no claim of kernel-only time"
+}

@@ -1,0 +1,208 @@
+{
+  "completed_at_utc": "2026-10-26T12:47:30.199425+00:00",
+  "status": "REAL_DO1_PL_PS_DIGITAL_TACTILE_PASS",
+  "scope": "Single DO1 sensor acquisition, real curves, CSV, read-only grasp integration API. No physical grasp executed.",
+  "channel": "DO1",
+  "pressed_level": 0,
+  "released_level": 1,
+  "press_cycles_observed": 3,
+  "press_durations_s": [
+    2.02004697,
+    1.779987779,
+    1.64005613
+  ],
+  "snapshot_sha256": "b992e6e8a7e75eec5b91351be2215eee8ab0db51a3dfb90b5a1a0b08d1727ef7",
+  "snapshot_samples": 36753,
+  "software_tests_passed": 68,
+  "new_digital_tests": 19,
+  "runtime": {
+    "state": "running",
+    "error": "",
+    "session_id": "20261026T123938_504630Z_ssh",
+    "config": {
+      "source": "ssh",
+      "host": "pressure-kr260",
+      "chip": "auto",
+      "offsets": [
+        0,
+        1
+      ],
+      "rate_hz": 100.0,
+      "polarity": [
+        "low",
+        "unknown"
+      ],
+      "mapping_confirmed": true,
+      "sensor_connected": true,
+      "channel_verified": [
+        true,
+        false
+      ],
+      "debounce_ms": 30,
+      "stale_ms": 250,
+      "enabled_channels": [
+        true,
+        false
+      ]
+    },
+    "source": "real",
+    "count": 46858,
+    "elapsed": 468.5702383759999,
+    "actual_hz": 100.0000232532653,
+    "latest": {
+      "id": 46858,
+      "t_s": 468.5702383759999,
+      "wall_time": "2026-10-26T12:47:30.253355+00:00",
+      "dt_s": 0.010028575998148881,
+      "do1": 1,
+      "do2": 1,
+      "trigger1": 0,
+      "trigger2": null,
+      "source": "real",
+      "chip": "/dev/gpiochip3",
+      "offset1": 0,
+      "offset2": 1,
+      "host": "pressure-kr260",
+      "polarity1": "low",
+      "polarity2": "unknown",
+      "requested_hz": 100.0,
+      "gap": 0,
+      "sensor_connected": true,
+      "pl_verified": true,
+      "transport_lag_growth_ms": 0,
+      "contact1": 0,
+      "contact2": null
+    },
+    "stats": {
+      "edges": [
+        0,
+        0
+      ],
+      "active_s": [
+        0.0,
+        0.0
+      ]
+    },
+    "csv_name": "20261026T123938_504630Z_ssh.csv",
+    "tactile": {
+      "schema": "kr260-tactile/v1",
+      "source": "real",
+      "session_id": "20261026T123938_504630Z_ssh",
+      "seq": 46858,
+      "sample_t_s": 468.5702383759999,
+      "receive_age_ms": 1.49634201079607,
+      "stale_ms": 250,
+      "debounce_ms": 30,
+      "transport_lag_growth_ms": 0,
+      "fresh": true,
+      "sensor_connected": true,
+      "through_pl_ps": true,
+      "valid": true,
+      "channels": [
+        {
+          "channel": 1,
+          "label": "DO1",
+          "enabled": true,
+          "valid": true,
+          "level": 1,
+          "raw_contact": false,
+          "contact": false,
+          "response_verified": true,
+          "polarity": "low"
+        },
+        {
+          "channel": 2,
+          "label": "DO2",
+          "enabled": false,
+          "valid": false,
+          "level": 1,
+          "raw_contact": null,
+          "contact": null,
+          "response_verified": false,
+          "polarity": "unknown"
+        }
+      ],
+      "reasons": [],
+      "pl_mapping": {
+        "type": "pl_mapping",
+        "verified": true,
+        "chip": "/dev/gpiochip3",
+        "offsets": [
+          0,
+          1
+        ],
+        "of_node": "/axi/gpio@a0000000",
+        "address": "0xa0000000",
+        "width": 2,
+        "line_names": [
+          "FSR_DO1",
+          "FSR_DO2"
+        ],
+        "pipeline": "DO → PL synchronizer → AXI GPIO → PS Linux"
+      },
+      "grasp_verified": false,
+      "robot_motion_enabled": false,
+      "decision": "NO_CONTACT",
+      "stop_closing": false,
+      "both_contact": null,
+      "reason": "当前未越过接触阈值"
+    }
+  },
+  "cameras": {
+    "camera_pids_alive": {
+      "41238": true,
+      "41374": true
+    },
+    "cameras": {
+      "18760": {
+        "role": "wrist",
+        "streams": {
+          "color": {
+            "frames": 366555,
+            "capture_fps": 29.89415706449623,
+            "age_ms": 2.680636000150116
+          },
+          "depth": {
+            "frames": 366555,
+            "capture_fps": 29.895308683543078,
+            "age_ms": 2.129209999111481
+          }
+        },
+        "error": null,
+        "stopped": false
+      },
+      "18761": {
+        "role": "global",
+        "streams": {
+          "color": {
+            "frames": 366462,
+            "capture_fps": 29.91886835809838,
+            "age_ms": 9.148548000666779
+          },
+          "depth": {
+            "frames": 366462,
+            "capture_fps": 29.910462046215553,
+            "age_ms": 7.038617997750407
+          }
+        },
+        "error": null,
+        "stopped": false
+      }
+    }
+  },
+  "robot_motion_executed": false,
+  "robot_grasp_verified": false,
+  "document_path": "/media/aup/UbuntuData/技术文档/压力传感器（FPGA)/压力传感器采集程序技术文档.docx",
+  "document_sha256": "756002e94005704dec827b47de5db27b2341543e10aef079659b1db759b64d5b",
+  "program_sha256": {
+    "app.py": "87bcb57f08ade6603fcf47babab55d1b24aafdac8cf9e5e5bd1534b87529567e",
+    "board_reader.py": "8a10d2309c83e1eb757bc553d136b43fc18534ce689eb98984399db9d25c9177",
+    "tactile.py": "f7dcbbff669d211d878879c81e316c2bc70d557a911b3e313a0968f70d51cc2f",
+    "tactile_client.py": "4423634fbefb409d11a8ddd861ac23ab911dc57fcbfc136881ca62c5a135a6e1",
+    "tactile_config.json": "66b38424b4878c56fc4870e0c1d741247cd0ef4a04804a545b1e8afbf67fa038",
+    "web/index.html": "1b4a052c94a42b19694c5d5fcca530c48b5b35503d57445d3d5ef938a1751bab",
+    "start.sh": "1c22fac6774a3381bf3f9da06c9b20052076c4e5571669c25596692386707d9e",
+    "README.md": "c1e88d15533709eb8484085f8adfdc8461b78d9629c723db9854c29ff8029e5b",
+    "tests/test_tactile.py": "adeb38f30f0e6d2f11251b43c2b493a1fff68eab976c1caad659c7de4416d16f"
+  }
+}

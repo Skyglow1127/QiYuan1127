@@ -1,0 +1,14 @@
+[
+  {
+    "feature": "observation.state",
+    "axis": 6,
+    "processor_std": 1.0,
+    "reason": "constant_training_axis_unit_scale_no_validation_fit"
+  },
+  {
+    "feature": "action",
+    "axis": 6,
+    "processor_std": 1.0,
+    "reason": "constant_training_axis_unit_scale_no_validation_fit"
+  }
+]

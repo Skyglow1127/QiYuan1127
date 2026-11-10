@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'self'; img-src 'self' data:; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<title>D1 示教工作台</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;color:#172b3e;background:#edf2f7;font-synthesis:none;--muted:#566b7f;--line:#d3dee8;--blue:#1a5ca0;--green:#176b4a;--amber:#8c5507;--red:#a22c25}*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.44}button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #e9ab31;outline-offset:3px}a{color:#165b9c;text-underline-offset:3px}main{max-width:1410px;margin:auto;padding:28px 30px 34px}header{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:20px}h1{font-size:29px;letter-spacing:-.6px;margin:4px 0 9px}.eyebrow{font-size:12px;letter-spacing:1px;color:#567087}.subtitle{margin:0;font-size:14px;color:var(--muted);line-height:1.7}.badge{font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:8px;border-radius:30px;padding:9px 14px;white-space:nowrap;background:#e0e8f0;color:#3d566e}.badge:before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}.badge.recording{color:#176b4a;background:#def1e6}.badge.busy{color:#805300;background:#fff0cc}.badge.error{color:#a22c25;background:#fce5e2}.card{background:#fff;border:1px solid var(--line);border-radius:13px}.intro{padding:13px 17px;line-height:1.7;font-size:13px;background:#e7f0fa;border:1px solid #c3d5e8;border-radius:10px;margin-bottom:18px;color:#244c70}.intro strong{font-size:14px}.intro .fine{display:block;color:#426079;margin-top:2px}.main-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:12px}.action{border:1px solid var(--line);background:white;border-radius:12px;text-align:left;padding:19px 20px;display:flex;gap:14px;align-items:center;color:#173e62;min-height:91px}.action .number{width:34px;height:34px;flex-shrink:0;display:grid;place-items:center;background:#ecf3fa;color:#3d658a;border-radius:9px;font-size:14px;font-weight:650}.action b{font-size:18px;display:block;margin-bottom:5px}.action small{color:var(--muted);font-size:12px;line-height:1.5}.action.start{background:#174b7d;color:#fff;border-color:#174b7d}.action.start .number{background:#ffffff20;color:#fff}.action.start small{color:#d6e5f4}.action.replay{border-color:#9db9d3}.action:hover:not(:disabled){filter:brightness(.97)}.message{font-size:13px;line-height:1.7;min-height:24px;margin:6px 3px 16px;color:#286246;overflow-wrap:anywhere}.message.error{color:var(--red)}.workspace{display:grid;grid-template-columns:280px minmax(0,1fr);gap:18px}.sidebar{padding:18px;align-self:start}.section-label{font-size:15px;font-weight:700;margin:0 0 13px}.field-label{display:block;font-size:12px;color:var(--muted);margin:14px 0 7px}select,input[type=number]{border:1px solid #b7c8d8;background:#fff;color:#223c55;border-radius:7px;padding:9px 10px;min-height:40px;max-width:100%}.sidebar select{width:100%;font-size:12px}.session-info{font-size:12px;line-height:1.8;color:var(--muted);margin-top:10px;overflow-wrap:anywhere}.selected-id{font-weight:650;color:#274e70;font-size:12px}.divider{height:1px;background:var(--line);margin:18px 0}.speed-row{display:flex;align-items:center;gap:9px}.speed-row input{width:110px;font-variant-numeric:tabular-nums}.unit{font-size:12px;color:var(--muted)}.help{font-size:12px;color:var(--muted);line-height:1.8;margin:9px 0 0}.btn{border:1px solid #adbed0;border-radius:7px;background:#fff;color:#285173;padding:9px 12px;font-size:12px;font-weight:600;min-height:37px}.btn.primary{background:#174b7d;border-color:#174b7d;color:#fff}.btn.danger{background:#184f7c;border-color:#184f7c;color:white;font-size:14px;padding:12px 17px}.btn:hover:not(:disabled){filter:brightness(.96)}.refresh{margin-top:12px;width:100%}.links{display:grid;gap:10px;font-size:12px}.links a[aria-disabled=true]{color:#7c8e9e;pointer-events:none;text-decoration:none}.link-button{display:inline-flex;align-items:center;justify-content:center;padding:10px 12px;border:1px solid #b4c7da;border-radius:7px;text-decoration:none;font-weight:600;line-height:1.5}.data-area{min-width:0}.view-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin:0 1px 12px}.view-head h2{font-size:17px;margin:1px 0 5px}.view-head p{margin:0;font-size:12px;color:var(--muted);line-height:1.7;overflow-wrap:anywhere}.view-tag{font-size:11px;white-space:nowrap;border-radius:20px;padding:5px 10px;background:#e1eaf3;color:#436380}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:14px}.stat{padding:14px 15px}.stat .label{font-size:11px;color:var(--muted);margin-bottom:8px}.stat .value{font-size:24px;font-weight:700;line-height:1.2;font-variant-numeric:tabular-nums}.stat small{font-size:11px;color:var(--muted);font-weight:400;margin-left:4px}.reading-grid{display:grid;grid-template-columns:280px minmax(0,1fr);gap:14px}.panel-head{padding:15px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px}.panel-head h3{margin:0;font-size:14px}.panel-head select{padding:6px 8px;min-height:32px;font-size:12px;width:103px}table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:13px}th,td{text-align:right;border-bottom:1px solid #e5ebf1;padding:12px 14px;white-space:nowrap}th{color:var(--muted);font-size:11px;font-weight:500;background:#f8fafc}th:first-child,td:first-child{text-align:left}tbody tr:last-child td{border-bottom:0}tr.selected td{background:#edf4fd}.tiny{display:block;font-size:9px;color:var(--muted);margin-top:2px}.table-note{font-size:11px;color:var(--muted);line-height:1.8;padding:12px 14px;border-top:1px solid var(--line)}.plots{padding:15px 14px 9px}.plot-title{font-size:12px;font-weight:600;margin:0 3px 4px}.plot-title span{font-weight:400;color:var(--muted);margin-left:5px}.canvas-wrap{height:166px}canvas{display:block;width:100%;height:100%}.chart-note{font-size:11px;color:var(--muted);line-height:1.8;padding:0 16px 14px}.quality{font-size:12px;color:var(--muted);margin-top:14px;display:flex;gap:18px;flex-wrap:wrap}.data-path{font-size:11px;line-height:1.7;color:var(--muted);overflow-wrap:anywhere;margin:10px 1px 0}.blockers{padding:15px 17px;margin-top:15px;border-radius:10px;background:#fff5e2;border:1px solid #e4c992;font-size:12px;line-height:1.8;color:#7d5319}.blockers strong{font-size:13px;display:block;margin-bottom:4px}.blockers ul{margin:0;padding-left:18px}.footer{font-size:12px;color:var(--muted);line-height:1.8;margin:19px 2px 0}dialog{padding:0;border:1px solid #b9cadb;border-radius:15px;width:min(1040px,calc(100vw - 30px));max-height:calc(100vh - 38px);color:#172b3e;box-shadow:0 24px 80px #0b203c44}dialog::backdrop{background:#142b4599}.dialog-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:21px 24px 16px;border-bottom:1px solid var(--line)}.dialog-head h2{margin:0 0 5px;font-size:21px}.dialog-head p{margin:0;font-size:12px;line-height:1.7;color:var(--muted)}.close{border:0;border-radius:6px;background:#edf2f7;color:#385169;padding:7px 11px;font-size:16px}.dialog-body{padding:18px 24px}.plan-target{font-size:14px;line-height:1.7;margin-bottom:14px}.plan-target code{font-size:11px;overflow-wrap:anywhere;color:#546b81;display:block}.plan-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}.plan-metric{background:#f3f7fb;border:1px solid #dce5ed;border-radius:8px;padding:12px}.plan-metric span{display:block;color:var(--muted);font-size:11px;margin-bottom:6px}.plan-metric b{font-size:16px}.plan-caption{font-size:12px;line-height:1.8;color:var(--muted);margin:10px 0 14px}.plan-table{border:1px solid var(--line);border-radius:8px;overflow:auto}.plan-links{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}.plan-links a{font-size:12px}.preview-frame{border:1px solid var(--line);border-radius:9px;width:100%;height:380px;background:#f7f9fb}.plan-actions{display:flex;justify-content:space-between;align-items:center;gap:15px;border-top:1px solid var(--line);padding:17px 24px;background:#f7f9fc}.plan-action-note{font-size:12px;line-height:1.7;color:var(--muted);max-width:530px}.plan-error{color:var(--red);font-size:13px;line-height:1.8;margin-top:12px}.hidden,[hidden]{display:none!important}
+@media(max-width:1150px){.workspace{grid-template-columns:250px minmax(0,1fr)}.reading-grid{grid-template-columns:235px minmax(0,1fr)}.stat{padding:12px}.stat .value{font-size:21px}th,td{padding:12px 11px}.action{padding:16px 14px;gap:10px}.action b{font-size:16px}.action small{font-size:11px}}
+@media(max-width:930px){.workspace{grid-template-columns:1fr}.sidebar{display:grid;grid-template-columns:1fr 1fr;gap:12px 24px}.sidebar .divider{display:none}.sidebar .section-label{margin-bottom:8px}.sidebar .links{grid-column:1/-1;grid-template-columns:repeat(3,1fr);align-items:center}.reading-grid{grid-template-columns:280px minmax(0,1fr)}.main-actions{gap:10px}.action .number{display:none}}
+@media(max-width:650px){main{padding:19px 14px 27px}h1{font-size:24px}.subtitle{font-size:12px}header{align-items:flex-start;gap:9px}.badge{font-size:11px;padding:8px 10px}.main-actions{grid-template-columns:1fr;gap:9px}.action{min-height:68px;padding:14px 16px}.action .number{display:grid}.action b{display:inline;font-size:17px;margin:0}.action small{display:block;margin-top:3px}.message{margin-bottom:12px}.sidebar{padding:16px;gap:12px 15px}.sidebar .links{grid-template-columns:1fr 1fr;gap:10px}.stats{grid-template-columns:repeat(2,1fr)}.reading-grid{grid-template-columns:1fr}.canvas-wrap{height:194px}.plan-metrics{grid-template-columns:repeat(2,1fr)}.dialog-head{padding:18px}.dialog-body{padding:16px 18px}.dialog-head h2{font-size:19px}.plan-actions{padding:16px 18px;align-items:stretch;flex-direction:column}.plan-action-note{max-width:none}.preview-frame{height:330px}.view-head{gap:9px}.view-head h2{font-size:15px}.quality{gap:10px 16px}}
+</style>
+</head>
+<body>
+<main>
+<header><div><div class="eyebrow">记录动作 · 查看日志 · 审核复现</div><h1>D1 示教工作台</h1><p class="subtitle">手动做一遍，留下关节轨迹。复现前，先查看本次轨迹和执行条件。</p></div><span id="appBadge" class="badge busy" role="status">连接服务</span></header>
+<div class="intro"><strong>当前可记录示教、保存轨迹和预览日志；实物复现尚待控制接口验证。</strong><span class="fine">这里的示教记录不会训练神经网络。开始即采集，不需要额外标记。“结束保存”只结束日志，不是机械臂急停。</span></div>
+<div class="main-actions"><button id="startButton" class="action start" disabled><span class="number">01</span><span><b>开始记录</b><small>开启新一轮，立即采集关节数据</small></span></button><button id="stopButton" class="action" disabled><span class="number">02</span><span><b>结束保存</b><small>结束当前记录并整理日志</small></span></button><button id="prepareButton" class="action replay" disabled><span class="number">03</span><span><b>一键复现</b><small>查看回放计划 · 实物执行待验证</small></span></button></div>
+<div id="message" class="message" role="status" aria-live="polite"></div>
+<div class="workspace">
+<aside class="card sidebar">
+ <div><h2 class="section-label">记录会话</h2><label class="field-label" for="sessionSelect">选择本次或历史示教</label><select id="sessionSelect" aria-label="选择记录会话"><option value="">正在读取…</option></select><div id="selectedId" class="session-info selected-id">尚未选择记录</div><div id="sessionInfo" class="session-info">也可以直接点击“开始记录”，创建新一轮。</div><button id="refreshSession" class="btn refresh" disabled>刷新所选记录</button></div>
+ <div><div class="divider"></div><h2 class="section-label">复现参数</h2><label class="field-label" for="speedInput">关节目标速度</label><div class="speed-row"><input id="speedInput" type="number" value="0.5" min="0" step="any" inputmode="decimal" aria-describedby="speedHelp"><span class="unit">°/s</span></div><p class="help" id="speedHelp">默认 0.5 °/s，可输入更高的正数。规划加速度为 1 °/s²；实际速度会受加速度和执行检查限制。</p><p class="help">J6 是夹爪 raw 值，不使用上述角度单位；夹爪时序须单独通过检查。</p></div>
+ <div class="divider"></div><div class="links"><a id="previewLink" class="link-button" target="_blank" rel="noopener" aria-disabled="true">查看纯日志预览</a><a id="demoCsv" aria-disabled="true">下载正式演示 CSV</a><a id="allCsv" aria-disabled="true">下载全部关节 CSV</a><a id="plotLink" target="_blank" rel="noopener" aria-disabled="true">查看轨迹图</a><a id="reviewLink" aria-disabled="true">下载分析记录</a></div>
+</aside>
+<section class="data-area">
+ <div class="view-head"><div><h2 id="viewTitle">等待记录数据</h2><p id="viewDescription">数据来自当前记录或所选历史会话。</p></div><span id="viewTag" class="view-tag">尚无会话</span></div>
+ <div class="stats"><div class="card stat"><div class="label">所选记录时长</div><div id="elapsed" class="value">—</div></div><div class="card stat"><div class="label">已记录样本</div><div id="sampleCount" class="value">—</div></div><div class="card stat"><div class="label">采样频率</div><div class="value"><span id="rate">—</span><small>Hz</small></div></div><div class="card stat"><div class="label" id="ageLabel">最新数据距今</div><div class="value"><span id="age">—</span><small id="ageUnit">ms</small></div></div></div>
+ <div class="reading-grid"><div class="card"><div class="panel-head"><h3>七轴读数</h3><span class="unit" id="readingMode">等待数据</span></div><table><thead><tr><th>关节</th><th>位置</th><th>速度</th></tr></thead><tbody id="jointRows"></tbody></table><div class="table-note">J0–J5：°、°/s。J6：raw、raw/s。<br>速度是记录数据的估算值，不是发送给设备的速度指令。“—”代表无有效数据。</div></div><div class="card"><div class="panel-head"><h3>记录曲线</h3><select id="jointSelect" aria-label="选择曲线关节"></select></div><div class="plots"><div class="plot-title">位置<span id="positionUnit">°</span></div><div class="canvas-wrap"><canvas id="positionCanvas" role="img" aria-label="所选关节位置曲线"></canvas></div><div class="plot-title">估算速度<span id="velocityUnit">°/s</span></div><div class="canvas-wrap"><canvas id="velocityCanvas" role="img" aria-label="所选关节估算速度曲线"></canvas></div></div><div id="chartNote" class="chart-note">横轴为记录时间（秒）。只显示返回的真实样本，不补造曲线。</div></div></div>
+ <div class="quality"><span>间断次数：<b id="gapCount">—</b></span><span>无效样本：<b id="invalidCount">—</b></span><span>来源：<span id="sourceKind">—</span></span></div><div id="recordPath" class="data-path"></div><div id="sessionBlockers" class="blockers" hidden><strong>所选记录的复现条件</strong><ul id="sessionBlockerList"></ul></div>
+</section>
+</div>
+<p class="footer">本地服务：127.0.0.1:18771。状态每 0.5 秒更新。关闭页面不会自动结束记录；需要停止机械臂时，请使用设备已有的停止或急停功能。</p>
+</main>
+<dialog id="planDialog" aria-labelledby="planTitle">
+ <div class="dialog-head"><div><h2 id="planTitle">审核复现轨迹</h2><p>准备计划不会使机械臂运动。请先查看目标、路径与参数。</p></div><button id="closeDialog" class="close" aria-label="关闭审核窗口">×</button></div>
+ <div class="dialog-body"><div class="plan-target"><strong>目标：所选示教轨迹</strong><code id="planSession"></code><code id="planHash"></code></div><div class="plan-metrics"><div class="plan-metric"><span>关节目标速度</span><b id="planSpeed">—</b></div><div class="plan-metric"><span>规划加速度</span><b id="planAcceleration">—</b></div><div class="plan-metric"><span>计划时长</span><b id="planDuration">—</b></div><div class="plan-metric"><span>原始时长 / 轨迹点</span><b id="planSource">—</b></div></div><div class="plan-table"><table><thead><tr><th>关节 / 单位</th><th>计划起点</th><th>计划终点</th><th>终点 − 起点</th></tr></thead><tbody id="planRows"></tbody></table></div><p class="plan-caption">路径依据所选示教日志。以下预览展示源日志，具体执行须服从本计划和服务端检查；实际速度受加速度限制。J6 的 raw 值不是度、毫米或夹持力。</p><div id="planBlockers" class="blockers" hidden><strong>目前不能启动实物复现</strong><ul id="planBlockerList"></ul></div><div class="plan-links"><a id="planPreviewLink" class="link-button" target="_blank" rel="noopener" aria-disabled="true">打开纯日志预览</a><a id="planPlotLink" class="link-button" target="_blank" rel="noopener" aria-disabled="true">查看源轨迹图</a></div><iframe id="planPreview" class="preview-frame" title="所选会话的纯日志回放预览" sandbox="allow-scripts allow-same-origin" hidden></iframe><div id="planMessage" class="plan-error" role="status" aria-live="polite"></div></div>
+ <div class="plan-actions"><span id="planActionNote" class="plan-action-note">存在阻断项时，只能查看日志预览，不会出现启动实物的确认按钮。</span><button id="confirmReplay" class="btn danger" hidden disabled>确认此轨迹并启动实物复现</button></div>
+</dialog>
+<script>
+(() => {
+'use strict';
+const $=id=>document.getElementById(id);
+const finite=x=>typeof x==='number'&&Number.isFinite(x);
+const fmt=(x,d=2)=>finite(x)?x.toLocaleString('zh-CN',{minimumFractionDigits:d,maximumFractionDigits:d}):'—';
+const text=(id,value)=>{$(id).textContent=value;};
+const data={status:null,connected:false,selected:'',session:null,polling:false,busy:false,sessionRequest:0,selectedJoint:0,tail:[],plan:null,planSession:'',planSpeed:null,planBlockers:[],pickNew:false,previousState:null,sessionOptionsKey:null};
+const jointCells=[],planCells=[];
+for(let i=0;i<7;i++){
+ const tr=document.createElement('tr'),name=document.createElement('td'),q=document.createElement('td'),v=document.createElement('td');name.textContent=`J${i}`;if(i===6){const sub=document.createElement('span');sub.className='tiny';sub.textContent='夹爪 · raw';name.append(sub);}q.textContent=v.textContent='—';tr.append(name,q,v);$('jointRows').append(tr);jointCells.push({tr,q,v});
+ const option=document.createElement('option');option.value=String(i);option.textContent=i===6?'J6 · raw':`J${i}`;$('jointSelect').append(option);
+ const p=document.createElement('tr'),label=document.createElement('td'),start=document.createElement('td'),end=document.createElement('td'),delta=document.createElement('td');label.textContent=i===6?'J6 / raw':`J${i} / °`;p.append(label,start,end,delta);$('planRows').append(p);planCells.push({start,end,delta});
+}
+function notify(message,error=false){text('message',message);$('message').classList.toggle('error',error);}
+function object(value){return value&&typeof value==='object'&&!Array.isArray(value)?value:{};}
+function list(value){return Array.isArray(value)?value:[];}
+function firstNumber(...values){return values.find(finite);}
+function duration(seconds){if(!finite(seconds))return '—';const v=Math.max(0,Math.floor(seconds)),m=Math.floor(v/60),s=v%60;return m>=60?`${Math.floor(m/60)}:${String(m%60).padStart(2,'0')}:${String(s).padStart(2,'0')}`:`${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;}
+function running(){return ['starting','recording','stopping'].includes(data.status?.state);}
+function token(){return typeof data.status?.csrf_token==='string'?data.status.csrf_token:'';}
+function currentSelectionIsLive(){return !!data.selected&&data.selected===data.status?.active_session_id&&!!data.status?.record&&running();}
+function safeUrl(value){if(typeof value!=='string'||!value)return null;try{const url=new URL(value,location.href);return url.origin===location.origin&&['http:','https:'].includes(url.protocol)?url.href:null;}catch(_){return null;}}
+function setLink(id,url){const link=$(id),safe=safeUrl(url);if(safe){link.href=safe;link.setAttribute('aria-disabled','false');link.tabIndex=0;}else{link.removeAttribute('href');link.setAttribute('aria-disabled','true');link.tabIndex=-1;}}
+function artifact(name,sessionId=data.selected){return sessionId?`/api/artifact?session_id=${encodeURIComponent(sessionId)}&name=${encodeURIComponent(name)}`:null;}
+function blockers(value){return list(value).map(item=>typeof item==='string'?{message:item}:object(item)).filter(item=>typeof item.message==='string'||typeof item.code==='string');}
+function renderBlockers(containerId,listId,items){const container=$(containerId),ul=$(listId);ul.replaceChildren();for(const item of items){const li=document.createElement('li');li.textContent=item.message||item.code;ul.append(li);}container.hidden=items.length===0;}
+function invalidatePlan(){data.plan=null;data.planSession='';data.planBlockers=[];$('confirmReplay').hidden=true;$('confirmReplay').disabled=true;}
+async function request(url,{method='GET',body,timeoutMs=15000}={}){
+ const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),timeoutMs);
+ try{const options={method,cache:'no-store',credentials:'same-origin',signal:controller.signal};if(method!=='GET'){options.headers={'Content-Type':'application/json','X-App-Token':token()};options.body=JSON.stringify(body||{});}const response=await fetch(url,options);let result;try{result=await response.json();}catch(_){throw new Error(`服务未返回有效 JSON（HTTP ${response.status}）`);}if(!response.ok||result?.ok===false){const error=new Error(typeof result?.error==='string'?result.error:`请求失败（HTTP ${response.status}）`);error.response=result;error.status=response.status;throw error;}return result;}catch(error){if(error.name==='AbortError')throw new Error('请求超时，操作结果尚未确认。请查看服务状态。');throw error;}finally{clearTimeout(timer);}
+}
+function renderControls(){
+ const s=data.status||{},state=s.state;let label='连接服务',tone='busy';
+ if(!data.connected){label='服务未连接';tone='error';}
+ else if(state==='recording'){label=s.record?.fresh===false?'记录中 · 数据断流':'正在记录';tone=s.record?.fresh===false?'error':'recording';}
+ else if(state==='starting'){label='正在开始记录';}
+ else if(state==='stopping'){label='正在结束并整理';}
+ else if(state==='error'){label='服务异常';tone='error';}
+ else if(state==='idle'){label='待机';tone='';}
+ else{label='状态待确认';}
+ text('appBadge',label);$('appBadge').className=`badge ${tone}`;
+ const allowed=data.connected&&!!token()&&!data.busy;
+ $('startButton').disabled=!allowed||running()||!['idle','error'].includes(state);
+ $('stopButton').disabled=!allowed||!(state==='recording'||state==='starting'||(state==='error'&&s.record));
+ $('prepareButton').disabled=!allowed||running()||!data.selected;
+ $('refreshSession').disabled=!data.connected||data.busy||!data.selected;
+ $('confirmReplay').disabled=!allowed||running()||!data.plan||data.planSession!==data.selected||data.planBlockers.length>0;
+ if(running()&&data.plan){text('planActionNote','记录服务正在工作，请先结束当前记录，再重新准备复现计划。');}
+}
+function sessionLabel(item){let date='';if(item.created_at){const value=typeof item.created_at==='number'?item.created_at*1000:item.created_at;const parsed=new Date(value);if(!Number.isNaN(parsed.getTime()))date=new Intl.DateTimeFormat('zh-CN',{timeZone:'Asia/Singapore',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(parsed);}const label=date?`${date} · ${String(item.id).replace(/^demo_/,'')}`:String(item.id);return item.interface_test?'[接口测试] '+label:label;}
+function renderSessionOptions(){
+ const sessions=list(data.status?.sessions).filter(s=>s&&typeof s.id==='string');
+ const key=sessions.map(s=>s.id+':'+!!s.interface_test).join('|');
+ if(key!==data.sessionOptionsKey||$('sessionSelect').options.length===0){data.sessionOptionsKey=key;$('sessionSelect').replaceChildren();if(!sessions.length){const option=document.createElement('option');option.value='';option.textContent='尚无记录';$('sessionSelect').append(option);}for(const item of sessions){const option=document.createElement('option');option.value=item.id;option.textContent=sessionLabel(item);$('sessionSelect').append(option);}}
+ if(data.selected&&!sessions.some(s=>s.id===data.selected)){const option=document.createElement('option');option.value=data.selected;option.textContent=data.selected;$('sessionSelect').append(option);data.sessionOptionsKey='';}
+ $('sessionSelect').value=data.selected;
+}
+function renderSelected(){
+ const live=currentSelectionIsLive(),session=data.session?.id===data.selected?data.session:null;
+ const meta=list(data.status?.sessions).find(s=>s.id===data.selected)||{},summary=object(session?.summary),segment=object(session?.segment),record=live?object(data.status?.record):{};
+ const tail=live?list(record.tail):list(session?.tail);data.tail=tail;
+ const last=tail.length?object(tail[tail.length-1]):{};
+ const q=live?list(record.q):list(last.q).length?last.q:list(summary.last_q).length?summary.last_q:list(segment.last_q);
+ const velocity=live?list(record.velocity):list(last.v);
+ text('selectedId',data.selected||'尚未选择记录');text('sessionInfo',live?'这一轮正在采集；开始即记录，无需再打标记。':session?session.analysis_ready?'日志分析已就绪，可查看和准备复现。':'日志分析尚未就绪，可稍后刷新所选记录。':data.selected?'正在读取会话…':'点击“开始记录”创建新一轮。');
+ text('viewTitle',live?'当前记录 · 实时数据':data.selected?'所选会话 · 日志数据':'等待记录数据');text('viewDescription',data.selected||'开始新一轮，或选择已有记录。');text('viewTag',live?'正在采集':data.selected?'历史会话':'尚无会话');
+ const secs=live?record.elapsed_s:firstNumber(segment.duration_s,summary.duration_s,summary.elapsed_s,meta.duration_s);
+ const count=live?record.sample_count:firstNumber(segment.sample_count,summary.sample_count,summary.valid_samples,meta.sample_count);
+ const rate=live?record.rate_hz:firstNumber(summary.rate_hz,summary.effective_rate_hz,summary.sample_rate_hz);
+ text('elapsed',duration(secs));text('sampleCount',fmt(count,0));text('rate',fmt(rate,1));
+ const age=live&&data.connected?record.age_ms:undefined,seconds=finite(age)&&age>=1000;text('age',fmt(seconds?age/1000:age,seconds?1:0));text('ageUnit',seconds?'s':'ms');text('ageLabel',live?'最新数据距今':'历史记录 · 无实时延迟');text('readingMode',live?(record.fresh===false?'末次数据':'实时值'):'末帧值');
+ jointCells.forEach((cell,i)=>{cell.q.textContent=fmt(q[i]);cell.v.textContent=fmt(velocity[i]);});
+ const quality=live?object(record.quality):object(summary.quality);text('gapCount',fmt(firstNumber(quality.gap_count,summary.gap_count),0));text('invalidCount',fmt(firstNumber(quality.invalid_count,summary.invalid_count),0));text('sourceKind',live?'实际关节反馈 · 只读采集':'已保存的实际关节反馈');
+ const path=record.path||summary.path||meta.path;text('recordPath',typeof path==='string'?`保存位置：${path}`:'');
+ const reviewReady=!!data.selected&&!live;setLink('previewLink',session?.preview_url);setLink('demoCsv',reviewReady?artifact('demonstration_timeline.csv'):null);setLink('allCsv',reviewReady?artifact('joint_timeline.csv'):null);setLink('plotLink',reviewReady?artifact('demonstration_timeline.png'):null);setLink('reviewLink',reviewReady?artifact('analysis_review.json'):null);
+ renderBlockers('sessionBlockers','sessionBlockerList',blockers(session?.blockers));drawCharts();
+}
+async function loadSession(id){
+ const generation=++data.sessionRequest;if(!id){data.session=null;renderSelected();return;}
+ try{const result=await request(`/api/session?id=${encodeURIComponent(id)}`);if(generation!==data.sessionRequest||data.selected!==id)return;data.session={...object(result),id};renderSelected();}
+ catch(error){if(generation!==data.sessionRequest||data.selected!==id)return;data.session=null;renderSelected();text('sessionInfo',`会话读取失败：${error.message}`);}
+}
+function selectSession(id){if(id===data.selected)return;data.selected=id;data.session=null;invalidatePlan();renderSessionOptions();renderSelected();renderControls();loadSession(id);}
+async function poll(){
+ if(data.polling)return;data.polling=true;
+ try{const status=await request('/api/status',{timeoutMs:4000});if(!status||typeof status!=='object'||Array.isArray(status))throw new Error('状态格式无效');const previous=data.previousState;data.status=status;data.connected=true;data.previousState=status.state;
+  const sessions=list(status.sessions),ids=sessions.map(s=>s?.id);let next=data.selected;
+  if(data.pickNew&&typeof status.active_session_id==='string'){next=status.active_session_id;data.pickNew=false;}
+  else if(!next||(!ids.includes(next)&&next!==status.active_session_id)){next=status.selected_session_id||status.active_session_id||sessions[0]?.id||'';}
+  const changed=next!==data.selected;if(changed){data.selected=next;data.session=null;invalidatePlan();loadSession(next);}
+  const stopped=['recording','stopping','starting'].includes(previous)&&!['recording','stopping','starting'].includes(status.state);
+  if(stopped&&!changed&&data.selected)loadSession(data.selected);
+  renderSessionOptions();renderSelected();renderControls();
+  if(status.state==='error'&&typeof status.error==='string'&&!data.busy)notify(status.error,true);
+ }catch(error){data.connected=false;renderControls();if(currentSelectionIsLive()){text('age','—');text('readingMode','连接断开 · 末次值');}}
+ finally{data.polling=false;}
+}
+function getSeries(field){return data.tail.slice(-5000).filter(p=>p&&finite(p.t)).map(p=>({t:p.t,y:Array.isArray(p[field])&&finite(p[field][data.selectedJoint])?p[field][data.selectedJoint]:null}));}
+function draw(canvas,points,color){
+ const box=canvas.getBoundingClientRect(),w=Math.max(1,box.width),h=Math.max(1,box.height),ratio=Math.min(devicePixelRatio||1,3);canvas.width=Math.round(w*ratio);canvas.height=Math.round(h*ratio);const c=canvas.getContext('2d');if(!c)return;c.setTransform(ratio,0,0,ratio,0,0);c.clearRect(0,0,w,h);c.font='10px system-ui,sans-serif';
+ const valid=points.filter(p=>finite(p.y));if(!valid.length){c.fillStyle='#f5f8fb';c.fillRect(0,0,w,h);c.fillStyle='#667b8e';c.textAlign='center';c.fillText('暂无有效样本',w/2,h/2);return;}
+ const m={l:52,r:12,t:13,b:26},pw=w-m.l-m.r,ph=h-m.t-m.b;let xmin=Math.min(...points.map(p=>p.t)),xmax=Math.max(...points.map(p=>p.t)),low=Math.min(...valid.map(p=>p.y)),high=Math.max(...valid.map(p=>p.y));const padding=Math.max((high-low)*.12,.1);low-=padding;high+=padding;if(xmin===xmax){xmin-=.5;xmax+=.5;}const x=t=>m.l+(t-xmin)/(xmax-xmin)*pw,y=v=>m.t+(high-v)/(high-low)*ph;
+ for(let i=0;i<=3;i++){const yy=m.t+ph*i/3;c.strokeStyle='#e2eaf1';c.lineWidth=1;c.beginPath();c.moveTo(m.l,yy);c.lineTo(w-m.r,yy);c.stroke();c.fillStyle='#5b7083';c.textAlign='right';c.fillText(fmt(high-(high-low)*i/3,1),m.l-7,yy+3);c.textAlign='center';c.fillText(fmt(xmin+(xmax-xmin)*i/3,1),m.l+pw*i/3,h-8);}
+ const steps=[];for(let i=1;i<points.length;i++){const dt=points[i].t-points[i-1].t;if(dt>0)steps.push(dt);}steps.sort((a,b)=>a-b);const gap=Math.max(1,(steps[Math.floor(steps.length/2)]||0)*3);
+ c.save();c.beginPath();c.rect(m.l,m.t,pw,ph);c.clip();c.strokeStyle=color;c.lineWidth=1.8;c.lineJoin='round';c.beginPath();let last=null;for(const p of points){if(!finite(p.y)){last=null;continue;}if(!last||p.t<=last.t||p.t-last.t>gap)c.moveTo(x(p.t),y(p.y));else c.lineTo(x(p.t),y(p.y));last=p;}c.stroke();const end=valid.at(-1);c.fillStyle=color;c.beginPath();c.arc(x(end.t),y(end.y),2.5,0,Math.PI*2);c.fill();c.restore();
+}
+function drawCharts(){const raw=data.selectedJoint===6;text('positionUnit',raw?'raw':'°');text('velocityUnit',raw?'raw/s':'°/s');jointCells.forEach((cell,i)=>cell.tr.classList.toggle('selected',i===data.selectedJoint));draw($('positionCanvas'),getSeries('q'),'#1a66ae');draw($('velocityCanvas'),getSeries('v'),'#9b630f');}
+async function start(){if($('startButton').disabled)return;data.busy=true;invalidatePlan();renderControls();notify('正在开始新一轮记录…');try{await request('/api/start',{method:'POST',body:{},timeoutMs:30000});data.pickNew=true;notify('开始请求已接受；新一轮开始即采集，无需额外标记。');await poll();}catch(error){notify(`开始记录未确认：${error.message}`,true);}finally{data.busy=false;renderControls();}}
+async function stop(){if($('stopButton').disabled)return;data.busy=true;renderControls();notify('正在结束当前记录并保存日志；此操作不是急停。');try{await request('/api/stop',{method:'POST',body:{},timeoutMs:60000});notify('结束保存请求已接受，正在读取日志结果。');if(data.status?.active_session_id){data.selected=data.status.active_session_id;data.session=null;invalidatePlan();renderSessionOptions();}await loadSession(data.selected);await poll();}catch(error){notify(`结束保存未确认：${error.message}`,true);}finally{data.busy=false;renderControls();}}
+function showPlan(result,sessionId,speed){
+ const plan=object(result.plan),planBlockers=blockers(plan.blockers).concat(blockers(result.blockers));
+ if(!Array.isArray(plan.blockers))planBlockers.push({code:'validation_missing',message:'服务没有返回完整的轨迹校验结果，请重新准备。'});
+ if(typeof plan.sha256!=='string'||!/^[a-f0-9]{64}$/i.test(plan.sha256))planBlockers.push({code:'hash_missing',message:'缺少本次轨迹的有效 SHA-256 计划哈希，不能启动实物。'});
+ if(!Array.isArray(plan.start_q)||plan.start_q.length!==7||!Array.isArray(plan.end_q)||plan.end_q.length!==7||[...list(plan.start_q),...list(plan.end_q)].some(v=>!finite(v)))planBlockers.push({code:'endpoints_missing',message:'七轴起终点信息不完整，不能确认这条轨迹。'});
+ if(!finite(plan.speed_deg_s)||plan.speed_deg_s<=0||!finite(plan.acceleration_deg_s2)||plan.acceleration_deg_s2<=0||!finite(plan.duration_s)||plan.duration_s<0)planBlockers.push({code:'parameters_missing',message:'执行速度、加速度或时长信息不完整。'});
+ if(finite(plan.acceleration_deg_s2)&&Math.abs(plan.acceleration_deg_s2-1)>1e-9)planBlockers.push({code:'acceleration_changed',message:'计划加速度不是本工作台约定的 1 °/s²，请核对服务端配置后重新准备。'});
+ data.plan=plan;data.planSession=sessionId;data.planSpeed=speed;data.planBlockers=planBlockers;
+ text('planSession',`会话：${sessionId}`);text('planHash',`计划 SHA-256：${typeof plan.sha256==='string'?plan.sha256:'未返回'}`);text('planSpeed',`${fmt(plan.speed_deg_s)} °/s`);text('planAcceleration',`${fmt(plan.acceleration_deg_s2)} °/s²`);text('planDuration',`${fmt(plan.duration_s)} 秒`);text('planSource',`${fmt(plan.source_duration_s,2)} 秒 / ${fmt(Array.isArray(plan.points)?plan.points.length:plan.points,0)} 点`);
+ planCells.forEach((cell,i)=>{const a=plan.start_q?.[i],b=plan.end_q?.[i];cell.start.textContent=fmt(a);cell.end.textContent=fmt(b);cell.delta.textContent=finite(a)&&finite(b)?`${b-a>0?'+':''}${fmt(b-a)}`:'—';});
+ renderBlockers('planBlockers','planBlockerList',planBlockers);text('planMessage','');
+ const session=data.session?.id===sessionId?data.session:null,preview=safeUrl(session?.preview_url);setLink('planPreviewLink',preview);setLink('planPlotLink',artifact('demonstration_timeline.png',sessionId));
+ const frame=$('planPreview');frame.hidden=!preview;if(preview)frame.src=preview;else frame.removeAttribute('src');
+ $('confirmReplay').hidden=planBlockers.length>0;text('planActionNote',planBlockers.length?'存在上述阻断项，本次不能启动实物；可以继续检查纯日志预览。':'请核对所选轨迹、起终点与参数。确认按钮将请求执行这一份计划，服务端仍会再次检查。');
+ if(!$('planDialog').open)$('planDialog').showModal();renderControls();
+}
+async function prepare(){
+ if($('prepareButton').disabled)return;const speed=Number($('speedInput').value);if(!Number.isFinite(speed)||speed<=0){notify('请输入正的有限速度值，例如 0.5 或 1.0 °/s。',true);$('speedInput').focus();return;}
+ const id=data.selected;data.busy=true;invalidatePlan();renderControls();notify('正在准备所选轨迹和检查复现条件；机械臂不会因此运动。');
+ try{const result=await request('/api/prepare',{method:'POST',body:{session_id:id,speed_deg_s:speed},timeoutMs:45000});if(id!==data.selected)return;showPlan(result,id,speed);notify(data.planBlockers.length?'轨迹检查存在阻断项，请在审核窗口查看原因。':'轨迹已准备，请在审核窗口核对并明确确认。',data.planBlockers.length>0);}
+ catch(error){if(id===data.selected&&error.response?.plan){showPlan(error.response,id,speed);text('planMessage',error.message);}else if(id===data.selected&&blockers(error.response?.blockers).length){showPlan({plan:{blockers:error.response.blockers},error:error.message},id,speed);text('planMessage',error.message);}notify(`轨迹准备未通过：${error.message}`,true);}
+ finally{data.busy=false;renderControls();}
+}
+async function replay(){
+ if($('confirmReplay').disabled||$('confirmReplay').hidden||!data.plan||data.planSession!==data.selected)return;
+ if(Number($('speedInput').value)!==data.planSpeed){invalidatePlan();text('planMessage','速度已变更，请关闭窗口并重新准备轨迹。');return;}
+ const id=data.planSession,hash=data.plan.sha256;data.busy=true;renderControls();text('planMessage','正在提交你确认的轨迹，请等待服务端结果。');
+ try{await request('/api/replay',{method:'POST',body:{session_id:id,plan_sha256:hash,approval:true},timeoutMs:30000});text('planMessage','服务已接受实物复现请求。接受请求不等于轨迹已执行完成，请以设备反馈为准。');notify('实物复现请求已接受，执行是否完成仍需设备反馈确认。');invalidatePlan();await poll();}
+ catch(error){const rejected=blockers(error.response?.blockers);data.planBlockers=rejected.length?rejected:[{message:error.message}];renderBlockers('planBlockers','planBlockerList',data.planBlockers);$('confirmReplay').hidden=true;text('planActionNote','本次没有获得执行成功确认。请处理阻断项后重新准备轨迹。');text('planMessage',`实物复现未确认：${error.message}`);notify(`实物复现未确认：${error.message}`,true);}
+ finally{data.busy=false;renderControls();}
+}
+$('startButton').addEventListener('click',start);$('stopButton').addEventListener('click',stop);$('prepareButton').addEventListener('click',prepare);$('confirmReplay').addEventListener('click',replay);$('closeDialog').addEventListener('click',()=>$('planDialog').close());
+$('sessionSelect').addEventListener('change',event=>selectSession(event.target.value));$('refreshSession').addEventListener('click',()=>loadSession(data.selected));$('jointSelect').addEventListener('change',event=>{data.selectedJoint=Number(event.target.value);drawCharts();});$('speedInput').addEventListener('input',()=>{if(data.plan){invalidatePlan();notify('速度已修改，下次复现会重新准备轨迹。');}});
+const observer=new ResizeObserver(drawCharts);observer.observe($('positionCanvas').parentElement);observer.observe($('velocityCanvas').parentElement);renderSelected();renderControls();poll();setInterval(poll,500);
+})();
+</script>
+</body>
+</html>

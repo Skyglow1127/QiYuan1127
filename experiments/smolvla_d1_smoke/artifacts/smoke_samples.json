@@ -1,0 +1,1156 @@
+{
+  "schema": "d1-smolvla-real-smoke-samples-v1",
+  "source": {
+    "path": "/home/aup/Camera/output/act_lift_pilot_20261024/data/examples.jsonl",
+    "sha256": "5b9214d20acd72b5a7bed672c54a25f25d6cda459130a99359e7085941652187"
+  },
+  "audit": {
+    "path": "/home/aup/NPU/policies/smolvla_d1/data_audit.json",
+    "sha256": "668ce5b43a695d8962fd741920da17b17becb9726b6daa205a9528b08c7ddfb3"
+  },
+  "hardware_accessed": false,
+  "robot_commands_sent": 0,
+  "source_modified": false,
+  "task": {
+    "text": "Lift the already grasped red cube.",
+    "origin": "manually_added_technical_label",
+    "source_has_natural_language": false,
+    "scope": "Constant lift-stage label for technical smoke only; not original human instructions or language-grounding evidence."
+  },
+  "units": [
+    "degree",
+    "degree",
+    "degree",
+    "degree",
+    "degree",
+    "degree",
+    "uncalibrated_sdk_raw"
+  ],
+  "selection": {
+    "train": {
+      "indices_0_based_within_split": [
+        0,
+        260,
+        520,
+        780
+      ],
+      "count": 4
+    },
+    "val": {
+      "indices_0_based_within_split": [
+        0,
+        222
+      ],
+      "count": 2
+    }
+  },
+  "selection_method": "Uniformly spaced original-order indices including endpoints; no new synthetic images, states or action labels.",
+  "validated": [
+    "7D finite states",
+    "10x7 finite action chunks",
+    "unpadded source command identity",
+    "strictly ordered nonpad times",
+    "images available before command",
+    "selected image SHA256"
+  ],
+  "samples": [
+    {
+      "id": "cycle_execution_v4/00_lift:0",
+      "segment_id": "cycle_execution_v4/00_lift",
+      "sample_index": 0,
+      "command_host_monotonic": 45271.45351069,
+      "q": [
+        -1.399999976158142,
+        27.200000762939453,
+        37.400001525878906,
+        5.599999904632568,
+        25.600000381469727,
+        -95.0,
+        30.399999618530273
+      ],
+      "cameras": {
+        "global": {
+          "path": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/frames/global_00001.jpg",
+          "sha256": "6c287ed7d600a5922d282f2a86392c7e06c03445f8b8cc93fa50b960df695d4d",
+          "available_age_s": 0.07940232600230956,
+          "capture_age_estimate_s": 0.08259130400256254,
+          "available_t": 45271.374108364,
+          "board_age_at_fetch_ms": 3.1889780002529733,
+          "frame_index": 8099,
+          "serial": "CC1365302K0",
+          "source_log": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/frames/frames.jsonl",
+          "source_line": 3
+        },
+        "wrist": {
+          "path": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/frames/wrist_00001.jpg",
+          "sha256": "4b365388f6962823fa73cada4ba730fa30a06962bd63a0425157548ac6f1ca9f",
+          "available_age_s": 0.04608187099802308,
+          "capture_age_estimate_s": 0.0637342619975243,
+          "available_t": 45271.407428819,
+          "board_age_at_fetch_ms": 17.652390999501222,
+          "frame_index": 8157,
+          "serial": "CC1365301EY",
+          "source_log": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/frames/frames.jsonl",
+          "source_line": 4
+        }
+      },
+      "actions": [
+        [
+          -1.399999976158142,
+          27.299999237060547,
+          37.400001525878906,
+          5.599999904632568,
+          25.600000381469727,
+          -95.0,
+          29.6
+        ],
+        [
+          -1.400359007957114,
+          27.294517164581734,
+          37.397817997046374,
+          5.598603204334057,
+          25.607498144608098,
+          -94.99863325170546,
+          29.6
+        ],
+        [
+          -1.4022331355829494,
+          27.26590102665524,
+          37.38642008823002,
+          5.5913125002183,
+          25.64663608467309,
+          -94.99149889551832,
+          29.6
+        ],
+        [
+          -1.4056774534293524,
+          27.213309584537516,
+          37.365472731066795,
+          5.577913464873761,
+          25.718564753552954,
+          -94.9783872002425,
+          29.6
+        ],
+        [
+          -1.4097553568033525,
+          27.15104389686895,
+          37.340672087728514,
+          5.562049664296556,
+          25.80372476914759,
+          -94.9628635962116,
+          29.6
+        ],
+        [
+          -1.4131996746497555,
+          27.098452454751225,
+          37.31972473056529,
+          5.548650628952016,
+          25.875653438027452,
+          -94.94975190093578,
+          29.6
+        ],
+        [
+          -1.4150738022755909,
+          27.06983631682473,
+          37.308326821748935,
+          5.54135992483626,
+          25.914791378092445,
+          -94.94261754474864,
+          29.6
+        ],
+        [
+          -1.4154328340745628,
+          27.064354244345918,
+          37.3061432929164,
+          5.539963224537749,
+          25.922289141230817,
+          -94.9412507964541,
+          29.6
+        ],
+        [
+          -1.4158261307444147,
+          27.058350024242223,
+          37.303750214299654,
+          5.538434360980384,
+          25.930502606392736,
+          -94.93975473178996,
+          29.6
+        ],
+        [
+          -1.417588360574525,
+          27.03144713747926,
+          37.29302763552518,
+          5.531584038632193,
+          25.9673043757094,
+          -94.93305137022854,
+          29.6
+        ]
+      ],
+      "is_pad": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "action_source_lines": [
+        7,
+        15,
+        23,
+        32,
+        42,
+        52,
+        62,
+        71,
+        81,
+        91
+      ],
+      "actual_target_times": [
+        45271.45351069,
+        45271.653608023,
+        45271.853542083,
+        45272.053542812,
+        45272.253592228,
+        45272.4534933,
+        45272.653551616,
+        45272.853525505,
+        45273.053529524,
+        45273.253521983
+      ],
+      "action_source_log": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/transport.jsonl",
+      "split": "train",
+      "episode_group": "grasp_session_20261023",
+      "stage": "lift",
+      "source_line_1_based": 1,
+      "units": [
+        "degree",
+        "degree",
+        "degree",
+        "degree",
+        "degree",
+        "degree",
+        "uncalibrated_sdk_raw"
+      ],
+      "image_sha256_verified": true,
+      "task": {
+        "text": "Lift the already grasped red cube.",
+        "origin": "manually_added_technical_label",
+        "source_has_natural_language": false,
+        "scope": "Constant lift-stage label for technical smoke only; not original human instructions or language-grounding evidence."
+      }
+    },
+    {
+      "id": "cycle_execution_v4/00_lift:262",
+      "segment_id": "cycle_execution_v4/00_lift",
+      "sample_index": 262,
+      "command_host_monotonic": 45323.853673666,
+      "q": [
+        -1.600000023841858,
+        22.100000381469727,
+        34.70000076293945,
+        4.400000095367432,
+        34.599998474121094,
+        -93.80000305175781,
+        30.399999618530273
+      ],
+      "cameras": {
+        "global": {
+          "path": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/frames/global_00263.jpg",
+          "sha256": "05e96c08132e8dd2402c4a96ab0ff5d713ba12505483b693a984417342f86abe",
+          "available_age_s": 0.08030098100425676,
+          "capture_age_estimate_s": 0.08641608800462564,
+          "available_t": 45323.773372685,
+          "board_age_at_fetch_ms": 6.11510700036888,
+          "frame_index": 9666,
+          "serial": "CC1365302K0",
+          "source_log": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/frames/frames.jsonl",
+          "source_line": 527
+        },
+        "wrist": {
+          "path": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/frames/wrist_00263.jpg",
+          "sha256": "815531e88ed2471596e370b5b33f136e4624b83764ddc72396585e9bc2afc401",
+          "available_age_s": 0.0505617670060019,
+          "capture_age_estimate_s": 0.06856918100493203,
+          "available_t": 45323.803111899,
+          "board_age_at_fetch_ms": 18.007413998930133,
+          "frame_index": 9724,
+          "serial": "CC1365301EY",
+          "source_log": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/frames/frames.jsonl",
+          "source_line": 528
+        }
+      },
+      "actions": [
+        [
+          -1.830238813475505,
+          21.210962466991433,
+          34.245432368002994,
+          4.335645416581018,
+          34.65273338944802,
+          -93.76433581760121,
+          29.6
+        ],
+        [
+          -1.8307100621688681,
+          21.204895017233763,
+          34.241344834560074,
+          4.334649736485917,
+          34.66268910409692,
+          -93.76336284749885,
+          29.6
+        ],
+        [
+          -1.8328215687452079,
+          21.17770881970078,
+          34.22302997476887,
+          4.330188429540463,
+          34.70729730619781,
+          -93.75900329637727,
+          29.6
+        ],
+        [
+          -1.8357922580221546,
+          21.139460420952158,
+          34.197262705938094,
+          4.323911794244826,
+          34.770056811249745,
+          -93.75286982186465,
+          29.6
+        ],
+        [
+          -1.8379037645984944,
+          21.112274223419174,
+          34.17894784614689,
+          4.319450487299372,
+          34.814665013350634,
+          -93.74851027074307,
+          29.6
+        ],
+        [
+          -1.8383750132918575,
+          21.106206773661505,
+          34.17486031270397,
+          4.318454807204271,
+          34.82462072799954,
+          -93.74753730064072,
+          29.6
+        ],
+        [
+          -1.8388462606500255,
+          21.100162191767478,
+          34.17075019781314,
+          4.317470004106273,
+          34.83457644264844,
+          -93.74657487767811,
+          29.6
+        ],
+        [
+          -1.8409577612438064,
+          21.07307845742463,
+          34.15233415816418,
+          4.313057433319108,
+          34.879184644749316,
+          -93.74226258473516,
+          29.6
+        ],
+        [
+          -1.8439284421038606,
+          21.034974214656202,
+          34.126424538880016,
+          4.306849365170952,
+          34.94194414980122,
+          -93.73619559799297,
+          29.6
+        ],
+        [
+          -1.8460399426976417,
+          21.007890480313353,
+          34.108008499231055,
+          4.302436794383787,
+          34.9865523519021,
+          -93.73188330505002,
+          29.6
+        ]
+      ],
+      "is_pad": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "action_source_lines": [
+        2546,
+        2556,
+        2565,
+        2575,
+        2585,
+        2595,
+        2605,
+        2614,
+        2623,
+        2633
+      ],
+      "actual_target_times": [
+        45323.853673666,
+        45324.053601897,
+        45324.253580197,
+        45324.453634763,
+        45324.653510057,
+        45324.853506985,
+        45325.053559012,
+        45325.253487884,
+        45325.453588819,
+        45325.653634446
+      ],
+      "action_source_log": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/transport.jsonl",
+      "split": "train",
+      "episode_group": "grasp_session_20261023",
+      "stage": "lift",
+      "source_line_1_based": 261,
+      "units": [
+        "degree",
+        "degree",
+        "degree",
+        "degree",
+        "degree",
+        "degree",
+        "uncalibrated_sdk_raw"
+      ],
+      "image_sha256_verified": true,
+      "task": {
+        "text": "Lift the already grasped red cube.",
+        "origin": "manually_added_technical_label",
+        "source_has_natural_language": false,
+        "scope": "Constant lift-stage label for technical smoke only; not original human instructions or language-grounding evidence."
+      }
+    },
+    {
+      "id": "cycle_execution_v4/00_lift:524",
+      "segment_id": "cycle_execution_v4/00_lift",
+      "sample_index": 524,
+      "command_host_monotonic": 45376.253771389,
+      "q": [
+        -2.0,
+        17.0,
+        30.5,
+        3.799999952316284,
+        43.5,
+        -92.80000305175781,
+        30.399999618530273
+      ],
+      "cameras": {
+        "global": {
+          "path": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/frames/global_00525.jpg",
+          "sha256": "7274859159effcbcce052f11c0e117934c95e1f376e5165d740475b617f82bcd",
+          "available_age_s": 0.029102289001457393,
+          "capture_age_estimate_s": 0.032300337001288426,
+          "available_t": 45376.2246691,
+          "board_age_at_fetch_ms": 3.198047999831033,
+          "frame_index": 11236,
+          "serial": "CC1365302K0",
+          "source_log": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/frames/frames.jsonl",
+          "source_line": 1051
+        },
+        "wrist": {
+          "path": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/frames/wrist_00525.jpg",
+          "sha256": "f3c7e9fd100f8a324d2871267a2409761be3cf65ab3f9dd71e76d8afc3a13079",
+          "available_age_s": 0.013364515994908288,
+          "capture_age_estimate_s": 0.043449768994832993,
+          "available_t": 45376.240406873,
+          "board_age_at_fetch_ms": 30.085252999924705,
+          "frame_index": 11293,
+          "serial": "CC1365301EY",
+          "source_log": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/frames/frames.jsonl",
+          "source_line": 1052
+        }
+      },
+      "actions": [
+        [
+          -2.2570571375615742,
+          16.253728793182198,
+          30.035062527553237,
+          3.639417394960075,
+          43.64546640171817,
+          -93.08079073138437,
+          29.6
+        ],
+        [
+          -2.2600516926105327,
+          16.22285009305522,
+          30.001988919177233,
+          3.635727048350203,
+          43.70822590676924,
+          -93.07713067252303,
+          29.6
+        ],
+        [
+          -2.2621801625007216,
+          16.200902130037708,
+          29.978480859236008,
+          3.633104023722152,
+          43.75283410886953,
+          -93.0745291758214,
+          29.6
+        ],
+        [
+          -2.2626551970878044,
+          16.196003756047364,
+          29.973234300852084,
+          3.6325186137866687,
+          43.7627898235183,
+          -93.07394857051561,
+          29.6
+        ],
+        [
+          -2.2631304643266024,
+          16.19112667359108,
+          29.967964502713848,
+          3.631938705824124,
+          43.77274756802,
+          -93.0733730986894,
+          29.6
+        ],
+        [
+          -2.265259976650719,
+          16.169274110762093,
+          29.944352313265725,
+          3.6293403336825554,
+          43.8173648652072,
+          -93.07079460337968,
+          29.6
+        ],
+        [
+          -2.2682559983052406,
+          16.138529629642644,
+          29.911132204560044,
+          3.625684670780546,
+          43.88013716618205,
+          -93.06716690529291,
+          29.6
+        ],
+        [
+          -2.270385510629357,
+          16.116677066813658,
+          29.88752001511192,
+          3.6230862986389774,
+          43.924754463369254,
+          -93.06458840998319,
+          29.6
+        ],
+        [
+          -2.270860777868155,
+          16.111799984357372,
+          29.882250216973684,
+          3.6225063906764325,
+          43.93471220787096,
+          -93.06401293815698,
+          29.6
+        ],
+        [
+          -2.2713360889275727,
+          16.10694618304704,
+          29.876959320925142,
+          3.6219320592028,
+          43.94466792251973,
+          -93.06344266891104,
+          29.6
+        ]
+      ],
+      "is_pad": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "action_source_lines": [
+        5103,
+        5113,
+        5123,
+        5133,
+        5143,
+        5152,
+        5162,
+        5172,
+        5182,
+        5191
+      ],
+      "actual_target_times": [
+        45376.253771389,
+        45376.453655197,
+        45376.653744927,
+        45376.853598997,
+        45377.053640912,
+        45377.253614366,
+        45377.4536008,
+        45377.653640097,
+        45377.853731518,
+        45378.053640416
+      ],
+      "action_source_log": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/transport.jsonl",
+      "split": "train",
+      "episode_group": "grasp_session_20261023",
+      "stage": "lift",
+      "source_line_1_based": 521,
+      "units": [
+        "degree",
+        "degree",
+        "degree",
+        "degree",
+        "degree",
+        "degree",
+        "uncalibrated_sdk_raw"
+      ],
+      "image_sha256_verified": true,
+      "task": {
+        "text": "Lift the already grasped red cube.",
+        "origin": "manually_added_technical_label",
+        "source_has_natural_language": false,
+        "scope": "Constant lift-stage label for technical smoke only; not original human instructions or language-grounding evidence."
+      }
+    },
+    {
+      "id": "cycle_execution_v4/00_lift:784",
+      "segment_id": "cycle_execution_v4/00_lift",
+      "sample_index": 784,
+      "command_host_monotonic": 45428.253628899,
+      "q": [
+        -2.299999952316284,
+        13.399999618530273,
+        25.5,
+        3.299999952316284,
+        52.29999923706055,
+        -92.69999694824219,
+        30.399999618530273
+      ],
+      "cameras": {
+        "global": {
+          "path": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/frames/global_00785.jpg",
+          "sha256": "dff32a02ff7345c1274e51a4a73365513048100b7d5e562a01a07df8ef29a419",
+          "available_age_s": 0.03090528900065692,
+          "capture_age_estimate_s": 0.035852280001563486,
+          "available_t": 45428.22272361,
+          "board_age_at_fetch_ms": 4.946991000906564,
+          "frame_index": 12792,
+          "serial": "CC1365302K0",
+          "source_log": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/frames/frames.jsonl",
+          "source_line": 1571
+        },
+        "wrist": {
+          "path": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/frames/wrist_00784.jpg",
+          "sha256": "787ce114d69900be3e83df314f2d16674045e89d2cee49f0ba7ba94c07f3cf46",
+          "available_age_s": 0.2116075890007778,
+          "capture_age_estimate_s": 0.21488810600203578,
+          "available_t": 45428.04202131,
+          "board_age_at_fetch_ms": 3.2805170012579765,
+          "frame_index": 12844,
+          "serial": "CC1365301EY",
+          "source_log": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/frames/frames.jsonl",
+          "source_line": 1570
+        }
+      },
+      "actions": [
+        [
+          -2.6947573920463506,
+          12.31453936031148,
+          24.71152876809551,
+          3.2180952960978915,
+          52.7375671452364,
+          -92.65432832558956,
+          29.6
+        ],
+        [
+          -2.695070698428897,
+          12.312093656206825,
+          24.707402494627562,
+          3.217859383986262,
+          52.74401924515442,
+          -92.65408198275718,
+          29.6
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "is_pad": [
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "action_source_lines": [
+        7617,
+        7626
+      ],
+      "actual_target_times": [
+        45428.253628899,
+        45428.453627436
+      ],
+      "action_source_log": "/home/aup/D1/Control/logs/grasp_100mm_resume_20261023_2037/cycle_execution_v4/02_lift/executed/transport.jsonl",
+      "split": "train",
+      "episode_group": "grasp_session_20261023",
+      "stage": "lift",
+      "source_line_1_based": 781,
+      "units": [
+        "degree",
+        "degree",
+        "degree",
+        "degree",
+        "degree",
+        "degree",
+        "uncalibrated_sdk_raw"
+      ],
+      "image_sha256_verified": true,
+      "task": {
+        "text": "Lift the already grasped red cube.",
+        "origin": "manually_added_technical_label",
+        "source_has_natural_language": false,
+        "scope": "Constant lift-stage label for technical smoke only; not original human instructions or language-grounding evidence."
+      }
+    },
+    {
+      "id": "first_grasp_execution_20261022/01_lift:0",
+      "segment_id": "first_grasp_execution_20261022/01_lift",
+      "sample_index": 0,
+      "command_host_monotonic": 850481.926877216,
+      "q": [
+        0.10000000149011612,
+        28.5,
+        34.599998474121094,
+        -2.5,
+        30.200000762939453,
+        -88.0999984741211,
+        30.600000381469727
+      ],
+      "cameras": {
+        "global": {
+          "path": "/home/aup/D1/Control/logs/first_grasp_execution_20261022/lift_preserve_clamp/frames/global_00001.jpg",
+          "sha256": "fb17c8135b5b5f8beeb27f13a0b34d1631fdd0aff042df4b2e89d1703772bc7a",
+          "available_age_s": 0.020450981915928423,
+          "capture_age_estimate_s": 0.024706757914827904,
+          "available_t": 850481.906426234,
+          "board_age_at_fetch_ms": 4.25577599889948,
+          "frame_index": 93409,
+          "serial": "CC1365302K0",
+          "source_log": "/home/aup/D1/Control/logs/first_grasp_execution_20261022/lift_preserve_clamp/frames/frames.jsonl",
+          "source_line": 3
+        },
+        "wrist": {
+          "path": "/home/aup/D1/Control/logs/first_grasp_execution_20261022/lift_preserve_clamp/frames/wrist_00000.jpg",
+          "sha256": "ddef92aee6ad49c174114d7a424bdad0e9a055a99fb053c170553ef618eed7e2",
+          "available_age_s": 0.18449332495220006,
+          "capture_age_estimate_s": 0.19624418195235194,
+          "available_t": 850481.742383891,
+          "board_age_at_fetch_ms": 11.750857000151882,
+          "frame_index": 95100,
+          "serial": "CC1365301EY",
+          "source_log": "/home/aup/D1/Control/logs/first_grasp_execution_20261022/lift_preserve_clamp/frames/frames.jsonl",
+          "source_line": 2
+        }
+      },
+      "actions": [
+        [
+          0.1,
+          28.500000000000004,
+          34.7,
+          -2.5,
+          30.299999999999997,
+          -88.2,
+          29.6
+        ],
+        [
+          0.09997618785814961,
+          28.49439242069055,
+          34.69791843385752,
+          -2.500403701140172,
+          30.307497763138368,
+          -88.19962182388379,
+          29.6
+        ],
+        [
+          0.09985188969570293,
+          28.465121143527902,
+          34.687052765067726,
+          -2.502511000442195,
+          30.34663570320336,
+          -88.19764776390123,
+          29.6
+        ],
+        [
+          0.09962345147554735,
+          28.411325670408313,
+          34.66708357171617,
+          -2.5063838469301363,
+          30.418564372083225,
+          -88.19401978791171,
+          29.6
+        ],
+        [
+          0.09935299182859698,
+          28.347634469095567,
+          34.643441026348476,
+          -2.510969107194852,
+          30.50372438767786,
+          -88.18972444230535,
+          29.6
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "is_pad": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "action_source_lines": [
+        6,
+        15,
+        24,
+        32,
+        42
+      ],
+      "actual_target_times": [
+        850481.926877216,
+        850482.126914707,
+        850482.326914479,
+        850482.527167914,
+        850482.727052029
+      ],
+      "action_source_log": "/home/aup/D1/Control/logs/first_grasp_execution_20261022/lift_preserve_clamp/transport.jsonl",
+      "split": "val",
+      "episode_group": "grasp_session_20261022",
+      "stage": "lift",
+      "source_line_1_based": 782,
+      "units": [
+        "degree",
+        "degree",
+        "degree",
+        "degree",
+        "degree",
+        "degree",
+        "uncalibrated_sdk_raw"
+      ],
+      "image_sha256_verified": true,
+      "task": {
+        "text": "Lift the already grasped red cube.",
+        "origin": "manually_added_technical_label",
+        "source_has_natural_language": false,
+        "scope": "Constant lift-stage label for technical smoke only; not original human instructions or language-grounding evidence."
+      }
+    },
+    {
+      "id": "first_grasp_execution_20261022/01_lift:224",
+      "segment_id": "first_grasp_execution_20261022/01_lift",
+      "sample_index": 224,
+      "command_host_monotonic": 850526.726859923,
+      "q": [
+        0.20000000298023224,
+        23.899999618530273,
+        32.70000076293945,
+        -2.5,
+        37.900001525878906,
+        -87.69999694824219,
+        30.600000381469727
+      ],
+      "cameras": {
+        "global": {
+          "path": "/home/aup/D1/Control/logs/first_grasp_execution_20261022/lift_preserve_clamp/frames/global_00225.jpg",
+          "sha256": "cadfbd68903aae1a6ef08366e8bf9fbbe1641b69cc136fe496ca65c06a1f91f1",
+          "available_age_s": 0.018182709929533303,
+          "capture_age_estimate_s": 0.0494910039305978,
+          "available_t": 850526.708677213,
+          "board_age_at_fetch_ms": 31.308294001064496,
+          "frame_index": 94748,
+          "serial": "CC1365302K0",
+          "source_log": "/home/aup/D1/Control/logs/first_grasp_execution_20261022/lift_preserve_clamp/frames/frames.jsonl",
+          "source_line": 451
+        },
+        "wrist": {
+          "path": "/home/aup/D1/Control/logs/first_grasp_execution_20261022/lift_preserve_clamp/frames/wrist_00224.jpg",
+          "sha256": "369a3d1d634dde647ef28c1f891a31dd1a594fd1fd4e85a51e6d5cbc220eefba",
+          "available_age_s": 0.17925264197401702,
+          "capture_age_estimate_s": 0.18806745797701296,
+          "available_t": 850526.547607281,
+          "board_age_at_fetch_ms": 8.81481600299594,
+          "frame_index": 96440,
+          "serial": "CC1365301EY",
+          "source_log": "/home/aup/D1/Control/logs/first_grasp_execution_20261022/lift_preserve_clamp/frames/frames.jsonl",
+          "source_line": 450
+        }
+      },
+      "actions": [
+        [
+          0.07529357498029059,
+          23.054540271919652,
+          32.11573684692284,
+          -2.8573355850667452,
+          38.13333315714081,
+          -87.90696352400768,
+          29.6
+        ],
+        [
+          0.07527553152115195,
+          23.050835138144805,
+          32.11354678769208,
+          -2.8575619631682367,
+          38.1390861567787,
+          -87.90681193652,
+          29.6
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "is_pad": [
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "action_source_lines": [
+        2174,
+        2183
+      ],
+      "actual_target_times": [
+        850526.726859923,
+        850526.926891459
+      ],
+      "action_source_log": "/home/aup/D1/Control/logs/first_grasp_execution_20261022/lift_preserve_clamp/transport.jsonl",
+      "split": "val",
+      "episode_group": "grasp_session_20261022",
+      "stage": "lift",
+      "source_line_1_based": 1004,
+      "units": [
+        "degree",
+        "degree",
+        "degree",
+        "degree",
+        "degree",
+        "degree",
+        "uncalibrated_sdk_raw"
+      ],
+      "image_sha256_verified": true,
+      "task": {
+        "text": "Lift the already grasped red cube.",
+        "origin": "manually_added_technical_label",
+        "source_has_natural_language": false,
+        "scope": "Constant lift-stage label for technical smoke only; not original human instructions or language-grounding evidence."
+      }
+    }
+  ]
+}

@@ -1,0 +1,862 @@
+{
+  "trace": [
+    {
+      "connected": true,
+      "age": 0.0007115710177458823,
+      "positions": {
+        "joint1": 2.2721185427397247e-05,
+        "joint2": 1.7522716149684252,
+        "joint3": -1.1735675109369463,
+        "joint4": -0.00013283549838900637,
+        "joint5": 1.083199567309979,
+        "joint6": 0.0006392537640376465,
+        "gripper_joint1": 0.049975207180343505,
+        "gripper_joint2": -0.05000000000000092
+      },
+      "targets": {
+        "joint1": -2.798232798088251e-08,
+        "joint2": 1.7497925284814362,
+        "joint3": -1.1750770337443186,
+        "joint4": -6.03749929795502e-08,
+        "joint5": 1.0833473052427096,
+        "joint6": 5.0258297373867443e-08,
+        "gripper_joint1": 0.05,
+        "gripper_joint2": -0.05
+      },
+      "hold": false,
+      "sim_time": 53.4145,
+      "mode": "Gazebo Harmonic / PID position control",
+      "collision_protection": true,
+      "collision_margin_m": 0.002,
+      "collision_warning": "",
+      "cube": {
+        "connected": true,
+        "pose": {
+          "position": [
+            0.32000000001943346,
+            -1.7849284780935964e-11,
+            0.0199995616756944
+          ],
+          "quaternion": [
+            4.4635477771387535e-10,
+            4.859658200985588e-10,
+            -3.4133480047238207e-18,
+            1.0
+          ]
+        },
+        "finger_contacts": [],
+        "contacts": [
+          [
+            "red_cube::body::collision",
+            "floor::ground::collision"
+          ]
+        ],
+        "size": [
+          0.04,
+          0.04,
+          0.04
+        ],
+        "mass": 0.02
+      },
+      "grasp": {
+        "active": true,
+        "phase": "\u79fb\u52a8\u5230\u65b9\u5757\u4e0a\u65b9",
+        "result": null,
+        "last_success": null
+      },
+      "scene": {
+        "cube": {
+          "name": "red_cube",
+          "size": [
+            0.04,
+            0.04,
+            0.04
+          ],
+          "mass": 0.02,
+          "friction": 0.8,
+          "position": [
+            0.32,
+            0,
+            0.02
+          ]
+        },
+        "tcp_in_link6": [
+          0.0,
+          0.0,
+          0.125
+        ],
+        "poses": {
+          "above": [
+            -2.798232798088251e-08,
+            1.7497925284814362,
+            -1.1750770337443186,
+            -6.03749929795502e-08,
+            1.0833473052427096,
+            5.0258297373867443e-08
+          ],
+          "pick": [
+            -3.461244711140314e-08,
+            1.8984242961772042,
+            -1.0247041586660546,
+            -7.551835844231424e-08,
+            0.7843426624921553,
+            6.88060054725439e-08
+          ]
+        },
+        "grip_closed_target": 0.7,
+        "lift_min_m": 0.06,
+        "support_plane_z": 0.0,
+        "mount": {
+          "name": "mount",
+          "size": [
+            0.15,
+            0.23,
+            0.02
+          ],
+          "position": [
+            0,
+            0,
+            0.01
+          ]
+        },
+        "provenance": {
+          "poses": "PiPER-specific numerical IK with official URDF, top-down at same 40mm cube. FCL rate-limited paths checked. TCP and camera mounting are simulation choices."
+        }
+      },
+      "wrist_camera": {
+        "connected": true,
+        "age": 0.10985224501928315,
+        "topic": "/piper/wrist_camera/image",
+        "source": "Gazebo RGB camera sensor",
+        "encoding": "image/jpeg",
+        "frames": 454,
+        "received_frames": 455,
+        "dropped_frames": 0,
+        "max_age": 2.0,
+        "error": null,
+        "width": 640,
+        "height": 480,
+        "step": 1920,
+        "pixel_format": "RGB_INT8",
+        "pixel_format_type": 3,
+        "sim_time": 53.3,
+        "frame_id": 454
+      }
+    },
+    {
+      "connected": true,
+      "age": 0.5256678410223685,
+      "positions": {
+        "joint1": 2.2721284073185434e-05,
+        "joint2": 1.752269479640825,
+        "joint3": -1.173568722220797,
+        "joint4": -0.00013283196484389708,
+        "joint5": 1.0831996385165277,
+        "joint6": 0.0006392537763411259,
+        "gripper_joint1": 0.0499752071486094,
+        "gripper_joint2": -0.05000000000000092
+      },
+      "targets": {
+        "joint1": -3.461244711140314e-08,
+        "joint2": 1.8984242961772042,
+        "joint3": -1.0247041586660546,
+        "joint4": -7.551835844231424e-08,
+        "joint5": 0.7843426624921553,
+        "joint6": 6.88060054725439e-08,
+        "gripper_joint1": 0.05,
+        "gripper_joint2": -0.05
+      },
+      "hold": false,
+      "sim_time": 53.5005,
+      "mode": "Gazebo Harmonic / PID position control",
+      "collision_protection": true,
+      "collision_margin_m": 0.002,
+      "collision_warning": "",
+      "cube": {
+        "connected": true,
+        "pose": {
+          "position": [
+            0.32000000001943346,
+            -1.7849284780935964e-11,
+            0.0199995616756944
+          ],
+          "quaternion": [
+            4.4635477771387535e-10,
+            4.859658200985588e-10,
+            -3.4133480047238207e-18,
+            1.0
+          ]
+        },
+        "finger_contacts": [],
+        "contacts": [
+          [
+            "red_cube::body::collision",
+            "floor::ground::collision"
+          ]
+        ],
+        "size": [
+          0.04,
+          0.04,
+          0.04
+        ],
+        "mass": 0.02
+      },
+      "grasp": {
+        "active": true,
+        "phase": "\u4e0b\u964d\u5bf9\u51c6\u65b9\u5757",
+        "result": null,
+        "last_success": null
+      },
+      "scene": {
+        "cube": {
+          "name": "red_cube",
+          "size": [
+            0.04,
+            0.04,
+            0.04
+          ],
+          "mass": 0.02,
+          "friction": 0.8,
+          "position": [
+            0.32,
+            0,
+            0.02
+          ]
+        },
+        "tcp_in_link6": [
+          0.0,
+          0.0,
+          0.125
+        ],
+        "poses": {
+          "above": [
+            -2.798232798088251e-08,
+            1.7497925284814362,
+            -1.1750770337443186,
+            -6.03749929795502e-08,
+            1.0833473052427096,
+            5.0258297373867443e-08
+          ],
+          "pick": [
+            -3.461244711140314e-08,
+            1.8984242961772042,
+            -1.0247041586660546,
+            -7.551835844231424e-08,
+            0.7843426624921553,
+            6.88060054725439e-08
+          ]
+        },
+        "grip_closed_target": 0.7,
+        "lift_min_m": 0.06,
+        "support_plane_z": 0.0,
+        "mount": {
+          "name": "mount",
+          "size": [
+            0.15,
+            0.23,
+            0.02
+          ],
+          "position": [
+            0,
+            0,
+            0.01
+          ]
+        },
+        "provenance": {
+          "poses": "PiPER-specific numerical IK with official URDF, top-down at same 40mm cube. FCL rate-limited paths checked. TCP and camera mounting are simulation choices."
+        }
+      },
+      "wrist_camera": {
+        "connected": true,
+        "age": 0.05414621700765565,
+        "topic": "/piper/wrist_camera/image",
+        "source": "Gazebo RGB camera sensor",
+        "encoding": "image/jpeg",
+        "frames": 458,
+        "received_frames": 458,
+        "dropped_frames": 0,
+        "max_age": 2.0,
+        "error": null,
+        "width": 640,
+        "height": 480,
+        "step": 1920,
+        "pixel_format": "RGB_INT8",
+        "pixel_format_type": 3,
+        "sim_time": 53.7,
+        "frame_id": 458
+      }
+    },
+    {
+      "connected": true,
+      "age": 0.012500989949330688,
+      "positions": {
+        "joint1": -2.683153552753413e-05,
+        "joint2": 1.901089214079268,
+        "joint3": -1.0236142122053002,
+        "joint4": 0.0001804875889597337,
+        "joint5": 0.881986435899164,
+        "joint6": -0.0018607461008741846,
+        "gripper_joint1": 0.05000000000000014,
+        "gripper_joint2": -0.049959285635697716
+      },
+      "targets": {
+        "joint1": -3.461244711140314e-08,
+        "joint2": 1.8984242961772042,
+        "joint3": -1.0247041586660546,
+        "joint4": -7.551835844231424e-08,
+        "joint5": 0.7843426624921553,
+        "joint6": 6.88060054725439e-08,
+        "gripper_joint1": 0.05,
+        "gripper_joint2": -0.05
+      },
+      "hold": false,
+      "sim_time": 54.374,
+      "mode": "Gazebo Harmonic / PID position control",
+      "collision_protection": true,
+      "collision_margin_m": 0.002,
+      "collision_warning": "",
+      "cube": {
+        "connected": true,
+        "pose": {
+          "position": [
+            0.32000000001943346,
+            -1.7849284780935964e-11,
+            0.0199995616756944
+          ],
+          "quaternion": [
+            4.4635477771387535e-10,
+            4.859658200985588e-10,
+            -3.4133480047238207e-18,
+            1.0
+          ]
+        },
+        "finger_contacts": [],
+        "contacts": [
+          [
+            "red_cube::body::collision",
+            "floor::ground::collision"
+          ]
+        ],
+        "size": [
+          0.04,
+          0.04,
+          0.04
+        ],
+        "mass": 0.02
+      },
+      "grasp": {
+        "active": true,
+        "phase": "\u4e0b\u964d\u5bf9\u51c6\u65b9\u5757",
+        "result": null,
+        "last_success": null
+      },
+      "scene": {
+        "cube": {
+          "name": "red_cube",
+          "size": [
+            0.04,
+            0.04,
+            0.04
+          ],
+          "mass": 0.02,
+          "friction": 0.8,
+          "position": [
+            0.32,
+            0,
+            0.02
+          ]
+        },
+        "tcp_in_link6": [
+          0.0,
+          0.0,
+          0.125
+        ],
+        "poses": {
+          "above": [
+            -2.798232798088251e-08,
+            1.7497925284814362,
+            -1.1750770337443186,
+            -6.03749929795502e-08,
+            1.0833473052427096,
+            5.0258297373867443e-08
+          ],
+          "pick": [
+            -3.461244711140314e-08,
+            1.8984242961772042,
+            -1.0247041586660546,
+            -7.551835844231424e-08,
+            0.7843426624921553,
+            6.88060054725439e-08
+          ]
+        },
+        "grip_closed_target": 0.7,
+        "lift_min_m": 0.06,
+        "support_plane_z": 0.0,
+        "mount": {
+          "name": "mount",
+          "size": [
+            0.15,
+            0.23,
+            0.02
+          ],
+          "position": [
+            0,
+            0,
+            0.01
+          ]
+        },
+        "provenance": {
+          "poses": "PiPER-specific numerical IK with official URDF, top-down at same 40mm cube. FCL rate-limited paths checked. TCP and camera mounting are simulation choices."
+        }
+      },
+      "wrist_camera": {
+        "connected": true,
+        "age": 0.037122004956472665,
+        "topic": "/piper/wrist_camera/image",
+        "source": "Gazebo RGB camera sensor",
+        "encoding": "image/jpeg",
+        "frames": 462,
+        "received_frames": 462,
+        "dropped_frames": 0,
+        "max_age": 2.0,
+        "error": null,
+        "width": 640,
+        "height": 480,
+        "step": 1920,
+        "pixel_format": "RGB_INT8",
+        "pixel_format_type": 3,
+        "sim_time": 54.1,
+        "frame_id": 462
+      }
+    },
+    {
+      "connected": true,
+      "age": 0.000788029981777072,
+      "positions": {
+        "joint1": -3.363199529260364e-05,
+        "joint2": 1.9011180829682026,
+        "joint3": -1.023570390528859,
+        "joint4": 0.0002639090779076538,
+        "joint5": 0.784186696630339,
+        "joint6": -0.0018607460356704377,
+        "gripper_joint1": 0.05000000000000093,
+        "gripper_joint2": -0.049947329956730305
+      },
+      "targets": {
+        "joint1": -3.461244711140314e-08,
+        "joint2": 1.8984242961772042,
+        "joint3": -1.0247041586660546,
+        "joint4": -7.551835844231424e-08,
+        "joint5": 0.7843426624921553,
+        "joint6": 6.88060054725439e-08,
+        "gripper_joint1": 0.05,
+        "gripper_joint2": -0.05
+      },
+      "hold": false,
+      "sim_time": 54.8065,
+      "mode": "Gazebo Harmonic / PID position control",
+      "collision_protection": true,
+      "collision_margin_m": 0.002,
+      "collision_warning": "",
+      "cube": {
+        "connected": true,
+        "pose": {
+          "position": [
+            0.32000000001943346,
+            -1.7849284780935964e-11,
+            0.0199995616756944
+          ],
+          "quaternion": [
+            4.4635477771387535e-10,
+            4.859658200985588e-10,
+            -3.4133480047238207e-18,
+            1.0
+          ]
+        },
+        "finger_contacts": [],
+        "contacts": [
+          [
+            "red_cube::body::collision",
+            "floor::ground::collision"
+          ]
+        ],
+        "size": [
+          0.04,
+          0.04,
+          0.04
+        ],
+        "mass": 0.02
+      },
+      "grasp": {
+        "active": true,
+        "phase": "\u4e0b\u964d\u5bf9\u51c6\u65b9\u5757",
+        "result": null,
+        "last_success": null
+      },
+      "scene": {
+        "cube": {
+          "name": "red_cube",
+          "size": [
+            0.04,
+            0.04,
+            0.04
+          ],
+          "mass": 0.02,
+          "friction": 0.8,
+          "position": [
+            0.32,
+            0,
+            0.02
+          ]
+        },
+        "tcp_in_link6": [
+          0.0,
+          0.0,
+          0.125
+        ],
+        "poses": {
+          "above": [
+            -2.798232798088251e-08,
+            1.7497925284814362,
+            -1.1750770337443186,
+            -6.03749929795502e-08,
+            1.0833473052427096,
+            5.0258297373867443e-08
+          ],
+          "pick": [
+            -3.461244711140314e-08,
+            1.8984242961772042,
+            -1.0247041586660546,
+            -7.551835844231424e-08,
+            0.7843426624921553,
+            6.88060054725439e-08
+          ]
+        },
+        "grip_closed_target": 0.7,
+        "lift_min_m": 0.06,
+        "support_plane_z": 0.0,
+        "mount": {
+          "name": "mount",
+          "size": [
+            0.15,
+            0.23,
+            0.02
+          ],
+          "position": [
+            0,
+            0,
+            0.01
+          ]
+        },
+        "provenance": {
+          "poses": "PiPER-specific numerical IK with official URDF, top-down at same 40mm cube. FCL rate-limited paths checked. TCP and camera mounting are simulation choices."
+        }
+      },
+      "wrist_camera": {
+        "connected": true,
+        "age": 0.09986363095231354,
+        "topic": "/piper/wrist_camera/image",
+        "source": "Gazebo RGB camera sensor",
+        "encoding": "image/jpeg",
+        "frames": 468,
+        "received_frames": 468,
+        "dropped_frames": 0,
+        "max_age": 2.0,
+        "error": null,
+        "width": 640,
+        "height": 480,
+        "step": 1920,
+        "pixel_format": "RGB_INT8",
+        "pixel_format_type": 3,
+        "sim_time": 54.7,
+        "frame_id": 468
+      }
+    },
+    {
+      "connected": true,
+      "age": 0.26430825400166214,
+      "positions": {
+        "joint1": 3.347284989070418e-05,
+        "joint2": 1.901109831695346,
+        "joint3": -1.0235708821198657,
+        "joint4": -0.0002880705469043803,
+        "joint5": 0.7841835682425333,
+        "joint6": 0.0006392540124213815,
+        "gripper_joint1": 0.04995004184293178,
+        "gripper_joint2": -0.050000000000000946
+      },
+      "targets": {
+        "joint1": 3.347284989070418e-05,
+        "joint2": 1.901109831695346,
+        "joint3": -1.0235708821198657,
+        "joint4": -0.0002880705469043803,
+        "joint5": 0.7841835682425333,
+        "joint6": 0.0006392540124213815,
+        "gripper_joint1": 0.05,
+        "gripper_joint2": -0.05
+      },
+      "hold": true,
+      "sim_time": 55.0975,
+      "mode": "Gazebo Harmonic / PID position control",
+      "collision_protection": true,
+      "collision_margin_m": 0.002,
+      "collision_warning": "\u5df2\u505c\u6b62\uff1agripper_link1 \u2194 floor \u63a5\u8fd1\u78b0\u649e",
+      "cube": {
+        "connected": true,
+        "pose": {
+          "position": [
+            0.32000000001943346,
+            -1.7849284780935964e-11,
+            0.0199995616756944
+          ],
+          "quaternion": [
+            4.4635477771387535e-10,
+            4.859658200985588e-10,
+            -3.4133480047238207e-18,
+            1.0
+          ]
+        },
+        "finger_contacts": [],
+        "contacts": [
+          [
+            "red_cube::body::collision",
+            "floor::ground::collision"
+          ]
+        ],
+        "size": [
+          0.04,
+          0.04,
+          0.04
+        ],
+        "mass": 0.02
+      },
+      "grasp": {
+        "active": false,
+        "phase": "\u6293\u53d6\u505c\u6b62\uff1a\u62d2\u7edd\u8fd0\u52a8\uff1agripper_link1 \u2194 floor \u8def\u5f84\u78b0\u649e\u6216\u95f4\u8ddd\u4e0d\u8db3 2 mm",
+        "result": "failed",
+        "last_success": null
+      },
+      "scene": {
+        "cube": {
+          "name": "red_cube",
+          "size": [
+            0.04,
+            0.04,
+            0.04
+          ],
+          "mass": 0.02,
+          "friction": 0.8,
+          "position": [
+            0.32,
+            0,
+            0.02
+          ]
+        },
+        "tcp_in_link6": [
+          0.0,
+          0.0,
+          0.125
+        ],
+        "poses": {
+          "above": [
+            -2.798232798088251e-08,
+            1.7497925284814362,
+            -1.1750770337443186,
+            -6.03749929795502e-08,
+            1.0833473052427096,
+            5.0258297373867443e-08
+          ],
+          "pick": [
+            -3.461244711140314e-08,
+            1.8984242961772042,
+            -1.0247041586660546,
+            -7.551835844231424e-08,
+            0.7843426624921553,
+            6.88060054725439e-08
+          ]
+        },
+        "grip_closed_target": 0.7,
+        "lift_min_m": 0.06,
+        "support_plane_z": 0.0,
+        "mount": {
+          "name": "mount",
+          "size": [
+            0.15,
+            0.23,
+            0.02
+          ],
+          "position": [
+            0,
+            0,
+            0.01
+          ]
+        },
+        "provenance": {
+          "poses": "PiPER-specific numerical IK with official URDF, top-down at same 40mm cube. FCL rate-limited paths checked. TCP and camera mounting are simulation choices."
+        }
+      },
+      "wrist_camera": {
+        "connected": true,
+        "age": 0.12276023701997474,
+        "topic": "/piper/wrist_camera/image",
+        "source": "Gazebo RGB camera sensor",
+        "encoding": "image/jpeg",
+        "frames": 473,
+        "received_frames": 473,
+        "dropped_frames": 0,
+        "max_age": 2.0,
+        "error": null,
+        "width": 640,
+        "height": 480,
+        "step": 1920,
+        "pixel_format": "RGB_INT8",
+        "pixel_format_type": 3,
+        "sim_time": 55.2,
+        "frame_id": 473
+      }
+    }
+  ],
+  "final": {
+    "connected": true,
+    "age": 0.26430825400166214,
+    "positions": {
+      "joint1": 3.347284989070418e-05,
+      "joint2": 1.901109831695346,
+      "joint3": -1.0235708821198657,
+      "joint4": -0.0002880705469043803,
+      "joint5": 0.7841835682425333,
+      "joint6": 0.0006392540124213815,
+      "gripper_joint1": 0.04995004184293178,
+      "gripper_joint2": -0.050000000000000946
+    },
+    "targets": {
+      "joint1": 3.347284989070418e-05,
+      "joint2": 1.901109831695346,
+      "joint3": -1.0235708821198657,
+      "joint4": -0.0002880705469043803,
+      "joint5": 0.7841835682425333,
+      "joint6": 0.0006392540124213815,
+      "gripper_joint1": 0.05,
+      "gripper_joint2": -0.05
+    },
+    "hold": true,
+    "sim_time": 55.0975,
+    "mode": "Gazebo Harmonic / PID position control",
+    "collision_protection": true,
+    "collision_margin_m": 0.002,
+    "collision_warning": "\u5df2\u505c\u6b62\uff1agripper_link1 \u2194 floor \u63a5\u8fd1\u78b0\u649e",
+    "cube": {
+      "connected": true,
+      "pose": {
+        "position": [
+          0.32000000001943346,
+          -1.7849284780935964e-11,
+          0.0199995616756944
+        ],
+        "quaternion": [
+          4.4635477771387535e-10,
+          4.859658200985588e-10,
+          -3.4133480047238207e-18,
+          1.0
+        ]
+      },
+      "finger_contacts": [],
+      "contacts": [
+        [
+          "red_cube::body::collision",
+          "floor::ground::collision"
+        ]
+      ],
+      "size": [
+        0.04,
+        0.04,
+        0.04
+      ],
+      "mass": 0.02
+    },
+    "grasp": {
+      "active": false,
+      "phase": "\u6293\u53d6\u505c\u6b62\uff1a\u62d2\u7edd\u8fd0\u52a8\uff1agripper_link1 \u2194 floor \u8def\u5f84\u78b0\u649e\u6216\u95f4\u8ddd\u4e0d\u8db3 2 mm",
+      "result": "failed",
+      "last_success": null
+    },
+    "scene": {
+      "cube": {
+        "name": "red_cube",
+        "size": [
+          0.04,
+          0.04,
+          0.04
+        ],
+        "mass": 0.02,
+        "friction": 0.8,
+        "position": [
+          0.32,
+          0,
+          0.02
+        ]
+      },
+      "tcp_in_link6": [
+        0.0,
+        0.0,
+        0.125
+      ],
+      "poses": {
+        "above": [
+          -2.798232798088251e-08,
+          1.7497925284814362,
+          -1.1750770337443186,
+          -6.03749929795502e-08,
+          1.0833473052427096,
+          5.0258297373867443e-08
+        ],
+        "pick": [
+          -3.461244711140314e-08,
+          1.8984242961772042,
+          -1.0247041586660546,
+          -7.551835844231424e-08,
+          0.7843426624921553,
+          6.88060054725439e-08
+        ]
+      },
+      "grip_closed_target": 0.7,
+      "lift_min_m": 0.06,
+      "support_plane_z": 0.0,
+      "mount": {
+        "name": "mount",
+        "size": [
+          0.15,
+          0.23,
+          0.02
+        ],
+        "position": [
+          0,
+          0,
+          0.01
+        ]
+      },
+      "provenance": {
+        "poses": "PiPER-specific numerical IK with official URDF, top-down at same 40mm cube. FCL rate-limited paths checked. TCP and camera mounting are simulation choices."
+      }
+    },
+    "wrist_camera": {
+      "connected": true,
+      "age": 0.12276023701997474,
+      "topic": "/piper/wrist_camera/image",
+      "source": "Gazebo RGB camera sensor",
+      "encoding": "image/jpeg",
+      "frames": 473,
+      "received_frames": 473,
+      "dropped_frames": 0,
+      "max_age": 2.0,
+      "error": null,
+      "width": 640,
+      "height": 480,
+      "step": 1920,
+      "pixel_format": "RGB_INT8",
+      "pixel_format_type": 3,
+      "sim_time": 55.2,
+      "frame_id": 473
+    }
+  }
+}

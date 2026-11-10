@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-26",
+  "passed": true,
+  "removed_groups": [
+    "cables",
+    "calibration",
+    "interface",
+    "power",
+    "support"
+  ],
+  "environment_visuals": 130,
+  "environment_colliders": 4,
+  "wrist_camera_visual_parts": 24,
+  "wrist_camera_collision_boxes": 2,
+  "camera_source": "actual Gazebo camera sensor",
+  "resolution": [
+    640,
+    480
+  ],
+  "simulation_rate_hz": 10,
+  "fresh_frames_before": 1392,
+  "fresh_frames_after": 1500,
+  "jpeg_valid": true,
+  "target_red_pixels": 10131,
+  "view_changes_with_wrist_motion": true,
+  "physical_grasp_cycles": 1,
+  "lift_m": 0.07981311070928394,
+  "both_finger_contacts": true,
+  "placed_height_m": 0.020006183657544755,
+  "mount_and_intrinsics_measured": false,
+  "config_sha256": {
+    "config/environment.json": "13449cb57cf05487c8b750b1da43d62ed4827a5564a23a3731aff35a09e60d06",
+    "config/wrist_camera.json": "60da8193c6c939e7ec28f37e4c186bf7799001eb1354a0f0e34c207183378d7b",
+    "generated/d1t.urdf": "1ae32e0349d88a288208df5ed58720b8c409ca4259af8f2beece30b767d3a1b3"
+  },
+  "ui_checks": {
+    "clean_overview": true,
+    "wrist_closeup": true,
+    "live_rgb_preview": true,
+    "enlarged_rgb_and_return": true
+  }
+}

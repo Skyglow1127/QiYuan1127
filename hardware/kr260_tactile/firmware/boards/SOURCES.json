@@ -1,0 +1,67 @@
+{
+  "repository": "https://github.com/Xilinx/XilinxBoardStore",
+  "ref": "2025.2",
+  "commit": "8770a18adc2c6bb0df0b1ef60fcbbd833e6134c3",
+  "files": [
+    {
+      "path": "boards/Xilinx/kr260_som/1.1/LICENSE",
+      "url": "https://raw.githubusercontent.com/Xilinx/XilinxBoardStore/8770a18adc2c6bb0df0b1ef60fcbbd833e6134c3/boards/Xilinx/kr260_som/1.1/LICENSE",
+      "sha256": "e1aa6325b5df2cd95c0b70194dafe2080c961d52901010b584c6617a0bdd3956"
+    },
+    {
+      "path": "boards/Xilinx/kr260_som/1.1/board.xml",
+      "url": "https://raw.githubusercontent.com/Xilinx/XilinxBoardStore/8770a18adc2c6bb0df0b1ef60fcbbd833e6134c3/boards/Xilinx/kr260_som/1.1/board.xml",
+      "sha256": "049fd8b81eddf0b0bea13b455fd79eb9e6f46a5da60e042c422baaa0a7cbc7ce"
+    },
+    {
+      "path": "boards/Xilinx/kr260_som/1.1/changelog.txt",
+      "url": "https://raw.githubusercontent.com/Xilinx/XilinxBoardStore/8770a18adc2c6bb0df0b1ef60fcbbd833e6134c3/boards/Xilinx/kr260_som/1.1/changelog.txt",
+      "sha256": "885c16b98fdd78efe45d32b312a8b837e1a1d15f095555f4d6cefb1039598ab4"
+    },
+    {
+      "path": "boards/Xilinx/kr260_som/1.1/kr260_board.png",
+      "url": "https://raw.githubusercontent.com/Xilinx/XilinxBoardStore/8770a18adc2c6bb0df0b1ef60fcbbd833e6134c3/boards/Xilinx/kr260_som/1.1/kr260_board.png",
+      "sha256": "5efd5744c31a58322de9ad5491bd454b07756d61cf89d3d386b25828db0b7566"
+    },
+    {
+      "path": "boards/Xilinx/kr260_som/1.1/part0_pins.xml",
+      "url": "https://raw.githubusercontent.com/Xilinx/XilinxBoardStore/8770a18adc2c6bb0df0b1ef60fcbbd833e6134c3/boards/Xilinx/kr260_som/1.1/part0_pins.xml",
+      "sha256": "78880d183c59f9b58b6716cad84d0478a94090c7caa8d7d00f34175dbf380200"
+    },
+    {
+      "path": "boards/Xilinx/kr260_som/1.1/preset.xml",
+      "url": "https://raw.githubusercontent.com/Xilinx/XilinxBoardStore/8770a18adc2c6bb0df0b1ef60fcbbd833e6134c3/boards/Xilinx/kr260_som/1.1/preset.xml",
+      "sha256": "68212ebb4565f678ee0403f6c8e1e14a59f1e7f4467c0c2d1ddc4abd2cec5d31"
+    },
+    {
+      "path": "boards/Xilinx/kr260_som/1.1/xitem.json",
+      "url": "https://raw.githubusercontent.com/Xilinx/XilinxBoardStore/8770a18adc2c6bb0df0b1ef60fcbbd833e6134c3/boards/Xilinx/kr260_som/1.1/xitem.json",
+      "sha256": "2dd3a68b1ff2f61873466e97aff04534a1845a192a1fb6f7b4ffef3d2737435e"
+    },
+    {
+      "path": "boards/Xilinx/kr260_carrier/1.0/LICENSE",
+      "url": "https://raw.githubusercontent.com/Xilinx/XilinxBoardStore/8770a18adc2c6bb0df0b1ef60fcbbd833e6134c3/boards/Xilinx/kr260_carrier/1.0/LICENSE",
+      "sha256": "e1aa6325b5df2cd95c0b70194dafe2080c961d52901010b584c6617a0bdd3956"
+    },
+    {
+      "path": "boards/Xilinx/kr260_carrier/1.0/board.xml",
+      "url": "https://raw.githubusercontent.com/Xilinx/XilinxBoardStore/8770a18adc2c6bb0df0b1ef60fcbbd833e6134c3/boards/Xilinx/kr260_carrier/1.0/board.xml",
+      "sha256": "32afcab5436a6bb8dd86cc4f5d9241da8d6f35188464f85da7e78c2f90524986"
+    },
+    {
+      "path": "boards/Xilinx/kr260_carrier/1.0/changelog.txt",
+      "url": "https://raw.githubusercontent.com/Xilinx/XilinxBoardStore/8770a18adc2c6bb0df0b1ef60fcbbd833e6134c3/boards/Xilinx/kr260_carrier/1.0/changelog.txt",
+      "sha256": "38e0c4a93ee1be7f75540b45f122fc6166254be2c8bf605e2705db230498a769"
+    },
+    {
+      "path": "boards/Xilinx/kr260_carrier/1.0/preset.xml",
+      "url": "https://raw.githubusercontent.com/Xilinx/XilinxBoardStore/8770a18adc2c6bb0df0b1ef60fcbbd833e6134c3/boards/Xilinx/kr260_carrier/1.0/preset.xml",
+      "sha256": "f9d20ea8230a25786c3acfa0a159003eba584d222a7e9051180c9bfc581c5286"
+    },
+    {
+      "path": "boards/Xilinx/kr260_carrier/1.0/xitem.json",
+      "url": "https://raw.githubusercontent.com/Xilinx/XilinxBoardStore/8770a18adc2c6bb0df0b1ef60fcbbd833e6134c3/boards/Xilinx/kr260_carrier/1.0/xitem.json",
+      "sha256": "ec2d0b6ddd0573443c52174d6760fcd598ad41d9aaddf6e93f711ac50e4bbd45"
+    }
+  ]
+}

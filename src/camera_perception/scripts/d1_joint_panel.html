@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>D1 实时关节反馈</title>
+<style>
+*{box-sizing:border-box}body{display:flow-root;margin:0;background:#1c2838;color:#e8eef6;font:15px system-ui}
+.summary{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 14px}.badge{color:#a7bacd}.badge.live{color:#65dfae}.badge.offline{color:#ffc876}.meta{color:#a7bacd;font-size:13px}
+.joints{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:12px}.joint{border:1px solid #35465d;border-radius:10px;padding:14px 12px;background:#152131}.name{display:flex;gap:7px;align-items:baseline;font-weight:650}.name span{color:#a7bacd;font-size:12px;font-weight:400}.angle{margin-top:9px;font-size:28px;font-variant-numeric:tabular-nums;font-weight:650;white-space:nowrap}.unit{font-size:15px;color:#a7bacd;margin-left:3px}.muted .angle{color:#a7bacd}.details{margin:12px 0 0;color:#a7bacd;font-size:13px;line-height:1.6}
+@media(max-width:850px){.joints{grid-template-columns:repeat(4,minmax(0,1fr))}}@media(max-width:480px){.joints{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+<div class="summary"><span id="connection" class="badge" role="status">● 正在连接反馈</span><span id="sample" class="meta">等待新数据</span></div>
+<div id="joints" class="joints muted"></div>
+<p id="details" class="details">显示机械臂位置反馈；硬件供电、位置保持未确认。J6 为夹爪原始位置反馈。</p>
+<script>
+const grid=document.getElementById('joints'),connection=document.getElementById('connection'),sample=document.getElementById('sample'),details=document.getElementById('details');
+for(let i=0;i<7;i++){const card=document.createElement('div');card.className='joint';card.innerHTML=`<div class="name">J${i}${i===6?'<span>夹爪</span>':''}</div><div class="angle"><span id="q${i}">—</span><span id="u${i}" class="unit"></span></div>`;grid.appendChild(card);}
+const parentOrigin=new URL(document.referrer||'http://127.0.0.1:18761/').origin;
+function notify(){if(parent!==window)parent.postMessage({type:'joint-preview-height',height:Math.ceil(document.body.getBoundingClientRect().height)},parentOrigin);}
+new ResizeObserver(notify).observe(document.body);
+let lastSuccess=0,lastFreshAge=Infinity;
+function offline(message){connection.textContent='● '+message;connection.className='badge offline';grid.classList.add('muted');for(let i=0;i<7;i++){document.getElementById('q'+i).textContent='—';document.getElementById('u'+i).textContent='';}}
+function protocolFlag(value){return value===true?'1':value===false?'0':typeof value==='number'&&Number.isFinite(value)?String(value):'未知';}
+async function update(){try{
+ const r=await fetch('/status',{cache:'no-store',signal:AbortSignal.timeout(1200)});if(!r.ok)throw Error('反馈服务不可用');const s=await r.json();
+ const joints=Array.isArray(s.joints)?s.joints:[];
+ const valid=joints.length===7&&joints.every((j,i)=>j.id==='J'+i&&typeof j.position==='number'&&Number.isFinite(j.position));
+ lastSuccess=performance.now();lastFreshAge=typeof s.age_ms==='number'?s.age_ms:Infinity;
+ if(!s.fresh||!valid||lastFreshAge>1000){offline('反馈已过期 / 未连接');sample.textContent=Number.isFinite(lastFreshAge)?`距上次反馈 ${(lastFreshAge/1000).toFixed(1)} 秒`:'等待机械臂反馈';details.textContent='无新鲜反馈时不显示旧角度。';return;}
+ grid.classList.remove('muted');connection.textContent='● 实时反馈';connection.className='badge live';
+ for(let i=0;i<7;i++){const j=joints[i];document.getElementById('q'+i).textContent=(Math.abs(j.position)<0.05?0:j.position).toFixed(1);document.getElementById('u'+i).textContent=j.unit==='deg'?'°':j.unit==='mm'?'mm':'原始值';}
+ const stamp=typeof s.received_at_unix_ms==='number'?new Date(s.received_at_unix_ms).toLocaleTimeString('zh-CN',{hour12:false}):'—';
+ sample.textContent=`反馈时间 ${stamp} · 数据龄 ${Math.round(s.age_ms)} ms · 页面每秒刷新 5 次`;
+ details.textContent=`协议电源标志：${protocolFlag(s.power)} · 协议使能标志：${protocolFlag(s.enabled)} · 协议故障标志：${protocolFlag(s.fault)} · 硬件供电未确认 · 位置保持未确认。上述为通信层软件标志，不代表供电或保持扭矩已确认；J6 为夹爪原始位置反馈。`;
+ }catch(e){offline('反馈服务未连接');sample.textContent='正在自动重连';details.textContent='等待只读反馈服务恢复。';}
+ finally{notify();setTimeout(update,200);}}
+setInterval(()=>{if(performance.now()-lastSuccess+lastFreshAge>1500){offline('反馈已过期 / 未连接');}},250);
+update();
+</script></html>

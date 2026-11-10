@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "release_tag": "workspace-artifacts-20261111",
+  "models": [
+    {
+      "id": "pi05_lora_020000",
+      "description": "PiPER pi0.5 LoRA 020000 adapter and processors. Requires the separately acquired pi05_base and PaliGemma tokenizer.",
+      "archive": "pi05_lora_020000.zip",
+      "bytes": 5050234,
+      "sha256": "e24bd36f409b4ceb25064298f0ef24879978f8c4f5fb59bd18775058c49f8c77",
+      "download_url": "https://github.com/Skyglow1127/QiYuan1127/releases/download/workspace-artifacts-20261111/pi05_lora_020000.zip",
+      "files": {
+        "config.json": {
+          "bytes": 2415,
+          "sha256": "2462c88e96623bd94df2225c02ed62f01ea67b55dd449d915bf18a09545d0637"
+        },
+        "policy_preprocessor.json": {
+          "bytes": 1956,
+          "sha256": "d1868a2a48a17e236355fa421ee462d2996cb331dbb7ea1311d0dd58ce1b66e6"
+        },
+        "policy_postprocessor.json": {
+          "bytes": 779,
+          "sha256": "e6e0c0371c2ea20b0a2f99feab26cea73a7d8994eccc4446c038958f285d68ff"
+        },
+        "policy_preprocessor_step_3_normalizer_processor.safetensors": {
+          "bytes": 7640,
+          "sha256": "63284104b3136d2b2673bdb7bf5f85e7f82207f56c2d98057f951ec8d47fd3ab"
+        },
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": {
+          "bytes": 7632,
+          "sha256": "9ddc01fd36829854a820b50e63bc4b9abddce2e5f59b51baac98739526a843dd"
+        },
+        "adapter_config.json": {
+          "bytes": 1297,
+          "sha256": "62eb80f2abaf480890b05cdeaea11bca563a01523354d4dfcee99d0b1b73414f"
+        },
+        "adapter_model.safetensors": {
+          "bytes": 5424240,
+          "sha256": "8e064a68c5991f1b1321e726d901968c516ec728971aa4b9eb1fc6d4213f14a1"
+        }
+      }
+    },
+    {
+      "id": "act_round2_010000",
+      "description": "ACT second-round 10000-step checkpoint initialized from the original 020000 model. Historical experiment; not a replacement for the original deployment baseline.",
+      "archive": "act_round2_010000.zip",
+      "bytes": 191759392,
+      "sha256": "786092002f9d9d4e3274c00597a5a0f059f7e8a1bb61ffde320066d0327ae454",
+      "download_url": "https://github.com/Skyglow1127/QiYuan1127/releases/download/workspace-artifacts-20261111/act_round2_010000.zip",
+      "files": {
+        "config.json": {
+          "bytes": 1799,
+          "sha256": "9ed00af3ef31e5ca2f1ec441cd1fda8de5fa87a2ded6c4e26a72d2ca40f5ded6"
+        },
+        "policy_preprocessor.json": {
+          "bytes": 1329,
+          "sha256": "a265568640237bfa353b725e1275bfe708c73e57fd7f9fd8f624e165e608369a"
+        },
+        "policy_postprocessor.json": {
+          "bytes": 660,
+          "sha256": "c27cf6f42b42352f9b8f9c40da155fd4459e0ee9b85b9f23072941eb52b3ffb5"
+        },
+        "policy_preprocessor_step_3_normalizer_processor.safetensors": {
+          "bytes": 7640,
+          "sha256": "63284104b3136d2b2673bdb7bf5f85e7f82207f56c2d98057f951ec8d47fd3ab"
+        },
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": {
+          "bytes": 7632,
+          "sha256": "9ddc01fd36829854a820b50e63bc4b9abddce2e5f59b51baac98739526a843dd"
+        },
+        "model.safetensors": {
+          "bytes": 206707932,
+          "sha256": "2062da502e72ef4351a079e7e542d3390f1d21751c36a3a50465a8a77eb7243c"
+        }
+      }
+    },
+    {
+      "id": "aic_prediction_models",
+      "description": "AIC prediction models corresponding to related_projects/aic_driving; overlay extracted files into that directory. Simulation research checkpoints, not a road-driving system.",
+      "archive": "aic_prediction_models.zip",
+      "bytes": 249019,
+      "sha256": "6467145367900a48163fd37efce7022fb295f0a909418646e49b57156b57e6b8",
+      "download_url": "https://github.com/Skyglow1127/QiYuan1127/releases/download/workspace-artifacts-20261111/aic_prediction_models.zip",
+      "files": {
+        "models/pilot_v1/model.pt": {
+          "bytes": 59389,
+          "sha256": "252c01f2722179bbd9d1a0397caae12035a6eef3b7dbcbb1d2568e3f723bf4f9"
+        },
+        "runs/model_optimization_v4/models/model.pt": {
+          "bytes": 196781,
+          "sha256": "fb9b0ca7ded77bbac52ad5957c023d8a6aa28380f2942bfc1e4c2976b7a6fdb1"
+        },
+        "runs/model_optimization_v4/models/v1_retrained/model.pt": {
+          "bytes": 37845,
+          "sha256": "326acb4a491568bf07a39cfa73a45920d6bae73a63f6b658b2d338f1d4a5e96c"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-26",
+  "passed": true,
+  "visual_primitives": 248,
+  "static_collision_envelopes": 10,
+  "gazebo_model_present": true,
+  "sdf_fcl_obstacle_alignment": true,
+  "tabletop_z_m": 0,
+  "joint_feedback_online": true,
+  "cube_feedback_online": true,
+  "grasp_cycles_passed": 2,
+  "grasp_lifts_m": [
+    0.08049135453155484,
+    0.07980955455014652
+  ],
+  "dimensions_measured": false,
+  "source_manifest": "config/environment.json",
+  "physical_grasp_report": "grasp-verification.json",
+  "final_configuration_sha256": {
+    "config/environment.json": "69def1c81fa49370607410e15e1e0293a8cdad7c8f5583c0392aef227c3e94aa",
+    "worlds/lab.sdf": "277eb4b10f52ce75b86e2cad9c2db4ca371301d72ad3c684e1c880270c9dde1f",
+    "generated/d1t.urdf": "d854b57850504e99fea6c91534191640ece28e206cb57adab0affeb1a21ace13",
+    "models/photo_workspace/model.sdf": "d42861e0059574dda45c5a85ae1bf0722c331615d78d77282298ea0a5404ce36"
+  },
+  "final_visual_adjustment": "Dark robot material and front-left full-scene camera; physics geometry and control parameters unchanged after two passing cycles."
+}

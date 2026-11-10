@@ -1,0 +1,19 @@
+{
+  "status": "PASSED",
+  "separate_process_reload": true,
+  "max_absolute_errors": {
+    "normalized": 0.0,
+    "decoded": 0.0
+  },
+  "state_roundtrip_passed": true,
+  "inference_s": 1.7488986880052835,
+  "output_shape": [
+    1,
+    10,
+    7
+  ],
+  "robot_commands_sent": 0,
+  "npu_used": false,
+  "checkpoint_sha256": "2fa5f1095c33a6ee259cf878802d2b13403edfa1e9d31f23dfc0173e69ebf421",
+  "peak_rss_mib": 2789.8984375
+}

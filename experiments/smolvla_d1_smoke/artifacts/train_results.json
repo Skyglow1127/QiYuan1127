@@ -1,0 +1,72 @@
+{
+  "status": "TRAIN_SAVE_PASSED_RELOAD_PENDING",
+  "scope": "offline_software_and_short_lift_training_only",
+  "robot_commands_sent": 0,
+  "camera_accessed": false,
+  "npu_used": false,
+  "device": "cpu",
+  "cpu_threads": 4,
+  "versions": {
+    "lerobot": "0.6.1",
+    "torch": "2.8.0+cpu",
+    "torchvision": "0.23.0+cpu",
+    "transformers": "5.5.4",
+    "huggingface-hub": "1.33.0"
+  },
+  "load_s": 10.46775926000555,
+  "total_parameters": 450046176,
+  "trainable_parameters": 99880992,
+  "chunk_size": 10,
+  "action_dimensions": 7,
+  "sampling_steps": 2,
+  "pretrained_default_sampling_steps": 10,
+  "input_sample_ids": [
+    "cycle_execution_v4/00_lift:0",
+    "cycle_execution_v4/00_lift:262",
+    "cycle_execution_v4/00_lift:524",
+    "cycle_execution_v4/00_lift:784",
+    "first_grasp_execution_20261022/01_lift:0",
+    "first_grasp_execution_20261022/01_lift:224"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "sample_id": "cycle_execution_v4/00_lift:0",
+      "loss": 2.6479129791259766,
+      "grad_norm_before_clip": 51.45395278930664,
+      "seconds": 2.0492077200033236
+    },
+    {
+      "step": 2,
+      "sample_id": "cycle_execution_v4/00_lift:262",
+      "loss": 1.8672516345977783,
+      "grad_norm_before_clip": 43.90827560424805,
+      "seconds": 1.8499025620112661
+    },
+    {
+      "step": 3,
+      "sample_id": "cycle_execution_v4/00_lift:524",
+      "loss": 0.6656779646873474,
+      "grad_norm_before_clip": 20.004262924194336,
+      "seconds": 1.9175812560133636
+    }
+  ],
+  "complete_grasp_training": false,
+  "claim_limit": "No physical grasp, language grounding, generalization, or NPU performance claim.",
+  "initial_inference_s": 1.7423674710153136,
+  "output_shape": [
+    1,
+    10,
+    7
+  ],
+  "fixed_input_loss_before": 2.6479129791259766,
+  "action_head_max_parameter_change": 0.0003000496653839946,
+  "fixed_input_loss_after": 1.8358612060546875,
+  "one_validation_window_loss": 4.530264854431152,
+  "post_training_inference_s": 1.509615773014957,
+  "checkpoint": "/home/aup/模型库/策略模型/SmolVLA/d1_lift_smoke_20261025",
+  "checkpoint_sha256": "2fa5f1095c33a6ee259cf878802d2b13403edfa1e9d31f23dfc0173e69ebf421",
+  "peak_rss_mib": 2699.51171875,
+  "action_roundtrip_passed": true,
+  "report_correction": "Initial field name overstated state checking; this run checked action roundtrip. State roundtrip was independently verified in reload_results.json."
+}

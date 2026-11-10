@@ -1,0 +1,62 @@
+{
+  "cube": {
+    "name": "red_cube",
+    "size": [
+      0.04,
+      0.04,
+      0.04
+    ],
+    "mass": 0.02,
+    "friction": 0.8,
+    "position": [
+      0.32,
+      0,
+      0.02
+    ]
+  },
+  "tcp_in_link6": [
+    0.0,
+    0.0,
+    0.132
+  ],
+  "poses": {
+    "above": [
+      -2.7402078703776857e-08,
+      1.7405024971168332,
+      -1.192348522612813,
+      -5.9557489551904085e-08,
+      1.1099088254959053,
+      4.904828430793585e-08
+    ],
+    "pick": [
+      -3.403244180682942e-08,
+      1.8824400339802119,
+      -1.0343758321684342,
+      -7.364926978974052e-08,
+      0.8099985981882164,
+      6.671126480722094e-08
+    ]
+  },
+  "grip_closed_target": 0.7,
+  "lift_min_m": 0.06,
+  "support_plane_z": 0.0,
+  "mount": {
+    "name": "mount",
+    "size": [
+      0.15,
+      0.23,
+      0.02
+    ],
+    "position": [
+      0,
+      0,
+      0.01
+    ]
+  },
+  "provenance": {
+    "poses": "PiPER-specific numerical IK with official URDF, top-down at same 40mm cube. FCL rate-limited paths checked. TCP and camera mounting are simulation choices.",
+    "clearance": "Nominal finger bottom 9.5 mm above table at pick; accommodates measured servo tracking error while retaining 2 mm FCL protection."
+  },
+  "place_xy_tolerance_m": 0.05,
+  "place_z_tolerance_m": 0.003
+}

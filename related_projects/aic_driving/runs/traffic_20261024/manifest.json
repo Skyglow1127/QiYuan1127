@@ -1,0 +1,75 @@
+{
+  "role": "new-domain validation only; no tuning on results",
+  "actors": 4,
+  "actor_model": "highway-env IDM/MOBIL, forward-only speed clamp, maximum |acceleration|6m/s²",
+  "planned_episodes": 96,
+  "delays": [
+    0.2,
+    0.4
+  ],
+  "modes": [
+    "fixed",
+    "bursty"
+  ],
+  "seeds": [
+    1210000,
+    1210001,
+    1210002,
+    1210003,
+    1210004,
+    1210005,
+    1210006,
+    1210007
+  ],
+  "methods": [
+    "ca_adaptive",
+    "ca_recovery",
+    "ml_recovery"
+  ],
+  "duration": 30,
+  "model": "release_v1/model/model.pt unchanged",
+  "provenance": {
+    "source_sha256": "e69f92f2a2639830b39284c38456611414509bb9dd165dad8779ab621d24e45f",
+    "files": {
+      "src/aic_drive/__init__.py": "220b1782187a5e8795584851316c2f71df4a479df19086bdffbc178cbc68661e",
+      "src/aic_drive/control.py": "7f50c2ffc1d1de9da47ba122789643003a4dd1d84b0ad8e5e1ac2fbb9eb36313",
+      "src/aic_drive/learning.py": "8eaa420681159db779a804b0e90a8910e6a190cb038303bf651905a4d5609750",
+      "src/aic_drive/prediction.py": "87e59c7b1f6b04f51613ee558dabaa47d0952d2e871a5c9b8118c6c5e7384429",
+      "src/aic_drive/runner.py": "0108d551d08d6f84cc77216e85103af596544030ebf135d443aa14f2a70aa76d",
+      "src/aic_drive/scenarios.py": "aeb783134e24e1d477eb0102298d4ab9aa984baaca313aebb46c80f760de3dc5",
+      "src/aic_drive/sensors.py": "59ccf1bcce36ebca55f26908a500c764849c615e6e9117517623a4ccbd8b1963",
+      "src/aic_drive/types.py": "310bdfff90f5d811a70f0e4c11e664a65bdac1cc4f3d9c1dec7447f139934cf3",
+      "src/aic_drive/visualization.py": "f1a3d30d65f60063f70dfa6a19ac0de0a0d35b462841070cc3ba39439aa8c8a1",
+      "scripts/calibrate.py": "a0d4a4525522d379f919253d9b7ea690036ea9038a3af50296175a1ce7a56cc9",
+      "scripts/collect_data.py": "ab1e36486a18225d3b7298c58c58390ab07f21c4157b863b2018f535d830bc12",
+      "scripts/compare_methods.py": "56531b3ab16381a8ff4b1bda0497547e8e103e147f2e16e674908072481ae20d",
+      "scripts/evaluate.py": "0ac328edf6ac7c7161ac556b96ea56cca3f32788e95d9f96dc4d00e6ac2445cd",
+      "scripts/make_report.py": "1cd8e15adb19f6017774e40ea8320c1d4af13f9db938c211cdecce7bff139267",
+      "scripts/prediction_report.py": "5a6445eb18503ce1d5c69146043d3836cfe856136939cb056340b492530bd19d",
+      "scripts/reproduce.py": "8804e6676f02e52605cef069dc44205c92658abdeb6cff6e469c4e6d7c1d8c7e",
+      "scripts/revision_report.py": "097eaa3c37f6ce58a1e7a16ebb6a020b39426a8afad1c37bd4f0b721adfac53f",
+      "scripts/run_demo.py": "832c37fe1a235649aba5f9aa0f2bb54cabd7bc87e40908becb8412d3efb9be66",
+      "scripts/run_revision_v2.py": "81897c6eaa34444a793f95a7314d46d0f2a1ec1cce7acdc875f63c793c2a2309",
+      "scripts/run_revision_v3.py": "e0c27a7151d4cbae83bdc392aeaee4d19775fd8dfa60511a740c925be456e727",
+      "scripts/train_predictor.py": "6c3fb0368b941a51cae760993be6d0d1eb159a51b3dd08813a02c313fa75d808",
+      "scripts/validate_traffic.py": "86efeda59357cfe1d98bff4231eed38e7ed1c8392bf350ce9f0b399bd902a059",
+      "configs/release_contract.json": "310ea032041d3cc497b63a7af99dad4f86af180612aae4d6d524370547163c99",
+      "pyproject.toml": "40080871f348b4289fee0447a07e83c4f7c45310bf44b4584d7f158045054de3",
+      "requirements.lock": "b1c432bf076b1714c22a322c6c2256701edf4bba53b3d5adc7c63c8336608ffe",
+      "requirements-torch.lock": "65299ae51bcfa88acc5fa33429d7b431d75dd3dd295b10da70d17ca5186cea87"
+    },
+    "packages": {
+      "highway-env": "1.12.1",
+      "gymnasium": "1.4.0",
+      "numpy": "2.5.4",
+      "torch": "2.14.1+cpu",
+      "matplotlib": "3.11.2"
+    },
+    "python": "3.12.3",
+    "cpu_model": "AMD Ryzen AI 9 HX 370 w/ Radeon 890M",
+    "logical_cpu_count": 24,
+    "device": "cpu",
+    "platform": "Linux-6.14.0-27-generic-x86_64-with-glibc2.39",
+    "created_at": "2026-10-24T23:22:56.210796+08:00"
+  }
+}

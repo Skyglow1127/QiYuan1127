@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "official_inertial_links_unchanged": [
+    "base_link",
+    "link1",
+    "link2",
+    "link3",
+    "link4",
+    "link5",
+    "link6",
+    "flange_link",
+    "gripper_base",
+    "gripper_link1",
+    "gripper_link2"
+  ],
+  "environment_matches_d1t_bytes": true,
+  "environment_sha256": "92a56c450c4d2c5544d63ff8a8c12495f0beabecbaf31a4a5279621faa8879f3",
+  "source_commit": "680fa925cd00db7e2628563d2edc5540963045de"
+}

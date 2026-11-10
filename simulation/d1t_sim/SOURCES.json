@@ -1,0 +1,75 @@
+{
+  "retrieved_at": "2026-10-15 Asia/Singapore",
+  "product": "https://www.unitree.com/cn/mobile/D1-T/",
+  "developer_document": "https://support.unitree.com/home/en/developer/D1Arm_services",
+  "model_download": "https://oss-global-cdn.unitree.com/static/90b2525be5d84531ab9814f48b2f86a7.zip",
+  "chosen_variant": "D1 gripper version, used as the D1-T execution/follower arm",
+  "not_used": "D1-550 separate 2025 model archive; D1-T leader arm",
+  "gazebo_controller": "https://gazebosim.org/api/sim/8/classgz_1_1sim_1_1systems_1_1JointPositionController.html",
+  "retained": [
+    "STL geometry",
+    "joint origins",
+    "joint axes",
+    "position limits",
+    "masses",
+    "centers of mass",
+    "full inertia tensors"
+  ],
+  "simulation_additions": [
+    "world mount",
+    "PID gains",
+    "nonzero effort and velocity limits",
+    "damping",
+    "ROS-Gazebo bridge",
+    "paired finger commands",
+    "browser display and control"
+  ],
+  "mass_discrepancy_kg": {
+    "urdf_total": 0.719136,
+    "product_page": 2.37
+  },
+  "known_limitations": [
+    "not a calibrated dynamics model",
+    "software renderer uses display-only mesh decimation",
+    "contact grasp verified only for the configured 40 mm / 20 g cube; no real payload qualification or arbitrary-object planning"
+  ],
+  "collision_fix": {
+    "self_collision": true,
+    "detector": "DART FCL",
+    "step_s": 0.0005,
+    "control_margin_m": 0.002,
+    "path_check": "sampled rate-limited trajectory, not continuous collision proof",
+    "environment": "floor, 150x230x20 mm mounting block and observed red cube; fixed base-mount contact excluded; finger-payload contact allowed"
+  },
+  "red_cube": {
+    "added_at": "2026-10-17 Asia/Singapore",
+    "size_m": [
+      0.04,
+      0.04,
+      0.04
+    ],
+    "mass_kg": 0.02,
+    "mass_source": "assumed test payload",
+    "friction": 0.8,
+    "inertia_kg_m2": [
+      5.3333333333333345e-06,
+      5.3333333333333345e-06,
+      5.3333333333333345e-06
+    ],
+    "pose_feedback": "https://gazebosim.org/api/sim/8/classgz_1_1sim_1_1systems_1_1PosePublisher.html",
+    "contact_sensor": "https://gazebosim.org/docs/harmonic/sensors/",
+    "grasp_method": "physical contact and friction, no attachment joint",
+    "finger_mapping_correction": "closure 0 maps to +0.03 / -0.03 m, closure 1 maps to 0 / 0 m",
+    "ground_alignment": {
+      "support_plane_z_m": 0.0,
+      "cube_center_z_m": 0.02,
+      "arm_mount_z_m": 0.02,
+      "mount_size_m": [
+        0.15,
+        0.23,
+        0.02
+      ],
+      "cube_pedestal_removed": true
+    }
+  }
+}

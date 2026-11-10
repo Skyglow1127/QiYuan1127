@@ -1,0 +1,7 @@
+# Treat generated CAD and numeric arrays as binary artifacts for review.
+*.stl -text -diff
+*.STL -text -diff
+*.step -text -diff
+*.STEP -text -diff
+*.npy -text -diff
+*.npz -text -diff

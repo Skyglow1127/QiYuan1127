@@ -1,0 +1,318 @@
+{
+  "updated_utc": "2026-10-24T17:52:51.992796+00:00",
+  "status": "REAL_DATA_PATH_PASS_DO2_SUSTAINED_RESPONSE_NOT_CONFIRMED",
+  "session_id": "20261024T173637_223125Z_ssh",
+  "csv_path": "/media/aup/UbuntuData/抓取实验/压力测试程序/records/20261024T173637_223125Z_ssh.csv",
+  "snapshot_csv_path": "/media/aup/UbuntuData/抓取实验/压力测试程序/records/实测曲线数据快照.csv",
+  "snapshot_sha256": "e1dd408fdfa666e9b837a107faeb94cd47215493c432c7bc88e349d805fd3780",
+  "valid_samples": 97319,
+  "duration_s": 973.180070641,
+  "observed_hz": 99.99999274122003,
+  "requested_hz": 100,
+  "source": "real",
+  "simulated_samples": 0,
+  "chip": "/dev/gpiochip3",
+  "offsets": [
+    0,
+    1
+  ],
+  "unique_levels": {
+    "do1": [
+      0,
+      1
+    ],
+    "do2": [
+      0,
+      1
+    ]
+  },
+  "transitions": {
+    "do1": 20,
+    "do2": 2
+  },
+  "channels": {
+    "do1": {
+      "unique_levels": [
+        0,
+        1
+      ],
+      "transitions": 20,
+      "edges": [
+        {
+          "channel": "do1",
+          "t_s": 359.6601153669999,
+          "wall_time": "2026-10-24T17:42:37.649690+00:00",
+          "from_level": 1,
+          "to_level": 0,
+          "gap": 0
+        },
+        {
+          "channel": "do1",
+          "t_s": 359.67011403900005,
+          "wall_time": "2026-10-24T17:42:37.659688+00:00",
+          "from_level": 0,
+          "to_level": 1,
+          "gap": 0
+        },
+        {
+          "channel": "do1",
+          "t_s": 359.68011266200006,
+          "wall_time": "2026-10-24T17:42:37.669687+00:00",
+          "from_level": 1,
+          "to_level": 0,
+          "gap": 0
+        },
+        {
+          "channel": "do1",
+          "t_s": 361.240116126,
+          "wall_time": "2026-10-24T17:42:39.229690+00:00",
+          "from_level": 0,
+          "to_level": 1,
+          "gap": 0
+        },
+        {
+          "channel": "do1",
+          "t_s": 374.68011339199984,
+          "wall_time": "2026-10-24T17:42:52.669687+00:00",
+          "from_level": 1,
+          "to_level": 0,
+          "gap": 0
+        },
+        {
+          "channel": "do1",
+          "t_s": 376.1402533149999,
+          "wall_time": "2026-10-24T17:42:54.129838+00:00",
+          "from_level": 0,
+          "to_level": 1,
+          "gap": 0
+        },
+        {
+          "channel": "do1",
+          "t_s": 376.8901168079999,
+          "wall_time": "2026-10-24T17:42:54.879691+00:00",
+          "from_level": 1,
+          "to_level": 0,
+          "gap": 0
+        },
+        {
+          "channel": "do1",
+          "t_s": 378.48011398899985,
+          "wall_time": "2026-10-24T17:42:56.469688+00:00",
+          "from_level": 0,
+          "to_level": 1,
+          "gap": 0
+        },
+        {
+          "channel": "do1",
+          "t_s": 379.12011646999986,
+          "wall_time": "2026-10-24T17:42:57.109691+00:00",
+          "from_level": 1,
+          "to_level": 0,
+          "gap": 0
+        },
+        {
+          "channel": "do1",
+          "t_s": 380.500114746,
+          "wall_time": "2026-10-24T17:42:58.489689+00:00",
+          "from_level": 0,
+          "to_level": 1,
+          "gap": 0
+        },
+        {
+          "channel": "do1",
+          "t_s": 868.3101155299998,
+          "wall_time": "2026-10-24T17:51:06.299690+00:00",
+          "from_level": 1,
+          "to_level": 0,
+          "gap": 0
+        },
+        {
+          "channel": "do1",
+          "t_s": 869.9601145019999,
+          "wall_time": "2026-10-24T17:51:07.949689+00:00",
+          "from_level": 0,
+          "to_level": 1,
+          "gap": 0
+        },
+        {
+          "channel": "do1",
+          "t_s": 872.3801143199998,
+          "wall_time": "2026-10-24T17:51:10.369688+00:00",
+          "from_level": 1,
+          "to_level": 0,
+          "gap": 0
+        },
+        {
+          "channel": "do1",
+          "t_s": 873.200115069,
+          "wall_time": "2026-10-24T17:51:11.189689+00:00",
+          "from_level": 0,
+          "to_level": 1,
+          "gap": 0
+        },
+        {
+          "channel": "do1",
+          "t_s": 875.5001140489999,
+          "wall_time": "2026-10-24T17:51:13.489688+00:00",
+          "from_level": 1,
+          "to_level": 0,
+          "gap": 0
+        },
+        {
+          "channel": "do1",
+          "t_s": 876.5001136429998,
+          "wall_time": "2026-10-24T17:51:14.489688+00:00",
+          "from_level": 0,
+          "to_level": 1,
+          "gap": 0
+        },
+        {
+          "channel": "do1",
+          "t_s": 878.0501169429999,
+          "wall_time": "2026-10-24T17:51:16.039691+00:00",
+          "from_level": 1,
+          "to_level": 0,
+          "gap": 0
+        },
+        {
+          "channel": "do1",
+          "t_s": 878.8401179709999,
+          "wall_time": "2026-10-24T17:51:16.829692+00:00",
+          "from_level": 0,
+          "to_level": 1,
+          "gap": 0
+        },
+        {
+          "channel": "do1",
+          "t_s": 880.6201162,
+          "wall_time": "2026-10-24T17:51:18.609690+00:00",
+          "from_level": 1,
+          "to_level": 0,
+          "gap": 0
+        },
+        {
+          "channel": "do1",
+          "t_s": 881.920115676,
+          "wall_time": "2026-10-24T17:51:19.909690+00:00",
+          "from_level": 0,
+          "to_level": 1,
+          "gap": 0
+        }
+      ],
+      "complete_low_intervals": [
+        {
+          "start_s": 359.6601153669999,
+          "end_s": 359.67011403900005,
+          "duration_s": 0.009998672000165243,
+          "contains_gap": false
+        },
+        {
+          "start_s": 359.68011266200006,
+          "end_s": 361.240116126,
+          "duration_s": 1.5600034639999194,
+          "contains_gap": false
+        },
+        {
+          "start_s": 374.68011339199984,
+          "end_s": 376.1402533149999,
+          "duration_s": 1.4601399230000425,
+          "contains_gap": false
+        },
+        {
+          "start_s": 376.8901168079999,
+          "end_s": 378.48011398899985,
+          "duration_s": 1.5899971809999442,
+          "contains_gap": false
+        },
+        {
+          "start_s": 379.12011646999986,
+          "end_s": 380.500114746,
+          "duration_s": 1.3799982760001512,
+          "contains_gap": false
+        },
+        {
+          "start_s": 868.3101155299998,
+          "end_s": 869.9601145019999,
+          "duration_s": 1.6499989720000485,
+          "contains_gap": false
+        },
+        {
+          "start_s": 872.3801143199998,
+          "end_s": 873.200115069,
+          "duration_s": 0.8200007490002008,
+          "contains_gap": false
+        },
+        {
+          "start_s": 875.5001140489999,
+          "end_s": 876.5001136429998,
+          "duration_s": 0.9999995939999735,
+          "contains_gap": false
+        },
+        {
+          "start_s": 878.0501169429999,
+          "end_s": 878.8401179709999,
+          "duration_s": 0.790001028000006,
+          "contains_gap": false
+        },
+        {
+          "start_s": 880.6201162,
+          "end_s": 881.920115676,
+          "duration_s": 1.299999476000039,
+          "contains_gap": false
+        }
+      ],
+      "sustained_low_intervals_ge_1s": 6
+    },
+    "do2": {
+      "unique_levels": [
+        0,
+        1
+      ],
+      "transitions": 2,
+      "edges": [
+        {
+          "channel": "do2",
+          "t_s": 366.04011358799994,
+          "wall_time": "2026-10-24T17:42:44.029688+00:00",
+          "from_level": 1,
+          "to_level": 0,
+          "gap": 0
+        },
+        {
+          "channel": "do2",
+          "t_s": 366.07011297500003,
+          "wall_time": "2026-10-24T17:42:44.059687+00:00",
+          "from_level": 0,
+          "to_level": 1,
+          "gap": 0
+        }
+      ],
+      "complete_low_intervals": [
+        {
+          "start_s": 366.04011358799994,
+          "end_s": 366.07011297500003,
+          "duration_s": 0.029999387000088973,
+          "contains_gap": false
+        }
+      ],
+      "sustained_low_intervals_ge_1s": 0
+    }
+  },
+  "gap_count": 0,
+  "host_error": "",
+  "press_test": {
+    "user_confirmation_received": true,
+    "do2_retest_confirmation_received": true,
+    "both_channels_changed": true,
+    "dynamic_response_verified": false,
+    "retest_after_t_s": 613.280113034,
+    "retest_raw_edges": {
+      "do1": 10,
+      "do2": 0
+    },
+    "status": "DO2_RETEST_COMPLETED_BUT_SUSTAINED_RESPONSE_NOT_OBSERVED"
+  },
+  "continuing_acquisition": true,
+  "firmware_revision": "r2_aux_reset_and_afi_20261025",
+  "note": "实测采集、SSH传输、CSV记录与曲线接口已跑通。原始边沿未去抖，不等于按压次数；持续响应按完整低电平段统计。四线DO不提供连续压力幅值。 用户确认DO2单独复测完成，记录新增变化仅在DO1，实物传感器与通道标签对应关系需进一步核对。"
+}

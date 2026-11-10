@@ -1,0 +1,515 @@
+{
+  "date": "2026-10-20",
+  "tool": "Vivado/XSim 2025.2",
+  "part": "xck26-sfvc784-2LV-c",
+  "tests": [
+    {
+      "test": "divider",
+      "status": "PASS",
+      "evidence": "build/divider/simulate.log",
+      "message": "PASS divider 506 cases including rounding and divide_by_zero"
+    },
+    {
+      "test": "faults",
+      "status": "PASS",
+      "evidence": "build/faults/simulate.log",
+      "message": "PASS faults premature, duplicate, reverse, overrun, busy, reset_recovery"
+    },
+    {
+      "test": "small",
+      "status": "PASS",
+      "evidence": "build/small/simulate.log",
+      "message": "PASS replay stride=1 log2=7 events=1200 checks=819"
+    },
+    {
+      "test": "stride1",
+      "status": "PASS",
+      "evidence": "build/stride1/simulate.log",
+      "message": "PASS replay stride=1 log2=15 events=1098240 checks=561"
+    },
+    {
+      "test": "stride64",
+      "status": "PASS",
+      "evidence": "build/stride64/simulate.log",
+      "message": "PASS replay stride=64 log2=15 events=1098240 checks=561"
+    },
+    {
+      "test": "extended1",
+      "status": "PASS",
+      "evidence": "build/extended1/simulate.log",
+      "message": "PASS replay stride=1 log2=15 events=1180160 checks=164"
+    },
+    {
+      "test": "extended64",
+      "status": "PASS",
+      "evidence": "build/extended64/simulate.log",
+      "message": "PASS replay stride=64 log2=15 events=1180160 checks=164"
+    },
+    {
+      "test": "e2e_small",
+      "status": "PASS",
+      "evidence": "build/e2e_small/simulate.log",
+      "message": "PASS end_to_end frequency=70000.000000000 stride=1 events=561 outputs=16"
+    },
+    {
+      "test": "e2e_full",
+      "status": "PASS",
+      "evidence": "build/e2e_full/simulate.log",
+      "message": "PASS end_to_end frequency=350000.000000000 stride=1 events=40251 outputs=31"
+    },
+    {
+      "test": "e2e_decimated",
+      "status": "PASS",
+      "evidence": "build/e2e_decimated/simulate.log",
+      "message": "PASS end_to_end frequency=350000.000000000 stride=64 events=165 outputs=16"
+    },
+    {
+      "test": "e2e_precision",
+      "status": "PASS",
+      "evidence": "build/e2e_precision/simulate.log",
+      "message": "PASS end_to_end frequency=350000.000000000 stride=64 events=32922 outputs=38"
+    },
+    {
+      "test": "e2e_precision_offset",
+      "status": "PASS",
+      "evidence": "build/e2e_precision_offset/simulate.log",
+      "message": "PASS end_to_end frequency=349999.999000000 stride=64 events=32922 outputs=38"
+    },
+    {
+      "test": "postroute",
+      "status": "PASS",
+      "evidence": "build/postroute/simulate.log",
+      "message": "PASS postroute SDF 32 asynchronous edges and startup (scheduler checked in full RTL)"
+    },
+    {
+      "test": "project_arithmetic",
+      "status": "PASS",
+      "evidence": "build/project_arithmetic/simulate.log",
+      "message": "PASS replay stride=1 log2=7 events=1200 checks=819"
+    }
+  ],
+  "timing": {
+    "stride1": {
+      "Vivado": "2025.2",
+      "part": "xck26-sfvc784-2LV-c",
+      "mode": "out_of_context; clock=100 MHz; uncertainty=0.1 ns",
+      "EDGE_STRIDE": "1",
+      "WNS": "1.394",
+      "WHS": "0.019",
+      "LUT": 1263,
+      "FF": 1490,
+      "BRAM36": 57,
+      "DSP": 4
+    },
+    "stride64": {
+      "Vivado": "2025.2",
+      "part": "xck26-sfvc784-2LV-c",
+      "mode": "out_of_context; clock=100 MHz; uncertainty=0.1 ns",
+      "EDGE_STRIDE": "64",
+      "WNS": "1.518",
+      "WHS": "0.019",
+      "LUT": 1268,
+      "FF": 1490,
+      "BRAM36": 57,
+      "DSP": 4
+    }
+  },
+  "end_to_end": {
+    "full": {
+      "outputs": 31,
+      "first_output_s": 0.09400103,
+      "latency_cycles": [
+        98
+      ],
+      "observed_output_period_ns": 1000000,
+      "frequency_min_Hz": 349999.999998,
+      "frequency_max_Hz": 349999.999999,
+      "max_abs_error_Hz": 2e-06
+    },
+    "precision": {
+      "outputs": 38,
+      "first_output_s": 5.99200103,
+      "latency_cycles": [
+        98
+      ],
+      "observed_output_period_ns": 1000000,
+      "frequency_min_Hz": 350000.0,
+      "frequency_max_Hz": 350000.0,
+      "max_abs_error_Hz": 0.0
+    },
+    "precision_offset": {
+      "outputs": 38,
+      "first_output_s": 5.99200103,
+      "latency_cycles": [
+        98
+      ],
+      "observed_output_period_ns": 1000000,
+      "frequency_min_Hz": 349999.999002,
+      "frequency_max_Hz": 349999.999004,
+      "max_abs_error_Hz": 4e-06
+    }
+  },
+  "accuracy": [
+    {
+      "profile": "stride1",
+      "frequency_Hz": 70000.0,
+      "outputs": 51,
+      "max_abs_error_Hz": 0.0,
+      "rmse_Hz": 0.0,
+      "mean_error_Hz": 0.0,
+      "pass_1mHz": true
+    },
+    {
+      "profile": "stride1",
+      "frequency_Hz": 100000.0,
+      "outputs": 51,
+      "max_abs_error_Hz": 0.0,
+      "rmse_Hz": 0.0,
+      "mean_error_Hz": 0.0,
+      "pass_1mHz": true
+    },
+    {
+      "profile": "stride1",
+      "frequency_Hz": 100000.001,
+      "outputs": 51,
+      "max_abs_error_Hz": 0.001,
+      "rmse_Hz": 0.0008868042868284156,
+      "mean_error_Hz": -0.0008645098039215687,
+      "pass_1mHz": true
+    },
+    {
+      "profile": "stride1",
+      "frequency_Hz": 123456.789,
+      "outputs": 51,
+      "max_abs_error_Hz": 0.001123,
+      "rmse_Hz": 0.0009283082652298847,
+      "mean_error_Hz": 0.0008213333333333335,
+      "pass_1mHz": false
+    },
+    {
+      "profile": "stride1",
+      "frequency_Hz": 199999.999,
+      "outputs": 51,
+      "max_abs_error_Hz": 0.006849,
+      "rmse_Hz": 0.003793323838680009,
+      "mean_error_Hz": -0.0014701764705882352,
+      "pass_1mHz": false
+    },
+    {
+      "profile": "stride1",
+      "frequency_Hz": 200000.0,
+      "outputs": 51,
+      "max_abs_error_Hz": 0.0,
+      "rmse_Hz": 0.0,
+      "mean_error_Hz": 0.0,
+      "pass_1mHz": true
+    },
+    {
+      "profile": "stride1",
+      "frequency_Hz": 200000.001,
+      "outputs": 51,
+      "max_abs_error_Hz": 0.006851,
+      "rmse_Hz": 0.003794323642226739,
+      "mean_error_Hz": 0.0014707647058823522,
+      "pass_1mHz": false
+    },
+    {
+      "profile": "stride1",
+      "frequency_Hz": 333333.333,
+      "outputs": 51,
+      "max_abs_error_Hz": 0.000333,
+      "rmse_Hz": 0.000333,
+      "mean_error_Hz": 0.000333,
+      "pass_1mHz": true
+    },
+    {
+      "profile": "stride1",
+      "frequency_Hz": 349999.999,
+      "outputs": 51,
+      "max_abs_error_Hz": 0.006504,
+      "rmse_Hz": 0.0038036719281839887,
+      "mean_error_Hz": -0.0014782156862745098,
+      "pass_1mHz": false
+    },
+    {
+      "profile": "stride1",
+      "frequency_Hz": 350000.0,
+      "outputs": 51,
+      "max_abs_error_Hz": 3e-06,
+      "rmse_Hz": 1.9852396506689656e-06,
+      "mean_error_Hz": -5.882352941176461e-08,
+      "pass_1mHz": true
+    },
+    {
+      "profile": "stride64",
+      "frequency_Hz": 70000.0,
+      "outputs": 51,
+      "max_abs_error_Hz": 0.0,
+      "rmse_Hz": 0.0,
+      "mean_error_Hz": 0.0,
+      "pass_1mHz": true
+    },
+    {
+      "profile": "stride64",
+      "frequency_Hz": 100000.0,
+      "outputs": 51,
+      "max_abs_error_Hz": 0.0,
+      "rmse_Hz": 0.0,
+      "mean_error_Hz": 0.0,
+      "pass_1mHz": true
+    },
+    {
+      "profile": "stride64",
+      "frequency_Hz": 100000.001,
+      "outputs": 51,
+      "max_abs_error_Hz": 2e-06,
+      "rmse_Hz": 1.0664215404617372e-06,
+      "mean_error_Hz": -2.3529411764705876e-07,
+      "pass_1mHz": true
+    },
+    {
+      "profile": "stride64",
+      "frequency_Hz": 123456.789,
+      "outputs": 51,
+      "max_abs_error_Hz": 1e-06,
+      "rmse_Hz": 7.140055472954167e-07,
+      "mean_error_Hz": 7.843137254901962e-08,
+      "pass_1mHz": true
+    },
+    {
+      "profile": "stride64",
+      "frequency_Hz": 199999.999,
+      "outputs": 51,
+      "max_abs_error_Hz": 1.6e-05,
+      "rmse_Hz": 9.97546008570876e-06,
+      "mean_error_Hz": 3.313725490196079e-06,
+      "pass_1mHz": true
+    },
+    {
+      "profile": "stride64",
+      "frequency_Hz": 200000.0,
+      "outputs": 51,
+      "max_abs_error_Hz": 0.0,
+      "rmse_Hz": 0.0,
+      "mean_error_Hz": 0.0,
+      "pass_1mHz": true
+    },
+    {
+      "profile": "stride64",
+      "frequency_Hz": 200000.001,
+      "outputs": 51,
+      "max_abs_error_Hz": 1.6e-05,
+      "rmse_Hz": 9.589618569772495e-06,
+      "mean_error_Hz": -3.764705882352941e-06,
+      "pass_1mHz": true
+    },
+    {
+      "profile": "stride64",
+      "frequency_Hz": 333333.333,
+      "outputs": 51,
+      "max_abs_error_Hz": 0.000333,
+      "rmse_Hz": 0.0002798059902090424,
+      "mean_error_Hz": 0.00015707843137254904,
+      "pass_1mHz": true
+    },
+    {
+      "profile": "stride64",
+      "frequency_Hz": 349999.999,
+      "outputs": 51,
+      "max_abs_error_Hz": 7e-06,
+      "rmse_Hz": 3.867917309577015e-06,
+      "mean_error_Hz": 1.0784313725490197e-06,
+      "pass_1mHz": true
+    },
+    {
+      "profile": "stride64",
+      "frequency_Hz": 350000.0,
+      "outputs": 51,
+      "max_abs_error_Hz": 0.0,
+      "rmse_Hz": 0.0,
+      "mean_error_Hz": 0.0,
+      "pass_1mHz": true
+    }
+  ],
+  "pairs": [
+    {
+      "profile": "stride1",
+      "lower_Hz": 100000.0,
+      "upper_Hz": 100000.001,
+      "minimum_measured_separation_uHz": 0,
+      "maximum_measured_separation_uHz": 542,
+      "all_sampled_pairs_between_0p5_and_1p5_mHz": false
+    },
+    {
+      "profile": "stride1",
+      "lower_Hz": 199999.999,
+      "upper_Hz": 200000.0,
+      "minimum_measured_separation_uHz": 0,
+      "maximum_measured_separation_uHz": 7849,
+      "all_sampled_pairs_between_0p5_and_1p5_mHz": false
+    },
+    {
+      "profile": "stride1",
+      "lower_Hz": 200000.0,
+      "upper_Hz": 200000.001,
+      "minimum_measured_separation_uHz": 0,
+      "maximum_measured_separation_uHz": 7851,
+      "all_sampled_pairs_between_0p5_and_1p5_mHz": false
+    },
+    {
+      "profile": "stride1",
+      "lower_Hz": 349999.999,
+      "upper_Hz": 350000.0,
+      "minimum_measured_separation_uHz": 0,
+      "maximum_measured_separation_uHz": 7503,
+      "all_sampled_pairs_between_0p5_and_1p5_mHz": false
+    },
+    {
+      "profile": "stride64",
+      "lower_Hz": 100000.0,
+      "upper_Hz": 100000.001,
+      "minimum_measured_separation_uHz": 998,
+      "maximum_measured_separation_uHz": 1001,
+      "all_sampled_pairs_between_0p5_and_1p5_mHz": true
+    },
+    {
+      "profile": "stride64",
+      "lower_Hz": 199999.999,
+      "upper_Hz": 200000.0,
+      "minimum_measured_separation_uHz": 984,
+      "maximum_measured_separation_uHz": 1012,
+      "all_sampled_pairs_between_0p5_and_1p5_mHz": true
+    },
+    {
+      "profile": "stride64",
+      "lower_Hz": 200000.0,
+      "upper_Hz": 200000.001,
+      "minimum_measured_separation_uHz": 984,
+      "maximum_measured_separation_uHz": 1011,
+      "all_sampled_pairs_between_0p5_and_1p5_mHz": true
+    },
+    {
+      "profile": "stride64",
+      "lower_Hz": 349999.999,
+      "upper_Hz": 350000.0,
+      "minimum_measured_separation_uHz": 993,
+      "maximum_measured_separation_uHz": 1004,
+      "all_sampled_pairs_between_0p5_and_1p5_mHz": true
+    }
+  ],
+  "noise": [
+    {
+      "profile": "stride1",
+      "jitter_ns": 1.0,
+      "max_abs_error_Hz": 0.000103,
+      "note": "correlated windows; descriptive only, not a confidence bound"
+    },
+    {
+      "profile": "stride1",
+      "jitter_ns": 10.0,
+      "max_abs_error_Hz": 0.001077,
+      "note": "correlated windows; descriptive only, not a confidence bound"
+    },
+    {
+      "profile": "stride64",
+      "jitter_ns": 1.0,
+      "max_abs_error_Hz": 2e-06,
+      "note": "correlated windows; descriptive only, not a confidence bound"
+    },
+    {
+      "profile": "stride64",
+      "jitter_ns": 10.0,
+      "max_abs_error_Hz": 1.7e-05,
+      "note": "correlated windows; descriptive only, not a confidence bound"
+    }
+  ],
+  "extended": [
+    {
+      "profile": "extended1",
+      "label": "linear_100Hz_per_s",
+      "outputs": 65,
+      "max_error_vs_mean_Hz": 0.0001346796052530408,
+      "max_error_vs_end_Hz": 8.191399000003003
+    },
+    {
+      "profile": "extended1",
+      "label": "sine_5.0Hz_100Hz_amplitude",
+      "outputs": 65,
+      "max_error_vs_mean_Hz": 52.33812234736979,
+      "max_error_vs_end_Hz": 142.4010055339313
+    },
+    {
+      "profile": "extended1",
+      "label": "clock_plus_1ppm",
+      "outputs": 3,
+      "max_error_vs_mean_Hz": 0.34999199997400865,
+      "max_error_vs_end_Hz": 0.34999199997400865
+    },
+    {
+      "profile": "extended1",
+      "label": "dense_static",
+      "outputs": 31,
+      "max_error_vs_mean_Hz": 0.0010004285722970963,
+      "max_error_vs_end_Hz": 0.0010004285722970963
+    },
+    {
+      "profile": "extended64",
+      "label": "linear_100Hz_per_s",
+      "outputs": 65,
+      "max_error_vs_mean_Hz": 0.18182312944554724,
+      "max_error_vs_end_Hz": 522.6321619999944
+    },
+    {
+      "profile": "extended64",
+      "label": "sine_0.1Hz_100Hz_amplitude",
+      "outputs": 65,
+      "max_error_vs_mean_Hz": 73.93962600154919,
+      "max_error_vs_end_Hz": 125.80433885951061
+    },
+    {
+      "profile": "extended64",
+      "label": "clock_plus_1ppm",
+      "outputs": 3,
+      "max_error_vs_mean_Hz": 0.34999999997671694,
+      "max_error_vs_end_Hz": 0.34999999997671694
+    },
+    {
+      "profile": "extended64",
+      "label": "dense_static",
+      "outputs": 31,
+      "max_error_vs_mean_Hz": 0.00013465032679960132,
+      "max_error_vs_end_Hz": 0.00013465032679960132
+    }
+  ],
+  "source_sha256": {
+    "rtl/lamor_frequency_meter.sv": "91ad470973812b710dac5ffc331c73be736469a264871b6fcd194d6f10bf16f0",
+    "rtl/sfls_core.sv": "74361c7d48c100315dfe7a59168b816210b06eca22e3449995941037c2a945eb",
+    "rtl/udiv_round.sv": "3fb033378e029220f20a3d7ec6428a69fc69a5e8ee90d8a1eaa117e63694303b",
+    "sim/tb_divider.sv": "7a24fa20728225392320a8df489d021bcbfa2b39145e4f9f619f2df3e2f7e9f5",
+    "sim/tb_end_to_end.sv": "59f2ab1ef2a38ae531e2da2baed972444a1e8bd11ec822ffa574dd6f7c4db9af",
+    "sim/tb_faults.sv": "ba13c0484254ce765e7e1b9ae5fdbbe899b16955e69c979d7df742f52bd0eb58",
+    "sim/tb_postroute.sv": "3b05cce9376b3f9a5842df210b3b129e6287c3271eb2ae8e667d760857c6d84e",
+    "sim/tb_replay.sv": "186c29de3633cdd4f3e38fb436d790e62f5fc23564175d0f45f9416ab7f2383a",
+    "scripts/capture_wave.sh": "a594b0d3e35e45b4a78b4cdca211387c08e7eeeaa6edd6fd7848e4b8cf9f79c6",
+    "scripts/check_project.tcl": "909da5bbe2fe32099307cc38193287f49889741b8c41e47d910dbcebd48e5ef7",
+    "scripts/core_timing.xdc": "cf52313a81848dfa682beced66bf93d361c129eb0f3ebf5a53e32f9d8b38f8d7",
+    "scripts/create_project.tcl": "c70b1fef5745f1231eeb5edc12ff6ecd1fbef42762e81301109d86792a181fec",
+    "scripts/implement.tcl": "c685aa0664b5ae01b8c1d9a7e06fb3f4cdc9f8522c0915436b7dc033c28538c2",
+    "scripts/open_results.tcl": "efb6f28a95d210f3f8ceffafc2773993c8b5a6a51db6655cfa9d65c0dd186634",
+    "scripts/package.py": "23c67a85350e62147ef8ba3643ff01150aef207f34e4aa0fed4d1de8119267e9",
+    "scripts/run_all.sh": "eaeff75f8000b8b94d4a44e76cceb8676302571c4050e8ed48d0b766865c3211",
+    "scripts/run_end_to_end.sh": "8257d567d36302812e9e71c82701b7e3a4afc956e226033f146d0fadcafe0ad3",
+    "scripts/run_implementation.sh": "13e17f3a99923738e86d9c5265cec7d07072e9ee28603ec31a68c115095fcc06",
+    "scripts/run_postroute.sh": "43bed80998698567818eb426fe4fec42d93184e720bfdf03ad2aa92aeceaa8b5",
+    "scripts/run_replay.sh": "eb28c967f48919ef7ab1d75f32eba05a1102afee3c54b3246a098910e87aac41",
+    "scripts/run_unit.sh": "479fffc490b47d8efe5a956a71fe717c2647776c971de52e570755f9eaeaea09",
+    "scripts/summarize.py": "ef8abc98c7a30a10067f68916504422e7c71a6c4739666c89cb33aa97009eb19",
+    "scripts/wave.tcl": "b4b6528259085e49e15288cd1a3844772b6a316fadb2d93637b663fe3ff480cd",
+    "model/extended.py": "5b6c51671d8a16620526f8143ba836c950a07f3b1fdb0fb0c13e4a3f47e62e94",
+    "model/reference.py": "4c835973d034156ed0913ba8ca4b7ba408d9348cdb5e6f1944d46e247b89f9aa",
+    "docs/DESIGN.md": "22e888ef2dcbc819289614235803faa4ca002a59ad150212d9e54c3dd4ffaa1d",
+    "README.md": "b67720dea98b36cd065ace22c16ac796e65aceb7ab6e6d6cf51ec859252ac52f",
+    "requirements.txt": "68c42da7bca307382fda76e0e8c50bb2c7014b3aaac7303dd9f6a52a59c98528"
+  },
+  "limitation": "OOC timing with explicit interface budgets; not board signoff. Long windows do not establish kHz bandwidth."
+}

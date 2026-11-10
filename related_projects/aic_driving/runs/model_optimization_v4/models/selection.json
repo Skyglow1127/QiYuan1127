@@ -1,0 +1,48 @@
+{
+  "schema": "position-velocity-time-64-v1",
+  "architecture": [
+    64,
+    96,
+    96,
+    2
+  ],
+  "window": 0.6,
+  "window_validation_scores": [
+    0.9367278218269348,
+    0.8324996829032898,
+    0.838883638381958
+  ],
+  "training_seeds": [
+    0,
+    1,
+    2
+  ],
+  "validation_candidates": [
+    0.49561893939971924,
+    0.49070611596107483,
+    0.4844818115234375,
+    0.4705926477909088
+  ],
+  "selected_seed_indices": [
+    0,
+    1,
+    2
+  ],
+  "normalization": "train only",
+  "weighted_training": "equal total weight per episode",
+  "selection": "validation episode-mean Euclidean error only",
+  "supported_horizons": [
+    0.10000000149011612,
+    3.0999999046325684
+  ],
+  "dataset_sha256": "cf0c52cc17c78fe45e834a3bf25ab70b3c0f99814c814950ff3f2becec6569f2",
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "epochs_max": 100,
+  "patience": 12,
+  "gate": "h²/(h²+0.25)",
+  "limitations": [
+    "Learned position corrections retain smoothed-CA velocity approximation",
+    "Single scripted/IDM layout family; no road validation"
+  ]
+}

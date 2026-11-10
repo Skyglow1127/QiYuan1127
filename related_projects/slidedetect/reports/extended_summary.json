@@ -1,0 +1,58 @@
+[
+  {
+    "profile": "extended1",
+    "label": "linear_100Hz_per_s",
+    "outputs": 65,
+    "max_error_vs_mean_Hz": 0.0001346796052530408,
+    "max_error_vs_end_Hz": 8.191399000003003
+  },
+  {
+    "profile": "extended1",
+    "label": "sine_5.0Hz_100Hz_amplitude",
+    "outputs": 65,
+    "max_error_vs_mean_Hz": 52.33812234736979,
+    "max_error_vs_end_Hz": 142.4010055339313
+  },
+  {
+    "profile": "extended1",
+    "label": "clock_plus_1ppm",
+    "outputs": 3,
+    "max_error_vs_mean_Hz": 0.34999199997400865,
+    "max_error_vs_end_Hz": 0.34999199997400865
+  },
+  {
+    "profile": "extended1",
+    "label": "dense_static",
+    "outputs": 31,
+    "max_error_vs_mean_Hz": 0.0010004285722970963,
+    "max_error_vs_end_Hz": 0.0010004285722970963
+  },
+  {
+    "profile": "extended64",
+    "label": "linear_100Hz_per_s",
+    "outputs": 65,
+    "max_error_vs_mean_Hz": 0.18182312944554724,
+    "max_error_vs_end_Hz": 522.6321619999944
+  },
+  {
+    "profile": "extended64",
+    "label": "sine_0.1Hz_100Hz_amplitude",
+    "outputs": 65,
+    "max_error_vs_mean_Hz": 73.93962600154919,
+    "max_error_vs_end_Hz": 125.80433885951061
+  },
+  {
+    "profile": "extended64",
+    "label": "clock_plus_1ppm",
+    "outputs": 3,
+    "max_error_vs_mean_Hz": 0.34999999997671694,
+    "max_error_vs_end_Hz": 0.34999999997671694
+  },
+  {
+    "profile": "extended64",
+    "label": "dense_static",
+    "outputs": 31,
+    "max_error_vs_mean_Hz": 0.00013465032679960132,
+    "max_error_vs_end_Hz": 0.00013465032679960132
+  }
+]

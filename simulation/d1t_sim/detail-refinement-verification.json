@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-26",
+  "passed": true,
+  "visual_shapes_by_group": {
+    "bench": 11,
+    "enclosure": 22,
+    "aipc": 203,
+    "kr260": 468
+  },
+  "environment_collision_envelopes": 4,
+  "source_camera_stl_triangles": 1276,
+  "source_stl_sha256": "f668e03cdc26bd688b5496bebc8d9db6eb6f2b758bb92146883091709e5ebfa8",
+  "stl_source_units_inferred": "mm",
+  "stl_collision_geometry_used": true,
+  "fcl_grasp_paths_clear": true,
+  "live_rgb_resolution": [
+    640,
+    480
+  ],
+  "live_rgb_new_frames": 107,
+  "target_red_pixels": 10123,
+  "physical_grasp_cycles": 1,
+  "lift_m": 0.080319531376243,
+  "both_finger_contact_confirmed": true,
+  "cube_placed_height_m": 0.019999966808975124,
+  "config_sha256": {
+    "config/environment.json": "36e7ef23a142f3c7e423d2c4488174e7ba062e5dec65f5af958d52cd3a948a05",
+    "config/wrist_camera.json": "d5a1bb1c0ba0a24d05d3ea762732861254533ec11813698a569793601ae403db",
+    "generated/d1t.urdf": "15887fcee87de9cd95cfa592964433cf16b665bca69e1753037ecdd8baeedec6",
+    "meshes/wrist_camera_mount.STL": "d545f160dd96fd58135a15d982cd7ee472884f9c46f640fbe806a3a4732647f4"
+  },
+  "ui_checks": {
+    "AIPC_closeup": true,
+    "KR260_closeup": true,
+    "STL_mount_closeup": true,
+    "all_removed_objects_still_absent": true,
+    "canvas_fps_observed": 15
+  }
+}

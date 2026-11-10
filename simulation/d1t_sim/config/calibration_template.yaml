@@ -1,0 +1,31 @@
+# Experimental record template. null means NOT measured; never load as model.yaml.
+status: not_calibrated
+hardware:
+  model: null
+  serial_number: null
+  firmware: null
+  gripper: null
+  tool_transform: null
+measurements:
+  total_mass_kg: null
+  stationary_base_mass_kg: null
+  actual_sample_rate_hz: null
+  timestamp_source: null
+  torque_source: null
+  current_type_and_units: null
+  torque_scale_and_bias_per_joint: null
+  temperature_range_degC: null
+  known_payloads: []
+identification:
+  source_datasets: []
+  filter_and_delay_compensation: null
+  observable_base_parameters: null
+  regressor_rank: null
+  regressor_condition_number: null
+  physical_consistency_constraints: null
+validation:
+  held_out_trajectories: []
+  torque_rmse_Nm_per_joint: null
+  endpoint_pose_error: null
+  parameter_uncertainty: null
+  accepted_operating_envelope: null

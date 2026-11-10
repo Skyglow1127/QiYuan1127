@@ -1,0 +1,69 @@
+{
+  "status": "completed",
+  "stages": [
+    {
+      "stage": "main",
+      "command": [
+        "/home/aup/AIC/aic 初版/.venv/bin/python",
+        "/home/aup/AIC/aic 初版/scripts/evaluate.py",
+        "--output",
+        "/home/aup/AIC/aic 初版/runs/revision_v3/main",
+        "--methods",
+        "ca_adaptive",
+        "ml_adaptive",
+        "ca_recovery",
+        "ml_recovery",
+        "--position-noise",
+        ".1",
+        "--velocity-noise",
+        ".1",
+        "--model",
+        "/home/aup/AIC/aic 初版/runs/release_v1/model/model.pt",
+        "--calibration",
+        "/home/aup/AIC/aic 初版/runs/release_v1/model/calibration.json",
+        "--seeds",
+        "10",
+        "--seed-start",
+        "810000"
+      ],
+      "exit_code": 0
+    },
+    {
+      "stage": "stress",
+      "command": [
+        "/home/aup/AIC/aic 初版/.venv/bin/python",
+        "/home/aup/AIC/aic 初版/scripts/evaluate.py",
+        "--output",
+        "/home/aup/AIC/aic 初版/runs/revision_v3/stress",
+        "--methods",
+        "ca_adaptive",
+        "ml_adaptive",
+        "ca_recovery",
+        "ml_recovery",
+        "--position-noise",
+        ".1",
+        "--velocity-noise",
+        ".1",
+        "--model",
+        "/home/aup/AIC/aic 初版/runs/release_v1/model/model.pt",
+        "--calibration",
+        "/home/aup/AIC/aic 初版/runs/release_v1/model/calibration.json",
+        "--seeds",
+        "5",
+        "--seed-start",
+        "910000",
+        "--profile",
+        "holdout",
+        "--delays",
+        ".2",
+        ".4",
+        "--delay-modes",
+        "fixed",
+        "bursty"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "wall_seconds": 313.1576147349988,
+  "source_sha256": "d40992d5c9110c5e1a1c40b1443a2de5aaf41bad01716ca5a93f9f44490e8941"
+}

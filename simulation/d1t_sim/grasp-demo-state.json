@@ -1,0 +1,136 @@
+{
+  "connected": true,
+  "age": 0.0005641859606839716,
+  "positions": {
+    "arm_Joint1": 0.004005245683975212,
+    "arm_Joint2": 0.4591628856006459,
+    "arm_Joint3": -0.2532326283195284,
+    "arm_Joint4": -1.367249645522715e-05,
+    "arm_Joint5": 1.3661434166276092,
+    "arm_Joint6": -0.003995937663433973,
+    "arm_Joint7_1": 0.011370157895685438,
+    "arm_Joint7_2": -0.011366841299446042
+  },
+  "targets": {
+    "arm_Joint1": 0.004005600336097834,
+    "arm_Joint2": 0.4583991533692318,
+    "arm_Joint3": -0.2537239572372647,
+    "arm_Joint4": -1.1938739307550255e-05,
+    "arm_Joint5": 1.366117457468401,
+    "arm_Joint6": -0.00399618405313275,
+    "arm_Joint7_1": 0.005999999999999998,
+    "arm_Joint7_2": -0.005999999999999998
+  },
+  "hold": false,
+  "sim_time": 61.5785,
+  "mode": "Gazebo Harmonic / PID position control",
+  "collision_protection": true,
+  "collision_margin_m": 0.002,
+  "collision_warning": "",
+  "cube": {
+    "connected": true,
+    "pose": {
+      "position": [
+        0.319880608446915,
+        -3.9087644981188806e-06,
+        0.21978404086637196
+      ],
+      "quaternion": [
+        -3.407864619407773e-06,
+        0.0005816790349907472,
+        3.254847145153064e-06,
+        0.9999998308136321
+      ]
+    },
+    "finger_contacts": [
+      "arm_Link7_2",
+      "arm_Link7_1"
+    ],
+    "contacts": [
+      [
+        "red_cube::body::collision",
+        "d1t::arm_Link7_2::arm_Link7_2_collision"
+      ],
+      [
+        "red_cube::body::collision",
+        "d1t::arm_Link7_1::arm_Link7_1_collision"
+      ]
+    ],
+    "size": [
+      0.04,
+      0.04,
+      0.04
+    ],
+    "mass": 0.02
+  },
+  "grasp": {
+    "active": false,
+    "phase": "抓取成功 · 已抬起保持",
+    "result": "success",
+    "last_success": {
+      "lift_m": 0.07978238477845304,
+      "cube_position": [
+        0.31988048074251046,
+        -3.7796579313285806e-06,
+        0.21978161063307727
+      ],
+      "both_fingers": true,
+      "sim_time": 60.7165
+    }
+  },
+  "scene": {
+    "cube": {
+      "name": "red_cube",
+      "size": [
+        0.04,
+        0.04,
+        0.04
+      ],
+      "mass": 0.02,
+      "friction": 0.8,
+      "position": [
+        0.32,
+        0,
+        0.14
+      ]
+    },
+    "pedestal": {
+      "name": "pickup_pedestal",
+      "size": [
+        0.12,
+        0.12,
+        0.12
+      ],
+      "position": [
+        0.32,
+        0,
+        0.06
+      ]
+    },
+    "tcp_in_link6": [
+      0.0004,
+      0,
+      0.1106
+    ],
+    "poses": {
+      "above": [
+        0.004005600336097834,
+        0.4583991533692318,
+        -0.2537239572372647,
+        -1.1938739307550255e-05,
+        1.366117457468401,
+        -0.00399618405313275
+      ],
+      "pick": [
+        0.00400469520622342,
+        0.5140271685266956,
+        0.0594620937615648,
+        -1.4791377430944432e-05,
+        0.9973033913219207,
+        -0.003999120310345274
+      ]
+    },
+    "grip_closed_target": 0.8,
+    "lift_min_m": 0.06
+  }
+}

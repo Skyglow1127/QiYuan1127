@@ -1,0 +1,487 @@
+{
+  "name": "\u677e\u7075 PiPER",
+  "links": [
+    {
+      "name": "world",
+      "mesh": null,
+      "collision_mesh": null,
+      "color": [
+        0.76,
+        0.78,
+        0.8,
+        1
+      ]
+    },
+    {
+      "name": "base_link",
+      "mesh": "/meshes/base_link_visual.STL",
+      "collision_mesh": "/meshes/base_link_collision.STL",
+      "color": [
+        0.76,
+        0.78,
+        0.8,
+        1
+      ]
+    },
+    {
+      "name": "link1",
+      "mesh": "/meshes/link1_visual.STL",
+      "collision_mesh": "/meshes/link1_collision.STL",
+      "color": [
+        0.16,
+        0.18,
+        0.2,
+        1
+      ]
+    },
+    {
+      "name": "link2",
+      "mesh": "/meshes/link2_visual.STL",
+      "collision_mesh": "/meshes/link2_collision.STL",
+      "color": [
+        0.76,
+        0.78,
+        0.8,
+        1
+      ]
+    },
+    {
+      "name": "link3",
+      "mesh": "/meshes/link3_visual.STL",
+      "collision_mesh": "/meshes/link3_collision.STL",
+      "color": [
+        0.76,
+        0.78,
+        0.8,
+        1
+      ]
+    },
+    {
+      "name": "link4",
+      "mesh": "/meshes/link4_visual.STL",
+      "collision_mesh": "/meshes/link4_collision.STL",
+      "color": [
+        0.16,
+        0.18,
+        0.2,
+        1
+      ]
+    },
+    {
+      "name": "link5",
+      "mesh": "/meshes/link5_visual.STL",
+      "collision_mesh": "/meshes/link5_collision.STL",
+      "color": [
+        0.16,
+        0.18,
+        0.2,
+        1
+      ]
+    },
+    {
+      "name": "link6",
+      "mesh": "/meshes/link6_visual.STL",
+      "collision_mesh": "/meshes/link6_collision.STL",
+      "color": [
+        0.16,
+        0.18,
+        0.2,
+        1
+      ]
+    },
+    {
+      "name": "flange_link",
+      "mesh": "/meshes/flange_link_visual.STL",
+      "collision_mesh": "/meshes/flange_link_collision.STL",
+      "color": [
+        0.76,
+        0.78,
+        0.8,
+        1
+      ]
+    },
+    {
+      "name": "gripper_base",
+      "mesh": "/meshes/gripper_base_visual.STL",
+      "collision_mesh": "/meshes/gripper_base_collision.STL",
+      "color": [
+        0.16,
+        0.18,
+        0.2,
+        1
+      ]
+    },
+    {
+      "name": "gripper_link1",
+      "mesh": "/meshes/gripper_link1_visual.STL",
+      "collision_mesh": "/meshes/gripper_link1_collision.STL",
+      "color": [
+        0.24,
+        0.26,
+        0.28,
+        1
+      ]
+    },
+    {
+      "name": "gripper_link2",
+      "mesh": "/meshes/gripper_link2_visual.STL",
+      "collision_mesh": "/meshes/gripper_link2_collision.STL",
+      "color": [
+        0.24,
+        0.26,
+        0.28,
+        1
+      ]
+    },
+    {
+      "name": "piper_wrist_camera_link",
+      "mesh": null,
+      "collision_mesh": null,
+      "color": [
+        0.76,
+        0.78,
+        0.8,
+        1
+      ]
+    },
+    {
+      "name": "piper_wrist_camera_optical_link",
+      "mesh": null,
+      "collision_mesh": null,
+      "color": [
+        0.76,
+        0.78,
+        0.8,
+        1
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "world_to_base_link",
+      "type": "fixed",
+      "parent": "world",
+      "child": "base_link",
+      "xyz": [
+        0.0,
+        0.0,
+        0.02
+      ],
+      "rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limits": null
+    },
+    {
+      "name": "joint1",
+      "type": "revolute",
+      "parent": "base_link",
+      "child": "link1",
+      "xyz": [
+        0.0,
+        0.0,
+        0.123
+      ],
+      "rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limits": {
+        "effort": 100.0,
+        "lower": -2.6179938,
+        "upper": 2.6179938,
+        "velocity": 5.0
+      }
+    },
+    {
+      "name": "joint2",
+      "type": "revolute",
+      "parent": "link1",
+      "child": "link2",
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rpy": [
+        1.5707963,
+        -0.1357866,
+        -3.1415926
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limits": {
+        "effort": 100.0,
+        "lower": 0.0,
+        "upper": 3.1415926,
+        "velocity": 5.0
+      }
+    },
+    {
+      "name": "joint3",
+      "type": "revolute",
+      "parent": "link2",
+      "child": "link3",
+      "xyz": [
+        0.28503,
+        0.0,
+        0.0
+      ],
+      "rpy": [
+        0.0,
+        0.0,
+        -1.7938494
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limits": {
+        "effort": 100.0,
+        "lower": -2.9670597,
+        "upper": 0.0,
+        "velocity": 5.0
+      }
+    },
+    {
+      "name": "joint4",
+      "type": "revolute",
+      "parent": "link3",
+      "child": "link4",
+      "xyz": [
+        -0.02198,
+        -0.25075,
+        0.0
+      ],
+      "rpy": [
+        1.5707963,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limits": {
+        "effort": 100.0,
+        "lower": -1.7453292,
+        "upper": 1.7453292,
+        "velocity": 5.0
+      }
+    },
+    {
+      "name": "joint5",
+      "type": "revolute",
+      "parent": "link4",
+      "child": "link5",
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rpy": [
+        -1.5707963,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limits": {
+        "effort": 100.0,
+        "lower": -1.2217304,
+        "upper": 1.2217304,
+        "velocity": 5.0
+      }
+    },
+    {
+      "name": "joint6",
+      "type": "revolute",
+      "parent": "link5",
+      "child": "link6",
+      "xyz": [
+        8.8259e-05,
+        -0.091,
+        0.0
+      ],
+      "rpy": [
+        1.5707963,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limits": {
+        "effort": 100.0,
+        "lower": -2.9670597,
+        "upper": 2.9670597,
+        "velocity": 5.0
+      }
+    },
+    {
+      "name": "flange_joint",
+      "type": "fixed",
+      "parent": "link6",
+      "child": "flange_link",
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limits": null
+    },
+    {
+      "name": "gripper_base_joint",
+      "type": "fixed",
+      "parent": "flange_link",
+      "child": "gripper_base",
+      "xyz": [
+        0.0,
+        0.0,
+        0.0045
+      ],
+      "rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limits": null
+    },
+    {
+      "name": "gripper_joint1",
+      "type": "prismatic",
+      "parent": "gripper_base",
+      "child": "gripper_link1",
+      "xyz": [
+        0.0,
+        0.0,
+        0.138
+      ],
+      "rpy": [
+        1.5707963,
+        0.0,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limits": {
+        "effort": 10.0,
+        "lower": 0.0,
+        "upper": 0.05,
+        "velocity": 3.0
+      }
+    },
+    {
+      "name": "gripper_joint2",
+      "type": "prismatic",
+      "parent": "gripper_base",
+      "child": "gripper_link2",
+      "xyz": [
+        0.0,
+        0.0,
+        0.138
+      ],
+      "rpy": [
+        1.5707963,
+        0.0,
+        -3.1415926
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "limits": {
+        "effort": 10.0,
+        "lower": -0.05,
+        "upper": 0.0,
+        "velocity": 3.0
+      }
+    },
+    {
+      "name": "piper_wrist_camera_mount",
+      "type": "fixed",
+      "parent": "link6",
+      "child": "piper_wrist_camera_link",
+      "xyz": [
+        -0.055,
+        0.0,
+        0.02
+      ],
+      "rpy": [
+        0.0,
+        0.35,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limits": null
+    },
+    {
+      "name": "piper_wrist_camera_optical_joint",
+      "type": "fixed",
+      "parent": "piper_wrist_camera_link",
+      "child": "piper_wrist_camera_optical_link",
+      "xyz": [
+        -0.01,
+        0.0,
+        0.025
+      ],
+      "rpy": [
+        0.0,
+        -1.5707963267948966,
+        0.0
+      ],
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limits": null
+    }
+  ]
+}

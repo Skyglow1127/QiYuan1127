@@ -1,0 +1,18 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Tue Oct 20 00:02:37 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/e2e/xsim_script.tcl
+# xsim {e2e} -testplusarg FREQUENCY=350000 -testplusarg RUN_MS=6020 -testplusarg RESULTS=/home/aup/SlideDetect/build/e2e_precision/results.csv -autoloadwcfg -runall -onfinish quit -onerror quit
+Time resolution is 1 fs
+run -all
+PASS end_to_end frequency=350000.000000000 stride=64 events=32922 outputs=38
+$finish called at time : 6031011050 ns : File "/home/aup/SlideDetect/sim/tb_end_to_end.sv" Line 54
+exit 0
+INFO: xsimkernel Simulation Memory Usage: 296752 KB (Peak: 341212 KB), Simulation CPU Usage: 172650 ms
+INFO: [Common 17-206] Exiting xsim at Tue Oct 20 00:05:32 2026...

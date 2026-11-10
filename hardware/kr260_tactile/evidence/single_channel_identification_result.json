@@ -1,0 +1,224 @@
+{
+  "session_id": "20261026T123327_419411Z_ssh",
+  "count": 7706,
+  "duration_s": 77.05031009099912,
+  "state": "running",
+  "channels": {
+    "do1": {
+      "levels": {
+        "1": 7162,
+        "0": 544
+      },
+      "edge_count": 6,
+      "runs": [
+        {
+          "level": 1,
+          "start_s": 5.472999873745721e-05,
+          "end_s": 49.390235840999594,
+          "duration_s": 49.39018111100086
+        },
+        {
+          "level": 0,
+          "start_s": 49.390235840999594,
+          "end_s": 51.41028281099898,
+          "duration_s": 2.0200469699993846
+        },
+        {
+          "level": 1,
+          "start_s": 51.41028281099898,
+          "end_s": 52.29025223299868,
+          "duration_s": 0.8799694219997036
+        },
+        {
+          "level": 0,
+          "start_s": 52.29025223299868,
+          "end_s": 54.070240011998976,
+          "duration_s": 1.7799877790002938
+        },
+        {
+          "level": 1,
+          "start_s": 54.070240011998976,
+          "end_s": 54.840208412999345,
+          "duration_s": 0.7699684010003693
+        },
+        {
+          "level": 0,
+          "start_s": 54.840208412999345,
+          "end_s": 56.480264542999066,
+          "duration_s": 1.6400561299997207
+        },
+        {
+          "level": 1,
+          "start_s": 56.480264542999066,
+          "end_s": 77.05031009099912,
+          "duration_s": 20.570045548000053,
+          "open_end": true
+        }
+      ]
+    },
+    "do2": {
+      "levels": {
+        "1": 7706
+      },
+      "edge_count": 0,
+      "runs": [
+        {
+          "level": 1,
+          "start_s": 5.472999873745721e-05,
+          "end_s": 77.05031009099912,
+          "duration_s": 77.05025536100038,
+          "open_end": true
+        }
+      ]
+    }
+  },
+  "snapshot_csv_path": "/media/aup/UbuntuData/抓取实验/压力测试程序/records/20261026_DO1单路三次按压_原始实测.csv",
+  "snapshot_sha256": "b992e6e8a7e75eec5b91351be2215eee8ab0db51a3dfb90b5a1a0b08d1727ef7",
+  "snapshot_total_samples": 36753,
+  "final_session_status": {
+    "state": "stopped",
+    "error": "",
+    "session_id": "20261026T123327_419411Z_ssh",
+    "config": {
+      "source": "ssh",
+      "host": "pressure-kr260",
+      "chip": "auto",
+      "offsets": [
+        0,
+        1
+      ],
+      "rate_hz": 100.0,
+      "polarity": [
+        "unknown",
+        "unknown"
+      ],
+      "mapping_confirmed": true,
+      "sensor_connected": true,
+      "channel_verified": [
+        false,
+        false
+      ],
+      "debounce_ms": 30,
+      "stale_ms": 250,
+      "enabled_channels": [
+        true,
+        true
+      ]
+    },
+    "source": "real",
+    "count": 36753,
+    "elapsed": 367.52026232299795,
+    "actual_hz": 99.99991682689924,
+    "latest": {
+      "id": 36753,
+      "t_s": 367.52026232299795,
+      "wall_time": "2026-10-26T12:39:38.314351+00:00",
+      "dt_s": 0.010009693996835267,
+      "do1": 1,
+      "do2": 1,
+      "trigger1": null,
+      "trigger2": null,
+      "source": "real",
+      "chip": "/dev/gpiochip3",
+      "offset1": 0,
+      "offset2": 1,
+      "host": "pressure-kr260",
+      "polarity1": "unknown",
+      "polarity2": "unknown",
+      "requested_hz": 100.0,
+      "gap": 0,
+      "sensor_connected": true,
+      "pl_verified": true,
+      "transport_lag_growth_ms": 0,
+      "contact1": null,
+      "contact2": null
+    },
+    "stats": {
+      "edges": [
+        0,
+        0
+      ],
+      "active_s": [
+        0.0,
+        0.0
+      ]
+    },
+    "csv_name": "20261026T123327_419411Z_ssh.csv",
+    "tactile": {
+      "schema": "kr260-tactile/v1",
+      "source": "real",
+      "session_id": "20261026T123327_419411Z_ssh",
+      "seq": 36753,
+      "sample_t_s": 367.52026232299795,
+      "receive_age_ms": 152.60477899573743,
+      "stale_ms": 250,
+      "debounce_ms": 30,
+      "transport_lag_growth_ms": 0,
+      "fresh": false,
+      "sensor_connected": true,
+      "through_pl_ps": true,
+      "valid": false,
+      "channels": [
+        {
+          "channel": 1,
+          "label": "DO1",
+          "enabled": true,
+          "valid": false,
+          "level": null,
+          "raw_contact": null,
+          "contact": null,
+          "response_verified": false,
+          "polarity": "unknown"
+        },
+        {
+          "channel": 2,
+          "label": "DO2",
+          "enabled": true,
+          "valid": false,
+          "level": null,
+          "raw_contact": null,
+          "contact": null,
+          "response_verified": false,
+          "polarity": "unknown"
+        }
+      ],
+      "reasons": [
+        "没有新鲜采样",
+        "启用通道的触发极性尚未确认",
+        "启用通道的响应尚未核实"
+      ],
+      "pl_mapping": {
+        "type": "pl_mapping",
+        "verified": true,
+        "chip": "/dev/gpiochip3",
+        "offsets": [
+          0,
+          1
+        ],
+        "of_node": "/axi/gpio@a0000000",
+        "address": "0xa0000000",
+        "width": 2,
+        "line_names": [
+          "FSR_DO1",
+          "FSR_DO2"
+        ],
+        "pipeline": "DO → PL synchronizer → AXI GPIO → PS Linux"
+      },
+      "grasp_verified": false,
+      "robot_motion_enabled": false,
+      "decision": "HOLD",
+      "stop_closing": true,
+      "both_contact": null,
+      "reason": "触觉数据无效、未连接或尚未核实"
+    }
+  },
+  "conclusion": {
+    "connected_channel": "DO1",
+    "active_polarity": "low",
+    "released_level": 1,
+    "pressed_level": 0,
+    "observed_press_count": 3,
+    "user_confirmation": "按压完成",
+    "do2": "not enabled; no sensor connected; steady high in this test"
+  }
+}

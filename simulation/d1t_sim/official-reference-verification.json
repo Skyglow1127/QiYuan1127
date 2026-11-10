@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-26",
+  "passed": true,
+  "official_reference_images": 10,
+  "source_records": [
+    "references/official/aipc_sources.json",
+    "references/official/kr260_sources.json"
+  ],
+  "KR260_envelope_m": [
+    0.132,
+    0.14,
+    0.036
+  ],
+  "KR260_bare_PCB_m": [
+    0.119,
+    0.14
+  ],
+  "KR260_ports": {
+    "RJ45": 4,
+    "USB_A": 4,
+    "DisplayPort": 1,
+    "SFP_plus": 1,
+    "Pmod_groups": 4
+  },
+  "AIPC_candidate_model": "MINISFORUM EliteMini AI370, inferred from photos/CPU/DMI",
+  "AIPC_candidate_body_m": [
+    0.13,
+    0.127,
+    0.0469
+  ],
+  "AIPC_platform": "AMD Ryzen AI 9 HX 370",
+  "FCL_grasp_paths_clear": true,
+  "new_device_collision_envelopes_within_previous": true,
+  "robot_and_sensor_URDF_unchanged": true,
+  "previous_physical_grasp_evidence_reused": "detail-refinement-verification.json",
+  "previous_grasp_lift_m": 0.080319531376243,
+  "feedback_online": true,
+  "wrist_RGB_online": true,
+  "current_display_pose_reset_passed": true,
+  "config_sha256": {
+    "config/environment.json": "92a56c450c4d2c5544d63ff8a8c12495f0beabecbaf31a4a5279621faa8879f3",
+    "generated/d1t.urdf": "15887fcee87de9cd95cfa592964433cf16b665bca69e1753037ecdd8baeedec6",
+    "models/photo_workspace/model.sdf": "3feb593752e489756b1805db7e9d56c0fc1a65ff1af2513dfdb2bfdde25e711c",
+    "models/photo_workspace/markings.json": "0175e1d235d4c8197489f907567c8f248ec3147eb3c349796443d92e4cb45668"
+  }
+}

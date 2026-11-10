@@ -1,0 +1,1709 @@
+File	文件
+Edit	编辑
+Flow	流程
+Tools	工具
+Reports	报告
+Window	窗口
+Layout	布局
+View	查看
+Help	帮助
+New	新建
+Open	打开
+Close	关闭
+Save	保存
+Save As	另存为
+Save All	全部保存
+Exit	退出
+Undo	撤销
+Redo	重做
+Cut	剪切
+Copy	复制
+Paste	粘贴
+Delete	删除
+Select All	全选
+Find	查找
+Replace	替换
+Search	搜索
+Refresh	刷新
+Import	导入
+Export	导出
+Archive	归档
+Print	打印
+Properties	属性
+Settings	设置
+Options	选项
+Preferences	首选项
+OK	确定
+Cancel	取消
+Apply	应用
+Yes	是
+No	否
+Next	下一步
+Back	上一步
+Finish	完成
+Browse	浏览
+Browse...	浏览...
+Add	添加
+Remove	移除
+Reset	重置
+Restore Defaults	恢复默认设置
+Default	默认
+Defaults	默认值
+General	常规
+Advanced	高级
+Name	名称
+Type	类型
+Value	值
+Description	说明
+Status	状态
+Enable	启用
+Disable	禁用
+Enabled	已启用
+Disabled	已禁用
+Show	显示
+Hide	隐藏
+Expand All	全部展开
+Collapse All	全部折叠
+Project	工程
+Create Project	创建工程
+New Project	新建工程
+Open Project	打开工程
+Close Project	关闭工程
+Save Project As	工程另存为
+Open Example Project	打开示例工程
+Open Example Project.	打开示例工程
+Open Recent Project	打开最近的工程
+Recent Projects	最近的工程
+Recent Checkpoints	最近的检查点
+Recent IP Locations	最近的 IP 位置
+Clear List	清除列表
+Quick Start	快速开始
+Learning Center	学习中心
+Documentation and Tutorials	文档和教程
+Quick Take Videos	快速入门视频
+Release Notes Guide	版本说明
+Manage IP	管理 IP
+Tasks	任务
+Quick Access	快速访问
+Default Layout	默认布局
+Flow Navigator	流程导航
+PROJECT MANAGER	工程管理
+Project Manager	工程管理
+Add Sources	添加源文件
+Language Templates	语言模板
+IP Catalog	IP 目录
+IP INTEGRATOR	IP 集成器
+IP Integrator	IP 集成器
+Create Block Design	创建模块设计
+Open Block Design	打开模块设计
+Generate Block Design	生成模块设计
+SIMULATION	仿真
+Simulation	仿真
+Run Simulation	运行仿真
+Run Behavioral Simulation	运行行为仿真
+Run Post-Synthesis Functional Simulation	运行综合后功能仿真
+Run Post-Implementation Timing Simulation	运行实现后时序仿真
+RTL ANALYSIS	RTL 分析
+RTL Analysis	RTL 分析
+Run Linter	运行 RTL 检查
+Open Elaborated Design	打开展开后的设计
+SYNTHESIS	综合
+Synthesis	综合
+Run Synthesis	运行综合
+Open Synthesized Design	打开综合后的设计
+IMPLEMENTATION	实现
+Implementation	实现
+Run Implementation	运行实现
+Open Implemented Design	打开实现后的设计
+PROGRAM AND DEBUG	编程与调试
+Program and Debug	编程与调试
+Generate Bitstream	生成比特流
+Open Hardware Manager	打开硬件管理器
+Sources	源文件
+Design Sources	设计源文件
+Constraints	约束
+Simulation Sources	仿真源文件
+Utility Sources	辅助源文件
+IP Sources	IP 源文件
+Hierarchy	层次结构
+Libraries	库
+Compile Order	编译顺序
+Set as Top	设为顶层
+Update Compile Order	更新编译顺序
+Add Files	添加文件
+Add Directories	添加目录
+Create File	创建文件
+Remove File from Project	从工程中移除文件
+Project Summary	工程摘要
+Overview	概览
+Dashboard	仪表板
+Tcl Console	Tcl 控制台
+Messages	消息
+Log	日志
+Design Runs	设计运行
+Schematic	原理图
+Device	器件
+I/O Ports	I/O 端口
+Netlist	网表
+Package	封装
+Timing	时序
+Utilization	资源利用率
+Power	功耗
+DRC Violations	DRC 违规
+Graph	图表
+Table	表格
+Post-Synthesis	综合后
+Post-Implementation	实现后
+Project name	工程名称
+Project location	工程位置
+Project part	工程器件
+Product family	器件系列
+Top module name	顶层模块名称
+Target language	目标语言
+Simulator language	仿真器语言
+Target simulator	目标仿真器
+Part	器件
+Strategy	策略
+Report Strategy	报告策略
+Elapsed	已用时间
+Start	开始
+Progress	进度
+Complete	已完成
+Not started	尚未开始
+Running	运行中
+Failed	失败
+Errors	错误
+Warnings	警告
+Critical Warnings	严重警告
+No errors or warnings	无错误或警告
+Synthesis Complete	综合完成
+Implementation Complete	实现完成
+Launch Runs	启动运行
+Reset Runs	重置运行
+Number of jobs	并行作业数
+Report Timing Summary	生成时序摘要报告
+Report Utilization	生成资源利用率报告
+Report Power	生成功耗报告
+Report DRC	生成 DRC 报告
+Hardware Manager	硬件管理器
+Close Hardware Manager	关闭硬件管理器
+Open Target	打开目标
+Close Target	关闭目标
+Auto Connect	自动连接
+Open New Target	打开新目标
+Hardware	硬件
+Hardware Target	硬件目标
+Hardware Server	硬件服务器
+Connect	连接
+Disconnect	断开连接
+Connected	已连接
+Disconnected	未连接
+Program Device	编程器件
+Program	编程
+Refresh Device	刷新器件
+Bitstream file	比特流文件
+Debug probes file	调试探针文件
+Program Configuration Memory Device	编程配置存储器
+Add Configuration Memory Device	添加配置存储器
+Debug Probes	调试探针
+Debug Cores	调试核
+All Debug Cores	所有调试核
+Dashboard Options	仪表板选项
+Trigger Setup	触发设置
+Capture Setup	采集设置
+Basic Trigger Setup	基本触发设置
+Basic Capture Setup	基本采集设置
+Run Trigger	启动触发
+Run Trigger Immediate	立即触发采集
+Stop Trigger	停止触发
+Trigger Position	触发位置
+Trigger Mode	触发模式
+Capture Mode	采集模式
+Capture Depth	采集深度
+Data Depth	数据深度
+Sample Count	采样数
+Export ILA Data	导出 ILA 数据
+Import ILA Data	导入 ILA 数据
+Waveform	波形
+Waveforms	波形
+Simulation Waveform	仿真波形
+Scopes	作用域
+Objects	对象
+Restart	重新开始
+Run	运行
+Run All	运行至结束
+Stop	停止
+Relaunch Simulation	重新启动仿真
+Close Simulation	关闭仿真
+Add to Wave Window	添加到波形窗口
+Zoom In	放大
+Zoom Out	缩小
+Zoom Fit	缩放至全图
+Zoom to Cursor	缩放到光标
+Go to Time	转到指定时间
+Go to Beginning	转到起点
+Go to End	转到终点
+Radix	数制
+Binary	二进制
+Hexadecimal	十六进制
+Unsigned Decimal	无符号十进制
+Signed Decimal	有符号十进制
+Analog	模拟
+Signal Name	信号名称
+Time	时间
+Period	周期
+Force Constant	强制常量
+Force Clock	强制时钟
+Display	显示
+Colors	颜色
+Fonts	字体
+Text Editor	文本编辑器
+Shortcuts	快捷键
+Notifications	通知
+Confirmations	确认提示
+Environment	环境
+Default Project Directory	默认工程目录
+Project Settings	工程设置
+Simulation Settings	仿真设置
+Synthesis Settings	综合设置
+Implementation Settings	实现设置
+Bitstream Settings	比特流设置
+Tooltips and Quick Help	工具提示和快速帮助
+Choose the preferred language for tooltips	选择工具提示的首选语言
+Tooltips initial delay	工具提示出现前的延迟
+Tooltips dismiss delay	工具提示显示时长
+Enable Anti-Aliasing	启用抗锯齿
+Use OS font scaling	使用系统字体缩放
+User defined	用户自定义
+User defined scale factor	自定义缩放比例
+Display density	显示密度
+Message display limit	消息显示数量上限
+Scaling	缩放
+Theme	主题
+Light	浅色
+Dark	深色
+Ready	就绪
+Menu Bar	菜单栏
+Toolbar	工具栏
+Pblock Planner View	Pblock 规划视图
+Routing Resources	布线资源
+Analysis	分析
+Checkpoint	检查点
+Custom Commands	自定义命令
+Dataflow Design	数据流设计
+Design Hubs	设计资源中心
+Floorplanning	布局规划
+Highlight	高亮显示
+I/O Planning	I/O 规划
+Mark	标记
+Open Recent	打开最近使用的项目
+Open Recent Location	打开最近的位置
+Open Recent Target	打开最近的目标
+Remove Layout	删除布局
+Unhighlight Color	取消指定颜色的高亮
+Unselect Type	取消选中指定类型
+About Vivado...	关于 Vivado...
+Add Design Tools or Devices...	添加设计工具或器件...
+Add Existing IP...	添加现有 IP...
+Address Editor	地址编辑器
+Address Map	地址映射
+Address Map (in Browser)	地址映射（浏览器中）
+Applying Design Constraints	应用设计约束
+Associate ELF Files...	关联 ELF 文件...
+Auto-create Pblocks...	自动创建 Pblock...
+Autoplace I/O Ports...	自动放置 I/O 端口...
+Board	开发板
+Break	中断
+Call Stacks	调用堆栈
+Check Timing...	检查时序...
+Clear Placement...	清除布局...
+Clock Network	时钟网络
+Clock Regions	时钟区域
+Close All	全部关闭
+Close Checkpoint	关闭检查点
+Close Design	关闭设计
+Close Project Manager	关闭工程管理器
+Compare Block Designs...	比较模块设计...
+Compile Simulation Libraries...	编译仿真库...
+Config Timing...	配置时序分析...
+Configurations	配置
+Constraints Wizard...	约束向导...
+Create Hardware Target...	创建硬件目标...
+Create I/O Ports...	创建 I/O 端口...
+Create IP-XACT Parameter Definition...	创建 IP-XACT 参数定义...
+Create Interface Definition...	创建接口定义...
+Create Pblocks...	创建 Pblock...
+Create Runs...	创建运行...
+Create Slack Histogram...	创建时序裕量直方图...
+Create User Defined Probe...	创建用户自定义探针...
+Create and Package New IP...	创建并封装新 IP...
+Customize Commands...	自定义命令...
+Dataflow Hierarchy Browser	数据流层次浏览器
+Debug	调试
+Delete All Breakpoints	删除所有断点
+Design	设计
+Design Flows Overview	设计流程概览
+Designing with IP	使用 IP 进行设计
+Device Constraints	器件约束
+Diagram	框图
+Disable Platform Interfaces	禁用平台接口
+Dynamic Function eXchange	动态功能交换
+Dynamic Function eXchange Wizard...	动态功能交换向导...
+Edit Device Properties...	编辑器件属性...
+Edit Timing Constraints	编辑时序约束
+Elaboration Settings...	设计展开设置...
+Enable Dynamic Function eXchange...	启用动态功能交换...
+Export Bitstream File...	导出比特流文件...
+Export Block Design...	导出模块设计...
+Export Constraints...	导出约束...
+Export Hardware...	导出硬件...
+Export I/O Ports...	导出 I/O 端口...
+Export IBIS Model...	导出 IBIS 模型...
+Export Lab Edition...	导出至 Lab Edition...
+Export Netlist...	导出网表...
+Export Pblocks...	导出 Pblock...
+Export Platform...	导出平台...
+Export Schematic...	导出原理图...
+Export Simulation...	导出仿真...
+Find In Files Results	文件搜索结果
+Find Results	查找结果
+Find in Files...	在文件中查找...
+Fit Highlight	缩放至高亮对象
+Fit Markers	缩放至标记
+Fit Selection	缩放至所选对象
+Fix Ports	固定端口位置
+Generate Device Image	生成器件镜像
+Generate Device Image Settings...	器件镜像生成设置...
+Generate Memory Configuration File...	生成存储器配置文件...
+Generate RTL Kernel...	生成 RTL 内核...
+Generic Report Results	通用报告结果
+Get Technical Support...	获取技术支持...
+Go to Definition	转到定义
+Go to Source	转到源文件
+Hard Block Planner	硬核规划器
+Hide ECO Navigator	隐藏 ECO 导航器
+Hide Flow Navigator	隐藏流程导航
+Hide World View	隐藏全局视图
+High Fanout Nets	高扇出网络
+High-Level Synthesis (C based)	高层次综合（基于 C）
+I/O and Clock Planning	I/O 与时钟规划
+IP Parameter Update...	更新 IP 参数...
+IP Status	IP 状态
+Import I/O Ports...	导入 I/O 端口...
+Import Schematic...	导入原理图...
+Import VMA...	导入 VMA...
+Installation and Licensing	安装与许可
+Intelligent Design Runs	智能设计运行
+Intelligent Design Runs Reports	智能设计运行报告
+Launch Vitis IDE	启动 Vitis IDE
+Leave Feedback...	提交反馈...
+Linter	RTL 检查器
+Locals	局部变量
+Manage License...	管理许可证...
+Math Engine	数学运算引擎
+Memory Byte Planner	存储器字节规划器
+Methodology	设计方法检查
+Metric Results	指标结果
+Metrics	指标
+Migrate to RTL...	迁移至 RTL...
+New Configuration	新建配置
+New Dashboard...	新建仪表板...
+New Elaborated Design...	新建设计展开视图...
+New File...	新建文件...
+New Location...	新建位置...
+New Synthesized Design...	新建综合设计...
+Noise	噪声
+Obtain a License Key...	获取许可证密钥...
+Open Configuration...	打开配置...
+Open Example...	打开示例...
+Open File...	打开文件...
+Open I/O Design	打开 I/O 设计
+Open I/O Design...	打开 I/O 设计...
+Open IP-XACT File...	打开 IP-XACT 文件...
+Open Interactive Report...	打开交互式报告...
+Open Journal File	打开命令记录文件
+Open Location...	打开位置...
+Open Log File	打开日志文件
+Open Source...	打开源文件...
+Open Static Simulation...	打开静态仿真...
+Package Pins	封装引脚
+Pan Selection	平移至所选对象
+Physical Constraints	物理约束
+Platform Interfaces	平台接口
+Platform Setup	平台设置
+Power Constraints Advisor...	功耗约束建议工具...
+Power Estimation & Optimization	功耗估计与优化
+Power Optimization	功耗优化
+Programming & Debug	编程与调试
+Property Editor	属性编辑器
+Protocol Instances	协议实例
+Quick Help...	快速帮助...
+RTL Netlist	RTL 网表
+Replace in Files...	在文件中替换...
+Report Bus Skew...	生成总线偏斜报告...
+Report CDC...	生成跨时钟域（CDC）报告...
+Report Clock Interaction...	生成时钟交互报告...
+Report Clock Networks...	生成时钟网络报告...
+Report Clock Utilization	生成时钟资源利用率报告
+Report Clock Utilization...	生成时钟资源利用率报告...
+Report DFX Summary	生成 DFX 摘要报告
+Report DFX Summary...	生成 DFX 摘要报告...
+Report Datasheet...	生成数据手册报告...
+Report Design Analysis	生成设计分析报告
+Report Design Analysis...	生成设计分析报告...
+Report Exceptions...	生成时序例外报告...
+Report High Fanout Nets...	生成高扇出网络报告...
+Report I/O	生成 I/O 报告
+Report IO...	生成 I/O 报告...
+Report IP Status	生成 IP 状态报告
+Report Methodology...	生成设计方法检查报告...
+Report Noise...	生成噪声报告...
+Report Power Optimization...	生成功耗优化报告...
+Report Pulse Width...	生成脉宽报告...
+Report QoR Assessment...	生成设计质量评估报告...
+Report QoR Suggestion...	生成设计质量建议报告...
+Report QoR Suggestions	生成设计质量建议报告
+Report Timing...	生成时序报告...
+Reset Layout	重置布局
+Reset Timing...	重置时序分析...
+Reset to Default	恢复默认值
+Resources Estimation	资源估计
+Run For...	运行指定时长...
+Run Post-Implementation Functional Simulation	运行实现后功能仿真
+Run Post-Synthesis Timing Simulation	运行综合后时序仿真
+Run Tcl Script...	运行 Tcl 脚本...
+Save All Files...	保存所有文件...
+Save Block Design	保存模块设计
+Save Block Design As...	模块设计另存为...
+Save Configuration	保存配置
+Save Configuration As...	配置另存为...
+Save File	保存文件
+Save File As...	文件另存为...
+Save Layout As...	布局另存为...
+Save Project...	保存工程...
+Scope	作用域
+Scratch Pad	临时记录板
+Search Answer Records...	搜索技术答疑记录...
+Select Area	选择区域
+Selection	所选对象
+Serial I/O Links	串行 I/O 链路
+Serial I/O Scans	串行 I/O 扫描
+Set Part Compatibility...	设置器件兼容性...
+Set Up Debug...	设置调试...
+Show Bus Plot...	显示总线图...
+Show Connectivity	显示连接关系
+Show Dataflow Paths	显示数据流路径
+Show Device Layers...	显示器件层...
+Show Flow Navigator	显示流程导航
+Show Hierarchy	显示层次结构
+Show World View	显示全局视图
+Signals	信号
+Stack Frames	堆栈帧
+Step	单步
+System Generator for DSP	DSP 系统生成器
+Timing Closure & Design Analysis	时序收敛与设计分析
+Timing Constraints	时序约束
+Unfix Ports	取消端口位置固定
+Unhighlight	取消高亮
+Unhighlight All	取消所有高亮
+Unmark	取消标记
+Unmark All	取消所有标记
+Unselect All	取消全部选择
+Using IP Integrator	使用 IP 集成器
+Validate Design	验证设计
+Vivado Store	Vivado 商店
+Vivado Store...	Vivado 商店...
+Vivado on the Web...	Vivado 官方网站...
+What's new in 2025.2	2025.2 版本新增功能
+What's New in 2025.2	2025.2 版本新增功能
+Write Tcl...	导出 Tcl...
+Write...	写出...
+Zoom Area	缩放至指定区域
+Add Gadget	添加小组件
+Hide All	全部隐藏
+Board Part	开发板型号
+Incremental implementation:	增量实现:
+Incremental synthesis:	增量综合:
+No missing files or instantiations found.	未发现缺失文件或实例化对象。
+Please come back later	请稍后重试
+Target Simulator: 	目标仿真器: 
+Updating	正在更新
+Updating Hierarchy...	正在更新层次结构...
+make active	设为活动项
+Total Power	总功耗
+Failed Routes	布线失败数
+Run Strategy	运行策略
+RQA Score	RQA 评分
+QoR Suggestions	QoR 建议
+Select an object to see properties	选择对象以查看属性
+to see DRC results	以查看 DRC 结果
+to see timing results	以查看时序结果
+to see utilization results	以查看资源利用率结果
+to see power results	以查看功耗结果
+Automatically selected checkpoint	自动选择的检查点
+Mixed	混合
+None	无
+Not defined	未定义
+New Dataflow Design	新建数据流设计
+Open Dataflow Design	打开数据流设计
+Vivado Implementation Default Reports	Vivado 实现默认报告
+Vivado Implementation Defaults	Vivado 实现默认策略
+Vivado Simulator	Vivado 仿真器
+Vivado Synthesis Default Reports	Vivado 综合默认报告
+Vivado Synthesis Defaults	Vivado 综合默认策略
+(active)	（当前）
+This wizard will guide you through the creation of a new project.	本向导将引导您创建新工程。
+Creating project	正在创建工程
+Project Error	工程错误
+Creating block design	正在创建模块设计
+New Vivado Educational Edition Project	新建 Vivado 教育版工程
+Select Board	选择开发板
+Specify name, location and board for a new Vivado Educational Edition project.	为新的 Vivado 教育版工程指定名称、位置和开发板。
+Choose XDC file	选择 XDC 文件
+Configure an Example Design. Create a new Vivado project from a predefined template	配置示例设计。从预定义模板创建新的 Vivado 工程
+Copy sources into project	将源文件复制到工程
+Copy the source files into your new project directory	将源文件复制到新的工程目录
+Default board or part	默认开发板或器件
+Do not import I/O ports at this time	暂不导入 I/O 端口
+Do not import I/O ports at this time. You can use File | Import I/O ports later, or else create ports manually.	暂不导入 I/O 端口。稍后可通过“文件 → 导入 I/O 端口”导入，也可手动创建端口。
+Do not import settings and sources from XST or Synplify project files at this time.	暂不从 XST 或 Synplify 工程文件导入设置和源文件。
+Do not import settings at this time	暂不导入设置
+Do not specify sources at this time	暂不指定源文件
+I/O Planning Project: Do not specify design sources. You will be able to view part/package resources.	I/O 规划工程：不指定设计源文件，可查看器件和封装资源。
+Import CSV	导入 CSV
+Import I/O ports from a CSV (comma-separated value) file	从 CSV（逗号分隔值）文件导入 I/O 端口
+Import I/O ports from an XDC file	从 XDC 文件导入 I/O 端口
+Import Synplify	导入 Synplify
+Import Timing	导入时序
+Import XDC	导入 XDC
+Import XST	导入 XST
+Import settings and sources from XST (Xilinx Synthesis Technology) project file	从 XST（Xilinx 综合技术）工程文件导入设置和源文件
+Import settings from Synplify project file	从 Synplify 工程文件导入设置
+Import sources and settings from an ISE project file	从 ISE 工程文件导入源文件和设置
+Import sources and settings from an XST (Xilinx Synthesis Technology) project file	从 XST（Xilinx 综合技术）工程文件导入源文件和设置
+Import timing results	导入时序结果
+Imported Project. Create a project from a Synplify, XST or ISE Project File.	导入工程。从 Synplify、XST 或 ISE 工程文件创建工程。
+Next Page	下一页
+Post-synthesis Project: You will be able to add sources, view device resources, run design analysis, planning and implementation.	综合后工程：可添加源文件、查看器件资源，以及进行设计分析、规划和实现。
+Project Template Tree	工程模板树
+Project is an extensible Vitis platform	工程用作可扩展 Vitis 平台
+RTL Project: You will be able to add sources, create block designs in IP Integrator, generate IP, run RTL analysis, synthesis, implementation, design planning and analysis.	RTL 工程：可添加源文件、在 IP 集成器中创建模块设计、生成 IP，以及进行 RTL 分析、综合、实现和设计规划分析。
+Select file containing ISE placement results to import into new project	选择包含 ISE 布局结果的文件并导入新工程
+Specify CSV file	指定 CSV 文件
+Specify ISE file	指定 ISE 文件
+Specify Synplify file	指定 Synplify 文件
+Specify XST file	指定 XST 文件
+Import Ports	导入端口
+Importing ISE Results	正在导入 ISE 结果
+<Local to Project>	<工程本地>
+A design is open.	当前已打开一个设计。
+A project is open.	当前已打开一个工程。
+Board connections will be created	将创建开发板连接
+Can't Create Directory	无法创建目录
+If you don't specify a top module, Vivado will choose the first file found in the directory. Are you sure you want to cancel?	如果不指定顶层模块，Vivado 将选择目录中找到的第一个文件。确定要取消吗？
+If you don't specify a top module, your placement and timing results will not be imported. Are you sure you want to cancel?	如果不指定顶层模块，将不会导入布局和时序结果。确定要取消吗？
+New Project Summary	新建工程摘要
+No constraints files will be added. Use Add Sources to add them later.	暂不添加约束文件。稍后可使用“添加源文件”添加。
+No ports will be imported.	暂不导入端口。
+No source files or directories will be added. Use Add Sources to add them later.	暂不添加源文件或目录。稍后可使用“添加源文件”添加。
+To create the project, click Finish	单击“完成”创建工程
+To create the project, click Finish.	单击“完成”创建工程。
+Add Constraints (optional)	添加约束（可选）
+Specify or create	指定或创建
+constraint files for physical and timing constraints.	用于物理约束和时序约束的约束文件。
+Add Hardware Sources	添加硬件源文件
+Specify hardware container files, or directories containing hardware container files, to add to your project. You can also add sources later.	指定要添加到工程的硬件容器文件，或包含这些文件的目录。也可以稍后添加源文件。
+Import Project	导入工程
+Import sources and settings from a Synplify project file	从 Synplify 工程文件导入源文件和设置
+Import sources and settings from a Synplify project file.	从 Synplify 工程文件导入源文件和设置。
+Project File	工程文件
+Synplify Files	Synplify 文件
+The Project File	工程文件
+The project file is missing or invalid. Please specify a valid project file to import.	工程文件缺失或无效。请指定有效的工程文件进行导入。
+CSV Files	CSV 文件
+Import Ports (optional)	导入端口（可选）
+Invalid File Name	无效的文件名
+XDC Files	XDC 文件
+Files Not Found	未找到文件
+Source Files Not Found	未找到源文件
+Import Settings and Sources from XST or Synplify Project	从 XST 或 Synplify 工程导入设置和源文件
+Specify an XST (Xilinx Synthesis Technology) or Synplify project file.	指定 XST（Xilinx 综合技术）或 Synplify 工程文件。
+XST Files	XST 文件
+Add Existing IP (optional)	添加现有 IP（可选）
+Specify existing configurable IP, DSP composite, and Embedded sub-design files to add to your project.	指定要添加到工程的现有可配置 IP、DSP 组合设计和嵌入式子设计文件。
+Import ISE Implementation Results	导入 ISE 实现结果
+Import Timing (TWX)	导入时序（TWX）
+Placement Results Files (NCD)	布局结果文件（NCD）
+Placement file (NCD)	布局文件（NCD）
+Select TWX or TWR output from TRCE to import into new project	选择 TRCE 输出的 TWX 或 TWR 文件并导入新工程
+Select placement results file	选择布局结果文件
+Specify placement results (NCD) and optionally timing results (TWX) from a completed ISE place and route run.	指定已完成的 ISE 布局布线运行生成的布局结果（NCD），也可同时指定时序结果（TWX）。
+Timing Results Files (TWX)	时序结果文件（TWX）
+Enter a name for your project and specify a directory where the project data files will be stored.	输入工程名称，并指定存放工程数据文件的目录。
+Project Name	工程名称
+A file has not been specified as 'Top'. Use the 'Add Files' button to select the file that contains the design 'Top' module and part.	尚未指定顶层文件。请使用“添加文件”按钮选择包含设计顶层模块和器件信息的文件。
+Add Netlist Sources	添加网表源文件
+Missing 'Top'	缺少顶层文件
+Missing Directory	缺少目录
+Specify netlist, Block Design, and IP files to add to your project. Use the 'Add Files' button to select the file that contains the design 'Top' module and part.	指定要添加到工程的网表、模块设计和 IP 文件。请使用“添加文件”按钮选择包含设计顶层模块和器件信息的文件。
+Default Part	默认器件
+Board Selection	开发板选择
+Board/Part Selection	开发板/器件选择
+Could not recognize one or more Target Connections. Please check your input.	无法识别一个或多个目标连接。请检查输入。
+Invalid configuration for selected board/part. Please check your input.	所选开发板或器件的配置无效。请检查输入。
+Please select board/part.	请选择开发板或器件。
+Choose a default AMD board for your project.	为工程选择默认 AMD 开发板。
+Choose a default AMD part for your project.	为工程选择默认 AMD 器件。
+Choose a default AMD part or board for your project.	为工程选择默认 AMD 器件或开发板。
+The parts required by the example projects are not available in the current install. Please re-run the installer.	当前安装未包含示例工程所需的器件。请重新运行安装程序。
+There are no licensed parts currently installed. Please re-run the installer.	当前未安装已获许可的器件。请重新运行安装程序。
+no parts	无器件
+I/O Planning Project	I/O 规划工程
+Do not specify design sources. You will be able to view part/package resources.	不指定设计源文件，可查看器件和封装资源。
+Imported Project	导入工程
+Imported Project. Create a project from a Synplify Project File.	导入工程。从 Synplify 工程文件创建工程。
+Post-synthesis Project	综合后工程
+You will be able to add sources, view device resources, run design analysis, planning and implementation.	可添加源文件、查看器件资源，以及进行设计分析、规划和实现。
+Project Type	工程类型
+RTL Project	RTL 工程
+You will be able to add sources, create block designs in IP Integrator, generate IP, run RTL analysis, synthesis, implementation, design planning and analysis.	可添加源文件、在 IP 集成器中创建模块设计、生成 IP，以及进行 RTL 分析、综合、实现和设计规划分析。
+Specify the type of project to create.	指定要创建的工程类型。
+Specify HDL, netlist, Block Design, and IP files, or directories containing those files, to add to your project. Create a new source file on disk and add it to your project. You can also add and create sources later.	指定要添加到工程的 HDL、网表、模块设计和 IP 文件，或包含这些文件的目录。也可以在磁盘上创建新源文件并添加到工程，或稍后再添加和创建源文件。
+Select Design Preset	选择设计预设
+Choose which preset design to use based on the description.	根据说明选择要使用的预设设计。
+Group by	分组依据
+Getting Example Templates	正在获取示例模板
+Group by vendor or design type	按供应商或设计类型分组
+Downloading the latest version of the catalog	正在下载最新版本的目录
+Refresh Catalog	刷新目录
+Design Type	设计类型
+Example Design	示例设计
+Example projects are not available in the current install	当前安装未包含示例工程
+Filter Applications	筛选应用
+Internet access is not available.	无法访问互联网。
+Needs Update	需要更新
+Not Installed	未安装
+Select Project Template	选择工程模板
+Select one of the below predefined templates on which to base your new project.	选择下列预定义模板之一，用于创建新工程。
+Show group by	显示分组依据
+Status Filter	状态筛选
+To fetch the latest available example designs from git repository, click on 'Refresh' button.	单击“刷新”按钮，从 Git 仓库获取最新可用的示例设计。
+Uninstall Button	卸载按钮
+Update is available.	有可用更新。
+example design	示例设计
+Choose a directory for project file and associated data files	为工程文件和相关数据文件选择目录
+Choose project location	选择工程位置
+Create project subdirectory	创建工程子目录
+Illegal Characters	非法字符
+Overwrite Existing Project	覆盖现有工程
+Please choose a project name.	请输入工程名称。
+Please specify a valid location for project files.	请为工程文件指定有效的位置。
+Project Location	工程位置
+Project name and location cannot end with periods or contain characters that might prevent Tcl script execution.	工程名称和位置不能以句点结尾，也不能包含可能妨碍 Tcl 脚本执行的字符。
+Project will be created at	工程将创建于
+UNC paths are not supported. Please use a mapped drive.	不支持 UNC 路径。请使用映射驱动器。
+for project directory	用于工程目录
+for project name	用于工程名称
+in your project path	在工程路径中
+Tool Settings	工具设置
+Elaboration	设计展开
+Bitstream	比特流
+IP Defaults	IP 默认设置
+Source File	源文件
+3rd Party Simulators	第三方仿真器
+Selection Rules	选择规则
+Strategies	策略
+Remote Hosts	远程主机
+Window Behavior	窗口行为
+Try the new Vivado IDE	体验新版 Vivado IDE
+Language Options	语言选项
+Select the top module of your design.	选择设计的顶层模块。
+Generics/Parameters	泛型/参数
+Loop count	循环次数
+Top library	顶层库
+Verilog options	Verilog 选项
+VHDL Options	VHDL 选项
+Choose a device for your project	为工程选择器件
+Constraint Set Chooser	约束集选择器
+Default constraint set	默认约束集
+Default library	默认库
+Migrate the output products to .gen directory structure	将生成文件迁移到 .gen 目录结构
+Project device	工程器件
+Project is a Segmented Configuration project	工程采用分段配置
+Specify values for various settings used throughout the design flow. These settings apply to the current project.	配置设计流程中的各项设置。这些设置适用于当前工程。
+Default Compiled Library Paths	默认已编译库路径
+GCC Install Paths	GCC 安装路径
+Install Paths	安装路径
+Invalid Directory Name	无效的目录名
+Note: Default compiled library path will be applied only at new project creation.	注意：默认已编译库路径仅在创建新工程时应用。
+Specify install paths and default compiled library paths.	指定安装路径和默认已编译库路径。
+Cannot Configure Bitstream Design Properties	无法配置比特流设计属性
+Open a design with a netlist before changing these bitstream properties.	更改这些比特流属性前，请先打开包含网表的设计。
+Unable to find open Design	未找到已打开的设计
+Build Settings Table	构建设置表
+Configure additional bitstream settings.	配置其他比特流设置。
+Note: Additional bitstream settings will be available once you open an implemented design.	注意：打开实现后的设计后，可配置其他比特流设置。
+Boot Mode	启动模式
+Enable Secondary boot device	启用备用启动器件
+Secondary Boot Device	备用启动器件
+Specify Settings Associated to Boot Devices On Board	配置开发板启动器件的相关设置
+Dataflow	数据流
+Minimum width of wide buses	宽总线的最小位宽
+Settings that affect creation of new Dataflow Viewer designs	影响新建数据流视图设计的设置
+Specify various settings associated to creation of Dataflow designs	配置创建数据流设计的相关设置
+Blackbox model (stub file)	黑盒模型（桩文件）
+Constraints Settings	约束设置
+Link IP Model Settings	链接 IP 模型设置
+Load constraints	加载约束
+Netlist elaboration will load constraints.	展开网表时将加载约束。
+Netlist model	网表模型
+Specify various settings associated to Elaboration	配置设计展开的相关设置
+Change Settings	更改设置
+Committing changes	正在提交更改
+Migrate Project Sources	迁移工程源文件
+Migrating project sources	正在迁移工程源文件
+Specify various settings associated to Implementation	配置实现的相关设置
+Specify various settings associated to Simulation	配置仿真的相关设置
+Specify various settings associated to Synthesis	配置综合的相关设置
+Default value can not be empty.	默认值不能为空。
+Provide a valid vendor name	请输入有效的供应商名称
+Provide a valid library name	请输入有效的库名称
+Add Extension	添加扩展名
+After Packaging	封装完成后
+Edit IP in IP Packager	在 IP 封装器中编辑 IP
+Add IP to the IP Catalog of the current project	将 IP 添加到当前工程的 IP 目录
+Automatic Behavior	自动操作
+Category	类别
+Choose key file	选择密钥文件
+Close IP Packager window	关闭 IP 封装器窗口
+Create a list of file extensions that will be automatically filtered when adding a directory to a File Group.	指定文件扩展名列表，将目录添加到文件组时会自动过滤这些类型的文件。
+Create archive of IP	创建 IP 归档
+Default Values	默认值
+Delete project after packaging	封装后删除工程
+Encrypt IP	加密 IP
+File Extensions to Filter on Add Directory	添加目录时过滤的文件扩展名
+IP > Packager	IP → 封装器
+IP location	IP 位置
+Include Source project archive	包含源工程归档
+Invalid Key File	无效的密钥文件
+Key File	密钥文件
+Packager	封装器
+Please specify a valid key file.	请指定有效的密钥文件。
+Specify settings related to IP Packager.	配置 IP 封装器的相关设置。
+The following values will be automatically applied after finishing the IP Packager Wizard.	IP 封装向导完成后，将自动应用以下设置。
+Vendor	供应商
+Global IP Synthesis Cache location can not be empty.	全局 IP 综合缓存位置不能为空。
+Clear Cache Warning	清除缓存警告
+Choose Location	选择位置
+Local	本地
+Remote	远程
+Automatically generate simulation scripts for IP	自动为 IP 生成仿真脚本
+Cache location	缓存位置
+Cache scope	缓存范围
+Clear Cache	清除缓存
+Configure Design for Hierarchical Access	配置设计以支持层次访问
+Default IP Location	默认 IP 位置
+Delete IP Cache	删除 IP 缓存
+Enable IP and BD resource estimation	启用 IP 和模块设计资源估算
+Generate for target simulator only	仅为目标仿真器生成
+Generate log file	生成日志文件
+IP Cache	IP 缓存
+IP Synthesis Cache Location	IP 综合缓存位置
+Location that IP added to the project will have output products and customization stored.	存放工程中 IP 的生成文件和定制配置的位置。
+Out of Context per IP Synthesis needs to be used to take advantage of IP Caching.	必须对各个 IP 采用独立综合，才能利用 IP 缓存。
+Resource Estimation	资源估算
+Select preferred simulation model of IP	选择首选 IP 仿真模型
+Specify various settings associated to IP.	配置 IP 的相关设置。
+Upgrade IP	升级 IP
+Use Precompiled IP simulation libraries	使用预编译的 IP 仿真库
+Add directories to the list of repositories. You may then add additional IP to a selected repository. If an IP is disabled then a tool-tip will alert you to the reason.	将目录添加到仓库列表后，可向选定仓库添加其他 IP。如果某个 IP 不可用，工具提示会说明原因。
+IP Repositories	IP 仓库
+IP in Selected Repository	所选仓库中的 IP
+Repository	仓库
+Change Report Strategy	更改报告策略
+Changing the run report strategy will remove all existing reports. This step can not be undone.	更改运行的报告策略将删除所有现有报告。此操作无法撤销。
+Choose Report Strategy	选择报告策略
+Report Settings	报告设置
+Save Report Strategy As	报告策略另存为
+Set selected strategy	应用所选策略
+Board Repository	开发板仓库
+Specify a list of board repository paths.	指定开发板仓库路径列表。
+Example Project Repository	示例工程仓库
+Specify a list of example projects repository paths.	指定示例工程仓库路径列表。
+Action when path delay hyperlink is clicked	单击路径延迟链接时的操作
+Comfortable	舒适
+Compact	紧凑
+Frame divider width	面板分隔线宽度
+Hyperlinks	超链接
+Inter-frame Divider Width	面板间分隔线宽度
+Override System Rendering Options	覆盖系统渲染选项
+Rendering	渲染
+Spacing	间距
+Specify display settings	配置显示设置
+Thick	粗
+Thin	细
+Use default OS font scaling	使用操作系统默认字体缩放
+Chinese (Simplified)	简体中文
+Documentation	文档
+English	英语
+Japanese	日语
+Language	语言
+Note: Quick Help is English	注意：快速帮助使用英语
+Open documentation with AMD Documentation Navigator	使用 AMD 文档导航器打开文档
+Open documentation with your web browser	使用网页浏览器打开文档
+Open with AMD Documentation Navigator	使用 AMD 文档导航器打开
+Open with your web browser	使用网页浏览器打开
+Specify the number of milliseconds to delay (after the cursor has paused) before displaying the tooltip	指定鼠标停止移动后，延迟多少毫秒显示工具提示
+Specify the number of milliseconds to delay before taking away the tooltip	指定工具提示显示多少毫秒后消失
+Specify various settings related to tooltips, quick help and documentation.	配置工具提示、快速帮助和文档的相关设置。
+ms	毫秒
+Default IP Example Project Directory	默认 IP 示例工程目录
+Default IP Repository Search Paths	默认 IP 仓库搜索路径
+Last project's directory	上次工程的目录
+Note: Default IP repository search paths will be applied only at new project creation.	注意：默认 IP 仓库搜索路径仅在创建新工程时应用。
+Specify default IP example directory and IP repository search paths.	指定默认 IP 示例目录和 IP 仓库搜索路径。
+Specify directory as default example IP project directory	将指定目录用作默认 IP 示例工程目录
+Specify project directory	指定工程目录
+Use the 'started-in' directory as default project directory	使用程序启动目录作为默认工程目录
+Debug Files	调试文件
+Miscellaneous	其他
+Remove debug files older than 14 days in your working directory	删除工作目录中超过 14 天的调试文件
+Specify various miscellaneous settings.	配置其他设置。
+Enable RPM support in GUI	在图形界面中启用 RPM 支持
+Number of recent directories to list	最近目录显示数量
+Number of recent files to list	最近文件显示数量
+Number of recent projects to list	最近工程显示数量
+Recent	最近使用
+Record Highlight and Mark actions	记录高亮和标记操作
+Record Tcl commands for Highlight and Mark actions on netlist objects	记录对网表对象进行高亮和标记操作的 Tcl 命令
+Relationally Placed Macro (RPM)	相对布局宏（RPM）
+Reopen last project on startup	启动时重新打开上次工程
+Specify directory as default project directory	将指定目录用作默认工程目录
+Specify various settings related to project.	配置工程相关设置。
+Target Language	目标语言
+Use last project's directory as default project directory	使用上次工程目录作为默认工程目录
+Use your desktop directory as default project directory	使用桌面目录作为默认工程目录
+Use your home directory as default project directory	使用用户主目录作为默认工程目录
+VHDL Language	VHDL 语言
+Verilog Language	Verilog 语言
+Choose a report strategy based on various settings.	根据各项设置选择报告策略。
+Report Strategies	报告策略
+Choose a strategy based on various settings.	根据各项设置选择策略。
+Run Strategies	运行策略
+Specify settings for selection rules.	配置选择规则。
+Choose default shortcut schema and create/edit shortcuts for different commands.	选择默认快捷键方案，并为不同命令创建或编辑快捷键。
+Add sources from subdirectories	从子目录添加源文件
+Ask before saving modified files	保存已修改文件前询问
+Automatically save files	自动保存文件
+File Saving	文件保存
+Find in Files	在文件中查找
+Max File Size	最大文件大小
+Prompt to save files	提示保存文件
+Recurse all subdirectories and add found HDL files to your project	递归搜索所有子目录，将找到的 HDL 文件添加到工程
+Save modified files without asking	直接保存已修改文件，无需询问
+Source Files	源文件
+Specify various settings related to source files.	配置源文件相关设置。
+Customize run and report strategies.	自定义运行和报告策略。
+Customize run strategies.	自定义运行策略。
+Alerts	提醒
+Personalize vivado warnings.	自定义 Vivado 警告。
+Personalize window behavior settings.	自定义窗口行为。
+Configure Download Location	配置下载位置
+Configure Proxy	配置代理
+Download location	下载位置
+Host Name	主机名
+Invalid Proxy	无效的代理
+Invalid download location, choose a valid location	下载位置无效，请选择有效的位置
+Invalid download location, choose a valid location.	下载位置无效，请选择有效的位置。
+Manual proxy configuration	手动配置代理
+No proxy	不使用代理
+Please enter a value between 1 and 65535	请输入 1 至 65535 之间的值
+Please enter valid proxy url.	请输入有效的代理地址。
+Specify download location	指定下载位置
+Clear search	清除搜索
+No content	无内容
+No matches found.	未找到匹配项。
+Changes are only applied for this session.	更改仅应用于本次会话。
+Applying Changes	正在应用更改
+Applying Settings Changes	正在应用设置更改
+Options Tree	选项树
+Project Tree	工程树
+Restore	恢复
+Settings Page List	设置页面列表
+3rd Party Tools	第三方工具
+Code Completion	代码补全
+Colors and Display Properties	颜色和显示属性
+Fonts and Colors	字体和颜色
+I/O Placement	I/O 布局
+Languages	语言
+Record Highlight and Mark Tcl commands	记录高亮和标记的 Tcl 命令
+Syntax Checking	语法检查
+Tabs	制表符
+Warnings and Confirmations	警告和确认
+Check All	全选
+Check box	复选框
+OK to restore the selected items?	确定要恢复所选项目吗？
+Please select all settings you would like to restore to factory default settings.	请选择要恢复为出厂默认值的所有设置。
+Uncheck All	全部取消选择
+Error Saving Theme	保存主题时出错
+Save the current color as a custom theme.	将当前配色保存为自定义主题。
+Theme type	主题类型
+for theme name	用于主题名称
+Delete the selected custom theme	删除选中的自定义主题
+Save the current setting as a new custom theme	将当前设置保存为新的自定义主题
+Select the colors and font that have been saved.	选择已保存的配色和字体。
+Themes	主题
+Background	背景
+Foreground	前景
+Axis color	坐标轴颜色
+Axis tick color	坐标轴刻度颜色
+Grid color	网格颜色
+Cursor Color	光标颜色
+Command Text	命令文本
+Error Text	错误文本
+Warning Text	警告文本
+Selection Color	选中颜色
+Find Highlight Background	查找高亮背景
+Matching Words Background	匹配单词背景
+Markers	标记
+Object Types	对象类型
+Annotation Colors	标注颜色
+Axis	坐标轴
+Bar Colors	柱形颜色
+Buses	总线
+Cell text	单元文本
+Cell Hierarchy View Colors	单元层次视图颜色
+Clock Pair Colors	时钟对颜色
+Clock Interaction Chart	时钟交互图
+Graphical Editors	图形编辑器
+Grid	网格
+Hierarchy Cell Fill	层次单元填充
+Hierarchy View	层次视图
+Highlight colors	高亮颜色
+Histogram Chart	直方图
+Leaf Cell Fill	叶级单元填充
+Line Color	线条颜色
+Mark colors	标记颜色
+Nets	网络
+Pin text	引脚文本
+Port text	端口文本
+Ports	端口
+Reference text	参考文本
+Windows	窗口
+Tick	刻度
+Color	颜色
+Choose a theme for different look and feel.	选择主题以更改界面外观。
+Specify colors for various settings across the tool.	配置工具中各项显示内容的颜色。
+Specify colors for clock interaction chart.	配置时钟交互图的颜色。
+Specify tcl console colors.	配置 Tcl 控制台的颜色。
+Specify colors associated to device view.	配置器件视图的颜色。
+Specify colors for hierarchy view.	配置层次视图的颜色。
+Specify highlight colors.	配置高亮颜色。
+Specify colors for histogram chart.	配置直方图的颜色。
+Specify log view colors.	配置日志视图的颜色。
+Specify mark colors.	配置标记颜色。
+Specify colors associated to NoC view.	配置 NoC 视图的颜色。
+Specify colors associated to package.	配置封装视图的颜色。
+Specify colors for schematic view.	配置原理图视图的颜色。
+Specify colors for waveform view.	配置波形视图的颜色。
+Create a New Vivado Project	创建新的 Vivado 工程
+To create a Vivado project you will need to provide a name and a location for your project files. Next, you will specify the type of flow you'll be working with. Finally, you will specify your project sources and choose a default part.	创建 Vivado 工程时，首先需要指定工程名称和文件存放位置，然后选择所用的设计流程类型，最后指定源文件并选择默认器件。
+Create a new Vivado project from a predefined template.	从预定义模板创建新的 Vivado 工程。
+Create a Vivado project from a Synplify Project File.	从 Synplify 工程文件创建 Vivado 工程。
+I/O Planning Project Do not specify design sources. You will be able to view part/package resources.	I/O 规划工程：不指定设计源文件，可查看器件和封装资源。
+Post-synthesis Project You will be able to add sources, view device resources, run design analysis, planning and implementation.	综合后工程：可添加源文件、查看器件资源，以及进行设计分析、规划和实现。
+RTL Project You will be able to add sources, create block designs in IP Integrator, generate IP, run RTL analysis, synthesis, implementation, design planning and analysis.	RTL 工程：可添加源文件、在 IP 集成器中创建模块设计、生成 IP，以及进行 RTL 分析、综合、实现和设计规划分析。
+Example Project Create a new Vivado project from a predefined template.	示例工程：从预定义模板创建新的 Vivado 工程。
+Imported Project Create a Vivado project from a Synplify Project File.	导入工程：从 Synplify 工程文件创建 Vivado 工程。
+The parts required by the example projects are not available in the current install. Please re-run the installer via the Help>Add Design Tools or Devices command to add the appropriate device family.	当前安装未包含示例工程所需的器件。请通过“帮助 → 添加设计工具或器件”重新运行安装程序，添加相应的器件系列。
+There are no licensed parts currently installed. Please re-run the installer via the Help>Add Design Tools or Devices command to add the appropriate device family.	当前未安装已获许可的器件。请通过“帮助 → 添加设计工具或器件”重新运行安装程序，添加相应的器件系列。
+Refer to the AMD documentation organized to a set of user design processes	查阅按用户设计流程分类的 AMD 文档
+Refer to the AMD documentation organized to a set of user design processes to help you find relevant content for your design needs:	查阅按用户设计流程分类的 AMD 文档，查找符合设计需求的相关内容：
+to help you find relevant content for your design needs	查找符合设计需求的相关内容
+Versal Adaptive SoC Design Process Hubs	Versal 自适应 SoC 设计流程中心
+Automatic code completion delay	自动代码补全延迟
+Delay before automatic code completion settings are displayed	显示自动代码补全选项前的延迟
+Disable code completion	禁用代码补全
+Display a list of choices as you type	输入时显示候选列表
+Display a list of choices on demand (use Ctrl+Space to display choices)	按需显示候选列表（使用 Ctrl+Space）
+Only display a list of matching choices when Ctrl_Space is pressed	仅在按下 Ctrl+Space 时显示匹配的候选列表
+A list of matches for what you have typed is displayed as you type	输入时显示与当前文本匹配的候选列表
+Off	关闭
+Size	大小
+Current Breakpoint Background	当前断点背景
+Current Line Background	当前行背景
+Cursor	光标
+Fonts and Colors > Fonts and Colors	字体和颜色 → 字体和颜色
+Preview	预览
+Selection Background	选中区域背景
+The background color	背景颜色
+The background color for Find highlighting	查找高亮的背景颜色
+The background color for selected text	选中文本的背景颜色
+The background color for the current breakpoint line	当前断点行的背景颜色
+The background color for the current line	当前行的背景颜色
+The background color for the matching words	匹配单词的背景颜色
+The color for the cursor	光标颜色
+The text color	文本颜色
+Text Styles	文本样式
+Bring an open editor to the front and show the location on simulation break	仿真暂停时，将已打开的编辑器置于前台并显示当前位置
+Check to display line numbers	勾选后显示行号
+Check to display matches for the selected word	勾选后显示所选单词的匹配项
+Check to indent text when pasting	勾选后在粘贴时缩进文本
+Check to perform folding of code spans	勾选后启用代码折叠
+Choose the text editor to use.	选择要使用的文本编辑器。
+Custom Editor	自定义编辑器
+Display line numbers	显示行号
+Display matches for the selected word	显示所选单词的匹配项
+Display the line and bring the editor into view on simulation break	仿真暂停时显示当前代码行并将编辑器置于前台
+Indent when pasting text	粘贴文本时缩进
+Maximum number of undo operations to allow	允许的最大撤销次数
+Number of recent finds to list	最近查找记录显示数量
+Open editor automatically and show location on simulation break	仿真暂停时自动打开编辑器并显示当前位置
+Perform code folding	启用代码折叠
+Show file path in text editor	在文本编辑器中显示文件路径
+Skip blank lines when using line comments	添加行注释时跳过空行
+Synchronize scrolling on edit when a code editor is split into two or more views	代码编辑器拆分为多个视图时，编辑时同步滚动
+Synchronize split views when editing	编辑时同步拆分视图
+Unlimited	不限
+Use 'Alt' key for column selection (default is 'Ctrl')	使用 Alt 键进行列选择（默认使用 Ctrl）
+Check to display notes	勾选后显示提示
+Check to display warnings	勾选后显示警告
+Color Settings	颜色设置
+Display Settings	显示设置
+Display notes	显示提示
+Display warnings	显示警告
+Syntax checking	语法检查
+Alert when non-active synthesis or implementation completes successfully	非当前综合或实现运行成功完成时提醒
+Alert when non-active synthesis or implementation fails	非当前综合或实现运行失败时提醒
+Alert when running on an unsupported operating system	在不受支持的操作系统上运行时提醒
+Ask before adding waveform configuration file (wcfg) to project	向工程添加波形配置文件（wcfg）前询问
+Ask before closing simulation	关闭仿真前询问
+Ask before elaboration	展开设计前询问
+Ask before overwriting synthesis or implementation results	覆盖综合或实现结果前询问
+Ask before programming eFUSE	写入 eFUSE 前询问
+Ask before relaunching simulation that's already running	重新启动已运行的仿真前询问
+Ask before resetting simulation	重置仿真前询问
+Ask before selecting too many objects	选择大量对象前询问
+Ask to do a 'Save Project As' after opening a read-only project	打开只读工程后，提示执行“工程另存为”
+Ask to migrate debug commands when saving constraints	保存约束时，询问是否迁移调试命令
+Ask to rerun out-of-date implementation	询问是否重新运行已过期的实现
+Ask to rerun out-of-date parent runs	询问是否重新运行已过期的父运行
+Ask to rerun out-of-date synthesis before implementation	实现前，询问是否重新运行已过期的综合
+Ask to save sources before source analysis	分析源文件前，询问是否保存源文件
+Ask to update existing or create new file when saving constraints	保存约束时，询问更新现有文件还是创建新文件
+Confirm before deleting dashboard	删除仪表板前确认
+Confirm before expanding IP hierarchy	展开 IP 层次前确认
+Notify when waveforms will be closed	关闭波形前通知
+Prompt for automatic assignment of unmapped slave segments	提示自动分配未映射的从设备地址段
+Prompt for automatic detection of serial I/O links	提示自动检测串行 I/O 链路
+Prompt to create new run for project property changes	工程属性变化时，提示创建新的运行
+Prompt when error occurred while closing hardware target	关闭硬件目标出错时提示
+Prompt when highlight or mark actions are recorded for more than 1000 objects	记录超过 1000 个对象的高亮或标记操作时提示
+Prompt when presets are applied on CIPS IP	向 CIPS IP 应用预设时提示
+Show dialog before switching to a different design	切换到其他设计前显示对话框
+Show Launch Runs dialog when launching run	启动运行时显示“启动运行”对话框
+Show dialog before installing Tcl Applications	安装 Tcl 应用前显示对话框
+Show dialog before installing Vivado Store Applications	安装 Vivado 商店应用前显示对话框
+Show dialog before saving design constraints	保存设计约束前显示对话框
+Show dialog when set up debug is required	需要设置调试时显示对话框
+Show information dialog after 'Set Configuration Modes'	设置配置模式后显示信息对话框
+Show information dialog when bitstream completes successfully	比特流生成成功后显示信息对话框
+Show information dialog when bitstream fails	比特流生成失败后显示信息对话框
+Show information dialog when configuration memory device is added successfully	添加配置存储器成功后显示信息对话框
+Show information dialog when generate scripts completes successfully	脚本生成成功后显示信息对话框
+Show information dialog when implementation completes successfully	实现成功后显示信息对话框
+Show information dialog when synthesis completes successfully	综合成功后显示信息对话框
+Show critical warning and error messages dialog for 'IP Packager'	显示 IP 封装器的严重警告和错误消息对话框
+Show critical warning and error messages dialog for designs	显示设计的严重警告和错误消息对话框
+Show warning dialog before closing a design	关闭设计前显示警告对话框
+Show warning dialog before closing a project	关闭工程前显示警告对话框
+Show warning dialog before exiting	退出前显示警告对话框
+Show warning dialog before upgrading an old project	升级旧工程前显示警告对话框
+Show warning dialog when implementation fails	实现失败时显示警告对话框
+Show warning dialog when synthesis fails	综合失败时显示警告对话框
+Warn before viewing SSN results	查看同步开关噪声结果前警告
+Error	错误
+Warning	警告
+Critical warning	严重警告
+Critical Warning	严重警告
+Info	信息
+Information	信息
+Advisory	建议
+ELABORATION	设计展开
+Display Touchpoint survey dialog after 5th successful bitstream generation	第 5 次成功生成比特流后显示使用体验调查对话框
+Ask to click on 'OK' to apply QoS Initial Boot settings	提示单击“确定”以应用 QoS 初始启动设置
+Show high number of unrouted and partially routed nets message dialog	未布线或部分布线的网络数量较多时显示消息对话框
+Show initial settings dialog when opening 'IP Catalog' from 'Getting Started'	从“开始使用”打开“IP 目录”时显示初始设置对话框
+Show unroute and reroute branches on placement change message dialog	布局更改引起分支取消布线或重新布线时显示消息对话框
+Creating a New Vivado Project	创建新的 Vivado 工程
+Example Project	示例工程
+Compiled library location	已编译库位置
+Configure script to run simulator in GUI mode	配置脚本以图形界面模式运行仿真器
+Create Simulation Set	创建仿真集
+Display menu (default)	显示菜单（默认）
+Enable RPM support in Vivado GUI	在 Vivado 图形界面中启用 RPM 支持
+Enable incremental compilation	启用增量编译
+Generate simulation scripts only	仅生成仿真脚本
+Generics/Parameters options	泛型/参数选项
+Include all design sources for simulation	在仿真中包含所有设计源文件
+More Options	更多选项
+Run report UltraFast methodology after routing	布线后生成 UltraFast 设计方法报告
+Save As New Layout	另存为新布局
+Select RQS File	选择 RQS 文件
+Select an option above to see a description of it	选择上方选项以查看其说明
+Show description for delay	显示延迟说明
+Simulation set	仿真集
+Simulation top module name	仿真顶层模块名称
+Simulation-Only Sources	仅用于仿真的源文件
+Top module (design under test)	顶层模块（待测设计）
+Use default OS font scaling (100%)	使用操作系统默认字体缩放（100%）
+Verilog Compiler Simulator (VCS)	Verilog 编译仿真器（VCS）
+Specify various settings related to writing Bitstream	配置生成比特流的相关设置
+Loading messages	正在加载消息
+Updating Hierarchy	正在更新层次结构
+Waiting to update	等待更新
+Home directory (/home/aup)	用户主目录（/home/aup）
+Desktop directory (/home/aup/Desktop)	桌面目录（/home/aup/Desktop）
+General Options	常规选项
+General_Options	常规选项
+Monitor Type	监测类型
+Same Number of Comparators for All Probe Ports	所有探针端口使用相同数量的比较器
+Use to set the same number of comparators for all probes	为所有探针设置相同数量的比较器
+Number of Comparators	比较器数量
+The number of comparators to be used by each probe	每个探针使用的比较器数量
+Trigger Out Port	触发输出端口
+Trigger In Port	触发输入端口
+Input Pipe Stages	输入流水线级数
+Number of input pipe stages	输入流水线级数
+Trigger And Storage Settings	触发和存储设置
+Trigger_And_Storage_Settings	触发和存储设置
+Capture Control	采集控制
+Use to filter the data that is stored in the ILA capture RAM using capture conditions. When this is selected, 1 comparator is always used by the capture condition.So minimum number of comparators used by each probe will be 2.	根据采集条件筛选写入 ILA 采集存储器的数据。启用后，采集条件始终占用 1 个比较器，因此每个探针至少需要 2 个比较器。
+Enable Time tagging	启用时间标记
+Use to filter the data that is stored in the ILA capture RAM along with time tag information only when there is a transition/activity in the data being monitored.	仅在被监测数据发生变化或活动时，将数据及时间标记写入 ILA 采集存储器。
+Time tag counter Width	时间标记计数器位宽
+Width of the time tag counter	时间标记计数器的位宽
+ILA Clock Frequency in Hertz	ILA 时钟频率（Hz）
+ILA sampling clock frequency in hertz	ILA 采样时钟频率，单位为 Hz
+Advanced Trigger	高级触发
+Use to enable ILA Advanced Trigger Features - Trigger Sequencing	启用 ILA 高级触发功能：触发序列
+High Speed Designs Debugging Options	高速设计调试选项
+High Speed ILA	高速 ILA
+Configures ILA IP to debug High frequency design probes in User design using Double Data Rate methodology.	配置 ILA IP，采用双倍数据速率方式调试用户设计中的高频探针信号。
+Enable Clk divder for DDR	为 DDR 启用时钟分频器
+Clock Frequency	时钟频率
+When enabled instantiates an MMCM inside ILA IP to generate clocks required for Double Data Rate opertion to sample incoming probes. When disabled user needs to provide two clocks one half of the probe frequency and other 180 degrees phase shifted with half og the probe frequency.	启用时，在 ILA IP 中实例化 MMCM，生成双倍数据速率采样所需的时钟。禁用时，用户需提供两个时钟：频率均为探针频率的一半，且两者相位相差 180 度。
+In case of Internal clock divder mode incoming frequency is required to generate proper divided clocks for Double Data Rate operation	采用内部时钟分频模式时，需要指定输入频率，以生成双倍数据速率采样所需的分频时钟。
+Probe Port	探针端口
+Probe Width [1..4096]	探针位宽 [1..4096]
+Probe Trigger or Data	探针用于触发或数据采集
+AXI Slot	AXI 插槽
+AXI Protocol	AXI 协议
+AXI ID WIDTH	AXI ID 位宽
+AXI DATA WIDTH	AXI 数据位宽
+AXI ADDR WIDTH	AXI 地址位宽
+AXIS TDATA WIDTH	AXIS TDATA 位宽
+AXIS TID WIDTH	AXIS TID 位宽
+AXIS TUSER WIDTH	AXIS TUSER 位宽
+AXIS TDEST WIDTH	AXIS TDEST 位宽
+GUI configuration mode is limited to 64 probe ports.	图形界面最多支持配置 64 个探针端口。
+To configure more than 64 probe ports use Vivado Tcl Console	配置超过 64 个探针端口时，请使用 Vivado Tcl 控制台
+This dialog does not support configuration of more than 64 ILA probe ports.	此对话框不支持配置超过 64 个 ILA 探针端口。
+To configure more than 64 probe ports use a similar TCL command in Vivado Tcl Console	配置超过 64 个探针端口时，请在 Vivado Tcl 控制台中使用类似的 Tcl 命令
+To configure Capture Qualification we need atleast 1 Comparator	配置采集限定条件至少需要 1 个比较器
+ILA supports 1024 probes. But the width and Comparator Count of only first 64 probes can be configured though GUI. To configure the probe width and Comparator Count of other probes use Vivado Tcl Console.Else they will have a default width of 1	ILA 支持 1024 个探针，但图形界面仅支持配置前 64 个探针的位宽和比较器数量。其他探针请通过 Vivado Tcl 控制台配置，否则默认位宽为 1。
+Number of Slots	插槽数量
+Number of Probes	探针数量
+Sample Data Depth	采样数据深度
+clk frequency	时钟频率
+AXI4 Stream monitor	AXI4-Stream 监测器
+Block Diagram	框图
+Product Guide	产品指南
+Version Information	版本信息
+Component Name	组件名称
+IP Symbol	IP 符号
+Customization Parameters	定制参数
+Native	原生
+Trigger and Data	触发和数据
+Trigger Only	仅触发
+Data Only	仅数据
+Probe0 Width	探针 0 位宽
+Probe0 Type	探针 0 类型
+Probe1 Width	探针 1 位宽
+Probe1 Type	探针 1 类型
+Probe2 Width	探针 2 位宽
+Probe2 Type	探针 2 类型
+Probe3 Width	探针 3 位宽
+Probe3 Type	探针 3 类型
+Probe4 Width	探针 4 位宽
+Probe4 Type	探针 4 类型
+Probe5 Width	探针 5 位宽
+Probe5 Type	探针 5 类型
+Probe6 Width	探针 6 位宽
+Probe6 Type	探针 6 类型
+Probe7 Width	探针 7 位宽
+Probe7 Type	探针 7 类型
+Probe8 Width	探针 8 位宽
+Probe8 Type	探针 8 类型
+Probe9 Width	探针 9 位宽
+Probe9 Type	探针 9 类型
+Probe10 Width	探针 10 位宽
+Probe10 Type	探针 10 类型
+Probe11 Width	探针 11 位宽
+Probe11 Type	探针 11 类型
+Probe12 Width	探针 12 位宽
+Probe12 Type	探针 12 类型
+Probe13 Width	探针 13 位宽
+Probe13 Type	探针 13 类型
+Probe14 Width	探针 14 位宽
+Probe14 Type	探针 14 类型
+Probe15 Width	探针 15 位宽
+Probe15 Type	探针 15 类型
+Probe16 Width	探针 16 位宽
+Probe16 Type	探针 16 类型
+Probe17 Width	探针 17 位宽
+Probe17 Type	探针 17 类型
+Probe18 Width	探针 18 位宽
+Probe18 Type	探针 18 类型
+Probe19 Width	探针 19 位宽
+Probe19 Type	探针 19 类型
+Probe20 Width	探针 20 位宽
+Probe20 Type	探针 20 类型
+Probe21 Width	探针 21 位宽
+Probe21 Type	探针 21 类型
+Probe22 Width	探针 22 位宽
+Probe22 Type	探针 22 类型
+Probe23 Width	探针 23 位宽
+Probe23 Type	探针 23 类型
+Probe24 Width	探针 24 位宽
+Probe24 Type	探针 24 类型
+Probe25 Width	探针 25 位宽
+Probe25 Type	探针 25 类型
+Probe26 Width	探针 26 位宽
+Probe26 Type	探针 26 类型
+Probe27 Width	探针 27 位宽
+Probe27 Type	探针 27 类型
+Probe28 Width	探针 28 位宽
+Probe28 Type	探针 28 类型
+Probe29 Width	探针 29 位宽
+Probe29 Type	探针 29 类型
+Probe30 Width	探针 30 位宽
+Probe30 Type	探针 30 类型
+Probe31 Width	探针 31 位宽
+Probe31 Type	探针 31 类型
+Probe32 Width	探针 32 位宽
+Probe32 Type	探针 32 类型
+Probe33 Width	探针 33 位宽
+Probe33 Type	探针 33 类型
+Probe34 Width	探针 34 位宽
+Probe34 Type	探针 34 类型
+Probe35 Width	探针 35 位宽
+Probe35 Type	探针 35 类型
+Probe36 Width	探针 36 位宽
+Probe36 Type	探针 36 类型
+Probe37 Width	探针 37 位宽
+Probe37 Type	探针 37 类型
+Probe38 Width	探针 38 位宽
+Probe38 Type	探针 38 类型
+Probe39 Width	探针 39 位宽
+Probe39 Type	探针 39 类型
+Probe40 Width	探针 40 位宽
+Probe40 Type	探针 40 类型
+Probe41 Width	探针 41 位宽
+Probe41 Type	探针 41 类型
+Probe42 Width	探针 42 位宽
+Probe42 Type	探针 42 类型
+Probe43 Width	探针 43 位宽
+Probe43 Type	探针 43 类型
+Probe44 Width	探针 44 位宽
+Probe44 Type	探针 44 类型
+Probe45 Width	探针 45 位宽
+Probe45 Type	探针 45 类型
+Probe46 Width	探针 46 位宽
+Probe46 Type	探针 46 类型
+Probe47 Width	探针 47 位宽
+Probe47 Type	探针 47 类型
+Probe48 Width	探针 48 位宽
+Probe48 Type	探针 48 类型
+Probe49 Width	探针 49 位宽
+Probe49 Type	探针 49 类型
+Probe50 Width	探针 50 位宽
+Probe50 Type	探针 50 类型
+Probe51 Width	探针 51 位宽
+Probe51 Type	探针 51 类型
+Probe52 Width	探针 52 位宽
+Probe52 Type	探针 52 类型
+Probe53 Width	探针 53 位宽
+Probe53 Type	探针 53 类型
+Probe54 Width	探针 54 位宽
+Probe54 Type	探针 54 类型
+Probe55 Width	探针 55 位宽
+Probe55 Type	探针 55 类型
+Probe56 Width	探针 56 位宽
+Probe56 Type	探针 56 类型
+Probe57 Width	探针 57 位宽
+Probe57 Type	探针 57 类型
+Probe58 Width	探针 58 位宽
+Probe58 Type	探针 58 类型
+Probe59 Width	探针 59 位宽
+Probe59 Type	探针 59 类型
+Probe60 Width	探针 60 位宽
+Probe60 Type	探针 60 类型
+Probe61 Width	探针 61 位宽
+Probe61 Type	探针 61 类型
+Probe62 Width	探针 62 位宽
+Probe62 Type	探针 62 类型
+Probe63 Width	探针 63 位宽
+Probe63 Type	探针 63 类型
+Probe Ports(0..7)	探针端口（0..7）
+Monitor Interface(0..7)	监测接口（0..7）
+Probe Ports(8..15)	探针端口（8..15）
+Monitor Interface(8..15)	监测接口（8..15）
+Probe Ports(16..23)	探针端口（16..23）
+Monitor Interface(16..23)	监测接口（16..23）
+Probe Ports(24..31)	探针端口（24..31）
+Monitor Interface(24..31)	监测接口（24..31）
+Probe Ports(32..39)	探针端口（32..39）
+Monitor Interface(32..39)	监测接口（32..39）
+Probe Ports(40..47)	探针端口（40..47）
+Monitor Interface(40..47)	监测接口（40..47）
+Probe Ports(48..55)	探针端口（48..55）
+Monitor Interface(48..55)	监测接口（48..55）
+Probe Ports(56..63)	探针端口（56..63）
+Monitor Interface(56..63)	监测接口（56..63）
+200 (default)	200（默认）
+Based on schema: Vivado Default	基于方案：Vivado 默认
+Bus Net	总线网络
+Cell	单元
+Clock	时钟
+Clock Region	时钟区域
+Current Editor	当前编辑器
+Debug Channel	调试通道
+Debug Core	调试核
+Debug Port	调试端口
+Filter	筛选
+From	来源
+I/O Bank	I/O Bank（组）
+I/O Port	I/O 端口
+I/O Port Bus	I/O 端口总线
+I/O Port Interface	I/O 端口接口
+My Shortcuts	我的快捷键
+Net	网络
+Overridden commands only	仅显示已覆盖快捷键的命令
+Package Pin	封装引脚
+Path	路径
+Pblock	布局区域（Pblock）
+Pblocks	布局区域（Pblock）
+Rectangle	矩形
+Set	设置
+Shortcut	快捷键
+Shortcuts for selected command	所选命令的快捷键
+Site	站点
+To	目标
+Vivado Default	Vivado 默认
+Vivado Text Editor	Vivado 文本编辑器
+Vivado Implementation Default Reports (Vivado Implementation 2025)	Vivado 实现默认报告（Vivado 实现 2025）
+Vivado Implementation Defaults (Vivado Implementation 2025)	Vivado 实现默认策略（Vivado 实现 2025）
+Vivado Synthesis Default Reports (Vivado Synthesis 2025)	Vivado 综合默认报告（Vivado 综合 2025）
+Vivado Synthesis Defaults (Vivado Synthesis 2025)	Vivado 综合默认策略（Vivado 综合 2025）
+Synth Design (vivado)	综合设计（vivado）
+Synth Design	综合设计
+Opt Design	逻辑优化
+Place Design	布局设计
+Post-Place Power Opt Design	布局后功耗优化
+Phys Opt Design	物理优化
+Route Design	布线设计
+Post-Route Phys Opt Design	布线后物理优化
+Write Bitstream	生成比特流
+Power Opt Design	功耗优化
+Synth Design (Vivado)	综合设计（Vivado）
+default	默认
+active	当前
+Clocking Options	时钟配置选项
+Frequency Synthesis	频率合成
+Spread Spectrum	扩频
+Phase Alignment	相位对齐
+Minimize Power	最小化功耗
+Dynamic Phase Shift	动态移相
+Dynamic Reconfig	动态重配置
+Jitter Optimization	抖动优化
+Safe Clock Startup	安全时钟启动
+Use CDDC	使用动态时钟分频（CDDC）
+Dynamic Interface Options	动态接口选项
+Dynamic Reconfig Interface Options	动态重配置接口选项
+Input Clock	输入时钟
+Input Frequency(MHz)	输入频率（MHz）
+Time Period (ns)	周期（ns）
+Input Jitter	输入抖动
+Jitter Options	抖动选项
+Source	来源
+Primary	主时钟
+Secondary	辅助时钟
+Port Name	端口名称
+Output Clocks	输出时钟
+Spread Spectrum Mode and Mod Freq	扩频模式及调制频率
+Modulation Freq(KHz)	调制频率（kHz）
+Modulation TimePeriod(ms)	调制周期（ms）
+Output Clock	输出时钟
+Requested	期望值
+Actual	实际值
+Phase (degrees)	相位（度）
+Duty Cycle (%)	占空比（%）
+Drives	驱动方式
+Use Fine PS	使用精细移相
+Use  Fine PS	使用精细移相
+Matched Routing	匹配布线
+Matched  Routing	匹配布线
+Max Freq. of buffer	缓冲器最高频率
+Max Freq.  of buffer	缓冲器最高频率
+Sequence Number	序列编号
+Enable Optional Inputs / Outputs for MMCM/PLL	启用 MMCM/PLL 可选输入和输出
+Clocking Feedback	时钟反馈
+Signaling	信号类型
+Reset Type	复位类型
+Phase Shift Mode	移相模式
+MMCM Settings	MMCM 设置
+Allow Override Mode	允许覆盖自动设置
+Attribute	属性
+Clk Wizard Port	时钟向导端口
+Renamed Port	重命名后的端口
+MMCM/PLL Port	MMCM/PLL 端口
+Divide	分频系数
+Duty Cycle	占空比
+Phase	相位
+Use Fine Ps	使用精细移相
+Port Renaming	端口重命名
+VCO Frequency	VCO 频率
+Other Pins	其他引脚
+CDDC Pins	CDDC 引脚
+Summary	摘要
+Clock Source	时钟源
+Jitter	抖动
+Clock Wiz O/p Pins	时钟向导输出引脚
+Tspread (ps)	扩频时差 Tspread（ps）
+Pk-to-Pk Jitter (ps)	峰峰值抖动（ps）
+Phase Error (ps)	相位误差（ps）
+Phase Shift	移相
+Divider Value	分频系数
+DRP Registers	DRP 寄存器
+DRP Register Name	DRP 寄存器名称
+Register Address	寄存器地址
+Register Values	寄存器值
+Clock Monitor	时钟监测
+Enable Clock	启用时钟
+User Frequency(MHz)	用户频率（MHz）
+Note: Glitch less than one time period of the reference clock cannot be detected.	注意：无法检测持续时间短于一个参考时钟周期的毛刺。
+PLL Settings	PLL 设置
+PLLE2 Settings	PLLE2 设置
+Enable Clock Monitoring	启用时钟监测
+Optimize Clocking Structure	优化时钟结构
+User Clock	用户时钟
+Reference Frequency(MHz)	参考频率（MHz）
+Tolerance(MHz)	容差（MHz）
+Primitive	原语
+Generate Board based IO Constraints	根据开发板生成 I/O 约束
+Write DRP registers	写入 DRP 寄存器
+Phase Duty Cycle Config	相位及占空比配置
+This feature allows the user to monitor the Stop, Glitch and frequency changes in the clock.	监测时钟停止、毛刺及频率变化。
+Select the Clocking Primitive to be used for clock generation. Selecting Auto, Wizard would decide which primitive to use based on the requirements.	选择用于生成时钟的原语。选择 Auto 时，向导将根据需求确定使用哪种原语。
+This option will be available to user only for MMCM/PLL Primitive. On enabling this, IP will generate optimal clocking structure for explicit primitive in combination with Auto Buffer selection.	此选项仅适用于 MMCM/PLL 原语。启用后，IP 将结合自动缓冲器选择，为指定原语生成优化的时钟结构。
+When Enabled wizard calculates optimal settings of attribute for power reduction	启用后，向导会计算用于降低功耗的最优属性设置。
+Enables Spread Spectrum Clocking for MMCM	为 MMCM 启用扩频时钟。
+This feature allows user to change the phase relationship on the output clocks	允许改变输出时钟的相位关系。
+Delays output clock operation until MMCM/PLL is locked and clock is stable. This feature may create an overall more reliable circuit however may impact performance when operating at very high speeds.	延迟输出时钟的工作，直到 MMCM/PLL 锁定且时钟稳定。此功能有助于提高电路可靠性，但在极高运行速度下可能影响性能。
+Clock Divide Dynamic Change Enables ability to change output counter values thus changing output frequencies without requiring reset of the MMCM	动态时钟分频允许改变输出计数器值，从而无需复位 MMCM 即可改变输出频率。
+This feature allows output clocks to have different frequencies	允许各路输出时钟使用不同频率。
+Known phase relationship to input clock	与输入时钟保持已知的相位关系。
+Selection of AXI4Lite interface to dynamically change the Multiply and Divide values of the output clocks or DRP for accessing MMCM/PLL registers	选择 AXI4-Lite 接口以动态改变输出时钟的倍频和分频系数，或选择 DRP 以访问 MMCM/PLL 寄存器。
+Select this option to enable phase and Duty Cycle dynamic reconfiguration through AXI4-Lite. Enabling this uses DSP resources of FPGA. Without enabling this option phase and duty cycle dynamic reconfiguration is not guarenteed.	启用通过 AXI4-Lite 动态重配置相位和占空比。此功能会使用 FPGA 的 DSP 资源；未启用时，不保证相位和占空比动态重配置有效。
+Enabling this user must write direct DRP values into the registers. Refer to DRP registers tab for calculating the register values.	启用后，需将 DRP 值直接写入寄存器。寄存器值的计算方法见“DRP 寄存器”页签。
+Primary Input Clock	主输入时钟
+Secondary Input Clock	辅助输入时钟
+check this option to enable the secondary input clock	勾选此项以启用辅助输入时钟。
+specify the frequency for primary input clock, when spread spectrum is selected all the frequencies under range may not result in proper M and D values. Then adjust the input frequency accordingly	指定主输入时钟频率。启用扩频时，范围内的某些频率可能无法产生有效的 M 和 D 值；此时需相应调整输入频率。
+specify the frequency for secondary input clock	指定辅助输入时钟的频率。
+Used for system output freq modification. Check this option to enable AXI4Lite or DRP interface.	用于修改系统输出频率。勾选此项以启用 AXI4-Lite 或 DRP 接口。
+Selecting this option will enable the clkfb_stopped port, which will be  asserted when the feedback clock is lost	勾选此项以启用 clkfb_stopped 端口；反馈时钟丢失时，该端口将置为有效。
+Select whether the phase-shifted clock should be modelled into the clock WAVEFORM or LATENCY through the CMB. No multicycle constraint is needed when modelled through latency.	选择将移相时钟建模为时钟波形（WAVEFORM），还是经过 CMB 的时钟延迟（LATENCY）。采用延迟建模时，无需多周期约束。
+These are the settings based on inputs from previous pages. Any update on this page	这些设置基于前面各页的输入。本页的任何修改
+will override the optimal settings calculated by the wizard	都会覆盖向导计算出的最优设置。
+Cores	IP 核
+Interfaces	接口
+License	许可证
+Licensing	许可授权
+Details	详细信息
+Vivado Repository	Vivado 仓库
+Alliance Partners	联盟合作伙伴
+Automotive and Industrial	汽车与工业
+Communication & Networking	通信与网络
+DSP and Math	数字信号处理与数学
+Embedded Processors	嵌入式处理器
+Foundational Elements	基础组件
+Interfaces and Interconnect	接口与互连
+Kernels	计算内核
+Memory Solutions	存储器方案
+Multimedia and Vision	多媒体与视觉
+Wireless	无线通信
+Save Constraints (Ctrl+S)	保存约束（Ctrl+S）
+Save Block Design (Ctrl+S)	保存模块设计（Ctrl+S）
+Switch From Dataflow Design	切换出数据流设计
+Switch To Dataflow Design	切换到数据流设计
+Collapse All (Ctrl+Minus)	全部折叠（Ctrl+Minus）
+Show only missing sources	仅显示缺失的源文件
+Expand or collapse the content	展开或折叠内容
+Manage Message Suppression	管理消息屏蔽
+Discard User Created Messages	清除用户创建的消息
+Run the Garbage Collector	执行垃圾回收
+Show/Hide Description Area	显示/隐藏说明区域
+Turn Incremental Implementation ON or OFF,	开启或关闭增量实现，
+with manual or automated reference DCP selection	手动或自动选择参考设计检查点（DCP）
+Configure download location for Vivado store.	配置 Vivado 商店的下载位置。
+Group by taxonomy or repository	按类别或仓库分组
+Select an IP or Interface or Repository to see details	选择 IP、接口或仓库以查看详细信息
+Active IP	当前 IP
+Basic	基础
+Beta	测试版
+C Simulation	C 仿真
+Change Log	更新日志
+Clock and Reset	时钟与复位
+Clocking Wizard	时钟配置向导（Clocking Wizard）
+Concat	位拼接（Concat）
+Constant	常量（Constant）
+Discontinued	已停止维护
+Duplicate	重复项
+Duplicates	重复项
+Error Correction	纠错
+Examples	示例
+Extends VLNV	扩展的 VLNV
+External Repository	外部仓库
+Included	已包含
+Incompatible	不兼容
+Max Masters	最大主设备数量
+Max Slaves	最大从设备数量
+Number of IPs	IP 数量
+Number of interfaces	接口数量
+Other	其他
+Pre-Production	预量产
+Production	量产
+Provider	提供方
+Purchase	购买
+Serial Interfaces	串行接口
+Supported Interfaces	支持的接口
+Supported Output Products	支持的生成文件
+Test Bench	测试平台
+User	用户
+Version	版本
+View Change Log	查看更新日志
+XML File	XML 文件
+Accumulator	累加器（Accumulator）
+Adder/Subtracter	加减法器（Adder/Subtracter）
+Binary Counter	二进制计数器（Binary Counter）
+Complex Multiplier	复数乘法器（Complex Multiplier）
+Convolution Encoder	卷积编码器（Convolution Encoder）
+Discrete Fourier Transform	离散傅里叶变换（Discrete Fourier Transform）
+Divider Generator	除法器生成器（Divider Generator）
+Fast Fourier Transform	快速傅里叶变换（Fast Fourier Transform）
+Fixed Interval Timer	固定间隔定时器（Fixed Interval Timer）
+Floating-point	浮点运算（Floating-point）
+Interleaver/De-interleaver	交织器/解交织器（Interleaver/De-interleaver）
+Mailbox	邮箱（Mailbox）
+Multiplier	乘法器（Multiplier）
+Multiply Adder	乘加器（Multiply Adder）
+Mutex	互斥锁（Mutex）
+Processor System Reset	处理器系统复位（Processor System Reset）
+RAM-based Shift Register	基于 RAM 的移位寄存器（RAM-based Shift Register）
+Reed-Solomon Decoder	Reed-Solomon 解码器
+Reed-Solomon Encoder	Reed-Solomon 编码器
+Slice	位截取（Slice）
+System Cache	系统缓存（System Cache）
+Time-Aware DMA	时间感知 DMA
+Utility Buffer	通用缓冲器（Utility Buffer）
+Utility Idelay Control	通用输入延迟控制（Utility Idelay Control）
+Utility Reduced Logic	通用归约逻辑（Utility Reduced Logic）
+Utility Vector Logic	通用向量逻辑（Utility Vector Logic）
+Viterbi Decoder	维特比解码器（Viterbi Decoder）
+3GPP Mixed Mode Turbo Decoder	3GPP 混合模式 Turbo 解码器
+3GPP Turbo Encoder	3GPP Turbo 编码器
+3GPPLTE Turbo Encoder	3GPP LTE Turbo 编码器
+CIC Compiler	CIC 滤波器编译器
+DDS Compiler	DDS 编译器
+DSP Macro	DSP 宏
+FIR Compiler	FIR 滤波器编译器
+G.709 FEC Encoder/Decoder	G.709 前向纠错编码器/解码器
+G.975.1 EFEC I.4 Encoder/Decoder	G.975.1 EFEC I.4 编码器/解码器
+G.975.1 EFEC I.7 Encoder/Decoder	G.975.1 EFEC I.7 编码器/解码器
+LDPC Encoder/Decoder	LDPC 编码器/解码器
+LTE Fast Fourier Transform	LTE 快速傅里叶变换
+Polar Encoder/Decoder	极化码编码器/解码器
+MicroBlaze Debug Module (MDM)	MicroBlaze 调试模块（MDM）
+MicroBlaze Debug Module (MDM) V	MicroBlaze 调试模块（MDM）V
+PMC Bridge	PMC 桥接器
+Customize IP	定制 IP
+Switch to Defaults	恢复默认配置
+Show disabled ports	显示未启用的端口
+IP Properties	IP 属性
+User Repository	用户仓库
+Debug and Verification	调试与验证
+ILA (Integrated Logic Analyzer)	ILA（片内逻辑分析仪）
+ILA (Integrated Logic Analyzer) (6.2)	ILA（片内逻辑分析仪）（6.2）
+System ILA	系统 ILA
+The Integrated Logic Analyzer (ILA) core is a customizable logic analyzer core that can be used to monitor any internal signal of your design. The ILA core includes many advanced features of modern logic analyzers, including Boolean trigger equations, customizable data capture buffer depth, and optional trigger input/output ports. Because the ILA core is synchronous to the design being monitored, all design clock constraints that are applied to your design are also applied to the components inside the ILA core. Run-time interaction with this core requires the use of the Vivado logic analyzer feature.	片内逻辑分析仪（ILA）IP 核是一种可定制的逻辑分析仪，可用于监测设计中的任意内部信号。ILA IP 核提供现代逻辑分析仪的多种高级功能，包括布尔触发表达式、可配置的数据采集缓冲区深度以及可选的触发输入/输出端口。由于 ILA IP 核与被监测的设计同步，因此施加到设计的时钟约束也会施加到 ILA IP 核内部的组件。运行时与该 IP 核交互需要使用 Vivado 的逻辑分析仪功能。
+The Integrated Logic Analyzer (ILA) core is a customizable logic analyzer core that can be used to monitor any internal signal of your design.	片内逻辑分析仪（ILA）IP 核是一种可定制的逻辑分析仪，可用于监测设计中的任意内部信号。
+The ILA core includes many advanced features of modern logic analyzers, including Boolean trigger equations, customizable data capture buffer depth, and optional trigger input/output ports.	ILA IP 核提供现代逻辑分析仪的多种高级功能，包括布尔触发表达式、可配置的数据采集缓冲区深度以及可选的触发输入/输出端口。
+Because the ILA core is synchronous to the design being monitored, all design clock constraints that are applied to your design are also applied to the components inside the ILA core.	由于 ILA IP 核与被监测的设计同步，因此施加到设计的时钟约束也会施加到 ILA IP 核内部的组件。
+Run-time interaction with this core requires the use of the Vivado logic analyzer feature.	运行时与该 IP 核交互需要使用 Vivado 的逻辑分析仪功能。
+Clocking Wizard (6.0)	时钟配置向导（Clocking Wizard 6.0）
+Resource	资源
+Balanced	均衡
+Minimize Output Jitter	最小化输出抖动
+Maximize Input Jitter filtering	最大化输入抖动滤除能力
+Active High	高电平有效
+Active Low	低电平有效
+USE CLOCK SEQUENCING	使用时钟启动顺序控制
+The phase is calculated relative to clk_out1.	相位以 clk_out1 为基准计算。
+RECOMMENDED TO ENABLE THE "OPTIMIZE CLOCKING STRUCUTRE" CHECK-BOX TO GET OPTIMIZED CLOCKING STRUCTURE	建议勾选“优化时钟结构”，以生成优化的时钟结构。
+The Clocking Wizard creates an HDL file (Verilog or VHDL) that contains a clocking circuit customized to the user's clocking requirements.	时钟配置向导会生成一个 HDL 文件（Verilog 或 VHDL），其中包含根据用户时钟需求定制的时钟电路。
+Output Freq (MHz)	输出频率（MHz）
+Matched	匹配
+Routing	布线
+Max Freq.	最高频率
+of buffer	（缓冲器）
+Clocking Features	时钟功能
+Clocking Primitive Attributes	时钟原语属性
+Input Clock Information	输入时钟信息
+Optional Port Names	可选端口名称
+Primary Input Clock Attributes	主输入时钟属性
+Auto	自动
+Clock Phase Shift	时钟移相
+Divide Counter	分频计数器
+Input Clock Frequency (MHz)	输入时钟频率（MHz）
+Mult Counter	倍频计数器
+Primitive Instantiated	实例化的原语
+: None	：无
+VCO Freq	VCO 频率
+Re-customize IP	重新定制 IP
+Number of Slave Interfaces	从接口数量
+Number of Master Interfaces	主接口数量
+Number of Clock Inputs	时钟输入数量
+Has ARESETN Input	包含 ARESETN 输入
+Show Advanced Properties	显示高级属性
+Advanced Properties are available after validation. Re-validate design after changes to advanced properties.	验证设计后可设置高级属性。修改高级属性后，请重新验证设计。
+Advanced Properties are available after validation.	验证设计后可设置高级属性。
+Re-validate design after changes to advanced properties.	修改高级属性后，请重新验证设计。
+Block Properties	模块属性
+Parent name	父级名称
+BLOCK DESIGN	模块设计
+Interface Connections	接口连接
+Default View	默认视图
+AP Dialog	高级属性对话框
+Functional	功能
+Clocking	时钟配置
+Connection Annotation: Upper:	连接标注：上方：
+Upper	上方
+Lower	下方
+Clear Filter	清除筛选
+Clear Overrides	清除覆盖设置
+Select a table entry to see a description of the parameter.	选择一个表格条目以查看参数说明。
+Object	对象
+Property	属性
+Override	覆盖设置

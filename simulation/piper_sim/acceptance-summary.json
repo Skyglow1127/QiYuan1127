@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "finished_at": "2026-10-27T03:01:52.862094+08:00",
+  "simulation_only": true,
+  "control_checks_passed": 11,
+  "grasp_cycles_passed": 2,
+  "lifts_m": [
+    0.07938937966403972,
+    0.07926602075196824
+  ],
+  "hold_duration_each_sim_s": 3,
+  "placed_positions": [
+    [
+      0.3197059829057595,
+      0.00045894543887607187,
+      0.020004032485421003
+    ],
+    [
+      0.3139174321760957,
+      -9.360163310232859e-05,
+      0.01999995820903601
+    ]
+  ],
+  "environment_matches_d1t_bytes": true,
+  "official_inertial_links_unchanged": 11,
+  "piper_feedback_online": true,
+  "piper_RGB_online": true,
+  "d1t_still_connected": true,
+  "d1t_targets_after": {
+    "arm_Joint1": 0.004004706500911957,
+    "arm_Joint2": 0.5126979431503118,
+    "arm_Joint3": 0.05643552691249555,
+    "arm_Joint4": -1.4744319556849894e-05,
+    "arm_Joint5": 1.0016591817808351,
+    "arm_Joint6": -0.003999074160759758,
+    "arm_Joint7_1": 0.03,
+    "arm_Joint7_2": -0.03
+  },
+  "evidence": [
+    "verification.json",
+    "grasp-verification.json",
+    "model-validation.json"
+  ],
+  "preview": "piper-preview.jpg",
+  "sha256": {
+    "config/environment.json": "92a56c450c4d2c5544d63ff8a8c12495f0beabecbaf31a4a5279621faa8879f3",
+    "config/robot.json": "4b412cb51490660eadbf883e4c36b43d999e31b0190e9e7f6629e30e065c60d3",
+    "config/grasp_scene.json": "698ded473639cea73130e5da2396072015216a7a1459b9a38f38282b2c3291ea",
+    "config/wrist_camera.json": "5d11750bc6d458c56d287d20cac74cfa5d6252bb90c9c9108a5dbccb666715e7",
+    "generated/piper.urdf": "b4cbb0244409a9a6d070291d9844c6cb32476c90e0d703c2dcb2cee07e59c7ed",
+    "scripts/control_server.py": "afde7ca3afca0bd2a782315c131a9f4f61b2c46a96ec06790efff00a51e31da4",
+    "scripts/grasp_scene.py": "37378cd2902e1971056543d7f6d04c9d6e3d5efd2475c57b648fdb244b57390d",
+    "scripts/collision_guard.py": "b48442a6ca6bad419fe15532414cfb121202f453289c9252535a63536d2650d3"
+  }
+}

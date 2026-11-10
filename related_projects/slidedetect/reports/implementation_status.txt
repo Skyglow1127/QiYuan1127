@@ -1,0 +1,6 @@
+Vivado=2025.2
+part=xck26-sfvc784-2LV-c
+mode=out_of_context; clock=100 MHz; uncertainty=0.1 ns
+EDGE_STRIDE=1
+WNS=1.394
+WHS=0.019

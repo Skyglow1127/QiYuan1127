@@ -1,0 +1,89 @@
+{
+  "status": "OFFLINE_BUILD_PASS",
+  "run_directory": "/home/aup/文档/ChatGPT/VIVADO/pressure_delivery/program/firmware/build/kr260_fsr_20261025_002618",
+  "session_id": "vivado-20261025-002618-b96f65c9",
+  "startup_receipt": {
+    "log_file": "/home/aup/文档/ChatGPT/VIVADO/pressure_delivery/program/firmware/build/kr260_fsr_20261025_002618/.vivado-ai/vivado_59178733_f173a0c0.log",
+    "message": "Vivado started successfully in TCL mode (no GUI) with webserver at http://localhost:8088.\n\nProcess ID: 1764270\nWorking directory: /home/aup/文档/ChatGPT/VIVADO/pressure_delivery/program/firmware/build/kr260_fsr_20261025_002618\nLog file: /home/aup/文档/ChatGPT/VIVADO/pressure_delivery/program/firmware/build/kr260_fsr_20261025_002618/.vivado-ai/vivado_59178733_f173a0c0.log (unique per session)\n\nUse vivado_execute to run commands. Use vivado_stop to close Vivado.",
+    "mode": "tcl",
+    "process_id": 1764270,
+    "session_id": "vivado-20261025-002618-b96f65c9",
+    "status": "success",
+    "webserver_url": "http://localhost:8088",
+    "working_dir": "/home/aup/文档/ChatGPT/VIVADO/pressure_delivery/program/firmware/build/kr260_fsr_20261025_002618"
+  },
+  "skill_directory": "/home/aup/.vscode/extensions/amd.vivado-ai-extension-2026.9.1/resources/plugin-bundled/skills/vivado-ip-configurator",
+  "hardware_status": "NOT_TESTED",
+  "session_close_policy": "manual",
+  "memory_scope": {
+    "unit": "ross-kr260-1764270.scope",
+    "cgroup": "/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/ross-kr260-1764270.scope",
+    "memory_max_gib": 5,
+    "swap_max_gib": 1,
+    "initial_pids": [
+      1764270
+    ]
+  },
+  "completed": [
+    "setup",
+    "simulate",
+    "synthesis",
+    "implementation",
+    "bitstream"
+  ],
+  "active_step": "bitstream",
+  "project": "/home/aup/文档/ChatGPT/VIVADO/pressure_delivery/program/firmware/build/kr260_fsr_20261025_002618/project/kr260_fsr.xpr",
+  "simulation": {
+    "baseline_checks": 240,
+    "cdc_checks": 240,
+    "bus_checks": 44,
+    "axi_reads": 16,
+    "reset_releases": 2,
+    "status": "PASS"
+  },
+  "output_directory": "/home/aup/文档/ChatGPT/VIVADO/pressure_delivery/program/firmware/output",
+  "cdc_evidence": {
+    "synchronizer_flops": 4,
+    "timed_interstage_paths": 2,
+    "async_input_exception_endpoints": 2
+  },
+  "source_sha256": {
+    "create_design.tcl": "801e429d61b022e15dcb563a6b332aa0a23743bc7ac17b0af15c6a57b60367ce",
+    "build_firmware.py": "1033a8047cd094613e2aff007997ae1c9559bea83d7e621f32f32878135697da",
+    "boards/SOURCES.json": "55e18496c24345c86357fa4bdd7a9ef7c548b2f9ef96bc199c48ffe1a418cdce",
+    "rtl/fsr_top.sv": "99120b8fb76ee3fb4e86d78a00cde8f3faf214033343a49ac56bfe1652b63bf0",
+    "rtl/fsr_sync2.v": "d015f4d7da632e2bd2842bf47b5ace49baa2f14eb789a25e10dd6ca507e3c927",
+    "rtl/led_blink.sv": "323ffeacf5562853a74e56543ea55e6576129569a75ddb4fd86209b110870a96",
+    "tb/tb_led_blink.sv": "56ff0ed154aa3827ccc2e30b6fb745aa29470e9dc294ab58e9f546c4b6fa696f",
+    "tb/tb_fsr_sync2.sv": "37e02eef7548e6930bac38b2b65ce6c60522df6a62f85fa7e4d47881639a2939",
+    "tb/tb_fsr_bus.sv": "ce86e31d9a305fdd32778dfd68258eb8cae58a6c2177a33fda19a3b8efc33b90",
+    "constraints/kr260_fsr.xdc": "8718503ae7e1edfe11fd99cdd8b4c89930674379ec8a93787c691824f02cefd9",
+    "tools/ross_mcp.py": "0f93c67a54b37c6fe4dcf17e1b6962e8db14f9fdcb114250b027b8004c7cf87d",
+    "tools/vivado_memory_scope.py": "e299d962e06803c23ce926dae935260981a879db5a910293704d55da56555782"
+  },
+  "evidence_directory": "/home/aup/文档/ChatGPT/VIVADO/pressure_delivery/program/firmware/build/kr260_fsr_20261025_002618/evidence_r2_aux_reset_and_afi_20261025",
+  "revision": "r2_aux_reset_and_afi_20261025",
+  "verification": {
+    "revision": "r2_aux_reset_and_afi_20261025",
+    "baseline_checks": 240,
+    "cdc_checks": 240,
+    "bus_checks": 44,
+    "axi_reads": 16,
+    "reset_releases": 2,
+    "wns_ns": 36.157,
+    "whs_ns": 0.03,
+    "first_to_second_stage_slack_ns": [
+      39.478,
+      39.541
+    ],
+    "ps8_count": 1,
+    "unclocked_registers": 0,
+    "unconstrained_internal_endpoints": 0,
+    "asynchronous_inputs_without_input_delay": 2,
+    "async_exceptions": "exactly two first-stage D pins; stage1->stage2 paths remain timed",
+    "synth_1_error_count": 0,
+    "synth_1_critical_count": 0,
+    "impl_1_error_count": 0,
+    "impl_1_critical_count": 0
+  }
+}

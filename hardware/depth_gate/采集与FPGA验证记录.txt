@@ -1,0 +1,98 @@
+KR260 / Orbbec DaBai DC1 / FPGA depth gate
+日期：2026-10-15（Asia/Singapore；板端系统时钟仍为旧日期）
+
+相机与软件
+- USB设备：彩色 2bc5:0557；深度 2bc5:0657；USB 2.0 480M。
+- SDK识别：DaBai DC1，固件RD1001，序列号CC1365301EY。
+- 官方SDK：https://github.com/orbbec/OrbbecSDK/tree/v1.10.18
+- 使用官方ARM64运行库和C API，Python ctypes封装；未升级相机固件。
+- 软件安装于KR260 /home/ubuntu/kr260-camera；AIPC副本 /home/aup/codex/kr260-camera。
+- SDK压缩包SHA256：ca36dad5517d9e85e86109fd7a8a46816d87f1423331c54bc756252be0b81a0c；传输后校验一致。
+- /etc/udev/rules.d/99-kr260-dabai.rules仅为两个上述USB ID设置video组读写；ubuntu加入video组。新登录生效。
+
+采集验证（已完成）
+- UVC直接采集15帧640x480 MJPEG，已检查可见图像。
+- SDK同时采集12秒：深度362帧，约30.11fps；彩色353帧，约29.91fps。
+- 深度640x400，传输Y11，SDK解包输出Y16，1毫米/单位。
+- 彩色640x480 MJPEG。
+- 保存样帧深度有效率68.48%，有效深度中位数481mm；这不是深度精度标定。
+- 两次关闭后重开测试均成功，其中一次以ubuntu/video普通用户运行。
+- SDK会打印“Get usb core type failed”和停止深度流失败/完成消息；三次采集均完成并正常退出，仍保留该兼容性限制供后续排查。
+- 彩色/深度分辨率不同，设备时间戳时钟域不同。当前样帧未做空间对齐或曝光同步，不可直接用同一像素坐标对应二者。
+- 样帧通过PPP返回AIPC，SHA256与板端报告一致。
+
+相机复现（在KR260新SSH会话）：
+cd /home/ubuntu/kr260-camera
+./run_camera.sh --mode both --seconds 12 --output capture-new
+如旧会话未获得video组，请重新SSH登录；不需再次改设备权限。
+
+FPGA模块设计
+- depth_gate.cpp：自定义HLS深度距离门限筛选。0/65535无效值和范围外像素归零；输出有效计数、64位深度和、最小/最大值。
+- 阈值使用原始深度单位，应用层由SDK的mm_per_unit换算，不假定所有相机均为1mm。
+- AXI-Lite控制寄存器 + 三个AXI内存主口；所有数据通过PL内64KiB BRAM交换。
+- PL控制：0xA0000000；BRAM：0xA0010000。
+- 每块最多4096像素，输入偏移0，输出偏移0x4000，统计偏移0x8000。
+- 芯片：xck26-sfvc784-2LV-c；设计目标100MHz。
+- HLS C测试覆盖空输入、无效值、边界、随机数据、满帧、64位求和、超限输入。
+- 从相机取得的640x400真实深度帧已通过C参考对照。
+- HLS综合和IP导出成功；主循环II=1。
+- RTL联合仿真：两个4096像素块PASS，内存峰值约520MB。
+- 最初全帧RTL仿真触发AIPC内存不足被终止；未声称该全帧RTL仿真通过。后续仿真使用4GiB虚拟内存上限。
+- HLS估计约4194 LUT / 2997 FF / 2 BRAM18；仅IP估计，完整设计资源与时序见实现报告。
+- 处理速度是否加速、板端是否达到实时要求，必须以板端测试为准，不能以HLS估计代替。
+
+生成与验证命令（AIPC）：
+cd /home/aup/codex/kr260-camera/fpga
+/home/aup/Xilinx/2025.2/Vitis/bin/vitis-run --mode hls --tcl build_hls.tcl
+(ulimit -v 4194304; /home/aup/Xilinx/2025.2/Vitis/bin/vitis-run --mode hls --tcl cosim_hls.tcl)
+/home/aup/Xilinx/2025.2/Vivado/bin/vivado -mode batch -source build_overlay.tcl
+
+PL上板状态及实测结果：见下方追加记录；仅生成IP并不等于已上板。
+
+PL上板验证（已完成）：
+- Vivado完整实现完成，100MHz目标时序通过：WNS +5.809ns、WHS +0.010ns，违例端点0。
+- 完整设计9553 LUT、13942 FF；资源详情见 fpga/board_utilization.rpt。
+- 比特流经Bootgen转换，gzip通过PPP传输，在板端解压并SHA256校验后加载。
+- configfs overlay /sys/kernel/config/device-tree/overlays/depth-gate 状态applied，FPGA状态operating。
+- PL0时钟实际99999999Hz，已启用。控制UIO4，BRAM UIO5（脚本按地址发现，不依赖编号）。
+- 首次测试发现设备内存40字节memcpy产生Bus error；改为对齐32位写、64位读后通过。未出现内核挂起。输入图像字节数现在明确要求16的倍数。
+- 同一张640x400真实深度图，两组门限（300–1500mm、500–600mm）均逐像素和统计值与独立CPU参考完全一致。
+- 第一组：166928有效像素，和79931714，最小300，最大723，平均478.839mm；含搬运的耗时32.643ms。
+- 第二组：66094有效像素，平均546.856mm；耗时32.232ms。
+- 实时相机+PL同时运行8秒：深度242帧、彩色233帧；PL抽样处理32帧（约4帧/秒）。
+- PL每帧含CPU搬运实测31.363–34.289ms，平均32.294ms。
+- 这不是每张30fps相机帧都送PL，也不是硬实时承诺；PPP传文件时ping延迟会明显增大。
+- 结果与过滤后深度文件已通过PPP返回AIPC，SHA256校验一致。
+- FPGA加载保持在当前运行状态，采集测试进程均已结束；未设置开机自动加载。
+- DFX服务仍保持原来的masked/inactive，自定义PL由本任务手动加载；此前“PL空白”的网口排查状态已改变。
+- 未对QSPI、系统启动文件或相机固件做修改，未向D1-T发送运动命令。
+
+当前演示运行命令（AIPC先SSH到KR260）：
+ssh ubuntu@192.168.28.2
+cd /home/ubuntu/kr260-camera
+sudo ./run_camera.sh --mode both --seconds 10 --fpga --output demo-pl
+输出PL_RESULT是实际FPGA结果。门限默认300–1500mm，当前只输出距离筛选和统计，不包含目标识别/抓取位姿。
+
+静态样帧硬件对照：
+sudo python3 run_depth_gate.py --input capture-both/depth_u16le.raw.gz --output fpga-check-new
+脚本会同时独立计算CPU参考，并要求所有像素和统计量一致。
+
+重启后恢复：
+1. 先按 /home/aup/codex/kr260-recovery/PPP串口通信说明.txt 恢复PPP。
+2. SSH到KR260，cd /home/ubuntu/kr260-camera。
+3. sudo python3 load_overlay.py
+   要求没有其他已加载overlay；不会自动覆盖其他设计。随后运行上述演示。
+
+卸载当前PL设备节点：
+先停止所有采集/FPGA访问进程，再执行：
+sudo rmdir /sys/kernel/config/device-tree/overlays/depth-gate
+这会移除UIO节点并释放时钟，不等于清空FPGA配置。需要完全复位时重新上电。
+内核在加载时提示overlay属性移除可能泄漏少量内存，避免无意义地频繁装卸。
+
+重要边界：
+- 已实际实现“图像预处理”和“自定义HLS/AXI/Block Design”原型；最终按项目验收口径确认。
+- 未验证相对CPU的加速比，不能把“在FPGA执行”写成“性能提升多少倍”。
+- 未完成彩色/深度对齐、手眼标定、目标位姿、机械臂控制联动和安全闭环。
+- 单帧有效率受黑色线材、反光物、遮挡和距离影响；黑色深度区域表示无效数据，不是零距离。
+
+2026-10-15 后续：新增 --align，SDK D2C HW 640x480 已实测。aligned-first 保存 RGB-D 对，接收时间差20ms。aligned-pl 4秒113帧、15帧PL处理，平均38.805ms。aligned-pl-reference 307200像素全部与CPU匹配。快照转换工具及标定待办见 calibration/接线与标定准备.txt。未发送机器人运动命令，手眼标定未完成。

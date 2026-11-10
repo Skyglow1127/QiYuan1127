@@ -1,0 +1,1056 @@
+<sdf version='1.11'>
+  <model name='d1t'>
+    <joint name='arm_mount' type='fixed'>
+      <pose relative_to='__model__'>0 0 0.02 0 0 0</pose>
+      <parent>world</parent>
+      <child>arm_base_link</child>
+    </joint>
+    <link name='arm_base_link'>
+      <pose relative_to='arm_mount'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-0.00048696999999999998 -2.9605000000000002e-12 0.017142000000000001 0 0 0</pose>
+        <mass>0.077232999999999996</mass>
+        <inertia>
+          <ixx>0.00010315999999999999</ixx>
+          <ixy>-1.0285e-14</ixy>
+          <ixz>2.0449e-07</ixz>
+          <iyy>0.00011888</iyy>
+          <iyz>7.3026e-15</iyz>
+          <izz>0.00018362000000000001</izz>
+        </inertia>
+      </inertial>
+      <collision name='arm_base_link_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/aup/Documents/Codex/2026-10-15/xian/outputs/d1t_sim/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <collide_bitmask>2</collide_bitmask>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.80000000000000004</mu>
+              <mu2>0.80000000000000004</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='arm_base_link_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/aup/Documents/Codex/2026-10-15/xian/outputs/d1t_sim/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.149999991 0.174999997 0.199999988 1</diffuse>
+          <ambient>0.149999991 0.174999997 0.199999988 1</ambient>
+        </material>
+      </visual>
+      <self_collide>true</self_collide>
+    </link>
+    <joint name='arm_Joint1' type='revolute'>
+      <pose relative_to='arm_base_link'>0 0 0.0533 0 0 3.1415853071795872</pose>
+      <parent>arm_base_link</parent>
+      <child>arm_Link1</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2.3500000000000001</lower>
+          <upper>2.3500000000000001</upper>
+          <effort>3.2999999999999998</effort>
+          <velocity>0.59999999999999998</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.014999999999999999</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='arm_Link1'>
+      <pose relative_to='arm_Joint1'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.0024648999999999999 0.00010517 0.032696000000000003 0 0 0</pose>
+        <mass>0.13174</mass>
+        <inertia>
+          <ixx>6.7236000000000005e-05</ixx>
+          <ixy>-5.5664000000000001e-08</ixy>
+          <ixz>7.0454000000000003e-08</ixz>
+          <iyy>5.4160000000000003e-05</iyy>
+          <iyz>-3.5708999999999998e-07</iyz>
+          <izz>4.6637000000000001e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='arm_Link1_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/aup/Documents/Codex/2026-10-15/xian/outputs/d1t_sim/meshes/Link1.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.80000000000000004</mu>
+              <mu2>0.80000000000000004</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='arm_Link1_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/aup/Documents/Codex/2026-10-15/xian/outputs/d1t_sim/meshes/Link1.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.149999991 0.174999997 0.199999988 1</diffuse>
+          <ambient>0.149999991 0.174999997 0.199999988 1</ambient>
+        </material>
+      </visual>
+      <self_collide>true</self_collide>
+    </link>
+    <joint name='arm_Joint2' type='revolute'>
+      <pose relative_to='arm_Link1'>0 0.028000000000000001 0.056300000000000003 1.5708 4.2351647362715017e-22 3.1415853071795872</pose>
+      <parent>arm_Link1</parent>
+      <child>arm_Link2</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-1.5700000000000001</lower>
+          <upper>1.5700000000000001</upper>
+          <effort>3.2999999999999998</effort>
+          <velocity>0.59999999999999998</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.014999999999999999</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='arm_Link2'>
+      <pose relative_to='arm_Joint2'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.0002018 0.19200999999999999 -0.027007 0 0 0</pose>
+        <mass>0.20213</mass>
+        <inertia>
+          <ixx>0.00025682</ixx>
+          <ixy>-1.1389999999999999e-07</ixy>
+          <ixz>5.5666999999999998e-08</ixz>
+          <iyy>6.3306999999999995e-05</iyy>
+          <iyz>-3.5717000000000001e-07</iyz>
+          <izz>0.00022968000000000001</izz>
+        </inertia>
+      </inertial>
+      <collision name='arm_Link2_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/aup/Documents/Codex/2026-10-15/xian/outputs/d1t_sim/meshes/Link2.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.80000000000000004</mu>
+              <mu2>0.80000000000000004</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='arm_Link2_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/aup/Documents/Codex/2026-10-15/xian/outputs/d1t_sim/meshes/Link2.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.149999991 0.174999997 0.199999988 1</diffuse>
+          <ambient>0.149999991 0.174999997 0.199999988 1</ambient>
+        </material>
+      </visual>
+      <self_collide>true</self_collide>
+    </link>
+    <joint name='arm_Joint3' type='revolute'>
+      <pose relative_to='arm_Link2'>0 0.26929999999999998 0.00089999999999999998 0 0 0</pose>
+      <parent>arm_Link2</parent>
+      <child>arm_Link3</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-1.5700000000000001</lower>
+          <upper>1.5700000000000001</upper>
+          <effort>1.7</effort>
+          <velocity>0.59999999999999998</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.014999999999999999</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='arm_Link3'>
+      <pose relative_to='arm_Joint3'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.015164 0.044482000000000001 -0.027460999999999999 0 0 0</pose>
+        <mass>0.062899999999999998</mass>
+        <inertia>
+          <ixx>1.7232e-05</ixx>
+          <ixy>-2.6966999999999999e-06</ixy>
+          <ixz>-9.4910999999999994e-11</ixz>
+          <iyy>1.2605999999999999e-05</iyy>
+          <iyz>-9.9168999999999996e-11</iyz>
+          <izz>1.4963999999999999e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='arm_Link3_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/aup/Documents/Codex/2026-10-15/xian/outputs/d1t_sim/meshes/Link3.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.80000000000000004</mu>
+              <mu2>0.80000000000000004</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='arm_Link3_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/aup/Documents/Codex/2026-10-15/xian/outputs/d1t_sim/meshes/Link3.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.149999991 0.174999997 0.199999988 1</diffuse>
+          <ambient>0.149999991 0.174999997 0.199999988 1</ambient>
+        </material>
+      </visual>
+      <self_collide>true</self_collide>
+    </link>
+    <joint name='arm_Joint4' type='revolute'>
+      <pose relative_to='arm_Link3'>0.057700000000000001 0.042000000000000003 -0.0275 -1.5708 -5.5511151231257827e-17 -1.5708</pose>
+      <parent>arm_Link3</parent>
+      <child>arm_Link4</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2.3500000000000001</lower>
+          <upper>2.3500000000000001</upper>
+          <effort>1.7</effort>
+          <velocity>0.59999999999999998</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.014999999999999999</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='arm_Link4'>
+      <pose relative_to='arm_Joint4'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-0.00029556 -0.00016103999999999999 0.091339000000000004 0 0 0</pose>
+        <mass>0.083332000000000003</mass>
+        <inertia>
+          <ixx>3.9307999999999997e-05</ixx>
+          <ixy>1.0126000000000001e-08</ixy>
+          <ixz>-9.4315999999999996e-08</ixz>
+          <iyy>3.4378000000000002e-05</iyy>
+          <iyz>-1.6915e-09</iyz>
+          <izz>1.1596999999999999e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='arm_Link4_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/aup/Documents/Codex/2026-10-15/xian/outputs/d1t_sim/meshes/Link4.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.80000000000000004</mu>
+              <mu2>0.80000000000000004</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='arm_Link4_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/aup/Documents/Codex/2026-10-15/xian/outputs/d1t_sim/meshes/Link4.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.149999991 0.174999997 0.199999988 1</diffuse>
+          <ambient>0.149999991 0.174999997 0.199999988 1</ambient>
+        </material>
+      </visual>
+      <self_collide>true</self_collide>
+    </link>
+    <joint name='arm_Joint5' type='revolute'>
+      <pose relative_to='arm_Link4'>-0.0001 -0.023699999999999999 0.14018 -1.5707926536057684 -1.5707926536057681 -3.1415926535746808</pose>
+      <parent>arm_Link4</parent>
+      <child>arm_Link5</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-1.5700000000000001</lower>
+          <upper>1.5700000000000001</upper>
+          <effort>1.7</effort>
+          <velocity>0.59999999999999998</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.014999999999999999</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='arm_Link5'>
+      <pose relative_to='arm_Joint5'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.040572999999999998 0.0062890999999999997 -0.023838000000000002 0 0 0</pose>
+        <mass>0.053816999999999997</mass>
+        <inertia>
+          <ixx>1.3072e-05</ixx>
+          <ixy>-3.9511e-07</ixy>
+          <ixz>-3.1889000000000002e-10</ixz>
+          <iyy>8.6301000000000006e-06</iyy>
+          <iyz>-1.8415999999999999e-09</iyz>
+          <izz>1.1049e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='arm_Link5_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/aup/Documents/Codex/2026-10-15/xian/outputs/d1t_sim/meshes/Link5.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.80000000000000004</mu>
+              <mu2>0.80000000000000004</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='arm_Link5_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/aup/Documents/Codex/2026-10-15/xian/outputs/d1t_sim/meshes/Link5.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.149999991 0.174999997 0.199999988 1</diffuse>
+          <ambient>0.149999991 0.174999997 0.199999988 1</ambient>
+        </material>
+      </visual>
+      <self_collide>true</self_collide>
+    </link>
+    <joint name='arm_Joint6' type='revolute'>
+      <pose relative_to='arm_Link5'>0.082500000000000004 -0.0010782000000000001 -0.023821999999999999 -1.5708 -5.5511151231257827e-17 -1.5708</pose>
+      <parent>arm_Link5</parent>
+      <child>arm_Link6</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-2.3500000000000001</lower>
+          <upper>2.3500000000000001</upper>
+          <effort>1.7</effort>
+          <velocity>0.59999999999999998</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.014999999999999999</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='arm_Link6'>
+      <pose relative_to='arm_Joint6'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>-0.0068528 -3.9972999999999998e-06 0.039704999999999997 0 0 0</pose>
+        <mass>0.077892000000000003</mass>
+        <inertia>
+          <ixx>3.8235999999999998e-05</ixx>
+          <ixy>1.3465e-08</ixy>
+          <ixz>-2.0613999999999999e-07</ixz>
+          <iyy>1.7706999999999998e-05</iyy>
+          <iyz>-6.7116999999999997e-10</iyz>
+          <izz>4.8838999999999998e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='arm_Link6_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/aup/Documents/Codex/2026-10-15/xian/outputs/d1t_sim/meshes/Link6.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.80000000000000004</mu>
+              <mu2>0.80000000000000004</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='arm_Link6_fixed_joint_lump__wrist_camera_body_collision_1'>
+        <pose>-0.061993442476285632 0 0.030004587064486169 0 0.35000000000000003 0</pose>
+        <geometry>
+          <box>
+            <size>0.029000000000000001 0.10199999999999999 0.032000000000000001</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='arm_Link6_fixed_joint_lump__wrist_camera_bracket_collision_2'>
+        <pose>-0.044338387381843827 0 0.0054628057596944404 0 0.35000000000000003 0</pose>
+        <geometry>
+          <box>
+            <size>0.042000000000000003 0.034000000000000002 0.040000000000000001</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='arm_Link6_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/aup/Documents/Codex/2026-10-15/xian/outputs/d1t_sim/meshes/Link6.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.149999991 0.174999997 0.199999988 1</diffuse>
+          <ambient>0.149999991 0.174999997 0.199999988 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__white_mount_foot_visual_1'>
+        <pose>-0.03024779668913315 0 0.00031933864786266858 0 0.35000000000000003 0</pose>
+        <geometry>
+          <box>
+            <size>0.012 0.034000000000000002 0.029999999999999999</size>
+          </box>
+        </geometry>
+        <material>
+          <diffuse>1 1 1 1</diffuse>
+          <ambient>1 1 1 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__white_t_stem_visual_2'>
+        <pose>-0.047081569841487439 0 -0.002052175943084589 0 0.35000000000000003 0</pose>
+        <geometry>
+          <box>
+            <size>0.035000000000000003 0.025000000000000001 0.012</size>
+          </box>
+        </geometry>
+        <material>
+          <diffuse>1 1 1 1</diffuse>
+          <ambient>1 1 1 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__white_t_crossbar_visual_3'>
+        <pose>-0.060650621307704718 0 0.010352695773589739 0 0.35000000000000003 0</pose>
+        <geometry>
+          <box>
+            <size>0.0060000000000000001 0.096000000000000002 0.029999999999999999</size>
+          </box>
+        </geometry>
+        <material>
+          <diffuse>1 1 1 1</diffuse>
+          <ambient>1 1 1 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__camera_white_housing_visual_4'>
+        <pose>-0.062336340283741083 0 0.02906521435163879 0 0.35000000000000003 0</pose>
+        <geometry>
+          <box>
+            <size>0.028000000000000001 0.073999999999999996 0.028000000000000001</size>
+          </box>
+        </geometry>
+        <material>
+          <diffuse>1 1 1 1</diffuse>
+          <ambient>1 1 1 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__camera_rounded_end_-1_visual_5'>
+        <pose>-0.062336340283741083 -0.036999999999999998 0.02906521435163879 0 0.35000000000000003 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.028000000000000001</length>
+            <radius>0.014</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>1 1 1 1</diffuse>
+          <ambient>1 1 1 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__camera_rounded_end_1_visual_6'>
+        <pose>-0.062336340283741083 0.036999999999999998 0.02906521435163879 0 0.35000000000000003 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.028000000000000001</length>
+            <radius>0.014</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>1 1 1 1</diffuse>
+          <ambient>1 1 1 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__camera_black_front_visual_7'>
+        <pose>-0.057192873171909311 0 0.043155805044349467 0 0.35000000000000003 0</pose>
+        <geometry>
+          <box>
+            <size>0.024 0.073999999999999996 0.002</size>
+          </box>
+        </geometry>
+        <material>
+          <diffuse>0.112745099 0.161764711 0.210784316 1</diffuse>
+          <ambient>0.112745099 0.161764711 0.210784316 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__front_round_-1_visual_8'>
+        <pose>-0.057192873171909311 -0.036999999999999998 0.043155805044349467 0 0.35000000000000003 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.002</length>
+            <radius>0.012</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>0.112745099 0.161764711 0.210784316 1</diffuse>
+          <ambient>0.112745099 0.161764711 0.210784316 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__front_round_1_visual_9'>
+        <pose>-0.057192873171909311 0.036999999999999998 0.043155805044349467 0 0.35000000000000003 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.002</length>
+            <radius>0.012</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>0.112745099 0.161764711 0.210784316 1</diffuse>
+          <ambient>0.112745099 0.161764711 0.210784316 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__lens_bezel_0_visual_10'>
+        <pose>-0.056678526460726131 -0.032000000000000001 0.044564864113620539 0 0.35000000000000003 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0014</length>
+            <radius>0.0082000000000000007</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>0.480392158 0.534313738 0.563725471 1</diffuse>
+          <ambient>0.480392158 0.534313738 0.563725471 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__lens_glass_0_visual_11'>
+        <pose>-0.056335628653270679 -0.032000000000000001 0.045504236826467918 0 0.35000000000000003 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0015</length>
+            <radius>0.0070000000000000001</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>0.357843161 0.210784316 0.352941185 1</diffuse>
+          <ambient>0.357843161 0.210784316 0.352941185 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__lens_highlight_0_visual_12'>
+        <pose>-0.057905766052255531 -0.033000000000000002 0.047035467882941467 0 0.35000000000000003 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0016000000000000001</length>
+            <radius>0.0012999999999999999</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>0.833333373 0.970588267 1 1</diffuse>
+          <ambient>0.833333373 0.970588267 1 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__lens_bezel_1_visual_13'>
+        <pose>-0.056678526460726131 -0.017000000000000001 0.044564864113620539 0 0.35000000000000003 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0014</length>
+            <radius>0.0059999999999999993</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>0.480392158 0.534313738 0.563725471 1</diffuse>
+          <ambient>0.480392158 0.534313738 0.563725471 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__lens_glass_1_visual_14'>
+        <pose>-0.056335628653270679 -0.017000000000000001 0.045504236826467918 0 0.35000000000000003 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0015</length>
+            <radius>0.0047999999999999996</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>0.254901975 0.343137264 0.392156869 1</diffuse>
+          <ambient>0.254901975 0.343137264 0.392156869 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__lens_bezel_2_visual_15'>
+        <pose>-0.056678526460726131 0 0.044564864113620539 0 0.35000000000000003 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0014</length>
+            <radius>0.0086999999999999994</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>0.480392158 0.534313738 0.563725471 1</diffuse>
+          <ambient>0.480392158 0.534313738 0.563725471 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__lens_glass_2_visual_16'>
+        <pose>-0.056335628653270679 0 0.045504236826467918 0 0.35000000000000003 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0015</length>
+            <radius>0.0074999999999999997</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>0.0784313753 0.127450988 0.176470593 1</diffuse>
+          <ambient>0.0784313753 0.127450988 0.176470593 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__lens_highlight_2_visual_17'>
+        <pose>-0.057905766052255531 -0.001 0.047035467882941467 0 0.35000000000000003 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0016000000000000001</length>
+            <radius>0.0012999999999999999</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>0.833333373 0.970588267 1 1</diffuse>
+          <ambient>0.833333373 0.970588267 1 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__lens_bezel_3_visual_18'>
+        <pose>-0.056678526460726131 0.017999999999999999 0.044564864113620539 0 0.35000000000000003 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0014</length>
+            <radius>0.0041999999999999997</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>0.480392158 0.534313738 0.563725471 1</diffuse>
+          <ambient>0.480392158 0.534313738 0.563725471 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__lens_glass_3_visual_19'>
+        <pose>-0.056335628653270679 0.017999999999999999 0.045504236826467918 0 0.35000000000000003 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0015</length>
+            <radius>0.0030000000000000001</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>0.696078479 0.441176474 0.504901946 1</diffuse>
+          <ambient>0.696078479 0.441176474 0.504901946 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__lens_bezel_4_visual_20'>
+        <pose>-0.056678526460726131 0.032000000000000001 0.044564864113620539 0 0.35000000000000003 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0014</length>
+            <radius>0.0071999999999999998</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>0.480392158 0.534313738 0.563725471 1</diffuse>
+          <ambient>0.480392158 0.534313738 0.563725471 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__lens_glass_4_visual_21'>
+        <pose>-0.056335628653270679 0.032000000000000001 0.045504236826467918 0 0.35000000000000003 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0015</length>
+            <radius>0.0060000000000000001</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>0.259803921 0.318627477 0.372549027 1</diffuse>
+          <ambient>0.259803921 0.318627477 0.372549027 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__lens_highlight_4_visual_22'>
+        <pose>-0.057905766052255531 0.031 0.047035467882941467 0 0.35000000000000003 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0016000000000000001</length>
+            <radius>0.0012999999999999999</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>0.833333373 0.970588267 1 1</diffuse>
+          <ambient>0.833333373 0.970588267 1 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__mount_screw_0_visual_23'>
+        <pose>-0.062379495375602431 -0.028000000000000001 -0.006048858861790133 0 0.35000000000000003 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.002</length>
+            <radius>0.0025000000000000001</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>0.691176534 0.725490212 0.75000006 1</diffuse>
+          <ambient>0.691176534 0.725490212 0.75000006 1</ambient>
+        </material>
+      </visual>
+      <visual name='arm_Link6_fixed_joint_lump__mount_screw_1_visual_24'>
+        <pose>-0.062379495375602431 0.028000000000000001 -0.006048858861790133 0 0.35000000000000003 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.002</length>
+            <radius>0.0025000000000000001</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <diffuse>0.691176534 0.725490212 0.75000006 1</diffuse>
+          <ambient>0.691176534 0.725490212 0.75000006 1</ambient>
+        </material>
+      </visual>
+      <self_collide>true</self_collide>
+      <sensor name='wrist_rgb' type='camera'>
+        <always_on>true</always_on>
+        <update_rate>10</update_rate>
+        <visualize>false</visualize>
+        <topic>/d1t/wrist_camera/image</topic>
+        <camera name='wrist_camera'>
+          <horizontal_fov>1.5707963267948966</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>R8G8B8</format>
+          </image>
+          <clip>
+            <near>0.01</near>
+            <far>4</far>
+          </clip>
+        </camera>
+        <pose>-0.055821299999999997 0 0.046913299999999998 0 -1.2208000000000003 0</pose>
+      </sensor>
+    </link>
+    <joint name='arm_Joint7_1' type='prismatic'>
+      <pose relative_to='arm_Link6'>-0.0056011999999999998 -0.029635999999999999 0.070599999999999996 1.5701926535731319 -1.5707926536964443 -3.1415926535746803</pose>
+      <parent>arm_Link6</parent>
+      <child>arm_Link7_1</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0.029999999999999999</upper>
+          <effort>20</effort>
+          <velocity>0.029999999999999999</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.014999999999999999</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='arm_Link7_1'>
+      <pose relative_to='arm_Joint7_1'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.018926999999999999 0.0060000000000000001 0.012082000000000001 0 0 0</pose>
+        <mass>0.015046</mass>
+        <inertia>
+          <ixx>1.2692000000000001e-06</ixx>
+          <ixy>7.7440999999999995e-20</ixy>
+          <ixz>-1.133e-07</ixz>
+          <iyy>2.0229000000000001e-06</iyy>
+          <iyz>1.2043999999999999e-20</iyz>
+          <izz>2.6176999999999999e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='arm_Link7_1_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/aup/Documents/Codex/2026-10-15/xian/outputs/d1t_sim/meshes/Link7_1.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.80000000000000004</mu>
+              <mu2>0.80000000000000004</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='arm_Link7_1_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/aup/Documents/Codex/2026-10-15/xian/outputs/d1t_sim/meshes/Link7_1.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.149999991 0.174999997 0.199999988 1</diffuse>
+          <ambient>0.149999991 0.174999997 0.199999988 1</ambient>
+        </material>
+      </visual>
+      <self_collide>true</self_collide>
+    </link>
+    <joint name='arm_Joint7_2' type='prismatic'>
+      <pose relative_to='arm_Link6'>-0.0056388000000000002 0.02964 0.070599999999999996 -1.5713926535736136 -1.5707926536057681 3.1415926535897931</pose>
+      <parent>arm_Link6</parent>
+      <child>arm_Link7_2</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.029999999999999999</lower>
+          <upper>0</upper>
+          <effort>20</effort>
+          <velocity>0.029999999999999999</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.014999999999999999</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='arm_Link7_2'>
+      <pose relative_to='arm_Joint7_2'>0 0 0 0 0 0</pose>
+      <inertial>
+        <pose>0.018926999999999999 -0.0060000000000000001 0.012082000000000001 0 0 0</pose>
+        <mass>0.015046</mass>
+        <inertia>
+          <ixx>1.2692000000000001e-06</ixx>
+          <ixy>-7.8273e-20</ixy>
+          <ixz>-1.133e-07</ixz>
+          <iyy>2.0229000000000001e-06</iyy>
+          <iyz>-1.2122e-20</iyz>
+          <izz>2.6176999999999999e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='arm_Link7_2_collision'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/aup/Documents/Codex/2026-10-15/xian/outputs/d1t_sim/meshes/Link7_2.STL</uri>
+          </mesh>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode>
+              <mu>0.80000000000000004</mu>
+              <mu2>0.80000000000000004</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='arm_Link7_2_visual'>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>/home/aup/Documents/Codex/2026-10-15/xian/outputs/d1t_sim/meshes/Link7_2.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.149999991 0.174999997 0.199999988 1</diffuse>
+          <ambient>0.149999991 0.174999997 0.199999988 1</ambient>
+        </material>
+      </visual>
+      <self_collide>true</self_collide>
+    </link>
+    <plugin name='gz::sim::systems::JointPositionController' filename='gz-sim-joint-position-controller-system'>
+      <joint_name>arm_Joint1</joint_name>
+      <topic>/d1t/arm_Joint1/cmd_pos</topic>
+      <p_gain>80</p_gain>
+      <i_gain>10</i_gain>
+      <d_gain>0.3</d_gain>
+      <i_max>1</i_max>
+      <i_min>-1</i_min>
+      <cmd_max>3.3</cmd_max>
+      <cmd_min>-3.3</cmd_min>
+    </plugin>
+    <plugin name='gz::sim::systems::JointPositionController' filename='gz-sim-joint-position-controller-system'>
+      <joint_name>arm_Joint2</joint_name>
+      <topic>/d1t/arm_Joint2/cmd_pos</topic>
+      <p_gain>80</p_gain>
+      <i_gain>10</i_gain>
+      <d_gain>0.3</d_gain>
+      <i_max>1</i_max>
+      <i_min>-1</i_min>
+      <cmd_max>3.3</cmd_max>
+      <cmd_min>-3.3</cmd_min>
+    </plugin>
+    <plugin name='gz::sim::systems::JointPositionController' filename='gz-sim-joint-position-controller-system'>
+      <joint_name>arm_Joint3</joint_name>
+      <topic>/d1t/arm_Joint3/cmd_pos</topic>
+      <p_gain>60</p_gain>
+      <i_gain>8</i_gain>
+      <d_gain>0.1</d_gain>
+      <i_max>1</i_max>
+      <i_min>-1</i_min>
+      <cmd_max>1.7</cmd_max>
+      <cmd_min>-1.7</cmd_min>
+    </plugin>
+    <plugin name='gz::sim::systems::JointPositionController' filename='gz-sim-joint-position-controller-system'>
+      <joint_name>arm_Joint4</joint_name>
+      <topic>/d1t/arm_Joint4/cmd_pos</topic>
+      <p_gain>15</p_gain>
+      <i_gain>2</i_gain>
+      <d_gain>0.008</d_gain>
+      <i_max>1</i_max>
+      <i_min>-1</i_min>
+      <cmd_max>1.7</cmd_max>
+      <cmd_min>-1.7</cmd_min>
+    </plugin>
+    <plugin name='gz::sim::systems::JointPositionController' filename='gz-sim-joint-position-controller-system'>
+      <joint_name>arm_Joint5</joint_name>
+      <topic>/d1t/arm_Joint5/cmd_pos</topic>
+      <p_gain>20</p_gain>
+      <i_gain>3</i_gain>
+      <d_gain>0.01</d_gain>
+      <i_max>1</i_max>
+      <i_min>-1</i_min>
+      <cmd_max>1.7</cmd_max>
+      <cmd_min>-1.7</cmd_min>
+    </plugin>
+    <plugin name='gz::sim::systems::JointPositionController' filename='gz-sim-joint-position-controller-system'>
+      <joint_name>arm_Joint6</joint_name>
+      <topic>/d1t/arm_Joint6/cmd_pos</topic>
+      <p_gain>10</p_gain>
+      <i_gain>1</i_gain>
+      <d_gain>0.006</d_gain>
+      <i_max>1</i_max>
+      <i_min>-1</i_min>
+      <cmd_max>1.7</cmd_max>
+      <cmd_min>-1.7</cmd_min>
+    </plugin>
+    <plugin name='gz::sim::systems::JointPositionController' filename='gz-sim-joint-position-controller-system'>
+      <joint_name>arm_Joint7_1</joint_name>
+      <topic>/d1t/arm_Joint7_1/cmd_pos</topic>
+      <p_gain>200</p_gain>
+      <i_gain>5</i_gain>
+      <d_gain>1</d_gain>
+      <i_max>1</i_max>
+      <i_min>-1</i_min>
+      <cmd_max>20.0</cmd_max>
+      <cmd_min>-20.0</cmd_min>
+    </plugin>
+    <plugin name='gz::sim::systems::JointPositionController' filename='gz-sim-joint-position-controller-system'>
+      <joint_name>arm_Joint7_2</joint_name>
+      <topic>/d1t/arm_Joint7_2/cmd_pos</topic>
+      <p_gain>200</p_gain>
+      <i_gain>5</i_gain>
+      <d_gain>1</d_gain>
+      <i_max>1</i_max>
+      <i_min>-1</i_min>
+      <cmd_max>20.0</cmd_max>
+      <cmd_min>-20.0</cmd_min>
+    </plugin>
+    <plugin name='gz::sim::systems::JointStatePublisher' filename='gz-sim-joint-state-publisher-system'>
+      <topic>/d1t/joint_states</topic>
+    </plugin>
+    <frame name='arm_wrist_camera_optical_joint' attached_to='arm_wrist_camera_link'>
+      <pose>-0.01 0 0.025000000000000001 0 -1.5707963267948966 0</pose>
+    </frame>
+    <frame name='arm_wrist_camera_optical_link' attached_to='arm_wrist_camera_optical_joint'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+    <frame name='arm_wrist_camera_mount' attached_to='arm_Link6'>
+      <pose>-0.055 0 0.02 0 0.35000000000000009 0</pose>
+    </frame>
+    <frame name='arm_wrist_camera_link' attached_to='arm_wrist_camera_mount'>
+      <pose>0 0 0 0 0 0</pose>
+    </frame>
+  </model>
+</sdf>

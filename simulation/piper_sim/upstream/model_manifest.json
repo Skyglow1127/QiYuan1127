@@ -1,0 +1,426 @@
+{
+  "source": "https://github.com/agilexrobotics/agx_arm_urdf",
+  "commit": "680fa925cd00db7e2628563d2edc5540963045de",
+  "source_urdf": "piper/urdf/piper_description.urdf",
+  "source_gripper": "piper/urdf/piper_with_gripper_description.xacro",
+  "license": "MIT",
+  "prepared_urdf": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/prepared/piper.urdf",
+  "changes": [
+    "Expand the official standard-Piper gripper include.",
+    "Rewrite mesh package URIs to absolute checkout paths.",
+    "Remove only massless virtual gripper_link/gripper joint; remove mimic tags from the two physical finger joints so Gazebo PID can command them explicitly.",
+    "All physical-link masses, inertia tensors, joint origins, axes and limits retained unchanged."
+  ],
+  "links": [
+    {
+      "name": "world",
+      "visual": [],
+      "collision": []
+    },
+    {
+      "name": "base_link",
+      "visual": [
+        {
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "mesh": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/dae/base_link.dae"
+        }
+      ],
+      "collision": [
+        {
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "mesh": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/base_link.stl"
+        }
+      ]
+    },
+    {
+      "name": "link1",
+      "visual": [
+        {
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "mesh": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/dae/link1.dae"
+        }
+      ],
+      "collision": [
+        {
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "mesh": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/link1.stl"
+        }
+      ]
+    },
+    {
+      "name": "link2",
+      "visual": [
+        {
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "mesh": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/dae/link2.dae"
+        }
+      ],
+      "collision": [
+        {
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "mesh": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/link2.stl"
+        }
+      ]
+    },
+    {
+      "name": "link3",
+      "visual": [
+        {
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "mesh": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/dae/link3.dae"
+        }
+      ],
+      "collision": [
+        {
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "mesh": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/link3.stl"
+        }
+      ]
+    },
+    {
+      "name": "link4",
+      "visual": [
+        {
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "mesh": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/dae/link4.dae"
+        }
+      ],
+      "collision": [
+        {
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "mesh": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/link4.stl"
+        }
+      ]
+    },
+    {
+      "name": "link5",
+      "visual": [
+        {
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "mesh": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/dae/link5.dae"
+        }
+      ],
+      "collision": [
+        {
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "mesh": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/link5.stl"
+        }
+      ]
+    },
+    {
+      "name": "link6",
+      "visual": [
+        {
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "mesh": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/dae/link6.dae"
+        }
+      ],
+      "collision": [
+        {
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "mesh": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/link6.stl"
+        }
+      ]
+    },
+    {
+      "name": "flange_link",
+      "visual": [
+        {
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "mesh": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/dae/flange.dae"
+        }
+      ],
+      "collision": [
+        {
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "mesh": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/flange.stl"
+        }
+      ]
+    },
+    {
+      "name": "gripper_base",
+      "visual": [
+        {
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "mesh": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/agx_gripper/meshes/dae/gripper_base.dae"
+        }
+      ],
+      "collision": [
+        {
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "mesh": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/agx_gripper/meshes/gripper_base.stl"
+        }
+      ]
+    },
+    {
+      "name": "gripper_link1",
+      "visual": [
+        {
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "mesh": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/agx_gripper/meshes/dae/gripper_link1.dae"
+        }
+      ],
+      "collision": [
+        {
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "mesh": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/agx_gripper/meshes/gripper_link1.stl"
+        }
+      ]
+    },
+    {
+      "name": "gripper_link2",
+      "visual": [
+        {
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "mesh": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/agx_gripper/meshes/dae/gripper_link2.dae"
+        }
+      ],
+      "collision": [
+        {
+          "origin": {
+            "xyz": "0 0 0",
+            "rpy": "0 0 0"
+          },
+          "mesh": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/agx_gripper/meshes/gripper_link2.stl"
+        }
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "world_to_base_link",
+      "type": "fixed",
+      "parent": "world",
+      "child": "base_link",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "0 0 0"
+      },
+      "axis": null,
+      "limit": null
+    },
+    {
+      "name": "joint1",
+      "type": "revolute",
+      "parent": "base_link",
+      "child": "link1",
+      "origin": {
+        "xyz": "0 0 0.123",
+        "rpy": "0 0 0"
+      },
+      "axis": "0 0 1",
+      "limit": {
+        "lower": "-2.6179938",
+        "upper": "2.6179938",
+        "effort": "100",
+        "velocity": "5"
+      }
+    },
+    {
+      "name": "joint2",
+      "type": "revolute",
+      "parent": "link1",
+      "child": "link2",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "1.5707963 -0.1357866 -3.1415926"
+      },
+      "axis": "0 0 1",
+      "limit": {
+        "lower": "0",
+        "upper": "3.1415926",
+        "effort": "100",
+        "velocity": "5"
+      }
+    },
+    {
+      "name": "joint3",
+      "type": "revolute",
+      "parent": "link2",
+      "child": "link3",
+      "origin": {
+        "xyz": "0.28503 0 0",
+        "rpy": "0 0 -1.7938494"
+      },
+      "axis": "0 0 1",
+      "limit": {
+        "lower": "-2.9670597",
+        "upper": "0",
+        "effort": "100",
+        "velocity": "5"
+      }
+    },
+    {
+      "name": "joint4",
+      "type": "revolute",
+      "parent": "link3",
+      "child": "link4",
+      "origin": {
+        "xyz": "-0.02198 -0.25075 0",
+        "rpy": "1.5707963 0 0"
+      },
+      "axis": "0 0 1",
+      "limit": {
+        "lower": "-1.7453292",
+        "upper": "1.7453292",
+        "effort": "100",
+        "velocity": "5"
+      }
+    },
+    {
+      "name": "joint5",
+      "type": "revolute",
+      "parent": "link4",
+      "child": "link5",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "-1.5707963 0 0"
+      },
+      "axis": "0 0 1",
+      "limit": {
+        "lower": "-1.2217304",
+        "upper": "1.2217304",
+        "effort": "100",
+        "velocity": "5"
+      }
+    },
+    {
+      "name": "joint6",
+      "type": "revolute",
+      "parent": "link5",
+      "child": "link6",
+      "origin": {
+        "xyz": "8.8259E-05 -0.091 0",
+        "rpy": "1.5707963 0 0"
+      },
+      "axis": "0 0 1",
+      "limit": {
+        "lower": "-2.9670597",
+        "upper": "2.9670597",
+        "effort": "100",
+        "velocity": "5"
+      }
+    },
+    {
+      "name": "flange_joint",
+      "type": "fixed",
+      "parent": "link6",
+      "child": "flange_link",
+      "origin": {
+        "xyz": "0 0 0",
+        "rpy": "0 0 0"
+      },
+      "axis": null,
+      "limit": null
+    },
+    {
+      "name": "gripper_base_joint",
+      "type": "fixed",
+      "parent": "flange_link",
+      "child": "gripper_base",
+      "origin": {
+        "xyz": "0 0 0.0045",
+        "rpy": "0 0 0"
+      },
+      "axis": null,
+      "limit": null
+    },
+    {
+      "name": "gripper_joint1",
+      "type": "prismatic",
+      "parent": "gripper_base",
+      "child": "gripper_link1",
+      "origin": {
+        "xyz": "0 0 0.138",
+        "rpy": "1.5707963 0 0"
+      },
+      "axis": "0 0 1",
+      "limit": {
+        "lower": "0",
+        "upper": "0.05",
+        "effort": "10",
+        "velocity": "3"
+      }
+    },
+    {
+      "name": "gripper_joint2",
+      "type": "prismatic",
+      "parent": "gripper_base",
+      "child": "gripper_link2",
+      "origin": {
+        "xyz": "0 0 0.138",
+        "rpy": "1.5707963 0 -3.1415926"
+      },
+      "axis": "0 0 -1",
+      "limit": {
+        "lower": "-0.05",
+        "upper": "0",
+        "effort": "10",
+        "velocity": "3"
+      }
+    }
+  ]
+}

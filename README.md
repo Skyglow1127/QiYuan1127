@@ -37,6 +37,17 @@
 
 [FPGA 工程与固件](hardware/fpga_project_20261104/) · [ACT 轨迹板端回放结果](hardware/fpga_project_20261104/上板测试_20261104/03_ACT轨迹上板测试_通过/result.json)
 
+## 成果导航与归档
+
+[全部成果及收录依据](docs/成果总览.md) · [工作区核对表](docs/工作区核对.md) · [新增模型资产](models/supplemental_manifest.json)
+
+- **感知与硬件接口**：[数字触觉](hardware/kr260_tactile/归档说明.md)、[深度门限](hardware/depth_gate/归档说明.md)、[感知与标定源码](src/camera_perception/归档说明.md)。
+- **部署实验**：[真实NPU/GPU混合推理](experiments/pi05_vision_npu/归档说明.md)、[SmolVLA D1软件链路](experiments/smolvla_d1_smoke/归档说明.md)。
+- **建模与工具**：[机械臂仿真](simulation/README.md)、[参数化机械结构](hardware/mechanical/README.md)、[Vivado工具与汉化](tools/vivado_workflow/归档说明.md)。
+- **独立工程**：[FPGA测频、AIC驾驶实验与传感器PCB](related_projects/README.md)。
+
+原复现材料包保留为2026-11-04交付快照。2026-11-11补齐的源码、证据和下载入口统一从上方索引访问。
+
 ## 项目组成
 
 | 目录 | 内容 |

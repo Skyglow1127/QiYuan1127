@@ -59,3 +59,8 @@ Thumbs.db
 !hardware/fpga_project_20261104/上板文件/robot_rt.bit.bin
 !hardware/fpga_project_20261104/上板文件/robot_rt.xsa
 !hardware/fpga_project_20261104/板端配置/robot_rt.dtbo
+
+# Archived raw evidence from the workspace audit
+!related_projects/slidedetect/evidence/**/*.log
+!hardware/kr260_tactile/evidence/digital_tests.log
+hardware/kr260_tactile/ssh_config

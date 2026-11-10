@@ -1,0 +1,25 @@
+{
+  "status": "MINIMAL_VALIDATION_PASSED",
+  "date": "2026-10-25",
+  "training_steps": 3,
+  "checkpoint": "/home/aup/模型库/策略模型/SmolVLA/d1_lift_smoke_20261025",
+  "checkpoint_sha256": "2fa5f1095c33a6ee259cf878802d2b13403edfa1e9d31f23dfc0173e69ebf421",
+  "independent_reload": "PASSED",
+  "max_reload_output_difference": 0.0,
+  "full_training_started": false,
+  "full_training_blocker": "No complete continuous grasp episodes; current data consists of two lift fragments.",
+  "npu_used": false,
+  "robot_commands_sent": 0,
+  "software_training_cli_import_passed": true,
+  "current_source_hashes": {
+    "smoke.py": "570ce83f504278d1d30a489116063c0c7b443e3f593bd791b2e249835cd86e55",
+    "prepare_data.py": "efc3e7711b2f9e34837b45184dd39ef5ff35dec33fff2076fb264b0b643a644f",
+    "requirements-lock.txt": "2b976ae3ee258b4e09218913f5a44d3e1e5bb5ea433fa187eb33cca955cccf8d",
+    "action_contract.json": "87b84e6ebd8e88c63950cd740a3dc0fd96dc2e75da9b76ec98ecd063abdc891e"
+  },
+  "reports": {
+    "train": "/home/aup/NPU/policies/smolvla_d1/artifacts/train_results.json",
+    "reload": "/home/aup/NPU/policies/smolvla_d1/artifacts/reload_results.json",
+    "readiness": "/home/aup/NPU/policies/smolvla_d1/artifacts/training_readiness.json"
+  }
+}

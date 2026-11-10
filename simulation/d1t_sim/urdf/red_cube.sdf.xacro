@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<sdf version="1.9" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- Homogeneous 40 mm cube; 20 g is a simulation assumption, not a measured payload. -->
+  <xacro:arg name="edge" default="0.04"/><xacro:arg name="mass" default="0.02"/><xacro:arg name="xyz" default="0.32 0 0.02"/>
+  <xacro:property name="a" value="$(arg edge)"/><xacro:property name="m" value="$(arg mass)"/>
+  <model name="red_cube"><pose>$(arg xyz) 0 0 0</pose>
+    <link name="body">
+      <inertial><mass>${m}</mass><inertia><ixx>${m*a*a/6}</ixx><iyy>${m*a*a/6}</iyy><izz>${m*a*a/6}</izz><ixy>0</ixy><ixz>0</ixz><iyz>0</iyz></inertia></inertial>
+      <collision name="collision"><geometry><box><size>${a} ${a} ${a}</size></box></geometry><surface><friction><ode><mu>0.8</mu><mu2>0.8</mu2></ode></friction></surface></collision>
+      <visual name="visual"><geometry><box><size>${a} ${a} ${a}</size></box></geometry><material><ambient>0.8 0.015 0.025 1</ambient><diffuse>0.9 0.025 0.04 1</diffuse><specular>0.15 0.15 0.15 1</specular></material></visual>
+      <sensor name="contacts" type="contact"><always_on>true</always_on><update_rate>100</update_rate><contact><collision>collision</collision><topic>/red_cube/contacts</topic></contact></sensor>
+    </link>
+    <plugin filename="gz-sim-pose-publisher-system" name="gz::sim::systems::PosePublisher"><publish_model_pose>true</publish_model_pose><publish_link_pose>false</publish_link_pose><publish_nested_model_pose>false</publish_nested_model_pose><use_pose_vector_msg>true</use_pose_vector_msg><update_frequency>50</update_frequency></plugin>
+  </model>
+</sdf>

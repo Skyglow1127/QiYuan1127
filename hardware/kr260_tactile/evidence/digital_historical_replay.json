@@ -1,0 +1,25 @@
+{
+  "client_date": "2026-10-26",
+  "verification": "OFFLINE_REPLAY_OF_HISTORICAL_REAL_DO_CSV",
+  "live_sensor_test": false,
+  "fixture_mapping_and_response_flags": true,
+  "samples": 1400,
+  "window_s": [
+    868,
+    882
+  ],
+  "raw_do1_edges": 10,
+  "raw_values_preserved": true,
+  "debounced_states_seen": [
+    "None",
+    "False",
+    "True"
+  ],
+  "decisions_seen": [
+    "CONTACT",
+    "HOLD",
+    "NO_CONTACT"
+  ],
+  "source_csv": "/media/aup/UbuntuData/抓取实验/压力测试程序/records/实测曲线数据快照.csv",
+  "note": "软件离线回放。传感器已取出，本轮没有新实测；回放未通过真实采集服务发布。"
+}

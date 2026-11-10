@@ -1,0 +1,91 @@
+{
+  "00_board_fit_gauge": {
+    "watertight": true,
+    "consistent_winding": true,
+    "components": 1,
+    "dimensions_mm": [
+      150.0,
+      127.0,
+      17.0
+    ],
+    "min_z_mm": 0.0,
+    "volume_cm3": 12.91
+  },
+  "01_base": {
+    "watertight": true,
+    "consistent_winding": true,
+    "components": 1,
+    "dimensions_mm": [
+      164.0,
+      151.0,
+      17.0
+    ],
+    "min_z_mm": 0.0,
+    "volume_cm3": 80.73
+  },
+  "02_hood_inverted": {
+    "watertight": true,
+    "consistent_winding": true,
+    "components": 1,
+    "dimensions_mm": [
+      164.0,
+      151.0,
+      48.2
+    ],
+    "min_z_mm": -0.0,
+    "volume_cm3": 98.96
+  },
+  "03_service_hatch_inverted": {
+    "watertight": true,
+    "consistent_winding": true,
+    "components": 1,
+    "dimensions_mm": [
+      44.0,
+      94.0,
+      4.8
+    ],
+    "min_z_mm": -0.0,
+    "volume_cm3": 18.31
+  },
+  "04_clip_test": {
+    "watertight": true,
+    "consistent_winding": true,
+    "components": 1,
+    "dimensions_mm": [
+      30.2,
+      17.0,
+      3.85
+    ],
+    "min_z_mm": 0.0,
+    "volume_cm3": 0.96
+  },
+  "05_socket_test": {
+    "watertight": true,
+    "consistent_winding": true,
+    "components": 1,
+    "dimensions_mm": [
+      12.0,
+      17.0,
+      12.0
+    ],
+    "min_z_mm": 0.0,
+    "volume_cm3": 1.1
+  },
+  "case_intersections_mm3": {
+    "base:hood": 0.0,
+    "hood:hatch": 0.0,
+    "base:hatch": 0.0
+  },
+  "approximate_board_envelope_intersections_mm3": {},
+  "assumed_straight_plug_corridor_intersections_mm3": {},
+  "assembled_dimensions_mm": [
+    164,
+    151,
+    56.4
+  ],
+  "top_fan_grille_open_area_mm2": 3778.2,
+  "fan_grille_slot_width_mm": 3.2,
+  "lid_to_nominal_kit_clearance_mm": 9.400000000000006,
+  "physical_print_fit_thermal_test": "NOT PERFORMED. All component and plug models are approximations.",
+  "snap_insertion_simulation": "NOT PERFORMED. Seated geometry checked only. Print both small test coupons first."
+}

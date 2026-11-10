@@ -1,0 +1,26 @@
+{
+  "source": "ssh",
+  "host": "pressure-kr260",
+  "chip": "auto",
+  "offsets": [
+    0,
+    1
+  ],
+  "rate_hz": 100,
+  "polarity": [
+    "low",
+    "unknown"
+  ],
+  "mapping_confirmed": true,
+  "sensor_connected": true,
+  "enabled_channels": [
+    true,
+    false
+  ],
+  "channel_verified": [
+    true,
+    false
+  ],
+  "debounce_ms": 30,
+  "stale_ms": 250
+}

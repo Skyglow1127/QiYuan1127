@@ -1,0 +1,297 @@
+{
+  "visual_DAE": [
+    {
+      "path": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/agx_gripper/meshes/dae/gripper_base.dae",
+      "unit": {
+        "name": "meter",
+        "meter": "1"
+      },
+      "up_axis": "Z_UP",
+      "external_assets": [],
+      "diffuse_colors": [
+        "0.1144346 0.1144355 0.1144354 1",
+        "0.784314 0.784314 0.784314 1"
+      ]
+    },
+    {
+      "path": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/agx_gripper/meshes/dae/gripper_link1.dae",
+      "unit": {
+        "name": "meter",
+        "meter": "1"
+      },
+      "up_axis": "Z_UP",
+      "external_assets": [],
+      "diffuse_colors": [
+        "0 0 0 1",
+        "0.117647 0.117647 0.117647 1",
+        "0.980392 0.980392 0.980392 1"
+      ]
+    },
+    {
+      "path": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/agx_gripper/meshes/dae/gripper_link2.dae",
+      "unit": {
+        "name": "meter",
+        "meter": "1"
+      },
+      "up_axis": "Z_UP",
+      "external_assets": [],
+      "diffuse_colors": [
+        "0 0 0 1",
+        "0.117647 0.117647 0.117647 1",
+        "0.980392 0.980392 0.980392 1"
+      ]
+    },
+    {
+      "path": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/dae/base_link.dae",
+      "unit": {
+        "name": "meter",
+        "meter": "1"
+      },
+      "up_axis": "Z_UP",
+      "external_assets": [],
+      "diffuse_colors": [
+        "0 0 0 1",
+        "0.113725 0.113725 0.113725 1"
+      ]
+    },
+    {
+      "path": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/dae/flange.dae",
+      "unit": {
+        "name": "meter",
+        "meter": "1"
+      },
+      "up_axis": "Z_UP",
+      "external_assets": [],
+      "diffuse_colors": [
+        "0.1144346 0.1144355 0.1144354 1"
+      ]
+    },
+    {
+      "path": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/dae/link1.dae",
+      "unit": {
+        "name": "meter",
+        "meter": "1"
+      },
+      "up_axis": "Z_UP",
+      "external_assets": [],
+      "diffuse_colors": [
+        "0.113725 0.113725 0.113725 1"
+      ]
+    },
+    {
+      "path": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/dae/link2.dae",
+      "unit": {
+        "name": "meter",
+        "meter": "1"
+      },
+      "up_axis": "Z_UP",
+      "external_assets": [],
+      "diffuse_colors": [
+        "0.058824 0.058824 0.058824 1",
+        "0.113725 0.113725 0.113725 1",
+        "0.403922 0.403922 0.403922 1",
+        "0.745098 0.745098 0.745098 1",
+        "0.854902 0.121569 0.121569 1",
+        "0.901961 0.901961 0.901961 1",
+        "0.980392 0.980392 0.980392 1"
+      ]
+    },
+    {
+      "path": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/dae/link3.dae",
+      "unit": {
+        "name": "meter",
+        "meter": "1"
+      },
+      "up_axis": "Z_UP",
+      "external_assets": [],
+      "diffuse_colors": [
+        "0.058824 0.058824 0.058824 1",
+        "0.121569 0.121569 0.121569 1",
+        "0.4 0.4 0.4 1",
+        "0.780392 0.168627 0.168627 1",
+        "0.901961 0.901961 0.901961 1",
+        "0.980392 0.980392 0.980392 1"
+      ]
+    },
+    {
+      "path": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/dae/link4.dae",
+      "unit": {
+        "name": "meter",
+        "meter": "1"
+      },
+      "up_axis": "Z_UP",
+      "external_assets": [],
+      "diffuse_colors": [
+        "0.113725 0.113725 0.113725 1"
+      ]
+    },
+    {
+      "path": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/dae/link5.dae",
+      "unit": {
+        "name": "meter",
+        "meter": "1"
+      },
+      "up_axis": "Z_UP",
+      "external_assets": [],
+      "diffuse_colors": [
+        "0 0 0 1",
+        "0.117647 0.117647 0.117647 1"
+      ]
+    },
+    {
+      "path": "/home/aup/Documents/Codex/2026-10-15/xian/work/piper_official/agx_arm_urdf/piper/meshes/dae/link6.dae",
+      "unit": {
+        "name": "meter",
+        "meter": "1"
+      },
+      "up_axis": "Z_UP",
+      "external_assets": [],
+      "diffuse_colors": [
+        "0.117647 0.117647 0.117647 1"
+      ]
+    }
+  ],
+  "collision_STL": "Original STL units verified at meter-scale; no extra scale needed.",
+  "hashes": [
+    {
+      "path": "LICENSE",
+      "bytes": 1065,
+      "sha256": "247944c63de1573653722ba784f96123da267105b7b48577e0c8826a24b809f6"
+    },
+    {
+      "path": "agx_gripper/meshes/dae/gripper_base.dae",
+      "bytes": 2721338,
+      "sha256": "aaea10ec06709d6a3343dd3378553eee3df40b43ee276df10c5b68ac7f61bae2"
+    },
+    {
+      "path": "agx_gripper/meshes/dae/gripper_link1.dae",
+      "bytes": 176476,
+      "sha256": "b4aaf0e024d09eb0454e70e0c5092638edcf7da7c253d1effdeeaec46f76427b"
+    },
+    {
+      "path": "agx_gripper/meshes/dae/gripper_link2.dae",
+      "bytes": 176476,
+      "sha256": "0da1350898b2787b76b84698253aeb1efd2ddb6360b2fa2ae03ecff389883af8"
+    },
+    {
+      "path": "agx_gripper/meshes/gripper_base.stl",
+      "bytes": 1837884,
+      "sha256": "0b839dc0bcb7d94e3422c74f6396b54a0441ba4836448ab5586e7f372d1bdbf3"
+    },
+    {
+      "path": "agx_gripper/meshes/gripper_link1.stl",
+      "bytes": 104384,
+      "sha256": "475a7d8db056524d7659fadf5a2c307d62791047b6214d733dfc7846ed1c613d"
+    },
+    {
+      "path": "agx_gripper/meshes/gripper_link2.stl",
+      "bytes": 104384,
+      "sha256": "3f88d534a85e28a33ef7d2061adacbd1d25214aa9325f9e464aad0f9e4b74606"
+    },
+    {
+      "path": "agx_gripper/urdf/agx_gripper_description.urdf",
+      "bytes": 3758,
+      "sha256": "e8ca1a5dad852e4afc88a56430b3f9a005b719c1c4fe648203b2bee0cff3b4c5"
+    },
+    {
+      "path": "piper/meshes/base_link.stl",
+      "bytes": 607384,
+      "sha256": "fd4a3d6d0266205fe3f725f048645be66592c23564db22e08b0807d5569b2c64"
+    },
+    {
+      "path": "piper/meshes/dae/base_link.dae",
+      "bytes": 1006256,
+      "sha256": "99cd5083e485e3eb739d967c57451f11e32e80b9f4f293815ba3b546d99bdc3c"
+    },
+    {
+      "path": "piper/meshes/dae/flange.dae",
+      "bytes": 285243,
+      "sha256": "421c3e20c6109df3c96c5ce18ff0b2609b6604135ff790e4bfc1d9a281b0701a"
+    },
+    {
+      "path": "piper/meshes/dae/link1.dae",
+      "bytes": 734613,
+      "sha256": "ea11f3382f6b32ec6d2283db4320ba2065ee1d24358f9b236ce71cfd4cd352cd"
+    },
+    {
+      "path": "piper/meshes/dae/link2.dae",
+      "bytes": 6923319,
+      "sha256": "f6a723ff09c605a4bab19c1581b8879461967afe5626a3b7ca0a884e5f11a869"
+    },
+    {
+      "path": "piper/meshes/dae/link3.dae",
+      "bytes": 3142573,
+      "sha256": "17cee6f92b741f21e29e4a3a3f600ba8093af3e1f61ae717747e03251a76982c"
+    },
+    {
+      "path": "piper/meshes/dae/link4.dae",
+      "bytes": 1402164,
+      "sha256": "2a4d28b04341c22fdc38e9fc576c2386bf6f1e8ef0526d5b2cf179ea9ea650b3"
+    },
+    {
+      "path": "piper/meshes/dae/link5.dae",
+      "bytes": 1362521,
+      "sha256": "fc7253ad4128731fded02700d5f35b94a30f3c219cd2b75b62b0abbd81bf7bff"
+    },
+    {
+      "path": "piper/meshes/dae/link6.dae",
+      "bytes": 88161,
+      "sha256": "92f67e27b573969b4a1806ff3bc427bf9219c8ff78fec80d91ce3f32d69b1b9d"
+    },
+    {
+      "path": "piper/meshes/flange.stl",
+      "bytes": 204584,
+      "sha256": "f9ce752f93a6598858a779e3d8755a09e466b588efcffc3a1c3953773753a22b"
+    },
+    {
+      "path": "piper/meshes/link1.stl",
+      "bytes": 447784,
+      "sha256": "9ee6e1d67c0241f42a0dbaf5c676d19230375ed078ee1943bb8c4c37ab303d14"
+    },
+    {
+      "path": "piper/meshes/link2.stl",
+      "bytes": 3658384,
+      "sha256": "0d37675b699b643f2e15348de99aed535fac10dc5f09a79b8e4b0acfaf4e0378"
+    },
+    {
+      "path": "piper/meshes/link3.stl",
+      "bytes": 1845784,
+      "sha256": "e8ae51f17c0c7f6d67b753922e2cc269f5e8372a65734f859231639a64fe8fad"
+    },
+    {
+      "path": "piper/meshes/link4.stl",
+      "bytes": 877984,
+      "sha256": "efa33022976218f246f736a6133494b5d0e5486e8b50b52900c42f285ae85558"
+    },
+    {
+      "path": "piper/meshes/link5.stl",
+      "bytes": 833684,
+      "sha256": "a1c69d1c7f6f8c60e2c82331c0f444725200ed4053d3e5ec23aa82cb5db5b29f"
+    },
+    {
+      "path": "piper/meshes/link6.stl",
+      "bytes": 58884,
+      "sha256": "88374973bc3bd9e7389b5853cd6e555af9731c30b658b1ee6f85be34a126cb92"
+    },
+    {
+      "path": "piper/urdf/piper_description.urdf",
+      "bytes": 7847,
+      "sha256": "d9e97fec40ae47d12cf482417acec48706ce4a1398b31b91f328d5b3d75f6183"
+    },
+    {
+      "path": "piper/urdf/piper_with_gripper_description.xacro",
+      "bytes": 5300,
+      "sha256": "374013965d83e80923196598c0bfbba2b0703b9f412ed9ec255c82b5c50e0f53"
+    },
+    {
+      "path": "piper/urdf/piper_with_left_revo2_description.xacro",
+      "bytes": 1861,
+      "sha256": "882eaefa468c08fbdc41b697f3fd6c4af36378b50e54ebb852635e7bc0168ca0"
+    },
+    {
+      "path": "piper/urdf/piper_with_right_revo2_description.xacro",
+      "bytes": 1863,
+      "sha256": "026dcf5b1a283bec83e8c60b0749b478fbb186b462cc5768c39be55fe1f0f90a"
+    }
+  ]
+}

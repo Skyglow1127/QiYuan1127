@@ -1,0 +1,9 @@
+{
+  "electrical_verified": false,
+  "verification_record": "",
+  "host": "pressure-kr260",
+  "rate_hz": 20,
+  "stale_s": 0.5,
+  "channels": [],
+  "pending": "实物正面测点识别、电压范围、载板模拟通路和外部 IIO 通道均未验证；禁止选板上电源监测通道替代传感器。"
+}

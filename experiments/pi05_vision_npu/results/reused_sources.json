@@ -1,0 +1,20 @@
+[
+  {
+    "source": "/home/aup/Documents/Codex/2026-10-30/wo-y/outputs/pi05_low_memory.py",
+    "copy": "/home/aup/NPU/pi05_vision_npu/code/pi05_low_memory.py",
+    "sha256": "3b540b0f35af473d69a87b401d006cd093ea3d2287707eff537f9e3da87c1ac8",
+    "unchanged_copy": true
+  },
+  {
+    "source": "/home/aup/Documents/Codex/2026-10-30/wo-y/outputs/export_pi05_recorded_input.py",
+    "copy": "/home/aup/NPU/pi05_vision_npu/code/export_recorded_input.py",
+    "sha256": "305a03b9556d12c169925fc256b084c69bd7d61138db758fdbf9076953fae475",
+    "unchanged_copy": true
+  },
+  {
+    "source": "/home/aup/Documents/Codex/2026-10-30/w/outputs/bench/bench_npu.py",
+    "copy": "/home/aup/NPU/pi05_vision_npu/code/reused_npu_audit.py",
+    "sha256": "18cf2eed38f1eac3a7de797ed9bdd88d77128c7414528d6647fd80481fc6207c",
+    "unchanged_copy": true
+  }
+]

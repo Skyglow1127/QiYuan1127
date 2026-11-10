@@ -1,0 +1,6 @@
+numpy>=1.24,<2
+python-fcl==0.7.0.11
+
+scipy>=1.11,<2
+Pillow>=9
+# Gazebo transport13/msgs10 and protobuf are supplied by the local Debian runtime.

@@ -1,0 +1,34 @@
+[
+  {
+    "tp_size": 2,
+    "batch": 2,
+    "evidence": "/home/aup/NPU/pi05_vision_npu/results/stem_diagnostic/comparison.json",
+    "zero_fraction": 0.5,
+    "cosine": 0.6931916655630274,
+    "mean_abs": 0.36272571610443394
+  },
+  {
+    "tp_size": 2,
+    "batch": 1,
+    "evidence": "/home/aup/NPU/pi05_vision_npu/results/stem_batch1/comparison.json",
+    "zero_fraction": 0.4444444444444444,
+    "cosine": 0.7535681507116275,
+    "mean_abs": 0.30861347395934513
+  },
+  {
+    "tp_size": 1,
+    "batch": 2,
+    "evidence": "/home/aup/NPU/pi05_vision_npu/results/repair_tp1/comparison.json",
+    "zero_fraction": 0.0,
+    "cosine": 0.9739882599531356,
+    "mean_abs": 0.08031650914338659
+  },
+  {
+    "tp_size": 1,
+    "batch": 1,
+    "evidence": "/home/aup/NPU/pi05_vision_npu/results/repair_tp1_batch1/comparison.json",
+    "zero_fraction": 0.0,
+    "cosine": 0.9999906444469938,
+    "mean_abs": 0.0026946070398479924
+  }
+]

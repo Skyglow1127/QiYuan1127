@@ -1,0 +1,8 @@
+# Install into .venv-models after scripts/setup_models.sh (CPU torch stays pinned there).
+faster-coco-eval==1.8.0
+pycocotools==2.0.11
+tensorboard==2.21.0
+scipy==1.18.1
+transformers==5.19.0
+accelerate==1.15.0
+huggingface-hub==2.2.0
