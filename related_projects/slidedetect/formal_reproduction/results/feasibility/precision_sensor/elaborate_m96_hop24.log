@@ -1,0 +1,20 @@
+Vivado Simulator v2025.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/aup/Xilinx/2025.2/Vivado/bin/unwrapped/lnx64.o/xelab tb_precision_sensor -s m96_hop24 -debug typical -mt 2 -generic_top HOP_EVENTS=24 
+Using 2 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by AMD, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1fs
+Compiling module work.udiv_round
+Compiling module work.udiv_round(ROUND_NEAREST=0)
+Compiling module work.sfls_core(CLOCK_HZ=200000000,WIN...
+Compiling module work.sfls_nhz_readout_default
+Compiling module work.sfls_precision_sensor(HOP_EVENTS...
+Compiling module work.tb_precision_sensor(HOP_EVENTS=2...
+Built simulation snapshot m96_hop24

@@ -1,0 +1,32 @@
+{
+  "scope": "Arithmetic replay only. 200 MHz timestamp scale is not a 200 MHz placed-and-routed timing claim.",
+  "source_sha256": {
+    "rtl/udiv_round.sv": "d0b6e88e44fc1c19e0cda7e382bcea9f59bfcbaba9333e182e3acd21f1cc1019",
+    "rtl/sfls_core.sv": "d87f05f0ec2b33829e7f167e3d949a50dc62c5e3b51bf990b3fb83db1cabf546",
+    "sim/tb_replay.sv": "c85d19107066115be6d950c25db086045736bef193fadce5207b2eb1d4a4f27f"
+  },
+  "profiles": [
+    {
+      "label": "m96",
+      "m": 96,
+      "clock": 200000000,
+      "stride": 1,
+      "events": 16272,
+      "checks": 660,
+      "readback_exact": true,
+      "vector_sha256": "d48f1332a17fcdd9924804dfa68e965ca5dcf7564f94b009066b1a8515d51061",
+      "pass_line": "PASS replay stride=1 window=96 clock=200000000 events=16272 checks=660"
+    },
+    {
+      "label": "m208",
+      "m": 208,
+      "clock": 200000000,
+      "stride": 1,
+      "events": 16272,
+      "checks": 294,
+      "readback_exact": true,
+      "vector_sha256": "4345342a31acf274956b6017ae69302e3f39e44188351be4f2534678bd855556",
+      "pass_line": "PASS replay stride=1 window=208 clock=200000000 events=16272 checks=294"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "rtl_vectors": [
+    {
+      "m": 96,
+      "file": "noisy_m96.txt",
+      "events": 16272,
+      "checks": 660,
+      "sha256": "d48f1332a17fcdd9924804dfa68e965ca5dcf7564f94b009066b1a8515d51061"
+    },
+    {
+      "m": 208,
+      "file": "noisy_m208.txt",
+      "events": 16272,
+      "checks": 294,
+      "sha256": "4345342a31acf274956b6017ae69302e3f39e44188351be4f2534678bd855556"
+    }
+  ]
+}

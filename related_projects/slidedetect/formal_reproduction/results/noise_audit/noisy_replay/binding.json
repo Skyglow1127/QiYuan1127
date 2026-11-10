@@ -1,0 +1,47 @@
+{
+  "scope": "Six causal frontend cases feed RTL arithmetic. Analog chain is a software model; asynchronous physical input is not exercised here.",
+  "streams": [
+    {
+      "case": "bypass_h005",
+      "events": 2712,
+      "file": "bypass_h005_ticks.txt",
+      "sha256": "5bd0eb653ab7802477c44a84b02ea06f078c8f1298cf2b3493ed26afada7fc35"
+    },
+    {
+      "case": "bypass_h0002",
+      "events": 2712,
+      "file": "bypass_h0002_ticks.txt",
+      "sha256": "026d54f1a5a25bf9c548579374d68f04670ba2d24a5303670e0bfc8faf995601"
+    },
+    {
+      "case": "bp100_h0002",
+      "events": 2712,
+      "file": "bp100_h0002_ticks.txt",
+      "sha256": "b9498e1146ef302e74f1cc37e82c92c1705bc755ba4b980c36597ff7d899f897"
+    },
+    {
+      "case": "bp500_h0002",
+      "events": 2712,
+      "file": "bp500_h0002_ticks.txt",
+      "sha256": "3ebecbede941e99bff4f1a9f3446eb9df5c63c8141426c7ea45cb2bf89a98aa2"
+    },
+    {
+      "case": "bp2000_h0002",
+      "events": 2712,
+      "file": "bp2000_h0002_ticks.txt",
+      "sha256": "257594eac22ae2f9ad1b1a70e2b0b3f96a783ce3f613a57ba3062a4806f47ba8"
+    },
+    {
+      "case": "bp100_post35_h0002",
+      "events": 2712,
+      "file": "bp100_post35_h0002_ticks.txt",
+      "sha256": "5c4356efb1d3d6f204c9b206296e057cec31759ade094a5e3face76a3a98f890"
+    }
+  ],
+  "source_sha256": {
+    "prepare_noisy_replay.py": "bec486bcc1655d633271ea34e456ee83c5d83dea4f5c1b9d6948709e41c1bb1f",
+    "audit_noise.py": "3e56752fe8ad779829c8314bef4901f84c2b9999a9575cafaaaae99c1ff9d9f1",
+    "noise_audit_protocol.json": "2d2ebecdd680d134098b5072328217bb92f9e684472d7fa5b72aca572cc1db6b",
+    "reproduce.py": "a2cbb46bd5e37d973ab7a73b9bdf91898ba3958d3bbb6d829b2427e247f549c0"
+  }
+}

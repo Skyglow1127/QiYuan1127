@@ -1,0 +1,5 @@
+sync1_reg REF_NAME=FDRE ASYNC_REG=1 LOC=SLICE_X47Y193
+sync2_reg REF_NAME=FDRE ASYNC_REG=1 LOC=SLICE_X47Y193
+stage1_to_stage2_setup_slack=4.227
+stage1_to_stage2_hold_slack=0.113
+CDC report warning is retained. This structural check does not establish physical MTBF.

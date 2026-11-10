@@ -1,0 +1,1506 @@
+{
+  "rows": [
+    {
+      "key": "dwell0.1_jitter0",
+      "dwell_s": 0.1,
+      "jitter_ns": 0,
+      "records": 320,
+      "frames_per_plateau": [
+        1,
+        1
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09963642636874762,
+      "mean_error_uHz": [
+        0.02150257359945229,
+        0.040662034449939766
+      ],
+      "plateau_std_uHz": [
+        1.683422237975706,
+        1.7698325514547502
+      ],
+      "single_frame_std_uHz": [
+        1.683422237975706,
+        1.7698325514547502
+      ],
+      "errors": 0,
+      "classifications": 640,
+      "record_failures": 0,
+      "record_error_ci95": [
+        0.0,
+        0.011862158831309737
+      ],
+      "meets_proposed_plateau_gate": true,
+      "measured_step_mean_uHz": 10.019159460850487,
+      "measured_step_std_uHz": 2.196545255156308,
+      "mean_step_ci95_uHz": [
+        9.778489860047467,
+        10.259829061653509
+      ],
+      "overlap_weight_prediction_uHz": [
+        7.289599518270248,
+        7.289599518270248
+      ],
+      "overlap_prediction_within_20percent": null,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell0.1_jitter1",
+      "dwell_s": 0.1,
+      "jitter_ns": 1,
+      "records": 320,
+      "frames_per_plateau": [
+        1,
+        1
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09963642636874762,
+      "mean_error_uHz": [
+        0.350298045059122,
+        -0.15939399532274856
+      ],
+      "plateau_std_uHz": [
+        8.586691493544658,
+        8.912911785211195
+      ],
+      "single_frame_std_uHz": [
+        8.586691493544658,
+        8.912911785211195
+      ],
+      "errors": 184,
+      "classifications": 640,
+      "record_failures": 159,
+      "record_error_ci95": [
+        0.44245635108414183,
+        0.551367787408554
+      ],
+      "meets_proposed_plateau_gate": false,
+      "measured_step_mean_uHz": 9.490307959618129,
+      "measured_step_std_uHz": 12.482268036024571,
+      "mean_step_ci95_uHz": [
+        8.122659167363867,
+        10.857956751872392
+      ],
+      "overlap_weight_prediction_uHz": [
+        8.868180562122843,
+        8.868180562122843
+      ],
+      "overlap_prediction_within_20percent": null,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell0.1_jitter2",
+      "dwell_s": 0.1,
+      "jitter_ns": 2,
+      "records": 320,
+      "frames_per_plateau": [
+        1,
+        1
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09963642636874762,
+      "mean_error_uHz": [
+        0.17407286421813883,
+        0.8139777332570597
+      ],
+      "plateau_std_uHz": [
+        11.616644555740677,
+        12.902795707017821
+      ],
+      "single_frame_std_uHz": [
+        11.616644555740677,
+        12.902795707017821
+      ],
+      "errors": 212,
+      "classifications": 640,
+      "record_failures": 175,
+      "record_error_ci95": [
+        0.49209918103023964,
+        0.600538741579325
+      ],
+      "meets_proposed_plateau_gate": false,
+      "measured_step_mean_uHz": 10.63990486903892,
+      "measured_step_std_uHz": 18.100400410855023,
+      "mean_step_ci95_uHz": [
+        8.65669230784571,
+        12.62311743023213
+      ],
+      "overlap_weight_prediction_uHz": [
+        12.456473117193175,
+        12.456473117193175
+      ],
+      "overlap_prediction_within_20percent": null,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell0.1_jitter20",
+      "dwell_s": 0.1,
+      "jitter_ns": 20,
+      "records": 320,
+      "frames_per_plateau": [
+        1,
+        1
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09963642636874762,
+      "mean_error_uHz": [
+        -6.645416173925445,
+        2.2266864130884856
+      ],
+      "plateau_std_uHz": [
+        98.18173429970885,
+        104.91975014702449
+      ],
+      "single_frame_std_uHz": [
+        98.18173429970885,
+        104.91975014702449
+      ],
+      "errors": 302,
+      "classifications": 640,
+      "record_failures": 224,
+      "record_error_ci95": [
+        0.6476607613809822,
+        0.747594375086494
+      ],
+      "meets_proposed_plateau_gate": false,
+      "measured_step_mean_uHz": 18.87210258701394,
+      "measured_step_std_uHz": 150.2557984105124,
+      "mean_step_ci95_uHz": [
+        2.408975803302827,
+        35.33522937072506
+      ],
+      "overlap_weight_prediction_uHz": [
+        101.2703530130897,
+        101.2703530130897
+      ],
+      "overlap_prediction_within_20percent": true,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell0.1_jitter940.061",
+      "dwell_s": 0.1,
+      "jitter_ns": 940.0609,
+      "records": 320,
+      "frames_per_plateau": [
+        1,
+        1
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09963642636874762,
+      "mean_error_uHz": [
+        -311.0462166881073,
+        101.43585466283051
+      ],
+      "plateau_std_uHz": [
+        4622.349021533957,
+        4922.495814588127
+      ],
+      "single_frame_std_uHz": [
+        4622.349021533957,
+        4922.495814588127
+      ],
+      "errors": 313,
+      "classifications": 640,
+      "record_failures": 230,
+      "record_error_ci95": [
+        0.6671179209277063,
+        0.7651923845835957
+      ],
+      "meets_proposed_plateau_gate": false,
+      "measured_step_mean_uHz": 422.48207135093736,
+      "measured_step_std_uHz": 7050.974548298156,
+      "mean_step_ci95_uHz": [
+        -350.0743901322245,
+        1195.0385328340992
+      ],
+      "overlap_weight_prediction_uHz": [
+        4747.6728959622715,
+        4747.6728959622715
+      ],
+      "overlap_prediction_within_20percent": true,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell0.5_jitter0",
+      "dwell_s": 0.5,
+      "jitter_ns": 0,
+      "records": 320,
+      "frames_per_plateau": [
+        41,
+        41
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.0998487455793508,
+      "mean_error_uHz": [
+        0.016209211549666078,
+        0.0010411744881059432
+      ],
+      "plateau_std_uHz": [
+        0.17323323367409776,
+        0.1554336811015413
+      ],
+      "single_frame_std_uHz": [
+        1.8901261384198185,
+        1.652193076479972
+      ],
+      "errors": 0,
+      "classifications": 640,
+      "record_failures": 0,
+      "record_error_ci95": [
+        0.0,
+        0.011862158831309737
+      ],
+      "meets_proposed_plateau_gate": true,
+      "measured_step_mean_uHz": 9.984831962938442,
+      "measured_step_std_uHz": 0.23969198582882628,
+      "mean_step_ci95_uHz": [
+        9.958569551813657,
+        10.011094374063227
+      ],
+      "overlap_weight_prediction_uHz": [
+        0.8548301998950832,
+        0.8548301998950832
+      ],
+      "overlap_prediction_within_20percent": null,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell0.5_jitter1",
+      "dwell_s": 0.5,
+      "jitter_ns": 1,
+      "records": 320,
+      "frames_per_plateau": [
+        41,
+        41
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.0998487455793508,
+      "mean_error_uHz": [
+        -0.08087505271033803,
+        0.0021436342878612285
+      ],
+      "plateau_std_uHz": [
+        0.9746074000091496,
+        1.0471245986029316
+      ],
+      "single_frame_std_uHz": [
+        8.867592346929307,
+        8.750840523478507
+      ],
+      "errors": 0,
+      "classifications": 640,
+      "record_failures": 0,
+      "record_error_ci95": [
+        0.0,
+        0.011862158831309737
+      ],
+      "meets_proposed_plateau_gate": true,
+      "measured_step_mean_uHz": 10.0830186869982,
+      "measured_step_std_uHz": 1.4233091624223444,
+      "mean_step_ci95_uHz": [
+        9.927070501029643,
+        10.238966872966758
+      ],
+      "overlap_weight_prediction_uHz": [
+        1.0399458219378301,
+        1.0399458219378301
+      ],
+      "overlap_prediction_within_20percent": null,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell0.5_jitter2",
+      "dwell_s": 0.5,
+      "jitter_ns": 2,
+      "records": 320,
+      "frames_per_plateau": [
+        41,
+        41
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.0998487455793508,
+      "mean_error_uHz": [
+        -0.063081767216958,
+        0.034671683255958936
+      ],
+      "plateau_std_uHz": [
+        1.4340089275907404,
+        1.4640121223353502
+      ],
+      "single_frame_std_uHz": [
+        11.993802354242387,
+        13.037657634539048
+      ],
+      "errors": 0,
+      "classifications": 640,
+      "record_failures": 0,
+      "record_error_ci95": [
+        0.0,
+        0.011862158831309737
+      ],
+      "meets_proposed_plateau_gate": true,
+      "measured_step_mean_uHz": 10.097753450472917,
+      "measured_step_std_uHz": 2.0623682474101637,
+      "mean_step_ci95_uHz": [
+        9.87178526627645,
+        10.323721634669381
+      ],
+      "overlap_weight_prediction_uHz": [
+        1.4607344859028253,
+        1.4607344859028253
+      ],
+      "overlap_prediction_within_20percent": null,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell0.5_jitter20",
+      "dwell_s": 0.5,
+      "jitter_ns": 20,
+      "records": 320,
+      "frames_per_plateau": [
+        41,
+        41
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.0998487455793508,
+      "mean_error_uHz": [
+        0.047725432657766485,
+        0.4074809249373552
+      ],
+      "plateau_std_uHz": [
+        12.459097281061597,
+        12.301823390220715
+      ],
+      "single_frame_std_uHz": [
+        101.6178098682052,
+        108.58767085838407
+      ],
+      "errors": 220,
+      "classifications": 640,
+      "record_failures": 185,
+      "record_error_ci95": [
+        0.5234023799026981,
+        0.6309941577799096
+      ],
+      "meets_proposed_plateau_gate": false,
+      "measured_step_mean_uHz": 10.35975549227959,
+      "measured_step_std_uHz": 17.438560731539514,
+      "mean_step_ci95_uHz": [
+        8.44905893823103,
+        12.270452046328149
+      ],
+      "overlap_weight_prediction_uHz": [
+        11.875680672532624,
+        11.875680672532624
+      ],
+      "overlap_prediction_within_20percent": true,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell0.5_jitter940.061",
+      "dwell_s": 0.5,
+      "jitter_ns": 940.0609,
+      "records": 320,
+      "frames_per_plateau": [
+        41,
+        41
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.0998487455793508,
+      "mean_error_uHz": [
+        3.365450590133239,
+        18.45007237681513
+      ],
+      "plateau_std_uHz": [
+        583.1721211378109,
+        577.019222620609
+      ],
+      "single_frame_std_uHz": [
+        4775.722743285504,
+        5049.665999416246
+      ],
+      "errors": 328,
+      "classifications": 640,
+      "record_failures": 244,
+      "record_error_ci95": [
+        0.7129334257970653,
+        0.8058389408164971
+      ],
+      "meets_proposed_plateau_gate": false,
+      "measured_step_mean_uHz": 25.084621786681875,
+      "measured_step_std_uHz": 818.3013991409289,
+      "mean_step_ci95_uHz": [
+        -64.57447838687108,
+        114.74372196023481
+      ],
+      "overlap_weight_prediction_uHz": [
+        556.7458350105533,
+        556.7458350105533
+      ],
+      "overlap_prediction_within_20percent": true,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell1_jitter0",
+      "dwell_s": 1,
+      "jitter_ns": 0,
+      "records": 320,
+      "frames_per_plateau": [
+        92,
+        92
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09964441182578358,
+      "mean_error_uHz": [
+        0.0034449572087794276,
+        -0.00954028139376267
+      ],
+      "plateau_std_uHz": [
+        0.0675442403578493,
+        0.15002133834619039
+      ],
+      "single_frame_std_uHz": [
+        1.801589966732819,
+        1.6549438607546998
+      ],
+      "errors": 0,
+      "classifications": 640,
+      "record_failures": 0,
+      "record_error_ci95": [
+        0.0,
+        0.011862158831309737
+      ],
+      "meets_proposed_plateau_gate": true,
+      "measured_step_mean_uHz": 9.98701476139746,
+      "measured_step_std_uHz": 0.1710996426184648,
+      "mean_step_ci95_uHz": [
+        9.968267830238242,
+        10.005761692556678
+      ],
+      "overlap_weight_prediction_uHz": [
+        0.4055717704588711,
+        0.4055717704588711
+      ],
+      "overlap_prediction_within_20percent": null,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell1_jitter1",
+      "dwell_s": 1,
+      "jitter_ns": 1,
+      "records": 320,
+      "frames_per_plateau": [
+        92,
+        92
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09964441182578358,
+      "mean_error_uHz": [
+        0.047980164783214284,
+        0.0022872413312746884
+      ],
+      "plateau_std_uHz": [
+        0.48311082070985695,
+        0.4496756025350207
+      ],
+      "single_frame_std_uHz": [
+        8.810212701666458,
+        8.42336883245878
+      ],
+      "errors": 0,
+      "classifications": 640,
+      "record_failures": 0,
+      "record_error_ci95": [
+        0.0,
+        0.011862158831309737
+      ],
+      "meets_proposed_plateau_gate": true,
+      "measured_step_mean_uHz": 9.95430707654806,
+      "measured_step_std_uHz": 0.669727974417252,
+      "mean_step_ci95_uHz": [
+        9.88092676996378,
+        10.027687383132342
+      ],
+      "overlap_weight_prediction_uHz": [
+        0.49339935373878635,
+        0.49339935373878635
+      ],
+      "overlap_prediction_within_20percent": null,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell1_jitter2",
+      "dwell_s": 1,
+      "jitter_ns": 2,
+      "records": 320,
+      "frames_per_plateau": [
+        92,
+        92
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09964441182578358,
+      "mean_error_uHz": [
+        0.007397401898341492,
+        0.017738338156093048
+      ],
+      "plateau_std_uHz": [
+        0.6665240604521454,
+        0.6679054173346857
+      ],
+      "single_frame_std_uHz": [
+        12.29178535749063,
+        12.87188546520303
+      ],
+      "errors": 0,
+      "classifications": 640,
+      "record_failures": 0,
+      "record_error_ci95": [
+        0.0,
+        0.011862158831309737
+      ],
+      "meets_proposed_plateau_gate": true,
+      "measured_step_mean_uHz": 10.010340936257752,
+      "measured_step_std_uHz": 0.9725375437658312,
+      "mean_step_ci95_uHz": [
+        9.90378259338973,
+        10.116899279125775
+      ],
+      "overlap_weight_prediction_uHz": [
+        0.6930413451591315,
+        0.6930413451591315
+      ],
+      "overlap_prediction_within_20percent": null,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell1_jitter20",
+      "dwell_s": 1,
+      "jitter_ns": 20,
+      "records": 320,
+      "frames_per_plateau": [
+        92,
+        92
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09964441182578358,
+      "mean_error_uHz": [
+        0.16991015946882865,
+        0.21862884696808485
+      ],
+      "plateau_std_uHz": [
+        5.527054317528531,
+        5.498282337924049
+      ],
+      "single_frame_std_uHz": [
+        102.22437857756883,
+        99.8947746767253
+      ],
+      "errors": 117,
+      "classifications": 640,
+      "record_failures": 105,
+      "record_error_ci95": [
+        0.2789849434899539,
+        0.3813426736083088
+      ],
+      "meets_proposed_plateau_gate": false,
+      "measured_step_mean_uHz": 10.048718687499257,
+      "measured_step_std_uHz": 7.956294184810377,
+      "mean_step_ci95_uHz": [
+        9.176968769834366,
+        10.920468605164148
+      ],
+      "overlap_weight_prediction_uHz": [
+        5.63438310480186,
+        5.63438310480186
+      ],
+      "overlap_prediction_within_20percent": true,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell1_jitter940.061",
+      "dwell_s": 1,
+      "jitter_ns": 940.0609,
+      "records": 320,
+      "frames_per_plateau": [
+        92,
+        92
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09964441182578358,
+      "mean_error_uHz": [
+        8.05130897183458,
+        9.795180309631066
+      ],
+      "plateau_std_uHz": [
+        262.5458481568111,
+        257.07188218128744
+      ],
+      "single_frame_std_uHz": [
+        4789.2370455217915,
+        4666.442260922081
+      ],
+      "errors": 310,
+      "classifications": 640,
+      "record_failures": 239,
+      "record_error_ci95": [
+        0.6965002493693289,
+        0.7913928097077119
+      ],
+      "meets_proposed_plateau_gate": false,
+      "measured_step_mean_uHz": 11.7438713377965,
+      "measured_step_std_uHz": 375.42564455116775,
+      "mean_step_ci95_uHz": [
+        -29.390514486144642,
+        52.87825716173764
+      ],
+      "overlap_weight_prediction_uHz": [
+        264.14648666898535,
+        264.14648666898535
+      ],
+      "overlap_prediction_within_20percent": true,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell2_jitter0",
+      "dwell_s": 2,
+      "jitter_ns": 0,
+      "records": 320,
+      "frames_per_plateau": [
+        193,
+        193
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09970547708547034,
+      "mean_error_uHz": [
+        -0.001546873647322528,
+        -0.002435621421955744
+      ],
+      "plateau_std_uHz": [
+        0.045748779353881004,
+        0.1323672703277464
+      ],
+      "single_frame_std_uHz": [
+        1.8213763940630363,
+        1.645862928390564
+      ],
+      "errors": 0,
+      "classifications": 640,
+      "record_failures": 0,
+      "record_error_ci95": [
+        0.0,
+        0.011862158831309737
+      ],
+      "meets_proposed_plateau_gate": true,
+      "measured_step_mean_uHz": 9.999111252225369,
+      "measured_step_std_uHz": 0.14432065421205686,
+      "mean_step_ci95_uHz": [
+        9.983298423349973,
+        10.014924081100764
+      ],
+      "overlap_weight_prediction_uHz": [
+        0.21468216439099633,
+        0.21468216439099633
+      ],
+      "overlap_prediction_within_20percent": null,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell2_jitter1",
+      "dwell_s": 2,
+      "jitter_ns": 1,
+      "records": 320,
+      "frames_per_plateau": [
+        193,
+        193
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09970547708547034,
+      "mean_error_uHz": [
+        0.006293196710101332,
+        0.0215337780430582
+      ],
+      "plateau_std_uHz": [
+        0.23825353352687212,
+        0.23986168202840535
+      ],
+      "single_frame_std_uHz": [
+        8.742961601388046,
+        8.635080259004146
+      ],
+      "errors": 0,
+      "classifications": 640,
+      "record_failures": 0,
+      "record_error_ci95": [
+        0.0,
+        0.011862158831309737
+      ],
+      "meets_proposed_plateau_gate": true,
+      "measured_step_mean_uHz": 10.015240581332959,
+      "measured_step_std_uHz": 0.3428445152482856,
+      "mean_step_ci95_uHz": [
+        9.97767602288436,
+        10.052805139781556
+      ],
+      "overlap_weight_prediction_uHz": [
+        0.26117212509617505,
+        0.26117212509617505
+      ],
+      "overlap_prediction_within_20percent": null,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell2_jitter2",
+      "dwell_s": 2,
+      "jitter_ns": 2,
+      "records": 320,
+      "frames_per_plateau": [
+        193,
+        193
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09970547708547034,
+      "mean_error_uHz": [
+        0.003004948596019118,
+        0.0504640891664269
+      ],
+      "plateau_std_uHz": [
+        0.3643238872476,
+        0.3659933255929077
+      ],
+      "single_frame_std_uHz": [
+        12.979818416984116,
+        12.695023833356583
+      ],
+      "errors": 0,
+      "classifications": 640,
+      "record_failures": 0,
+      "record_error_ci95": [
+        0.0,
+        0.011862158831309737
+      ],
+      "meets_proposed_plateau_gate": true,
+      "measured_step_mean_uHz": 10.047459140570409,
+      "measured_step_std_uHz": 0.5364097209196217,
+      "mean_step_ci95_uHz": [
+        9.988686159181778,
+        10.10623212195904
+      ],
+      "overlap_weight_prediction_uHz": [
+        0.36684904332190943,
+        0.36684904332190943
+      ],
+      "overlap_prediction_within_20percent": null,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell2_jitter20",
+      "dwell_s": 2,
+      "jitter_ns": 20,
+      "records": 320,
+      "frames_per_plateau": [
+        193,
+        193
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09970547708547034,
+      "mean_error_uHz": [
+        0.07768216215385153,
+        0.42615817988969973
+      ],
+      "plateau_std_uHz": [
+        2.9091493445483323,
+        3.032188324652405
+      ],
+      "single_frame_std_uHz": [
+        107.2940390407981,
+        104.02404568999863
+      ],
+      "errors": 29,
+      "classifications": 640,
+      "record_failures": 29,
+      "record_error_ci95": [
+        0.06383984880428492,
+        0.12712229373884992
+      ],
+      "meets_proposed_plateau_gate": false,
+      "measured_step_mean_uHz": 10.348476017735848,
+      "measured_step_std_uHz": 4.4438278350458305,
+      "mean_step_ci95_uHz": [
+        9.861577662881908,
+        10.83537437258979
+      ],
+      "overlap_weight_prediction_uHz": [
+        2.982459944335772,
+        2.982459944335772
+      ],
+      "overlap_prediction_within_20percent": true,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell2_jitter940.061",
+      "dwell_s": 2,
+      "jitter_ns": 940.0609,
+      "records": 320,
+      "frames_per_plateau": [
+        193,
+        193
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09970547708547034,
+      "mean_error_uHz": [
+        3.59143770030467,
+        19.63479222917232
+      ],
+      "plateau_std_uHz": [
+        135.99938984195055,
+        140.72415469981212
+      ],
+      "single_frame_std_uHz": [
+        5001.580870621241,
+        4861.441394680367
+      ],
+      "errors": 293,
+      "classifications": 640,
+      "record_failures": 212,
+      "record_error_ci95": [
+        0.6090358081009469,
+        0.7121089902788774
+      ],
+      "meets_proposed_plateau_gate": false,
+      "measured_step_mean_uHz": 26.04335452886765,
+      "measured_step_std_uHz": 207.48214514079496,
+      "mean_step_ci95_uHz": [
+        3.3100896769051844,
+        48.77661938083011
+      ],
+      "overlap_weight_prediction_uHz": [
+        139.82121933736985,
+        139.82121933736985
+      ],
+      "overlap_prediction_within_20percent": true,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell5_jitter0",
+      "dwell_s": 5,
+      "jitter_ns": 0,
+      "records": 320,
+      "frames_per_plateau": [
+        497,
+        497
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09988867286453061,
+      "mean_error_uHz": [
+        -0.0004074731988317841,
+        0.003156752643037901
+      ],
+      "plateau_std_uHz": [
+        0.015174092760851719,
+        0.07332368480038674
+      ],
+      "single_frame_std_uHz": [
+        1.7656139967765485,
+        1.6775361820568773
+      ],
+      "errors": 0,
+      "classifications": 640,
+      "record_failures": 0,
+      "record_error_ci95": [
+        0.0,
+        0.011862158831309737
+      ],
+      "meets_proposed_plateau_gate": true,
+      "measured_step_mean_uHz": 10.00356422584187,
+      "measured_step_std_uHz": 0.07600925881357876,
+      "mean_step_ci95_uHz": [
+        9.995236094230169,
+        10.011892357453572
+      ],
+      "overlap_weight_prediction_uHz": [
+        0.10442469875981082,
+        0.10442469875981082
+      ],
+      "overlap_prediction_within_20percent": null,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell5_jitter1",
+      "dwell_s": 5,
+      "jitter_ns": 1,
+      "records": 320,
+      "frames_per_plateau": [
+        497,
+        497
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09988867286453061,
+      "mean_error_uHz": [
+        -0.0009216146149013108,
+        -0.004652598352054049
+      ],
+      "plateau_std_uHz": [
+        0.12825134648070466,
+        0.11471213837284912
+      ],
+      "single_frame_std_uHz": [
+        8.907747266838024,
+        7.969749949302565
+      ],
+      "errors": 0,
+      "classifications": 640,
+      "record_failures": 0,
+      "record_error_ci95": [
+        0.0,
+        0.011862158831309737
+      ],
+      "meets_proposed_plateau_gate": true,
+      "measured_step_mean_uHz": 9.996269016262847,
+      "measured_step_std_uHz": 0.1591943181302847,
+      "mean_step_ci95_uHz": [
+        9.978826519731266,
+        10.01371151279443
+      ],
+      "overlap_weight_prediction_uHz": [
+        0.12703812897077127,
+        0.12703812897077127
+      ],
+      "overlap_prediction_within_20percent": null,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell5_jitter2",
+      "dwell_s": 5,
+      "jitter_ns": 2,
+      "records": 320,
+      "frames_per_plateau": [
+        497,
+        497
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09988867286453061,
+      "mean_error_uHz": [
+        0.0004889505569109417,
+        -0.015511241198394445
+      ],
+      "plateau_std_uHz": [
+        0.1814714488352869,
+        0.1786612075548215
+      ],
+      "single_frame_std_uHz": [
+        12.783878939345852,
+        12.276425365157
+      ],
+      "errors": 0,
+      "classifications": 640,
+      "record_failures": 0,
+      "record_error_ci95": [
+        0.0,
+        0.011862158831309737
+      ],
+      "meets_proposed_plateau_gate": true,
+      "measured_step_mean_uHz": 9.983999808244697,
+      "measured_step_std_uHz": 0.2297826330429295,
+      "mean_step_ci95_uHz": [
+        9.958823138455585,
+        10.009176478033808
+      ],
+      "overlap_weight_prediction_uHz": [
+        0.17844100346149575,
+        0.17844100346149575
+      ],
+      "overlap_prediction_within_20percent": null,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell5_jitter20",
+      "dwell_s": 5,
+      "jitter_ns": 20,
+      "records": 320,
+      "frames_per_plateau": [
+        497,
+        497
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09988867286453061,
+      "mean_error_uHz": [
+        -0.014078012436804958,
+        -0.15601911024814172
+      ],
+      "plateau_std_uHz": [
+        1.474678256697854,
+        1.463252966780548
+      ],
+      "single_frame_std_uHz": [
+        105.50281197473788,
+        94.13639090964296
+      ],
+      "errors": 0,
+      "classifications": 640,
+      "record_failures": 0,
+      "record_error_ci95": [
+        0.0,
+        0.011862158831309737
+      ],
+      "meets_proposed_plateau_gate": true,
+      "measured_step_mean_uHz": 9.858058902188665,
+      "measured_step_std_uHz": 1.9317654605531998,
+      "mean_step_ci95_uHz": [
+        9.64640051675589,
+        10.069717287621438
+      ],
+      "overlap_weight_prediction_uHz": [
+        1.4507142786358405,
+        1.4507142786358405
+      ],
+      "overlap_prediction_within_20percent": true,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell5_jitter940.061",
+      "dwell_s": 5,
+      "jitter_ns": 940.0609,
+      "records": 320,
+      "frames_per_plateau": [
+        497,
+        497
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09988867286453061,
+      "mean_error_uHz": [
+        -0.5723289321366335,
+        -7.378464332957998
+      ],
+      "plateau_std_uHz": [
+        69.53275269632542,
+        68.26768605137656
+      ],
+      "single_frame_std_uHz": [
+        4904.127620065645,
+        4471.682907685456
+      ],
+      "errors": 309,
+      "classifications": 640,
+      "record_failures": 242,
+      "record_error_ci95": [
+        0.7063502981918631,
+        0.8000703454070907
+      ],
+      "meets_proposed_plateau_gate": false,
+      "measured_step_mean_uHz": 3.1938645991786285,
+      "measured_step_std_uHz": 90.67400148047827,
+      "mean_step_ci95_uHz": [
+        -6.741043724832403,
+        13.12877292318966
+      ],
+      "overlap_weight_prediction_uHz": [
+        68.01118644836353,
+        68.01118644836353
+      ],
+      "overlap_prediction_within_20percent": true,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell10_jitter0",
+      "dwell_s": 10,
+      "jitter_ns": 0,
+      "records": 320,
+      "frames_per_plateau": [
+        1004,
+        1004
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09972426639614318,
+      "mean_error_uHz": [
+        0.0007373307348885311,
+        0.0017532710300957545
+      ],
+      "plateau_std_uHz": [
+        0.008107168816926327,
+        0.021728670851602162
+      ],
+      "single_frame_std_uHz": [
+        1.8146343957771935,
+        1.6968743686480792
+      ],
+      "errors": 0,
+      "classifications": 640,
+      "record_failures": 0,
+      "record_error_ci95": [
+        0.0,
+        0.011862158831309737
+      ],
+      "meets_proposed_plateau_gate": true,
+      "measured_step_mean_uHz": 10.00101594029521,
+      "measured_step_std_uHz": 0.023227986101344248,
+      "mean_step_ci95_uHz": [
+        9.99847091185596,
+        10.003560968734456
+      ],
+      "overlap_weight_prediction_uHz": [
+        0.06548400228140742,
+        0.06548400228140742
+      ],
+      "overlap_prediction_within_20percent": null,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell10_jitter1",
+      "dwell_s": 10,
+      "jitter_ns": 1,
+      "records": 320,
+      "frames_per_plateau": [
+        1004,
+        1004
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09972426639614318,
+      "mean_error_uHz": [
+        -0.004735297070936116,
+        -0.004799471947041289
+      ],
+      "plateau_std_uHz": [
+        0.07610766106929591,
+        0.0731203727615459
+      ],
+      "single_frame_std_uHz": [
+        8.867699644484896,
+        8.685169638727901
+      ],
+      "errors": 0,
+      "classifications": 640,
+      "record_failures": 0,
+      "record_error_ci95": [
+        0.0,
+        0.011862158831309737
+      ],
+      "meets_proposed_plateau_gate": true,
+      "measured_step_mean_uHz": 9.999935825123895,
+      "measured_step_std_uHz": 0.10552932488472522,
+      "mean_step_ci95_uHz": [
+        9.988373258664863,
+        10.01149839158293
+      ],
+      "overlap_weight_prediction_uHz": [
+        0.07966472708226166,
+        0.07966472708226166
+      ],
+      "overlap_prediction_within_20percent": null,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell10_jitter2",
+      "dwell_s": 10,
+      "jitter_ns": 2,
+      "records": 320,
+      "frames_per_plateau": [
+        1004,
+        1004
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09972426639614318,
+      "mean_error_uHz": [
+        -0.002668219684084936,
+        0.0018687809864530143
+      ],
+      "plateau_std_uHz": [
+        0.11326136753329533,
+        0.10630265740220213
+      ],
+      "single_frame_std_uHz": [
+        12.654958250904318,
+        12.216166792064486
+      ],
+      "errors": 0,
+      "classifications": 640,
+      "record_failures": 0,
+      "record_error_ci95": [
+        0.0,
+        0.011862158831309737
+      ],
+      "meets_proposed_plateau_gate": true,
+      "measured_step_mean_uHz": 10.004537000670538,
+      "measured_step_std_uHz": 0.15420340688482576,
+      "mean_step_ci95_uHz": [
+        9.987641344962867,
+        10.02143265637821
+      ],
+      "overlap_weight_prediction_uHz": [
+        0.11189911215014539,
+        0.11189911215014539
+      ],
+      "overlap_prediction_within_20percent": null,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell10_jitter20",
+      "dwell_s": 10,
+      "jitter_ns": 20,
+      "records": 320,
+      "frames_per_plateau": [
+        1004,
+        1004
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09972426639614318,
+      "mean_error_uHz": [
+        -0.022663751380523386,
+        0.060749942471550085
+      ],
+      "plateau_std_uHz": [
+        0.936012795116028,
+        0.8450619338078875
+      ],
+      "single_frame_std_uHz": [
+        98.81738891380738,
+        103.93673494033617
+      ],
+      "errors": 0,
+      "classifications": 640,
+      "record_failures": 0,
+      "record_error_ci95": [
+        0.0,
+        0.011862158831309737
+      ],
+      "meets_proposed_plateau_gate": true,
+      "measured_step_mean_uHz": 10.083413693852075,
+      "measured_step_std_uHz": 1.2590516816687076,
+      "mean_step_ci95_uHz": [
+        9.945462761629638,
+        10.22136462607451
+      ],
+      "overlap_weight_prediction_uHz": [
+        0.9097328338994559,
+        0.9097328338994559
+      ],
+      "overlap_prediction_within_20percent": true,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    },
+    {
+      "key": "dwell10_jitter940.061",
+      "dwell_s": 10,
+      "jitter_ns": 940.0609,
+      "records": 320,
+      "frames_per_plateau": [
+        1004,
+        1004
+      ],
+      "window_s": 0.09958334703387244,
+      "first_post_step_result_wait_s": 0.09972426639614318,
+      "mean_error_uHz": [
+        -1.0917678289994603,
+        2.4669719576919267
+      ],
+      "plateau_std_uHz": [
+        43.472412415882026,
+        39.70603709346496
+      ],
+      "single_frame_std_uHz": [
+        4629.341874391245,
+        4895.332085969216
+      ],
+      "errors": 280,
+      "classifications": 640,
+      "record_failures": 223,
+      "record_error_ci95": [
+        0.644427571769134,
+        0.7446517031910379
+      ],
+      "meets_proposed_plateau_gate": false,
+      "measured_step_mean_uHz": 13.558739786691387,
+      "measured_step_std_uHz": 58.697741526496095,
+      "mean_step_ci95_uHz": [
+        7.127384917922467,
+        19.990094655460307
+      ],
+      "overlap_weight_prediction_uHz": [
+        42.64934197981048,
+        42.64934197981048
+      ],
+      "overlap_prediction_within_20percent": true,
+      "mean_step_shift_for_differential_clock_ppb": {
+        "0.1": 0.21288700000000002,
+        "0.5": 1.064435,
+        "1": 2.12887,
+        "2": 4.25774,
+        "5": 10.64435
+      }
+    }
+  ],
+  "independent_direct_max_difference_hz": 0.0,
+  "interpretation": "A plateau mean is an additional operation, not an improvement of the raw 100 ms SFLS output. Waiting time and assumed noise must accompany any pass."
+}

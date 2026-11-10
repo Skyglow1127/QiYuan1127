@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "seed": 2026111103,
+  "scope": "New engineering diagnostics. No replacement of author data or identification of unpublished author settings.",
+  "paper_conditions": {
+    "fig6": "Numerical FID, T2=1.5 s, SNR=35 dB; exact frontend and statistics unknown",
+    "fig10": "Bench, 2128.87 Hz, 5 microVpp, 100 ms window, 10 microHz steps, multiple outputs per plateau. SNR and dwell time not specified here.",
+    "fig12": "Separate comparison experiment specifies 40 dB. Do not transfer this or the simulation's 35 dB to Fig.10.",
+    "physical_frontend": "Paper page 5 names a narrow-bandpass filter before LM193; its response is unpublished."
+  },
+  "plateau": {
+    "base_hz": 2128.87,
+    "delta_hz": 0.00001,
+    "window_events": 213,
+    "hop_events": 21,
+    "dwell_seconds": [0.1,0.5,1,2,5,10],
+    "independent_records": 320,
+    "jitter_ns": [0,1,2,20,940.0609],
+    "clock_hz": 200000000,
+    "gate": "Wilson 95% upper probability that either plateau is classified incorrectly in an independent two-level record < 5%, proposed engineering gate, not author criterion",
+    "statistics": "One mean per plateau per independent continuous two-level acquisition; do not count overlapping outputs as independent trials. Frames crossing a step excluded explicitly, with full window waiting retained.",
+    "noise_model": "Independent Gaussian edge jitter plus actual ceil clock quantization; no claim of complete physical frontend.",
+    "overlap_validation": "For jitter >=20 ns, validate mean STD against squared combined overlap weights with 20 percent tolerance at 320 records; uniform quantization approximation used only for this check."
+  },
+  "frontend": {
+    "grid_hz": 1000000,
+    "duration_s": 1.5,
+    "initial_snr_db": 35,
+    "input_noise_lowpass_hz": 10000,
+    "noise_burn_s": 0.02,
+    "filter_start": "Zero state at start of FID, causal sosfilt on both signal and noise, never filtfilt",
+    "guard_s": 0.2,
+    "independent_records": 24,
+    "windows": [32,96,208,1024,2048],
+    "cases": [
+      {"name":"bypass_h005","bandwidth_hz":null,"threshold_A0":0.05,"snr_location":"before_bandpass"},
+      {"name":"bypass_h0002","bandwidth_hz":null,"threshold_A0":0.002,"snr_location":"before_bandpass"},
+      {"name":"bp100_h0002","bandwidth_hz":100,"threshold_A0":0.002,"snr_location":"before_bandpass"},
+      {"name":"bp500_h0002","bandwidth_hz":500,"threshold_A0":0.002,"snr_location":"before_bandpass"},
+      {"name":"bp2000_h0002","bandwidth_hz":2000,"threshold_A0":0.002,"snr_location":"before_bandpass"},
+      {"name":"bp100_post35_h0002","bandwidth_hz":100,"threshold_A0":0.002,"snr_location":"after_bandpass"}
+    ],
+    "filter": "Butterworth order N=2 bandpass (4 poles), center near 2086 Hz; widths and guards are declared assumptions, not fitted author parameters.",
+    "statistics": "Evaluate latest full window at fixed scheduled end times. Keep every record; report cycle quality rather than silently deleting failures.",
+    "dynamic": "Noiseless 10 Hz 2 nT modulation; report amplitude and phase at mean event time, with no retrospective delay removal."
+  },
+  "sources": [
+    "User-supplied PDF DOI 10.1109/TIE.2026.3732397 pages 5-10",
+    "https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.sosfilt.html",
+    "https://www.nist.gov/publications/handbook-frequency-stability-analysis"
+  ]
+}

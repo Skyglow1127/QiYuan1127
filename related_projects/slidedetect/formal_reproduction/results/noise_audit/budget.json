@@ -1,0 +1,27 @@
+{
+  "paper_fig10_endpoints": [
+    {
+      "requested_window_s": 0.01,
+      "m": 22,
+      "actual_span_s": 0.009864388149581703,
+      "paper_std_pT": 6,
+      "frequency_std_uHz": 255.44368366249202,
+      "iid_equivalent_total_jitter_ns": 1.677224382368335,
+      "sine_slope_V_s": 0.03344021176223852,
+      "equivalent_unfiltered_voltage_rms_pV": 56.08673851918684
+    },
+    {
+      "requested_window_s": 1.0,
+      "m": 2130,
+      "actual_span_s": 1.0000610652599737,
+      "paper_std_pT": 0.008,
+      "frequency_std_uHz": 0.34059157821665603,
+      "iid_equivalent_total_jitter_ns": 2.132624309566123,
+      "sine_slope_V_s": 0.03344021176223852,
+      "equivalent_unfiltered_voltage_rms_pV": 71.31540852118886
+    }
+  ],
+  "quantization_uniform_rms_ns": 1.4433756729740645,
+  "scope": "Reverse budget under iid timing-error linearization only. Actual quantization is correlated; filtered frontend noise is not iid. Voltage conversion is an unfiltered slope diagnostic, not a component specification.",
+  "important": "The 35 dB numerical experiment, Fig.10 bench experiment, and 40 dB Fig.12 comparison are separate conditions."
+}

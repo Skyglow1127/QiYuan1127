@@ -1,0 +1,41 @@
+{
+  "m": 96,
+  "hop": 24,
+  "clock_mhz": 200,
+  "wns_ns": 0.475,
+  "whs_ns": 0.005,
+  "timing_met": true,
+  "scope": "Integrated digital top OOC; physical board clock, pins and analog frontend excluded",
+  "async_exception": "larmor_in to sync1_reg/D only",
+  "constraint_checks": {
+    "no_clock": 0,
+    "constant_clock": 0,
+    "pulse_width_clock": 0,
+    "unconstrained_internal_endpoints": 0,
+    "no_input_delay": 1,
+    "no_output_delay": 0,
+    "multiple_clock": 0,
+    "generated_clocks": 0,
+    "loops": 0,
+    "partial_input_delay": 0,
+    "partial_output_delay": 0,
+    "latch_loops": 0
+  },
+  "source_sha256": {
+    "rtl/udiv_round.sv": "d0b6e88e44fc1c19e0cda7e382bcea9f59bfcbaba9333e182e3acd21f1cc1019",
+    "rtl/sfls_core.sv": "d87f05f0ec2b33829e7f167e3d949a50dc62c5e3b51bf990b3fb83db1cabf546",
+    "rtl/sfls_sensor.sv": "c3d0fb6263c2eeb9a92ac5bfbe4b5eb74ba978989fc9fd35bd9490f908ef972a",
+    "scripts/sensor_200mhz.xdc": "0775b5532cd0cffc522f2c245f157bd82e0c3217ade6a0b627ffe014233e710b",
+    "scripts/implement_sensor.tcl": "5fc89fd3d14a6bd5530d454aad63b4365b57dc73d98971c3a06056cc10fe362d",
+    "run_sensor_timing.py": "41a3024e552e981b5c1fbcb9d1a151e128995e445f2f01cc6a8ec987651247cf"
+  },
+  "report_sha256": {
+    "critical_paths.rpt": "ba27b316ba41c5bc5c63184c79697d3b396b95afb9c29f1a06c9fe9b1038eb8e",
+    "cdc.rpt": "96885f117302f5f9382d39d34f96456469805f801ad44c81c0299d480fed0c80",
+    "utilization.rpt": "d508a8a6824059d64eaac84b995e9b9294a77abfd85b074a972e8db6d8d2fbf1",
+    "timing_synth.rpt": "b8d0790434c0f183286bdf503c1b353250fba9f1ee5fc03f3a02731aa419d217",
+    "drc.rpt": "f47f80fc65c66a02e77f6e3188f1782f745842571b4d23c5aeaa1eb23145fe70",
+    "check_timing.rpt": "a9748e7b15261c08d1a431439b32b09be1af9a554fbad65458597637fcb2d29a",
+    "timing_routed.rpt": "3b6012ea848095660657c8a3ed6e9577c5e9c2bfd02eca238759a7c7dfffc3b4"
+  }
+}

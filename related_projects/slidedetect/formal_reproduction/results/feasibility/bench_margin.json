@@ -1,0 +1,1058 @@
+{
+  "protocol": {
+    "seed": 2026111111,
+    "independent_records": 4096,
+    "jitter_ns": [
+      0,
+      0.5,
+      1
+    ],
+    "selection": "At 10 ms the inverse iid budget is 1.677 ns total; subtracting uniform 5 ns quantization variance gives about 0.854 ns analog margin. Select 0.5 ns before the follow-up to leave margin, retain 0 and 1 ns controls. Actual ceil quantization is tested rather than assumed independent.",
+    "grid_convergence": {
+      "seed": 2026111113,
+      "records": 12,
+      "fine_hz": 2000000,
+      "coarse_hz": 1000000,
+      "snr_db": 80,
+      "threshold_A0": 0.0001,
+      "bandpass_width_hz": 100,
+      "guard_s": 0.2,
+      "duration_s": 1.5,
+      "gate": "RMS difference between unquantized SFLS on 1 and 2 MHz sampled versions of the SAME filtered analog record must be below 1 percent of the Fig.6 lower STD reading at every tested M. Actual clock quantization changes are reported separately."
+    }
+  },
+  "rows": [
+    {
+      "key": "jitter0_m22_offset0",
+      "m": 22,
+      "window_s": 0.01,
+      "offset_uHz": 0,
+      "jitter_ns": 0,
+      "target_std_pT": 6,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 2.3608698117322335,
+          "std_bootstrap_ci95_pT": [
+            2.3123922871600424,
+            2.40797424033689
+          ],
+          "mean_bias_pT": 0.0072090396556491205,
+          "rmse_pT": 2.360592609932837,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 2.3605706348379942,
+          "std_bootstrap_ci95_pT": [
+            2.3121500227139085,
+            2.407775588451055
+          ],
+          "mean_bias_pT": 0.002460103767212894,
+          "rmse_pT": 2.360283743726167,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 2.360869060896818,
+          "std_bootstrap_ci95_pT": [
+            2.3123916818643155,
+            2.4079735062263867
+          ],
+          "mean_bias_pT": 0.007206079756337219,
+          "rmse_pT": 2.360591850155167,
+          "meets_pointwise_std_gate": true
+        }
+      ]
+    },
+    {
+      "key": "jitter0_m22_offset0.25",
+      "m": 22,
+      "window_s": 0.01,
+      "offset_uHz": 0.25,
+      "jitter_ns": 0,
+      "target_std_pT": 6,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 2.3647053454145057,
+          "std_bootstrap_ci95_pT": [
+            2.317566233082482,
+            2.411708067652471
+          ],
+          "mean_bias_pT": 0.008527616912516457,
+          "rmse_pT": 2.36443204547655,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 2.364411178450841,
+          "std_bootstrap_ci95_pT": [
+            2.317246346148297,
+            2.4114209805727183
+          ],
+          "mean_bias_pT": 0.003790509533830203,
+          "rmse_pT": 2.364125575170721,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 2.3647045864475498,
+          "std_bootstrap_ci95_pT": [
+            2.3175653724865724,
+            2.411707331975105
+          ],
+          "mean_bias_pT": 0.008524655233737143,
+          "rmse_pT": 2.364431275927373,
+          "meets_pointwise_std_gate": true
+        }
+      ]
+    },
+    {
+      "key": "jitter0_m22_offset0.5",
+      "m": 22,
+      "window_s": 0.01,
+      "offset_uHz": 0.5,
+      "jitter_ns": 0,
+      "target_std_pT": 6,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 2.363140798003972,
+          "std_bootstrap_ci95_pT": [
+            2.315825095999642,
+            2.4102533757459033
+          ],
+          "mean_bias_pT": 0.0018483601497382984,
+          "rmse_pT": 2.362853034006514,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 2.3628494900275836,
+          "std_bootstrap_ci95_pT": [
+            2.315569077263462,
+            2.4099905202555387
+          ],
+          "mean_bias_pT": -0.0028844573346489544,
+          "rmse_pT": 2.3625627994655254,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 2.363140030169879,
+          "std_bootstrap_ci95_pT": [
+            2.31582430671714,
+            2.410252647681698
+          ],
+          "mean_bias_pT": 0.0018454046880655144,
+          "rmse_pT": 2.3628522639563068,
+          "meets_pointwise_std_gate": true
+        }
+      ]
+    },
+    {
+      "key": "jitter0_m22_offset0.75",
+      "m": 22,
+      "window_s": 0.01,
+      "offset_uHz": 0.75,
+      "jitter_ns": 0,
+      "target_std_pT": 6,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 2.3667460583193716,
+          "std_bootstrap_ci95_pT": [
+            2.3184107850663422,
+            2.413743614050557
+          ],
+          "mean_bias_pT": 0.001772819618805245,
+          "rmse_pT": 2.3664577953020567,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 2.366445088633198,
+          "std_bootstrap_ci95_pT": [
+            2.3181473313844694,
+            2.4133479215579605
+          ],
+          "mean_bias_pT": -0.00295327142688874,
+          "rmse_pT": 2.366158041341343,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 2.3667452874083073,
+          "std_bootstrap_ci95_pT": [
+            2.3184099902439796,
+            2.4137429926729013
+          ],
+          "mean_bias_pT": 0.0017698640183868505,
+          "rmse_pT": 2.3664570222729924,
+          "meets_pointwise_std_gate": true
+        }
+      ]
+    },
+    {
+      "key": "jitter0_m2130_offset0",
+      "m": 2130,
+      "window_s": 1,
+      "offset_uHz": 0,
+      "jitter_ns": 0,
+      "target_std_pT": 0.008,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 0.00042635450096306345,
+          "std_bootstrap_ci95_pT": [
+            0.0004145171367138829,
+            0.0004368877864576762
+          ],
+          "mean_bias_pT": 6.549181757837488e-06,
+          "rmse_pT": 0.0004263527563408572,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 0.0,
+          "std_bootstrap_ci95_pT": [
+            0.0,
+            0.0
+          ],
+          "mean_bias_pT": 0.0,
+          "rmse_pT": 0.0,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 0.0004266913544276007,
+          "std_bootstrap_ci95_pT": [
+            0.00041481881104043166,
+            0.00043728091793775864
+          ],
+          "mean_bias_pT": 6.566007905491013e-06,
+          "rmse_pT": 0.0004266897875684378,
+          "meets_pointwise_std_gate": true
+        }
+      ]
+    },
+    {
+      "key": "jitter0_m2130_offset0.25",
+      "m": 2130,
+      "window_s": 1,
+      "offset_uHz": 0.25,
+      "jitter_ns": 0,
+      "target_std_pT": 0.008,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 0.0005022319230957779,
+          "std_bootstrap_ci95_pT": [
+            0.0004923939604611057,
+            0.0005120089234031196
+          ],
+          "mean_bias_pT": 7.730066651211255e-06,
+          "rmse_pT": 0.0005022301038681215,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 1.734935272995602e-18,
+          "std_bootstrap_ci95_pT": [
+            1.734935272995602e-18,
+            1.734935272995602e-18
+          ],
+          "mean_bias_pT": -0.005872135801923211,
+          "rmse_pT": 0.005872135801923213,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 0.0005022965878794887,
+          "std_bootstrap_ci95_pT": [
+            0.0004925892126623141,
+            0.0005121977898237234
+          ],
+          "mean_bias_pT": 7.758784565034351e-06,
+          "rmse_pT": 0.0005022951958748744,
+          "meets_pointwise_std_gate": true
+        }
+      ]
+    },
+    {
+      "key": "jitter0_m2130_offset0.5",
+      "m": 2130,
+      "window_s": 1,
+      "offset_uHz": 0.5,
+      "jitter_ns": 0,
+      "target_std_pT": 0.008,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 0.0007470854805421342,
+          "std_bootstrap_ci95_pT": [
+            0.000733574000146974,
+            0.0007601093474184296
+          ],
+          "mean_bias_pT": -9.882641216020523e-06,
+          "rmse_pT": 0.0007470596482127667,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 0.011737826738969498,
+          "std_bootstrap_ci95_pT": [
+            0.011718229488992895,
+            0.01174553606561751
+          ],
+          "mean_bias_pT": -0.0004300880739421753,
+          "rmse_pT": 0.011744271601334172,
+          "meets_pointwise_std_gate": false
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 0.0007472274456269034,
+          "std_bootstrap_ci95_pT": [
+            0.0007337317411065991,
+            0.0007603348902287456
+          ],
+          "mean_bias_pT": -1.0087004023658444e-05,
+          "rmse_pT": 0.0007472043144346335,
+          "meets_pointwise_std_gate": true
+        }
+      ]
+    },
+    {
+      "key": "jitter0_m2130_offset0.75",
+      "m": 2130,
+      "window_s": 1,
+      "offset_uHz": 0.75,
+      "jitter_ns": 0,
+      "target_std_pT": 0.008,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 0.0005093102434921108,
+          "std_bootstrap_ci95_pT": [
+            0.0004987804822466083,
+            0.0005196374082885416
+          ],
+          "mean_bias_pT": 4.0894182505056e-06,
+          "rmse_pT": 0.0005092644874134084,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 1.734935272995602e-18,
+          "std_bootstrap_ci95_pT": [
+            1.734935272995602e-18,
+            1.734935272995602e-18
+          ],
+          "mean_bias_pT": 0.00587213579670771,
+          "rmse_pT": 0.005872135796707708,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 0.0005093749690740174,
+          "std_bootstrap_ci95_pT": [
+            0.0004987982705882838,
+            0.00051971092696368
+          ],
+          "mean_bias_pT": 4.0944324205467305e-06,
+          "rmse_pT": 0.0005093292432910298,
+          "meets_pointwise_std_gate": true
+        }
+      ]
+    },
+    {
+      "key": "jitter0.5_m22_offset0",
+      "m": 22,
+      "window_s": 0.01,
+      "offset_uHz": 0,
+      "jitter_ns": 0.5,
+      "target_std_pT": 6,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 4.459145292061942,
+          "std_bootstrap_ci95_pT": [
+            4.365046805168889,
+            4.555219288841675
+          ],
+          "mean_bias_pT": -0.10277922838186464,
+          "rmse_pT": 4.459785400554293,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 4.458801472337645,
+          "std_bootstrap_ci95_pT": [
+            4.364611181222339,
+            4.554930872155685
+          ],
+          "mean_bias_pT": -0.10351933152562617,
+          "rmse_pT": 4.45945883306347,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 4.459145128774598,
+          "std_bootstrap_ci95_pT": [
+            4.365046622283011,
+            4.555219191361485
+          ],
+          "mean_bias_pT": -0.10278122011490415,
+          "rmse_pT": 4.45978528323173,
+          "meets_pointwise_std_gate": true
+        }
+      ]
+    },
+    {
+      "key": "jitter0.5_m22_offset0.25",
+      "m": 22,
+      "window_s": 0.01,
+      "offset_uHz": 0.25,
+      "jitter_ns": 0.5,
+      "target_std_pT": 6,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 4.455817135867429,
+          "std_bootstrap_ci95_pT": [
+            4.36109091175224,
+            4.551797540223031
+          ],
+          "mean_bias_pT": -0.09845229273145706,
+          "rmse_pT": 4.456360842601628,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 4.455491043980675,
+          "std_bootstrap_ci95_pT": [
+            4.360808973906264,
+            4.551486653555278
+          ],
+          "mean_bias_pT": -0.09920124728989334,
+          "rmse_pT": 4.456051480531235,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 4.455816994630964,
+          "std_bootstrap_ci95_pT": [
+            4.3610906732006685,
+            4.551797420360814
+          ],
+          "mean_bias_pT": -0.09845428753391383,
+          "rmse_pT": 4.456360745487555,
+          "meets_pointwise_std_gate": true
+        }
+      ]
+    },
+    {
+      "key": "jitter0.5_m22_offset0.5",
+      "m": 22,
+      "window_s": 0.01,
+      "offset_uHz": 0.5,
+      "jitter_ns": 0.5,
+      "target_std_pT": 6,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 4.450912754565121,
+          "std_bootstrap_ci95_pT": [
+            4.355698134255754,
+            4.546524464004745
+          ],
+          "mean_bias_pT": -0.09911483145380506,
+          "rmse_pT": 4.451472960757421,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 4.4506038945765125,
+          "std_bootstrap_ci95_pT": [
+            4.355427389264143,
+            4.546344341572407
+          ],
+          "mean_bias_pT": -0.09986071566681422,
+          "rmse_pT": 4.451180886232803,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 4.450912609355989,
+          "std_bootstrap_ci95_pT": [
+            4.3556978868659115,
+            4.5465242397435235
+          ],
+          "mean_bias_pT": -0.09911681813790661,
+          "rmse_pT": 4.451472859837221,
+          "meets_pointwise_std_gate": true
+        }
+      ]
+    },
+    {
+      "key": "jitter0.5_m22_offset0.75",
+      "m": 22,
+      "window_s": 0.01,
+      "offset_uHz": 0.75,
+      "jitter_ns": 0.5,
+      "target_std_pT": 6,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 4.45134277009517,
+          "std_bootstrap_ci95_pT": [
+            4.3560737256925375,
+            4.547173587555257
+          ],
+          "mean_bias_pT": -0.09009191950496993,
+          "rmse_pT": 4.4517110753093325,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 4.451052088867859,
+          "std_bootstrap_ci95_pT": [
+            4.355722416836477,
+            4.546941472186743
+          ],
+          "mean_bias_pT": -0.09083460067648799,
+          "rmse_pT": 4.45143558208644,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 4.451342612644424,
+          "std_bootstrap_ci95_pT": [
+            4.356073539887507,
+            4.547173386177714
+          ],
+          "mean_bias_pT": -0.09009391447184759,
+          "rmse_pT": 4.451710958283829,
+          "meets_pointwise_std_gate": true
+        }
+      ]
+    },
+    {
+      "key": "jitter0.5_m2130_offset0",
+      "m": 2130,
+      "window_s": 1,
+      "offset_uHz": 0,
+      "jitter_ns": 0.5,
+      "target_std_pT": 0.008,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 0.0045081777946350465,
+          "std_bootstrap_ci95_pT": [
+            0.004409839355661293,
+            0.004598291109184291
+          ],
+          "mean_bias_pT": 9.830355972120441e-05,
+          "rmse_pT": 0.004508699234271881,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 0.002406867930873076,
+          "std_bootstrap_ci95_pT": [
+            0.0020434602388204504,
+            0.0027227015779777894
+          ],
+          "mean_bias_pT": 1.7203522827910632e-05,
+          "rmse_pT": 0.002406635595180687,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 0.0045081788886971175,
+          "std_bootstrap_ci95_pT": [
+            0.004409678594236009,
+            0.004598319812931652
+          ],
+          "mean_bias_pT": 9.830092608507896e-05,
+          "rmse_pT": 0.004508700270519735,
+          "meets_pointwise_std_gate": true
+        }
+      ]
+    },
+    {
+      "key": "jitter0.5_m2130_offset0.25",
+      "m": 2130,
+      "window_s": 1,
+      "offset_uHz": 0.25,
+      "jitter_ns": 0.5,
+      "target_std_pT": 0.008,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 0.00448203540331345,
+          "std_bootstrap_ci95_pT": [
+            0.0043790021601285735,
+            0.004572333961597407
+          ],
+          "mean_bias_pT": 0.00011645567310727845,
+          "rmse_pT": 0.004483001096017917,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 0.007019809955379802,
+          "std_bootstrap_ci95_pT": [
+            0.006717551677587681,
+            0.007303079434472626
+          ],
+          "mean_bias_pT": -0.0035439257090995294,
+          "rmse_pT": 0.007862894539864019,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 0.004482060651764457,
+          "std_bootstrap_ci95_pT": [
+            0.004378900048724755,
+            0.004572527970476205
+          ],
+          "mean_bias_pT": 0.00011657106660076992,
+          "rmse_pT": 0.0044830293319307254,
+          "meets_pointwise_std_gate": true
+        }
+      ]
+    },
+    {
+      "key": "jitter0.5_m2130_offset0.5",
+      "m": 2130,
+      "window_s": 1,
+      "offset_uHz": 0.5,
+      "jitter_ns": 0.5,
+      "target_std_pT": 0.008,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 0.0044386935178197294,
+          "std_bootstrap_ci95_pT": [
+            0.004332178369461113,
+            0.004540638674126703
+          ],
+          "mean_bias_pT": 0.00016204654495861063,
+          "rmse_pT": 0.0044411090021793794,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 0.011741313651184006,
+          "std_bootstrap_ci95_pT": [
+            0.011725860533531618,
+            0.011745670800764276
+          ],
+          "mean_bias_pT": 0.00032113242398861864,
+          "rmse_pT": 0.011744271601167368,
+          "meets_pointwise_std_gate": false
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 0.004438818827847786,
+          "std_bootstrap_ci95_pT": [
+            0.0043323491487182245,
+            0.004540678721269304
+          ],
+          "mean_bias_pT": 0.00016201130411059114,
+          "rmse_pT": 0.004441232927790919,
+          "meets_pointwise_std_gate": true
+        }
+      ]
+    },
+    {
+      "key": "jitter0.5_m2130_offset0.75",
+      "m": 2130,
+      "window_s": 1,
+      "offset_uHz": 0.75,
+      "jitter_ns": 0.5,
+      "target_std_pT": 0.008,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 0.004399781120538549,
+          "std_bootstrap_ci95_pT": [
+            0.00429996410007599,
+            0.00449731632557165
+          ],
+          "mean_bias_pT": 0.00013275785410494443,
+          "rmse_pT": 0.00440124669431414,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 0.006558487799200297,
+          "std_bootstrap_ci95_pT": [
+            0.006249466847065795,
+            0.0068791516016264665
+          ],
+          "mean_bias_pT": 0.0038707926380981894,
+          "rmse_pT": 0.007614873370754381,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 0.004399813745916466,
+          "std_bootstrap_ci95_pT": [
+            0.004300078465385622,
+            0.00449737385496118
+          ],
+          "mean_bias_pT": 0.00013258754473314364,
+          "rmse_pT": 0.00440127416703625,
+          "meets_pointwise_std_gate": true
+        }
+      ]
+    },
+    {
+      "key": "jitter1_m22_offset0",
+      "m": 22,
+      "window_s": 0.01,
+      "offset_uHz": 0,
+      "jitter_ns": 1,
+      "target_std_pT": 6,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 6.1097127560396,
+          "std_bootstrap_ci95_pT": [
+            5.977180060289849,
+            6.243790404227037
+          ],
+          "mean_bias_pT": 0.03215704513453926,
+          "rmse_pT": 6.109051531259273,
+          "meets_pointwise_std_gate": false
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 6.1097283405115945,
+          "std_bootstrap_ci95_pT": [
+            5.977090657189249,
+            6.243810896886441
+          ],
+          "mean_bias_pT": 0.032044428570072336,
+          "rmse_pT": 6.109066521857235,
+          "meets_pointwise_std_gate": false
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 6.1097129921377125,
+          "std_bootstrap_ci95_pT": [
+            5.977180270160485,
+            6.243790700461177
+          ],
+          "mean_bias_pT": 0.032156612739776304,
+          "rmse_pT": 6.109051765049253,
+          "meets_pointwise_std_gate": false
+        }
+      ]
+    },
+    {
+      "key": "jitter1_m22_offset0.25",
+      "m": 22,
+      "window_s": 0.01,
+      "offset_uHz": 0.25,
+      "jitter_ns": 1,
+      "target_std_pT": 6,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 6.115396568901461,
+          "std_bootstrap_ci95_pT": [
+            5.981367825905682,
+            6.249773682002283
+          ],
+          "mean_bias_pT": 0.03318212494771272,
+          "rmse_pT": 6.114740048350045,
+          "meets_pointwise_std_gate": false
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 6.115409974285185,
+          "std_bootstrap_ci95_pT": [
+            5.981404367332992,
+            6.2498980016650165
+          ],
+          "mean_bias_pT": 0.03306517092529955,
+          "rmse_pT": 6.114752818359396,
+          "meets_pointwise_std_gate": false
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 6.115396822077904,
+          "std_bootstrap_ci95_pT": [
+            5.981368254821417,
+            6.249774033566007
+          ],
+          "mean_bias_pT": 0.03318169611727444,
+          "rmse_pT": 6.114740299164788,
+          "meets_pointwise_std_gate": false
+        }
+      ]
+    },
+    {
+      "key": "jitter1_m22_offset0.5",
+      "m": 22,
+      "window_s": 0.01,
+      "offset_uHz": 0.5,
+      "jitter_ns": 1,
+      "target_std_pT": 6,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 6.1126315316224735,
+          "std_bootstrap_ci95_pT": [
+            5.979767011083975,
+            6.24829868440558
+          ],
+          "mean_bias_pT": 0.03193258949455845,
+          "rmse_pT": 6.111968733299654,
+          "meets_pointwise_std_gate": false
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 6.112645634950098,
+          "std_bootstrap_ci95_pT": [
+            5.979799550636268,
+            6.248326138223502
+          ],
+          "mean_bias_pT": 0.03180931375607739,
+          "rmse_pT": 6.1119821918913955,
+          "meets_pointwise_std_gate": false
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 6.11263179070443,
+          "std_bootstrap_ci95_pT": [
+            5.979767172852904,
+            6.248299010735494
+          ],
+          "mean_bias_pT": 0.03193216410995904,
+          "rmse_pT": 6.111968990123998,
+          "meets_pointwise_std_gate": false
+        }
+      ]
+    },
+    {
+      "key": "jitter1_m22_offset0.75",
+      "m": 22,
+      "window_s": 0.01,
+      "offset_uHz": 0.75,
+      "jitter_ns": 1,
+      "target_std_pT": 6,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 6.114623542099419,
+          "std_bootstrap_ci95_pT": [
+            5.983426683419798,
+            6.250962345495037
+          ],
+          "mean_bias_pT": 0.030976553683084246,
+          "rmse_pT": 6.113955554889213,
+          "meets_pointwise_std_gate": false
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 6.114642569861064,
+          "std_bootstrap_ci95_pT": [
+            5.9834683897090395,
+            6.250995785430804
+          ],
+          "mean_bias_pT": 0.03085738549062491,
+          "rmse_pT": 6.1139739774775075,
+          "meets_pointwise_std_gate": false
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 6.1146237950288045,
+          "std_bootstrap_ci95_pT": [
+            5.983426846258473,
+            6.250962660350077
+          ],
+          "mean_bias_pT": 0.030976112733529113,
+          "rmse_pT": 6.113955805550406,
+          "meets_pointwise_std_gate": false
+        }
+      ]
+    },
+    {
+      "key": "jitter1_m2130_offset0",
+      "m": 2130,
+      "window_s": 1,
+      "offset_uHz": 0,
+      "jitter_ns": 1,
+      "target_std_pT": 0.008,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 0.006387081668867937,
+          "std_bootstrap_ci95_pT": [
+            0.0062530341849601065,
+            0.006525362522531589
+          ],
+          "mean_bias_pT": 1.20330612351227e-05,
+          "rmse_pT": 0.006386313284547925,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 0.006053554580213967,
+          "std_bootstrap_ci95_pT": [
+            0.00569819488166798,
+            0.006409383991528343
+          ],
+          "mean_bias_pT": -2.2938030646887e-05,
+          "rmse_pT": 0.006052859039162997,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 0.006387004157724861,
+          "std_bootstrap_ci95_pT": [
+            0.00625299386897653,
+            0.0065252733359453564
+          ],
+          "mean_bias_pT": 1.202525897566727e-05,
+          "rmse_pT": 0.006386235768308419,
+          "meets_pointwise_std_gate": true
+        }
+      ]
+    },
+    {
+      "key": "jitter1_m2130_offset0.25",
+      "m": 2130,
+      "window_s": 1,
+      "offset_uHz": 0.25,
+      "jitter_ns": 1,
+      "target_std_pT": 0.008,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 0.006394058622755305,
+          "std_bootstrap_ci95_pT": [
+            0.0062611725669614515,
+            0.0065376804018867345
+          ],
+          "mean_bias_pT": 7.235042402892717e-05,
+          "rmse_pT": 0.0063936874191091305,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 0.009042978717839554,
+          "std_bootstrap_ci95_pT": [
+            0.008806747918116049,
+            0.009280748212404395
+          ],
+          "mean_bias_pT": -0.0018178389161580479,
+          "rmse_pT": 0.009222799884172099,
+          "meets_pointwise_std_gate": false
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 0.0063938783158152815,
+          "std_bootstrap_ci95_pT": [
+            0.006261075785149291,
+            0.006537464205072756
+          ],
+          "mean_bias_pT": 7.239815435951765e-05,
+          "rmse_pT": 0.006393507686029746,
+          "meets_pointwise_std_gate": true
+        }
+      ]
+    },
+    {
+      "key": "jitter1_m2130_offset0.5",
+      "m": 2130,
+      "window_s": 1,
+      "offset_uHz": 0.5,
+      "jitter_ns": 1,
+      "target_std_pT": 0.008,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 0.006358707110138588,
+          "std_bootstrap_ci95_pT": [
+            0.0062137895386246535,
+            0.006493911027670904
+          ],
+          "mean_bias_pT": 8.842473381210761e-05,
+          "rmse_pT": 0.006358545719743844,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 0.011744758919248163,
+          "std_bootstrap_ci95_pT": [
+            0.011734358412336282,
+            0.011745704090504175
+          ],
+          "mean_bias_pT": 0.000149097195454849,
+          "rmse_pT": 0.011744271601205569,
+          "meets_pointwise_std_gate": false
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 0.006358902534637091,
+          "std_bootstrap_ci95_pT": [
+            0.00621404542202379,
+            0.0064940698463029755
+          ],
+          "mean_bias_pT": 8.840316435556757e-05,
+          "rmse_pT": 0.006358740801582294,
+          "meets_pointwise_std_gate": true
+        }
+      ]
+    },
+    {
+      "key": "jitter1_m2130_offset0.75",
+      "m": 2130,
+      "window_s": 1,
+      "offset_uHz": 0.75,
+      "jitter_ns": 1,
+      "target_std_pT": 0.008,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 0.006327079968860369,
+          "std_bootstrap_ci95_pT": [
+            0.006192249533110138,
+            0.006463236453992056
+          ],
+          "mean_bias_pT": 4.243695497873717e-05,
+          "rmse_pT": 0.006326449905312047,
+          "meets_pointwise_std_gate": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 0.009082438051573504,
+          "std_bootstrap_ci95_pT": [
+            0.008848016003858645,
+            0.009312873494137286
+          ],
+          "mean_bias_pT": 0.001806369895709506,
+          "rmse_pT": 0.009259239376665316,
+          "meets_pointwise_std_gate": false
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 0.006326952652035806,
+          "std_bootstrap_ci95_pT": [
+            0.006192130506050936,
+            0.006463052432055555
+          ],
+          "mean_bias_pT": 4.228625324822487e-05,
+          "rmse_pT": 0.006326321597782194,
+          "meets_pointwise_std_gate": true
+        }
+      ]
+    }
+  ]
+}

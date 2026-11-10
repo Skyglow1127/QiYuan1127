@@ -1,0 +1,35 @@
+Nature Figure Static Preflight
+source: /tmp/slidedetect-completion/plot_completion.py
+backend: python
+
+[PASS] SOURCE-SYNTAX: Python source parses successfully
+[PASS] FONT-FAMILY: A publication-safe sans-serif family is configured
+  - Arial
+  - Helvetica
+  - sans-serif
+[PASS] FONT-SIZE: All detected text sizes are at least 5 pt (minimum 7 pt)
+[PASS] FONT-GLYPH-FLOOR: No mathtext superscript/subscript expression detected
+[PASS] LEGEND-LABEL-CASE: Detected literal legend labels start with display-style capitalization
+[PASS] COLOR-MAP: No rainbow/jet/hsv color mapping detected
+[PASS] EDITABLE-TEXT: SVG and PDF editable-text settings are configured
+[PASS] EXPORT-VECTOR: Both SVG and PDF exports are present
+[WARN] EXPORT-RASTER: PNG preview is present but no TIFF submission raster was found
+[WARN] RASTER-DPI: Raster export meets the 300 dpi floor but not the 600 dpi default
+  - 300
+[PASS] FINAL-WIDTH: Detected width 180.0 mm matches a common journal column width
+[PASS] DATA-SAMPLING: No high-confidence row-sampling operation detected
+[PASS] DATA-EXCLUSION: No high-confidence missing-data exclusion detected
+[WARN] DEMO-DATA: Simulated data appears in the plotting source without an explicit demo boundary
+  - np.random.default_rng(
+[PASS] LOG-GUARD: No logarithmic transform or axis detected
+[PASS] INTERP-MONOTONIC: No NumPy interpolation requiring an increasing x-grid detected
+[PASS] UNCERTAINTY-ENCODING: No stochastic aggregate requiring a variability audit was inferred
+[PASS] ROTATION-ANCHOR: No rotated Matplotlib text detected
+[PASS] ANNOTATION-WORKAROUND: No high-risk hard-coded label height or opaque white text mask detected
+[PASS] PANEL-ALIGNMENT-GATE: Render-time panel-alignment gate is wired into the plotting source
+  - require_matplotlib_panel_alignment(
+[PASS] BACKEND-EXCLUSIVE: No obvious cross-backend plotting reference found for python
+
+summary: 18 pass, 3 warn, 0 fail
+verdict: READY FOR VISUAL QA
+note: static preflight does not validate statistics, source-data truth, or rendered appearance

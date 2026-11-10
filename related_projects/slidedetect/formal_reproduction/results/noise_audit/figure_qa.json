@@ -1,0 +1,97 @@
+{
+  "visual_review": "Both figures inspected at full rendered size; labels, uncertainty and scope readable. Re-export after explicit save calls preserves the same geometry.",
+  "alignment": "Single-axis figures; multi-panel comparison not applicable",
+  "source_sha256": "593a2731d370e50c9e4d67563a05b65da362fdda472b74bbbb9ae16fe09c0bf5",
+  "figures": {
+    "plateau_discrimination": {
+      "text": {
+        "pdf": "/tmp/slidedetect-noise-audit/results/noise_audit/plateau_discrimination.pdf",
+        "auditable": true,
+        "minimum_required_pt": 5.0,
+        "minimum_found_pt": 7.0,
+        "text_run_count": 3,
+        "below_minimum_count": 0,
+        "below_minimum": [],
+        "warnings": []
+      },
+      "sha256": {
+        "pdf": "fe5e4520412408459f38ff3a9cd9c0cbe72c855f348417c51ecb8e7d8946c183",
+        "svg": "7c0ca24f082552c083f2e6d5351fec5a869d4501f4aab4c7207fc08227399094",
+        "png": "42def588fcd52b0831b5a525fbf60369dcc91b6ad36d1664ddbebc20e6db4f04"
+      },
+      "collision": {
+        "pdf": "results/noise_audit/plateau_discrimination.pdf",
+        "auditable": true,
+        "verdict": "PASS",
+        "page_count": 1,
+        "visible_text_box_count": 22,
+        "text_trace_count": 22,
+        "stroke_path_count": 64,
+        "filled_region_count": 53,
+        "image_region_count": 0,
+        "summary": {
+          "fail": 0,
+          "warn": 0,
+          "contained_fill_overlays": 0,
+          "contained_image_overlays": 0
+        },
+        "thresholds": {
+          "text_inset_pt": 0.6,
+          "min_overlap_ratio": 0.05,
+          "clipping_tolerance_pt": 0.5
+        },
+        "findings": []
+      }
+    },
+    "causal_frontend_gap": {
+      "text": {
+        "pdf": "/tmp/slidedetect-noise-audit/results/noise_audit/causal_frontend_gap.pdf",
+        "auditable": true,
+        "minimum_required_pt": 5.0,
+        "minimum_found_pt": 5.6,
+        "text_run_count": 19,
+        "below_minimum_count": 0,
+        "below_minimum": [],
+        "warnings": []
+      },
+      "sha256": {
+        "pdf": "07326d9f512cf0be6e8f94a03b21aa938ddd857aa53dc35255ef86d1ba22cf78",
+        "svg": "b95bf2ccdc26fbf199b750d4903ed766744ecb9a61dd28dc0cd2e3b1d3fd0d70",
+        "png": "5ed84338a929c88bcb1d33bd7a1eb72bdffb0a9b3d11fe20980470fc8d296f05"
+      },
+      "collision": {
+        "pdf": "results/noise_audit/causal_frontend_gap.pdf",
+        "auditable": true,
+        "verdict": "PASS",
+        "page_count": 1,
+        "visible_text_box_count": 18,
+        "text_trace_count": 26,
+        "stroke_path_count": 114,
+        "filled_region_count": 104,
+        "image_region_count": 0,
+        "summary": {
+          "fail": 0,
+          "warn": 0,
+          "contained_fill_overlays": 0,
+          "contained_image_overlays": 0
+        },
+        "thresholds": {
+          "text_inset_pt": 0.6,
+          "min_overlap_ratio": 0.05,
+          "clipping_tolerance_pt": 0.5
+        },
+        "findings": []
+      }
+    }
+  },
+  "source_preflight": {
+    "ready": true,
+    "strict": false,
+    "counts": {
+      "PASS": 19,
+      "WARN": 2,
+      "FAIL": 0
+    }
+  },
+  "warnings_review": "PNG at 300 dpi is a preview; PDF and SVG are the editable deliverables. No original paper conditions inferred from curve matching."
+}

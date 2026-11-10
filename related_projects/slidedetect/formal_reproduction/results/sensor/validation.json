@@ -1,0 +1,29 @@
+{
+  "profiles": [
+    {
+      "m": 96,
+      "hop": 0,
+      "epochs": 2,
+      "events": 289,
+      "outputs": 55,
+      "max_latency_cycles": 99,
+      "passed": true
+    },
+    {
+      "m": 96,
+      "hop": 24,
+      "epochs": 2,
+      "events": 289,
+      "outputs": 5,
+      "max_latency_cycles": 99,
+      "passed": true
+    }
+  ],
+  "scope": "Digital comparator waveform only; no analog noise or physical metastability claim",
+  "source_sha256": {
+    "rtl/udiv_round.sv": "d0b6e88e44fc1c19e0cda7e382bcea9f59bfcbaba9333e182e3acd21f1cc1019",
+    "rtl/sfls_core.sv": "d87f05f0ec2b33829e7f167e3d949a50dc62c5e3b51bf990b3fb83db1cabf546",
+    "rtl/sfls_sensor.sv": "c3d0fb6263c2eeb9a92ac5bfbe4b5eb74ba978989fc9fd35bd9490f908ef972a",
+    "sim/tb_sensor.sv": "43888efae3380db842341fef0199b3ad1e04b7d95b6be3a7961588345c8c5d1a"
+  }
+}

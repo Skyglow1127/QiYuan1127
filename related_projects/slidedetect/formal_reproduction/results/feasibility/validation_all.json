@@ -1,0 +1,36 @@
+{
+  "source_sha256": {
+    "assess_feasibility.py": "adea0e8746d50c9ffe3c7498b5e980702ffe8420ab9718227125f7d36eeb8190",
+    "feasibility_protocol.json": "d5931f82855612f67317cda5b9dd00e8517c18edc37370598e3daa58460a06be",
+    "reproduce.py": "a2cbb46bd5e37d973ab7a73b9bdf91898ba3958d3bbb6d829b2427e247f549c0",
+    "paper_config.json": "5df4c75fd29c82f6da08e57f0e4498f1a877aefc890f4dc7f98c31681e6e76ce",
+    "audit_noise.py": "3e56752fe8ad779829c8314bef4901f84c2b9999a9575cafaaaae99c1ff9d9f1",
+    "noise_audit_protocol.json": "2d2ebecdd680d134098b5072328217bb92f9e684472d7fa5b72aca572cc1db6b",
+    "results/noise_audit/fig6_digitized.json": "d82080e9ca8d0e31b0c3e6600b95d7551ad892a0ee70f97b584f632c04318fec",
+    "results/noise_audit/causal_frontend.json": "75bc29d40a20bc87178c9c9eb9d60e2c96bb2502e776e7367615ce7807dcf3b5"
+  },
+  "results": {
+    "inverse": {
+      "all_seven_ns_inside_pixel_ranges": true
+    },
+    "frontend": {
+      "cases": [
+        {
+          "input_snr_db": 35,
+          "gates_passed": false,
+          "linearization_passed": true
+        },
+        {
+          "input_snr_db": 80,
+          "gates_passed": true,
+          "linearization_passed": true
+        }
+      ]
+    },
+    "bench": {
+      "nanohertz_all_observed_std_pass": false,
+      "microhertz_all_observed_std_pass": false
+    }
+  },
+  "full_paper_reproduced": false
+}

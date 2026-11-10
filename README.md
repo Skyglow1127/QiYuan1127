@@ -45,6 +45,7 @@
 - **部署实验**：[真实NPU/GPU混合推理](experiments/pi05_vision_npu/归档说明.md)、[SmolVLA D1软件链路](experiments/smolvla_d1_smoke/归档说明.md)。
 - **建模与工具**：[机械臂仿真](simulation/README.md)、[参数化机械结构](hardware/mechanical/README.md)、[Vivado工具与汉化](tools/vivado_workflow/归档说明.md)。
 - **独立工程**：[FPGA测频、AIC驾驶实验与传感器PCB](related_projects/README.md)。
+- **SFLS 正式论文复现**：[先读知识、条件与进度](related_projects/slidedetect/formal_reproduction/README.md)。已验证假设下的精度条件和 200 MHz 数字链；原文全部实验尚未复现。
 
 原复现材料包保留为2026-11-04交付快照。2026-11-11补齐的源码、证据和下载入口统一从上方索引访问。
 

@@ -1,0 +1,44 @@
+{
+  "m": 96,
+  "hop": 24,
+  "clock_mhz": 200,
+  "wns_ns": 0.41,
+  "whs_ns": 0.008,
+  "timing_met": true,
+  "scope": "Integrated digital top OOC; physical board clock, pins and analog frontend excluded",
+  "async_exception": "larmor_in to sync1_reg/D only",
+  "constraint_checks": {
+    "no_clock": 0,
+    "constant_clock": 0,
+    "pulse_width_clock": 0,
+    "unconstrained_internal_endpoints": 0,
+    "no_input_delay": 1,
+    "no_output_delay": 0,
+    "multiple_clock": 0,
+    "generated_clocks": 0,
+    "loops": 0,
+    "partial_input_delay": 0,
+    "partial_output_delay": 0,
+    "latch_loops": 0
+  },
+  "source_sha256": {
+    "rtl/udiv_round.sv": "d0b6e88e44fc1c19e0cda7e382bcea9f59bfcbaba9333e182e3acd21f1cc1019",
+    "rtl/sfls_core.sv": "d87f05f0ec2b33829e7f167e3d949a50dc62c5e3b51bf990b3fb83db1cabf546",
+    "rtl/sfls_nhz_readout.sv": "376cd10a2b820a7a2b9bb6629b46e9533405c0ce026de3e24019ade294da1280",
+    "rtl/sfls_precision_sensor.sv": "87bf753c468b6f6ef0ee82bae5fe3419c233c5342de921477dca108c04ea5c4e",
+    "scripts/sensor_200mhz.xdc": "0775b5532cd0cffc522f2c245f157bd82e0c3217ade6a0b627ffe014233e710b",
+    "scripts/implement_precision_sensor.tcl": "86c3f3a0ed74ffbd16b46939c43fa292343417f49231021bb3069a8975cace2d",
+    "run_precision_sensor_timing.py": "a64deceef6a2df51906b8d7608b6e3c85883de5c0bde3d9eb6dc0cd6c3c00d7b"
+  },
+  "report_sha256": {
+    "critical_paths.rpt": "caa043caad9436ac8e7422584c2048f5422808bbd7ec589b9e8abcb064b51846",
+    "cdc.rpt": "f7ab65b7056b1c5b30d15901d23daaaa0e3d279443d5cb47cd77d85d6fd3ccb7",
+    "utilization.rpt": "4f3a239cb8693ab17ca0aae3124108b69851366d3cbd661a54932f9c06127fda",
+    "synchronizer_audit.txt": "58b150b5d79262727659e95e0f7e58d4f4eda86a4370fbb8c495d82760b1b0a0",
+    "status.txt": "adf53286e756de8d80f6828dfc2075bef135cdb9a06921243f424773e97fd5c2",
+    "timing_synth.rpt": "d629ed1ed869731235de04533bb453ed9061fd86362153108fa5311a72001217",
+    "drc.rpt": "dfd3751ef6a3005a576e738deccd34688b64b0ad0d46486a73e88db5b1c02378",
+    "check_timing.rpt": "62606cba90a75c994874d48b8f113e89a48582a2d82b8f12446cc7d8c110b8e8",
+    "timing_routed.rpt": "04cf23145caf897e55bf435897ed7b91965a278e64a47072c14229bf3e29120f"
+  }
+}

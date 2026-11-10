@@ -1,0 +1,11 @@
+{
+  "scope": "Independent checks and declared-assumption reconstructions; no author measurements",
+  "frozen_before_run": "2026-11-11",
+  "seed": 20261113,
+  "theory": {"trials": 2048, "timing_jitter_s": 2e-8, "windows": [32,64,96,128,256,512,1024,2048], "relative_std_tolerance": 0.08, "slope_tolerance": 0.05},
+  "frontend": {"records": 16, "duration_s": 1.0, "grid_hz": 1000000, "snr_db": [35,70], "threshold_A0": [0,0.002,0.02,0.05], "main_bandwidth_hz": 10000, "extra_bandwidth_hz": [1000,100000], "windows": [32,64,96,128,256,512,1024,2048], "bootstrap_repeats": 300},
+  "snr_interpretation_note": "35 dB is the paper value. 70 dB is only a sensitivity hypothesis: using 10^(-35/10) for an amplitude ratio corresponds to 70 dB power SNR. It is not attributed to the authors.",
+  "drift": {"rates_nT_s": [0,0.5,1,2], "windows": [32,64,96,128,256,512,1024], "duration_s": 1.0, "hop_fraction": 0.5, "noise_records": 16, "map_rate_nT_s": 2},
+  "step": {"base_hz": 2128.87, "delta_hz": 0.00001, "window_s": 0.1, "independent_trials_per_level": 512, "timing_jitter_ns": [0,20], "trace_plateaus": 8, "plateau_s": 1.0, "output_hz": 100},
+  "acceptance": {"arithmetic": "Exact integer output equality", "theory": "STD ratios within 8%; fitted time exponent within 0.05 of -1.5", "paper_figures": "Original conditions and statistical definitions required; closeness under assumed parameters does not certify reproduction", "resolution": "Report single-window discrimination and independent-repeat uncertainty separately; never treat overlapping outputs as independent"}
+}

@@ -1,0 +1,69 @@
+{
+  "noise_audit_checks_passed": true,
+  "full_paper_reproduced": false,
+  "paper_conditions_separated": true,
+  "plateau_20ns_5s": {
+    "records": 320,
+    "record_failures": 0,
+    "record_error_ci95": [
+      0.0,
+      0.011862158831309737
+    ],
+    "passed": true,
+    "scope": "Stationary timing noise, known midpoint, mean over each 5 s plateau. Not a 100 ms raw-output precision claim, not a decaying FID claim."
+  },
+  "frontend_35dB_100Hz": {
+    "window_ms": 99.22711108801636,
+    "std_nT": 0.09019408827374735,
+    "std_ci95_nT": [
+      0.08243348911596639,
+      0.09477648592728097
+    ],
+    "paper_digitized_std_nT": 0.0008180482212673839,
+    "paper_pixel_range_nT": [
+      0.0007520864226675171,
+      0.0008897952045792646
+    ],
+    "ratio_to_digitized": 110.25522203814789,
+    "explains_paper_precision": false,
+    "scope": "Declared frontend and different/unknown original aggregation; gap diagnosis, not an identical-condition replication."
+  },
+  "noisy_rtl_outputs": 954,
+  "remaining": [
+    "Exact Fig.6-8 original noise, thresholds and statistics",
+    "Full PLL/EKF original models",
+    "Bench/frontend/clock measurements"
+  ],
+  "evidence_sha256": {
+    "results/noise_audit/budget.json": "700b4386a10396c11a1c8671bff857bde45136dc2539568943484846a792236b",
+    "results/noise_audit/causal_frontend.json": "75bc29d40a20bc87178c9c9eb9d60e2c96bb2502e776e7367615ce7807dcf3b5",
+    "results/noise_audit/causal_frontend_gap.alignment.json": "c95420360cee4ea961d5bbad9e3ea5f15f1ee212b884c9ead9133a89571a5ba5",
+    "results/noise_audit/causal_frontend_gap.collision.json": "f0a20adf432fa9161080fa3df7917ac9c52329e2d8a8e6d3ede937dc75a87f29",
+    "results/noise_audit/causal_frontend_raw.json": "2732e3eeedcb547acba84aead76f3f0312215b8142c223c4acb6fb359296525b",
+    "results/noise_audit/fig6_digitized.json": "d82080e9ca8d0e31b0c3e6600b95d7551ad892a0ee70f97b584f632c04318fec",
+    "results/noise_audit/figure_qa.json": "701aac304d2df9423e218dd93a13bedf5c7702e6fae45cf28d0bd1174a1e34c8",
+    "results/noise_audit/figure_source_qa.json": "3d9cbc50bef9cd15a773031d64893cfaf87fbdf12771a418de2af987b05c75c6",
+    "results/noise_audit/noisy_replay/binding.json": "d97bdf7b035f8774d9831fe15b4293291fe4068d58fc624cc8b07d43b50da742",
+    "results/noise_audit/noisy_replay/bp100_h0002_ticks.txt": "b9498e1146ef302e74f1cc37e82c92c1705bc755ba4b980c36597ff7d899f897",
+    "results/noise_audit/noisy_replay/bp100_post35_h0002_ticks.txt": "5c4356efb1d3d6f204c9b206296e057cec31759ade094a5e3face76a3a98f890",
+    "results/noise_audit/noisy_replay/bp2000_h0002_ticks.txt": "257594eac22ae2f9ad1b1a70e2b0b3f96a783ce3f613a57ba3062a4806f47ba8",
+    "results/noise_audit/noisy_replay/bp500_h0002_ticks.txt": "3ebecbede941e99bff4f1a9f3446eb9df5c63c8141426c7ea45cb2bf89a98aa2",
+    "results/noise_audit/noisy_replay/bypass_h0002_ticks.txt": "026d54f1a5a25bf9c548579374d68f04670ba2d24a5303670e0bfc8faf995601",
+    "results/noise_audit/noisy_replay/bypass_h005_ticks.txt": "5bd0eb653ab7802477c44a84b02ea06f078c8f1298cf2b3493ed26afada7fc35",
+    "results/noise_audit/noisy_replay/noisy_m208.txt": "4345342a31acf274956b6017ae69302e3f39e44188351be4f2534678bd855556",
+    "results/noise_audit/noisy_replay/noisy_m96.txt": "d48f1332a17fcdd9924804dfa68e965ca5dcf7564f94b009066b1a8515d51061",
+    "results/noise_audit/noisy_replay/rtl_m208.csv": "f5ba44dbe1e42d8f9667d78dcae9096b6f6d1c3419f12ab8e0d6869b8cbfe4c8",
+    "results/noise_audit/noisy_replay/rtl_m208.txt": "f262332cd8a4f8f3e5119f633f7f53118cf753715382808557079171c645b69f",
+    "results/noise_audit/noisy_replay/rtl_m96.csv": "a4563de59f6959d7a698785043e9ab1a9d1419a795994c56351921f1380905ed",
+    "results/noise_audit/noisy_replay/rtl_m96.txt": "eee622a2a3bffa73dcffaa150c1af46c31bf6c7cc5ef14b7ad1878f834c6996c",
+    "results/noise_audit/noisy_replay/rtl_validation.json": "4630d1a73fca871b92b4bdae20c17e647ca434cc8244558498d6095482b52605",
+    "results/noise_audit/noisy_replay/summary.json": "33f6f5d8a7afac0972418b27e62567e0b1ec6b658f5b6d809709cbaf77d76c6f",
+    "results/noise_audit/plateau.json": "008aef05d7c873ca792e62e7da994cbcc10f57574724cf749e50428d904214b9",
+    "results/noise_audit/plateau_discrimination.alignment.json": "c95420360cee4ea961d5bbad9e3ea5f15f1ee212b884c9ead9133a89571a5ba5",
+    "results/noise_audit/plateau_discrimination.collision.json": "4c0bf8422b1e766c220dccb0060ba60d3fc085a58dc41d75699ff1fe36b74789",
+    "results/noise_audit/plateau_raw.json": "ff914a8cfe23b7dc3c4d58a3e4600eb5bbb26d0c575d624aa16bc16cefac6888",
+    "results/noise_audit/validation_budget.json": "80f467f38c445380c216ad4878a5d81b9f3ec8b34901bc2a95e3db11dace857c",
+    "results/noise_audit/validation_frontend.json": "0aaa9b46d5a0fbc7f53a6292d127ae2857578d022a4c79e39dd806304e2de1b4",
+    "results/noise_audit/validation_plateau.json": "c8dbe77f55589960aa790b17f75e79064bed4e188424cf7c4cce410411e15e3d"
+  }
+}

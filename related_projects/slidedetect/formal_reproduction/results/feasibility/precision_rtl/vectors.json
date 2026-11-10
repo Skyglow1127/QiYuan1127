@@ -1,0 +1,35 @@
+{
+  "profiles": [
+    {
+      "m": 22,
+      "file": "vectors_m22.txt",
+      "events": 219,
+      "checks": 33,
+      "sha256": "d31b0402892b1e6c064483cf5b678c9ab5a50534ee1b4b5f5a843d196a850b24"
+    },
+    {
+      "m": 96,
+      "file": "vectors_m96.txt",
+      "events": 885,
+      "checks": 27,
+      "sha256": "44ed97c130115d1eb64111d303d3245cd1b8a0a7c5827d3ab64cedf2801bb879"
+    },
+    {
+      "m": 213,
+      "file": "vectors_m213.txt",
+      "events": 1938,
+      "checks": 27,
+      "sha256": "99f8268b95f17efede7380e586556125861b2d9a0ec7f9a8fb4c6d1c6e77d96d"
+    },
+    {
+      "m": 2130,
+      "file": "vectors_m2130.txt",
+      "events": 19191,
+      "checks": 27,
+      "sha256": "07eeec8a6307196e09f89818be577a7b1fea55e1013b9f13a91b745852f6190b"
+    }
+  ],
+  "source_sha256": {
+    "prepare_precision_replay.py": "97f429d81b4bc3911f5f55ade57ac1d94fd82fe473945c8bbec51a807083cc80"
+  }
+}

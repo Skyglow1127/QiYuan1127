@@ -1,0 +1,54 @@
+{
+  "source_preflight": {
+    "ready": true,
+    "strict": false,
+    "counts": {
+      "PASS": 19,
+      "WARN": 2,
+      "FAIL": 0
+    }
+  },
+  "accepted_source_warnings": [
+    "PNG is a 300 dpi preview, with vector PDF/SVG masters; no TIFF required for this engineering report."
+  ],
+  "figures": [
+    {
+      "name": "conditional_precision",
+      "text_audit": {
+        "pdf": "results/feasibility/conditional_precision.pdf",
+        "auditable": true,
+        "minimum_required_pt": 5.0,
+        "minimum_found_pt": 5.6,
+        "text_run_count": 13,
+        "below_minimum_count": 0,
+        "below_minimum": [],
+        "warnings": []
+      },
+      "collision_audit": "conditional_precision.collision.json",
+      "alignment_audit": "conditional_precision.alignment.json",
+      "visual_review": "Passed: final PNG reviewed, no clipping/overlap; all stated intervals and model-condition differences retained. NanoHz and floating overlap is intentional and disclosed."
+    },
+    {
+      "name": "output_rounding",
+      "text_audit": {
+        "pdf": "results/feasibility/output_rounding.pdf",
+        "auditable": true,
+        "minimum_required_pt": 5.0,
+        "minimum_found_pt": 7.0,
+        "text_run_count": 3,
+        "below_minimum_count": 0,
+        "below_minimum": [],
+        "warnings": []
+      },
+      "collision_audit": "output_rounding.collision.json",
+      "alignment_audit": "output_rounding.alignment.json",
+      "visual_review": "Passed: final PNG reviewed, no clipping/overlap; all stated intervals and model-condition differences retained. NanoHz and floating overlap is intentional and disclosed."
+    }
+  ],
+  "source_sha256": {
+    "plot_feasibility.py": "b099c7dace78e9f2d42f9b6f2fecab050e58eb3208b1860619b2db938ac3099a",
+    "feasibility_figure_contract.md": "72d6f3cd7eebe84b06179369fab95f298a3e14373c05780c5541c77e279f442b",
+    "results/feasibility/frontend.json": "62be953ba0d8e51c5d8e44d3b0e4e36ead090645055eddd2f6f1bdd7fb22a050",
+    "results/feasibility/bench_margin.json": "afa7474dea776ebc38fc77907000a062e2d4d25cc63d0280cbf168691bd9176d"
+  }
+}

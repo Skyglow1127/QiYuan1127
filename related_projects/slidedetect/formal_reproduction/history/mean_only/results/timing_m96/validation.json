@@ -1,0 +1,43 @@
+{
+  "window_size": 96,
+  "clock_mhz": 200,
+  "part": "xck26-sfvc784-2LV-c",
+  "vivado_version": "2025.2",
+  "wns_ns": -0.182,
+  "whs_ns": -0.03,
+  "internal_wns_ns": -0.182,
+  "timing_met": false,
+  "execution_succeeded": true,
+  "elapsed_seconds": 146.14,
+  "scope": "Out-of-context core, synchronous I/O budget, not board validation",
+  "constraint_checks": {
+    "no_clock": 0,
+    "constant_clock": 0,
+    "pulse_width_clock": 0,
+    "unconstrained_internal_endpoints": 0,
+    "no_input_delay": 0,
+    "no_output_delay": 0,
+    "multiple_clock": 0,
+    "generated_clocks": 0,
+    "loops": 0,
+    "partial_input_delay": 0,
+    "partial_output_delay": 0,
+    "latch_loops": 0
+  },
+  "source_sha256": {
+    "rtl/sfls_core.sv": "deb6d46598cd4e221a2f6e6a37f57bc20de4b4bee03668820bd95874d656889f",
+    "rtl/udiv_round.sv": "6f40109b914a57b8f7d6524aa8a5b25c8c2718e26c2fd2f64615654f7252efdf",
+    "scripts/implement_core.tcl": "2815ac9a2006b4b12fb531db7c2cebf144b315fac56bdc2dced389c971651278",
+    "scripts/core_200mhz.xdc": "bde557513fcb1afa49e5da1926d78c20d2f072a3d8a811e83556ce770fc1097c",
+    "run_timing.py": "db3bea7a8d491adc9785d40b29cb21457348356e80ef4e5328bddf88a4b89d5f"
+  },
+  "report_sha256": {
+    "check_timing.rpt": "5524458589967657d70f4d2069ee29ebb1a17ee5afb7a54372faf0c62df772e7",
+    "critical_paths.rpt": "8f77d257c4fcdb2b1a9cb229fa73d3b4efcdecde2ccbae603b8e6c2a759e3cf5",
+    "drc.rpt": "28553f5a9a95050dd65faf33e3974101fd6ee092be18c359ae34599e57950e97",
+    "timing_routed.rpt": "996e13f2f151aec7e42af6992a3213320f7b3dda9f601f2f973b0238cad68752",
+    "timing_synth.rpt": "a37f5b1e29d7fbb6f5a4d651d0963df09bd098bc546f5678b66f6b84f3c604b2",
+    "utilization_routed.rpt": "5d40f9e08dca7510214b8a11d5701694cfa76163cb49d4be963ca81b908b40c4",
+    "utilization_synth.rpt": "d41f21332c1edbb6e5487cb22f080c44daa89f73eb12b0f3f8ecdcb1689e660c"
+  }
+}

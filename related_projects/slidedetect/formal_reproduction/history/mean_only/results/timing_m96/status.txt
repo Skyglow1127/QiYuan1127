@@ -1,0 +1,8 @@
+Vivado=2025.2
+part=xck26-sfvc784-2LV-c
+WINDOW_SIZE=96
+clock_mhz=200
+WNS=-0.182
+WHS=-0.030
+internal_WNS=-0.182
+mode=out_of_context; not a board timing signoff or bitstream

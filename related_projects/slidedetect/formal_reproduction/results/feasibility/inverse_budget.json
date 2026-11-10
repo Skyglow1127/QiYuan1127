@@ -1,0 +1,174 @@
+{
+  "rows": [
+    {
+      "requested_window_ms": 15,
+      "m": 32,
+      "actual_window_ms": 14.860098761973463,
+      "digitized_std_nT": 0.013674222332374508,
+      "equivalent_total_iid_jitter_ns": 6.986967801203411,
+      "pixel_only_jitter_interval_ns": [
+        6.423586632532551,
+        7.599760359393862
+      ],
+      "pixel_and_plusminus_one_event_interval_ns": [
+        6.124649542897861,
+        7.959000090559453
+      ],
+      "slope_equivalent_initial_snr_db": 77.75352787858702,
+      "seven_ns_prediction_nT": 0.013699727700209979,
+      "seven_ns_inside_pixel_range": true
+    },
+    {
+      "requested_window_ms": 30,
+      "m": 64,
+      "actual_window_ms": 30.199555548526714,
+      "digitized_std_nT": 0.004848399271266627,
+      "equivalent_total_iid_jitter_ns": 7.009525439256199,
+      "pixel_only_jitter_interval_ns": [
+        6.444325377347209,
+        7.624296416858671
+      ],
+      "pixel_and_plusminus_one_event_interval_ns": [
+        6.293853452481687,
+        7.803716174413094
+      ],
+      "slope_equivalent_initial_snr_db": 77.7255303908022,
+      "seven_ns_prediction_nT": 0.0048418106465232735,
+      "seven_ns_inside_pixel_range": true
+    },
+    {
+      "requested_window_ms": 45.53901233508,
+      "m": 96,
+      "actual_window_ms": 45.53901233507997,
+      "digitized_std_nT": 0.002654208839967242,
+      "equivalent_total_iid_jitter_ns": 7.050041549124078,
+      "pixel_only_jitter_interval_ns": [
+        6.4815745459643574,
+        7.668365995315556
+      ],
+      "pixel_and_plusminus_one_event_interval_ns": [
+        6.380556812401887,
+        7.788504369453721
+      ],
+      "slope_equivalent_initial_snr_db": 77.67546918574,
+      "seven_ns_prediction_nT": 0.002635369132268316,
+      "seven_ns_inside_pixel_range": true
+    },
+    {
+      "requested_window_ms": 60,
+      "m": 126,
+      "actual_window_ms": 59.91975307247364,
+      "digitized_std_nT": 0.0017190722018585747,
+      "equivalent_total_iid_jitter_ns": 6.8660910164651225,
+      "pixel_only_jitter_interval_ns": [
+        6.312456522773835,
+        7.468282066783618
+      ],
+      "pixel_and_plusminus_one_event_interval_ns": [
+        6.237454376546784,
+        7.557370092680312
+      ],
+      "slope_equivalent_initial_snr_db": 77.90511159348748,
+      "seven_ns_prediction_nT": 0.0017525991694769649,
+      "seven_ns_inside_pixel_range": true
+    },
+    {
+      "requested_window_ms": 99.22711108802,
+      "m": 208,
+      "actual_window_ms": 99.22711108801636,
+      "digitized_std_nT": 0.0008180482212673839,
+      "equivalent_total_iid_jitter_ns": 6.930142851584806,
+      "pixel_only_jitter_interval_ns": [
+        6.371343657160385,
+        7.537951573118701
+      ],
+      "pixel_and_plusminus_one_event_interval_ns": [
+        6.325451028612515,
+        7.592377923035694
+      ],
+      "slope_equivalent_initial_snr_db": 77.82445897863079,
+      "seven_ns_prediction_nT": 0.0008262943017923754,
+      "seven_ns_inside_pixel_range": true
+    },
+    {
+      "requested_window_ms": 100,
+      "m": 210,
+      "actual_window_ms": 100.18582713717593,
+      "digitized_std_nT": 0.0008066659250123312,
+      "equivalent_total_iid_jitter_ns": 6.932518368413815,
+      "pixel_only_jitter_interval_ns": [
+        6.373527628602983,
+        7.540535434837245
+      ],
+      "pixel_and_plusminus_one_event_interval_ns": [
+        6.3280559827803415,
+        7.594461285875294
+      ],
+      "slope_equivalent_initial_snr_db": 77.82148213646684,
+      "seven_ns_prediction_nT": 0.0008145180690488808,
+      "seven_ns_inside_pixel_range": true
+    },
+    {
+      "requested_window_ms": 200,
+      "m": 418,
+      "actual_window_ms": 199.89229624977207,
+      "digitized_std_nT": 0.0002941438941583484,
+      "equivalent_total_iid_jitter_ns": 7.098985947830002,
+      "pixel_only_jitter_interval_ns": [
+        6.526572404006657,
+        7.721603066343065
+      ],
+      "pixel_and_plusminus_one_event_interval_ns": [
+        6.5031656134694025,
+        7.749328839809155
+      ],
+      "slope_equivalent_initial_snr_db": 77.61537638552964,
+      "seven_ns_prediction_nT": 0.0002900424475044679,
+      "seven_ns_inside_pixel_range": true
+    },
+    {
+      "requested_window_ms": 400,
+      "m": 835,
+      "actual_window_ms": 399.78459249954415,
+      "digitized_std_nT": 0.00010141102975867967,
+      "equivalent_total_iid_jitter_ns": 6.9101566605111815,
+      "pixel_only_jitter_interval_ns": [
+        6.352969015474809,
+        7.516212491591741
+      ],
+      "pixel_and_plusminus_one_event_interval_ns": [
+        6.341559902977231,
+        7.5297187243925325
+      ],
+      "slope_equivalent_initial_snr_db": 77.84954484768546,
+      "seven_ns_prediction_nT": 0.00010272953902296107,
+      "seven_ns_inside_pixel_range": true
+    },
+    {
+      "requested_window_ms": 480,
+      "m": 1002,
+      "actual_window_ms": 479.83738260436894,
+      "digitized_std_nT": 7.880462815669905e-05,
+      "equivalent_total_iid_jitter_ns": 7.058727055614596,
+      "pixel_only_jitter_interval_ns": [
+        6.489559712774436,
+        7.677813264833031
+      ],
+      "pixel_and_plusminus_one_event_interval_ns": [
+        6.479847220856991,
+        7.689309872118249
+      ],
+      "slope_equivalent_initial_snr_db": 77.66477493417617,
+      "seven_ns_prediction_nT": 7.814899099379658e-05,
+      "seven_ns_inside_pixel_range": true
+    }
+  ],
+  "equivalent_iid_jitter_range_ns": [
+    6.8660910164651225,
+    7.098985947830002
+  ],
+  "initial_unfiltered_35dB_linearized_jitter_ns": 959.3236160083428,
+  "previous_causal_model_std_ratio": 110.25522203814789,
+  "linear_snr_extrapolation_db": 75.847983363912,
+  "scope": "7 ns describes the observed STD curve under the iid formula. It does not prove physical edge jitter, noise bandwidth, SNR location, threshold, or author settings. The SNR conversion is only a local unfiltered-sine diagnostic."
+}

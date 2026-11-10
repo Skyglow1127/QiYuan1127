@@ -1,0 +1,142 @@
+{
+  "protocol": {
+    "seed": 2026111113,
+    "records": 12,
+    "fine_hz": 2000000,
+    "coarse_hz": 1000000,
+    "snr_db": 80,
+    "threshold_A0": 0.0001,
+    "bandpass_width_hz": 100,
+    "guard_s": 0.2,
+    "duration_s": 1.5,
+    "gate": "RMS difference between unquantized SFLS on 1 and 2 MHz sampled versions of the SAME filtered analog record must be below 1 percent of the Fig.6 lower STD reading at every tested M. Actual clock quantization changes are reported separately."
+  },
+  "rows": [
+    {
+      "m": 32,
+      "unquantized_rms_difference_nT": 1.6681461916029643e-07,
+      "quantized_rms_difference_nT": 0.00020353377052395312,
+      "fraction_of_target_std": 1.3089539279067573e-05,
+      "passed": true
+    },
+    {
+      "m": 64,
+      "unquantized_rms_difference_nT": 3.141174319033514e-07,
+      "quantized_rms_difference_nT": 7.522333050329152e-05,
+      "fraction_of_target_std": 7.116341068907252e-05,
+      "passed": true
+    },
+    {
+      "m": 96,
+      "unquantized_rms_difference_nT": 6.089683158341405e-08,
+      "quantized_rms_difference_nT": 4.1178284875988065e-05,
+      "fraction_of_target_std": 2.4955757802164275e-05,
+      "passed": true
+    },
+    {
+      "m": 126,
+      "unquantized_rms_difference_nT": 8.135527442407146e-08,
+      "quantized_rms_difference_nT": 2.5786184824888487e-05,
+      "fraction_of_target_std": 5.137333721045165e-05,
+      "passed": true
+    },
+    {
+      "m": 208,
+      "unquantized_rms_difference_nT": 5.911599773870758e-09,
+      "quantized_rms_difference_nT": 1.262797501690834e-05,
+      "fraction_of_target_std": 7.860266580671724e-06,
+      "passed": true
+    },
+    {
+      "m": 210,
+      "unquantized_rms_difference_nT": 2.6536384466405554e-08,
+      "quantized_rms_difference_nT": 1.1300167044681807e-05,
+      "fraction_of_target_std": 3.588086305903115e-05,
+      "passed": true
+    },
+    {
+      "m": 418,
+      "unquantized_rms_difference_nT": 5.824722810513646e-09,
+      "quantized_rms_difference_nT": 4.3263005778744745e-06,
+      "fraction_of_target_std": 2.152169691848869e-05,
+      "passed": true
+    },
+    {
+      "m": 835,
+      "unquantized_rms_difference_nT": 4.93606812094264e-09,
+      "quantized_rms_difference_nT": 1.5256927362011165e-06,
+      "fraction_of_target_std": 5.290011544737584e-05,
+      "passed": true
+    },
+    {
+      "m": 1002,
+      "unquantized_rms_difference_nT": 4.7904988574809904e-09,
+      "quantized_rms_difference_nT": 1.0687167855988725e-06,
+      "fraction_of_target_std": 6.608755064081012e-05,
+      "passed": true
+    }
+  ],
+  "quality": [
+    {
+      "seed": 2026111113,
+      "events": 2712,
+      "max_crossing_change_ns": 0.0029969360326731476
+    },
+    {
+      "seed": 2026111114,
+      "events": 2712,
+      "max_crossing_change_ns": 0.0029953817204386723
+    },
+    {
+      "seed": 2026111115,
+      "events": 2712,
+      "max_crossing_change_ns": 0.0029960478542534474
+    },
+    {
+      "seed": 2026111116,
+      "events": 2712,
+      "max_crossing_change_ns": 0.0029967139880682225
+    },
+    {
+      "seed": 2026111117,
+      "events": 2712,
+      "max_crossing_change_ns": 0.0029956037650435974
+    },
+    {
+      "seed": 2026111118,
+      "events": 2712,
+      "max_crossing_change_ns": 0.0029969360326731476
+    },
+    {
+      "seed": 2026111119,
+      "events": 2712,
+      "max_crossing_change_ns": 0.0029960478542534474
+    },
+    {
+      "seed": 2026111120,
+      "events": 2712,
+      "max_crossing_change_ns": 0.0029982683003026978
+    },
+    {
+      "seed": 2026111121,
+      "events": 2712,
+      "max_crossing_change_ns": 0.0029971580772780726
+    },
+    {
+      "seed": 2026111122,
+      "events": 2712,
+      "max_crossing_change_ns": 0.0029976021664879227
+    },
+    {
+      "seed": 2026111123,
+      "events": 2712,
+      "max_crossing_change_ns": 0.0029956037650435974
+    },
+    {
+      "seed": 2026111124,
+      "events": 2712,
+      "max_crossing_change_ns": 0.0029971580772780726
+    }
+  ],
+  "scope": "Convergence of event interpolation only. The same 2 MHz filtered realization is subsampled; this does not test every possible continuous-time filter discretization."
+}

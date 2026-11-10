@@ -1,0 +1,18 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Wed Nov 11 03:30:19 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/m213/xsim_script.tcl
+# xsim {m213} -testplusarg VECTORS=/tmp/slidedetect-feasibility/results/feasibility/precision_rtl/vectors_m213.txt -testplusarg RESULTS=/tmp/slidedetect-feasibility/results/feasibility/precision_rtl/m213.csv -autoloadwcfg -runall -onfinish quit -onerror quit
+Time resolution is 1 ps
+run -all
+PASS precision M=213 events=1938 checks=27 latency=99 fault_checks=4
+$finish called at time : 54175 ns : File "/tmp/slidedetect-feasibility/sim/tb_precision.sv" Line 73
+exit 0
+INFO: xsimkernel Simulation Memory Usage: 295712 KB (Peak: 340172 KB), Simulation CPU Usage: 580 ms
+INFO: [Common 17-206] Exiting xsim at Wed Nov 11 03:30:21 2026...

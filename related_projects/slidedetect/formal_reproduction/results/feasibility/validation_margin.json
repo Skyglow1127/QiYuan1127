@@ -1,0 +1,9 @@
+{
+  "source_sha256": {
+    "refine_bench.py": "df83dd7b69e940879a8211d68b3b08abf9a0da43de011f4f3113dbb8d6985b62",
+    "reproduce.py": "a2cbb46bd5e37d973ab7a73b9bdf91898ba3958d3bbb6d829b2427e247f549c0",
+    "assess_feasibility.py": "adea0e8746d50c9ffe3c7498b5e980702ffe8420ab9718227125f7d36eeb8190",
+    "feasibility_protocol.json": "d5931f82855612f67317cda5b9dd00e8517c18edc37370598e3daa58460a06be",
+    "results/feasibility/frontend.json": "62be953ba0d8e51c5d8e44d3b0e4e36ead090645055eddd2f6f1bdd7fb22a050"
+  }
+}

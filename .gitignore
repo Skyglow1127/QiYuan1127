@@ -62,5 +62,8 @@ Thumbs.db
 
 # Archived raw evidence from the workspace audit
 !related_projects/slidedetect/evidence/**/*.log
+!related_projects/slidedetect/formal_reproduction/results/**/*.log
+!related_projects/slidedetect/formal_reproduction/results/sensor_timing_hop0/sensor_routed.dcp
+!related_projects/slidedetect/formal_reproduction/results/sensor_timing_hop24/sensor_routed.dcp
 !hardware/kr260_tactile/evidence/digital_tests.log
 hardware/kr260_tactile/ssh_config

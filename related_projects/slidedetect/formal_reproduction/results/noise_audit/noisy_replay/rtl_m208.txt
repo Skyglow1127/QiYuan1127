@@ -1,0 +1,18 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Wed Nov 11 02:59:23 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/m208/xsim_script.tcl
+# xsim {m208} -testplusarg VECTORS=/tmp/slidedetect-noise-audit/results/noise_audit/noisy_replay/noisy_m208.txt -testplusarg RESULTS=/tmp/slidedetect-noise-audit/results/noise_audit/noisy_replay/build/m208.csv -autoloadwcfg -runall -onfinish quit -onerror quit
+Time resolution is 1 ps
+run -all
+PASS replay stride=1 window=208 clock=200000000 events=16272 checks=294
+$finish called at time : 474020 ns : File "/tmp/slidedetect-noise-audit/sim/tb_replay.sv" Line 57
+exit 0
+INFO: xsimkernel Simulation Memory Usage: 295680 KB (Peak: 340140 KB), Simulation CPU Usage: 570 ms
+INFO: [Common 17-206] Exiting xsim at Wed Nov 11 02:59:25 2026...

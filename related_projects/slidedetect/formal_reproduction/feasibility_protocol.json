@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "seed": 2026111107,
+  "scope": "Engineering feasibility under explicit assumptions. Inverting a plotted curve does not identify the author's noise model. Passing an improved-SNR case is not a reproduction of the paper's 35 dB experiment.",
+  "inverse": {
+    "equivalent_total_iid_jitter_ns": 7,
+    "note": "7 ns is a rounded diagnostic inferred from all digitized Fig.6 STD values, not an independent prediction or author setting. Pixel ranges are reading uncertainty, not sampling confidence."
+  },
+  "frontend": {
+    "grid_hz": 1000000,
+    "duration_s": 1.5,
+    "guard_s": 0.2,
+    "noise_burn_s": 0.02,
+    "input_noise_lowpass_hz": 10000,
+    "bandpass_width_hz": 100,
+    "bandpass_order": 2,
+    "threshold_A0": 0.0001,
+    "initial_snr_db": [35, 80],
+    "independent_records": 48,
+    "bootstrap_repeats": 2000,
+    "case_selection": "80 dB chosen before this run: the previous 100 Hz model's 110-fold STD gap implies about 41 dB additional input SNR; 80 dB adds margin. This explicitly changes the paper's stated 35 dB. Threshold 0.0001 A0 reduces deterministic FID threshold bias; it is an idealized assumption, not a hardware claim.",
+    "filter": "Same causal Butterworth bandpass on signal and noise; zero initial state. SNR is initial unfiltered sine RMS divided by lowpass-noise RMS before bandpass.",
+    "statistics": "Evaluate complete windows at fixed scheduled ends, separated by 50 ms. Bootstrap independent whole acquisitions, not overlapping frames. Report both floating and nearest-microhertz outputs, all record faults, and noiseless bias.",
+    "acceptance": "For each digitized window, 97.5 percentile bootstrap upper bound of STD and RMSE must be below that target's lower pixel reading, rescaled in STD by finite-M iid theory for the small actual-span difference. These are pointwise engineering checks, not a simultaneous confidence claim or author-statistic identification.",
+    "linearization": "Use the actual edge-time errors and local noiseless period to predict frequency deviations to first order; preserve their joint dependence. Compare against an independence surrogate that keeps marginal edge variances but removes covariance. Relative STD agreement tolerance 2 percent for actual timing-error projection."
+  },
+  "bench": {
+    "base_hz": 2128.87,
+    "independent_records": 4096,
+    "input_jitter_ns": 1,
+    "clock_hz": 200000000,
+    "windows_s": [0.01, 1],
+    "target_std_pT": [6, 0.008],
+    "sub_microhertz_offsets": [0, 0.25, 0.5, 0.75],
+    "output_quantums_hz": [0.000001, 0.000000001],
+    "note": "Separate constant-amplitude, iid timing-jitter test with random initial clock phase and actual ceil quantization. No FID decay or physical clock drift. Sweep sub-LSB carrier positions so rounding cannot hide noise. SNR of the paper's bench is unspecified."
+  }
+}

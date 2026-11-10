@@ -1,0 +1,18 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Wed Nov 11 02:15:26 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/m1024/xsim_script.tcl
+# xsim {m1024} -testplusarg VECTORS=/tmp/slidedetect-timing-final/results/vectors_m1024.txt -testplusarg RESULTS=/tmp/slidedetect-timing-final/results/build/m1024.csv -autoloadwcfg -runall -onfinish quit -onerror quit
+Time resolution is 1 ps
+run -all
+PASS replay stride=1 window=1024 clock=200000000 events=10279 checks=31
+$finish called at time : 221300 ns : File "/tmp/slidedetect-timing-final/sim/tb_replay.sv" Line 57
+exit 0
+INFO: xsimkernel Simulation Memory Usage: 295692 KB (Peak: 340152 KB), Simulation CPU Usage: 600 ms
+INFO: [Common 17-206] Exiting xsim at Wed Nov 11 02:15:28 2026...

@@ -1,0 +1,888 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date              : Wed Nov 11 02:27:28 2026
+| Host              : aup-shc2-370-4 running 64-bit Ubuntu 24.04.2 LTS
+| Command           : report_timing -max_paths 10 -file /tmp/slidedetect-completion/results/sensor_timing_hop24/critical_paths.rpt
+| Design            : sfls_sensor
+| Device            : xck26-sfvc784
+| Speed File        : -2LV  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : C
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.475ns  (required time - arrival time)
+  Source:                 core/history_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E2 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            core/full_delta_reg[72]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.357ns  (logic 2.637ns (60.526%)  route 1.720ns (39.474%))
+  Logic Levels:           14  (CARRY8=11 LUT2=1 LUT3=1 LUT4=1)
+  Clock Path Skew:        -0.077ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.030ns = ( 5.030 - 5.000 ) 
+    Source Clock Delay      (SCD):    0.107ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.135ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1898, unset)         0.107     0.107    core/clk
+    RAMB36_X0Y11         RAMB36E2                                     r  core/history_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y11         RAMB36E2 (Prop_RAMB36E2_RAMB36_CLKARDCLK_DOUTADOUT[4])
+                                                      1.220     1.327 r  core/history_reg/DOUTADOUT[4]
+                         net (fo=8, routed)           0.595     1.922    core/outgoing[4]
+    SLICE_X28Y58         LUT3 (Prop_D5LUT_SLICEM_I2_O)
+                                                      0.091     2.013 r  core/full_delta[15]_i_14/O
+                         net (fo=2, routed)           0.279     2.291    core/full_delta[15]_i_14_n_0
+    SLICE_X28Y58         LUT4 (Prop_E6LUT_SLICEM_I3_O)
+                                                      0.138     2.429 r  core/full_delta[15]_i_22/O
+                         net (fo=1, routed)           0.018     2.447    core/full_delta[15]_i_22_n_0
+    SLICE_X28Y58         CARRY8 (Prop_CARRY8_SLICEM_S[4]_CO[7])
+                                                      0.236     2.683 r  core/full_delta_reg[15]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.713    core/full_delta_reg[15]_i_2_n_0
+    SLICE_X28Y59         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     2.778 r  core/full_delta_reg[23]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.808    core/full_delta_reg[23]_i_2_n_0
+    SLICE_X28Y60         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     2.873 r  core/full_delta_reg[31]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.903    core/full_delta_reg[31]_i_2_n_0
+    SLICE_X28Y61         CARRY8 (Prop_CARRY8_SLICEM_CI_O[1])
+                                                      0.106     3.009 r  core/full_delta_reg[39]_i_2/O[1]
+                         net (fo=2, routed)           0.505     3.515    core/full_delta10_in[31]
+    SLICE_X29Y56         LUT2 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.138     3.653 r  core/full_delta[31]_i_3/O
+                         net (fo=1, routed)           0.021     3.674    core/full_delta[31]_i_3_n_0
+    SLICE_X29Y56         CARRY8 (Prop_CARRY8_SLICEM_S[7]_CO[7])
+                                                      0.175     3.849 r  core/full_delta_reg[31]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     3.879    core/full_delta_reg[31]_i_1_n_0
+    SLICE_X29Y57         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     3.944 r  core/full_delta_reg[39]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     3.974    core/full_delta_reg[39]_i_1_n_0
+    SLICE_X29Y58         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.039 r  core/full_delta_reg[47]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.069    core/full_delta_reg[47]_i_1_n_0
+    SLICE_X29Y59         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.134 r  core/full_delta_reg[55]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.164    core/full_delta_reg[55]_i_1_n_0
+    SLICE_X29Y60         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.229 r  core/full_delta_reg[63]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.259    core/full_delta_reg[63]_i_1_n_0
+    SLICE_X29Y61         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.324 r  core/full_delta_reg[71]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.354    core/full_delta_reg[71]_i_1_n_0
+    SLICE_X29Y62         CARRY8 (Prop_CARRY8_SLICEM_CI_O[0])
+                                                      0.078     4.432 r  core/full_delta_reg[72]_i_1/O[0]
+                         net (fo=1, routed)           0.032     4.464    core/p_0_in[72]
+    SLICE_X29Y62         FDRE                                         r  core/full_delta_reg[72]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=1898, unset)         0.030     5.030    core/clk
+    SLICE_X29Y62         FDRE                                         r  core/full_delta_reg[72]/C
+                         clock pessimism              0.000     5.030    
+                         clock uncertainty           -0.135     4.895    
+    SLICE_X29Y62         FDRE (Setup_AFF_SLICEM_C_D)
+                                                      0.044     4.939    core/full_delta_reg[72]
+  -------------------------------------------------------------------
+                         required time                          4.939    
+                         arrival time                          -4.464    
+  -------------------------------------------------------------------
+                         slack                                  0.475    
+
+Slack (MET) :             0.476ns  (required time - arrival time)
+  Source:                 core/history_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E2 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            core/full_delta_reg[71]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.357ns  (logic 2.665ns (61.169%)  route 1.692ns (38.831%))
+  Logic Levels:           13  (CARRY8=10 LUT2=1 LUT3=1 LUT4=1)
+  Clock Path Skew:        -0.076ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.031ns = ( 5.031 - 5.000 ) 
+    Source Clock Delay      (SCD):    0.107ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.135ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1898, unset)         0.107     0.107    core/clk
+    RAMB36_X0Y11         RAMB36E2                                     r  core/history_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y11         RAMB36E2 (Prop_RAMB36E2_RAMB36_CLKARDCLK_DOUTADOUT[4])
+                                                      1.220     1.327 r  core/history_reg/DOUTADOUT[4]
+                         net (fo=8, routed)           0.595     1.922    core/outgoing[4]
+    SLICE_X28Y58         LUT3 (Prop_D5LUT_SLICEM_I2_O)
+                                                      0.091     2.013 r  core/full_delta[15]_i_14/O
+                         net (fo=2, routed)           0.279     2.291    core/full_delta[15]_i_14_n_0
+    SLICE_X28Y58         LUT4 (Prop_E6LUT_SLICEM_I3_O)
+                                                      0.138     2.429 r  core/full_delta[15]_i_22/O
+                         net (fo=1, routed)           0.018     2.447    core/full_delta[15]_i_22_n_0
+    SLICE_X28Y58         CARRY8 (Prop_CARRY8_SLICEM_S[4]_CO[7])
+                                                      0.236     2.683 r  core/full_delta_reg[15]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.713    core/full_delta_reg[15]_i_2_n_0
+    SLICE_X28Y59         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     2.778 r  core/full_delta_reg[23]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.808    core/full_delta_reg[23]_i_2_n_0
+    SLICE_X28Y60         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     2.873 r  core/full_delta_reg[31]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.903    core/full_delta_reg[31]_i_2_n_0
+    SLICE_X28Y61         CARRY8 (Prop_CARRY8_SLICEM_CI_O[1])
+                                                      0.106     3.009 r  core/full_delta_reg[39]_i_2/O[1]
+                         net (fo=2, routed)           0.505     3.515    core/full_delta10_in[31]
+    SLICE_X29Y56         LUT2 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.138     3.653 r  core/full_delta[31]_i_3/O
+                         net (fo=1, routed)           0.021     3.674    core/full_delta[31]_i_3_n_0
+    SLICE_X29Y56         CARRY8 (Prop_CARRY8_SLICEM_S[7]_CO[7])
+                                                      0.175     3.849 r  core/full_delta_reg[31]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     3.879    core/full_delta_reg[31]_i_1_n_0
+    SLICE_X29Y57         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     3.944 r  core/full_delta_reg[39]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     3.974    core/full_delta_reg[39]_i_1_n_0
+    SLICE_X29Y58         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.039 r  core/full_delta_reg[47]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.069    core/full_delta_reg[47]_i_1_n_0
+    SLICE_X29Y59         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.134 r  core/full_delta_reg[55]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.164    core/full_delta_reg[55]_i_1_n_0
+    SLICE_X29Y60         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.229 r  core/full_delta_reg[63]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.259    core/full_delta_reg[63]_i_1_n_0
+    SLICE_X29Y61         CARRY8 (Prop_CARRY8_SLICEM_CI_O[7])
+                                                      0.171     4.430 r  core/full_delta_reg[71]_i_1/O[7]
+                         net (fo=1, routed)           0.034     4.464    core/p_0_in[71]
+    SLICE_X29Y61         FDRE                                         r  core/full_delta_reg[71]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=1898, unset)         0.031     5.031    core/clk
+    SLICE_X29Y61         FDRE                                         r  core/full_delta_reg[71]/C
+                         clock pessimism              0.000     5.031    
+                         clock uncertainty           -0.135     4.896    
+    SLICE_X29Y61         FDRE (Setup_HFF_SLICEM_C_D)
+                                                      0.044     4.940    core/full_delta_reg[71]
+  -------------------------------------------------------------------
+                         required time                          4.940    
+                         arrival time                          -4.464    
+  -------------------------------------------------------------------
+                         slack                                  0.476    
+
+Slack (MET) :             0.486ns  (required time - arrival time)
+  Source:                 core/history_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E2 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            core/full_delta_reg[69]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.346ns  (logic 2.655ns (61.093%)  route 1.691ns (38.907%))
+  Logic Levels:           13  (CARRY8=10 LUT2=1 LUT3=1 LUT4=1)
+  Clock Path Skew:        -0.076ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.031ns = ( 5.031 - 5.000 ) 
+    Source Clock Delay      (SCD):    0.107ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.135ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1898, unset)         0.107     0.107    core/clk
+    RAMB36_X0Y11         RAMB36E2                                     r  core/history_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y11         RAMB36E2 (Prop_RAMB36E2_RAMB36_CLKARDCLK_DOUTADOUT[4])
+                                                      1.220     1.327 r  core/history_reg/DOUTADOUT[4]
+                         net (fo=8, routed)           0.595     1.922    core/outgoing[4]
+    SLICE_X28Y58         LUT3 (Prop_D5LUT_SLICEM_I2_O)
+                                                      0.091     2.013 r  core/full_delta[15]_i_14/O
+                         net (fo=2, routed)           0.279     2.291    core/full_delta[15]_i_14_n_0
+    SLICE_X28Y58         LUT4 (Prop_E6LUT_SLICEM_I3_O)
+                                                      0.138     2.429 r  core/full_delta[15]_i_22/O
+                         net (fo=1, routed)           0.018     2.447    core/full_delta[15]_i_22_n_0
+    SLICE_X28Y58         CARRY8 (Prop_CARRY8_SLICEM_S[4]_CO[7])
+                                                      0.236     2.683 r  core/full_delta_reg[15]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.713    core/full_delta_reg[15]_i_2_n_0
+    SLICE_X28Y59         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     2.778 r  core/full_delta_reg[23]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.808    core/full_delta_reg[23]_i_2_n_0
+    SLICE_X28Y60         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     2.873 r  core/full_delta_reg[31]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.903    core/full_delta_reg[31]_i_2_n_0
+    SLICE_X28Y61         CARRY8 (Prop_CARRY8_SLICEM_CI_O[1])
+                                                      0.106     3.009 r  core/full_delta_reg[39]_i_2/O[1]
+                         net (fo=2, routed)           0.505     3.515    core/full_delta10_in[31]
+    SLICE_X29Y56         LUT2 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.138     3.653 r  core/full_delta[31]_i_3/O
+                         net (fo=1, routed)           0.021     3.674    core/full_delta[31]_i_3_n_0
+    SLICE_X29Y56         CARRY8 (Prop_CARRY8_SLICEM_S[7]_CO[7])
+                                                      0.175     3.849 r  core/full_delta_reg[31]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     3.879    core/full_delta_reg[31]_i_1_n_0
+    SLICE_X29Y57         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     3.944 r  core/full_delta_reg[39]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     3.974    core/full_delta_reg[39]_i_1_n_0
+    SLICE_X29Y58         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.039 r  core/full_delta_reg[47]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.069    core/full_delta_reg[47]_i_1_n_0
+    SLICE_X29Y59         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.134 r  core/full_delta_reg[55]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.164    core/full_delta_reg[55]_i_1_n_0
+    SLICE_X29Y60         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.229 r  core/full_delta_reg[63]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.259    core/full_delta_reg[63]_i_1_n_0
+    SLICE_X29Y61         CARRY8 (Prop_CARRY8_SLICEM_CI_O[5])
+                                                      0.161     4.420 r  core/full_delta_reg[71]_i_1/O[5]
+                         net (fo=1, routed)           0.033     4.453    core/p_0_in[69]
+    SLICE_X29Y61         FDRE                                         r  core/full_delta_reg[69]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=1898, unset)         0.031     5.031    core/clk
+    SLICE_X29Y61         FDRE                                         r  core/full_delta_reg[69]/C
+                         clock pessimism              0.000     5.031    
+                         clock uncertainty           -0.135     4.896    
+    SLICE_X29Y61         FDRE (Setup_FFF_SLICEM_C_D)
+                                                      0.043     4.939    core/full_delta_reg[69]
+  -------------------------------------------------------------------
+                         required time                          4.939    
+                         arrival time                          -4.453    
+  -------------------------------------------------------------------
+                         slack                                  0.486    
+
+Slack (MET) :             0.489ns  (required time - arrival time)
+  Source:                 core/history_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E2 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            core/full_delta_reg[70]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.343ns  (logic 2.651ns (61.044%)  route 1.692ns (38.956%))
+  Logic Levels:           13  (CARRY8=10 LUT2=1 LUT3=1 LUT4=1)
+  Clock Path Skew:        -0.076ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.031ns = ( 5.031 - 5.000 ) 
+    Source Clock Delay      (SCD):    0.107ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.135ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1898, unset)         0.107     0.107    core/clk
+    RAMB36_X0Y11         RAMB36E2                                     r  core/history_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y11         RAMB36E2 (Prop_RAMB36E2_RAMB36_CLKARDCLK_DOUTADOUT[4])
+                                                      1.220     1.327 r  core/history_reg/DOUTADOUT[4]
+                         net (fo=8, routed)           0.595     1.922    core/outgoing[4]
+    SLICE_X28Y58         LUT3 (Prop_D5LUT_SLICEM_I2_O)
+                                                      0.091     2.013 r  core/full_delta[15]_i_14/O
+                         net (fo=2, routed)           0.279     2.291    core/full_delta[15]_i_14_n_0
+    SLICE_X28Y58         LUT4 (Prop_E6LUT_SLICEM_I3_O)
+                                                      0.138     2.429 r  core/full_delta[15]_i_22/O
+                         net (fo=1, routed)           0.018     2.447    core/full_delta[15]_i_22_n_0
+    SLICE_X28Y58         CARRY8 (Prop_CARRY8_SLICEM_S[4]_CO[7])
+                                                      0.236     2.683 r  core/full_delta_reg[15]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.713    core/full_delta_reg[15]_i_2_n_0
+    SLICE_X28Y59         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     2.778 r  core/full_delta_reg[23]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.808    core/full_delta_reg[23]_i_2_n_0
+    SLICE_X28Y60         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     2.873 r  core/full_delta_reg[31]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.903    core/full_delta_reg[31]_i_2_n_0
+    SLICE_X28Y61         CARRY8 (Prop_CARRY8_SLICEM_CI_O[1])
+                                                      0.106     3.009 r  core/full_delta_reg[39]_i_2/O[1]
+                         net (fo=2, routed)           0.505     3.515    core/full_delta10_in[31]
+    SLICE_X29Y56         LUT2 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.138     3.653 r  core/full_delta[31]_i_3/O
+                         net (fo=1, routed)           0.021     3.674    core/full_delta[31]_i_3_n_0
+    SLICE_X29Y56         CARRY8 (Prop_CARRY8_SLICEM_S[7]_CO[7])
+                                                      0.175     3.849 r  core/full_delta_reg[31]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     3.879    core/full_delta_reg[31]_i_1_n_0
+    SLICE_X29Y57         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     3.944 r  core/full_delta_reg[39]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     3.974    core/full_delta_reg[39]_i_1_n_0
+    SLICE_X29Y58         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.039 r  core/full_delta_reg[47]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.069    core/full_delta_reg[47]_i_1_n_0
+    SLICE_X29Y59         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.134 r  core/full_delta_reg[55]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.164    core/full_delta_reg[55]_i_1_n_0
+    SLICE_X29Y60         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.229 r  core/full_delta_reg[63]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.259    core/full_delta_reg[63]_i_1_n_0
+    SLICE_X29Y61         CARRY8 (Prop_CARRY8_SLICEM_CI_O[6])
+                                                      0.157     4.416 r  core/full_delta_reg[71]_i_1/O[6]
+                         net (fo=1, routed)           0.034     4.450    core/p_0_in[70]
+    SLICE_X29Y61         FDRE                                         r  core/full_delta_reg[70]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=1898, unset)         0.031     5.031    core/clk
+    SLICE_X29Y61         FDRE                                         r  core/full_delta_reg[70]/C
+                         clock pessimism              0.000     5.031    
+                         clock uncertainty           -0.135     4.896    
+    SLICE_X29Y61         FDRE (Setup_GFF_SLICEM_C_D)
+                                                      0.043     4.939    core/full_delta_reg[70]
+  -------------------------------------------------------------------
+                         required time                          4.939    
+                         arrival time                          -4.450    
+  -------------------------------------------------------------------
+                         slack                                  0.489    
+
+Slack (MET) :             0.530ns  (required time - arrival time)
+  Source:                 core/history_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E2 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            core/full_delta_reg[68]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.303ns  (logic 2.613ns (60.728%)  route 1.690ns (39.272%))
+  Logic Levels:           13  (CARRY8=10 LUT2=1 LUT3=1 LUT4=1)
+  Clock Path Skew:        -0.076ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.031ns = ( 5.031 - 5.000 ) 
+    Source Clock Delay      (SCD):    0.107ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.135ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1898, unset)         0.107     0.107    core/clk
+    RAMB36_X0Y11         RAMB36E2                                     r  core/history_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y11         RAMB36E2 (Prop_RAMB36E2_RAMB36_CLKARDCLK_DOUTADOUT[4])
+                                                      1.220     1.327 r  core/history_reg/DOUTADOUT[4]
+                         net (fo=8, routed)           0.595     1.922    core/outgoing[4]
+    SLICE_X28Y58         LUT3 (Prop_D5LUT_SLICEM_I2_O)
+                                                      0.091     2.013 r  core/full_delta[15]_i_14/O
+                         net (fo=2, routed)           0.279     2.291    core/full_delta[15]_i_14_n_0
+    SLICE_X28Y58         LUT4 (Prop_E6LUT_SLICEM_I3_O)
+                                                      0.138     2.429 r  core/full_delta[15]_i_22/O
+                         net (fo=1, routed)           0.018     2.447    core/full_delta[15]_i_22_n_0
+    SLICE_X28Y58         CARRY8 (Prop_CARRY8_SLICEM_S[4]_CO[7])
+                                                      0.236     2.683 r  core/full_delta_reg[15]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.713    core/full_delta_reg[15]_i_2_n_0
+    SLICE_X28Y59         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     2.778 r  core/full_delta_reg[23]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.808    core/full_delta_reg[23]_i_2_n_0
+    SLICE_X28Y60         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     2.873 r  core/full_delta_reg[31]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.903    core/full_delta_reg[31]_i_2_n_0
+    SLICE_X28Y61         CARRY8 (Prop_CARRY8_SLICEM_CI_O[1])
+                                                      0.106     3.009 r  core/full_delta_reg[39]_i_2/O[1]
+                         net (fo=2, routed)           0.505     3.515    core/full_delta10_in[31]
+    SLICE_X29Y56         LUT2 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.138     3.653 r  core/full_delta[31]_i_3/O
+                         net (fo=1, routed)           0.021     3.674    core/full_delta[31]_i_3_n_0
+    SLICE_X29Y56         CARRY8 (Prop_CARRY8_SLICEM_S[7]_CO[7])
+                                                      0.175     3.849 r  core/full_delta_reg[31]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     3.879    core/full_delta_reg[31]_i_1_n_0
+    SLICE_X29Y57         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     3.944 r  core/full_delta_reg[39]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     3.974    core/full_delta_reg[39]_i_1_n_0
+    SLICE_X29Y58         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.039 r  core/full_delta_reg[47]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.069    core/full_delta_reg[47]_i_1_n_0
+    SLICE_X29Y59         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.134 r  core/full_delta_reg[55]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.164    core/full_delta_reg[55]_i_1_n_0
+    SLICE_X29Y60         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.229 r  core/full_delta_reg[63]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.259    core/full_delta_reg[63]_i_1_n_0
+    SLICE_X29Y61         CARRY8 (Prop_CARRY8_SLICEM_CI_O[4])
+                                                      0.119     4.378 r  core/full_delta_reg[71]_i_1/O[4]
+                         net (fo=1, routed)           0.032     4.410    core/p_0_in[68]
+    SLICE_X29Y61         FDRE                                         r  core/full_delta_reg[68]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=1898, unset)         0.031     5.031    core/clk
+    SLICE_X29Y61         FDRE                                         r  core/full_delta_reg[68]/C
+                         clock pessimism              0.000     5.031    
+                         clock uncertainty           -0.135     4.896    
+    SLICE_X29Y61         FDRE (Setup_EFF_SLICEM_C_D)
+                                                      0.044     4.940    core/full_delta_reg[68]
+  -------------------------------------------------------------------
+                         required time                          4.940    
+                         arrival time                          -4.410    
+  -------------------------------------------------------------------
+                         slack                                  0.530    
+
+Slack (MET) :             0.531ns  (required time - arrival time)
+  Source:                 core/history_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E2 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            core/full_delta_reg[67]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.300ns  (logic 2.608ns (60.654%)  route 1.692ns (39.346%))
+  Logic Levels:           13  (CARRY8=10 LUT2=1 LUT3=1 LUT4=1)
+  Clock Path Skew:        -0.077ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.030ns = ( 5.030 - 5.000 ) 
+    Source Clock Delay      (SCD):    0.107ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.135ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1898, unset)         0.107     0.107    core/clk
+    RAMB36_X0Y11         RAMB36E2                                     r  core/history_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y11         RAMB36E2 (Prop_RAMB36E2_RAMB36_CLKARDCLK_DOUTADOUT[4])
+                                                      1.220     1.327 r  core/history_reg/DOUTADOUT[4]
+                         net (fo=8, routed)           0.595     1.922    core/outgoing[4]
+    SLICE_X28Y58         LUT3 (Prop_D5LUT_SLICEM_I2_O)
+                                                      0.091     2.013 r  core/full_delta[15]_i_14/O
+                         net (fo=2, routed)           0.279     2.291    core/full_delta[15]_i_14_n_0
+    SLICE_X28Y58         LUT4 (Prop_E6LUT_SLICEM_I3_O)
+                                                      0.138     2.429 r  core/full_delta[15]_i_22/O
+                         net (fo=1, routed)           0.018     2.447    core/full_delta[15]_i_22_n_0
+    SLICE_X28Y58         CARRY8 (Prop_CARRY8_SLICEM_S[4]_CO[7])
+                                                      0.236     2.683 r  core/full_delta_reg[15]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.713    core/full_delta_reg[15]_i_2_n_0
+    SLICE_X28Y59         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     2.778 r  core/full_delta_reg[23]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.808    core/full_delta_reg[23]_i_2_n_0
+    SLICE_X28Y60         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     2.873 r  core/full_delta_reg[31]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.903    core/full_delta_reg[31]_i_2_n_0
+    SLICE_X28Y61         CARRY8 (Prop_CARRY8_SLICEM_CI_O[1])
+                                                      0.106     3.009 r  core/full_delta_reg[39]_i_2/O[1]
+                         net (fo=2, routed)           0.505     3.515    core/full_delta10_in[31]
+    SLICE_X29Y56         LUT2 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.138     3.653 r  core/full_delta[31]_i_3/O
+                         net (fo=1, routed)           0.021     3.674    core/full_delta[31]_i_3_n_0
+    SLICE_X29Y56         CARRY8 (Prop_CARRY8_SLICEM_S[7]_CO[7])
+                                                      0.175     3.849 r  core/full_delta_reg[31]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     3.879    core/full_delta_reg[31]_i_1_n_0
+    SLICE_X29Y57         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     3.944 r  core/full_delta_reg[39]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     3.974    core/full_delta_reg[39]_i_1_n_0
+    SLICE_X29Y58         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.039 r  core/full_delta_reg[47]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.069    core/full_delta_reg[47]_i_1_n_0
+    SLICE_X29Y59         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.134 r  core/full_delta_reg[55]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.164    core/full_delta_reg[55]_i_1_n_0
+    SLICE_X29Y60         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.229 r  core/full_delta_reg[63]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.259    core/full_delta_reg[63]_i_1_n_0
+    SLICE_X29Y61         CARRY8 (Prop_CARRY8_SLICEM_CI_O[3])
+                                                      0.114     4.373 r  core/full_delta_reg[71]_i_1/O[3]
+                         net (fo=1, routed)           0.034     4.407    core/p_0_in[67]
+    SLICE_X29Y61         FDRE                                         r  core/full_delta_reg[67]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=1898, unset)         0.030     5.030    core/clk
+    SLICE_X29Y61         FDRE                                         r  core/full_delta_reg[67]/C
+                         clock pessimism              0.000     5.030    
+                         clock uncertainty           -0.135     4.895    
+    SLICE_X29Y61         FDRE (Setup_DFF_SLICEM_C_D)
+                                                      0.043     4.938    core/full_delta_reg[67]
+  -------------------------------------------------------------------
+                         required time                          4.938    
+                         arrival time                          -4.407    
+  -------------------------------------------------------------------
+                         slack                                  0.531    
+
+Slack (MET) :             0.540ns  (required time - arrival time)
+  Source:                 core/history_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E2 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            core/full_delta_reg[65]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.291ns  (logic 2.600ns (60.595%)  route 1.691ns (39.405%))
+  Logic Levels:           13  (CARRY8=10 LUT2=1 LUT3=1 LUT4=1)
+  Clock Path Skew:        -0.077ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.030ns = ( 5.030 - 5.000 ) 
+    Source Clock Delay      (SCD):    0.107ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.135ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1898, unset)         0.107     0.107    core/clk
+    RAMB36_X0Y11         RAMB36E2                                     r  core/history_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y11         RAMB36E2 (Prop_RAMB36E2_RAMB36_CLKARDCLK_DOUTADOUT[4])
+                                                      1.220     1.327 r  core/history_reg/DOUTADOUT[4]
+                         net (fo=8, routed)           0.595     1.922    core/outgoing[4]
+    SLICE_X28Y58         LUT3 (Prop_D5LUT_SLICEM_I2_O)
+                                                      0.091     2.013 r  core/full_delta[15]_i_14/O
+                         net (fo=2, routed)           0.279     2.291    core/full_delta[15]_i_14_n_0
+    SLICE_X28Y58         LUT4 (Prop_E6LUT_SLICEM_I3_O)
+                                                      0.138     2.429 r  core/full_delta[15]_i_22/O
+                         net (fo=1, routed)           0.018     2.447    core/full_delta[15]_i_22_n_0
+    SLICE_X28Y58         CARRY8 (Prop_CARRY8_SLICEM_S[4]_CO[7])
+                                                      0.236     2.683 r  core/full_delta_reg[15]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.713    core/full_delta_reg[15]_i_2_n_0
+    SLICE_X28Y59         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     2.778 r  core/full_delta_reg[23]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.808    core/full_delta_reg[23]_i_2_n_0
+    SLICE_X28Y60         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     2.873 r  core/full_delta_reg[31]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.903    core/full_delta_reg[31]_i_2_n_0
+    SLICE_X28Y61         CARRY8 (Prop_CARRY8_SLICEM_CI_O[1])
+                                                      0.106     3.009 r  core/full_delta_reg[39]_i_2/O[1]
+                         net (fo=2, routed)           0.505     3.515    core/full_delta10_in[31]
+    SLICE_X29Y56         LUT2 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.138     3.653 r  core/full_delta[31]_i_3/O
+                         net (fo=1, routed)           0.021     3.674    core/full_delta[31]_i_3_n_0
+    SLICE_X29Y56         CARRY8 (Prop_CARRY8_SLICEM_S[7]_CO[7])
+                                                      0.175     3.849 r  core/full_delta_reg[31]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     3.879    core/full_delta_reg[31]_i_1_n_0
+    SLICE_X29Y57         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     3.944 r  core/full_delta_reg[39]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     3.974    core/full_delta_reg[39]_i_1_n_0
+    SLICE_X29Y58         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.039 r  core/full_delta_reg[47]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.069    core/full_delta_reg[47]_i_1_n_0
+    SLICE_X29Y59         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.134 r  core/full_delta_reg[55]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.164    core/full_delta_reg[55]_i_1_n_0
+    SLICE_X29Y60         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.229 r  core/full_delta_reg[63]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.259    core/full_delta_reg[63]_i_1_n_0
+    SLICE_X29Y61         CARRY8 (Prop_CARRY8_SLICEM_CI_O[1])
+                                                      0.106     4.365 r  core/full_delta_reg[71]_i_1/O[1]
+                         net (fo=1, routed)           0.033     4.398    core/p_0_in[65]
+    SLICE_X29Y61         FDRE                                         r  core/full_delta_reg[65]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=1898, unset)         0.030     5.030    core/clk
+    SLICE_X29Y61         FDRE                                         r  core/full_delta_reg[65]/C
+                         clock pessimism              0.000     5.030    
+                         clock uncertainty           -0.135     4.895    
+    SLICE_X29Y61         FDRE (Setup_BFF_SLICEM_C_D)
+                                                      0.043     4.938    core/full_delta_reg[65]
+  -------------------------------------------------------------------
+                         required time                          4.938    
+                         arrival time                          -4.398    
+  -------------------------------------------------------------------
+                         slack                                  0.540    
+
+Slack (MET) :             0.552ns  (required time - arrival time)
+  Source:                 core/history_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E2 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            core/full_delta_reg[66]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.279ns  (logic 2.587ns (60.461%)  route 1.692ns (39.539%))
+  Logic Levels:           13  (CARRY8=10 LUT2=1 LUT3=1 LUT4=1)
+  Clock Path Skew:        -0.077ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.030ns = ( 5.030 - 5.000 ) 
+    Source Clock Delay      (SCD):    0.107ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.135ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1898, unset)         0.107     0.107    core/clk
+    RAMB36_X0Y11         RAMB36E2                                     r  core/history_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y11         RAMB36E2 (Prop_RAMB36E2_RAMB36_CLKARDCLK_DOUTADOUT[4])
+                                                      1.220     1.327 r  core/history_reg/DOUTADOUT[4]
+                         net (fo=8, routed)           0.595     1.922    core/outgoing[4]
+    SLICE_X28Y58         LUT3 (Prop_D5LUT_SLICEM_I2_O)
+                                                      0.091     2.013 r  core/full_delta[15]_i_14/O
+                         net (fo=2, routed)           0.279     2.291    core/full_delta[15]_i_14_n_0
+    SLICE_X28Y58         LUT4 (Prop_E6LUT_SLICEM_I3_O)
+                                                      0.138     2.429 r  core/full_delta[15]_i_22/O
+                         net (fo=1, routed)           0.018     2.447    core/full_delta[15]_i_22_n_0
+    SLICE_X28Y58         CARRY8 (Prop_CARRY8_SLICEM_S[4]_CO[7])
+                                                      0.236     2.683 r  core/full_delta_reg[15]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.713    core/full_delta_reg[15]_i_2_n_0
+    SLICE_X28Y59         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     2.778 r  core/full_delta_reg[23]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.808    core/full_delta_reg[23]_i_2_n_0
+    SLICE_X28Y60         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     2.873 r  core/full_delta_reg[31]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.903    core/full_delta_reg[31]_i_2_n_0
+    SLICE_X28Y61         CARRY8 (Prop_CARRY8_SLICEM_CI_O[1])
+                                                      0.106     3.009 r  core/full_delta_reg[39]_i_2/O[1]
+                         net (fo=2, routed)           0.505     3.515    core/full_delta10_in[31]
+    SLICE_X29Y56         LUT2 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.138     3.653 r  core/full_delta[31]_i_3/O
+                         net (fo=1, routed)           0.021     3.674    core/full_delta[31]_i_3_n_0
+    SLICE_X29Y56         CARRY8 (Prop_CARRY8_SLICEM_S[7]_CO[7])
+                                                      0.175     3.849 r  core/full_delta_reg[31]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     3.879    core/full_delta_reg[31]_i_1_n_0
+    SLICE_X29Y57         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     3.944 r  core/full_delta_reg[39]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     3.974    core/full_delta_reg[39]_i_1_n_0
+    SLICE_X29Y58         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.039 r  core/full_delta_reg[47]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.069    core/full_delta_reg[47]_i_1_n_0
+    SLICE_X29Y59         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.134 r  core/full_delta_reg[55]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.164    core/full_delta_reg[55]_i_1_n_0
+    SLICE_X29Y60         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.229 r  core/full_delta_reg[63]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.259    core/full_delta_reg[63]_i_1_n_0
+    SLICE_X29Y61         CARRY8 (Prop_CARRY8_SLICEM_CI_O[2])
+                                                      0.093     4.352 r  core/full_delta_reg[71]_i_1/O[2]
+                         net (fo=1, routed)           0.034     4.386    core/p_0_in[66]
+    SLICE_X29Y61         FDRE                                         r  core/full_delta_reg[66]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=1898, unset)         0.030     5.030    core/clk
+    SLICE_X29Y61         FDRE                                         r  core/full_delta_reg[66]/C
+                         clock pessimism              0.000     5.030    
+                         clock uncertainty           -0.135     4.895    
+    SLICE_X29Y61         FDRE (Setup_CFF_SLICEM_C_D)
+                                                      0.043     4.938    core/full_delta_reg[66]
+  -------------------------------------------------------------------
+                         required time                          4.938    
+                         arrival time                          -4.386    
+  -------------------------------------------------------------------
+                         slack                                  0.552    
+
+Slack (MET) :             0.570ns  (required time - arrival time)
+  Source:                 core/history_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E2 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            core/full_delta_reg[64]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.262ns  (logic 2.572ns (60.350%)  route 1.690ns (39.650%))
+  Logic Levels:           13  (CARRY8=10 LUT2=1 LUT3=1 LUT4=1)
+  Clock Path Skew:        -0.077ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.030ns = ( 5.030 - 5.000 ) 
+    Source Clock Delay      (SCD):    0.107ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.135ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1898, unset)         0.107     0.107    core/clk
+    RAMB36_X0Y11         RAMB36E2                                     r  core/history_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y11         RAMB36E2 (Prop_RAMB36E2_RAMB36_CLKARDCLK_DOUTADOUT[4])
+                                                      1.220     1.327 r  core/history_reg/DOUTADOUT[4]
+                         net (fo=8, routed)           0.595     1.922    core/outgoing[4]
+    SLICE_X28Y58         LUT3 (Prop_D5LUT_SLICEM_I2_O)
+                                                      0.091     2.013 r  core/full_delta[15]_i_14/O
+                         net (fo=2, routed)           0.279     2.291    core/full_delta[15]_i_14_n_0
+    SLICE_X28Y58         LUT4 (Prop_E6LUT_SLICEM_I3_O)
+                                                      0.138     2.429 r  core/full_delta[15]_i_22/O
+                         net (fo=1, routed)           0.018     2.447    core/full_delta[15]_i_22_n_0
+    SLICE_X28Y58         CARRY8 (Prop_CARRY8_SLICEM_S[4]_CO[7])
+                                                      0.236     2.683 r  core/full_delta_reg[15]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.713    core/full_delta_reg[15]_i_2_n_0
+    SLICE_X28Y59         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     2.778 r  core/full_delta_reg[23]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.808    core/full_delta_reg[23]_i_2_n_0
+    SLICE_X28Y60         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     2.873 r  core/full_delta_reg[31]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.903    core/full_delta_reg[31]_i_2_n_0
+    SLICE_X28Y61         CARRY8 (Prop_CARRY8_SLICEM_CI_O[1])
+                                                      0.106     3.009 r  core/full_delta_reg[39]_i_2/O[1]
+                         net (fo=2, routed)           0.505     3.515    core/full_delta10_in[31]
+    SLICE_X29Y56         LUT2 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.138     3.653 r  core/full_delta[31]_i_3/O
+                         net (fo=1, routed)           0.021     3.674    core/full_delta[31]_i_3_n_0
+    SLICE_X29Y56         CARRY8 (Prop_CARRY8_SLICEM_S[7]_CO[7])
+                                                      0.175     3.849 r  core/full_delta_reg[31]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     3.879    core/full_delta_reg[31]_i_1_n_0
+    SLICE_X29Y57         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     3.944 r  core/full_delta_reg[39]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     3.974    core/full_delta_reg[39]_i_1_n_0
+    SLICE_X29Y58         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.039 r  core/full_delta_reg[47]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.069    core/full_delta_reg[47]_i_1_n_0
+    SLICE_X29Y59         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.134 r  core/full_delta_reg[55]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.164    core/full_delta_reg[55]_i_1_n_0
+    SLICE_X29Y60         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.229 r  core/full_delta_reg[63]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.259    core/full_delta_reg[63]_i_1_n_0
+    SLICE_X29Y61         CARRY8 (Prop_CARRY8_SLICEM_CI_O[0])
+                                                      0.078     4.337 r  core/full_delta_reg[71]_i_1/O[0]
+                         net (fo=1, routed)           0.032     4.369    core/p_0_in[64]
+    SLICE_X29Y61         FDRE                                         r  core/full_delta_reg[64]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=1898, unset)         0.030     5.030    core/clk
+    SLICE_X29Y61         FDRE                                         r  core/full_delta_reg[64]/C
+                         clock pessimism              0.000     5.030    
+                         clock uncertainty           -0.135     4.895    
+    SLICE_X29Y61         FDRE (Setup_AFF_SLICEM_C_D)
+                                                      0.044     4.939    core/full_delta_reg[64]
+  -------------------------------------------------------------------
+                         required time                          4.939    
+                         arrival time                          -4.369    
+  -------------------------------------------------------------------
+                         slack                                  0.570    
+
+Slack (MET) :             0.571ns  (required time - arrival time)
+  Source:                 core/history_reg/CLKARDCLK
+                            (rising edge-triggered cell RAMB36E2 clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            core/full_delta_reg[63]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        4.262ns  (logic 2.600ns (61.007%)  route 1.662ns (38.993%))
+  Logic Levels:           12  (CARRY8=9 LUT2=1 LUT3=1 LUT4=1)
+  Clock Path Skew:        -0.076ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.031ns = ( 5.031 - 5.000 ) 
+    Source Clock Delay      (SCD):    0.107ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.135ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.100ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=1898, unset)         0.107     0.107    core/clk
+    RAMB36_X0Y11         RAMB36E2                                     r  core/history_reg/CLKARDCLK
+  -------------------------------------------------------------------    -------------------
+    RAMB36_X0Y11         RAMB36E2 (Prop_RAMB36E2_RAMB36_CLKARDCLK_DOUTADOUT[4])
+                                                      1.220     1.327 r  core/history_reg/DOUTADOUT[4]
+                         net (fo=8, routed)           0.595     1.922    core/outgoing[4]
+    SLICE_X28Y58         LUT3 (Prop_D5LUT_SLICEM_I2_O)
+                                                      0.091     2.013 r  core/full_delta[15]_i_14/O
+                         net (fo=2, routed)           0.279     2.291    core/full_delta[15]_i_14_n_0
+    SLICE_X28Y58         LUT4 (Prop_E6LUT_SLICEM_I3_O)
+                                                      0.138     2.429 r  core/full_delta[15]_i_22/O
+                         net (fo=1, routed)           0.018     2.447    core/full_delta[15]_i_22_n_0
+    SLICE_X28Y58         CARRY8 (Prop_CARRY8_SLICEM_S[4]_CO[7])
+                                                      0.236     2.683 r  core/full_delta_reg[15]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.713    core/full_delta_reg[15]_i_2_n_0
+    SLICE_X28Y59         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     2.778 r  core/full_delta_reg[23]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.808    core/full_delta_reg[23]_i_2_n_0
+    SLICE_X28Y60         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     2.873 r  core/full_delta_reg[31]_i_2/CO[7]
+                         net (fo=1, routed)           0.030     2.903    core/full_delta_reg[31]_i_2_n_0
+    SLICE_X28Y61         CARRY8 (Prop_CARRY8_SLICEM_CI_O[1])
+                                                      0.106     3.009 r  core/full_delta_reg[39]_i_2/O[1]
+                         net (fo=2, routed)           0.505     3.515    core/full_delta10_in[31]
+    SLICE_X29Y56         LUT2 (Prop_H6LUT_SLICEM_I0_O)
+                                                      0.138     3.653 r  core/full_delta[31]_i_3/O
+                         net (fo=1, routed)           0.021     3.674    core/full_delta[31]_i_3_n_0
+    SLICE_X29Y56         CARRY8 (Prop_CARRY8_SLICEM_S[7]_CO[7])
+                                                      0.175     3.849 r  core/full_delta_reg[31]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     3.879    core/full_delta_reg[31]_i_1_n_0
+    SLICE_X29Y57         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     3.944 r  core/full_delta_reg[39]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     3.974    core/full_delta_reg[39]_i_1_n_0
+    SLICE_X29Y58         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.039 r  core/full_delta_reg[47]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.069    core/full_delta_reg[47]_i_1_n_0
+    SLICE_X29Y59         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.065     4.134 r  core/full_delta_reg[55]_i_1/CO[7]
+                         net (fo=1, routed)           0.030     4.164    core/full_delta_reg[55]_i_1_n_0
+    SLICE_X29Y60         CARRY8 (Prop_CARRY8_SLICEM_CI_O[7])
+                                                      0.171     4.335 r  core/full_delta_reg[63]_i_1/O[7]
+                         net (fo=1, routed)           0.034     4.369    core/p_0_in[63]
+    SLICE_X29Y60         FDRE                                         r  core/full_delta_reg[63]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        5.000     5.000 r  
+                                                      0.000     5.000 r  clk (IN)
+                         net (fo=1898, unset)         0.031     5.031    core/clk
+    SLICE_X29Y60         FDRE                                         r  core/full_delta_reg[63]/C
+                         clock pessimism              0.000     5.031    
+                         clock uncertainty           -0.135     4.896    
+    SLICE_X29Y60         FDRE (Setup_HFF_SLICEM_C_D)
+                                                      0.044     4.940    core/full_delta_reg[63]
+  -------------------------------------------------------------------
+                         required time                          4.940    
+                         arrival time                          -4.369    
+  -------------------------------------------------------------------
+                         slack                                  0.571    
+
+
+
+

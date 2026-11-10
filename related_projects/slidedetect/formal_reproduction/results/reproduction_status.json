@@ -1,0 +1,75 @@
+{
+  "gates": [
+    {
+      "item": "Independent arithmetic / variance / chirp formulas",
+      "status": "pass"
+    },
+    {
+      "item": "M=96 integrated digital input chain, scheduling, timeout, restart",
+      "status": "pass"
+    },
+    {
+      "item": "M=96 digital top 200 MHz OOC timing, hop=0 and 24",
+      "status": "pass_with_stated_clock_and_interface_contract"
+    },
+    {
+      "item": "10 microHz single-window classification, quantization-only",
+      "status": "pass_under_ideal_assumption",
+      "error_ci95": [
+        0.0,
+        0.0037374040400176777
+      ]
+    },
+    {
+      "item": "10 microHz single-window classification with 20 ns independent jitter",
+      "status": "does_not_meet_5_percent_error_target",
+      "error_ci95": [
+        0.43932842092238583,
+        0.5003509922128497
+      ]
+    },
+    {
+      "item": "Fig.6 exact STD/RMSE values",
+      "status": "unresolved_author_noise_threshold_statistics"
+    },
+    {
+      "item": "Fig.7 all seven numerical labels",
+      "status": "partial_six_close_large_window_definition_unresolved"
+    },
+    {
+      "item": "Fig.8 exact map",
+      "status": "declared_assumption_diagnostic_only"
+    },
+    {
+      "item": "Fig.12 PLL/EKF numerical baseline reproduction",
+      "status": "not_implemented_complete_author_models_needed"
+    },
+    {
+      "item": "Bench and outdoor measurements / physical CDC reliability",
+      "status": "outside_simulation_claim"
+    }
+  ],
+  "full_paper_reproduced": false,
+  "rtl_outputs": 901,
+  "digital_chain_outputs": 60,
+  "theory_time_exponent": -1.4872307944714185,
+  "provisional_discrimination_target": "Wilson 95% upper error-rate bound below 5%; our proposed gate, not a paper-specified criterion",
+  "scope": "Passing calculable gates does not certify unknown original settings or physical experiments",
+  "noise_audit": {
+    "status_file": "results/noise_audit/status.json",
+    "checks_passed": true,
+    "noisy_rtl_outputs": 954,
+    "plateau_20ns_5s_passed": true,
+    "author_frontend_precision_explained": false
+  },
+  "feasibility": {
+    "status_file": "results/feasibility/status.json",
+    "checks_passed": true,
+    "original_35dB_target_met": false,
+    "conditional_80dB_target_met": true,
+    "conditional_bench_05ns_target_met": true,
+    "precision_rtl_outputs": 114,
+    "precision_sensor_outputs": 5,
+    "precision_sensor_200mhz_passed": true
+  }
+}

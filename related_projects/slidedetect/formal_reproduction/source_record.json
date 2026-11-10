@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-11",
+  "paper": {
+    "title": "Real-Time Frequency Estimation for Quantum Magnetometers Using Sliding-Frame Least Squares",
+    "doi": "10.1109/TIE.2026.3732397",
+    "pages": 12,
+    "sha256": "c4112794b741ac5e7c695a2ecd95e8ccbf80794f21397fa04352d45168ca4b42"
+  },
+  "published_fulltext_obtained": true,
+  "baseline_commit": "62dd075961e0efc8a77d27f6bb0e05105a9febc5",
+  "scope": "Numerical theory and sensitivity checks, partial paper-figure reproduction and integrated digital RTL/OOC timing; no physical validation"
+}

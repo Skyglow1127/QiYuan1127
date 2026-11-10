@@ -1,0 +1,28 @@
+{
+  "profiles": [
+    {
+      "m": 96,
+      "hop": 24,
+      "epochs": 2,
+      "events": 289,
+      "outputs": 5,
+      "max_latency_cycles": 99,
+      "passed": true
+    }
+  ],
+  "scope": "Digital comparator waveform only; no analog noise or physical metastability claim",
+  "source_sha256": {
+    "rtl/udiv_round.sv": "d0b6e88e44fc1c19e0cda7e382bcea9f59bfcbaba9333e182e3acd21f1cc1019",
+    "rtl/sfls_core.sv": "d87f05f0ec2b33829e7f167e3d949a50dc62c5e3b51bf990b3fb83db1cabf546",
+    "rtl/sfls_nhz_readout.sv": "376cd10a2b820a7a2b9bb6629b46e9533405c0ce026de3e24019ade294da1280",
+    "rtl/sfls_precision_sensor.sv": "87bf753c468b6f6ef0ee82bae5fe3419c233c5342de921477dca108c04ea5c4e",
+    "sim/tb_precision_sensor.sv": "18cefa25b85d6c35edb4309583e12b90135ff3d17393fdec6eea5f4f0bdbff22",
+    "run_precision_sensor.py": "d5191abbb79ff016e852eb24addbb09d83dfcaa46e9f0cd5fc440b2e1b680e07"
+  },
+  "report_sha256": {
+    "m96_hop24.csv": "f161a059a07332ac86338195738bc3cd3d54e2658a9a891420428154338e4c72",
+    "elaborate_m96_hop24.log": "82aed20919dd6220c92bd15db5c5b3ba3a5da0e9145deb8f5fbfa70d2b6b8708",
+    "compile.log": "a4c6f2d2bf0fb52f5fc56b6a2f6230d2ab529b09650eb9c8c831d808eb01ebe2",
+    "simulate_m96_hop24.log": "67af1fb7b39c03de7d8f8904d7832142c7c2ca18fe5a10f8c03ad6b20006cbe3"
+  }
+}

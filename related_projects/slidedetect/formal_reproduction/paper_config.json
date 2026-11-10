@@ -1,0 +1,48 @@
+{
+  "paper_doi": "10.1109/TIE.2026.3732397",
+  "paper_values": {
+    "clock_hz": {"value": 200000000, "page": 6},
+    "gamma_rad_s_T": {"value": 267500000, "page": 6},
+    "background_nT_fig5": {"value": 49000, "page": 7},
+    "T2_s": {"value": 1.5, "page": 6},
+    "polarization_gap_s": {"value": 1.0, "page": 6},
+    "snr_db": {"value": 35, "page": 6},
+    "static_hop_fraction": {"value": 0.5, "page": 7},
+    "dynamic_hop_fraction": {"value": 0.25, "page": 7},
+    "modulation_hz": {"value": 10, "page": 7},
+    "modulation_nT": {"value": 2, "page": 7},
+    "dynamic_windows": {"value": [32, 64, 96, 128, 256, 512, 1024], "page": 8},
+    "dynamic_duration_s": {"value": 0.5, "page": 8},
+    "drift_nT_s": {"value": 2, "page": 6},
+    "bench_input_hz": {"value": 2128.87, "page": 8},
+    "bench_input_uVpp": {"value": 5, "page": 8},
+    "bench_step_hz": {"value": 0.00001, "page": 9},
+    "bench_step_window_s": {"value": 0.1, "page": 9},
+    "field_window_s": {"value": 0.05, "page": 10},
+    "field_update_hz": {"value": 500, "page": 10}
+  },
+  "declared_assumptions": {
+    "analog_grid_hz": 1000000,
+    "noise_bandwidth_hz": 10000,
+    "noise_filter": "fourth-order Butterworth low-pass, causal, burn-in 20 ms",
+    "noise_type": "Gaussian; SNR is initial sine RMS / filtered noise RMS",
+    "amplitude_A0": 1.0,
+    "comparator_upper_A0": 0.05,
+    "comparator_lower_A0": -0.05,
+    "comparator_delay_s": 0.0,
+    "dynamic_background_nT": 49000,
+    "modulation_phase_rad": 0.0,
+    "independent_records": 32,
+    "seed": 20261112,
+    "observation_duration_s": 1.0,
+    "static_windows": [32, 64, 96, 128, 256, 512, 1024, 1536, 2048],
+    "note": "Assumptions are not reported author settings. Do not tune them solely to match a plotted curve. Records are independently reset; no fit spans the polarization gap."
+  },
+  "unresolved": [
+    "Comparator thresholds, front-end noise spectrum/bandwidth and propagation delay",
+    "Exact background field and phase for Fig. 7; annotations do not fully fix them",
+    "Independent trial counts, seeds, original data and STD/RMSE aggregation details",
+    "Complete PLL/EKF state equations, discretization and covariance units",
+    "Measured clock phase noise and transfer function of the atomic-clock PLL"
+  ]
+}

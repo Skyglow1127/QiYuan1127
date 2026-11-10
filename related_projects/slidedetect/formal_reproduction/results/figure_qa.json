@@ -1,0 +1,22 @@
+[
+  {
+    "check": "plot_source",
+    "exit_code": 0
+  },
+  {
+    "check": "dynamic_comparison_text",
+    "exit_code": 0
+  },
+  {
+    "check": "dynamic_comparison_collision",
+    "exit_code": 0
+  },
+  {
+    "check": "static_assumptions_text",
+    "exit_code": 0
+  },
+  {
+    "check": "static_assumptions_collision",
+    "exit_code": 0
+  }
+]

@@ -1,0 +1,120 @@
+{
+  "scope": "Arithmetic replay only. 200 MHz timestamp scale is not a 200 MHz placed-and-routed timing claim.",
+  "source_sha256": {
+    "rtl/udiv_round.sv": "d0b6e88e44fc1c19e0cda7e382bcea9f59bfcbaba9333e182e3acd21f1cc1019",
+    "rtl/sfls_core.sv": "d87f05f0ec2b33829e7f167e3d949a50dc62c5e3b51bf990b3fb83db1cabf546",
+    "sim/tb_replay.sv": "c85d19107066115be6d950c25db086045736bef193fadce5207b2eb1d4a4f27f"
+  },
+  "profiles": [
+    {
+      "label": "m32",
+      "m": 32,
+      "clock": 200000000,
+      "stride": 1,
+      "events": 2343,
+      "checks": 283,
+      "readback_exact": true,
+      "vector_sha256": "c87bdadc3af5eea60a750c1089cb25f8df2bf3aeda1a671c07c158605f49f2d6",
+      "pass_line": "PASS replay stride=1 window=32 clock=200000000 events=2343 checks=283"
+    },
+    {
+      "label": "m64",
+      "m": 64,
+      "clock": 200000000,
+      "stride": 1,
+      "events": 2599,
+      "checks": 153,
+      "readback_exact": true,
+      "vector_sha256": "da50116936e68a9f50b59739d4659593d41aa0b69eea0f6239028900942928f1",
+      "pass_line": "PASS replay stride=1 window=64 clock=200000000 events=2599 checks=153"
+    },
+    {
+      "label": "m96",
+      "m": 96,
+      "clock": 200000000,
+      "stride": 1,
+      "events": 2855,
+      "checks": 109,
+      "readback_exact": true,
+      "vector_sha256": "136d7faa51285646c487432401e73a51db752c9e1f9c8f2331fd4b44bcb3bbd9",
+      "pass_line": "PASS replay stride=1 window=96 clock=200000000 events=2855 checks=109"
+    },
+    {
+      "label": "m128",
+      "m": 128,
+      "clock": 200000000,
+      "stride": 1,
+      "events": 3111,
+      "checks": 88,
+      "readback_exact": true,
+      "vector_sha256": "8a4a8e5e5afb6d15ec74215bf88758aa26a5f5d48dd97023422f389f7fe4f60b",
+      "pass_line": "PASS replay stride=1 window=128 clock=200000000 events=3111 checks=88"
+    },
+    {
+      "label": "m256",
+      "m": 256,
+      "clock": 200000000,
+      "stride": 1,
+      "events": 4135,
+      "checks": 55,
+      "readback_exact": true,
+      "vector_sha256": "2abd8a10df05e2a3b810d95e7b013562459763ca07cc6a698e5fd1e430a6a0a9",
+      "pass_line": "PASS replay stride=1 window=256 clock=200000000 events=4135 checks=55"
+    },
+    {
+      "label": "m512",
+      "m": 512,
+      "clock": 200000000,
+      "stride": 1,
+      "events": 6183,
+      "checks": 39,
+      "readback_exact": true,
+      "vector_sha256": "3c8c21cef8db869bf74a7dfca1d5c36499c7510a5250c7852a3b703e83cab77d",
+      "pass_line": "PASS replay stride=1 window=512 clock=200000000 events=6183 checks=39"
+    },
+    {
+      "label": "m1024",
+      "m": 1024,
+      "clock": 200000000,
+      "stride": 1,
+      "events": 10279,
+      "checks": 31,
+      "readback_exact": true,
+      "vector_sha256": "30b9d0b8618e147a5729be215fa5b0d75b9659b3f869824a05b377a5465faa35",
+      "pass_line": "PASS replay stride=1 window=1024 clock=200000000 events=10279 checks=31"
+    },
+    {
+      "label": "m95",
+      "m": 95,
+      "clock": 200000000,
+      "stride": 1,
+      "events": 2847,
+      "checks": 113,
+      "readback_exact": true,
+      "vector_sha256": "509cc42a7fd1822ab15229cfbd846ea479e1496d5f6c94b7382f376f18770cd8",
+      "pass_line": "PASS replay stride=1 window=95 clock=200000000 events=2847 checks=113"
+    },
+    {
+      "label": "legacy_d1",
+      "m": 32768,
+      "clock": 100000000,
+      "stride": 1,
+      "events": 99072,
+      "checks": 15,
+      "readback_exact": true,
+      "vector_sha256": "195e02f80819a2d7e07c04ccb799144a4238994a014ba13c67631175cfe720e7",
+      "pass_line": "PASS replay stride=1 window=32768 clock=100000000 events=99072 checks=15"
+    },
+    {
+      "label": "legacy_d64",
+      "m": 32768,
+      "clock": 100000000,
+      "stride": 64,
+      "events": 99072,
+      "checks": 15,
+      "readback_exact": true,
+      "vector_sha256": "38c7d2a4ede7f89d8e4bfc83f2a532b6b13375e80bad4c471670020727f8ca10",
+      "pass_line": "PASS replay stride=64 window=32768 clock=100000000 events=99072 checks=15"
+    }
+  ]
+}

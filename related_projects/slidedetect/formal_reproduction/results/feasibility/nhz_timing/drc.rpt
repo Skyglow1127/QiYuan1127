@@ -1,0 +1,35 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Wed Nov 11 03:32:03 2026
+| Host         : aup-shc2-370-4 running 64-bit Ubuntu 24.04.2 LTS
+| Command      : report_drc -file /tmp/slidedetect-feasibility/results/feasibility/nhz_timing/drc.rpt
+| Design       : sfls_nhz_readout
+| Device       : xck26-sfvc784-2LV-c
+| Speed File   : -2LV
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: sfls_nhz_readout
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 0
++------+----------+-------------+--------+
+| Rule | Severity | Description | Checks |
++------+----------+-------------+--------+
++------+----------+-------------+--------+
+
+2. REPORT DETAILS
+-----------------
+

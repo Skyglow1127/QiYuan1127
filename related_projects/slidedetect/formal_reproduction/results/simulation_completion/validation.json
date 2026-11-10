@@ -1,0 +1,26 @@
+{
+  "protocol_sha256": "67baf0d28cfa0c8f20d88f86d58a8a6b83d5ce2dd87f66f400da2b6059a574ea",
+  "theory": {
+    "passed": true,
+    "slope": -1.4872307944714185,
+    "profiles": 8
+  },
+  "frontend": {
+    "cases": 10,
+    "records_per_case": 16,
+    "cycle_discontinuities": 0
+  },
+  "drift": {
+    "theory_bias_passed": true,
+    "max_theory_difference_nT": 2.5512160322033645e-13
+  },
+  "step": {
+    "conditions": 3,
+    "single_window_resolution_not_assumed": true
+  },
+  "source_sha256": {
+    "complete_simulation.py": "a145ed9821637dd2fb3ba860cf784e6a93f077d70ec5610b7950537f99bc19f2",
+    "reproduce.py": "a2cbb46bd5e37d973ab7a73b9bdf91898ba3958d3bbb6d829b2427e247f549c0",
+    "paper_config.json": "5df4c75fd29c82f6da08e57f0e4498f1a877aefc890f4dc7f98c31681e6e76ce"
+  }
+}

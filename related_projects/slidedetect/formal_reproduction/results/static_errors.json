@@ -1,0 +1,173 @@
+[
+  {
+    "m": 32,
+    "status": "reported_with_quality_flags",
+    "frames_per_record": 129,
+    "records": 32,
+    "span_ms": 14.860098761973463,
+    "rms_across_record_std_nT": 2.760141113782194,
+    "mean_bias_nT": -0.16532423347279224,
+    "rms_bias_nT": 0.5574387523834938,
+    "total_rmse_nT": 2.773272901807531,
+    "std_bootstrap95_nT": [
+      2.6452396758988206,
+      2.7730009794076835
+    ],
+    "rmse_bootstrap95_nT": [
+      2.710563749854361,
+      2.8337554200525252
+    ]
+  },
+  {
+    "m": 64,
+    "status": "reported_with_quality_flags",
+    "frames_per_record": 64,
+    "records": 32,
+    "span_ms": 30.199555548526714,
+    "rms_across_record_std_nT": 0.990169777335779,
+    "mean_bias_nT": -0.15014812086966248,
+    "rms_bias_nT": 0.2437864190472088,
+    "total_rmse_nT": 1.0046040887770842,
+    "std_bootstrap95_nT": [
+      0.9267796662821856,
+      1.0171902086917877
+    ],
+    "rmse_bootstrap95_nT": [
+      0.960983483720733,
+      1.0434105514465897
+    ]
+  },
+  {
+    "m": 96,
+    "status": "reported_with_quality_flags",
+    "frames_per_record": 42,
+    "records": 32,
+    "span_ms": 45.53901233507997,
+    "rms_across_record_std_nT": 0.5319574948829483,
+    "mean_bias_nT": -0.15566536627867764,
+    "rms_bias_nT": 0.19124567474625434,
+    "total_rmse_nT": 0.5574142065914494,
+    "std_bootstrap95_nT": [
+      0.5019114369001624,
+      0.5466426991153338
+    ],
+    "rmse_bootstrap95_nT": [
+      0.5358608303160853,
+      0.5799942728730546
+    ]
+  },
+  {
+    "m": 128,
+    "status": "reported_with_quality_flags",
+    "frames_per_record": 31,
+    "records": 32,
+    "span_ms": 60.878469121633216,
+    "rms_across_record_std_nT": 0.35202940281490186,
+    "mean_bias_nT": -0.16390763208760595,
+    "rms_bias_nT": 0.17457804902670535,
+    "total_rmse_nT": 0.38798137682012895,
+    "std_bootstrap95_nT": [
+      0.3281910004702006,
+      0.36184572221688815
+    ],
+    "rmse_bootstrap95_nT": [
+      0.36875210258024715,
+      0.40543745119142993
+    ]
+  },
+  {
+    "m": 256,
+    "status": "reported_with_quality_flags",
+    "frames_per_record": 15,
+    "records": 32,
+    "span_ms": 122.23629626784623,
+    "rms_across_record_std_nT": 0.12023760600196459,
+    "mean_bias_nT": -0.17389057196867216,
+    "rms_bias_nT": 0.17674339022075516,
+    "total_rmse_nT": 0.2127052516383315,
+    "std_bootstrap95_nT": [
+      0.11039001854503455,
+      0.12704302732717626
+    ],
+    "rmse_bootstrap95_nT": [
+      0.20327473837948662,
+      0.22282225999452623
+    ]
+  },
+  {
+    "m": 512,
+    "status": "reported_with_quality_flags",
+    "frames_per_record": 7,
+    "records": 32,
+    "span_ms": 244.95195056027225,
+    "rms_across_record_std_nT": 0.041083297092912974,
+    "mean_bias_nT": -0.17437023924261025,
+    "rms_bias_nT": 0.17626878774539964,
+    "total_rmse_nT": 0.1808473884733521,
+    "std_bootstrap95_nT": [
+      0.036033419334512304,
+      0.04485780216316072
+    ],
+    "rmse_bootstrap95_nT": [
+      0.17556544909004984,
+      0.18546306557275655
+    ]
+  },
+  {
+    "m": 1024,
+    "status": "reported_with_quality_flags",
+    "frames_per_record": 3,
+    "records": 32,
+    "span_ms": 490.38325914512427,
+    "rms_across_record_std_nT": 0.014458090968470168,
+    "mean_bias_nT": -0.17473762065672507,
+    "rms_bias_nT": 0.17622172986074355,
+    "total_rmse_nT": 0.17679536781895278,
+    "std_bootstrap95_nT": [
+      0.011717993689871416,
+      0.01633171386769523
+    ],
+    "rmse_bootstrap95_nT": [
+      0.1744624626293426,
+      0.17914818099867436
+    ]
+  },
+  {
+    "m": 1536,
+    "status": "reported_with_quality_flags",
+    "frames_per_record": 1,
+    "records": 32,
+    "span_ms": 735.8145677299764,
+    "rms_across_record_std_nT": 0.005979999745801596,
+    "mean_bias_nT": -0.16099434857268913,
+    "rms_bias_nT": 0.16099434857268913,
+    "total_rmse_nT": 0.16110190302072577,
+    "std_bootstrap95_nT": [
+      0.004289331241237204,
+      0.007410054271704099
+    ],
+    "rmse_bootstrap95_nT": [
+      0.15911982686956527,
+      0.16309459458271966
+    ]
+  },
+  {
+    "m": 2048,
+    "status": "reported_with_quality_flags",
+    "frames_per_record": 1,
+    "records": 32,
+    "span_ms": 981.2458763148283,
+    "rms_across_record_std_nT": 0.004564675532686851,
+    "mean_bias_nT": -0.17603737582224732,
+    "rms_bias_nT": 0.17603737582224732,
+    "total_rmse_nT": 0.17609469843209902,
+    "std_bootstrap95_nT": [
+      0.003499097099261678,
+      0.0054608027396333275
+    ],
+    "rmse_bootstrap95_nT": [
+      0.17461090233030552,
+      0.17770071339386442
+    ]
+  }
+]

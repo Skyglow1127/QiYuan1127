@@ -1,0 +1,301 @@
+{
+  "rows": [
+    {
+      "key": "window0.01_offset0",
+      "requested_window_s": 0.01,
+      "m": 22,
+      "actual_window_s": 0.009864388149581703,
+      "carrier_offset_uHz": 0,
+      "target_std_pT": 6,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 6.0045309691075035,
+          "mean_bias_pT": -0.06895320568882665,
+          "rmse_pT": 6.004193897744323,
+          "analog_normal_ci95_pT": [
+            5.877268608937269,
+            6.1374669611025965
+          ],
+          "observed_std_below_target": false
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 6.004375039651862,
+          "mean_bias_pT": -0.06933593161319668,
+          "rmse_pT": 6.004042405207919,
+          "analog_normal_ci95_pT": null,
+          "observed_std_below_target": false
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 6.004531167456231,
+          "mean_bias_pT": -0.06895377255936684,
+          "rmse_pT": 6.004194102565825,
+          "analog_normal_ci95_pT": null,
+          "observed_std_below_target": false
+        }
+      ]
+    },
+    {
+      "key": "window0.01_offset0.25",
+      "requested_window_s": 0.01,
+      "m": 22,
+      "actual_window_s": 0.009864388148423296,
+      "carrier_offset_uHz": 0.25,
+      "target_std_pT": 6,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 6.004281861804413,
+          "mean_bias_pT": -0.07064298826054001,
+          "rmse_pT": 6.003964481598031,
+          "analog_normal_ci95_pT": [
+            5.877024781311058,
+            6.13721233874319
+          ],
+          "observed_std_below_target": false
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 6.004118256492059,
+          "mean_bias_pT": -0.07103334586902328,
+          "rmse_pT": 6.003805513365783,
+          "analog_normal_ci95_pT": null,
+          "observed_std_below_target": false
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 6.004282063885026,
+          "mean_bias_pT": -0.0706435541855523,
+          "rmse_pT": 6.003964690298717,
+          "analog_normal_ci95_pT": null,
+          "observed_std_below_target": false
+        }
+      ]
+    },
+    {
+      "key": "window0.01_offset0.5",
+      "requested_window_s": 0.01,
+      "m": 22,
+      "actual_window_s": 0.00986438814726489,
+      "carrier_offset_uHz": 0.5,
+      "target_std_pT": 6,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 5.998486981838167,
+          "mean_bias_pT": -0.07189252444753079,
+          "rmse_pT": 5.998185556980118,
+          "analog_normal_ci95_pT": [
+            5.871352720280246,
+            6.131289164307189
+          ],
+          "observed_std_below_target": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 5.998316079821963,
+          "mean_bias_pT": -0.07228346853062388,
+          "rmse_pT": 5.998019386717681,
+          "analog_normal_ci95_pT": null,
+          "observed_std_below_target": true
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 5.998487186363995,
+          "mean_bias_pT": -0.07189309192737837,
+          "rmse_pT": 5.998185768267966,
+          "analog_normal_ci95_pT": null,
+          "observed_std_below_target": true
+        }
+      ]
+    },
+    {
+      "key": "window0.01_offset0.75",
+      "requested_window_s": 0.01,
+      "m": 22,
+      "actual_window_s": 0.009864388146106483,
+      "carrier_offset_uHz": 0.75,
+      "target_std_pT": 6,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 5.996873379328073,
+          "mean_bias_pT": -0.06939995405275977,
+          "rmse_pT": 5.996542902077086,
+          "analog_normal_ci95_pT": [
+            5.869773317088112,
+            6.129639837799423
+          ],
+          "observed_std_below_target": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 5.996698504705122,
+          "mean_bias_pT": -0.06980042673273609,
+          "rmse_pT": 5.996372708820984,
+          "analog_normal_ci95_pT": null,
+          "observed_std_below_target": true
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 5.9968735697488995,
+          "mean_bias_pT": -0.06940052511233545,
+          "rmse_pT": 5.996543099070999,
+          "analog_normal_ci95_pT": null,
+          "observed_std_below_target": true
+        }
+      ]
+    },
+    {
+      "key": "window1_offset0",
+      "requested_window_s": 1,
+      "m": 2130,
+      "actual_window_s": 1.0000610652599737,
+      "carrier_offset_uHz": 0,
+      "target_std_pT": 0.008,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 0.006306728880170503,
+          "mean_bias_pT": -9.923983868802211e-05,
+          "rmse_pT": 0.00630673981244725,
+          "analog_normal_ci95_pT": [
+            0.006173061620167416,
+            0.0064463553163139715
+          ],
+          "observed_std_below_target": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 0.006008034590569714,
+          "mean_bias_pT": 0.00010322113696109721,
+          "rmse_pT": 0.006008187882173608,
+          "analog_normal_ci95_pT": null,
+          "observed_std_below_target": true
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 0.006306569855375818,
+          "mean_bias_pT": -9.933887898943961e-05,
+          "rmse_pT": 0.006306582386020612,
+          "analog_normal_ci95_pT": null,
+          "observed_std_below_target": true
+        }
+      ]
+    },
+    {
+      "key": "window1_offset0.25",
+      "requested_window_s": 1,
+      "m": 2130,
+      "actual_window_s": 1.0000610651425332,
+      "carrier_offset_uHz": 0.25,
+      "target_std_pT": 0.008,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 0.006271707682389449,
+          "mean_bias_pT": -0.0001139288722708214,
+          "rmse_pT": 0.006271976876271273,
+          "analog_normal_ci95_pT": [
+            0.006138782675246501,
+            0.006410558774431632
+          ],
+          "observed_std_below_target": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 0.008958556073482334,
+          "mean_bias_pT": -0.0018465114542419165,
+          "rmse_pT": 0.009145804381739384,
+          "analog_normal_ci95_pT": null,
+          "observed_std_below_target": false
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 0.006271712341908814,
+          "mean_bias_pT": -0.0001138758565639664,
+          "rmse_pT": 0.006271980571660934,
+          "analog_normal_ci95_pT": null,
+          "observed_std_below_target": true
+        }
+      ]
+    },
+    {
+      "key": "window1_offset0.5",
+      "requested_window_s": 1,
+      "m": 2130,
+      "actual_window_s": 1.000061065025093,
+      "carrier_offset_uHz": 0.5,
+      "target_std_pT": 0.008,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 0.006204167416235629,
+          "mean_bias_pT": -4.091013534605605e-05,
+          "rmse_pT": 0.006203544920590754,
+          "analog_normal_ci95_pT": [
+            0.006072673883711012,
+            0.006341523215418643
+          ],
+          "observed_std_below_target": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 0.011744271601238672,
+          "mean_bias_pT": -0.0001835042463771064,
+          "rmse_pT": 0.01174427160127942,
+          "analog_normal_ci95_pT": null,
+          "observed_std_below_target": false
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 0.006204105804539172,
+          "mean_bias_pT": -4.0904247957220315e-05,
+          "rmse_pT": 0.006203483278932511,
+          "analog_normal_ci95_pT": null,
+          "observed_std_below_target": true
+        }
+      ]
+    },
+    {
+      "key": "window1_offset0.75",
+      "requested_window_s": 1,
+      "m": 2130,
+      "actual_window_s": 1.0000610649076525,
+      "carrier_offset_uHz": 0.75,
+      "target_std_pT": 0.008,
+      "outputs": [
+        {
+          "quantum_hz": null,
+          "std_pT": 0.0062343185209617425,
+          "mean_bias_pT": -3.5163046817749644e-05,
+          "rmse_pT": 0.00623365662460998,
+          "analog_normal_ci95_pT": [
+            0.006102185954219645,
+            0.006372341843892595
+          ],
+          "observed_std_below_target": true
+        },
+        {
+          "quantum_hz": 1e-06,
+          "std_pT": 0.009153001681798372,
+          "mean_bias_pT": 0.0016687417128786702,
+          "rmse_pT": 0.00930277835997368,
+          "analog_normal_ci95_pT": null,
+          "observed_std_below_target": false
+        },
+        {
+          "quantum_hz": 1e-09,
+          "std_pT": 0.006234464133063041,
+          "mean_bias_pT": -3.512959958114825e-05,
+          "rmse_pT": 0.006233802028042671,
+          "analog_normal_ci95_pT": null,
+          "observed_std_below_target": true
+        }
+      ]
+    }
+  ],
+  "scope": "A declared iid timing model tests estimator precision and output rounding, not the physical instrument. Sub-LSB sweep prevents an integer-centred carrier from giving a misleadingly favourable rounded STD."
+}

@@ -1,0 +1,12 @@
+{
+  "parts": [
+    "frontend"
+  ],
+  "source_sha256": {
+    "audit_noise.py": "3e56752fe8ad779829c8314bef4901f84c2b9999a9575cafaaaae99c1ff9d9f1",
+    "noise_audit_protocol.json": "2d2ebecdd680d134098b5072328217bb92f9e684472d7fa5b72aca572cc1db6b",
+    "reproduce.py": "a2cbb46bd5e37d973ab7a73b9bdf91898ba3958d3bbb6d829b2427e247f549c0",
+    "paper_config.json": "5df4c75fd29c82f6da08e57f0e4498f1a877aefc890f4dc7f98c31681e6e76ce"
+  },
+  "author_precision_reproduced": false
+}

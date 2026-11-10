@@ -1,0 +1,73 @@
+{
+  "profiles": [
+    {
+      "m": 22,
+      "file": "vectors_m22.txt",
+      "events": 219,
+      "checks": 33,
+      "sha256": "d31b0402892b1e6c064483cf5b678c9ab5a50534ee1b4b5f5a843d196a850b24",
+      "readback_exact": true,
+      "latency_cycles": 99,
+      "fault_checks": 4
+    },
+    {
+      "m": 96,
+      "file": "vectors_m96.txt",
+      "events": 885,
+      "checks": 27,
+      "sha256": "44ed97c130115d1eb64111d303d3245cd1b8a0a7c5827d3ab64cedf2801bb879",
+      "readback_exact": true,
+      "latency_cycles": 99,
+      "fault_checks": 4
+    },
+    {
+      "m": 213,
+      "file": "vectors_m213.txt",
+      "events": 1938,
+      "checks": 27,
+      "sha256": "99f8268b95f17efede7380e586556125861b2d9a0ec7f9a8fb4c6d1c6e77d96d",
+      "readback_exact": true,
+      "latency_cycles": 99,
+      "fault_checks": 4
+    },
+    {
+      "m": 2130,
+      "file": "vectors_m2130.txt",
+      "events": 19191,
+      "checks": 27,
+      "sha256": "07eeec8a6307196e09f89818be577a7b1fea55e1013b9f13a91b745852f6190b",
+      "readback_exact": true,
+      "latency_cycles": 99,
+      "fault_checks": 4
+    }
+  ],
+  "source_sha256": {
+    "rtl/udiv_round.sv": "d0b6e88e44fc1c19e0cda7e382bcea9f59bfcbaba9333e182e3acd21f1cc1019",
+    "rtl/sfls_core.sv": "d87f05f0ec2b33829e7f167e3d949a50dc62c5e3b51bf990b3fb83db1cabf546",
+    "rtl/sfls_nhz_readout.sv": "376cd10a2b820a7a2b9bb6629b46e9533405c0ce026de3e24019ade294da1280",
+    "sim/tb_precision.sv": "b5eea05a6dc34058e009d9be2f6029648baef3b975eee4c6dfcca2092c7b7cdc",
+    "prepare_precision_replay.py": "97f429d81b4bc3911f5f55ade57ac1d94fd82fe473945c8bbec51a807083cc80",
+    "run_precision_rtl.py": "53a7dcabf7cc8e8eaf03eae35ae70f2772452f1d92b2c7698f51978b8c683861"
+  },
+  "scope": "Optional atomic-snapshot nHz readout beside unchanged core; timestamp replay, not integrated sensor-top or board timing certification.",
+  "report_sha256": {
+    "m213.csv": "77d16345349c08e429ebc27221b159b677b4487073f19363c4965a64e37eef0f",
+    "simulate_m2130.log": "7022b248c6c23873ab5c7c8f2f8f89ae7a45188ce714db85c43cbe9de5b73836",
+    "vectors_m22.txt": "d31b0402892b1e6c064483cf5b678c9ab5a50534ee1b4b5f5a843d196a850b24",
+    "vectors.json": "21d0672299c33faa11e5bb97a9834d71d01700cfe97f4de19fc7a4afc146e37b",
+    "m96.csv": "630c9858246f1bbfe2cbf52ccf7ba76abdeffad874796c4496a411a3cf90b1e6",
+    "simulate_m96.log": "9288e3edba7bfa8b05ac7822e37aeed9ed7935a58318a344ae6e0b696459cd5c",
+    "vectors_m96.txt": "44ed97c130115d1eb64111d303d3245cd1b8a0a7c5827d3ab64cedf2801bb879",
+    "simulate_m22.log": "c575eec973f63b6628ea615e827f58ab24f87df930098d3520f68390bc9f9a02",
+    "vectors_m213.txt": "99f8268b95f17efede7380e586556125861b2d9a0ec7f9a8fb4c6d1c6e77d96d",
+    "m22.csv": "abec09be27cd6ebc922a416ea3a14aea50d6af8fc943d53373fbcced3254a7ba",
+    "elaborate_m22.log": "7438b2d040039ef126170c0bb921494ef3d018da8bd1da23f74cbb34597265e0",
+    "elaborate_m213.log": "df35162ac9913c25895b8a0b9c6430acd8b0fbf2df98c1bce7c3067b5ee58360",
+    "m2130.csv": "9f706f74ed4c84aadacb3a7fba8bac82c2168d3389d49f97bea3739467e0a82c",
+    "elaborate_m2130.log": "914a7646c78de1456632dcb71cc51329d47e7af004269455b5d161a572c6c085",
+    "compile.log": "bed5f586e9a833a259a954cb39665bb27afe8532a1f2fb825f7746b8bf563326",
+    "simulate_m213.log": "d67ffe6d288aff7f17859fef723ae033354cb345162819ae125dba15a7293236",
+    "elaborate_m96.log": "86132f5be3efe932b9af5e38effcfbcceae94e1d744cb06b228acafaff3f33d2",
+    "vectors_m2130.txt": "07eeec8a6307196e09f89818be577a7b1fea55e1013b9f13a91b745852f6190b"
+  }
+}

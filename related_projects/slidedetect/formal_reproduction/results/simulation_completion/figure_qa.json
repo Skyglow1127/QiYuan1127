@@ -1,0 +1,56 @@
+{
+  "theory_comparison": {
+    "collision_counts": {
+      "fail": 0,
+      "warn": 0,
+      "contained_fill_overlays": 0,
+      "contained_image_overlays": 0
+    },
+    "visual_review": "passed; full figure and individual panels inspected",
+    "pdf_sha256": "bde91896ce97f0109b560885daa244798e09fad7c7c6a60a1a14a74f423c42c1",
+    "png_sha256": "260ae43f6f597d4d904e08a7e4c953c28c2d4b769dbd313eb5b6424859dff957"
+  },
+  "frontend_sensitivity": {
+    "collision_counts": {
+      "fail": 0,
+      "warn": 0,
+      "contained_fill_overlays": 0,
+      "contained_image_overlays": 0
+    },
+    "visual_review": "passed; full figure and individual panels inspected",
+    "pdf_sha256": "4d73506a063681db6172be426aa74f661b9f281b620ec210ca9a424d69dbb82c",
+    "png_sha256": "07bbab8f62d1bacf6229b503b95c9750d472b42fbf5321ed35470934a2c084ed"
+  },
+  "drift_rmse_map": {
+    "collision_counts": {
+      "fail": 0,
+      "warn": 0,
+      "contained_fill_overlays": 0,
+      "contained_image_overlays": 0
+    },
+    "visual_review": "passed; full figure and individual panels inspected",
+    "pdf_sha256": "e863198cf0733327e300915b6d30c603213104874d7074eba8000897581c2b3a",
+    "png_sha256": "30d5e94b816074cd29759fabe067a829b2d633a9e848a1cb7b57b37303927391"
+  },
+  "step_trace": {
+    "collision_counts": {
+      "fail": 0,
+      "warn": 0,
+      "contained_fill_overlays": 0,
+      "contained_image_overlays": 0
+    },
+    "visual_review": "passed; full figure and individual panels inspected",
+    "pdf_sha256": "887a6723d40ab6ece0f0f39a3f44606808818095ad6bfa9052977c6a0a751661",
+    "png_sha256": "bdbdbfe46de4bea4ba49a55176dc4768b2433eb0325adb8fb5f350bd84402346"
+  },
+  "plot_source_sha256": "5518cfee4928239694960e729fb100a742e2377ef2102d8d12dbcdfe50dc0583",
+  "input_sha256": {
+    "theory.json": "a0ec269ddc3733eede179c490fbd121ece89bcb7d33fc562985184140221fdd7",
+    "frontend.json": "c5a4ce64c73ec2142b0e465959532d2bce07345ac91f6031cb7124e146a1e578",
+    "frontend_raw.json": "529f3a5e92b92bbd9e5923259da5da70286d3c8a7ecfcf68785ea5956ff6266e",
+    "drift.json": "ddd34e932bb647568198fa9e9494b7cca5b04ac06ba0220dee912db638442078",
+    "step.json": "198f65a35cbc033cc31b33fb994ce8521621a027a16542e4b7940449bd4ec528"
+  },
+  "scope": "Research simulation figures. 300 dpi PNG previews; vector PDF/SVG; no journal TIFF claim.",
+  "preflight_warnings_review": "Two raster-format defaults; RNG is whole-record bootstrap of recorded errors. No fabricated empirical data."
+}

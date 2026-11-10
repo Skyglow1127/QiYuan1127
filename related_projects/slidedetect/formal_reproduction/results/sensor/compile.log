@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/tmp/slidedetect-completion/rtl/udiv_round.sv" into library work
+INFO: [VRFC 10-311] analyzing module udiv_round
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/tmp/slidedetect-completion/rtl/sfls_core.sv" into library work
+INFO: [VRFC 10-311] analyzing module sfls_core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/tmp/slidedetect-completion/rtl/sfls_sensor.sv" into library work
+INFO: [VRFC 10-311] analyzing module sfls_sensor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/tmp/slidedetect-completion/sim/tb_sensor.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_sensor

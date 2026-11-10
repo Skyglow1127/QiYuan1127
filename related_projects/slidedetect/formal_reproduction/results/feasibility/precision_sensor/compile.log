@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/tmp/slidedetect-feasibility/rtl/udiv_round.sv" into library work
+INFO: [VRFC 10-311] analyzing module udiv_round
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/tmp/slidedetect-feasibility/rtl/sfls_core.sv" into library work
+INFO: [VRFC 10-311] analyzing module sfls_core
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/tmp/slidedetect-feasibility/rtl/sfls_nhz_readout.sv" into library work
+INFO: [VRFC 10-311] analyzing module sfls_nhz_readout
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/tmp/slidedetect-feasibility/rtl/sfls_precision_sensor.sv" into library work
+INFO: [VRFC 10-311] analyzing module sfls_precision_sensor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/tmp/slidedetect-feasibility/sim/tb_precision_sensor.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_precision_sensor

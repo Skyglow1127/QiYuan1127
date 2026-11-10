@@ -1,0 +1,45 @@
+{
+  "window_size": 96,
+  "clock_mhz": 200,
+  "part": "xck26-sfvc784-2LV-c",
+  "vivado_version": "2025.2",
+  "wns_ns": 0.485,
+  "whs_ns": -0.03,
+  "internal_wns_ns": 0.485,
+  "internal_whs_ns": 0.005,
+  "internal_timing_met": true,
+  "timing_met": false,
+  "execution_succeeded": true,
+  "elapsed_seconds": 79.68,
+  "scope": "Out-of-context core, synchronous I/O budget, not board validation",
+  "constraint_checks": {
+    "no_clock": 0,
+    "constant_clock": 0,
+    "pulse_width_clock": 0,
+    "unconstrained_internal_endpoints": 0,
+    "no_input_delay": 0,
+    "no_output_delay": 0,
+    "multiple_clock": 0,
+    "generated_clocks": 0,
+    "loops": 0,
+    "partial_input_delay": 0,
+    "partial_output_delay": 0,
+    "latch_loops": 0
+  },
+  "source_sha256": {
+    "rtl/sfls_core.sv": "d87f05f0ec2b33829e7f167e3d949a50dc62c5e3b51bf990b3fb83db1cabf546",
+    "rtl/udiv_round.sv": "d0b6e88e44fc1c19e0cda7e382bcea9f59bfcbaba9333e182e3acd21f1cc1019",
+    "scripts/implement_core.tcl": "1ff939c3ec31d4af947453ea184aa337320972fb31a2a69d4fac7c609ae43fe3",
+    "scripts/core_200mhz.xdc": "bde557513fcb1afa49e5da1926d78c20d2f072a3d8a811e83556ce770fc1097c",
+    "run_timing.py": "cf2eaa181efebed2be5643998fefc65c422ccda3e3c040a30ecc3ff5d5e9e351"
+  },
+  "report_sha256": {
+    "check_timing.rpt": "e3e4c7fc063e1569dc7f740c4a4c99ca1764eb0c993edf801ed581907d5d9154",
+    "critical_paths.rpt": "c9216b7670c45ad00f361e40f119f589019af631e05a2ffbc828e5228c44c26d",
+    "drc.rpt": "d518654fd67c907fe1ac4ccb936e614283d5fcb03806c0d062adf1f5f0129444",
+    "timing_routed.rpt": "7391310560e93c9235c04bdd9e30af775b8718b3db137de5104fd9b2bec50708",
+    "timing_synth.rpt": "7eb0b3484f38abe50468565e6a22b61340d8ce6097532735564f1f4574aa1704",
+    "utilization_routed.rpt": "a31f14a25b2ed6e8d4a7a749e7c855c137c76bc3dc9891dceb02c48f7c5f29b8",
+    "utilization_synth.rpt": "5979669be5a44dc2df53a963009f1ad2a86b2eeb5ac782fcfee6ecb7ee468949"
+  }
+}

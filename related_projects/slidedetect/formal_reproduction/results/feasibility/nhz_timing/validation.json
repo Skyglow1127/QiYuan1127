@@ -1,0 +1,35 @@
+{
+  "m": 2130,
+  "clock_mhz": 200,
+  "wns_ns": 1.19,
+  "whs_ns": -0.03,
+  "timing_met": false,
+  "scope": "Fine readout module only, synchronous input/output budgets. Not timing of a newly integrated full sensor or board.",
+  "constraint_checks": {
+    "no_clock": 0,
+    "constant_clock": 0,
+    "pulse_width_clock": 0,
+    "unconstrained_internal_endpoints": 0,
+    "no_input_delay": 0,
+    "no_output_delay": 0,
+    "multiple_clock": 0,
+    "generated_clocks": 0,
+    "loops": 0,
+    "partial_input_delay": 0,
+    "partial_output_delay": 0,
+    "latch_loops": 0
+  },
+  "source_sha256": {
+    "rtl/udiv_round.sv": "d0b6e88e44fc1c19e0cda7e382bcea9f59bfcbaba9333e182e3acd21f1cc1019",
+    "rtl/sfls_nhz_readout.sv": "376cd10a2b820a7a2b9bb6629b46e9533405c0ce026de3e24019ade294da1280",
+    "scripts/nhz_200mhz.xdc": "92ef73a4e3f13b3500112df418101ca7a60e2f0e59cbc8e39b40b5987ee6ab97",
+    "scripts/implement_nhz.tcl": "39dfdbe424d4f19728d28d9337fb5ad139d913a15c2c469e74a94fc0df0fb92f",
+    "run_nhz_timing.py": "b425fa31cfe1b808c7a28e4ca545025038fed30413dc0a81143021c07767bd6c"
+  },
+  "report_sha256": {
+    "utilization.rpt": "ac4ae4947781a5a158d41942deb8c632306cb4ecb588d9749ade5977f96b8d5a",
+    "drc.rpt": "0e8599ffea57ba42ce4a3ee75c34d15c42d225215cfdbabe72e2fece64788354",
+    "check_timing.rpt": "76286fd1c623f32cfd6dd620423781f4dd5b6e3ea742c59194d1f34109cb2664",
+    "timing_routed.rpt": "f47f315cf13c208bb5072c6bf8169cde112e626a981b1b6e0f128446881e80c1"
+  }
+}
